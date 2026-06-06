@@ -29,3 +29,7 @@ core_list.txt
 assemble_report.txt
 *.log
 .gradio/
+
+# === Chunk store local (SQLite, es regenera amb ingest.py) ===
+data/*.sqlite
+data/*.sqlite-journal
