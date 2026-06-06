@@ -1,0 +1,31 @@
+﻿# Secrets
+.env
+.env.local
+.env.production
+
+# Dades grans (es pugen al VPS per separat amb rsync)
+corpus/
+corpus_staging/
+chroma_db/
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+venv/
+.venv/
+env/
+
+# IDE / SO
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs i temporals del prototip
+ingest_done.txt
+core_list.txt
+assemble_report.txt
+*.log
+.gradio/
