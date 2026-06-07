@@ -17,6 +17,9 @@ sentence-transformers
 langchain-core
 langchain-google-genai
 
+# === Ingest (chunking) ===
+langchain-text-splitters
+
 # === Vector DBs ===
 pinecone      # backend actiu (free tier serverless)
 chromadb      # backend futur (local, quan RAM >= 16 GB)
