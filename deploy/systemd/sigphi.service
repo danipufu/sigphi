@@ -7,6 +7,8 @@ Wants=docker.service
 Type=simple
 User=daniel
 WorkingDirectory=/home/daniel/sigphi
+# HOME perquè sentence-transformers trobi el model ja descarregat (~/.cache)
+Environment=HOME=/home/daniel
 # 1 sol worker: amb més es duplicaria el model d'embeddings en RAM (OOM en 4 GB)
 ExecStart=/home/daniel/sigphi/venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 1
 Restart=on-failure
