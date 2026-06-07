@@ -21,5 +21,6 @@ langchain-google-genai
 langchain-text-splitters
 
 # === Vector DBs ===
-pinecone      # backend actiu (free tier serverless)
-chromadb      # backend futur (local, quan RAM >= 16 GB)
+pinecone        # backend free tier serverless (límit 2 GB)
+chromadb        # backend local senzill
+qdrant-client   # backend self-hosted al VPS (corpus complet, on_disk + quantització)

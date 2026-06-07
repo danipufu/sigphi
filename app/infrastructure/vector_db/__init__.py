@@ -36,4 +36,15 @@ def build_vector_db(
 
         return ChromaDB(persist_dir=settings.chroma_dir)
 
+    if settings.vector_db_type == "qdrant":
+        from app.infrastructure.vector_db.qdrant_db import QdrantDB
+
+        cs = chunk_store or ChunkStore(settings.chunk_store_path)
+        return QdrantDB(
+            url=settings.qdrant_url,
+            collection=settings.qdrant_collection,
+            chunk_store=cs,
+            use_quantization=settings.qdrant_use_quantization,
+        )
+
     raise ValueError(f"vector_db_type desconegut: {settings.vector_db_type!r}")

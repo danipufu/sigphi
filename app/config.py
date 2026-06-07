@@ -32,7 +32,7 @@ class Settings(BaseSettings):
     gemini_model: str = "gemini-2.5-flash-lite"
 
     # === Vector DB (selector dinàmic) ===
-    vector_db_type: Literal["pinecone", "chroma"] = "pinecone"
+    vector_db_type: Literal["pinecone", "chroma", "qdrant"] = "pinecone"
 
     # === Pinecone (només si vector_db_type == "pinecone") ===
     pinecone_api_key: str = ""
@@ -42,6 +42,12 @@ class Settings(BaseSettings):
 
     # === ChromaDB local (futur, només si vector_db_type == "chroma") ===
     chroma_dir: Path = Path("./chroma_db")
+
+    # === Qdrant self-hosted (corpus complet al VPS, només si type == "qdrant") ===
+    qdrant_url: str = "http://localhost:6333"
+    qdrant_collection: str = "sigphi"
+    # quantització escalar INT8 (4x) + vectors on_disk -> 575k cap en poca RAM
+    qdrant_use_quantization: bool = True
 
     # === Embedder local ===
     embed_model: str = "paraphrase-multilingual-MiniLM-L12-v2"
