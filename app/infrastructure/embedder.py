@@ -20,7 +20,13 @@ class SentenceTransformersEmbedder:
         from sentence_transformers import SentenceTransformer
 
         self._model = SentenceTransformer(model_name, device="cpu")
-        self._dim = int(self._model.get_sentence_embedding_dimension())
+        # get_embedding_dimension és el nom nou; fem fallback a l'antic per
+        # compatibilitat amb versions velles de sentence-transformers.
+        _get_dim = (
+            getattr(self._model, "get_embedding_dimension", None)
+            or self._model.get_sentence_embedding_dimension
+        )
+        self._dim = int(_get_dim())
         self._lock = threading.Lock()
 
     @property
