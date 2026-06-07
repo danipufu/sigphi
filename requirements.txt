@@ -1,9 +1,22 @@
+# === Web ===
+fastapi
+uvicorn[standard]
 gradio
-langchain
-langchain-core
-langchain-huggingface
-langchain-chroma
-langchain-google-genai
-chromadb
-sentence-transformers
+slowapi
+
+# === Config ===
+pydantic-settings
 python-dotenv
+
+# === Embeddings ===
+# NOTA: torch s'instal·la a part en CPU-only per estalviar ~2.5 GB de CUDA:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+sentence-transformers
+
+# === LLM ===
+langchain-core
+langchain-google-genai
+
+# === Vector DBs ===
+pinecone      # backend actiu (free tier serverless)
+chromadb      # backend futur (local, quan RAM >= 16 GB)
