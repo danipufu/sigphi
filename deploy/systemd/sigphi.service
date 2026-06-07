@@ -1,0 +1,18 @@
+[Unit]
+Description=SigPhi - RAG de filosofia (FastAPI + Gradio)
+After=network.target docker.service
+Wants=docker.service
+
+[Service]
+Type=simple
+User=daniel
+WorkingDirectory=/home/daniel/sigphi
+# 1 sol worker: amb més es duplicaria el model d'embeddings en RAM (OOM en 4 GB)
+ExecStart=/home/daniel/sigphi/venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000 --workers 1
+Restart=on-failure
+RestartSec=5
+# deixa marge perquè el lifespan carregui el model al primer arrencada
+TimeoutStartSec=300
+
+[Install]
+WantedBy=multi-user.target
