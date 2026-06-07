@@ -42,7 +42,8 @@ class GeminiLLM:
                 content=f"CONTEXT (fonts primàries recuperades):\n\n{context}"
             ),
             AIMessage(
-                content="Entesos. Respondré basant-me només en aquest material."
+                content="Understood. I will answer strictly based on the provided "
+                "material, replying in the same language as the user's question."
             ),
         ]
         for user_turn, ai_turn in history or []:
