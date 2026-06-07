@@ -1,0 +1,2 @@
+# Els scripts shell SEMPRE amb final de línia LF (evita "bad interpreter ^M" al VPS)
+*.sh text eol=lf
