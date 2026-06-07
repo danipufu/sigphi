@@ -74,7 +74,6 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
 
     return gr.ChatInterface(
         fn=respond,
-        type="messages",
         title="SigPhi — Filosofia des de fonts primàries",
         description=(
             "Respon NOMÉS amb textos filosòfics primaris de domini públic, amb "
