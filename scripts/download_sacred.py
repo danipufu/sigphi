@@ -81,6 +81,19 @@ TEXTS = [
      "Poemes d'Hesíode (s.VIII aC); traducció d'Evelyn-White, no el grec "
      "original (el volum inclou també els himnes homèrics).",
      "Hesiod__Theogony_and_Works_and_Days_en.txt"),
+
+    # --- Autors hispànics disponibles a Gutenberg ---
+    (62691, "Baltasar Gracian", "El Criticón (tom 1)", "Spanish",
+     "Complete work", "Written by the author", "—",
+     "Baltasar_Gracian__El_Criticon_1_es.txt"),
+    (63402, "Baltasar Gracian", "El Criticón (tom 2)", "Spanish",
+     "Complete work", "Written by the author", "—",
+     "Baltasar_Gracian__El_Criticon_2_es.txt"),
+    (20321, "Bartolome de las Casas",
+     "A Brief Account of the Destruction of the Indies", "English",
+     "Complete work", "Written by the author",
+     "Traducció anglesa de l'original castellà (1552).",
+     "Las_Casas__Brief_Account_Destruction_Indies_en.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)
