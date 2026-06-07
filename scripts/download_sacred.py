@@ -36,6 +36,24 @@ TEXTS = [
      "Antologia de versos de la tradició budista, compilats pels deixebles; "
      "traducció anglesa de Max Müller (1881), no el pali original.",
      "Dhammapada__The_Dhammapada_en.txt"),
+
+    # --- Lot 2 ---
+    (4094, "Confucius",
+     "The Four Books I: Analects, Great Learning, Doctrine of the Mean (Legge)",
+     "English", "Complete work", "Recorded/compiled by others",
+     "Clàssics confucians recollits i compilats pels deixebles; traducció de "
+     "James Legge, no el xinès original.",
+     "Confucius__The_Four_Books_I_Legge_en.txt"),
+    (3283, "Upanishads", "The Upanishads", "English",
+     "Selection / partial", "Anonymous / composite",
+     "Textos vèdics de transmissió oral i autoria anònima; traducció anglesa, "
+     "no el sànscrit original.",
+     "Upanishads__The_Upanishads_en.txt"),
+    (2526, "Patanjali", "The Yoga Sutras of Patanjali", "English",
+     "Complete work", "Attributed (authorship debated)",
+     "Aforismes atribuïts a Patañjali; traducció de Charles Johnston, no el "
+     "sànscrit original.",
+     "Patanjali__The_Yoga_Sutras_en.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)
