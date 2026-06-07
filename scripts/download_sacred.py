@@ -1,0 +1,102 @@
+"""Baixa textos sagrats canònics en traducció de DOMINI PÚBLIC (Project Gutenberg),
+els neteja (treu la capçalera/peu legal de Gutenberg) i els desa a corpus/ amb
+capçalera SIGPHI: autor, obra, idioma + un caveat NEUTRAL (centrat en traducció i
+transmissió textual, mai en la validesa religiosa).
+
+Després, re-ingest (resumible, només els nous):  bash deploy/run_ingest.sh
+
+Ús (al VPS, des de l'arrel):  python scripts/download_sacred.py
+"""
+from __future__ import annotations
+import re
+import urllib.request
+from pathlib import Path
+
+CORPUS = Path(__file__).resolve().parent.parent / "corpus"
+
+# (gutenberg_id, author, work, language, completeness, authorship, note, filename)
+TEXTS = [
+    (10, "Bible", "The Holy Bible (King James Version)", "English",
+     "Complete work", "Anonymous / composite",
+     "Antologia de molts textos i autors recopilats al llarg de segles; "
+     "versió King James (traducció anglesa de 1611), no els originals hebreu/grec.",
+     "Bible__The_Holy_Bible_KJV_en.txt"),
+    (2800, "Quran", "The Qur'an", "English",
+     "Complete work", "Recorded/compiled by others",
+     "Text sagrat de l'islam transmès i compilat pels seguidors de Mahoma; "
+     "aquesta és una traducció anglesa (Rodwell, 1861), no l'àrab original.",
+     "Quran__The_Quran_Rodwell_en.txt"),
+    (2388, "Bhagavad Gita", "Bhagavad Gita (The Song Celestial)", "English",
+     "Complete work", "Attributed (authorship debated)",
+     "Episodi del poema èpic Mahabharata, tradicionalment atribuït a Vyasa; "
+     "traducció poètica anglesa d'Edwin Arnold (1885), no el sànscrit original.",
+     "Bhagavad_Gita__The_Song_Celestial_en.txt"),
+    (2017, "Dhammapada", "The Dhammapada", "English",
+     "Complete work", "Recorded/compiled by others",
+     "Antologia de versos de la tradició budista, compilats pels deixebles; "
+     "traducció anglesa de Max Müller (1881), no el pali original.",
+     "Dhammapada__The_Dhammapada_en.txt"),
+]
+
+_START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)
+_END = re.compile(r"\*\*\*\s*END OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)
+
+
+def fetch(gid: int) -> str | None:
+    urls = [
+        f"https://www.gutenberg.org/cache/epub/{gid}/pg{gid}.txt",
+        f"https://www.gutenberg.org/files/{gid}/{gid}-0.txt",
+        f"https://www.gutenberg.org/files/{gid}/{gid}.txt",
+    ]
+    for url in urls:
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (SigPhi)"})
+            with urllib.request.urlopen(req, timeout=90) as r:
+                return r.read().decode("utf-8", errors="replace")
+        except Exception:
+            continue
+    return None
+
+
+def strip_gutenberg(text: str) -> str:
+    m = _START.search(text)
+    if m:
+        text = text[m.end():]
+    m = _END.search(text)
+    if m:
+        text = text[:m.start()]
+    return text.strip()
+
+
+def main() -> None:
+    CORPUS.mkdir(parents=True, exist_ok=True)
+    ok = 0
+    for gid, author, work, lang, comp, auth, note, fname in TEXTS:
+        dest = CORPUS / fname
+        if dest.exists():
+            print(f"[skip] ja existeix: {fname}")
+            ok += 1
+            continue
+        print(f"[baixant] {work} (Gutenberg #{gid})...")
+        raw = fetch(gid)
+        if not raw:
+            print(f"   ERROR: no s'ha pogut baixar #{gid}")
+            continue
+        body = strip_gutenberg(raw)
+        if len(body) < 5000:
+            print(f"   AVÍS: text molt curt ({len(body)} car.) -> revisa la font")
+        header = (
+            "=====SIGPHI=====\n"
+            f"author: {author}\nwork: {work}\nlanguage: {lang}\n"
+            f"completeness: {comp}\nauthorship: {auth}\nnote: {note}\n"
+            "=====\n\n"
+        )
+        dest.write_text(header + body, encoding="utf-8")
+        print(f"   OK -> {fname} ({len(body)//1024} KB)")
+        ok += 1
+    print(f"\n{ok}/{len(TEXTS)} textos a punt a corpus/.")
+    print("Ara re-ingesta els nous (resumible):  bash deploy/run_ingest.sh")
+
+
+if __name__ == "__main__":
+    main()
