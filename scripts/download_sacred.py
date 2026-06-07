@@ -54,6 +54,33 @@ TEXTS = [
      "Aforismes atribuïts a Patañjali; traducció de Charles Johnston, no el "
      "sànscrit original.",
      "Patanjali__The_Yoga_Sutras_en.txt"),
+
+    # --- Lot 3 ---
+    (9394, "Shijing", "The Book of Poetry (Shih King, Legge)", "English",
+     "Complete work", "Anonymous / composite",
+     "Antologia de poemes de la Xina antiga, compilació anònima; un dels Cinc "
+     "Clàssics confucians; traducció de James Legge, no el xinès original.",
+     "Shijing__The_Book_of_Poetry_Legge_en.txt"),
+    (18897, "Gilgamesh", "The Epic of Gilgamesh", "English",
+     "Selection / partial", "Anonymous / composite",
+     "Poema èpic mesopotàmic conservat en tauletes cuneïformes, autoria anònima; "
+     "versió parcial de Langdon, no l'accadi original.",
+     "Gilgamesh__The_Epic_of_Gilgamesh_en.txt"),
+    (73533, "Poetic Edda", "The Poetic Edda", "English",
+     "Complete work", "Anonymous / composite",
+     "Poemes de la mitologia nòrdica de transmissió oral i autoria anònima; "
+     "traducció de Bellows, no l'islandès original.",
+     "Poetic_Edda__The_Poetic_Edda_en.txt"),
+    (18947, "Snorri Sturluson", "The Prose Edda (Younger Edda)", "English",
+     "Complete work", "Written by the author",
+     "Compilació de la mitologia nòrdica per Snorri Sturluson (s.XIII); "
+     "traducció anglesa, no l'islandès original.",
+     "Snorri_Sturluson__The_Prose_Edda_en.txt"),
+    (348, "Hesiod", "Theogony and Works and Days", "English",
+     "Complete work", "Written by the author",
+     "Poemes d'Hesíode (s.VIII aC); traducció d'Evelyn-White, no el grec "
+     "original (el volum inclou també els himnes homèrics).",
+     "Hesiod__Theogony_and_Works_and_Days_en.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)
