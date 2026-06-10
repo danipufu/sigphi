@@ -29,7 +29,7 @@ class Settings(BaseSettings):
 
     # === LLM ===
     google_api_key: str = ""
-    gemini_model: str = "gemini-2.5-flash-lite"
+    gemini_model: str = "gemini-2.5-flash"
 
     # === Vector DB (selector dinàmic) ===
     vector_db_type: Literal["pinecone", "chroma", "qdrant"] = "pinecone"
