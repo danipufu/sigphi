@@ -128,6 +128,52 @@ TEXTS = [
      "de segles; recensió del Papir d'Ani. Edició d'E. A. W. Budge (1895) amb traducció "
      "anglesa, introducció i transliteració (l'OCR inclou aquest aparat). No l'egipci original.",
      "Book_of_the_Dead__Papyrus_of_Ani_Budge_en.txt"),
+
+    # --- Lot 7 ---
+    ("in.ernet.dli.2015.65699", "2015.65699.The-Rig-Veda_djvu.txt",
+     "Rig Veda", "The Rig Veda", "English",
+     "Selection / partial", "Anonymous / composite",
+     "Himnes vèdics de transmissió oral i autoria anònima (els textos més antics de "
+     "l'hinduisme); traducció anglesa de domini públic (s. XIX), no el sànscrit "
+     "original. Digitalització OCR.",
+     "Rig_Veda__en.txt"),
+    ("lawsofmanu00manuuoft", "lawsofmanu00manuuoft_djvu.txt",
+     "Laws of Manu", "The Laws of Manu (Manusmriti, SBE vol. XXV)", "English",
+     "Complete work", "Attributed (authorship debated)",
+     "Tractat de dret i deure hindú (dharmaśāstra) atribuït tradicionalment a Manu; "
+     "traducció de Georg Bühler (1886, SBE vol. XXV), no el sànscrit original. "
+     "Digitalització OCR.",
+     "Laws_of_Manu__Buhler_en.txt"),
+    ("principlesofmost00conw", "principlesofmost00conw_djvu.txt",
+     "Anne Conway", "The Principles of the Most Ancient and Modern Philosophy", "English",
+     "Complete work", "Written by the author",
+     "Tractat metafísic d'Anne Conway (escrit cap a 1677, publicat pòstumament el 1690). "
+     "Anglès de l'època. Digitalització OCR.",
+     "Anne_Conway__Principles_en.txt"),
+    ("discursoenelcong00boli", "discursoenelcong00boli_djvu.txt",
+     "Simon Bolivar", "Discurso de Angostura (1819)", "Spanish",
+     "Complete work", "Written by the author",
+     "Discurs de Simón Bolívar al Congrés d'Angostura (1819); edició de Caracas (1922). "
+     "Digitalització OCR.",
+     "Simon_Bolivar__Discurso_de_Angostura_es.txt"),
+    ("ramayanofvlm00valmrich", "ramayanofvlm00valmrich_djvu.txt",
+     "Ramayana", "The Ramayan of Valmiki (Griffith)", "English",
+     "Complete work", "Attributed (authorship debated)",
+     "Poema èpic sànscrit atribuït a Valmiki; traducció en vers de Ralph T. H. Griffith "
+     "(1895), no el sànscrit original. Digitalització OCR.",
+     "Ramayana__Griffith_en.txt"),
+    ("TristanPeregrinations01BNF", "TristanPeregrinations01BNF_djvu.txt",
+     "Flora Tristan", "Pérégrinations d'une paria, tome I", "French",
+     "Selection / partial", "Written by the author",
+     "Memòries i crítica social de Flora Tristan (1838), volum I. Original francès en "
+     "domini públic. Digitalització OCR.",
+     "Flora_Tristan__Peregrinations_I_fr.txt"),
+    ("the-spirits-book-by-allan-kardec", "The Spirits Book by Allan Kardec _djvu.txt",
+     "Allan Kardec", "The Spirits' Book", "English",
+     "Complete work", "Written by the author",
+     "Obra fundacional de l'espiritisme, d'Allan Kardec (original francès 1857); "
+     "traducció anglesa de domini públic (Blackwell). Digitalització OCR.",
+     "Allan_Kardec__The_Spirits_Book_en.txt"),
 ]
 
 

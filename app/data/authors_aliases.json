@@ -1325,5 +1325,12 @@
  "Angel Ganivet": {"en": "Angel Ganivet", "a1": "Ganivet", "a2": "Ángel Ganivet", "a3": "Idearium", "a4": "Idearium español"},
  "Edmund Husserl": {"en": "Edmund Husserl", "a1": "Husserl", "a2": "Logische Untersuchungen"},
  "Nihongi": {"en": "Nihongi", "a1": "Nihon Shoki", "a2": "Chronicles of Japan", "ca": "Croniques del Japo"},
- "Book of the Dead": {"en": "Book of the Dead", "a1": "Papyrus of Ani", "ca": "Llibre dels Morts", "es": "Libro de los Muertos", "fr": "Livre des Morts"}
+ "Book of the Dead": {"en": "Book of the Dead", "a1": "Papyrus of Ani", "ca": "Llibre dels Morts", "es": "Libro de los Muertos", "fr": "Livre des Morts"},
+ "Rig Veda": {"en": "Rig Veda", "a1": "Rigveda", "ca": "Vedes", "es": "Vedas"},
+ "Laws of Manu": {"en": "Laws of Manu", "a1": "Manusmriti", "ca": "Lleis de Manu", "a2": "Manava Dharmasastra"},
+ "Anne Conway": {"en": "Anne Conway", "a1": "Conway"},
+ "Simon Bolivar": {"en": "Simon Bolivar", "a1": "Bolívar", "a2": "Bolivar", "a3": "Carta de Jamaica", "a4": "Discurso de Angostura"},
+ "Ramayana": {"en": "Ramayana", "a1": "Ramayan", "a2": "Valmiki"},
+ "Flora Tristan": {"en": "Flora Tristan", "a1": "Pérégrinations", "a2": "Union ouvrière"},
+ "Allan Kardec": {"en": "Allan Kardec", "a1": "Kardec", "a2": "Spirits Book", "ca": "Llibre dels esperits", "es": "Libro de los espíritus"}
 }
