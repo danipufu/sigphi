@@ -127,13 +127,6 @@ TEXTS = [
     (28929, "Jaime Balmes", "El Criterio", "Spanish",
      "Complete work", "Written by the author", "—",
      "Jaime_Balmes__El_Criterio_es.txt"),
-    (5740, "Ludwig Wittgenstein",
-     "Tractatus Logico-Philosophicus (Ogden + original alemany)", "English",
-     "Complete work", "Written by the author",
-     "Edició Gutenberg bilingüe: traducció anglesa de C. K. Ogden (1922) seguida de "
-     "l'original alemany (Logisch-philosophische Abhandlung, 1921), tots dos en "
-     "domini públic.",
-     "Wittgenstein__Tractatus_en_de.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)

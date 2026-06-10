@@ -20,6 +20,10 @@ from pathlib import Path
 
 CORPUS = Path(__file__).resolve().parent.parent / "corpus"
 
+# Per a miralls de Project Gutenberg allotjats a archive.org: treure capçalera/peu legal.
+_GUT_START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)
+_GUT_END = re.compile(r"\*\*\*\s*END OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)
+
 # (identifier, djvu_filename, author, work, language, completeness, authorship, note, out_filename)
 TEXTS = [
     ("TheAdiGranthOrTheHolyScripturesOfTheSikhs",
@@ -72,6 +76,14 @@ TEXTS = [
      "Introducció a la història universal d'Ibn Khaldun (1377); traducció francesa "
      "de W. M. de Slane (1863), no l'àrab original. Volum I de III. Digitalització OCR.",
      "Ibn_Khaldun__Prolegomenes_Vol1_de_Slane_fr.txt"),
+    # Wittgenstein: el #5740 de Gutenberg NO té .txt directe (només PDF/TeX); fem
+    # servir el mirall del text net de Gutenberg allotjat a Internet Archive.
+    ("tractatuslogicop05740gut", "tloph10.txt",
+     "Ludwig Wittgenstein", "Tractatus Logico-Philosophicus (Ogden)", "English",
+     "Complete work", "Written by the author",
+     "Traducció anglesa de C. K. Ogden (1922) del Tractatus (original alemany de 1921). "
+     "Text de Project Gutenberg (#5740) via mirall d'Internet Archive.",
+     "Wittgenstein__Tractatus_Ogden_en.txt"),
 ]
 
 
@@ -93,6 +105,13 @@ def fetch(identifier: str, djvu: str) -> str | None:
 
 
 def clean_ocr(text: str) -> str:
+    # Si és un mirall de Project Gutenberg, treu la capçalera/peu legal.
+    m = _GUT_START.search(text)
+    if m:
+        text = text[m.end():]
+    m = _GUT_END.search(text)
+    if m:
+        text = text[:m.start()]
     text = text.replace("\x0c", "\n")        # marques de salt de pàgina DjVu
     text = re.sub(r"[ \t]+\n", "\n", text)   # espais a final de línia
     text = re.sub(r"\n{3,}", "\n\n", text)   # col·lapsa blocs de línies en blanc
