@@ -1300,5 +1300,27 @@
   "ja": "荘子",
   "it": "Zhuangzi",
   "orig": "莊周"
- }
+ },
+ "Bible": {"en": "Bible", "ca": "Bíblia", "es": "Biblia", "it": "Bibbia", "de": "Bibel", "a1": "Gospel", "a2": "Evangeli", "a3": "Evangelio", "a4": "Holy Bible"},
+ "Quran": {"en": "Quran", "a1": "Qur'an", "a2": "Koran", "ca": "Alcorà", "es": "Corán", "it": "Corano", "fr": "Coran", "ar": "القرآن"},
+ "Bhagavad Gita": {"en": "Bhagavad Gita", "a1": "Bhagavad", "a2": "Bhágavad Gītá", "a3": "Song Celestial"},
+ "Dhammapada": {"en": "Dhammapada", "a1": "Dharmapada"},
+ "Upanishads": {"en": "Upanishads", "a1": "Upanixad", "a2": "Upanisad"},
+ "Patanjali": {"en": "Patanjali", "a1": "Patañjali", "a2": "Yoga Sutras", "a3": "Yoga-sutra", "ca": "Ioga-sutres"},
+ "Shijing": {"en": "Shijing", "a1": "Shih King", "a2": "Book of Poetry", "a3": "Classic of Poetry", "ca": "Llibre de la Poesia"},
+ "Gilgamesh": {"en": "Gilgamesh", "ca": "Guilgameix"},
+ "Poetic Edda": {"en": "Poetic Edda", "ca": "Edda poètica", "es": "Edda poética", "a1": "Elder Edda"},
+ "Snorri Sturluson": {"en": "Snorri Sturluson", "a1": "Snorri", "a2": "Prose Edda", "a3": "Younger Edda", "ca": "Edda en prosa", "es": "Edda menor"},
+ "Hesiod": {"en": "Hesiod", "ca": "Hesíode", "es": "Hesíodo", "a1": "Teogonia", "a2": "Theogony", "a3": "Works and Days"},
+ "Baltasar Gracian": {"en": "Baltasar Gracian", "a1": "Gracián", "a2": "Gracian", "a3": "Criticón", "a4": "El Criticón"},
+ "Bartolome de las Casas": {"en": "Bartolome de las Casas", "a1": "Las Casas", "a2": "Bartolomé de las Casas", "a3": "Lascasas"},
+ "Mahabharata": {"en": "Mahabharata", "a1": "Mahābhārata", "es": "Majábharata", "a2": "Mahabhárata"},
+ "Adi Granth": {"en": "Adi Granth", "a1": "Guru Granth", "a2": "Granth Sahib", "a3": "Guru Granth Sahib", "a4": "sikhs"},
+ "I Ching": {"en": "I Ching", "a1": "Yi King", "a2": "Yijing", "a3": "Book of Changes", "ca": "Llibre dels Canvis", "es": "Libro de las Mutaciones"},
+ "Avesta": {"en": "Avesta", "a1": "Zend-Avesta", "a2": "Zend Avesta", "a3": "Vendidad", "a4": "Yasna", "a5": "Gathes", "a6": "Gathas", "a7": "Gatas", "a8": "Zaratustra", "a9": "Zarathustra", "a10": "Zoroastre", "a11": "Zoroastro", "a12": "Zoroaster", "a13": "Ahura Mazda"},
+ "Kautilya": {"en": "Kautilya", "a1": "Kautilia", "a2": "Chanakya", "a3": "Arthashastra", "a4": "Arthasastra", "ca": "Artaixastra"},
+ "Ibn Khaldun": {"en": "Ibn Khaldun", "a1": "Khaldun", "es": "Ibn Jaldún", "a2": "Muqaddimah", "a3": "Muqaddima", "fr": "Prolégomènes", "a4": "Prolegomenes", "es2": "Prolegómenos"},
+ "Jaime Balmes": {"en": "Jaime Balmes", "a1": "Balmes", "ca": "Jaume Balmes", "a2": "El Criterio"},
+ "Ludwig Wittgenstein": {"en": "Ludwig Wittgenstein", "a1": "Wittgenstein", "a2": "Tractatus", "a3": "Tractatus Logico-Philosophicus"},
+ "Angel Ganivet": {"en": "Angel Ganivet", "a1": "Ganivet", "a2": "Ángel Ganivet", "a3": "Idearium", "a4": "Idearium español"}
 }

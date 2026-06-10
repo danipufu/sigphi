@@ -10,10 +10,23 @@ Per què la detecció d'autors:
 """
 from __future__ import annotations
 import json
+import unicodedata
 from pathlib import Path
 
 from app.domain.interfaces import EmbedderInterface, VectorDBInterface
 from app.domain.models import RetrievedChunk
+
+
+def _norm(s: str) -> str:
+    """Minúscules + sense accents (NFKD, treu marques combinants).
+
+    Fa la detecció d'autor insensible a accents: 'Alcora' troba 'Alcorà',
+    'Aristotil' troba 'Aristòtil'. Els scripts no-llatins (xinès, àrab, ciríl·lic)
+    no tenen marques combinants aquí i es conserven intactes.
+    """
+    s = unicodedata.normalize("NFKD", s or "")
+    s = "".join(c for c in s if not unicodedata.combining(c))
+    return s.strip().lower()
 
 
 class RetrievalService:
@@ -44,14 +57,14 @@ class RetrievalService:
         for canon, names in data.items():
             values = list(names.values()) if isinstance(names, dict) else list(names)
             for v in values + [canon]:
-                v = (v or "").strip().lower()
+                v = _norm(v)
                 if v and (len(v) >= 5 or any(ord(c) > 127 for c in v)):
                     alias2author.setdefault(v, canon)
         return alias2author
 
     def detect_authors(self, query: str) -> list[str]:
         """Retorna els autors canònics anomenats a la consulta (qualsevol idioma)."""
-        ql = query.lower()
+        ql = _norm(query)
         found: list[str] = []
         for alias, canon in self._alias2author.items():
             if alias in ql and canon not in found:

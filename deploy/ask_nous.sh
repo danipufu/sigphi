@@ -17,7 +17,7 @@ ask() {
   curl -s -X POST http://localhost:8000/api/chat \
     -H "Content-Type: application/json" \
     -d "{\"query\":\"$1\",\"history\":[]}" \
-  | python3 -c "import sys,json; d=json.load(sys.stdin); print('RESPOSTA:', d['answer'][:420]); print(); print('FONTS:', ' | '.join(d['sources']))"
+  | python3 -c "import sys,json; d=json.load(sys.stdin); a=d['answer']; print('RESPOSTA:', a[:500] + (' …[retallat NOMÉS en aquesta prova, la resposta real és sencera]' if len(a)>500 else '')); print(); print('FONTS:', ' | '.join(d['sources']))"
 }
 
 # --- Lot 4 ---
