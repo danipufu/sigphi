@@ -14,6 +14,7 @@ _djvu.txt no sempre coincideix amb l'identifier, per això es desa explícit).
 """
 from __future__ import annotations
 import re
+import urllib.parse
 import urllib.request
 from pathlib import Path
 
@@ -43,11 +44,45 @@ TEXTS = [
      "sacerdotal; traducció de James Darmesteter (1880, SBE vol. IV), no l'avèstic "
      "original. Digitalització OCR. Els Gathes, atribuïts a Zaratustra, són en altres volums.",
      "Avesta__Vendidad_Darmesteter_en.txt"),
+
+    # --- Lot 5 ---
+    ("kautilyasarthash00sham", "kautilyasarthash00sham_djvu.txt",
+     "Kautilya", "Arthashastra (Treatise on Statecraft)", "English",
+     "Complete work", "Written by the author",
+     "Tractat sànscrit de política i economia atribuït a Kautilya (Chanakya, s. IV aC); "
+     "traducció de R. Shamasastry (1915), no el sànscrit original. Digitalització OCR.",
+     "Kautilya__Arthashastra_Shamasastry_en.txt"),
+    ("ideariumespaol01gani", "ideariumespaol01gani_djvu.txt",
+     "Angel Ganivet", "Idearium español", "Spanish",
+     "Complete work", "Written by the author",
+     "Assaig d'Ángel Ganivet (1897). Digitalització OCR de l'edició original; "
+     "pot contenir errades de reconeixement de text.",
+     "Angel_Ganivet__Idearium_espanol_es.txt"),
+    ("in.ernet.dli.2015.495279", "2015.495279.THA-SACRED_djvu.txt",
+     "Avesta", "The Zend-Avesta, Part III: Yasna, Visparad, Gathas (SBE vol. XXXI)",
+     "English", "Selection / partial", "Anonymous / composite",
+     "Escriptura zoroastriana; Part III: el Yasna i sobretot els Gathes, himnes "
+     "atribuïts directament a Zaratustra (el nucli més antic); traducció de L. H. Mills "
+     "(1887, SBE vol. XXXI), no l'avèstic original. Digitalització OCR.",
+     "Avesta__Yasna_Gathas_Mills_en.txt"),
+    ("LesProlegomenesDIbnKhaldounVolume1",
+     "Les Prolégomènes d'Ibn Khaldoun - Volume 1_djvu.txt",
+     "Ibn Khaldun", "Les Prolégomènes (Muqaddimah), Volume I", "French",
+     "Selection / partial", "Written by the author",
+     "Introducció a la història universal d'Ibn Khaldun (1377); traducció francesa "
+     "de W. M. de Slane (1863), no l'àrab original. Volum I de III. Digitalització OCR.",
+     "Ibn_Khaldun__Prolegomenes_Vol1_de_Slane_fr.txt"),
 ]
 
 
 def fetch(identifier: str, djvu: str) -> str | None:
-    url = f"https://archive.org/download/{identifier}/{djvu}"
+    # Els noms de fitxer poden contenir espais/accents -> cal codificar-los per a la URL.
+    url = (
+        "https://archive.org/download/"
+        + urllib.parse.quote(identifier)
+        + "/"
+        + urllib.parse.quote(djvu)
+    )
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (SigPhi)"})
         with urllib.request.urlopen(req, timeout=180) as r:  # urllib segueix el 302

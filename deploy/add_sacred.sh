@@ -9,11 +9,11 @@ set -e
 APP=/home/daniel/sigphi
 PY=$APP/venv/bin/python
 
-echo ">>> [1/5] Baixant de Project Gutenberg (inclou Mahabharata, 4 vols)..."
+echo ">>> [1/5] Baixant els textos nous de Project Gutenberg..."
 cd "$APP"
 sudo -u daniel "$PY" scripts/download_sacred.py
 
-echo ">>> [2/5] Baixant d'archive.org (OCR: Adi Granth, I Ching, Zend-Avesta)..."
+echo ">>> [2/5] Baixant els textos nous d'archive.org (OCR)..."
 sudo -u daniel "$PY" scripts/download_archive.py
 
 echo ">>> [3/5] Aturant el servei sigphi (alliberar RAM)..."
@@ -27,4 +27,4 @@ echo ">>> [5/5] Reiniciant el servei sigphi..."
 systemctl start sigphi
 sleep 3
 systemctl status sigphi --no-pager | head -n 5
-echo ">>> Fet. Lot 4 afegit (Mahabharata, Adi Granth, I Ching, Zend-Avesta) i servei actiu."
+echo ">>> Fet. Textos nous afegits i servei actiu de nou."
