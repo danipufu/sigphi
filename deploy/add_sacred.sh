@@ -9,18 +9,22 @@ set -e
 APP=/home/daniel/sigphi
 PY=$APP/venv/bin/python
 
-echo ">>> [1/4] Baixant els textos sagrats de Project Gutenberg..."
+echo ">>> [1/5] Baixant de Project Gutenberg (inclou Mahabharata, 4 vols)..."
 cd "$APP"
 sudo -u daniel "$PY" scripts/download_sacred.py
 
-echo ">>> [2/4] Aturant el servei sigphi (alliberar RAM)..."
+echo ">>> [2/5] Baixant d'archive.org (OCR: Adi Granth, I Ching, Zend-Avesta)..."
+sudo -u daniel "$PY" scripts/download_archive.py
+
+echo ">>> [3/5] Aturant el servei sigphi (alliberar RAM)..."
 systemctl stop sigphi
 
-echo ">>> [3/4] Ingest dels nous fitxers cap a Qdrant (espera, no tanquis)..."
+echo ">>> [4/5] Ingest dels nous fitxers cap a Qdrant (espera, no tanquis)..."
+echo ">>>       (el Mahabharata és gros: aquesta passada pot trigar força més)"
 sudo -u daniel bash -c "cd $APP && source venv/bin/activate && VECTOR_DB_TYPE=qdrant python -u scripts/ingest.py"
 
-echo ">>> [4/4] Reiniciant el servei sigphi..."
+echo ">>> [5/5] Reiniciant el servei sigphi..."
 systemctl start sigphi
 sleep 3
 systemctl status sigphi --no-pager | head -n 5
-echo ">>> Fet. Textos sagrats afegits i servei actiu de nou."
+echo ">>> Fet. Lot 4 afegit (Mahabharata, Adi Granth, I Ching, Zend-Avesta) i servei actiu."

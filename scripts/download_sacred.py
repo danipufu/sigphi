@@ -94,6 +94,34 @@ TEXTS = [
      "Complete work", "Written by the author",
      "Traducció anglesa de l'original castellà (1552).",
      "Las_Casas__Brief_Account_Destruction_Indies_en.txt"),
+
+    # --- Lot 4: Mahabharata complet (trad. en prosa de Ganguli, 4 volums) ---
+    (15474, "Mahabharata",
+     "The Mahabharata, Vol. I (Books 1-3: Adi, Sabha, Vana) — Ganguli", "English",
+     "Complete work", "Attributed (authorship debated)",
+     "Poema èpic sànscrit tradicionalment atribuït a Vyasa, compost i ampliat al "
+     "llarg de segles; traducció en prosa de Kisari Mohan Ganguli (1883-96), no el "
+     "sànscrit original. Volum I de IV (llibres 1-3).",
+     "Mahabharata__Ganguli_Vol1_en.txt"),
+    (15475, "Mahabharata",
+     "The Mahabharata, Vol. II (Books 4-7: Virata...Drona) — Ganguli", "English",
+     "Complete work", "Attributed (authorship debated)",
+     "Poema èpic sànscrit atribuït a Vyasa; traducció en prosa de K. M. Ganguli, "
+     "no el sànscrit original. Volum II de IV (llibres 4-7; inclou la Bhagavad Gita "
+     "en prosa dins el Bhishma Parva).",
+     "Mahabharata__Ganguli_Vol2_en.txt"),
+    (15476, "Mahabharata",
+     "The Mahabharata, Vol. III (Books 8-12) — Ganguli", "English",
+     "Complete work", "Attributed (authorship debated)",
+     "Poema èpic sànscrit atribuït a Vyasa; traducció en prosa de K. M. Ganguli, "
+     "no el sànscrit original. Volum III de IV (llibres 8-12).",
+     "Mahabharata__Ganguli_Vol3_en.txt"),
+    (15477, "Mahabharata",
+     "The Mahabharata, Vol. IV (Books 13-18) — Ganguli", "English",
+     "Complete work", "Attributed (authorship debated)",
+     "Poema èpic sànscrit atribuït a Vyasa; traducció en prosa de K. M. Ganguli, "
+     "no el sànscrit original. Volum IV de IV (llibres 13-18).",
+     "Mahabharata__Ganguli_Vol4_en.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)
