@@ -150,7 +150,11 @@ def fetch(gid: int) -> str | None:
         try:
             req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (SigPhi)"})
             with urllib.request.urlopen(req, timeout=90) as r:
-                return r.read().decode("utf-8", errors="replace")
+                raw = r.read()
+            try:
+                return raw.decode("utf-8")
+            except UnicodeDecodeError:
+                return raw.decode("latin-1")  # edicions Gutenberg antigues (ISO-8859-1)
         except Exception:
             continue
     return None
