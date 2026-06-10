@@ -1337,5 +1337,10 @@
  "Liezi": {"en": "Liezi", "a1": "Lieh-tzu", "a2": "Lieh Tzu", "a3": "Lie Zi"},
  "Mahayana Sutras": {"en": "Diamond Sutra", "a1": "Heart Sutra", "a2": "Vajracchedika", "a3": "Prajnaparamita", "ca": "Sutra del Diamant", "es": "Sutra del Corazón", "a4": "Mahayana"},
  "Lotus Sutra": {"en": "Lotus Sutra", "a1": "Saddharma", "a2": "Saddharma Pundarika", "ca": "Sutra del Lotus"},
- "Jaina Sutras": {"en": "Jaina Sutras", "a1": "Jain Sutras", "a2": "jainisme", "a3": "Acaranga", "a4": "Kalpa Sutra", "a5": "jainism"}
+ "Jaina Sutras": {"en": "Jaina Sutras", "a1": "Jain Sutras", "a2": "jainisme", "a3": "Acaranga", "a4": "Kalpa Sutra", "a5": "jainism"},
+ "Kojiki": {"en": "Kojiki", "a1": "Records of Ancient Matters", "ca": "Cròniques antigues del Japó"},
+ "Pi i Margall": {"en": "Pi i Margall", "a1": "Pi y Margall", "a2": "nacionalidades"},
+ "Benito Feijoo": {"en": "Benito Feijoo", "a1": "Feijoo", "a2": "Feijóo", "a3": "Teatro crítico"},
+ "Francesc Eiximenis": {"en": "Francesc Eiximenis", "a1": "Eiximenis"},
+ "Anselm Turmeda": {"en": "Anselm Turmeda", "a1": "Turmeda", "a2": "Disputa de l'ase", "a3": "bons amonestaments"}
 }

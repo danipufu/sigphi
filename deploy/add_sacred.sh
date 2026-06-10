@@ -9,21 +9,23 @@ set -e
 APP=/home/daniel/sigphi
 PY=$APP/venv/bin/python
 
-echo ">>> [1/5] Baixant els textos nous de Project Gutenberg..."
+echo ">>> [1/6] Baixant els textos nous de Project Gutenberg..."
 cd "$APP"
 sudo -u daniel "$PY" scripts/download_sacred.py
 
-echo ">>> [2/5] Baixant els textos nous d'archive.org (OCR)..."
+echo ">>> [2/6] Baixant els textos nous d'archive.org (OCR)..."
 sudo -u daniel "$PY" scripts/download_archive.py
 
-echo ">>> [3/5] Aturant el servei sigphi (alliberar RAM)..."
+echo ">>> [3/6] Baixant els textos nous de Wikisource..."
+sudo -u daniel "$PY" scripts/download_wikisource.py
+
+echo ">>> [4/6] Aturant el servei sigphi (alliberar RAM)..."
 systemctl stop sigphi
 
-echo ">>> [4/5] Ingest dels nous fitxers cap a Qdrant (espera, no tanquis)..."
-echo ">>>       (el Mahabharata és gros: aquesta passada pot trigar força més)"
+echo ">>> [5/6] Ingest dels nous fitxers cap a Qdrant (espera, no tanquis)..."
 sudo -u daniel bash -c "cd $APP && source venv/bin/activate && VECTOR_DB_TYPE=qdrant python -u scripts/ingest.py"
 
-echo ">>> [5/5] Reiniciant el servei sigphi..."
+echo ">>> [6/6] Reiniciant el servei sigphi..."
 systemctl start sigphi
 sleep 3
 systemctl status sigphi --no-pager | head -n 5
