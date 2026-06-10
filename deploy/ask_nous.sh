@@ -14,10 +14,21 @@ ask() {
   echo "================================================================"
   echo "PREGUNTA: $1"
   echo "----------------------------------------------------------------"
-  curl -s -X POST http://localhost:8000/api/chat \
+  curl -s -m 60 -X POST http://localhost:8000/api/chat \
     -H "Content-Type: application/json" \
     -d "{\"query\":\"$1\",\"history\":[]}" \
-  | python3 -c "import sys,json; d=json.load(sys.stdin); a=d['answer']; print('RESPOSTA:', a[:500] + (' …[retallat NOMÉS en aquesta prova, la resposta real és sencera]' if len(a)>500 else '')); print(); print('FONTS:', ' | '.join(d['sources']))"
+  | python3 -c "
+import sys, json
+raw = sys.stdin.read()
+try:
+    d = json.loads(raw)
+    print('RESPOSTA:', d.get('answer', '')[:500])
+    print()
+    print('FONTS:', ' | '.join(d.get('sources', [])))
+except Exception:
+    print('(sense resposta valida del servidor -- possible limit de frequencia; espera 1 min i reintenta)')
+"
+  sleep 7   # sota el limit de 10/min (9 preguntes espaiades)
 }
 
 # --- Lot 4 ---
