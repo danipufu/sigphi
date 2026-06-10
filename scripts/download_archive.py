@@ -84,6 +84,29 @@ TEXTS = [
      "Traducció anglesa de C. K. Ogden (1922) del Tractatus (original alemany de 1921). "
      "Text de Project Gutenberg (#5740) via mirall d'Internet Archive.",
      "Wittgenstein__Tractatus_Ogden_en.txt"),
+
+    # --- Lot 6 ---
+    ("zendavesta02darm", "zendavesta02darm_djvu.txt",
+     "Avesta", "The Zend-Avesta, Part II: Sirozahs, Yasts, Nyayis (SBE vol. XXIII)",
+     "English", "Selection / partial", "Anonymous / composite",
+     "Escriptura zoroastriana; Part II: els Yasts (himnes a divinitats) i els Sirozahs; "
+     "traducció de James Darmesteter (1883, SBE vol. XXIII), no l'avèstic original. "
+     "Digitalització OCR.",
+     "Avesta__Yasts_Darmesteter_en.txt"),
+    ("AlMuqaddimaIntroductionALhistoireUniverselleLesProlegomenesDIbnKhaldounVolume233",
+     "Al-Muqaddima - Introduction à l'histoire universelle - Les prolégomènes d'Ibn Khaldoun Volume 2-3 - المقدمة_djvu.txt",
+     "Ibn Khaldun", "Les Prolégomènes (Muqaddimah), Volumes II-III", "French",
+     "Selection / partial", "Written by the author",
+     "Introducció a la història universal d'Ibn Khaldun (1377); traducció francesa "
+     "de W. M. de Slane, no l'àrab original. Volums II-III de III. Digitalització OCR.",
+     "Ibn_Khaldun__Prolegomenes_Vol2-3_de_Slane_fr.txt"),
+    ("logischeuntersuc01hussuoft", "logischeuntersuc01hussuoft_djvu.txt",
+     "Edmund Husserl", "Logische Untersuchungen, Band I (Prolegomena zur reinen Logik)",
+     "German", "Selection / partial", "Written by the author",
+     "Obra fundacional de la fenomenologia; original alemany d'Edmund Husserl (1900), "
+     "en domini públic. Volum I de II (Prolegòmens a la lògica pura). Digitalització "
+     "OCR (tipografia romana, no gòtica).",
+     "Husserl__Logische_Untersuchungen_I_de.txt"),
 ]
 
 

@@ -1322,5 +1322,6 @@
  "Ibn Khaldun": {"en": "Ibn Khaldun", "a1": "Khaldun", "es": "Ibn Jaldún", "a2": "Muqaddimah", "a3": "Muqaddima", "fr": "Prolégomènes", "a4": "Prolegomenes", "es2": "Prolegómenos"},
  "Jaime Balmes": {"en": "Jaime Balmes", "a1": "Balmes", "ca": "Jaume Balmes", "a2": "El Criterio"},
  "Ludwig Wittgenstein": {"en": "Ludwig Wittgenstein", "a1": "Wittgenstein", "a2": "Tractatus", "a3": "Tractatus Logico-Philosophicus"},
- "Angel Ganivet": {"en": "Angel Ganivet", "a1": "Ganivet", "a2": "Ángel Ganivet", "a3": "Idearium", "a4": "Idearium español"}
+ "Angel Ganivet": {"en": "Angel Ganivet", "a1": "Ganivet", "a2": "Ángel Ganivet", "a3": "Idearium", "a4": "Idearium español"},
+ "Edmund Husserl": {"en": "Edmund Husserl", "a1": "Husserl", "a2": "Logische Untersuchungen"}
 }
