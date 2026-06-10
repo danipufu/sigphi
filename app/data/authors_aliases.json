@@ -1323,5 +1323,7 @@
  "Jaime Balmes": {"en": "Jaime Balmes", "a1": "Balmes", "ca": "Jaume Balmes", "a2": "El Criterio"},
  "Ludwig Wittgenstein": {"en": "Ludwig Wittgenstein", "a1": "Wittgenstein", "a2": "Tractatus", "a3": "Tractatus Logico-Philosophicus"},
  "Angel Ganivet": {"en": "Angel Ganivet", "a1": "Ganivet", "a2": "Ángel Ganivet", "a3": "Idearium", "a4": "Idearium español"},
- "Edmund Husserl": {"en": "Edmund Husserl", "a1": "Husserl", "a2": "Logische Untersuchungen"}
+ "Edmund Husserl": {"en": "Edmund Husserl", "a1": "Husserl", "a2": "Logische Untersuchungen"},
+ "Nihongi": {"en": "Nihongi", "a1": "Nihon Shoki", "a2": "Chronicles of Japan", "ca": "Croniques del Japo"},
+ "Book of the Dead": {"en": "Book of the Dead", "a1": "Papyrus of Ani", "ca": "Llibre dels Morts", "es": "Libro de los Muertos", "fr": "Livre des Morts"}
 }

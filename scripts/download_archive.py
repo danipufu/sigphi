@@ -107,6 +107,27 @@ TEXTS = [
      "en domini públic. Volum I de II (Prolegòmens a la lògica pura). Digitalització "
      "OCR (tipografia romana, no gòtica).",
      "Husserl__Logische_Untersuchungen_I_de.txt"),
+    ("nihongi1asto", "nihongi1asto_djvu.txt",
+     "Nihongi", "Nihongi: Chronicles of Japan, Vol. I (Aston)", "English",
+     "Complete work", "Recorded/compiled by others",
+     "Crònica xintoista del Japó compilada per la cort imperial (720 dC); traducció "
+     "anglesa de W. G. Aston (1896), no el japonès clàssic original. Volum I de II. "
+     "Digitalització OCR.",
+     "Nihongi__Aston_Vol1_en.txt"),
+    ("nihongi2asto", "nihongi2asto_djvu.txt",
+     "Nihongi", "Nihongi: Chronicles of Japan, Vol. II (Aston)", "English",
+     "Complete work", "Recorded/compiled by others",
+     "Crònica xintoista del Japó compilada per la cort imperial (720 dC); traducció "
+     "anglesa de W. G. Aston (1896), no el japonès clàssic original. Volum II de II. "
+     "Digitalització OCR.",
+     "Nihongi__Aston_Vol2_en.txt"),
+    ("egyptianbookofde00erne_0", "egyptianbookofde00erne_0_djvu.txt",
+     "Book of the Dead", "The Egyptian Book of the Dead (Papyrus of Ani)", "English",
+     "Selection / partial", "Anonymous / composite",
+     "Textos funeraris de l'antic Egipte, de composició anònima i acumulats al llarg "
+     "de segles; recensió del Papir d'Ani. Edició d'E. A. W. Budge (1895) amb traducció "
+     "anglesa, introducció i transliteració (l'OCR inclou aquest aparat). No l'egipci original.",
+     "Book_of_the_Dead__Papyrus_of_Ani_Budge_en.txt"),
 ]
 
 
