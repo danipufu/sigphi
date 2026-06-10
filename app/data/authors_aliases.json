@@ -1332,5 +1332,10 @@
  "Simon Bolivar": {"en": "Simon Bolivar", "a1": "Bolívar", "a2": "Bolivar", "a3": "Carta de Jamaica", "a4": "Discurso de Angostura"},
  "Ramayana": {"en": "Ramayana", "a1": "Ramayan", "a2": "Valmiki"},
  "Flora Tristan": {"en": "Flora Tristan", "a1": "Pérégrinations", "a2": "Union ouvrière"},
- "Allan Kardec": {"en": "Allan Kardec", "a1": "Kardec", "a2": "Spirits Book", "ca": "Llibre dels esperits", "es": "Libro de los espíritus"}
+ "Allan Kardec": {"en": "Allan Kardec", "a1": "Kardec", "a2": "Spirits Book", "ca": "Llibre dels esperits", "es": "Libro de los espíritus"},
+ "Tanakh": {"en": "Tanakh", "a1": "Hebrew Bible", "a2": "Masoretic", "ca": "Bíblia hebrea", "a3": "Tanaj"},
+ "Liezi": {"en": "Liezi", "a1": "Lieh-tzu", "a2": "Lieh Tzu", "a3": "Lie Zi"},
+ "Mahayana Sutras": {"en": "Diamond Sutra", "a1": "Heart Sutra", "a2": "Vajracchedika", "a3": "Prajnaparamita", "ca": "Sutra del Diamant", "es": "Sutra del Corazón", "a4": "Mahayana"},
+ "Lotus Sutra": {"en": "Lotus Sutra", "a1": "Saddharma", "a2": "Saddharma Pundarika", "ca": "Sutra del Lotus"},
+ "Jaina Sutras": {"en": "Jaina Sutras", "a1": "Jain Sutras", "a2": "jainisme", "a3": "Acaranga", "a4": "Kalpa Sutra", "a5": "jainism"}
 }

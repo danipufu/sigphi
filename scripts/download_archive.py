@@ -174,6 +174,42 @@ TEXTS = [
      "Obra fundacional de l'espiritisme, d'Allan Kardec (original francès 1857); "
      "traducció anglesa de domini públic (Blackwell). Digitalització OCR.",
      "Allan_Kardec__The_Spirits_Book_en.txt"),
+
+    # --- Lot 8 ---
+    ("holyscripturesac028077mbp", "holyscripturesac028077mbp_djvu.txt",
+     "Tanakh", "The Holy Scriptures according to the Masoretic Text (JPS 1917)", "English",
+     "Complete work", "Anonymous / composite",
+     "Bíblia hebrea (Tanakh), antologia de molts textos i autors recopilats al llarg de "
+     "segles; traducció anglesa jueva de la Jewish Publication Society (1917), no l'hebreu "
+     "original. Digitalització OCR.",
+     "Tanakh__JPS_1917_en.txt"),
+    ("taoistteachings00liehuoft", "taoistteachings00liehuoft_djvu.txt",
+     "Liezi", "Taoist Teachings from the Book of Lieh-Tzu", "English",
+     "Selection / partial", "Attributed (authorship debated)",
+     "Clàssic taoista atribuït a Lie Zi; traducció (selecció) de Lionel Giles (1912), no "
+     "el xinès original complet. Digitalització OCR.",
+     "Liezi__Giles_en.txt"),
+    ("wg949", "WG949-1894 -The Sacred Books of East - Vol 49 of 50 - Buddhism-Mahâyâna Texts_djvu.txt",
+     "Mahayana Sutras",
+     "Buddhist Mahayana Texts: Diamond Sutra, Heart Sutra, Sukhavativyuha (SBE XLIX)",
+     "English", "Selection / partial", "Anonymous / composite",
+     "Sutres budistes mahayana de composició anònima; inclou el Sutra del Diamant "
+     "(Vajracchedika) i el Sutra del Cor; traduccions de Müller, Cowell i Takakusu (1894, "
+     "SBE vol. XLIX), no el sànscrit original. Digitalització OCR.",
+     "Mahayana_Sutras__SBE49_en.txt"),
+    ("wg921", "WG921-1884 -The Sacred Books of East - Vol 21 of 50-Buddhism-The Saddharma- Pundarika or The Lotus of the True Law_djvu.txt",
+     "Lotus Sutra", "The Saddharma-Pundarika (Lotus of the True Law, SBE XXI)", "English",
+     "Complete work", "Anonymous / composite",
+     "Sutra mahayana de composició anònima; traducció de Hendrik Kern (1884, SBE vol. XXI), "
+     "no el sànscrit original. Digitalització OCR.",
+     "Lotus_Sutra__Kern_en.txt"),
+    ("wg922", "WG922-1884 -The Sacred Books of East - Vol 22 of 50 - Jain Sutras - Part 1 Of 2_djvu.txt",
+     "Jaina Sutras", "Jaina Sutras, Part I: Acaranga and Kalpa Sutra (SBE XXII)", "English",
+     "Selection / partial", "Anonymous / composite",
+     "Escriptures jainistes (Acaranga i Kalpa Sutra) de transmissió i autoria tradicional; "
+     "traducció de Hermann Jacobi (1884, SBE vol. XXII), no el prakrit original. Part I de "
+     "II. Digitalització OCR.",
+     "Jaina_Sutras__Jacobi_I_en.txt"),
 ]
 
 
