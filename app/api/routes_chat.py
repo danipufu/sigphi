@@ -1,10 +1,11 @@
 """Endpoint REST de xat RAG: POST /api/chat -> resposta + fonts citables."""
 from __future__ import annotations
 
-from fastapi import APIRouter, Depends, Request
+from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from pydantic import BaseModel, Field
 
 from app.api.dependencies import get_chat_service, limiter, rate_limit
+from app.config import get_settings
 from app.services.chat import ChatService
 
 router = APIRouter(prefix="/api", tags=["chat"])
@@ -28,4 +29,22 @@ def chat(
     chat_service: ChatService = Depends(get_chat_service),
 ) -> ChatResponse:
     res = chat_service.answer(body.query, body.history)
+    return ChatResponse(answer=res.answer, sources=res.sources)
+
+
+@router.get("/ask", response_model=ChatResponse)
+@limiter.limit(rate_limit)
+def ask(
+    request: Request,  # requerit per slowapi
+    q: str = Query(..., min_length=1, description="La pregunta"),
+    key: str = Query("", description="Clau secreta (ASK_API_KEY)"),
+    chat_service: ChatService = Depends(get_chat_service),
+) -> ChatResponse:
+    """Variant GET del xat, protegida amb clau, per a verificació externa (eines
+    que només fan GET). Desactivada si ASK_API_KEY és buit. Retorna 404 si la clau
+    no és correcta (no revela que l'endpoint existeix)."""
+    secret = get_settings().ask_api_key
+    if not secret or key != secret:
+        raise HTTPException(status_code=404, detail="Not Found")
+    res = chat_service.answer(q, [])
     return ChatResponse(answer=res.answer, sources=res.sources)

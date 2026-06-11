@@ -30,6 +30,8 @@ class Settings(BaseSettings):
     # === LLM ===
     google_api_key: str = ""
     gemini_model: str = "gemini-2.5-flash"
+    # Clau secreta per a l'endpoint GET /api/ask (verificació externa). Buit = desactivat.
+    ask_api_key: str = ""
 
     # === Vector DB (selector dinàmic) ===
     vector_db_type: Literal["pinecone", "chroma", "qdrant"] = "pinecone"
