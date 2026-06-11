@@ -42,8 +42,10 @@ class GeminiLLM:
                 content=f"CONTEXT (fonts primàries recuperades):\n\n{context}"
             ),
             AIMessage(
-                content="Understood. I will answer strictly based on the provided "
-                "material, replying in the same language as the user's question."
+                content="Understood. I will answer strictly from the provided material, "
+                "and I will write my entire reply in the SAME language as the user's "
+                "question itself — regardless of the language of the sources, the caveats, "
+                "or earlier turns of the conversation."
             ),
         ]
         for user_turn, ai_turn in history or []:
