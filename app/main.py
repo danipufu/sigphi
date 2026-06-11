@@ -10,9 +10,11 @@ Execució (VPS):  uvicorn app.main:app --host 0.0.0.0 --port 8000
 """
 from __future__ import annotations
 from contextlib import asynccontextmanager
+from pathlib import Path
 
 import gradio as gr
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
 from slowapi import _rate_limit_exceeded_handler
 from slowapi.errors import RateLimitExceeded
 
@@ -76,8 +78,12 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
         fn=respond,
         title="SigPhi — Filosofia des de fonts primàries",
         description=(
+            '<div style="text-align:center">'
+            '<img src="/static/logo.svg" alt="SigPhi" width="78" '
+            'style="display:inline-block;margin-bottom:4px"><br>'
             "Respon NOMÉS amb textos filosòfics primaris de domini públic, amb "
             "cites verificables. Pots preguntar en qualsevol idioma."
+            "</div>"
         ),
     )
 
@@ -88,8 +94,14 @@ def build_app() -> FastAPI:
     app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
     app.include_router(routes_health.router)
     app.include_router(routes_chat.router)
+    static_dir = Path(__file__).resolve().parent / "static"
+    app.mount(
+        "/static", StaticFiles(directory=str(static_dir), check_dir=False), name="static"
+    )
     demo = _build_gradio(app)
-    app = gr.mount_gradio_app(app, demo, path="/")
+    app = gr.mount_gradio_app(
+        app, demo, path="/", favicon_path=str(static_dir / "logo.svg")
+    )
     return app
 
 
