@@ -61,3 +61,23 @@ def catalog(chunk_store: ChunkStore = Depends(get_chunk_store)) -> dict:
         "total_chunks": chunk_store.count(),
         "authors": items,
     }
+
+
+@router.get("/sample")
+def sample(
+    author: str = Query(..., description="Autor exacte (del catàleg)"),
+    work: str = Query("", description="Obra exacta (opcional)"),
+    key: str = Query(""),
+    n: int = Query(1, ge=1, le=3),
+    chunk_store: ChunkStore = Depends(get_chunk_store),
+) -> dict:
+    """Inspecció del text REAL (primers fragments) d'una obra, per a control de
+    qualitat (detectar portades, traductor, editorial, brossa). Protegit amb clau."""
+    secret = get_settings().ask_api_key
+    if not secret or key != secret:
+        raise HTTPException(status_code=404, detail="Not Found")
+    return {
+        "author": author,
+        "work": work,
+        "samples": chunk_store.sample(author, work or None, n),
+    }

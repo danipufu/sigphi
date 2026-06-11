@@ -14,6 +14,7 @@ _djvu.txt no sempre coincideix amb l'identifier, per això es desa explícit).
 """
 from __future__ import annotations
 import re
+import time
 import urllib.parse
 import urllib.request
 from pathlib import Path
@@ -221,13 +222,15 @@ def fetch(identifier: str, djvu: str) -> str | None:
         + "/"
         + urllib.parse.quote(djvu)
     )
-    try:
-        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (SigPhi)"})
-        with urllib.request.urlopen(req, timeout=180) as r:  # urllib segueix el 302
-            return r.read().decode("utf-8", errors="replace")
-    except Exception as e:
-        print(f"   ERROR baixant {identifier}: {e}")
-        return None
+    for attempt in range(3):  # reintents: archive.org pot fallar transitòriament
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 (SigPhi)"})
+            with urllib.request.urlopen(req, timeout=180) as r:  # urllib segueix el 302
+                return r.read().decode("utf-8", errors="replace")
+        except Exception as e:
+            print(f"   intent {attempt + 1}/3 fallit ({identifier}): {e}")
+            time.sleep(3)
+    return None
 
 
 def clean_ocr(text: str) -> str:

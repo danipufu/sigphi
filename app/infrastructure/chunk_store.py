@@ -102,5 +102,21 @@ class ChunkStore:
             by_author.setdefault(author, []).append(work)
         return [{"author": a, "works": w} for a, w in by_author.items()]
 
+    def sample(self, author: str, work: str | None = None, n: int = 1) -> list[str]:
+        """Primers n fragments d'una obra (o autor) per inspeccionar el text REAL
+        (detectar portades, pròlegs del traductor, editorial, brossa d'OCR...).
+        Ordre per chunk_id: el '#0' (inici del llibre) surt primer."""
+        if work:
+            cur = self._conn.execute(
+                "SELECT text FROM chunks WHERE author=? AND work=? ORDER BY chunk_id LIMIT ?",
+                (author, work, n),
+            )
+        else:
+            cur = self._conn.execute(
+                "SELECT text FROM chunks WHERE author=? ORDER BY chunk_id LIMIT ?",
+                (author, n),
+            )
+        return [r[0] for r in cur.fetchall()]
+
     def close(self) -> None:
         self._conn.close()
