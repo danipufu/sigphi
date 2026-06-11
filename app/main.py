@@ -9,6 +9,7 @@ FastAPI amb:
 Execució (VPS):  uvicorn app.main:app --host 0.0.0.0 --port 8000
 """
 from __future__ import annotations
+import logging
 from contextlib import asynccontextmanager
 from pathlib import Path
 
@@ -65,7 +66,36 @@ def _history_to_tuples(history) -> list[tuple[str, str]]:
     return tuples
 
 
-def _build_gradio(app: FastAPI) -> gr.Blocks:
+LOGO_HTML = (
+    '<div style="text-align:center;margin:6px 0 2px">'
+    '<img src="/static/logo.svg" alt="SigPhi" width="84">'
+    "</div>"
+)
+
+# Capçalera (títol + descripció) localitzada. Nota: el CONTINGUT de les respostes
+# ja segueix l'idioma de la pregunta (regla 7); això només és la crom de la UI.
+HEADERS = {
+    "Català": (
+        "### SigPhi — Filosofia des de fonts primàries\n"
+        "Respon NOMÉS amb textos filosòfics i religiosos primaris de domini públic, "
+        "amb cites verificables. **Pregunta en l'idioma que vulguis** i et respondrà "
+        "en el mateix."
+    ),
+    "Español": (
+        "### SigPhi — Filosofía desde fuentes primarias\n"
+        "Responde SOLO con textos filosóficos y religiosos primarios de dominio "
+        "público, con citas verificables. **Pregunta en el idioma que quieras** y te "
+        "responderá en el mismo."
+    ),
+    "English": (
+        "### SigPhi — Philosophy from primary sources\n"
+        "Answers ONLY from primary public-domain philosophical and religious texts, "
+        "with verifiable citations. **Ask in any language** and it replies in the same."
+    ),
+}
+
+
+def _make_respond(app: FastAPI):
     def respond(message, history):
         chat_service = app.state.chat_service
         res = chat_service.answer(message, _history_to_tuples(history))
@@ -74,18 +104,23 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
             return f"{res.answer}\n\n---\n**Fonts:**\n{srcs}"
         return res.answer
 
-    return gr.ChatInterface(
-        fn=respond,
-        title="SigPhi — Filosofia des de fonts primàries",
-        description=(
-            '<div style="text-align:center">'
-            '<img src="/static/logo.svg" alt="SigPhi" width="78" '
-            'style="display:inline-block;margin-bottom:4px"><br>'
-            "Respon NOMÉS amb textos filosòfics primaris de domini públic, amb "
-            "cites verificables. Pots preguntar en qualsevol idioma."
-            "</div>"
-        ),
-    )
+    return respond
+
+
+def _build_gradio(app: FastAPI) -> gr.Blocks:
+    respond = _make_respond(app)
+    with gr.Blocks(title="SigPhi") as demo:
+        gr.HTML(LOGO_HTML)
+        lang = gr.Radio(
+            ["Català", "Español", "English"],
+            value="Català",
+            show_label=False,
+            container=False,
+        )
+        header = gr.Markdown(HEADERS["Català"])
+        gr.ChatInterface(fn=respond)
+        lang.change(lambda l: HEADERS[l], inputs=lang, outputs=header)
+    return demo
 
 
 def build_app() -> FastAPI:
@@ -98,7 +133,11 @@ def build_app() -> FastAPI:
     app.mount(
         "/static", StaticFiles(directory=str(static_dir), check_dir=False), name="static"
     )
-    demo = _build_gradio(app)
+    try:
+        demo = _build_gradio(app)
+    except Exception:
+        logging.getLogger("sigphi").exception("UI multilingüe ha fallat; faig servir la UI simple")
+        demo = gr.ChatInterface(fn=_make_respond(app))
     app = gr.mount_gradio_app(
         app, demo, path="/", favicon_path=str(static_dir / "logo.svg")
     )

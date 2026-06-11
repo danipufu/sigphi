@@ -92,5 +92,15 @@ class ChunkStore:
         """Total chunks indexats."""
         return self._conn.execute("SELECT COUNT(*) FROM chunks").fetchone()[0]
 
+    def catalog(self) -> list[dict]:
+        """Autors amb les seves obres, llegits de la BD real (per a /api/catalog)."""
+        cur = self._conn.execute(
+            "SELECT author, work FROM chunks GROUP BY author, work ORDER BY author, work"
+        )
+        by_author: dict[str, list[str]] = {}
+        for author, work in cur.fetchall():
+            by_author.setdefault(author, []).append(work)
+        return [{"author": a, "works": w} for a, w in by_author.items()]
+
     def close(self) -> None:
         self._conn.close()

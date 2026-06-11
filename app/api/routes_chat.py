@@ -4,8 +4,9 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from pydantic import BaseModel, Field
 
-from app.api.dependencies import get_chat_service, limiter, rate_limit
+from app.api.dependencies import get_chat_service, get_chunk_store, limiter, rate_limit
 from app.config import get_settings
+from app.infrastructure.chunk_store import ChunkStore
 from app.services.chat import ChatService
 
 router = APIRouter(prefix="/api", tags=["chat"])
@@ -48,3 +49,15 @@ def ask(
         raise HTTPException(status_code=404, detail="Not Found")
     res = chat_service.answer(q, [])
     return ChatResponse(answer=res.answer, sources=res.sources)
+
+
+@router.get("/catalog")
+def catalog(chunk_store: ChunkStore = Depends(get_chunk_store)) -> dict:
+    """Catàleg REAL (autors + obres) llegit de la base de dades indexada."""
+    items = chunk_store.catalog()
+    return {
+        "total_authors": len(items),
+        "total_works": sum(len(i["works"]) for i in items),
+        "total_chunks": chunk_store.count(),
+        "authors": items,
+    }
