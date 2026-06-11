@@ -94,13 +94,6 @@ TEXTS = [
      "traducció de James Darmesteter (1883, SBE vol. XXIII), no l'avèstic original. "
      "Digitalització OCR.",
      "Avesta__Yasts_Darmesteter_en.txt"),
-    ("AlMuqaddimaIntroductionALhistoireUniverselleLesProlegomenesDIbnKhaldounVolume233",
-     "Al-Muqaddima - Introduction à l'histoire universelle - Les prolégomènes d'Ibn Khaldoun Volume 2-3 - المقدمة_djvu.txt",
-     "Ibn Khaldun", "Les Prolégomènes (Muqaddimah), Volumes II-III", "French",
-     "Selection / partial", "Written by the author",
-     "Introducció a la història universal d'Ibn Khaldun (1377); traducció francesa "
-     "de W. M. de Slane, no l'àrab original. Volums II-III de III. Digitalització OCR.",
-     "Ibn_Khaldun__Prolegomenes_Vol2-3_de_Slane_fr.txt"),
     ("logischeuntersuc01hussuoft", "logischeuntersuc01hussuoft_djvu.txt",
      "Edmund Husserl", "Logische Untersuchungen, Band I (Prolegomena zur reinen Logik)",
      "German", "Selection / partial", "Written by the author",
@@ -122,7 +115,7 @@ TEXTS = [
      "anglesa de W. G. Aston (1896), no el japonès clàssic original. Volum II de II. "
      "Digitalització OCR.",
      "Nihongi__Aston_Vol2_en.txt"),
-    ("egyptianbookofde00erne_0", "egyptianbookofde00erne_0_djvu.txt",
+    ("TheBookOfTheDead-Budge-1895", "TheBookOfTheDead-Budge-1895_djvu.txt",
      "Book of the Dead", "The Egyptian Book of the Dead (Papyrus of Ani)", "English",
      "Selection / partial", "Anonymous / composite",
      "Textos funeraris de l'antic Egipte, de composició anònima i acumulats al llarg "
