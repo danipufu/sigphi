@@ -1,14 +1,11 @@
 # Caddy: reverse proxy amb HTTPS automàtic (Let's Encrypt) per a SigPhi.
 #
-# Requereix un DOMINI amb un registre A apuntant a la IP del VPS (185.233.107.11).
-# Sense domini, Let's Encrypt no pot emetre certificat (no es fa HTTPS per IP).
+# Domini: sigphiai.com  ->  registre A  ->  46.38.243.234 (el VPS).
+# Caddy treu i renova el certificat sol; fa de proxy cap a uvicorn (localhost:8000).
 #
-# Aplicar:
-#   sudo apt install -y caddy
-#   # edita el domini en aquest fitxer, després:
-#   sudo cp deploy/Caddyfile /etc/caddy/Caddyfile
-#   sudo systemctl reload caddy
+# Aplicar:  sudo bash deploy/setup_caddy.sh
+# (o manualment: sudo cp deploy/Caddyfile /etc/caddy/Caddyfile && sudo systemctl reload caddy)
 
-sigphi.EL-TEU-DOMINI.com {
-    reverse_proxy localhost:8000
+sigphiai.com, www.sigphiai.com {
+    reverse_proxy 127.0.0.1:8000
 }
