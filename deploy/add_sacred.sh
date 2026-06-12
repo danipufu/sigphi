@@ -19,6 +19,9 @@ sudo -u daniel "$PY" scripts/download_archive.py
 echo ">>> [3/6] Baixant els textos nous de Wikisource..."
 sudo -u daniel "$PY" scripts/download_wikisource.py
 
+echo ">>> [3b/6] Baixant textos HTML solts (Marxists.org, etc.)..."
+sudo -u daniel "$PY" scripts/download_html.py
+
 echo ">>> [4/6] Aturant el servei sigphi (alliberar RAM)..."
 systemctl stop sigphi
 

@@ -51,7 +51,16 @@ class GeminiLLM:
         for user_turn, ai_turn in history or []:
             messages.append(HumanMessage(content=user_turn))
             messages.append(AIMessage(content=ai_turn))
-        messages.append(HumanMessage(content=user_query))
+        # Recordatori d'idioma ENGANXAT a la pregunta (salient just abans de generar):
+        # contraresta el biaix de l'historial (ex.: torns anteriors en català fan que
+        # el model segueixi en català encara que la pregunta actual sigui en castellà).
+        messages.append(
+            HumanMessage(
+                content=user_query
+                + "\n\n[IMPORTANT: write your entire reply in the SAME language as THIS "
+                "question, regardless of the language of earlier turns or of the sources.]"
+            )
+        )
 
         resp = self._llm.invoke(messages)
         return resp.content
