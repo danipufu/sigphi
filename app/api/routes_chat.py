@@ -4,7 +4,13 @@ from __future__ import annotations
 from fastapi import APIRouter, Depends, HTTPException, Query, Request
 from pydantic import BaseModel, Field
 
-from app.api.dependencies import get_chat_service, get_chunk_store, limiter, rate_limit
+from app.api.dependencies import (
+    get_chat_service,
+    get_chunk_store,
+    get_vector_db,
+    limiter,
+    rate_limit,
+)
 from app.config import get_settings
 from app.infrastructure.chunk_store import ChunkStore
 from app.services.chat import ChatService
@@ -80,4 +86,41 @@ def sample(
         "author": author,
         "work": work,
         "samples": chunk_store.sample(author, work or None, n),
+    }
+
+
+@router.get("/admin/remove")
+def admin_remove(
+    author: str = Query(..., description="Autor exacte (del catàleg)"),
+    work_contains: str = Query("", description="Si es dóna, només obres que ho contenen; si no, TOT l'autor"),
+    apply: int = Query(0, description="0 = dry-run (per defecte); 1 = esborra de debò"),
+    key: str = Query(""),
+    chunk_store: ChunkStore = Depends(get_chunk_store),
+    vector_db=Depends(get_vector_db),
+) -> dict:
+    """Elimina (o mostra en dry-run) obres/autors mal classificats de la BD. Protegit
+    amb clau. Permet fer la neteja remotament sense executar res al VPS. NO re-embed."""
+    secret = get_settings().ask_api_key
+    if not secret or key != secret:
+        raise HTTPException(status_code=404, detail="Not Found")
+    targets: list[tuple[str | None, list[str]]] = []
+    if work_contains:
+        for work in chunk_store.find_works(author, work_contains):
+            ids = chunk_store.chunk_ids_of(author, work)
+            if ids:
+                targets.append((work, ids))
+    else:
+        ids = chunk_store.chunk_ids_of(author)
+        if ids:
+            targets.append((None, ids))
+    if apply:
+        for _, ids in targets:
+            vector_db.delete_chunk_ids(ids)
+            chunk_store.delete_ids(ids)
+    return {
+        "author": author,
+        "work_contains": work_contains or None,
+        "applied": bool(apply),
+        "removed": [{"work": w or "(TOT L'AUTOR)", "chunks": len(ids)} for w, ids in targets],
+        "total_chunks": sum(len(ids) for _, ids in targets),
     }

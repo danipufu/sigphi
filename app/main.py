@@ -40,6 +40,7 @@ async def lifespan(app: FastAPI):
     retrieval = RetrievalService(embedder, vector_db, s.aliases_path, top_k=s.top_k)
 
     app.state.chunk_store = chunk_store
+    app.state.vector_db = vector_db
     app.state.chat_service = ChatService(llm, retrieval)
     yield
     chunk_store.close()

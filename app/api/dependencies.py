@@ -39,6 +39,10 @@ def get_chunk_store(request: Request) -> ChunkStore:
     return request.app.state.chunk_store
 
 
+def get_vector_db(request: Request):
+    return request.app.state.vector_db
+
+
 def rate_limit() -> str:
     """Valor del rate limit (callable perquè es resol en runtime des de settings)."""
     return get_settings().rate_limit
