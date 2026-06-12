@@ -41,13 +41,13 @@ REMOVE_WORKS_CONTAINS = [
     ("Locke", "Marcus Ordeyne"),
     ("Locke", "Rough Road"),
     # Henri Bergson te llibres sense relacio (o secundaris sobre ell):
-    ("Bergson", "Legend in Japanese"),
-    ("Bergson", "Sansons"),
-    ("Bergson", "Mohammed"),
-    ("Bergson", "trigonom"),
-    ("Bergson", "Jewish world"),
-    ("Bergson", "Revue de Paris"),
-    ("Bergson", "Philosophy of Bergson"),  # de Russell, secundari
+    ("Henri Bergson", "Legend in Japanese"),
+    ("Henri Bergson", "Sansons"),
+    ("Henri Bergson", "Mohammed"),
+    ("Henri Bergson", "trigonom"),
+    ("Henri Bergson", "Jewish world"),
+    ("Henri Bergson", "Revue de Paris"),
+    ("Henri Bergson", "Philosophy of Bergson"),  # de Russell, secundari
 
     # --- Lot 2 ---
     # Mary Wollstonecraft te barrejats llibres de Mary SHELLEY (la filla) i de Burke:
@@ -83,6 +83,35 @@ REMOVE_WORKS_CONTAINS = [
     ("Kierkegaard", "Forside"),
     # Plutarch: adaptacio infantil:
     ("Plutarch", "Boys' and Girls'"),
+
+    # --- Lot 3 (tot verificat via /api/sample abans d'afegir-ho) ---
+    # Charles Darwin: volums EDITATS per Francis Darwin (biografia + correspondencia
+    # amb narrativa de l'editor), no son llibres escrits per Darwin. Es conserven
+    # les seves obres propies (Origin, Descent, Voyage, Autobiography, etc.):
+    ("Charles Darwin", "Life and Letters of Charles Darwin"),
+    ("Charles Darwin", "More Letters of Charles Darwin"),
+    ("Charles Darwin", "His Life Told in an Autobiographical Chapter"),
+    # Thoreau: pagina-portal de Wikisource de la revista (markup, no text de Thoreau):
+    ("Thoreau", "The Atlantic Monthly"),
+    # Plutarch: bundle del traductor C. W. Super (Seneca "De Providentia" + Plutarc);
+    # el titol no anomena cap dels dos. Ja tenim "on the Delay of the Divine Justice":
+    ("Plutarch", "Between Heathenism and Christianity"),
+    # Karl Marx: pagines-index / avis de copyright de marxists.org (llistes d'enllacos,
+    # no son textos llegibles). Les obres reals de Marx es conserven:
+    ("Karl Marx", "Selected Works"),    # "Marx & Engels Selected Works"
+    ("Karl Marx", "Collected Works"),   # "Marx and Engels Collected Works"
+    ("Karl Marx", "MarxEngels Letters"),
+    # Proclus: bundles de Thomas Taylor d'ALTRES autors (Ocellus Lucanus; Sal·lusti
+    # "On the Gods and the World"). Es conserven els comentaris i la teologia de Proclus:
+    ("Proclus", "Ocellus Lucanus"),
+    ("Proclus", "Sallust On the Gods"),
+    # Teresa d'Avila: "An Appreciation" d'Alexander Whyte, llibre SOBRE ella (secundari).
+    # Es conserva "The Life of St. Teresa of Jesus" (autobiografia seva):
+    ("Teresa of Avila", "Santa Teresa An Appreciation"),
+    # Emma Goldman: textos d'ALTRES autors mal atribuits + index de revista:
+    ("Emma Goldman", "Prison Memoirs of an Anarchist"),   # es d'Alexander Berkman
+    ("Emma Goldman", "In Defense of Emma Goldman"),        # es de Voltairine de Cleyre (1894)
+    ("Emma Goldman", "Mother Earth"),                      # index/masthead de la revista
 ]
 
 
