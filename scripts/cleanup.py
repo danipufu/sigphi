@@ -112,6 +112,14 @@ REMOVE_WORKS_CONTAINS = [
     ("Emma Goldman", "Prison Memoirs of an Anarchist"),   # es d'Alexander Berkman
     ("Emma Goldman", "In Defense of Emma Goldman"),        # es de Voltairine de Cleyre (1894)
     ("Emma Goldman", "Mother Earth"),                      # index/masthead de la revista
+
+    # --- Lot 4 (trobat auditant els 7 autors prolifics; verificat via /api/sample) ---
+    # Kant: "Literary and Philosophical Essays" es l'antologia Harvard Classics v32
+    # (Montaigne, Lessing, Schiller, Mazzini...), NO una obra de Kant:
+    ("Kant", "Literary and Philosophical Essays"),
+    # Seneca: dues obres pseudo-senequianes (no son de Seneca):
+    ("Seneca", "Epistulae Pauli"),      # correspondencia apocrifa Pau-Seneca (medieval)
+    ("Seneca", "Proverbia Senecae"),    # maximes pseudo-senequianes (estil Publili Sir)
 ]
 
 

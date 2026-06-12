@@ -127,6 +127,45 @@ TEXTS = [
     (28929, "Jaime Balmes", "El Criterio", "Spanish",
      "Complete work", "Written by the author", "—",
      "Jaime_Balmes__El_Criterio_es.txt"),
+
+    # --- Lot 6: diàlegs de Plató que faltaven (trad. Jowett 1871, Gutenberg) ---
+    # IDs verificats un a un a la pàgina de cada ebook (l'ID "de memòria" pot
+    # col·lidir: p.ex. 6762 NO és la Retòrica d'Aristòtil sinó la Política).
+    (1580, "Plato", "Charmides", "English",
+     "Complete work", "Written by the author",
+     "Diàleg de Plató sobre la temprança; traducció de Benjamin Jowett (1871), "
+     "domini públic, no el grec original.",
+     "Plato__Charmides_Jowett_en.txt"),
+    (1584, "Plato", "Laches", "English",
+     "Complete work", "Written by the author",
+     "Diàleg de Plató sobre el valor; traducció de Benjamin Jowett (1871), domini "
+     "públic, no el grec original.",
+     "Plato__Laches_Jowett_en.txt"),
+    (1598, "Plato", "Euthydemus", "English",
+     "Complete work", "Written by the author",
+     "Diàleg de Plató; traducció de Benjamin Jowett (1871), domini públic, no el "
+     "grec original.",
+     "Plato__Euthydemus_Jowett_en.txt"),
+    (1616, "Plato", "Cratylus", "English",
+     "Complete work", "Written by the author",
+     "Diàleg de Plató sobre el llenguatge; traducció de Benjamin Jowett (1871), "
+     "domini públic, no el grec original.",
+     "Plato__Cratylus_Jowett_en.txt"),
+    (1673, "Plato", "Lesser Hippias", "English",
+     "Complete work", "Written by the author",
+     "Diàleg de Plató (Hipies Menor); traducció de Benjamin Jowett (1871), domini "
+     "públic, no el grec original.",
+     "Plato__Lesser_Hippias_Jowett_en.txt"),
+    (1682, "Plato", "Menexenus", "English",
+     "Complete work", "Written by the author",
+     "Diàleg de Plató; traducció de Benjamin Jowett (1871), domini públic, no el "
+     "grec original.",
+     "Plato__Menexenus_Jowett_en.txt"),
+    (1744, "Plato", "Philebus", "English",
+     "Complete work", "Written by the author",
+     "Diàleg de Plató sobre el plaer i el bé; traducció de Benjamin Jowett (1871), "
+     "domini públic, no el grec original.",
+     "Plato__Philebus_Jowett_en.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)
@@ -160,7 +199,19 @@ def strip_gutenberg(text: str) -> str:
     m = _END.search(text)
     if m:
         text = text[:m.start()]
+    # Soroll editorial: crèdit "Produced by ..." del principi (només 1a aparició).
+    text = re.sub(r"(?is)\A\s*Produced by .*?\n\s*\n", "", text, count=1)
     return text.strip()
+
+
+def strip_jowett_intro(text: str) -> str:
+    """Diàlegs de Plató (Jowett): talla la llarga INTRODUCTION/ANALYSIS del traductor
+    i comença al diàleg pròpiament dit. Marcador fiable: la capçalera en MAJÚSCULES
+    'PERSONS OF THE DIALOGUE'. Si no hi és, no toca res (zero risc de retallar el text)."""
+    m = re.search(r"(?m)^PERSONS OF THE DIALOGUE", text)
+    if m:
+        return text[m.start():].strip()
+    return text
 
 
 def main() -> None:
@@ -178,6 +229,8 @@ def main() -> None:
             print(f"   ERROR: no s'ha pogut baixar #{gid}")
             continue
         body = strip_gutenberg(raw)
+        if author == "Plato":  # treu la introducció del traductor (Jowett)
+            body = strip_jowett_intro(body)
         if len(body) < 5000:
             print(f"   AVÍS: text molt curt ({len(body)} car.) -> revisa la font")
         header = (
