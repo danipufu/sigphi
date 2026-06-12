@@ -118,5 +118,35 @@ class ChunkStore:
             )
         return [r[0] for r in cur.fetchall()]
 
+    # --- neteja (eliminar obres/autors mal classificats) ---
+    def find_works(self, author: str, contains: str) -> list[str]:
+        """Obres d'un autor el títol de les quals conté 'contains' (per trobar
+        descàrregues equivocades, robust a títols truncats)."""
+        cur = self._conn.execute(
+            "SELECT DISTINCT work FROM chunks WHERE author=? AND work LIKE ?",
+            (author, f"%{contains}%"),
+        )
+        return [r[0] for r in cur.fetchall()]
+
+    def chunk_ids_of(self, author: str, work: str | None = None) -> list[str]:
+        if work:
+            cur = self._conn.execute(
+                "SELECT chunk_id FROM chunks WHERE author=? AND work=?", (author, work)
+            )
+        else:
+            cur = self._conn.execute(
+                "SELECT chunk_id FROM chunks WHERE author=?", (author,)
+            )
+        return [r[0] for r in cur.fetchall()]
+
+    def delete_ids(self, chunk_ids: list[str]) -> int:
+        if not chunk_ids:
+            return 0
+        self._conn.executemany(
+            "DELETE FROM chunks WHERE chunk_id=?", [(c,) for c in chunk_ids]
+        )
+        self._conn.commit()
+        return len(chunk_ids)
+
     def close(self) -> None:
         self._conn.close()

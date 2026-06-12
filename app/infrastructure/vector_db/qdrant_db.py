@@ -135,3 +135,11 @@ class QdrantDB:
                 continue
             out.append(RetrievedChunk(chunk=chunk, score=float(p.score)))
         return out
+
+    def delete_chunk_ids(self, chunk_ids: list[str]) -> int:
+        """Esborra de Qdrant els punts d'aquests chunk_id (neteja, sense re-embed)."""
+        if not chunk_ids:
+            return 0
+        ids = [self._point_id(c) for c in chunk_ids]
+        self._client.delete(collection_name=self._collection, points_selector=ids)
+        return len(ids)
