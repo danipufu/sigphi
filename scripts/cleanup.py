@@ -48,6 +48,41 @@ REMOVE_WORKS_CONTAINS = [
     ("Bergson", "Jewish world"),
     ("Bergson", "Revue de Paris"),
     ("Bergson", "Philosophy of Bergson"),  # de Russell, secundari
+
+    # --- Lot 2 ---
+    # Mary Wollstonecraft te barrejats llibres de Mary SHELLEY (la filla) i de Burke:
+    ("Mary Wollstonecraft", "Frankenstein"),
+    ("Mary Wollstonecraft", "Mathilda"),
+    ("Mary Wollstonecraft", "The Last Man"),
+    ("Mary Wollstonecraft", "Tales and Stories"),
+    ("Mary Wollstonecraft", "Eminent literary and scientific men of Italy"),
+    ("Mary Wollstonecraft", "Lives of the most eminent literary and scientific men of France"),
+    ("Mary Wollstonecraft", "Reflections on the Revolution in France"),  # de Burke
+    # Francis Bacon: llibre de David Francis Bacon (1836):
+    ("Francis Bacon", "Lives of the apostles"),
+    # Leibniz: una revista:
+    ("Leibniz", "Atlantic Monthly"),
+    # Pascal: teosofia + secundaries:
+    ("Pascal", "Reincarnation"),
+    ("Pascal", "Life and Writings of Blaise Pascal"),
+    ("Pascal", "Notes de Voltaire"),
+    # Karl Marx: pagines-index/brossa de l'scrape (no son textos):
+    ("Karl Marx", "MarxEngels Biography"),
+    ("Karl Marx", "Archive of eBooks"),
+    ("Karl Marx", "Subject Archive"),
+    ("Karl Marx", "Lawrence"),
+    ("Karl Marx", "worksdateindex"),
+    # Fichte: biografia + estudi sobre ell:
+    ("Johann Fichte", "Memoir of Johann"),
+    ("Johann Fichte", "Philosophy of Fichte in its Relation"),
+    # Confucius: biografia:
+    ("Confucius", "Life, Labours and Doctrines"),
+    # Al-Ghazali: historia de Simon Ockley, no seva:
+    ("Al-Ghazali", "History of the Saracens"),
+    # Kierkegaard: pagina de navegacio danesa:
+    ("Kierkegaard", "Forside"),
+    # Plutarch: adaptacio infantil:
+    ("Plutarch", "Boys' and Girls'"),
 ]
 
 
