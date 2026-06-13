@@ -244,6 +244,24 @@ TEXTS = [
      "Antropologia de Kant; original alemany (ed. J. H. von Kirchmann, 1880), en "
      "domini públic. Digitalització OCR; verificar el cos després de l'ingest.",
      "Kant__Anthropologie_Kirchmann_de.txt"),
+
+    # --- Lot 11: deep-cuts via ORIGINAL (l'anglès modern té copyright) ---
+    # Marx "La misèria de la filosofia": original FRANCÈS (1847; ed. 1896). El va
+    # escriure en francès; l'anglès PD net no apareix. Francès s'indexa bé:
+    ("misredelaphilo00marxuoft", "misredelaphilo00marxuoft_djvu.txt",
+     "Karl Marx", "Misère de la philosophie (The Poverty of Philosophy)", "French",
+     "Complete work", "Written by the author",
+     "Resposta de Marx a Proudhon; original francès (1847; ed. 1896), domini públic "
+     "(l'anglès està protegit per drets). Digitalització OCR.",
+     "Karl_Marx__Misere_de_la_philosophie_fr.txt"),
+    # Kant "El conflicte de les facultats": original ALEMANY (Reclam). El cos és
+    # Antiqua llegible; la portada porta soroll d'OCR (es neteja en part):
+    ("11891496bsb", "11891496bsb_djvu.txt",
+     "Kant", "Der Streit der Fakultäten (The Conflict of the Faculties)", "German",
+     "Complete work", "Written by the author",
+     "El conflicte de les facultats; original alemany (Reclam), domini públic. Cos "
+     "en Antiqua llegible; la portada té soroll d'OCR. Digitalització OCR.",
+     "Kant__Streit_der_Fakultaeten_de.txt"),
 ]
 
 
@@ -298,7 +316,8 @@ def clean_ocr(text: str) -> str:
     # errors d'OCR: n'hi ha prou amb veure "Digitized by", "funding from",
     # "Internet Archive" o "From the Bequest" en qualsevol punt de la línia.
     text = re.sub(
-        r"(?im)^.*(?:Digitized by|funding from|Internet Archive|From the Bequest).*$",
+        r"(?im)^.*(?:Digitized by|funding from|Internet Archive|From the Bequest|"
+        r"Staatsbibliothek).*$",
         "",
         text,
     )
