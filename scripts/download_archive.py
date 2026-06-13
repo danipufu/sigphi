@@ -227,6 +227,27 @@ TEXTS = [
      "original. El volum inclou també Brutus i Orator (que ja són al corpus). "
      "Digitalització OCR.",
      "Cicero__De_Oratore_Watson_en.txt"),
+
+    # --- Lot 10: forats verificats (djvu + edició PD comprovats via metadata) ---
+    # Ciceró: l'únic PD que conté De divinatione + De legibus és el volum Bohn de
+    # Yonge; ATENCIÓ: també reinclou De natura deorum / De fato / De re publica
+    # (que ja són al corpus) -> duplicació acceptada per tenir Div. + Lleis.
+    ("treatisescicero00ciceuoft", "treatisescicero00ciceuoft_djvu.txt",
+     "Cicero",
+     "On Divination and On the Laws (Yonge Treatises of Cicero)", "English",
+     "Complete work", "Written by the author",
+     "Volum Bohn amb De Divinatione i De Legibus (el motiu d'afegir-lo); traducció "
+     "de C. D. Yonge (1853), no el llatí original. El volum també conté De natura "
+     "deorum, De fato i De re publica, que ja són al corpus (duplicació). OCR.",
+     "Cicero__Divination_Laws_Yonge_en.txt"),
+    # Kant: original alemany PD (l'anglès tardà té copyright). Edició Kirchmann
+    # (Philosophische Bibliothek, 1880, tipografia Antiqua -> OCR net esperat).
+    ("anthropologieinp00kant", "anthropologieinp00kant_djvu.txt",
+     "Kant", "Anthropologie in pragmatischer Hinsicht (German)", "German",
+     "Complete work", "Written by the author",
+     "Antropologia de Kant; original alemany (ed. J. H. von Kirchmann, 1880), en "
+     "domini públic. Digitalització OCR; verificar el cos després de l'ingest.",
+     "Kant__Anthropologie_Kirchmann_de.txt"),
 ]
 
 
