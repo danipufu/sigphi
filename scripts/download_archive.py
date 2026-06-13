@@ -249,6 +249,21 @@ def fetch(identifier: str, djvu: str) -> str | None:
     return None
 
 
+def _drop_scan_garbage_lines(text: str) -> str:
+    """Treu línies CURTES dominades per símbols/dígits: números de pàgina, segells i
+    artefactes d'escaneig tipus "^^'';  H>„". Conserva la prosa (línies llargues o
+    amb molta lletra) i el text no-llatí (el grec compta com a lletra a isalpha)."""
+    out = []
+    for ln in text.split("\n"):
+        s = ln.strip()
+        if 3 <= len(s) <= 40:
+            alpha = sum(c.isalpha() for c in s)
+            if alpha / len(s) < 0.4:  # més del 60% són símbols/dígits -> soroll
+                continue
+        out.append(ln)
+    return "\n".join(out)
+
+
 def clean_ocr(text: str) -> str:
     # Si és un mirall de Project Gutenberg, treu la capçalera/peu legal.
     m = _GUT_START.search(text)
@@ -257,7 +272,14 @@ def clean_ocr(text: str) -> str:
     m = _GUT_END.search(text)
     if m:
         text = text[:m.start()]
+    # Boilerplate legal inicial de Google Books (només si hi és, ancorat a l'inici).
+    if "This is a digital copy of a book" in text[:3000]:
+        text = re.sub(r"(?is)\A.*?https?://books\.google\.com/?\S*\s*", "", text, count=1)
+    # Avisos de l'escàner (Internet Archive + línia de finançament).
+    text = re.sub(r"(?im)^.*Digitized by (?:the )?Internet Archive.*$", "", text)
+    text = re.sub(r"(?im)^.*with funding from.*$", "", text)
     text = text.replace("\x0c", "\n")        # marques de salt de pàgina DjVu
+    text = _drop_scan_garbage_lines(text)    # números de pàgina + artefactes OCR
     text = re.sub(r"[ \t]+\n", "\n", text)   # espais a final de línia
     text = re.sub(r"\n{3,}", "\n\n", text)   # col·lapsa blocs de línies en blanc
     return text.strip()
