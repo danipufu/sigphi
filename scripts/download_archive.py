@@ -262,6 +262,20 @@ TEXTS = [
      "El conflicte de les facultats; original alemany (Reclam), domini públic. Cos "
      "en Antiqua llegible; la portada té soroll d'OCR. Digitalització OCR.",
      "Kant__Streit_der_Fakultaeten_de.txt"),
+
+    # --- Lot 12: El Capital, Vols. II i III (completen l'obra; tr. Untermann, Kerr, PD) ---
+    ("capitalcritiqueo02marxiala", "capitalcritiqueo02marxiala_djvu.txt",
+     "Karl Marx", "Capital, Vol. II: The Process of Circulation of Capital", "English",
+     "Complete work", "Written by the author",
+     "Volum II d'El Capital (editat per Engels); traducció anglesa d'Ernest Untermann "
+     "(Kerr, 1907), no l'alemany original. Digitalització OCR (llibre llarg).",
+     "Karl_Marx__Capital_Vol2_Untermann_en.txt"),
+    ("capitalcritiqueo03marx", "capitalcritiqueo03marx_djvu.txt",
+     "Karl Marx", "Capital, Vol. III: The Process of Capitalist Production as a Whole",
+     "English", "Complete work", "Written by the author",
+     "Volum III d'El Capital (editat per Engels); traducció anglesa d'Ernest Untermann "
+     "(Kerr, 1909), no l'alemany original. Digitalització OCR (llibre llarg).",
+     "Karl_Marx__Capital_Vol3_Untermann_en.txt"),
 ]
 
 
