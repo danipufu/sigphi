@@ -51,7 +51,26 @@ def main() -> None:
     print(f"[reclean] corpus={corpus} | ingest_done={done} (existeix={done.exists()})")
 
     for author, frag, fname in OCR:
-        # 1) esborra els chunks vells de la BD (Qdrant + SQLite)
+        path = corpus / fname
+        if not path.exists():
+            # No hi és (esborrat): treu de ingest_done perquè es baixi+ingesti net.
+            print(f"[reclean]   {fname}: NO existeix -> es baixarà net")
+            done_lines = [l for l in done_lines if l.strip() != fname]
+            continue
+
+        raw = path.read_text(encoding="utf-8")
+        m = _HEADER_RE.match(raw)
+        header, body = (m.group(1), raw[m.end():]) if m else ("", raw)
+        before = _noise_count(body)
+
+        # IDEMPOTENT: si ja està net, no toquem res (ni BD ni ingest_done) -> no es
+        # re-ingesta. Així es pot repetir refresh_and_add.sh sense feina redundant.
+        if before == 0:
+            print(f"[reclean]   {fname}: ja net -> res a fer (salto)")
+            continue
+
+        # Encara brut: esborra els chunks vells de la BD, re-neteja in-place i
+        # reseteja ingest_done perquè es re-ingesti net.
         deleted = 0
         for work in cs.find_works(author, frag):
             ids = cs.chunk_ids_of(author, work)
@@ -59,24 +78,11 @@ def main() -> None:
                 vdb.delete_chunk_ids(ids)
                 cs.delete_ids(ids)
                 deleted += len(ids)
-        print(f"[reclean] {author} / '{frag}': {deleted} chunks esborrats de la BD")
-
-        # 2) re-neteja el .txt IN-PLACE (no depèn de re-baixar)
-        path = corpus / fname
-        if path.exists():
-            raw = path.read_text(encoding="utf-8")
-            m = _HEADER_RE.match(raw)
-            header, body = (m.group(1), raw[m.end():]) if m else ("", raw)
-            before, cleaned = _noise_count(body), da.clean_ocr(body)
-            after = _noise_count(cleaned)
-            path.write_text(header + cleaned + "\n", encoding="utf-8")
-            print(f"[reclean]   {fname}: re-netejat in-place "
-                  f"({len(body)}->{len(cleaned)} car.; avisos {before}->{after})")
-        else:
-            print(f"[reclean]   {fname}: NO existeix -> es re-baixarà net")
-
-        # 3) treu de ingest_done perquè es re-ingesti
+        cleaned = da.clean_ocr(body)
+        path.write_text(header + cleaned + "\n", encoding="utf-8")
         done_lines = [l for l in done_lines if l.strip() != fname]
+        print(f"[reclean]   {fname}: re-netejat ({deleted} chunks BD esborrats; "
+              f"avisos {before}->{_noise_count(cleaned)})")
 
     cs.close()
     if done.exists():
