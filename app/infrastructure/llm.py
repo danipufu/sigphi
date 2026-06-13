@@ -40,6 +40,9 @@ class GeminiLLM:
             model=model,
             temperature=0.2,
             google_api_key=api_key,
+            timeout=20,      # cada crida falla en <=20s en lloc de penjar-se indefinidament
+            max_retries=0,   # desactiva la tempesta de reintents interns de langchain
+            #                  (en fem de propis, acotats, a generate())
         )
 
     def generate(
@@ -78,13 +81,13 @@ class GeminiLLM:
         # Reintents amb espera creixent: el pla gratuït de Gemini limita ~req/min i
         # retorna 429 en ràfegues. Sense això, l'excepció arribaria a l'usuari com un 500.
         last_err: Exception | None = None
-        for attempt in range(3):
+        for attempt in range(2):  # 2 intents (cada un acotat a 20s pel timeout)
             try:
                 return self._llm.invoke(messages).content
-            except Exception as e:  # 429 / errors transitoris de l'API
+            except Exception as e:  # 429 / timeout / errors transitoris de l'API
                 last_err = e
-                _log.warning("Gemini invoke ha fallat (intent %d/3): %s", attempt + 1, e)
-                if attempt < 2:
-                    time.sleep(2 * (attempt + 1))  # 2 s, després 4 s
-        _log.error("Gemini no respon després de 3 intents: %s", last_err)
+                _log.warning("Gemini invoke ha fallat (intent %d/2): %s", attempt + 1, e)
+                if attempt == 0:
+                    time.sleep(2)  # una espera curta i tornem a provar
+        _log.error("Gemini no respon després de 2 intents: %s", last_err)
         return _BUSY_MSG
