@@ -166,6 +166,15 @@ TEXTS = [
      "Diàleg de Plató sobre el plaer i el bé; traducció de Benjamin Jowett (1871), "
      "domini públic, no el grec original.",
      "Plato__Philebus_Jowett_en.txt"),
+
+    # --- Lot 7: Nietzsche (Consideracions intempestives I) ---
+    (51710, "Nietzsche",
+     "Thoughts Out of Season, Part I (David Strauss; Richard Wagner in Bayreuth)",
+     "English", "Complete work", "Written by the author",
+     "Consideracions intempestives I; conté 'David Strauss, the Confessor and "
+     "Writer' i 'Richard Wagner in Bayreuth'. Traducció d'A. M. Ludovici (ed. Levy), "
+     "domini públic. (Wagner in Bayreuth pot duplicar una entrada existent.)",
+     "Nietzsche__Thoughts_Out_of_Season_I_en.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)

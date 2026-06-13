@@ -204,6 +204,29 @@ TEXTS = [
      "traducció de Hermann Jacobi (1884, SBE vol. XXII), no el prakrit original. Part I de "
      "II. Digitalització OCR.",
      "Jaina_Sutras__Jacobi_I_en.txt"),
+
+    # --- Lot 9: filosofia clàssica que faltava (OCR d'Internet Archive; la neteja
+    # del soroll OCR/aparat es refinarà mirant /api/sample després del 1r ingest) ---
+    ("capitalcriticala00marxrich", "capitalcriticala00marxrich_djvu.txt",
+     "Karl Marx", "Capital, Vol. I: A Critical Analysis of Capitalist Production",
+     "English", "Complete work", "Written by the author",
+     "Obra magna de Marx (1867); traducció anglesa de Samuel Moore i Edward Aveling "
+     "(1887, supervisada per Engels), no l'alemany original. Digitalització OCR.",
+     "Karl_Marx__Capital_Vol1_Moore_Aveling_en.txt"),
+    ("treatiseonrhetor00arisuoft", "treatiseonrhetor00arisuoft_djvu.txt",
+     "Aristotle", "Rhetoric (Treatise on Rhetoric)", "English",
+     "Complete work", "Written by the author",
+     "Retòrica d'Aristòtil; traducció anglesa de Theodore Buckley (Bohn, 1906), no el "
+     "grec original. Digitalització OCR; l'edició porta aparat escolar (anàlisi de "
+     "Hobbes, preguntes d'examen, apèndix grec) que caldrà netejar després.",
+     "Aristotle__Rhetoric_Buckley_en.txt"),
+    ("ciceroonoratory00cicegoog", "ciceroonoratory00cicegoog_djvu.txt",
+     "Cicero", "De Oratore (On Oratory and Orators)", "English",
+     "Complete work", "Written by the author",
+     "De Oratore de Ciceró; traducció de J. S. Watson (Bohn, 1878), no el llatí "
+     "original. El volum inclou també Brutus i Orator (que ja són al corpus). "
+     "Digitalització OCR.",
+     "Cicero__De_Oratore_Watson_en.txt"),
 ]
 
 
