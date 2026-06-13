@@ -1,8 +1,21 @@
 """GeminiLLM: adaptador del LLM de Google (Gemini) via LangChain."""
 from __future__ import annotations
 
+import logging
+import time
+
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
+
+_log = logging.getLogger("sigphi")
+
+# Missatge amable quan Gemini està saturat (429) i s'esgoten els reintents. Trilingüe
+# perquè no sabem encara l'idioma de la pregunta a aquest nivell.
+_BUSY_MSG = (
+    "⏳ El servei està rebent moltes peticions ara mateix; torna-ho a provar d'aquí uns segons.\n"
+    "⏳ El servicio está recibiendo muchas peticiones; inténtalo de nuevo en unos segundos.\n"
+    "⏳ The service is busy right now; please try again in a few seconds."
+)
 
 
 class GeminiLLM:
@@ -62,5 +75,16 @@ class GeminiLLM:
             )
         )
 
-        resp = self._llm.invoke(messages)
-        return resp.content
+        # Reintents amb espera creixent: el pla gratuït de Gemini limita ~req/min i
+        # retorna 429 en ràfegues. Sense això, l'excepció arribaria a l'usuari com un 500.
+        last_err: Exception | None = None
+        for attempt in range(3):
+            try:
+                return self._llm.invoke(messages).content
+            except Exception as e:  # 429 / errors transitoris de l'API
+                last_err = e
+                _log.warning("Gemini invoke ha fallat (intent %d/3): %s", attempt + 1, e)
+                if attempt < 2:
+                    time.sleep(2 * (attempt + 1))  # 2 s, després 4 s
+        _log.error("Gemini no respon després de 3 intents: %s", last_err)
+        return _BUSY_MSG
