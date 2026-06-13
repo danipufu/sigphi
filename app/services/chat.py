@@ -4,12 +4,16 @@ Flux: retrieve (amb filtre d'autor) -> munta context amb CAVEATS -> LLM genera
 resposta fidel a les fonts -> recull la llista de fonts (amb avisos ⚠).
 """
 from __future__ import annotations
+import re
 from dataclasses import dataclass
 
 from app.domain.interfaces import LLMInterface
 from app.domain.models import RetrievedChunk
 from app.services.prompts import NO_CORPUS_MESSAGE, SYSTEM_PROMPT
 from app.services.retrieval import RetrievalService
+
+# Captura [[NO_SOURCES]] (i variants amb un sol claudàtor) en qualsevol posició.
+_NO_SOURCES_RE = re.compile(r"\s*\[+\s*NO_SOURCES\s*\]+\s*")
 
 
 @dataclass(frozen=True, slots=True)
@@ -77,5 +81,11 @@ class ChatService:
         context = format_context(retrieved)
         hist = (history or [])[-self._max_history :]
         text = self._llm.generate(SYSTEM_PROMPT, query, context, hist)
-        sources = get_sources(retrieved)
+        # Si l'LLM marca que NO ha fet servir les fonts (salutació, meta, regla
+        # 3/14...), treu la marca i amaga la llista de fonts.
+        if "NO_SOURCES" in text:
+            text = _NO_SOURCES_RE.sub(" ", text).strip()
+            sources: list[str] = []
+        else:
+            sources = get_sources(retrieved)
         return ChatResult(answer=text, sources=sources, retrieved=retrieved)
