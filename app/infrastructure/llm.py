@@ -30,7 +30,7 @@ class GeminiLLM:
     temperature=0.2: respostes consistents i fidels a la font, poc creatives.
     """
 
-    def __init__(self, api_key: str, model: str = "gemini-2.0-flash") -> None:
+    def __init__(self, api_key: str, model: str = "gemini-2.5-flash-lite") -> None:
         if not api_key:
             raise ValueError(
                 "GOOGLE_API_KEY no està configurada. Defineix-la al .env "
