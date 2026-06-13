@@ -138,12 +138,8 @@ TEXTS = [
      "traducció de Georg Bühler (1886, SBE vol. XXV), no el sànscrit original. "
      "Digitalització OCR.",
      "Laws_of_Manu__Buhler_en.txt"),
-    ("principlesofmost00conw", "principlesofmost00conw_djvu.txt",
-     "Anne Conway", "The Principles of the Most Ancient and Modern Philosophy", "English",
-     "Complete work", "Written by the author",
-     "Tractat metafísic d'Anne Conway (escrit cap a 1677, publicat pòstumament el 1690). "
-     "Anglès de l'època. Digitalització OCR.",
-     "Anne_Conway__Principles_en.txt"),
+    # Anne Conway: l'ítem principlesofmost00conw d'archive.org falla sempre (403/500)
+    # i no hi ha cap font PD neta alternativa -> entrada retirada (autora absent).
     ("discursoenelcong00boli", "discursoenelcong00boli_djvu.txt",
      "Simon Bolivar", "Discurso de Angostura (1819)", "Spanish",
      "Complete work", "Written by the author",
@@ -293,13 +289,18 @@ def clean_ocr(text: str) -> str:
     m = _GUT_END.search(text)
     if m:
         text = text[:m.start()]
+    text = text.replace("\x0c", "\n")        # salts de pàgina DjVu -> PRIMER de tot,
+    #                                          perquè els regex de sota casin per línia.
     # Boilerplate legal inicial de Google Books (només si hi és, ancorat a l'inici).
     if "This is a digital copy of a book" in text[:3000]:
         text = re.sub(r"(?is)\A.*?https?://books\.google\.com/?\S*\s*", "", text, count=1)
-    # Avisos de l'escàner (Internet Archive + línia de finançament).
-    text = re.sub(r"(?im)^.*Digitized by (?:the )?Internet Archive.*$", "", text)
-    text = re.sub(r"(?im)^.*with funding from.*$", "", text)
-    text = text.replace("\x0c", "\n")        # marques de salt de pàgina DjVu
+    # Avisos d'escàner / provinença de biblioteca (línia a línia).
+    text = re.sub(
+        r"(?im)^.*(?:Digitized by (?:the )?Internet Archive|with funding from|"
+        r"From the Bequest).*$",
+        "",
+        text,
+    )
     text = _drop_scan_garbage_lines(text)    # números de pàgina + artefactes OCR
     text = re.sub(r"[ \t]+\n", "\n", text)   # espais a final de línia
     text = re.sub(r"\n{3,}", "\n\n", text)   # col·lapsa blocs de línies en blanc
