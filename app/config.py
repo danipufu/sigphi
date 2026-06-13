@@ -29,7 +29,10 @@ class Settings(BaseSettings):
 
     # === LLM ===
     google_api_key: str = ""
-    gemini_model: str = "gemini-2.5-flash"
+    # gemini-2.5-flash al free tier només dóna 20 req/DIA (esgotat de seguida).
+    # gemini-2.0-flash té quota gratuïta molt més alta. Per a ús real, el millor és
+    # activar facturació (paid tier, baratíssim). Es pot sobreescriure amb GEMINI_MODEL al .env.
+    gemini_model: str = "gemini-2.0-flash"
     # Clau secreta per a l'endpoint GET /api/ask (verificació externa). Buit = desactivat.
     ask_api_key: str = ""
 
