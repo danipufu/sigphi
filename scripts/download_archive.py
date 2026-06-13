@@ -294,10 +294,11 @@ def clean_ocr(text: str) -> str:
     # Boilerplate legal inicial de Google Books (només si hi és, ancorat a l'inici).
     if "This is a digital copy of a book" in text[:3000]:
         text = re.sub(r"(?is)\A.*?https?://books\.google\.com/?\S*\s*", "", text, count=1)
-    # Avisos d'escàner / provinença de biblioteca (línia a línia).
+    # Avisos d'escàner / provinença de biblioteca (línia a línia). Tolerant a
+    # errors d'OCR: n'hi ha prou amb veure "Digitized by", "funding from",
+    # "Internet Archive" o "From the Bequest" en qualsevol punt de la línia.
     text = re.sub(
-        r"(?im)^.*(?:Digitized by (?:the )?Internet Archive|with funding from|"
-        r"From the Bequest).*$",
+        r"(?im)^.*(?:Digitized by|funding from|Internet Archive|From the Bequest).*$",
         "",
         text,
     )
