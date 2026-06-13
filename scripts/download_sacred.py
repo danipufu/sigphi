@@ -175,6 +175,20 @@ TEXTS = [
      "Writer' i 'Richard Wagner in Bayreuth'. Traducció d'A. M. Ludovici (ed. Levy), "
      "domini públic. (Wagner in Bayreuth pot duplicar una entrada existent.)",
      "Nietzsche__Thoughts_Out_of_Season_I_en.txt"),
+
+    # --- Lot 8: anarquistes restaurats com a autors propis (curació) ---
+    # Aquests textos abans estaven MAL atribuïts a Emma Goldman (els vam treure);
+    # ara entren amb l'autoria correcta.
+    (34406, "Alexander Berkman", "Prison Memoirs of an Anarchist", "English",
+     "Complete work", "Written by the author",
+     "Memòries de presó d'Alexander Berkman (1912), domini públic. Abans estava mal "
+     "atribuït a Emma Goldman al corpus.",
+     "Alexander_Berkman__Prison_Memoirs_en.txt"),
+    (43098, "Voltairine de Cleyre", "Selected Works of Voltairine de Cleyre", "English",
+     "Complete work", "Written by the author",
+     "Antologia d'assaigs i poemes de Voltairine de Cleyre (ed. Berkman, 1914), "
+     "domini públic. Conté 'In Defense of Emma Goldman', abans mal atribuït a Goldman.",
+     "Voltairine_de_Cleyre__Selected_Works_en.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)

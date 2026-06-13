@@ -120,6 +120,18 @@ REMOVE_WORKS_CONTAINS = [
     # Seneca: dues obres pseudo-senequianes (no son de Seneca):
     ("Seneca", "Epistulae Pauli"),      # correspondencia apocrifa Pau-Seneca (medieval)
     ("Seneca", "Proverbia Senecae"),    # maximes pseudo-senequianes (estil Publili Sir)
+
+    # --- Lot 5 (curacio: traduccions arcaiques, antologies, pseudo-autors) ---
+    # Boethius: traduccions arcaiques que foregrounden el traductor (Chaucer en angles
+    # mitja, Alfred en angles antic) i que l'embedder mapeja malament; es conserven
+    # 3+ Consolacions modernes netes:
+    ("Boethius", "Chaucer"),
+    ("Boethius", "King Alfred"),
+    # Confucius: antologia multi-autor (Confuci + Menci + Shi-King...); ja tenim els Analectes:
+    ("Confucius", "Chinese literature Comprising"),
+    # Seneca: Octavia es una praetexta pseudo-senequiana (no es seva; ja es dins
+    # "The Tragedies of Seneca"):
+    ("Seneca", "Octavia"),
 ]
 
 
