@@ -157,6 +157,31 @@ REMOVE_WORKS_CONTAINS = [
     # Seneca "Epistles LA": el fitxer es una introduccio ANGLESA sobre HIPOCRATES
     # (22 'hippocrates', ~16 KB), no les cartes llatines de Seneca:
     ("Seneca", "Epistles LA"),
+
+    # --- Lot 7 (escaneig QC de tot el corpus: fitxers trencats; TITOL != CONTINGUT,
+    # brossa OCR o stubs-index. Tots tenen copia neta tret de Sextus, verificat) ---
+    # Augustine "Confessions EN" i "City of God EN": el cos es de CLAUDIA (poeta
+    # llati: "Claudianus... In Eutropium" / "Panegyricus de tertio consulatu"), no
+    # d'Agusti. Es conserven "The Confessions of St. Augustine" i "The City of God,
+    # Volume I/II" (les versions angleses reals):
+    ("Augustine", "Confessions EN"),
+    ("Augustine", "City of God EN"),
+    # Plotinus: edicio llatina escanejada amb OCR il·legible ("plotina platonicorum
+    # facile coryphzi opervm philosophicorym..."), 2912 chunks de soroll. Es
+    # conserven "Plotinos Complete Works v.1-4" i "Select Works of Plotinus":
+    ("Plotinus", "Operum philosophicorum"),
+    # Sextus Empiricus: edicio grega/llatina escanejada, OCR il·legible (2924 chunks
+    # de soroll). UNICA copia -> queda forat (cal reemplacar per Bury, p. ex.):
+    ("Sextus Empiricus", "Sexti Empirici opera"),
+    # Thomas Aquinas "Summa Theologiae": nomes un INDEX (1.8 KB: "index *prooemium
+    # *quaestio i..."), no la Summa. Es conserva "Summa Theologica, Part I-III":
+    ("Thomas Aquinas", "Summa Theologiae"),
+    # Aristotle "Organon": pagina-INDEX de navegacio (2 KB), no el text. Es
+    # conserven els components ("The Categories", "Posterior Analytics"...):
+    ("Aristotle", "Organon"),
+    # Mencius "Chinese literature Comprising...": antologia multi-autor (mateixa que
+    # ja es va treure de Confucius). Es conserva "孟子" (el Menci real en xines):
+    ("Mencius", "Chinese literature Comprising"),
 ]
 
 

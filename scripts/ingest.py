@@ -63,6 +63,24 @@ def parse_header(text: str) -> tuple[dict, str]:
     return meta, text[m.end() :]
 
 
+# Àncora de la llicència Perseus: tanca el bloc de crèdits editorials inicial
+# (títol "Machine readable text", noms del traductor/projecte, Annenberg/Tufts i,
+# en algun cas, una plantilla EQUIVOCADA -p. ex. crèdits de Sòfocles en un text de
+# Plató-). Sempre és DINS els crèdits inicials, abans del cos de l'obra.
+_PERSEUS_LICENSE_ANCHOR = "You offer Perseus any modifications you make."
+
+
+def strip_perseus_frontmatter(body: str) -> str:
+    """Treu el front-matter de crèdits de Perseus tallant fins a la línia de
+    llicència inclosa. És SEGUR per construcció: l'àncora viu sempre als crèdits
+    inicials (mai dins l'obra), així que no s'elimina cap text real. Si no hi ha
+    àncora (text no-Perseus), retorna el cos intacte. Idempotent."""
+    idx = body.find(_PERSEUS_LICENSE_ANCHOR)
+    if idx == -1:
+        return body
+    return body[idx + len(_PERSEUS_LICENSE_ANCHOR):].lstrip("\n").lstrip()
+
+
 def split_text(text: str, size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list[str]:
     """Parteix el text. Usa RecursiveCharacterTextSplitter si està disponible;
     si no, fallback per longitud amb overlap."""
@@ -161,6 +179,7 @@ def run_ingest(
         try:
             raw = path.read_text(encoding="utf-8")
             meta, body = parse_header(raw)
+            body = strip_perseus_frontmatter(body)  # treu crèdits editorials Perseus (no-op si no n'hi ha)
             md = file_metadata(path, meta)
             pieces = split_text(body)
             if not pieces:
