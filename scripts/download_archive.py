@@ -290,6 +290,19 @@ TEXTS = [
      "Obra precursora de l'anarquisme filosòfic de William Godwin (1793); anglès "
      "d'època, domini públic. Volum I. Digitalització OCR (ortografia antiga).",
      "William_Godwin__Political_Justice_Vol1_en.txt"),
+
+    # --- Lot 14: col·lecció de hadís més àmplia (el Lane-Poole no recull les
+    # pràctiques; aquesta cobreix oració/almoina/dejuni/peregrinació -> el bot pot
+    # respondre què són els "cinc pilars" per síntesi). Autor "Hadith" perquè entri
+    # al clúster de tradició islàmica del retrieval. OCR verificat net. ---
+    ("muhammadinhadees0000abul", "muhammadinhadees0000abul_djvu.txt",
+     "Hadith", "Muhammad in the Hadees: Sayings of the Prophet (Mirza Abu'l-Fadl)",
+     "English", "Selection / partial", "Recorded/compiled by others",
+     "Recull de dites del Profeta Mahoma (hadís) compilat i traduït a l'anglès per "
+     "Mirza Abu'l-Fadl (principis del s. XX), en domini públic; no l'àrab original. "
+     "Cobreix les pràctiques centrals (oració, almoina, dejuni, peregrinació). "
+     "Digitalització OCR.",
+     "Hadith__Muhammad_in_the_Hadees_AbulFadl_en.txt"),
 ]
 
 
