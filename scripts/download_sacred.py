@@ -219,7 +219,7 @@ TEXTS = [
      "Complete work", "Written by the author",
      "Obra anarcocomunista de Piotr Kropotkin (1892), domini públic.",
      "Peter_Kropotkin__Conquest_of_Bread_en.txt"),
-    (20677, "Mikhail Bakunin", "God and the State", "English",
+    (36568, "Mikhail Bakunin", "God and the State", "English",
      "Complete work", "Written by the author",
      "Assaig antiteista i anarquista de M. Bakunin (1871, pòstum); trad. anglesa, domini públic.",
      "Mikhail_Bakunin__God_and_the_State_en.txt"),
