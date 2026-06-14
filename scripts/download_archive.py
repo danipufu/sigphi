@@ -276,6 +276,20 @@ TEXTS = [
      "Volum III d'El Capital (editat per Engels); traducció anglesa d'Ernest Untermann "
      "(Kerr, 1909), no l'alemany original. Digitalització OCR (llibre llarg).",
      "Karl_Marx__Capital_Vol3_Untermann_en.txt"),
+
+    # --- Lot 13: cluster B, autors PD només en OCR/anglès d'època ---
+    ("worksofphilojuda01yonguoft", "worksofphilojuda01yonguoft_djvu.txt",
+     "Philo of Alexandria", "The Works of Philo Judaeus, Vol. I (Yonge)", "English",
+     "Selection / partial", "Written by the author",
+     "Obres del filòsof jueu-hel·lenístic Filó d'Alexandria (s. I); traducció de "
+     "C. D. Yonge (Bohn), no el grec original. Volum I de IV. Digitalització OCR.",
+     "Philo__Works_Vol1_Yonge_en.txt"),
+    ("enquiryconcernin01godw", "enquiryconcernin01godw_djvu.txt",
+     "William Godwin", "An Enquiry Concerning Political Justice, Vol. I", "English",
+     "Selection / partial", "Written by the author",
+     "Obra precursora de l'anarquisme filosòfic de William Godwin (1793); anglès "
+     "d'època, domini públic. Volum I. Digitalització OCR (ortografia antiga).",
+     "William_Godwin__Political_Justice_Vol1_en.txt"),
 ]
 
 

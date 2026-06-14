@@ -1342,5 +1342,21 @@
  "Pi i Margall": {"en": "Pi i Margall", "a1": "Pi y Margall", "a2": "nacionalidades"},
  "Benito Feijoo": {"en": "Benito Feijoo", "a1": "Feijoo", "a2": "Feijóo", "a3": "Teatro crítico"},
  "Francesc Eiximenis": {"en": "Francesc Eiximenis", "a1": "Eiximenis"},
- "Anselm Turmeda": {"en": "Anselm Turmeda", "a1": "Turmeda", "a2": "Disputa de l'ase", "a3": "bons amonestaments"}
+ "Anselm Turmeda": {"en": "Anselm Turmeda", "a1": "Turmeda", "a2": "Disputa de l'ase", "a3": "bons amonestaments"},
+ "Proudhon": {"en": "Proudhon", "a1": "Pierre-Joseph Proudhon", "a2": "What is Property"},
+ "Max Stirner": {"en": "Max Stirner", "a1": "Stirner", "a2": "Ego and His Own"},
+ "Peter Kropotkin": {"en": "Peter Kropotkin", "a1": "Kropotkin", "a2": "Mutual Aid", "a3": "Conquest of Bread"},
+ "Mikhail Bakunin": {"en": "Mikhail Bakunin", "a1": "Bakunin"},
+ "Bertrand Russell": {"en": "Bertrand Russell", "a1": "Russell"},
+ "Ludwig Feuerbach": {"en": "Ludwig Feuerbach", "a1": "Feuerbach"},
+ "Thomas a Kempis": {"en": "Thomas a Kempis", "a1": "Kempis", "a2": "Imitation of Christ", "ca": "Tomas de Kempis"},
+ "Thomas Malthus": {"en": "Thomas Malthus", "a1": "Malthus"},
+ "David Ricardo": {"en": "David Ricardo", "a1": "Ricardo"},
+ "Omar Khayyam": {"en": "Omar Khayyam", "a1": "Khayyam", "a2": "Rubaiyat"},
+ "Herbert Spencer": {"en": "Herbert Spencer", "a1": "Spencer"},
+ "Rumi": {"en": "Rumi", "a1": "Masnavi", "a2": "Mathnawi"},
+ "Jacob Boehme": {"en": "Jacob Boehme", "a1": "Boehme", "a2": "Behmen"},
+ "Philo of Alexandria": {"en": "Philo of Alexandria", "a1": "Philo", "a2": "Philo Judaeus"},
+ "William Godwin": {"en": "William Godwin", "a1": "Godwin"},
+ "Hadith": {"en": "Hadith", "a1": "hadit", "a2": "hadits", "a3": "Mahoma"}
 }
