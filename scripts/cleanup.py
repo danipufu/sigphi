@@ -132,6 +132,31 @@ REMOVE_WORKS_CONTAINS = [
     # Seneca: Octavia es una praetexta pseudo-senequiana (no es seva; ja es dins
     # "The Tragedies of Seneca"):
     ("Seneca", "Octavia"),
+
+    # --- Lot 6 (QC del lot Perseus: TITOL != CONTINGUT, verificat per hash/keywords) ---
+    # El lot "Perseus" (obres amb sufix " EN"/" LA"/" GR") tenia 5 fitxers amb el
+    # contingut equivocat. La resta de Perseus (Phaedo EN, Symposium, De Officiis,
+    # Metaphysics, Politics, Lucretius...) s'ha verificat correcta i es conserva.
+    #
+    # Plato "Apology EN": el fitxer es l'ELECTRA DE SOFOCLES (font XML soph.el_eng;
+    # 184 'electra', 120 'orestes', 0 'meletus'). Conservem "Apology" i "Apology,
+    # Crito, and Phaedo of Socrates" (l'Apologia real, neta):
+    ("Plato", "Apology EN"),
+    # Cicero "Tusculan Disputations EN": text LLATI amb aparat critic ("ita in
+    # Gertz", "si Hense; sic MSS."), no angles. Conservem "Cicero's Tusculan
+    # Disputations" (Yonge, angles net) i el bundle Academic Questions:
+    ("Cicero", "Tusculan Disputations EN"),
+    # Cicero "De Natura Deorum EN": cos BYTE-IDENTIC a "Tusculan Disputations EN"
+    # (duplicat mal etiquetat, no es De Natura Deorum). El De Natura Deorum real ja
+    # hi es dins "Cicero's Tusculan Disputations" (bundle Yonge que inclou "The
+    # Nature of the Gods"):
+    ("Cicero", "De Natura Deorum EN"),
+    # Seneca "Epistles EN": text LLATI (Epistulae Morales) amb aparat critic, no
+    # angles. Es reemplaca per "Moral Letters to Lucilius" (Gummere, Wikisource):
+    ("Seneca", "Epistles EN"),
+    # Seneca "Epistles LA": el fitxer es una introduccio ANGLESA sobre HIPOCRATES
+    # (22 'hippocrates', ~16 KB), no les cartes llatines de Seneca:
+    ("Seneca", "Epistles LA"),
 ]
 
 

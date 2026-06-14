@@ -62,6 +62,16 @@ TEXTS: list[tuple] = [
      "Complete work", "Written by the author",
      "Sàtira filosòfica d'Anselm Turmeda (1417-18). Text català de Wikisource.",
      "Turmeda__Disputa_de_l_ase_ca.txt"),
+    # Reemplaça els "Epistles EN/LA" de Perseus (llatí amb aparat / Hipòcrates).
+    # Wikisource té la traducció anglesa neta de Gummere, en 124 subpàgines
+    # "Letter N" (índex amb TOC llarg -> cal el llindar >=5 subpàgines de collect).
+    ("en", "Moral letters to Lucilius",
+     "Seneca", "Moral Letters to Lucilius (Epistulae Morales)", "English",
+     "Complete work", "Written by the author",
+     "Les 124 Epistulae Morales ad Lucilium de Sèneca sobre ètica estoica; "
+     "traducció anglesa de Richard M. Gummere (Loeb, 1917-25), domini públic. "
+     "Text de Wikisource.",
+     "Seneca__Moral_Letters_to_Lucilius_en.txt"),
 ]
 
 _SKIP_TAGS = {"script", "style", "sup", "table"}
@@ -184,7 +194,13 @@ def collect(lang: str, title: str, visited: set[str], depth: int = 0) -> str:
         return ""
     text = clean(extract(html))
     subs = subpage_links(html, title)
-    if len(text) >= MIN_FULL or not subs:
+    # És índex (cal seguir subpàgines) si: hi ha subpàgines I (la pàgina té poc
+    # text propi O hi ha molts enllaços de subpàgina). El segon cas cobreix índexs
+    # amb un TOC llarg però que NO contenen l'obra (ex. "Moral letters to
+    # Lucilius" -> 124 subpàgines "Letter N"); el llindar >=5 evita seguir enllaços
+    # incidentals d'una obra que ja és completa en una sola pàgina.
+    is_index = bool(subs) and (len(text) < MIN_FULL or len(subs) >= 5)
+    if not is_index:
         return text
     # És un índex: segueix les subpàgines en ordre i concatena.
     parts = [text] if text else []
