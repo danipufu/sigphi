@@ -39,6 +39,41 @@ _SURNAME_STOP = {
 }
 
 
+# === Detecció de TRADICIONS ===
+# Preguntes com "els 5 pilars de l'islam" no anomenen cap autor concret, així que
+# sense això la cerca no s'enfocava a l'escriptura corresponent (l'Alcorà no diu
+# "pilar"). Mapem arrels de tradició/religió -> textos i autors d'aquella tradició
+# al corpus, perquè s'incloguin al filtre. Les claus han de coincidir amb els
+# autors del catàleg.
+_ISLAM = ["Quran", "Al-Ghazali", "Averroes", "Avicenna"]
+_CHRISTIANITY = ["Bible", "Augustine", "Thomas Aquinas", "Pistis Sophia"]
+_JUDAISM = ["Tanakh", "Maimonides"]
+_HINDUISM = ["Bhagavad Gita", "Upanishads", "Mahabharata", "Ramayana", "Rig Veda",
+             "Laws of Manu", "Patanjali", "Shankaracharya"]
+_BUDDHISM = ["Dhammapada", "Lotus Sutra", "Mahayana Sutras"]
+_CONFUCIANISM = ["Confucius", "Mencius"]
+_TAOISM = ["Laozi", "Zhuangzi", "Liezi"]
+_ZOROASTRIANISM = ["Avesta"]
+_SIKHISM = ["Adi Granth"]
+
+# (arrel a buscar dins la consulta normalitzada, claus canòniques). Arrels
+# distintives perquè el match per subcadena no doni falsos positius.
+_TRADITION_ROOTS: list[tuple[str, list[str]]] = [
+    ("islam", _ISLAM), ("muslim", _ISLAM), ("musulm", _ISLAM), ("alcora", _ISLAM),
+    ("cristian", _CHRISTIANITY), ("christian", _CHRISTIANITY),
+    ("evangel", _CHRISTIANITY), ("gospel", _CHRISTIANITY), ("jesus", _CHRISTIANITY),
+    ("judaism", _JUDAISM), ("judaisme", _JUDAISM), ("jewish", _JUDAISM),
+    ("hinduism", _HINDUISM), ("hindu", _HINDUISM), ("vedic", _HINDUISM),
+    ("vedas", _HINDUISM), ("vedes", _HINDUISM),
+    ("budism", _BUDDHISM), ("buddhism", _BUDDHISM), ("budista", _BUDDHISM),
+    ("buddhist", _BUDDHISM),
+    ("confucian", _CONFUCIANISM),
+    ("taoism", _TAOISM), ("taoisme", _TAOISM), ("taoista", _TAOISM),
+    ("zoroastr", _ZOROASTRIANISM), ("zaratustra", _ZOROASTRIANISM),
+    ("sikh", _SIKHISM),
+]
+
+
 class RetrievalService:
     def __init__(
         self,
@@ -99,6 +134,13 @@ class RetrievalService:
                     found.append(canon)
             elif alias in ql:
                 found.append(canon)
+        # Tradicions/religions: afegeix les escriptures i autors de la tradició
+        # esmentada (encara que no s'anomeni cap autor concret).
+        for root, canons in _TRADITION_ROOTS:
+            if root in ql:
+                for c in canons:
+                    if c not in found:
+                        found.append(c)
         return found
 
     def retrieve(self, query: str) -> list[RetrievedChunk]:
