@@ -189,6 +189,16 @@ TEXTS = [
      "Antologia d'assaigs i poemes de Voltairine de Cleyre (ed. Berkman, 1914), "
      "domini públic. Conté 'In Defense of Emma Goldman', abans mal atribuït a Goldman.",
      "Voltairine_de_Cleyre__Selected_Works_en.txt"),
+
+    # --- Lot 9: hadits (dites del profeta Mahoma) — selecció PD ---
+    (58426, "Hadith",
+     "The Speeches and Table-Talk of the Prophet Mohammad (Lane-Poole)", "English",
+     "Selection / partial", "Recorded/compiled by others",
+     "Selecció de les dites i discursos del profeta Mahoma (hadits), transmesos i "
+     "compilats pels seguidors; edició de Stanley Lane-Poole (1882), domini públic, "
+     "no l'àrab original. (Els grans reculls -Bukhari, Muslim- només tenen traducció "
+     "anglesa moderna amb copyright.)",
+     "Hadith__Speeches_Table_Talk_Lane_Poole_en.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)

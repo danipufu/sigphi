@@ -45,7 +45,7 @@ _SURNAME_STOP = {
 # "pilar"). Mapem arrels de tradició/religió -> textos i autors d'aquella tradició
 # al corpus, perquè s'incloguin al filtre. Les claus han de coincidir amb els
 # autors del catàleg.
-_ISLAM = ["Quran", "Al-Ghazali", "Averroes", "Avicenna"]
+_ISLAM = ["Quran", "Hadith", "Al-Ghazali", "Averroes", "Avicenna"]
 _CHRISTIANITY = ["Bible", "Augustine", "Thomas Aquinas", "Pistis Sophia"]
 _JUDAISM = ["Tanakh", "Maimonides"]
 _HINDUISM = ["Bhagavad Gita", "Upanishads", "Mahabharata", "Ramayana", "Rig Veda",
