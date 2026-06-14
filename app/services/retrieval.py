@@ -10,6 +10,7 @@ Per què la detecció d'autors:
 """
 from __future__ import annotations
 import json
+import re
 import unicodedata
 from pathlib import Path
 
@@ -29,6 +30,15 @@ def _norm(s: str) -> str:
     return s.strip().lower()
 
 
+# Paraules comunes que NO s'han d'indexar com a "cognom" (finals de títols
+# multi-paraula que podrien donar falsos positius).
+_SURNAME_STOP = {
+    "dead", "war", "world", "life", "good", "soul", "mind", "love", "rights",
+    "song", "book", "laws", "gods", "duty", "things", "nature", "state", "man",
+    "king", "james",  # "Shi King" (Shijing) i "King James"/nom comú -> falsos positius
+}
+
+
 class RetrievalService:
     def __init__(
         self,
@@ -46,9 +56,10 @@ class RetrievalService:
     def _load_aliases(path: Path) -> dict[str, str]:
         """Construeix el mapa àlies(qualsevol idioma) -> autor canònic.
 
-        Només indexa àlies distintius: ASCII de >=5 caràcters o qualsevol cadena
-        amb caràcters no-ASCII (xinès, àrab, etc.), per evitar falsos positius
-        amb paraules curtes comunes.
+        Indexa àlies ASCII de >=4 caràcters (per incloure cognoms curts com
+        Marx, Kant, Hume, Mill) o qualsevol cadena amb caràcters no-ASCII
+        (xinès, àrab, etc.). El risc de falsos positius dels noms curts es controla
+        a detect_authors amb límit de paraula.
         """
         alias2author: dict[str, str] = {}
         if not path.exists():
@@ -57,17 +68,36 @@ class RetrievalService:
         for canon, names in data.items():
             values = list(names.values()) if isinstance(names, dict) else list(names)
             for v in values + [canon]:
-                v = _norm(v)
-                if v and (len(v) >= 5 or any(ord(c) > 127 for c in v)):
-                    alias2author.setdefault(v, canon)
+                n = _norm(v)
+                if not n:
+                    continue
+                if len(n) >= 4 or any(ord(c) > 127 for c in n):
+                    alias2author.setdefault(n, canon)
+                # També el COGNOM (última paraula) de noms ASCII de 2-3 paraules,
+                # perquè 'Marx' detecti 'Karl Marx' i 'Mill' 'John Stuart Mill'.
+                if n.isascii():
+                    parts = n.split()
+                    if (2 <= len(parts) <= 3 and len(parts[-1]) >= 4
+                            and parts[-1] not in _SURNAME_STOP):
+                        alias2author.setdefault(parts[-1], canon)
         return alias2author
 
     def detect_authors(self, query: str) -> list[str]:
-        """Retorna els autors canònics anomenats a la consulta (qualsevol idioma)."""
+        """Retorna els autors canònics anomenats a la consulta (qualsevol idioma).
+
+        Per a àlies ASCII fa match per LÍMIT DE PARAULA (així 'mill' no casa amb
+        'million' ni 'kant' amb 'decant'); per als scripts no-llatins (sense límit
+        de paraula útil) manté el match de subcadena.
+        """
         ql = _norm(query)
         found: list[str] = []
         for alias, canon in self._alias2author.items():
-            if alias in ql and canon not in found:
+            if canon in found:
+                continue
+            if alias.isascii():
+                if re.search(r"\b" + re.escape(alias) + r"\b", ql):
+                    found.append(canon)
+            elif alias in ql:
                 found.append(canon)
         return found
 
