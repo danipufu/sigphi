@@ -143,10 +143,49 @@ class RetrievalService:
                         found.append(c)
         return found
 
+    def _tradition_core(self, ql: str) -> list[str]:
+        """Escriptures NUCLI de les tradicions esmentades a la consulta (les 2
+        primeres claus de cada clúster: p. ex. islam -> Quran, Hadith). Serveixen
+        per garantir-ne la representació al retrieval (si no, el text més voluminós
+        de la tradició —el Coran— acapara el top_k i els hadissos de les pràctiques
+        no hi surten mai)."""
+        core: list[str] = []
+        for root, canons in _TRADITION_ROOTS:
+            if root in ql:
+                for c in canons[:2]:
+                    if c not in core:
+                        core.append(c)
+        return core
+
     def retrieve(self, query: str) -> list[RetrievedChunk]:
-        """Vectoritza la consulta i recupera top_k; filtra per autor si n'hi ha."""
+        """Vectoritza la consulta i recupera top_k; filtra per autor si n'hi ha.
+
+        Per a consultes de TRADICIÓ (islam, budisme...) garanteix que les
+        escriptures nucli hi siguin representades (top-3 de cadascuna) abans
+        d'omplir amb el millor general; així preguntes de resum doctrinal ("els 5
+        pilars") tenen a context els passatges de les pràctiques, no només el
+        fragment del Coran millor classificat.
+        """
         qv = self._embedder.embed_query(query)
+        ql = _norm(query)
         authors = self.detect_authors(query)
+        core = self._tradition_core(ql)
+        if core:
+            seen: set[str] = set()
+            merged: list[RetrievedChunk] = []
+            for a in core:  # representació garantida de cada escriptura nucli
+                for rc in self._vector_db.query_similarity(qv, 3, author_filter=[a]):
+                    if rc.chunk.chunk_id not in seen:
+                        seen.add(rc.chunk.chunk_id)
+                        merged.append(rc)
+            for rc in self._vector_db.query_similarity(  # omple amb el millor general
+                qv, self._top_k, author_filter=authors
+            ):
+                if rc.chunk.chunk_id not in seen:
+                    seen.add(rc.chunk.chunk_id)
+                    merged.append(rc)
+            if merged:
+                return merged[: self._top_k + 6]
         if authors:
             res = self._vector_db.query_similarity(
                 qv, self._top_k, author_filter=authors
