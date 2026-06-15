@@ -613,7 +613,12 @@
   "de": "Laozi",
   "ja": "老子",
   "it": "Laozi",
-  "orig": "老子"
+  "orig": "老子",
+  "work_en": "Tao Te Ching",
+  "work_alt": "Tao Te King",
+  "work_pinyin": "Dao De Jing",
+  "work_de": "Daodejing",
+  "work_zh": "道德经"
  },
  "Leibniz": {
   "en": "Gottfried Wilhelm Leibniz",
