@@ -161,14 +161,13 @@ SIGPHI_THEME = gr.themes.Soft(
     block_border_width="1px",
 )
 
-# Exemples (multilingües) que es mostren com a suggeriments inicials.
+# Exemples (4, en anglès) que es mostren com a suggeriments inicials. El bot
+# respon igualment en l'idioma de la pregunta; aquests només són la mostra.
 EXAMPLES = [
-    "Què deia Plató sobre la justícia a La República?",
-    "Quins són els cinc pilars de l'islam?",
+    "What did Plato say about justice in The Republic?",
+    "What are the Five Pillars of Islam?",
     "What did Marcus Aurelius say about death?",
-    "¿Qué enseñaba Epicteto sobre lo que depende de nosotros?",
-    "Compara Plató i Nietzsche sobre la moral",
-    "Was lehrt das Tao Te King über das Nicht-Handeln?",
+    "Compare Plato and Nietzsche on morality",
 ]
 
 # Capçalera (títol + descripció) localitzada. Nota: el CONTINGUT de les respostes
@@ -190,6 +189,50 @@ HEADERS = {
         "### SigPhi — Philosophy from primary sources\n"
         "Answers ONLY from primary public-domain philosophical and religious texts, "
         "with verifiable citations. **Ask in any language** and it replies in the same."
+    ),
+    "Français": (
+        "### SigPhi — La philosophie à partir des sources primaires\n"
+        "Répond UNIQUEMENT à partir de textes philosophiques et religieux primaires "
+        "du domaine public, avec des citations vérifiables. **Posez votre question "
+        "dans la langue de votre choix** et il répondra dans la même."
+    ),
+    "Deutsch": (
+        "### SigPhi — Philosophie aus Primärquellen\n"
+        "Antwortet AUSSCHLIESSLICH auf Grundlage gemeinfreier philosophischer und "
+        "religiöser Primärtexte, mit überprüfbaren Zitaten. **Fragen Sie in jeder "
+        "Sprache** und es antwortet in derselben."
+    ),
+    "Italiano": (
+        "### SigPhi — Filosofia dalle fonti primarie\n"
+        "Risponde SOLO con testi filosofici e religiosi primari di pubblico dominio, "
+        "con citazioni verificabili. **Fai la domanda nella lingua che preferisci** "
+        "e risponderà nella stessa."
+    ),
+    "Русский": (
+        "### SigPhi — Философия из первоисточников\n"
+        "Отвечает ТОЛЬКО по первичным философским и религиозным текстам общественного "
+        "достояния, с проверяемыми цитатами. **Задавайте вопрос на любом языке** — "
+        "ответ будет на том же."
+    ),
+    "中文": (
+        "### SigPhi — 源自原始文献的哲学\n"
+        "仅依据公共领域的哲学与宗教原始文献作答，并附可查证的引用。"
+        "**用任何语言提问**，都会以同一种语言回答。"
+    ),
+    "日本語": (
+        "### SigPhi — 一次資料からの哲学\n"
+        "パブリックドメインの哲学・宗教の一次資料のみに基づき、検証可能な出典付きで"
+        "回答します。**どの言語で質問しても**、同じ言語で回答します。"
+    ),
+    "العربية": (
+        "### SigPhi — الفلسفة من المصادر الأولية\n"
+        "يجيب فقط اعتمادًا على نصوص فلسفية ودينية أولية في الملك العام، مع استشهادات "
+        "قابلة للتحقق. **اسأل بأي لغة** وسيجيب باللغة نفسها."
+    ),
+    "हिन्दी": (
+        "### SigPhi — मूल स्रोतों से दर्शन\n"
+        "केवल सार्वजनिक डोमेन के मूल दार्शनिक और धार्मिक ग्रंथों के आधार पर उत्तर देता है, "
+        "सत्यापन-योग्य उद्धरणों के साथ। **किसी भी भाषा में पूछें**, उसी भाषा में उत्तर मिलेगा।"
     ),
 }
 
@@ -226,7 +269,10 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
     with gr.Blocks(title="SigPhi", **blocks_kwargs) as demo:
         gr.HTML(HERO_HTML)
         lang = gr.Radio(
-            ["Català", "Español", "English"],
+            [
+                "Català", "Español", "English", "Français", "Deutsch", "Italiano",
+                "Русский", "中文", "日本語", "العربية", "हिन्दी",
+            ],
             value="Català",
             show_label=False,
             container=False,
