@@ -55,10 +55,17 @@ _CONFUCIANISM = ["Confucius", "Mencius"]
 _TAOISM = ["Laozi", "Zhuangzi", "Liezi"]
 _ZOROASTRIANISM = ["Avesta"]
 _SIKHISM = ["Adi Granth"]
+# Sòcrates no va escriure res: el seu pensament sobreviu a través de Plató i
+# Xenofont. Mapem el seu nom (idiomes principals) a aquests dos autors, com si fos
+# una "tradició", perquè una pregunta sobre Sòcrates filtri i recuperi d'ells.
+_SOCRATES = ["Plato", "Xenophon"]
 
 # (arrel a buscar dins la consulta normalitzada, claus canòniques). Arrels
 # distintives perquè el match per subcadena no doni falsos positius.
 _TRADITION_ROOTS: list[tuple[str, list[str]]] = [
+    ("socrat", _SOCRATES), ("sokrat", _SOCRATES), ("σωκρατ", _SOCRATES),
+    ("сократ", _SOCRATES), ("苏格拉底", _SOCRATES), ("ソクラテス", _SOCRATES),
+    ("سقراط", _SOCRATES), ("सुकरात", _SOCRATES),
     ("islam", _ISLAM), ("muslim", _ISLAM), ("musulm", _ISLAM), ("alcora", _ISLAM),
     ("cristian", _CHRISTIANITY), ("christian", _CHRISTIANITY),
     ("evangel", _CHRISTIANITY), ("gospel", _CHRISTIANITY), ("jesus", _CHRISTIANITY),
