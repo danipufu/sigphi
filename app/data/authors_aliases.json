@@ -76,7 +76,10 @@
   "wp_ca": "Poètica",
   "wp_fr": "Poétique",
   "wp_de": "Poetik",
-  "wp_it": "Poetica"
+  "wp_it": "Poetica",
+  "wda_en": "De Anima",
+  "wda2_en": "On the Soul",
+  "wda_es": "Sobre el alma"
  },
  "Auguste Comte": {
   "en": "Auguste Comte",
@@ -183,7 +186,10 @@
   "w_de": "Die Entstehung der Arten",
   "w_it": "L'origine delle specie",
   "w_zh": "物种起源",
-  "w_ru": "Происхождение видов"
+  "w_ru": "Происхождение видов",
+  "wd_en": "The Descent of Man",
+  "wd_es": "El origen del hombre",
+  "wv_en": "The Voyage of the Beagle"
  },
  "Charles Peirce": {
   "en": "Charles Peirce",
@@ -225,7 +231,14 @@
   "de": "Cicero",
   "ja": "キケロ",
   "it": "Cicerone",
-  "orig": "Marcus Tullius Cicero"
+  "orig": "Marcus Tullius Cicero",
+  "wo_la": "De Officiis",
+  "ws_la": "De Senectute",
+  "ws2_la": "Cato Maior",
+  "wf_la": "De Amicitia",
+  "wf2_la": "Laelius de Amicitia",
+  "wt_en": "Tusculan Disputations",
+  "wt_la": "Tusculanae Disputationes"
  },
  "Confucius": {
   "en": "Confucius",
@@ -267,7 +280,10 @@
   "w_ca": "Tractat de la naturalesa humana",
   "w_fr": "Traité de la nature humaine",
   "w_de": "Traktat über die menschliche Natur",
-  "w_it": "Trattato sulla natura umana"
+  "w_it": "Trattato sulla natura umana",
+  "we_en": "An Enquiry Concerning Human Understanding",
+  "wd_en": "Dialogues Concerning Natural Religion",
+  "wd_es": "Diálogos sobre la religión natural"
  },
  "Denis Diderot": {
   "en": "Denis Diderot",
@@ -306,7 +322,10 @@
   "wm_en": "Meditations on First Philosophy",
   "wm2_en": "Metaphysical Meditations",
   "wm_es": "Meditaciones metafísicas",
-  "wm_fr": "Méditations métaphysiques"
+  "wm_fr": "Méditations métaphysiques",
+  "wpp_en": "Principles of Philosophy",
+  "wpp_es": "Principios de la filosofía",
+  "wpp_la": "Principia Philosophiae"
  },
  "Diogenes Laertius": {
   "en": "Diogenes Laertius",
@@ -414,7 +433,10 @@
   "w_en": "Novum Organum",
   "w_es": "Nuevo Órganon",
   "w_de": "Neues Organon",
-  "w_it": "Nuovo Organo"
+  "w_it": "Nuovo Organo",
+  "wna_en": "New Atlantis",
+  "wna_es": "Nueva Atlántida",
+  "wal_en": "The Advancement of Learning"
  },
  "Friedrich Engels": {
   "en": "Friedrich Engels",
@@ -536,7 +558,10 @@
   "w_ca": "Fenomenologia de l'esperit",
   "w_fr": "Phénoménologie de l'esprit",
   "w_de": "Phänomenologie des Geistes",
-  "w_it": "Fenomenologia dello spirito"
+  "w_it": "Fenomenologia dello spirito",
+  "wsl_en": "Science of Logic",
+  "wsl_de": "Wissenschaft der Logik",
+  "wsl_es": "Ciencia de la lógica"
  },
  "Henri Bergson": {
   "en": "Henri Bergson",
@@ -640,7 +665,10 @@
   "w_ca": "Sobre la llibertat",
   "w_fr": "De la liberté",
   "w_de": "Über die Freiheit",
-  "w_it": "Sulla libertà"
+  "w_it": "Sulla libertà",
+  "wsw_en": "The Subjection of Women",
+  "wsw_es": "El sometimiento de la mujer",
+  "wsl_en": "A System of Logic"
  },
  "Juan Luis Vives": {
   "en": "Juan Luis Vives",
@@ -683,7 +711,12 @@
   "wg_de": "Grundlegung zur Metaphysik der Sitten",
   "wj_en": "Critique of Judgment",
   "wj_es": "Crítica del juicio",
-  "wj_de": "Kritik der Urteilskraft"
+  "wj_de": "Kritik der Urteilskraft",
+  "wpp_en": "Perpetual Peace",
+  "wpp_es": "La paz perpetua",
+  "wpp_de": "Zum ewigen Frieden",
+  "wen_en": "What is Enlightenment",
+  "wen_de": "Was ist Aufklärung"
  },
  "Karl Marx": {
   "en": "Karl Marx",
@@ -706,7 +739,12 @@
   "wm_de": "Kommunistische Manifest",
   "wm_it": "Manifesto del Partito Comunista",
   "wm_zh": "共产党宣言",
-  "wm_ru": "Манифест коммунистической партии"
+  "wm_ru": "Манифест коммунистической партии",
+  "wpp_en": "The Poverty of Philosophy",
+  "wpp_fr": "Misère de la philosophie",
+  "wpp_es": "La miseria de la filosofía",
+  "web_en": "The Eighteenth Brumaire",
+  "wg_en": "Critique of the Gotha Programme"
  },
  "Kierkegaard": {
   "en": "Søren Kierkegaard",
@@ -785,7 +823,9 @@
   "w_it": "Due trattati sul governo",
   "we_en": "Essay Concerning Human Understanding",
   "we_es": "Ensayo sobre el entendimiento humano",
-  "we_fr": "Essai sur l'entendement humain"
+  "we_fr": "Essai sur l'entendement humain",
+  "wt_en": "A Letter Concerning Toleration",
+  "wt_es": "Carta sobre la tolerancia"
  },
  "Lucretius": {
   "en": "Lucretius",
@@ -995,7 +1035,46 @@
   "wz_es": "Así habló Zaratustra",
   "wz_fr": "Ainsi parlait Zarathoustra",
   "wz_de": "Also sprach Zarathustra",
-  "wz_it": "Così parlò Zarathustra"
+  "wz_it": "Così parlò Zarathustra",
+  "wg_en": "The Genealogy of Morals",
+  "wg2_en": "On the Genealogy of Morality",
+  "wg_es": "La genealogía de la moral",
+  "wg_de": "Zur Genealogie der Moral",
+  "wg_fr": "Généalogie de la morale",
+  "wg_it": "Genealogia della morale",
+  "we_la": "Ecce Homo",
+  "wa_en": "The Antichrist",
+  "wa_es": "El Anticristo",
+  "wa_de": "Der Antichrist",
+  "wa_fr": "L'Antéchrist",
+  "wa_it": "L'Anticristo",
+  "wa_ca": "L'Anticrist",
+  "wt_en": "Twilight of the Idols",
+  "wt_es": "El crepúsculo de los ídolos",
+  "wt_de": "Götzen-Dämmerung",
+  "wt_fr": "Crépuscule des idoles",
+  "wt_it": "Crepuscolo degli idoli",
+  "wb_en": "The Birth of Tragedy",
+  "wb_es": "El nacimiento de la tragedia",
+  "wb_de": "Die Geburt der Tragödie",
+  "wb_fr": "La Naissance de la tragédie",
+  "wb_it": "La nascita della tragedia",
+  "wj_en": "The Gay Science",
+  "wj2_en": "The Joyful Wisdom",
+  "wj_es": "La gaya ciencia",
+  "wj_de": "Die fröhliche Wissenschaft",
+  "wj_fr": "Le Gai Savoir",
+  "wj_it": "La gaia scienza",
+  "wh_en": "Human, All Too Human",
+  "wh_es": "Humano, demasiado humano",
+  "wh_de": "Menschliches, Allzumenschliches",
+  "wh_fr": "Humain, trop humain",
+  "wh_it": "Umano, troppo umano",
+  "wp_en": "The Will to Power",
+  "wp_es": "La voluntad de poder",
+  "wp_de": "Der Wille zur Macht",
+  "wp_fr": "La Volonté de puissance",
+  "wp_it": "La volontà di potenza"
  },
  "Olympe de Gouges": {
   "en": "Olympe de Gouges",
@@ -1093,7 +1172,16 @@
   "wd7": "Theaetetus",
   "wd7e": "Teeteto",
   "wd8": "Crito",
-  "wd8e": "Critón"
+  "wd8e": "Critón",
+  "we1": "Euthyphro",
+  "we1e": "Eutifrón",
+  "wp1": "Philebus",
+  "wp1e": "Filebo",
+  "wpa": "Parmenides",
+  "wpae": "Parménides",
+  "wch": "Charmides",
+  "wla": "Laches",
+  "wcr": "Critias"
  },
  "Plotinus": {
   "en": "Plotinus",
@@ -1107,7 +1195,11 @@
   "de": "Plotin",
   "ja": "プロティノス",
   "it": "Plotino",
-  "orig": "Πλωτῖνος"
+  "orig": "Πλωτῖνος",
+  "we_en": "The Enneads",
+  "we_es": "Las Enéadas",
+  "we_de": "Die Enneaden",
+  "we_fr": "Les Ennéades"
  },
  "Plutarch": {
   "en": "Plutarch",
@@ -1217,7 +1309,10 @@
   "w_ca": "El contracte social",
   "w_fr": "Du contrat social",
   "w_de": "Gesellschaftsvertrag",
-  "w_it": "Il contratto sociale"
+  "w_it": "Il contratto sociale",
+  "wi_en": "Discourse on Inequality",
+  "wi_fr": "Discours sur l'inégalité",
+  "wi_es": "Discurso sobre la desigualdad"
  },
  "Schelling": {
   "en": "Friedrich Wilhelm Joseph Schelling",
@@ -1252,7 +1347,11 @@
   "w_ca": "El món com a voluntat i representació",
   "w_fr": "Le Monde comme volonté et représentation",
   "w_de": "Die Welt als Wille und Vorstellung",
-  "w_it": "Il mondo come volontà e rappresentazione"
+  "w_it": "Il mondo come volontà e rappresentazione",
+  "wsp_en": "Studies in Pessimism",
+  "wwl_en": "The Wisdom of Life",
+  "wbm_en": "On the Basis of Morality",
+  "wbm_de": "Über die Grundlage der Moral"
  },
  "Seneca": {
   "en": "Lucius Annaeus Seneca",
@@ -1271,7 +1370,9 @@
   "w_la": "De Brevitate Vitae",
   "w_es": "Sobre la brevedad de la vida",
   "wl_en": "Letters to Lucilius",
-  "wl2_en": "Moral Letters to Lucilius"
+  "wl2_en": "Moral Letters to Lucilius",
+  "wv_la": "De Vita Beata",
+  "wv_en": "On the Happy Life"
  },
  "Sextus Empiricus": {
   "en": "Sextus Empiricus",
@@ -1318,7 +1419,10 @@
   "w_de": "Die Traumdeutung",
   "w_es": "La interpretación de los sueños",
   "wt_en": "Totem and Taboo",
-  "wt_de": "Totem und Tabu"
+  "wt_de": "Totem und Tabu",
+  "wp_en": "Beyond the Pleasure Principle",
+  "wp_de": "Jenseits des Lustprinzips",
+  "wp_es": "Más allá del principio de placer"
  },
  "Sor Juana Ines de la Cruz": {
   "en": "Sor Juana Inés de la Cruz",
@@ -1508,7 +1612,9 @@
   "it": "William James",
   "orig": "William James",
   "w_en": "The Varieties of Religious Experience",
-  "w_es": "Las variedades de la experiencia religiosa"
+  "w_es": "Las variedades de la experiencia religiosa",
+  "wb_en": "The Will to Believe",
+  "wb_es": "La voluntad de creer"
  },
  "William of Ockham": {
   "en": "William of Ockham",
