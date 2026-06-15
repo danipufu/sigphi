@@ -182,6 +182,13 @@ REMOVE_WORKS_CONTAINS = [
     # Mencius "Chinese literature Comprising...": antologia multi-autor (mateixa que
     # ja es va treure de Confucius). Es conserva "孟子" (el Menci real en xines):
     ("Mencius", "Chinese literature Comprising"),
+
+    # --- Lot 8 (trobat per la bateria de diagnostic RAG) ---
+    # Spinoza "The Philosophy of Spinoza": edicio de Joseph Ratner (1927) que treu
+    # l'Etica de la FORMA GEOMETRICA i la reescriu per al "lector profa" -> reelaboracio
+    # EDITORIAL, no el text primari. Redundant: hi ha l'"Ethics" real (+ Parts 1-5),
+    # el "Theological-Political Treatise", "On the Improvement of the Understanding", etc.
+    ("Spinoza", "The Philosophy of Spinoza"),
 ]
 
 
