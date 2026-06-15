@@ -79,7 +79,9 @@
   "wp_it": "Poetica",
   "wda_en": "De Anima",
   "wda2_en": "On the Soul",
-  "wda_es": "Sobre el alma"
+  "wda_es": "Sobre el alma",
+  "wpa_en": "Posterior Analytics",
+  "wpa_es": "Analítica posterior"
  },
  "Auguste Comte": {
   "en": "Auguste Comte",
@@ -238,7 +240,11 @@
   "wf_la": "De Amicitia",
   "wf2_la": "Laelius de Amicitia",
   "wt_en": "Tusculan Disputations",
-  "wt_la": "Tusculanae Disputationes"
+  "wt_la": "Tusculanae Disputationes",
+  "wpx_la": "Paradoxa Stoicorum",
+  "wrp_la": "De Re Publica",
+  "wdv_la": "De Divinatione",
+  "wlg_la": "De Legibus"
  },
  "Confucius": {
   "en": "Confucius",
@@ -297,7 +303,12 @@
   "de": "Denis Diderot",
   "ja": "ドゥニ・ディドロ",
   "it": "Denis Diderot",
-  "orig": "Denis Diderot"
+  "orig": "Denis Diderot",
+  "wr_fr": "Le neveu de Rameau",
+  "wr_en": "Rameau's Nephew",
+  "wj_fr": "Jacques le fataliste",
+  "wj_en": "Jacques the Fatalist",
+  "wre_fr": "La Religieuse"
  },
  "Descartes": {
   "en": "Descartes",
@@ -401,7 +412,10 @@
   "de": "Epikur",
   "ja": "エピクロス",
   "it": "Epicuro",
-  "orig": "Ἐπίκουρος"
+  "orig": "Ἐπίκουρος",
+  "wm_en": "Letter to Menoeceus",
+  "wm_es": "Carta a Meneceo",
+  "wpd_en": "Principal Doctrines"
  },
  "Erasmus": {
   "en": "Erasmus",
@@ -415,7 +429,15 @@
   "de": "Erasmus von Rotterdam",
   "ja": "エラスムス",
   "it": "Erasmo da Rotterdam",
-  "orig": "Desiderius Erasmus Roterodamensis"
+  "orig": "Desiderius Erasmus Roterodamensis",
+  "wf_en": "The Praise of Folly",
+  "wf2_en": "In Praise of Folly",
+  "wf_es": "Elogio de la locura",
+  "wf_ca": "Elogi de la follia",
+  "wf_fr": "Éloge de la folie",
+  "wf_de": "Lob der Torheit",
+  "wf_it": "Elogio della follia",
+  "wf_la": "Moriae Encomium"
  },
  "Francis Bacon": {
   "en": "Francis Bacon",
@@ -716,7 +738,12 @@
   "wpp_es": "La paz perpetua",
   "wpp_de": "Zum ewigen Frieden",
   "wen_en": "What is Enlightenment",
-  "wen_de": "Was ist Aufklärung"
+  "wen_de": "Was ist Aufklärung",
+  "wcf_en": "The Conflict of the Faculties",
+  "wcf_de": "Der Streit der Fakultäten",
+  "wr_en": "Religion within the Bounds of Bare Reason",
+  "wr_de": "Die Religion innerhalb der Grenzen der bloßen Vernunft",
+  "wan_de": "Anthropologie in pragmatischer Hinsicht"
  },
  "Karl Marx": {
   "en": "Karl Marx",
@@ -1009,7 +1036,19 @@
   "de": "Montesquieu",
   "ja": "モンテスキュー",
   "it": "Montesquieu",
-  "orig": "Montesquieu"
+  "orig": "Montesquieu",
+  "ws_en": "The Spirit of the Laws",
+  "ws_fr": "De l'esprit des lois",
+  "ws_es": "El espíritu de las leyes",
+  "ws_ca": "L'esperit de les lleis",
+  "ws_de": "Vom Geist der Gesetze",
+  "ws_it": "Lo spirito delle leggi",
+  "wp_en": "Persian Letters",
+  "wp_fr": "Lettres persanes",
+  "wp_es": "Cartas persas",
+  "wp_ca": "Cartes perses",
+  "wp_de": "Persische Briefe",
+  "wp_it": "Lettere persiane"
  },
  "Nietzsche": {
   "en": "Nietzsche",
@@ -1217,7 +1256,9 @@
   "w_en": "Parallel Lives",
   "w_es": "Vidas paralelas",
   "w_ca": "Vides paral·leles",
-  "w_fr": "Vies parallèles"
+  "w_fr": "Vies parallèles",
+  "wm_la": "Moralia",
+  "wm_en": "Plutarch's Morals"
  },
  "Popol Vuh": {
   "en": "Popol Vuh",
@@ -1454,7 +1495,10 @@
   "w_en": "Theologico-Political Treatise",
   "w2_en": "Theological-Political Treatise",
   "w_la": "Tractatus Theologico-Politicus",
-  "w_es": "Tratado teológico-político"
+  "w_es": "Tratado teológico-político",
+  "wtp_la": "Tractatus Politicus",
+  "wiu_en": "On the Improvement of the Understanding",
+  "wiu_la": "Tractatus de Intellectus Emendatione"
  },
  "Sun Tzu": {
   "en": "Sun Tzu",
@@ -1526,7 +1570,8 @@
   "w_fr": "Léviathan",
   "w_it": "Leviatano",
   "w_zh": "利维坦",
-  "w_ru": "Левиафан"
+  "w_ru": "Левиафан",
+  "wc_la": "De Cive"
  },
  "Thomas Paine": {
   "en": "Thomas Paine",
@@ -1596,7 +1641,11 @@
   "w_ca": "Càndid",
   "wp_en": "Philosophical Dictionary",
   "wp_fr": "Dictionnaire philosophique",
-  "wp_es": "Diccionario filosófico"
+  "wp_es": "Diccionario filosófico",
+  "wz": "Zadig",
+  "wl_en": "Letters on England",
+  "wl_fr": "Lettres philosophiques",
+  "wl_es": "Cartas filosóficas"
  },
  "William James": {
   "en": "William James",
@@ -1986,7 +2035,6 @@
  "Ludwig Wittgenstein": {
   "en": "Ludwig Wittgenstein",
   "a1": "Wittgenstein",
-  "a2": "Tractatus",
   "a3": "Tractatus Logico-Philosophicus",
   "es": "Ludwig Wittgenstein",
   "ca": "Ludwig Wittgenstein",
