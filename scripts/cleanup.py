@@ -189,6 +189,11 @@ REMOVE_WORKS_CONTAINS = [
     # EDITORIAL, no el text primari. Redundant: hi ha l'"Ethics" real (+ Parts 1-5),
     # el "Theological-Political Treatise", "On the Improvement of the Understanding", etc.
     ("Spinoza", "The Philosophy of Spinoza"),
+    # Rosa Luxemburg "...Letters to Sophie Liebknecht (Afterword)": el cos es una
+    # BIOGRAFIA en tercera persona ("Rosa Luxemburg was born May 5th, 1871..."), no
+    # les seves cartes. Les seves cartes de preso reals son a "Briefe aus dem
+    # Gefangnis" (alemany). Fragment unic: nomes casa amb aquesta entrada.
+    ("Rosa Luxemburg", "Liebknecht (Afterword)"),
 ]
 
 
