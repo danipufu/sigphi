@@ -10,6 +10,7 @@ Execució (VPS):  uvicorn app.main:app --host 0.0.0.0 --port 8000
 """
 from __future__ import annotations
 import logging
+import random
 from contextlib import asynccontextmanager
 from pathlib import Path
 
@@ -162,13 +163,41 @@ SIGPHI_THEME = gr.themes.Soft(
     block_border_width="1px",
 )
 
-# Exemples FIXOS (3, en anglès) que es mostren com a suggeriments inicials. No es
-# generen: són aquesta llista. 3 perquè càpiguen en una sola fila. El bot respon
+# Pou d'exemples (anglès). A cada càrrega de pàgina se'n trien N_EXAMPLES a
+# l'atzar (via demo.load), perquè no surtin sempre els mateixos. El bot respon
 # igualment en l'idioma de la pregunta; aquests només són la mostra.
-EXAMPLES = [
+N_EXAMPLES = 3
+EXAMPLE_POOL = [
+    "What did Plato say about justice in The Republic?",
     "What are the Five Pillars of Islam?",
     "What did Marcus Aurelius say about death?",
     "Compare Plato and Nietzsche on morality",
+    "What is the meaning of life according to the Stoics?",
+    "What does the Tao Te Ching teach about wu wei?",
+    "What did Epictetus say about what is in our control?",
+    "What is Nietzsche's idea of the will to power?",
+    "What did Aristotle mean by the golden mean?",
+    "How does the Bhagavad Gita describe duty (dharma)?",
+    "What did Seneca think about the shortness of life?",
+    "What is Kant's categorical imperative?",
+    "What did Confucius teach about virtue?",
+    "How do Buddhism and Christianity view death?",
+    "What did Marx say about class struggle?",
+    "What does 'I think, therefore I am' mean in Descartes?",
+    "What did Augustine say about time in the Confessions?",
+    "What does the Dhammapada say about the mind?",
+    "What did Machiavelli advise rulers in The Prince?",
+    "What is Spinoza's view of God in the Ethics?",
+    "What did Hume say about cause and effect?",
+    "What did Schopenhauer say about suffering?",
+    "What is the Stoic view of fate and providence?",
+    "What did Rousseau argue in The Social Contract?",
+    "What did Lao Tzu say about leadership?",
+    "How does the Quran describe mercy?",
+    "What did Cicero say about friendship?",
+    "What is Hegel's master–slave dialectic?",
+    "What did Mill argue in On Liberty?",
+    "What did Heraclitus mean that everything flows?",
 ]
 
 # Descripció localitzada (sense títol: el hero ja mostra "SigPhi"). Primera línia
@@ -274,9 +303,9 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
             elem_id="sigphi-lang",
         )
         header = gr.Markdown(HEADERS["Català"], elem_id="sigphi-header")
-        gr.ChatInterface(
+        ci = gr.ChatInterface(
             fn=respond,
-            examples=EXAMPLES,
+            examples=random.sample(EXAMPLE_POOL, N_EXAMPLES),
             chatbot=gr.Chatbot(elem_id="sigphi-chat", height=460, show_label=False),
             textbox=gr.Textbox(
                 placeholder="Fes una pregunta sobre filosofia… (en qualsevol idioma)",
@@ -287,6 +316,16 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
         )
         gr.HTML(FOOTER_HTML)
         lang.change(lambda l: HEADERS[l], inputs=lang, outputs=header)
+
+        # A cada càrrega de pàgina, re-barreja els exemples (3 a l'atzar del pou).
+        dataset = getattr(getattr(ci, "examples_handler", None), "dataset", None)
+        if dataset is not None:
+            def _shuffle_examples():
+                return gr.update(
+                    samples=[[q] for q in random.sample(EXAMPLE_POOL, N_EXAMPLES)]
+                )
+
+            demo.load(_shuffle_examples, inputs=None, outputs=dataset)
     return demo
 
 
