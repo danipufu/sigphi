@@ -19,7 +19,10 @@
   "w_de": "Wohlstand der Nationen",
   "w_it": "La ricchezza delle nazioni",
   "w_zh": "国富论",
-  "w_ru": "Богатство народов"
+  "w_ru": "Богатство народов",
+  "wt_en": "The Theory of Moral Sentiments",
+  "wt_es": "Teoría de los sentimientos morales",
+  "wt_ca": "Teoria dels sentiments morals"
  },
  "Al-Ghazali": {
   "en": "Al-Ghazali",
@@ -67,7 +70,13 @@
   "w_ca": "Ètica a Nicòmac",
   "w_fr": "Éthique à Nicomaque",
   "w_de": "Nikomachische Ethik",
-  "w_it": "Etica Nicomachea"
+  "w_it": "Etica Nicomachea",
+  "wp_en": "Poetics",
+  "wp_es": "Poética",
+  "wp_ca": "Poètica",
+  "wp_fr": "Poétique",
+  "wp_de": "Poetik",
+  "wp_it": "Poetica"
  },
  "Auguste Comte": {
   "en": "Auguste Comte",
@@ -293,7 +302,11 @@
   "w_ca": "Discurs del mètode",
   "w_fr": "Discours de la méthode",
   "w_de": "Abhandlung über die Methode",
-  "w_it": "Discorso sul metodo"
+  "w_it": "Discorso sul metodo",
+  "wm_en": "Meditations on First Philosophy",
+  "wm2_en": "Metaphysical Meditations",
+  "wm_es": "Meditaciones metafísicas",
+  "wm_fr": "Méditations métaphysiques"
  },
  "Diogenes Laertius": {
   "en": "Diogenes Laertius",
@@ -307,7 +320,10 @@
   "de": "Diogenes Laertius",
   "ja": "ディオゲネス・ラエルティオス",
   "it": "Diogene Laerzio",
-  "orig": "Διογένης Λαέρτιος"
+  "orig": "Διογένης Λαέρτιος",
+  "w_en": "Lives of Eminent Philosophers",
+  "w2_en": "Lives of the Philosophers",
+  "w_es": "Vidas de los filósofos ilustres"
  },
  "Emma Goldman": {
   "en": "Emma Goldman",
@@ -349,7 +365,10 @@
   "de": "Epiktet",
   "ja": "エピクテトス",
   "it": "Epitteto",
-  "orig": "Ἐπίκτητος"
+  "orig": "Ἐπίκτητος",
+  "w_en": "Enchiridion",
+  "w2_en": "Encheiridion",
+  "w_es": "Enquiridión"
  },
  "Epicurus": {
   "en": "Epicurus",
@@ -423,7 +442,10 @@
   "de": "George Berkeley",
   "ja": "ジョージ・バークリー",
   "it": "George Berkeley",
-  "orig": "George Berkeley"
+  "orig": "George Berkeley",
+  "w_en": "Principles of Human Knowledge",
+  "w2_en": "Hylas and Philonous",
+  "w_es": "Principios del conocimiento humano"
  },
  "Giordano Bruno": {
   "en": "Giordano Bruno",
@@ -652,7 +674,16 @@
   "w_ca": "Crítica de la raó pura",
   "w_fr": "Critique de la raison pure",
   "w_de": "Kritik der reinen Vernunft",
-  "w_it": "Critica della ragion pura"
+  "w_it": "Critica della ragion pura",
+  "wpr_en": "Critique of Practical Reason",
+  "wpr_es": "Crítica de la razón práctica",
+  "wpr_de": "Kritik der praktischen Vernunft",
+  "wg_en": "Groundwork of the Metaphysics of Morals",
+  "wg_es": "Fundamentación de la metafísica de las costumbres",
+  "wg_de": "Grundlegung zur Metaphysik der Sitten",
+  "wj_en": "Critique of Judgment",
+  "wj_es": "Crítica del juicio",
+  "wj_de": "Kritik der Urteilskraft"
  },
  "Karl Marx": {
   "en": "Karl Marx",
@@ -689,7 +720,10 @@
   "de": "Søren Kierkegaard",
   "ja": "セーレン・キェルケゴール",
   "it": "Søren Kierkegaard",
-  "orig": "Søren Kierkegaard"
+  "orig": "Søren Kierkegaard",
+  "w_es": "O lo uno o lo otro",
+  "wc_en": "The Concept of Anxiety",
+  "wc2_en": "The Concept of Dread"
  },
  "Laozi": {
   "en": "Laozi",
@@ -722,7 +756,13 @@
   "de": "Gottfried Wilhelm Leibniz",
   "ja": "ゴットフリート・ヴィルヘルム・ライプニッツ",
   "it": "Gottfried Wilhelm Leibniz",
-  "orig": "Gottfried Wilhelm Leibniz"
+  "orig": "Gottfried Wilhelm Leibniz",
+  "w_en": "Monadology",
+  "w_de": "Monadologie",
+  "w_es": "Monadología",
+  "wt_en": "Theodicy",
+  "wt_fr": "Théodicée",
+  "wt_es": "Teodicea"
  },
  "Locke": {
   "en": "John Locke",
@@ -759,7 +799,11 @@
   "de": "Lukrez",
   "ja": "ルクレティウス",
   "it": "Lucrezio",
-  "orig": "Titus Lucretius Carus"
+  "orig": "Titus Lucretius Carus",
+  "w_la": "De Rerum Natura",
+  "w_en": "On the Nature of Things",
+  "w_es": "De la naturaleza de las cosas",
+  "w_ca": "Sobre la naturalesa de les coses"
  },
  "Mabinogion": {
   "en": "Mabinogion",
@@ -823,7 +867,8 @@
   "de": "Marcus Aurelius",
   "ja": "マルクス・アウレリウス",
   "it": "Marco Aurelio",
-  "orig": "Marcus Aurelius Antoninus Augustus"
+  "orig": "Marcus Aurelius Antoninus Augustus",
+  "w_de": "Selbstbetrachtungen"
  },
  "Mary Astell": {
   "en": "Mary Astell",
@@ -851,7 +896,10 @@
   "de": "Mary Wollstonecraft",
   "ja": "メアリー・ウルストンクラフト",
   "it": "Mary Wollstonecraft",
-  "orig": "Mary Wollstonecraft"
+  "orig": "Mary Wollstonecraft",
+  "w_en": "A Vindication of the Rights of Woman",
+  "w_es": "Vindicación de los derechos de la mujer",
+  "w_ca": "Vindicació dels drets de la dona"
  },
  "Max Weber": {
   "en": "Max Weber",
@@ -1031,7 +1079,21 @@
   "de": "Platon",
   "ja": "プラトン",
   "it": "Platone",
-  "orig": "Πλάτων"
+  "orig": "Πλάτων",
+  "wd1": "Phaedo",
+  "wd1e": "Fedón",
+  "wd2": "Gorgias",
+  "wd3": "Timaeus",
+  "wd3e": "Timeo",
+  "wd4": "Phaedrus",
+  "wd4e": "Fedro",
+  "wd5": "Protagoras",
+  "wd6": "Meno",
+  "wd6e": "Menón",
+  "wd7": "Theaetetus",
+  "wd7e": "Teeteto",
+  "wd8": "Crito",
+  "wd8e": "Critón"
  },
  "Plotinus": {
   "en": "Plotinus",
@@ -1059,7 +1121,11 @@
   "de": "Plutarch",
   "ja": "プルタルコス",
   "it": "Plutarco",
-  "orig": "Πλούταρχος"
+  "orig": "Πλούταρχος",
+  "w_en": "Parallel Lives",
+  "w_es": "Vidas paralelas",
+  "w_ca": "Vides paral·leles",
+  "w_fr": "Vies parallèles"
  },
  "Popol Vuh": {
   "en": "Popol Vuh",
@@ -1101,7 +1167,9 @@
   "de": "Ralph Waldo Emerson",
   "ja": "ラルフ・ワルド・エマーソン",
   "it": "Ralph Waldo Emerson",
-  "orig": "Ralph Waldo Emerson"
+  "orig": "Ralph Waldo Emerson",
+  "w_en": "Self-Reliance",
+  "w_es": "La confianza en uno mismo"
  },
  "Ramon Llull": {
   "en": "Ramon Llull",
@@ -1198,7 +1266,12 @@
   "de": "Lucius Annaeus Seneca",
   "ja": "ルキウス・アンナエウス・セネカ",
   "it": "Lucio Anneo Seneca",
-  "orig": "Λούκιος Ἄνναιος Σενέκας"
+  "orig": "Λούκιος Ἄνναιος Σενέκας",
+  "w_en": "On the Shortness of Life",
+  "w_la": "De Brevitate Vitae",
+  "w_es": "Sobre la brevedad de la vida",
+  "wl_en": "Letters to Lucilius",
+  "wl2_en": "Moral Letters to Lucilius"
  },
  "Sextus Empiricus": {
   "en": "Sextus Empiricus",
@@ -1240,7 +1313,12 @@
   "de": "Sigmund Freud",
   "ja": "ジークムント・フロイト",
   "it": "Sigmund Freud",
-  "orig": "Sigmund Freud"
+  "orig": "Sigmund Freud",
+  "w_en": "The Interpretation of Dreams",
+  "w_de": "Die Traumdeutung",
+  "w_es": "La interpretación de los sueños",
+  "wt_en": "Totem and Taboo",
+  "wt_de": "Totem und Tabu"
  },
  "Sor Juana Ines de la Cruz": {
   "en": "Sor Juana Inés de la Cruz",
@@ -1268,7 +1346,11 @@
   "de": "Baruch Spinoza",
   "ja": "バールーフ・デ・スピノザ",
   "it": "Baruch Spinoza",
-  "orig": "Baruch Spinoza"
+  "orig": "Baruch Spinoza",
+  "w_en": "Theologico-Political Treatise",
+  "w2_en": "Theological-Political Treatise",
+  "w_la": "Tractatus Theologico-Politicus",
+  "w_es": "Tratado teológico-político"
  },
  "Sun Tzu": {
   "en": "Sun Tzu",
@@ -1318,7 +1400,9 @@
   "de": "Thomas von Aquin",
   "ja": "トマス・アクィナス",
   "it": "Tommaso d'Aquino",
-  "orig": "Thomas Aquinas"
+  "orig": "Thomas Aquinas",
+  "w_en": "Summa Theologica",
+  "w2_la": "Summa Theologiae"
  },
  "Thomas Hobbes": {
   "en": "Thomas Hobbes",
@@ -1352,7 +1436,11 @@
   "de": "Thomas Paine",
   "ja": "トーマス・ペイン",
   "it": "Thomas Paine",
-  "orig": "Thomas Paine"
+  "orig": "Thomas Paine",
+  "w_en": "The Age of Reason",
+  "w2_en": "Rights of Man",
+  "w_es": "La edad de la razón",
+  "w2_es": "Los derechos del hombre"
  },
  "Thoreau": {
   "en": "Henry David Thoreau",
@@ -1366,7 +1454,11 @@
   "de": "Henry David Thoreau",
   "ja": "ヘンリー・デイヴィッド・ソロー",
   "it": "Henry David Thoreau",
-  "orig": "Henry David Thoreau"
+  "orig": "Henry David Thoreau",
+  "w_en": "Walden",
+  "wc_en": "Civil Disobedience",
+  "wc_es": "Desobediencia civil",
+  "wc_ca": "Desobediència civil"
  },
  "Vladimir Lenin": {
   "en": "Vladimir Lenin",
@@ -1394,7 +1486,13 @@
   "de": "Voltaire",
   "ja": "ヴォルテール",
   "it": "Voltaire",
-  "orig": "Voltaire"
+  "orig": "Voltaire",
+  "w_en": "Candide",
+  "w_es": "Cándido",
+  "w_ca": "Càndid",
+  "wp_en": "Philosophical Dictionary",
+  "wp_fr": "Dictionnaire philosophique",
+  "wp_es": "Diccionario filosófico"
  },
  "William James": {
   "en": "William James",
@@ -1408,7 +1506,9 @@
   "de": "William James",
   "ja": "ウィリアム・ジェームズ",
   "it": "William James",
-  "orig": "William James"
+  "orig": "William James",
+  "w_en": "The Varieties of Religious Experience",
+  "w_es": "Las variedades de la experiencia religiosa"
  },
  "William of Ockham": {
   "en": "William of Ockham",
@@ -2217,7 +2317,11 @@
   "zh": "托马斯·肯皮斯",
   "ja": "トマス・ア・ケンピス",
   "ar": "توما الكمبيسي",
-  "hi": "थॉमस ए केम्पिस"
+  "hi": "थॉमस ए केम्पिस",
+  "w_en": "The Imitation of Christ",
+  "w_la": "De Imitatione Christi",
+  "w_es": "La imitación de Cristo",
+  "w_ca": "La imitació de Crist"
  },
  "Thomas Malthus": {
   "en": "Thomas Malthus",
