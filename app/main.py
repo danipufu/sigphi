@@ -110,9 +110,10 @@ gradio-app { background: var(--sig-cream); }
 #sigphi-lang label:has(input:checked) { background:var(--sig-navy); color:#fff; border-color:var(--sig-navy) !important; }
 
 /* Capçalera descriptiva */
-#sigphi-header { text-align:center; color:#374151; max-width:680px; margin:4px auto 8px; }
-#sigphi-header h3 { font-family:'Playfair Display', Georgia, serif; color:var(--sig-navy); margin:.2em 0 .3em; }
+#sigphi-header { text-align:center; color:#374151; max-width:640px; margin:4px auto 8px; }
+#sigphi-header p { margin:.25em 0; }
 #sigphi-header strong { color:var(--sig-navy); }
+#sigphi-header p:last-child { font-size:.8rem; color:#a59b86; }  /* avís de fase beta, tènue */
 
 /* Xat */
 #sigphi-chat { border:1px solid #e7e2d6 !important; border-radius:16px !important; background:#fff !important;
@@ -161,78 +162,72 @@ SIGPHI_THEME = gr.themes.Soft(
     block_border_width="1px",
 )
 
-# Exemples (4, en anglès) que es mostren com a suggeriments inicials. El bot
-# respon igualment en l'idioma de la pregunta; aquests només són la mostra.
+# Exemples FIXOS (3, en anglès) que es mostren com a suggeriments inicials. No es
+# generen: són aquesta llista. 3 perquè càpiguen en una sola fila. El bot respon
+# igualment en l'idioma de la pregunta; aquests només són la mostra.
 EXAMPLES = [
-    "What did Plato say about justice in The Republic?",
     "What are the Five Pillars of Islam?",
     "What did Marcus Aurelius say about death?",
     "Compare Plato and Nietzsche on morality",
 ]
 
-# Capçalera (títol + descripció) localitzada. Nota: el CONTINGUT de les respostes
-# ja segueix l'idioma de la pregunta (regla 7); això només és la crom de la UI.
+# Descripció localitzada (sense títol: el hero ja mostra "SigPhi"). Primera línia
+# = què fa; segona línia = avís de fase beta (es mostra més tènue via CSS).
+# El CONTINGUT de les respostes ja segueix l'idioma de la pregunta (regla 7).
 HEADERS = {
     "Català": (
-        "### SigPhi — Filosofia des de fonts primàries\n"
         "Respon NOMÉS amb textos filosòfics i religiosos primaris de domini públic, "
-        "amb cites verificables. **Pregunta en l'idioma que vulguis** i et respondrà "
-        "en el mateix."
+        "amb cites verificables.\n\n"
+        "En fase beta: les respostes encara poden no ser òptimes."
     ),
     "Español": (
-        "### SigPhi — Filosofía desde fuentes primarias\n"
         "Responde SOLO con textos filosóficos y religiosos primarios de dominio "
-        "público, con citas verificables. **Pregunta en el idioma que quieras** y te "
-        "responderá en el mismo."
+        "público, con citas verificables.\n\n"
+        "En fase beta: las respuestas aún pueden no ser óptimas."
     ),
     "English": (
-        "### SigPhi — Philosophy from primary sources\n"
         "Answers ONLY from primary public-domain philosophical and religious texts, "
-        "with verifiable citations. **Ask in any language** and it replies in the same."
+        "with verifiable citations.\n\n"
+        "Beta: answers may not yet be optimal."
     ),
     "Français": (
-        "### SigPhi — La philosophie à partir des sources primaires\n"
         "Répond UNIQUEMENT à partir de textes philosophiques et religieux primaires "
-        "du domaine public, avec des citations vérifiables. **Posez votre question "
-        "dans la langue de votre choix** et il répondra dans la même."
+        "du domaine public, avec des citations vérifiables.\n\n"
+        "Version bêta : les réponses peuvent ne pas encore être optimales."
     ),
     "Deutsch": (
-        "### SigPhi — Philosophie aus Primärquellen\n"
         "Antwortet AUSSCHLIESSLICH auf Grundlage gemeinfreier philosophischer und "
-        "religiöser Primärtexte, mit überprüfbaren Zitaten. **Fragen Sie in jeder "
-        "Sprache** und es antwortet in derselben."
+        "religiöser Primärtexte, mit überprüfbaren Zitaten.\n\n"
+        "Beta: Die Antworten sind möglicherweise noch nicht optimal."
     ),
     "Italiano": (
-        "### SigPhi — Filosofia dalle fonti primarie\n"
         "Risponde SOLO con testi filosofici e religiosi primari di pubblico dominio, "
-        "con citazioni verificabili. **Fai la domanda nella lingua che preferisci** "
-        "e risponderà nella stessa."
+        "con citazioni verificabili.\n\n"
+        "Versione beta: le risposte potrebbero non essere ancora ottimali."
     ),
     "Русский": (
-        "### SigPhi — Философия из первоисточников\n"
         "Отвечает ТОЛЬКО по первичным философским и религиозным текстам общественного "
-        "достояния, с проверяемыми цитатами. **Задавайте вопрос на любом языке** — "
-        "ответ будет на том же."
+        "достояния, с проверяемыми цитатами.\n\n"
+        "Бета-версия: ответы пока могут быть неоптимальными."
     ),
     "中文": (
-        "### SigPhi — 源自原始文献的哲学\n"
-        "仅依据公共领域的哲学与宗教原始文献作答，并附可查证的引用。"
-        "**用任何语言提问**，都会以同一种语言回答。"
+        "仅依据公共领域的哲学与宗教原始文献作答，并附可查证的引用。\n\n"
+        "测试版：回答可能尚未达到最佳。"
     ),
     "日本語": (
-        "### SigPhi — 一次資料からの哲学\n"
         "パブリックドメインの哲学・宗教の一次資料のみに基づき、検証可能な出典付きで"
-        "回答します。**どの言語で質問しても**、同じ言語で回答します。"
+        "回答します。\n\n"
+        "ベータ版：回答はまだ最適でない場合があります。"
     ),
     "العربية": (
-        "### SigPhi — الفلسفة من المصادر الأولية\n"
         "يجيب فقط اعتمادًا على نصوص فلسفية ودينية أولية في الملك العام، مع استشهادات "
-        "قابلة للتحقق. **اسأل بأي لغة** وسيجيب باللغة نفسها."
+        "قابلة للتحقق.\n\n"
+        "نسخة تجريبية: قد لا تكون الإجابات مثالية بعد."
     ),
     "हिन्दी": (
-        "### SigPhi — मूल स्रोतों से दर्शन\n"
         "केवल सार्वजनिक डोमेन के मूल दार्शनिक और धार्मिक ग्रंथों के आधार पर उत्तर देता है, "
-        "सत्यापन-योग्य उद्धरणों के साथ। **किसी भी भाषा में पूछें**, उसी भाषा में उत्तर मिलेगा।"
+        "सत्यापन-योग्य उद्धरणों के साथ।\n\n"
+        "बीटा: उत्तर अभी सर्वोत्तम नहीं हो सकते।"
     ),
 }
 
