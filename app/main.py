@@ -68,15 +68,34 @@ def _history_to_tuples(history) -> list[tuple[str, str]]:
     return tuples
 
 
+# Lema localitzat (la part grega "Φιλοσοφία ·" es manté com a marca; canvia la
+# resta segons l'idioma de la UI).
+SUBTITLES = {
+    "Català": "filosofia des de fonts primàries",
+    "Español": "filosofía desde fuentes primarias",
+    "English": "philosophy from primary sources",
+    "Français": "la philosophie depuis les sources primaires",
+    "Deutsch": "Philosophie aus Primärquellen",
+    "Italiano": "filosofia dalle fonti primarie",
+    "Русский": "философия из первоисточников",
+    "中文": "源自原始文献的哲学",
+    "日本語": "一次資料からの哲学",
+    "العربية": "الفلسفة من المصادر الأولية",
+    "हिन्दी": "मूल स्रोतों से दर्शन",
+}
+
+
 # Hero (logo + wordmark + lema). El logo és la marca: estrella blau marí
 # (#1a2a4f) amb accents daurats (#c9a227) i "ΣΦ".
-HERO_HTML = (
-    '<div id="sigphi-hero">'
-    '<img src="/static/logo.svg" alt="SigPhi" class="sigphi-logo">'
-    '<div class="sigphi-wordmark">SigPhi</div>'
-    '<div class="sigphi-sub">Φιλοσοφία · filosofia des de fonts primàries</div>'
-    "</div>"
-)
+def _hero_html(lang: str = "Català") -> str:
+    sub = SUBTITLES.get(lang, SUBTITLES["English"])
+    return (
+        '<div id="sigphi-hero">'
+        '<img src="/static/logo.svg" alt="SigPhi" class="sigphi-logo">'
+        '<div class="sigphi-wordmark">SigPhi</div>'
+        f'<div class="sigphi-sub">Φιλοσοφία · {sub}</div>'
+        "</div>"
+    )
 
 # Paleta de marca + tipografia clàssica, responsive (desktop i mòbil).
 SIGPHI_CSS = """
@@ -273,10 +292,24 @@ def _make_respond(app: FastAPI):
     return respond
 
 
-FOOTER_HTML = (
-    '<div id="sigphi-footer">Només <b>fonts primàries de domini públic</b> · '
-    "cites verificables · sense consells ni opinions</div>"
-)
+# Peu localitzat.
+FOOTERS = {
+    "Català": "Només fonts primàries de domini públic · cites verificables · sense consells ni opinions",
+    "Español": "Solo fuentes primarias de dominio público · citas verificables · sin consejos ni opiniones",
+    "English": "Only primary public-domain sources · verifiable citations · no advice or opinions",
+    "Français": "Uniquement des sources primaires du domaine public · citations vérifiables · sans conseils ni opinions",
+    "Deutsch": "Nur gemeinfreie Primärquellen · überprüfbare Zitate · keine Ratschläge oder Meinungen",
+    "Italiano": "Solo fonti primarie di pubblico dominio · citazioni verificabili · senza consigli né opinioni",
+    "Русский": "Только первичные источники общественного достояния · проверяемые цитаты · без советов и мнений",
+    "中文": "仅限公共领域的原始文献 · 可查证的引用 · 不提供建议或观点",
+    "日本語": "パブリックドメインの一次資料のみ · 検証可能な出典 · 助言や意見なし",
+    "العربية": "مصادر أولية في الملك العام فقط · استشهادات قابلة للتحقق · بلا نصائح أو آراء",
+    "हिन्दी": "केवल सार्वजनिक डोमेन के मूल स्रोत · सत्यापन-योग्य उद्धरण · कोई सलाह या राय नहीं",
+}
+
+
+def _footer_html(lang: str = "Català") -> str:
+    return f'<div id="sigphi-footer">{FOOTERS.get(lang, FOOTERS["English"])}</div>'
 
 
 # Gradio 6 va moure theme/css del constructor de Blocks a mount_gradio_app().
@@ -291,7 +324,7 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
     # A Gradio <6, theme/css van al Blocks; a >=6 van a mount_gradio_app (a sota).
     blocks_kwargs = {} if _MOUNT_SUPPORTS_CSS else {"theme": SIGPHI_THEME, "css": SIGPHI_CSS}
     with gr.Blocks(title="SigPhi", **blocks_kwargs) as demo:
-        gr.HTML(HERO_HTML)
+        hero = gr.HTML(_hero_html("Català"))
         lang = gr.Radio(
             [
                 "Català", "Español", "English", "Français", "Deutsch", "Italiano",
@@ -314,8 +347,12 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
                 scale=7,
             ),
         )
-        gr.HTML(FOOTER_HTML)
-        lang.change(lambda l: HEADERS[l], inputs=lang, outputs=header)
+        footer = gr.HTML(_footer_html("Català"))
+
+        def _on_lang(l):
+            return _hero_html(l), HEADERS[l], _footer_html(l)
+
+        lang.change(_on_lang, inputs=lang, outputs=[hero, header, footer])
 
         # A cada càrrega de pàgina, re-barreja els exemples (3 a l'atzar del pou).
         dataset = getattr(getattr(ci, "examples_handler", None), "dataset", None)
