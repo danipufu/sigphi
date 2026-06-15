@@ -67,11 +67,109 @@ def _history_to_tuples(history) -> list[tuple[str, str]]:
     return tuples
 
 
-LOGO_HTML = (
-    '<div style="text-align:center;margin:6px 0 2px">'
-    '<img src="/static/logo.svg" alt="SigPhi" width="84">'
+# Hero (logo + wordmark + lema). El logo és la marca: estrella blau marí
+# (#1a2a4f) amb accents daurats (#c9a227) i "ΣΦ".
+HERO_HTML = (
+    '<div id="sigphi-hero">'
+    '<img src="/static/logo.svg" alt="SigPhi" class="sigphi-logo">'
+    '<div class="sigphi-wordmark">SigPhi</div>'
+    '<div class="sigphi-sub">Φιλοσοφία · filosofia des de fonts primàries</div>'
     "</div>"
 )
+
+# Paleta de marca + tipografia clàssica, responsive (desktop i mòbil).
+SIGPHI_CSS = """
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
+
+:root { --sig-navy:#1a2a4f; --sig-navy-2:#24386b; --sig-gold:#c9a227; --sig-cream:#f7f5ef; }
+
+/* Contenidor centrat i llegible */
+.gradio-container { max-width: 920px !important; margin: 0 auto !important; }
+gradio-app { background: var(--sig-cream); }
+
+/* Hero */
+#sigphi-hero { text-align:center; padding: 14px 0 4px; }
+#sigphi-hero .sigphi-logo { width: 76px; height:76px; filter: drop-shadow(0 2px 5px rgba(26,42,79,.18)); }
+#sigphi-hero .sigphi-wordmark {
+  font-family:'Playfair Display', Georgia, serif; font-weight:700;
+  font-size: 2.5rem; line-height:1.1; color: var(--sig-navy); letter-spacing:.5px; margin-top:2px;
+}
+#sigphi-hero .sigphi-sub { color:#6b7280; font-size:.95rem; margin-top:2px; }
+#sigphi-hero::after {
+  content:""; display:block; width:64px; height:3px; margin:12px auto 0;
+  background: var(--sig-gold); border-radius:3px;
+}
+
+/* Selector d'idioma com a píndoles */
+#sigphi-lang { display:flex; justify-content:center; margin:6px 0 2px; }
+#sigphi-lang .wrap, #sigphi-lang fieldset { display:flex !important; gap:6px; justify-content:center; flex-wrap:wrap; border:0 !important; }
+#sigphi-lang label {
+  border:1px solid #e3ddcf !important; border-radius:999px !important; padding:5px 16px !important;
+  background:#fff; color:var(--sig-navy); cursor:pointer; transition:all .15s; font-size:.9rem;
+}
+#sigphi-lang label:has(input:checked) { background:var(--sig-navy); color:#fff; border-color:var(--sig-navy) !important; }
+
+/* Capçalera descriptiva */
+#sigphi-header { text-align:center; color:#374151; max-width:680px; margin:4px auto 8px; }
+#sigphi-header h3 { font-family:'Playfair Display', Georgia, serif; color:var(--sig-navy); margin:.2em 0 .3em; }
+#sigphi-header strong { color:var(--sig-navy); }
+
+/* Xat */
+#sigphi-chat { border:1px solid #e7e2d6 !important; border-radius:16px !important; background:#fff !important;
+  box-shadow:0 1px 4px rgba(26,42,79,.06); }
+#sigphi-chat a { color:var(--sig-navy); text-decoration:underline; text-decoration-color:var(--sig-gold); }
+
+/* Botons primaris i exemples en to marca */
+button.primary, .primary { background:var(--sig-navy) !important; border-color:var(--sig-navy) !important; }
+.examples .example, [class*="example"] button {
+  border:1px solid #e3ddcf !important; border-radius:12px !important; background:#fff !important;
+  color:var(--sig-navy) !important; transition:all .15s;
+}
+.examples .example:hover, [class*="example"] button:hover { border-color:var(--sig-gold) !important; box-shadow:0 2px 8px rgba(201,162,39,.18); }
+
+/* Peu */
+#sigphi-footer { text-align:center; color:#9ca3af; font-size:.8rem; margin:14px 0 4px; }
+#sigphi-footer b { color:var(--sig-gold); }
+footer { display:none !important; }  /* amaga el "Built with Gradio" */
+
+/* ---- Mòbil ---- */
+@media (max-width: 768px) {
+  .gradio-container { padding: 0 10px !important; }
+  #sigphi-hero .sigphi-wordmark { font-size: 2.05rem; }
+  #sigphi-hero .sigphi-logo { width: 64px; height:64px; }
+  #sigphi-chat { border-radius:12px !important; }
+}
+@media (max-width: 480px) {
+  #sigphi-hero { padding-top:8px; }
+  #sigphi-hero .sigphi-wordmark { font-size: 1.8rem; }
+  #sigphi-header { font-size:.92rem; }
+  #sigphi-lang label { padding:5px 13px !important; font-size:.85rem; }
+}
+"""
+
+SIGPHI_THEME = gr.themes.Soft(
+    primary_hue=gr.themes.colors.indigo,
+    secondary_hue=gr.themes.colors.amber,
+    neutral_hue=gr.themes.colors.slate,
+    font=[gr.themes.GoogleFont("Inter"), "system-ui", "sans-serif"],
+).set(
+    body_background_fill="#f7f5ef",
+    button_primary_background_fill="#1a2a4f",
+    button_primary_background_fill_hover="#24386b",
+    button_primary_text_color="#ffffff",
+    block_title_text_color="#1a2a4f",
+    block_border_width="1px",
+)
+
+# Exemples (multilingües) que es mostren com a suggeriments inicials.
+EXAMPLES = [
+    "Què deia Plató sobre la justícia a La República?",
+    "Quins són els cinc pilars de l'islam?",
+    "What did Marcus Aurelius say about death?",
+    "¿Qué enseñaba Epicteto sobre lo que depende de nosotros?",
+    "Compara Plató i Nietzsche sobre la moral",
+    "Was lehrt das Tao Te King über das Nicht-Handeln?",
+]
 
 # Capçalera (títol + descripció) localitzada. Nota: el CONTINGUT de les respostes
 # ja segueix l'idioma de la pregunta (regla 7); això només és la crom de la UI.
@@ -108,18 +206,45 @@ def _make_respond(app: FastAPI):
     return respond
 
 
+FOOTER_HTML = (
+    '<div id="sigphi-footer">Només <b>fonts primàries de domini públic</b> · '
+    "cites verificables · sense consells ni opinions</div>"
+)
+
+
+# Gradio 6 va moure theme/css del constructor de Blocks a mount_gradio_app().
+# Detectem-ho per aplicar l'estil on toqui (robust a 4.x/5.x i 6.x).
+import inspect as _inspect
+
+_MOUNT_SUPPORTS_CSS = "css" in _inspect.signature(gr.mount_gradio_app).parameters
+
+
 def _build_gradio(app: FastAPI) -> gr.Blocks:
     respond = _make_respond(app)
-    with gr.Blocks(title="SigPhi") as demo:
-        gr.HTML(LOGO_HTML)
+    # A Gradio <6, theme/css van al Blocks; a >=6 van a mount_gradio_app (a sota).
+    blocks_kwargs = {} if _MOUNT_SUPPORTS_CSS else {"theme": SIGPHI_THEME, "css": SIGPHI_CSS}
+    with gr.Blocks(title="SigPhi", **blocks_kwargs) as demo:
+        gr.HTML(HERO_HTML)
         lang = gr.Radio(
             ["Català", "Español", "English"],
             value="Català",
             show_label=False,
             container=False,
+            elem_id="sigphi-lang",
         )
-        header = gr.Markdown(HEADERS["Català"])
-        gr.ChatInterface(fn=respond)
+        header = gr.Markdown(HEADERS["Català"], elem_id="sigphi-header")
+        gr.ChatInterface(
+            fn=respond,
+            examples=EXAMPLES,
+            chatbot=gr.Chatbot(elem_id="sigphi-chat", height=460, show_label=False),
+            textbox=gr.Textbox(
+                placeholder="Fes una pregunta sobre filosofia… (en qualsevol idioma)",
+                elem_id="sigphi-input",
+                container=False,
+                scale=7,
+            ),
+        )
+        gr.HTML(FOOTER_HTML)
         lang.change(lambda l: HEADERS[l], inputs=lang, outputs=header)
     return demo
 
@@ -139,9 +264,10 @@ def build_app() -> FastAPI:
     except Exception:
         logging.getLogger("sigphi").exception("UI multilingüe ha fallat; faig servir la UI simple")
         demo = gr.ChatInterface(fn=_make_respond(app))
-    app = gr.mount_gradio_app(
-        app, demo, path="/", favicon_path=str(static_dir / "logo.svg")
-    )
+    mount_kwargs = {"favicon_path": str(static_dir / "logo.svg")}
+    if _MOUNT_SUPPORTS_CSS:  # Gradio 6+: l'estil s'aplica en muntar
+        mount_kwargs.update(theme=SIGPHI_THEME, css=SIGPHI_CSS)
+    app = gr.mount_gradio_app(app, demo, path="/", **mount_kwargs)
     return app
 
 
