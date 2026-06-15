@@ -115,13 +115,23 @@ class RetrievalService:
                     continue
                 if len(n) >= 4 or any(ord(c) > 127 for c in n):
                     alias2author.setdefault(n, canon)
-                # També el COGNOM (última paraula) de noms ASCII de 2-3 paraules,
-                # perquè 'Marx' detecti 'Karl Marx' i 'Mill' 'John Stuart Mill'.
-                if n.isascii():
-                    parts = n.split()
-                    if (2 <= len(parts) <= 3 and len(parts[-1]) >= 4
-                            and parts[-1] not in _SURNAME_STOP):
-                        alias2author.setdefault(parts[-1], canon)
+                # També el COGNOM (última paraula) de noms multi-paraula, perquè
+                # 'Marx' detecti 'Karl Marx', 'Витгенштейн' detecti 'Людвиг
+                # Витгенштейн' i '维特根斯坦' detecti '路德维希·维特根斯坦'. Separadors:
+                # espais i punts medials (· ・). Mínim 4 lletres en escriptures
+                # alfabètiques (evita falsos positius); 2 en CJK (ideogràfic).
+                parts = [p for p in re.split(r"[\s·・]+", n) if p]
+                if 2 <= len(parts) <= 4:
+                    last = parts[-1]
+                    is_cjk = any(
+                        "぀" <= c <= "鿿" or "가" <= c <= "힣"
+                        for c in last
+                    )
+                    if n.isascii():
+                        if len(last) >= 4 and last not in _SURNAME_STOP:
+                            alias2author.setdefault(last, canon)
+                    elif len(last) >= (2 if is_cjk else 4):
+                        alias2author.setdefault(last, canon)
         return alias2author
 
     def detect_authors(self, query: str) -> list[str]:
