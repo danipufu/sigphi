@@ -11,7 +11,15 @@
   "de": "Adam Smith",
   "ja": "アダム・スミス",
   "it": "Adam Smith",
-  "orig": "Adam Smith"
+  "orig": "Adam Smith",
+  "w_en": "The Wealth of Nations",
+  "w_es": "La riqueza de las naciones",
+  "w_ca": "La riquesa de les nacions",
+  "w_fr": "La Richesse des nations",
+  "w_de": "Wohlstand der Nationen",
+  "w_it": "La ricchezza delle nazioni",
+  "w_zh": "国富论",
+  "w_ru": "Богатство народов"
  },
  "Al-Ghazali": {
   "en": "Al-Ghazali",
@@ -53,7 +61,13 @@
   "de": "Aristoteles",
   "ja": "アリストテレス",
   "it": "Aristotele",
-  "orig": "Ἀριστοτέλης"
+  "orig": "Ἀριστοτέλης",
+  "w_en": "Nicomachean Ethics",
+  "w_es": "Ética a Nicómaco",
+  "w_ca": "Ètica a Nicòmac",
+  "w_fr": "Éthique à Nicomaque",
+  "w_de": "Nikomachische Ethik",
+  "w_it": "Etica Nicomachea"
  },
  "Auguste Comte": {
   "en": "Auguste Comte",
@@ -81,7 +95,14 @@
   "de": "Augustinus von Hippo",
   "ja": "アウグスティヌス",
   "it": "Agostino d'Ippona",
-  "orig": "Augustinus Hipponensis"
+  "orig": "Augustinus Hipponensis",
+  "w_en": "The City of God",
+  "w_es": "La Ciudad de Dios",
+  "w_ca": "La Ciutat de Déu",
+  "w_fr": "La Cité de Dieu",
+  "w_de": "Vom Gottesstaat",
+  "w_it": "La città di Dio",
+  "w_la": "De Civitate Dei"
  },
  "Averroes": {
   "en": "Averroes",
@@ -123,7 +144,14 @@
   "de": "Boethius",
   "ja": "ボエティウス",
   "it": "Boezio",
-  "orig": "Anicius Manlius Severinus Boethius"
+  "orig": "Anicius Manlius Severinus Boethius",
+  "w_en": "The Consolation of Philosophy",
+  "w_es": "La consolación de la filosofía",
+  "w_ca": "La consolació de la filosofia",
+  "w_fr": "Consolation de la Philosophie",
+  "w_de": "Trost der Philosophie",
+  "w_it": "La consolazione della filosofia",
+  "w_la": "De Consolatione Philosophiae"
  },
  "Charles Darwin": {
   "en": "Charles Darwin",
@@ -137,7 +165,16 @@
   "de": "Charles Darwin",
   "ja": "チャールズ・ダーウィン",
   "it": "Charles Darwin",
-  "orig": "Charles Darwin"
+  "orig": "Charles Darwin",
+  "w_en": "On the Origin of Species",
+  "w2_en": "The Origin of Species",
+  "w_es": "El origen de las especies",
+  "w_ca": "L'origen de les espècies",
+  "w_fr": "L'Origine des espèces",
+  "w_de": "Die Entstehung der Arten",
+  "w_it": "L'origine delle specie",
+  "w_zh": "物种起源",
+  "w_ru": "Происхождение видов"
  },
  "Charles Peirce": {
   "en": "Charles Peirce",
@@ -193,7 +230,15 @@
   "de": "Konfuzius",
   "ja": "孔子",
   "it": "Confucio",
-  "orig": "孔子"
+  "orig": "孔子",
+  "w_en": "The Analects",
+  "w_es": "Analectas",
+  "w_ca": "Analectes",
+  "w_fr": "Les Analectes",
+  "w_de": "Analekten",
+  "w_it": "Dialoghi di Confucio",
+  "w_zh": "论语",
+  "w_ru": "Лунь юй"
  },
  "David Hume": {
   "en": "David Hume",
@@ -207,7 +252,13 @@
   "de": "David Hume",
   "ja": "デイヴィッド・ヒューム",
   "it": "David Hume",
-  "orig": "David Hume"
+  "orig": "David Hume",
+  "w_en": "A Treatise of Human Nature",
+  "w_es": "Tratado de la naturaleza humana",
+  "w_ca": "Tractat de la naturalesa humana",
+  "w_fr": "Traité de la nature humaine",
+  "w_de": "Traktat über die menschliche Natur",
+  "w_it": "Trattato sulla natura umana"
  },
  "Denis Diderot": {
   "en": "Denis Diderot",
@@ -235,7 +286,14 @@
   "de": "Descartes",
   "ja": "デカルト",
   "it": "Cartesio",
-  "orig": "René Descartes"
+  "orig": "René Descartes",
+  "w_en": "Discourse on Method",
+  "w2_en": "Discourse on the Method",
+  "w_es": "Discurso del método",
+  "w_ca": "Discurs del mètode",
+  "w_fr": "Discours de la méthode",
+  "w_de": "Abhandlung über die Methode",
+  "w_it": "Discorso sul metodo"
  },
  "Diogenes Laertius": {
   "en": "Diogenes Laertius",
@@ -333,7 +391,11 @@
   "de": "Francis Bacon",
   "ja": "フランシス・ベーコン",
   "it": "Francis Bacon",
-  "orig": "Francis Bacon"
+  "orig": "Francis Bacon",
+  "w_en": "Novum Organum",
+  "w_es": "Nuevo Órganon",
+  "w_de": "Neues Organon",
+  "w_it": "Nuovo Organo"
  },
  "Friedrich Engels": {
   "en": "Friedrich Engels",
@@ -445,7 +507,14 @@
   "de": "Hegel",
   "ja": "ヘーゲル",
   "it": "Hegel",
-  "orig": "Hegel"
+  "orig": "Hegel",
+  "w_en": "Phenomenology of Spirit",
+  "w2_en": "Phenomenology of Mind",
+  "w_es": "Fenomenología del espíritu",
+  "w_ca": "Fenomenologia de l'esperit",
+  "w_fr": "Phénoménologie de l'esprit",
+  "w_de": "Phänomenologie des Geistes",
+  "w_it": "Fenomenologia dello spirito"
  },
  "Henri Bergson": {
   "en": "Henri Bergson",
@@ -543,7 +612,13 @@
   "de": "John Stuart Mill",
   "ja": "ジョン・スチュアート・ミル",
   "it": "John Stuart Mill",
-  "orig": "John Stuart Mill"
+  "orig": "John Stuart Mill",
+  "w_en": "On Liberty",
+  "w_es": "Sobre la libertad",
+  "w_ca": "Sobre la llibertat",
+  "w_fr": "De la liberté",
+  "w_de": "Über die Freiheit",
+  "w_it": "Sulla libertà"
  },
  "Juan Luis Vives": {
   "en": "Juan Luis Vives",
@@ -571,7 +646,13 @@
   "de": "Immanuel Kant",
   "ja": "イマヌエル・カント",
   "it": "Immanuel Kant",
-  "orig": "Immanuel Kant"
+  "orig": "Immanuel Kant",
+  "w_en": "Critique of Pure Reason",
+  "w_es": "Crítica de la razón pura",
+  "w_ca": "Crítica de la raó pura",
+  "w_fr": "Critique de la raison pure",
+  "w_de": "Kritik der reinen Vernunft",
+  "w_it": "Critica della ragion pura"
  },
  "Karl Marx": {
   "en": "Karl Marx",
@@ -585,7 +666,16 @@
   "de": "Karl Marx",
   "ja": "カール・マルクス",
   "it": "Karl Marx",
-  "orig": "Karl Marx"
+  "orig": "Karl Marx",
+  "w_de": "Das Kapital",
+  "wm_en": "The Communist Manifesto",
+  "wm_es": "Manifiesto Comunista",
+  "wm_ca": "Manifest Comunista",
+  "wm_fr": "Manifeste du Parti communiste",
+  "wm_de": "Kommunistische Manifest",
+  "wm_it": "Manifesto del Partito Comunista",
+  "wm_zh": "共产党宣言",
+  "wm_ru": "Манифест коммунистической партии"
  },
  "Kierkegaard": {
   "en": "Søren Kierkegaard",
@@ -646,7 +736,16 @@
   "de": "John Locke",
   "ja": "ジョン・ロック",
   "it": "John Locke",
-  "orig": "John Locke"
+  "orig": "John Locke",
+  "w_en": "Second Treatise of Government",
+  "w2_en": "Two Treatises of Government",
+  "w_es": "Segundo tratado sobre el gobierno civil",
+  "w_fr": "Traité du gouvernement civil",
+  "w_de": "Zwei Abhandlungen über die Regierung",
+  "w_it": "Due trattati sul governo",
+  "we_en": "Essay Concerning Human Understanding",
+  "we_es": "Ensayo sobre el entendimiento humano",
+  "we_fr": "Essai sur l'entendement humain"
  },
  "Lucretius": {
   "en": "Lucretius",
@@ -688,7 +787,15 @@
   "de": "Machiavelli",
   "ja": "マキャヴェッリ",
   "it": "Machiavelli",
-  "orig": "Machiavelli"
+  "orig": "Machiavelli",
+  "w_en": "The Prince",
+  "w_es": "El Príncipe",
+  "w_ca": "El Príncep",
+  "w_fr": "Le Prince",
+  "w_de": "Der Fürst",
+  "w_it": "Il Principe",
+  "w_zh": "君主论",
+  "w_ru": "Государь"
  },
  "Maimonides": {
   "en": "Maimonides",
@@ -828,7 +935,19 @@
   "de": "Nietzsche",
   "ja": "ニーチェ",
   "it": "Nietzsche",
-  "orig": "Nietzsche"
+  "orig": "Nietzsche",
+  "w_en": "Beyond Good and Evil",
+  "w_es": "Más allá del bien y del mal",
+  "w_ca": "Més enllà del bé i del mal",
+  "w_fr": "Par-delà le bien et le mal",
+  "w_de": "Jenseits von Gut und Böse",
+  "w_it": "Al di là del bene e del male",
+  "wz_en": "Thus Spoke Zarathustra",
+  "wz2_en": "Thus Spake Zarathustra",
+  "wz_es": "Así habló Zaratustra",
+  "wz_fr": "Ainsi parlait Zarathoustra",
+  "wz_de": "Also sprach Zarathustra",
+  "wz_it": "Così parlò Zarathustra"
  },
  "Olympe de Gouges": {
   "en": "Olympe de Gouges",
@@ -1024,7 +1143,13 @@
   "de": "Jean-Jacques Rousseau",
   "ja": "ジャン＝ジャック・ルソー",
   "it": "Jean-Jacques Rousseau",
-  "orig": "Jean-Jacques Rousseau"
+  "orig": "Jean-Jacques Rousseau",
+  "w_en": "The Social Contract",
+  "w_es": "El contrato social",
+  "w_ca": "El contracte social",
+  "w_fr": "Du contrat social",
+  "w_de": "Gesellschaftsvertrag",
+  "w_it": "Il contratto sociale"
  },
  "Schelling": {
   "en": "Friedrich Wilhelm Joseph Schelling",
@@ -1052,7 +1177,14 @@
   "de": "Arthur Schopenhauer",
   "ja": "アルトゥル・ショーペンハウアー",
   "it": "Arthur Schopenhauer",
-  "orig": "Arthur Schopenhauer"
+  "orig": "Arthur Schopenhauer",
+  "w_en": "The World as Will and Representation",
+  "w2_en": "The World as Will and Idea",
+  "w_es": "El mundo como voluntad y representación",
+  "w_ca": "El món com a voluntat i representació",
+  "w_fr": "Le Monde comme volonté et représentation",
+  "w_de": "Die Welt als Wille und Vorstellung",
+  "w_it": "Il mondo come volontà e rappresentazione"
  },
  "Seneca": {
   "en": "Lucius Annaeus Seneca",
@@ -1150,7 +1282,15 @@
   "de": "Sun Tzu",
   "ja": "孫子",
   "it": "Sun Tzu",
-  "orig": "孫子"
+  "orig": "孫子",
+  "w_en": "The Art of War",
+  "w_es": "El arte de la guerra",
+  "w_ca": "L'art de la guerra",
+  "w_fr": "L'Art de la guerre",
+  "w_de": "Die Kunst des Krieges",
+  "w_it": "L'arte della guerra",
+  "w_zh": "孙子兵法",
+  "w_ru": "Искусство войны"
  },
  "Teresa of Avila": {
   "en": "Teresa of Ávila",
@@ -1192,7 +1332,13 @@
   "de": "Thomas Hobbes",
   "ja": "トマス・ホッブズ",
   "it": "Thomas Hobbes",
-  "orig": "Thomas Hobbes"
+  "orig": "Thomas Hobbes",
+  "w_en": "Leviathan",
+  "w_es": "Leviatán",
+  "w_fr": "Léviathan",
+  "w_it": "Leviatano",
+  "w_zh": "利维坦",
+  "w_ru": "Левиафан"
  },
  "Thomas Paine": {
   "en": "Thomas Paine",

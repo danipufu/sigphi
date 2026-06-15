@@ -108,18 +108,26 @@ class RetrievalService:
             return alias2author
         data = json.loads(path.read_text(encoding="utf-8"))
         for canon, names in data.items():
-            values = list(names.values()) if isinstance(names, dict) else list(names)
-            for v in values + [canon]:
+            if isinstance(names, dict):
+                items = list(names.items())
+            else:
+                items = [("_", v) for v in names]
+            for key, v in items + [("_canon", canon)]:
                 n = _norm(v)
                 if not n:
                     continue
                 if len(n) >= 4 or any(ord(c) > 127 for c in n):
                     alias2author.setdefault(n, canon)
-                # També el COGNOM (última paraula) de noms multi-paraula, perquè
-                # 'Marx' detecti 'Karl Marx', 'Витгенштейн' detecti 'Людвиг
-                # Витгенштейн' i '维特根斯坦' detecti '路德维希·维特根斯坦'. Separadors:
-                # espais i punts medials (· ・). Mínim 4 lletres en escriptures
-                # alfabètiques (evita falsos positius); 2 en CJK (ideogràfic).
+                # Els camps de TÍTOL D'OBRA (claus 'w...': w_en, wm_en, work_en...)
+                # només s'indexen com a frase sencera, MAI per última paraula: si no,
+                # "Nicomachean Ethics" generaria l'àlies genèric "ethics" -> Aristotle
+                # i "Consolation of Philosophy" -> "philosophy" -> Boethius.
+                if key.startswith("w"):
+                    continue
+                # COGNOM (última paraula) de NOMS multi-paraula, perquè 'Marx'
+                # detecti 'Karl Marx', 'Витгенштейн' 'Людвиг Витгенштейн' i
+                # '维特根斯坦' '路德维希·维特根斯坦'. Separadors: espais i punts medials
+                # (· ・). Min 4 lletres en alfabets (evita falsos positius), 2 en CJK.
                 parts = [p for p in re.split(r"[\s·・]+", n) if p]
                 if 2 <= len(parts) <= 4:
                     last = parts[-1]
