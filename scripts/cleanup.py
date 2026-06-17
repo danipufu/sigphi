@@ -24,6 +24,9 @@ from app.infrastructure.vector_db import build_vector_db
 REMOVE_AUTHORS = [
     "Hildegard of Bingen",  # = Hildegarde HAWTHORNE (Camp Fire Girls / Girls in Bookland)
     "Unknown",              # = Enchiridion d'Epictet duplicat, sense metadades d'autor
+    # Ortega y Gasset: mort 1955; sota la regla espanyola de 80 anys pma (TRLPI
+    # disposicio transitoria), les seves obres no seran PD a Espanya fins al 2036.
+    "Ortega y Gasset",
 ]
 
 # Obres concretes a eliminar: (autor, fragment_del_titol). Match per "conte" (LIKE),

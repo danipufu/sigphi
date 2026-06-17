@@ -303,6 +303,111 @@ TEXTS = [
      "Cobreix les pràctiques centrals (oració, almoina, dejuni, peregrinació). "
      "Digitalització OCR.",
      "Hadith__Muhammad_in_the_Hadees_AbulFadl_en.txt"),
+
+    # --- Lot 15: Hegel i Weber (OCR Archive.org; edicions PD verificades) ---
+    # Hegel mort 1831 -> PD. Baillie (1910) i Dyde (1896): translators PD.
+    # Weber mort 1920 -> PD. Original alemany 1919.
+    ("phenomenologyofm00hege", "phenomenologyofm00hege_djvu.txt",
+     "Hegel", "The Phenomenology of Mind (Baillie)", "English",
+     "Complete work", "Written by the author",
+     "Obra central de Hegel (Phänomenologie des Geistes, 1807); traducció anglesa "
+     "de J. B. Baillie (1910), domini públic. Digitalització OCR.",
+     "Hegel__Phenomenology_of_Mind_Baillie_en.txt"),
+    ("philosophyofrigh0000hege", "philosophyofrigh0000hege_djvu.txt",
+     "Hegel", "Philosophy of Right (Grundlinien der Philosophie des Rechts)",
+     "English", "Complete work", "Written by the author",
+     "Filosofia del dret de Hegel (1820); traducció anglesa de S. W. Dyde (1896), "
+     "domini públic. Digitalització OCR.",
+     "Hegel__Philosophy_of_Right_Dyde_en.txt"),
+    ("politikalsberuf00webe", "politikalsberuf00webe_djvu.txt",
+     "Max Weber", "Politik als Beruf (Politics as a Vocation)", "German",
+     "Complete work", "Written by the author",
+     "Conferència de Weber sobre la política com a vocació (Munich, 1919); original "
+     "alemany en domini públic. Digitalització OCR.",
+     "Weber__Politik_als_Beruf_de.txt"),
+
+    # --- Lot 16: Durkheim (originals francesos PD) + Freud (GW XIII alemany PD) ---
+    # Durkheim mort 1917 -> PD. Weber Wissenschaft: conferenciad 1917, pub. 1919, PD.
+    # Freud mort 1939 -> PD a EU des del 2010. GW XIII (1923): ed. pòstuma 1940, PD.
+    ("deladivisiondutr00durkuoft", "deladivisiondutr00durkuoft_djvu.txt",
+     "Emile Durkheim", "De la division du travail social (1893)", "French",
+     "Complete work", "Written by the author",
+     "Tesi doctoral i primera obra major de Durkheim (1893); original francès en domini "
+     "públic (la traducció anglesa de 1984 no ho és). Digitalització OCR.",
+     "Durkheim__De_la_division_du_travail_social_fr.txt"),
+    ("lesrglesdelam00durkuoft", "lesrglesdelam00durkuoft_djvu.txt",
+     "Emile Durkheim", "Les Règles de la méthode sociologique (1895)", "French",
+     "Complete work", "Written by the author",
+     "Manifesto metodològic de Durkheim (1895); original francès en domini públic. "
+     "Digitalització OCR (edició de 1919).",
+     "Durkheim__Les_Regles_de_la_methode_sociologique_fr.txt"),
+    ("max-weber-1919-wissenschaft-als-beruf",
+     "Max Weber (1919) Wissenschaft als Beruf_djvu.txt",
+     "Max Weber", "Wissenschaft als Beruf (Science as a Vocation)", "German",
+     "Complete work", "Written by the author",
+     "Conferència de Weber sobre la ciència com a vocació (Munich, 1917; pub. 1919); "
+     "original alemany en domini públic. Digitalització OCR.",
+     "Weber__Wissenschaft_als_Beruf_de.txt"),
+    ("freud-1940-gw-13", "Freud_1940_GW_13_djvu.txt",
+     "Sigmund Freud",
+     "Das Ich und das Es / Jenseits des Lustprinzips / Massenpsychologie (GW XIII)",
+     "German", "Complete work", "Written by the author",
+     "Gesammelte Werke Band XIII: 'Das Ich und das Es' (1923), 'Jenseits des Lustprinzips' "
+     "(1920) i 'Massenpsychologie und Ich-Analyse' (1921); originals alemanys en domini "
+     "públic (Freud mort 1939). Digitalització OCR.",
+     "Freud__GW_XIII_Ich_Lustprinzip_Massen_de.txt"),
+
+    # --- Lot 17: Locke (obres que faltaven), Agustí (De Trinitate + De Doctrina)
+    # i Rousseau Reveries (tot PD) ---
+    # Locke mort 1704 -> PD. Edinburgh Works ed. 1821: PD. Some Thoughts 1902 ed.: PD.
+    # Agustí mort 430 dC; traduccions s. XIX: PD. Rousseau mort 1778 -> PD.
+    ("twotreatisesofg00lockuoft", "twotreatisesofg00lockuoft_djvu.txt",
+     "Locke", "Two Treatises of Government (First and Second)", "English",
+     "Complete work", "Written by the author",
+     "Edició de 1821 que conté TOTS DOS tractats: el Primer (contra Filmer) i el Segon "
+     "(teoria liberal del govern civil). Domini públic. El Segon Tractat ja és al corpus "
+     "per separat; el Primer Tractat és nou. Digitalització OCR.",
+     "Locke__Two_Treatises_of_Government_en.txt"),
+    ("somethoughtscon05lockgoog", "somethoughtscon05lockgoog_djvu.txt",
+     "Locke", "Some Thoughts Concerning Education (1902)", "English",
+     "Complete work", "Written by the author",
+     "Tractat pedagògic de John Locke (1693); edició de 1902, domini públic. "
+     "Digitalització OCR (Google Books, tipografia romana llegible).",
+     "Locke__Some_Thoughts_Concerning_Education_en.txt"),
+    ("worksofaureliu07augu", "worksofaureliu07augu_djvu.txt",
+     "Augustine", "On the Trinity (De Trinitate)", "English",
+     "Complete work", "Written by the author",
+     "Volum 7 de les Obres d'Aureli Agustí (T&T Clark, Edinburgh, 1871); traducció anglesa "
+     "de Marcus Dods, domini públic. Conté el De Trinitate sencer. Digitalització OCR.",
+     "Augustine__On_the_Trinity_Dods_en.txt"),
+    ("aselectlibraryn02augugoog", "aselectlibraryn02augugoog_djvu.txt",
+     "Augustine",
+     "On Christian Doctrine / City of God (NPNF First Series Vol. 2)", "English",
+     "Complete work", "Written by the author",
+     "NPNF vol. 2 (Schaff/Dods, Eerdmans, 1908): conté 'De Doctrina Christiana' (De la "
+     "doctrina cristiana) i la Ciutat de Déu. La Ciutat de Déu ja és al corpus (duplicació "
+     "acceptada; el motiu d'afegir-lo és De Doctrina Christiana). Digitalització OCR.",
+     "Augustine__NPNF_Vol2_City_of_God_Christian_Doctrine_en.txt"),
+    ("dli.ministry.22007", "E13534_The_reveries_Of_A_Solitary_djvu.txt",
+     "Rousseau", "Reveries of the Solitary Walker (Fletcher, Routledge)", "English",
+     "Complete work", "Written by the author",
+     "Traducció anglesa de John Gould Fletcher (ed. Routledge, 'Broadway Library of "
+     "XVIII Century French Literature', ~1927), domini públic als EUA (copyright no "
+     "renovat). Original de Rousseau (pòstum, 1782). Digitalització OCR (DLI).",
+     "Rousseau__Reveries_of_the_Solitary_Walker_Fletcher_en.txt"),
+
+    # --- Lot 18: Leibniz en anglès (Open Court, 1902; PD) ---
+    # Leibniz mort 1716 -> PD. Traducció de 1902 (Open Court, La Salle, IL): PD als EUA.
+    # Conté: Discourse on Metaphysics (nou) + Correspondence with Arnauld (nou) +
+    # Monadology en anglès (complement de la Monadologie alemanya que ja és al corpus).
+    ("discourseonmetap00leib2", "discourseonmetap00leib2_djvu.txt",
+     "Leibniz",
+     "Discourse on Metaphysics, Correspondence with Arnauld, and Monadology (1902)",
+     "English", "Complete work", "Written by the author",
+     "Tres obres filosòfiques de Leibniz (1686-1714): el Discurs de Metafísica, "
+     "la correspondència amb Arnauld i la Monadologia; traducció anglesa (Open Court, "
+     "1902), domini públic. La Monadologia en alemany ja és al corpus. OCR.",
+     "Leibniz__Discourse_Arnauld_Monadology_en.txt"),
 ]
 
 

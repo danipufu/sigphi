@@ -223,10 +223,9 @@ TEXTS = [
      "Complete work", "Written by the author",
      "Assaig antiteista i anarquista de M. Bakunin (1871, pòstum); trad. anglesa, domini públic.",
      "Mikhail_Bakunin__God_and_the_State_en.txt"),
-    (5827, "Bertrand Russell", "The Problems of Philosophy", "English",
-     "Complete work", "Written by the author",
-     "Introducció clàssica de Bertrand Russell (1912), domini públic.",
-     "Bertrand_Russell__Problems_of_Philosophy_en.txt"),
+    # Bertrand Russell (mort 1970): NO PD a Europa fins al 2041 (70 anys pma).
+    # Publicat el 1912 (PD als EUA), però protegit al Regne Unit i UE fins al 2041.
+    # (5827, "Bertrand Russell", "The Problems of Philosophy", ...)
     (47025, "Ludwig Feuerbach", "The Essence of Christianity", "English",
      "Complete work", "Written by the author",
      "Crítica de la religió de L. Feuerbach (1841); trad. de George Eliot (Mary Ann "
@@ -263,6 +262,37 @@ TEXTS = [
      "Selection / partial", "Written by the author",
      "Diàlegs místics de Jakob Böhme (s. XVII); traducció anglesa de domini públic.",
      "Jacob_Boehme__Supersensual_Life_en.txt"),
+
+    # --- Lot 11: Locke (obres que faltaven; Gutenberg PD) ---
+    (10616, "Locke", "An Essay Concerning Humane Understanding, Volume 2", "English",
+     "Complete work", "Written by the author",
+     "Volum 2 de l'Assaig (Llibres III-IV: de les paraules i del coneixement); "
+     "text original de John Locke (1689), domini públic.",
+     "Locke__An_Essay_Concerning_Humane_Understanding_Volume_2_en.txt"),
+
+    # --- Lot 12: sociologia i psicoanàlisi (Gutenberg PD) ---
+    # Durkheim mort 1917 -> PD. Traducció de Swain (1915) PD. Le Suicide original fr. PD.
+    # Freud mort 1939 -> PD a EU des de 2010. Traduccions 1928/1930 PD als EUA (no renovades).
+    (40489, "Emile Durkheim", "Le Suicide: Étude de sociologie", "French",
+     "Complete work", "Written by the author",
+     "Obra clàssica de sociologia de Durkheim (1897); original francès en domini públic. "
+     "(La traducció anglesa de Spaulding/Simpson de 1951 no és PD.)",
+     "Durkheim__Le_Suicide_fr.txt"),
+    (41360, "Emile Durkheim", "The Elementary Forms of the Religious Life", "English",
+     "Complete work", "Written by the author",
+     "Obra mestra de Durkheim sobre la religió i el totemisme (1912); traducció anglesa "
+     "de J. W. Swain (1915), domini públic.",
+     "Durkheim__Elementary_Forms_Religious_Life_en.txt"),
+    (76774, "Sigmund Freud", "The Future of an Illusion", "English",
+     "Complete work", "Written by the author",
+     "Assaig de Freud sobre la religió com a il·lusió col·lectiva (1927); traducció "
+     "anglesa de W. D. Robson-Scott (1928), domini públic als EUA (copyright no renovat).",
+     "Freud__The_Future_of_an_Illusion_en.txt"),
+    (78221, "Sigmund Freud", "Civilization and Its Discontents", "English",
+     "Complete work", "Written by the author",
+     "Assaig de Freud sobre la tensió entre la civilització i els instints (1930); "
+     "traducció anglesa de Joan Riviere (1930), domini públic als EUA (copyright no renovat).",
+     "Freud__Civilization_and_Its_Discontents_en.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)

@@ -22,6 +22,9 @@ sudo -u daniel "$PY" scripts/download_wikisource.py
 echo ">>> [3b/6] Baixant textos HTML solts (Marxists.org, etc.)..."
 sudo -u daniel "$PY" scripts/download_html.py
 
+echo ">>> [3c/6] Baixant Greek New Testament (Nestle 1904, GitHub)..."
+sudo -u daniel "$PY" scripts/download_greek_nt.py
+
 echo ">>> [4/6] Aturant el servei sigphi (alliberar RAM)..."
 systemctl stop sigphi
 

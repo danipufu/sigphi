@@ -116,7 +116,15 @@
   "w_fr": "La Cité de Dieu",
   "w_de": "Vom Gottesstaat",
   "w_it": "La città di Dio",
-  "w_la": "De Civitate Dei"
+  "w_la": "De Civitate Dei",
+  "wt_en": "On the Trinity",
+  "wt_la": "De Trinitate",
+  "wdc_en": "On Christian Doctrine",
+  "wdc_la": "De Doctrina Christiana",
+  "wfc_en": "On Free Choice of the Will",
+  "wfc_la": "De Libero Arbitrio",
+  "wc_en": "Confessions",
+  "wc_la": "Confessiones"
  },
  "Averroes": {
   "en": "Averroes",
@@ -355,6 +363,25 @@
   "w2_en": "Lives of the Philosophers",
   "w_es": "Vidas de los filósofos ilustres"
  },
+ "Emile Durkheim": {
+  "en": "Émile Durkheim",
+  "ca": "Émile Durkheim",
+  "es": "Émile Durkheim",
+  "fr": "Émile Durkheim",
+  "ru": "Эмиль Дюркгейм",
+  "zh": "埃米尔·涂尔干",
+  "ar": "إيميل دوركهايم",
+  "hi": "एमिल दुर्खाइम",
+  "de": "Émile Durkheim",
+  "ja": "エミール・デュルケーム",
+  "it": "Émile Durkheim",
+  "orig": "Émile Durkheim",
+  "ws_en": "The Division of Labour in Society",
+  "ws_fr": "De la division du travail social",
+  "wsu_fr": "Le Suicide",
+  "wsu_en": "Suicide: A Study in Sociology",
+  "wef_en": "The Elementary Forms of the Religious Life"
+ },
  "Emma Goldman": {
   "en": "Emma Goldman",
   "ca": "Emma Goldman",
@@ -583,7 +610,10 @@
   "w_it": "Fenomenologia dello spirito",
   "wsl_en": "Science of Logic",
   "wsl_de": "Wissenschaft der Logik",
-  "wsl_es": "Ciencia de la lógica"
+  "wsl_es": "Ciencia de la lógica",
+  "wpr_en": "Philosophy of Right",
+  "wpr_de": "Grundlinien der Philosophie des Rechts",
+  "wpr_es": "Filosofía del derecho"
  },
  "Henri Bergson": {
   "en": "Henri Bergson",
@@ -827,7 +857,10 @@
   "w_es": "Monadología",
   "wt_en": "Theodicy",
   "wt_fr": "Théodicée",
-  "wt_es": "Teodicea"
+  "wt_es": "Teodicea",
+  "wd_en": "Discourse on Metaphysics",
+  "wd_fr": "Discours de métaphysique",
+  "wd_es": "Discurso de metafísica"
  },
  "Locke": {
   "en": "John Locke",
@@ -852,7 +885,10 @@
   "we_es": "Ensayo sobre el entendimiento humano",
   "we_fr": "Essai sur l'entendement humain",
   "wt_en": "A Letter Concerning Toleration",
-  "wt_es": "Carta sobre la tolerancia"
+  "wt_es": "Carta sobre la tolerancia",
+  "w1_en": "First Treatise of Government",
+  "ws_en": "Some Thoughts Concerning Education",
+  "wr_en": "The Reasonableness of Christianity"
  },
  "Lucretius": {
   "en": "Lucretius",
@@ -980,7 +1016,13 @@
   "de": "Max Weber",
   "ja": "マックス・ウェーバー",
   "it": "Max Weber",
-  "orig": "Max Weber"
+  "orig": "Max Weber",
+  "wpe_en": "The Protestant Ethic and the Spirit of Capitalism",
+  "wpe_de": "Die protestantische Ethik und der Geist des Kapitalismus",
+  "wpk_de": "Politik als Beruf",
+  "wpk_en": "Politics as a Vocation",
+  "ww_de": "Wissenschaft als Beruf",
+  "ww_en": "Science as a Vocation"
  },
  "Mencius": {
   "en": "Mencius",
@@ -1353,7 +1395,11 @@
   "w_it": "Il contratto sociale",
   "wi_en": "Discourse on Inequality",
   "wi_fr": "Discours sur l'inégalité",
-  "wi_es": "Discurso sobre la desigualdad"
+  "wi_es": "Discurso sobre la desigualdad",
+  "wre_en": "Reveries of the Solitary Walker",
+  "wre_fr": "Rêveries du promeneur solitaire",
+  "we_en": "Emile",
+  "we_fr": "Émile"
  },
  "Schelling": {
   "en": "Friedrich Wilhelm Joseph Schelling",
@@ -1463,7 +1509,15 @@
   "wt_de": "Totem und Tabu",
   "wp_en": "Beyond the Pleasure Principle",
   "wp_de": "Jenseits des Lustprinzips",
-  "wp_es": "Más allá del principio de placer"
+  "wp_es": "Más allá del principio de placer",
+  "wfi_en": "The Future of an Illusion",
+  "wfi_de": "Die Zukunft einer Illusion",
+  "wci_en": "Civilization and Its Discontents",
+  "wci_de": "Das Unbehagen in der Kultur",
+  "wei_en": "The Ego and the Id",
+  "wei_de": "Das Ich und das Es",
+  "wms_en": "Group Psychology and the Analysis of the Ego",
+  "wms_de": "Massenpsychologie und Ich-Analyse"
  },
  "Sor Juana Ines de la Cruz": {
   "en": "Sor Juana Inés de la Cruz",
@@ -1722,7 +1776,10 @@
   "zh": "圣经",
   "ja": "聖書",
   "ar": "الكتاب المقدس",
-  "hi": "बाइबिल"
+  "hi": "बाइबिल",
+  "work_greek": "Greek New Testament",
+  "work_nestle": "Nestle 1904",
+  "work_wh": "Westcott-Hort"
  },
  "Quran": {
   "en": "Quran",
