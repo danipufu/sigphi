@@ -1054,6 +1054,7 @@
  },
  "Miguel de Unamuno": {
   "en": "Miguel de Unamuno",
+  "a1": "Unamuno",
   "ca": "Miguel de Unamuno",
   "es": "Miguel de Unamuno",
   "fr": "Miguel de Unamuno",
@@ -1064,7 +1065,16 @@
   "de": "Miguel de Unamuno",
   "ja": "ミゲル・デ・ウナムーノ",
   "it": "Miguel de Unamuno",
-  "orig": "Miguel de Unamuno"
+  "orig": "Miguel de Unamuno",
+  "wsmt_es": "Del sentimiento trágico de la vida",
+  "wsmt_en": "The Tragic Sense of Life",
+  "wn_es": "Niebla",
+  "wvdq_es": "Vida de Don Quijote y Sancho",
+  "wac_es": "La agonía del cristianismo",
+  "wac_en": "The Agony of Christianity",
+  "wsmb_es": "San Manuel Bueno, mártir",
+  "wsmb_en": "Saint Emmanuel the Good, Martyr",
+  "wetc_es": "En torno al casticismo"
  },
  "Montesquieu": {
   "en": "Montesquieu",
@@ -1947,7 +1957,13 @@
   "zh": "巴尔塔沙·葛拉西安",
   "ja": "バルタサル・グラシアン",
   "ar": "بالتاسار غراثيان",
-  "hi": "बाल्तासार ग्रासियान"
+  "hi": "बाल्तासार ग्रासियान",
+  "wcr_es": "El Criticón",
+  "wom_es": "Oráculo manual y arte de prudencia",
+  "wom_en": "The Art of Worldly Wisdom",
+  "wa_es": "Agudeza y arte de ingenio",
+  "wh_es": "El Héroe",
+  "wds_es": "El Discreto"
  },
  "Bartolome de las Casas": {
   "en": "Bartolome de las Casas",
@@ -1964,6 +1980,27 @@
   "ja": "バルトロメ・デ・ラス・カサス",
   "ar": "بارتولومي دي لاس كاساس",
   "hi": "बार्तोलोमे दे लास कासास"
+ },
+ "Francisco de Vitoria": {
+  "en": "Francisco de Vitoria",
+  "a1": "Vitoria",
+  "a2": "de Vitoria",
+  "a3": "Victoria",
+  "la": "Franciscus de Victoria",
+  "es": "Francisco de Vitoria",
+  "ca": "Francisco de Vitoria",
+  "fr": "Francisco de Vitoria",
+  "de": "Francisco de Vitoria",
+  "it": "Francisco de Vitoria",
+  "ru": "Франсиско де Витория",
+  "zh": "弗朗西斯科·德·维多利亚",
+  "ja": "フランシスコ・デ・ビトリア",
+  "ar": "فرانسيسكو دي فيتوريا",
+  "hi": "फ्रांसिस्को डी विटोरिया",
+  "wdi_en": "De Indis",
+  "wdi_la": "De Indis",
+  "wib_en": "De iure belli",
+  "wib_la": "De iure belli"
  },
  "Mahabharata": {
   "en": "Mahabharata",
@@ -2087,7 +2124,26 @@
   "zh": "海梅·巴尔梅斯",
   "ja": "ハイメ・バルメス",
   "ar": "خايمي بالميس",
-  "hi": "हाइमे बाल्मेस"
+  "hi": "हाइमे बाल्मेस",
+  "wcr_es": "El Criterio",
+  "wff_es": "Filosofía fundamental",
+  "wpc_es": "El Protestantismo comparado con el Catolicismo"
+ },
+ "Juan Donoso Cortes": {
+  "en": "Juan Donoso Cortés",
+  "a1": "Donoso Cortés",
+  "a2": "Donoso Cortes",
+  "es": "Juan Donoso Cortés",
+  "ca": "Juan Donoso Cortés",
+  "fr": "Juan Donoso Cortés",
+  "de": "Juan Donoso Cortés",
+  "it": "Juan Donoso Cortés",
+  "ru": "Хуан Доносо Кортес",
+  "zh": "胡安·多诺索·科尔特斯",
+  "ja": "フアン・ドノソ・コルテス",
+  "ar": "خوان دونوسو كورتيس",
+  "hi": "जुआन डोनोसो कोर्तेस",
+  "wec_es": "Ensayo sobre el catolicismo, el liberalismo y el socialismo"
  },
  "Ludwig Wittgenstein": {
   "en": "Ludwig Wittgenstein",
@@ -2395,7 +2451,9 @@
   "zh": "贝尼托·费霍",
   "ja": "ベニート・フェイホー",
   "ar": "بينيتو فيخوو",
-  "hi": "बेनितो फेइखो"
+  "hi": "बेनितो फेइखो",
+  "wtc_es": "Teatro crítico universal",
+  "wce_es": "Cartas eruditas y curiosas"
  },
  "Francesc Eiximenis": {
   "en": "Francesc Eiximenis",

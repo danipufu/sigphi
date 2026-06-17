@@ -408,6 +408,66 @@ TEXTS = [
      "la correspondència amb Arnauld i la Monadologia; traducció anglesa (Open Court, "
      "1902), domini públic. La Monadologia en alemany ja és al corpus. OCR.",
      "Leibniz__Discourse_Arnauld_Monadology_en.txt"),
+
+    # --- Lot 19: escolàstica espanyola, pensament conservador i hispànic s. XVII-XX ---
+    # Vitoria mort 1546 -> PD. Trad. J.P. Bate per Carnegie Endowment, 1917: PD.
+    # Donoso Cortés mort 1853 -> PD. Ed. original 1851: PD.
+    # Gracián mort 1658 -> PD. Ed. 1900 (Farinelli) i ed. 1669: PD.
+    # Unamuno mort 1936 -> PD a EU des del 2007; ed. 1933: PD.
+    # Feijóo mort 1764 -> PD. Ed. 1773: PD.
+    ("franciscidevicto0000vito", "franciscidevicto0000vito_djvu.txt",
+     "Francisco de Vitoria",
+     "De Indis et De iure belli relectiones (Carnegie Classics, Bate tr., 1917)",
+     "English", "Complete work", "Written by the author",
+     "Dues relectiones de Vitoria (1532): 'De Indis' (sobre el dret a la conquesta d'Amèrica) "
+     "i 'De iure belli' (sobre el dret de guerra); text llatí amb traducció anglesa de J. P. Bate "
+     "(Carnegie Endowment for International Peace, 1917), domini públic. OCR.",
+     "Francisco_de_Vitoria__De_Indis_De_iure_belli_Bate_en.txt"),
+    ("ensayo-sobre-el-catolicismo-el-liberalismo-y-el-socialismo",
+     "Ensayo sobre el catolicismo, el liberalismo y el socialismo_djvu.txt",
+     "Juan Donoso Cortes",
+     "Ensayo sobre el catolicismo, el liberalismo y el socialismo (1851)",
+     "Spanish", "Complete work", "Written by the author",
+     "Obra mestra del pensament conservador catòlic de Donoso Cortés (1851); "
+     "edició original en castellà, domini públic. OCR.",
+     "Juan_Donoso_Cortes__Ensayo_catolicismo_liberalismo_socialismo_es.txt"),
+    ("elhroeeldiscreto00grac", "elhroeeldiscreto00grac_djvu.txt",
+     "Baltasar Gracian", "El Héroe; El Discreto (Farinelli, 1900)", "Spanish",
+     "Complete work", "Written by the author",
+     "Dos tractats morals de Gracián: 'El Héroe' (1637, model de l'home d'excepció) i "
+     "'El Discreto' (1646, prudència i discreció); ed. d'Arturo Farinelli (1900), PD. OCR.",
+     "Baltasar_Gracian__El_Heroe_El_Discreto_es.txt"),
+    ("bub_gb_SmBLAAAAcAAJ", "bub_gb_SmBLAAAAcAAJ_djvu.txt",
+     "Baltasar Gracian",
+     "Agudeza y arte de ingenio; Oráculo manual y arte de prudencia (1669)",
+     "Spanish", "Complete work", "Written by the author",
+     "Edició de 1669 (A. Lacavallerìa, Barcelona) que conté dues obres de Gracián: "
+     "'Agudeza y arte de ingenio' (1648, teoria de l'enginy i l'estil) i "
+     "'Oráculo manual' (1647, aforismes de prudència i saviesa pràctica). "
+     "Tipografia del s. XVII: l'OCR pot contenir soroll (s llarga, lligadures). "
+     "Domini públic.",
+     "Baltasar_Gracian__Agudeza_Oraculo_1669_es.txt"),
+    ("san-manuel-bueno-martir-unamuno",
+     "San Manuel Bueno mártir, Unamuno_djvu.txt",
+     "Miguel de Unamuno", "San Manuel Bueno, mártir (1933)", "Spanish",
+     "Complete work", "Written by the author",
+     "Novel·la breu d'Unamuno (1931); edició de 1933, domini públic (CC Public Domain Mark). "
+     "Tema central: la fe com a necessitat vital, el dubte i el fingiment del creient. OCR.",
+     "Miguel_de_Unamuno__San_Manuel_Bueno_martir_es.txt"),
+    ("laagoniadelcrist0000unam", "laagoniadelcrist0000unam_djvu.txt",
+     "Miguel de Unamuno", "La agonía del cristianismo (1986 ed.)", "Spanish",
+     "Complete work", "Written by the author",
+     "Assaig teològic d'Unamuno (escrit en francès 1924, pub. esp. 1931); ed. 1986 Alianza. "
+     "Text de l'autor en domini públic (mort 1936); la descàrrega pot fallar si l'ed. és CDL. "
+     "OCR.",
+     "Miguel_de_Unamuno__La_agonia_del_cristianismo_es.txt"),
+    ("b30532139_0001", "b30532139_0001_djvu.txt",
+     "Benito Feijoo",
+     "Cartas eruditas y curiosas, Vol. I (1773)", "Spanish",
+     "Selection / partial", "Written by the author",
+     "Primer volum de les Cartes erudites de Feijóo (1742-1760); ed. 1773, CC Public Domain. "
+     "Complement del Teatro crítico universal. OCR (Tesseract, es).",
+     "Benito_Feijoo__Cartas_eruditas_Vol1_es.txt"),
 ]
 
 

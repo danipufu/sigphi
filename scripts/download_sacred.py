@@ -293,6 +293,32 @@ TEXTS = [
      "Assaig de Freud sobre la tensió entre la civilització i els instints (1930); "
      "traducció anglesa de Joan Riviere (1930), domini públic als EUA (copyright no renovat).",
      "Freud__Civilization_and_Its_Discontents_en.txt"),
+
+    # --- Lot 13: filòsofs hispànics (Gutenberg PD) ---
+    # Balmes mort 1848 -> PD. Filosofia fundamental 4 vols (es originals, Gutenberg).
+    # El Protestantismo: escrit en castellà 1842-1844 (PD), 2 vols en 1 ebook.
+    (13608, "Jaime Balmes", "Filosofía fundamental, Tomo I", "Spanish",
+     "Complete work", "Written by the author",
+     "Obra filosòfica principal de Balmes (1846), vol. I. Original castellà, domini públic.",
+     "Jaime_Balmes__Filosofia_fundamental_I_es.txt"),
+    (16132, "Jaime Balmes", "Filosofía fundamental, Tomo II", "Spanish",
+     "Complete work", "Written by the author",
+     "Filosofia fundamental de Balmes (1846), vol. II. Original castellà, domini públic.",
+     "Jaime_Balmes__Filosofia_fundamental_II_es.txt"),
+    (17974, "Jaime Balmes", "Filosofía fundamental, Tomo III", "Spanish",
+     "Complete work", "Written by the author",
+     "Filosofia fundamental de Balmes (1846), vol. III. Original castellà, domini públic.",
+     "Jaime_Balmes__Filosofia_fundamental_III_es.txt"),
+    (28430, "Jaime Balmes", "Filosofía fundamental, Tomo IV", "Spanish",
+     "Complete work", "Written by the author",
+     "Filosofia fundamental de Balmes (1846), vol. IV. Original castellà, domini públic.",
+     "Jaime_Balmes__Filosofia_fundamental_IV_es.txt"),
+    (59797, "Jaime Balmes",
+     "El Protestantismo comparado con el Catolicismo en sus relaciones con la Civilización Europea",
+     "Spanish", "Complete work", "Written by the author",
+     "Obra apologètica de Balmes (1842-1844) que compara protestantisme i catolicisme; "
+     "original castellà, domini públic. (Volums 1-2 en un sol ebook.)",
+     "Jaime_Balmes__El_Protestantismo_comparado_es.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)
