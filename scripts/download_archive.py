@@ -307,13 +307,13 @@ TEXTS = [
     # --- Lot 15: Hegel i Weber (OCR Archive.org; edicions PD verificades) ---
     # Hegel mort 1831 -> PD. Baillie (1910) i Dyde (1896): translators PD.
     # Weber mort 1920 -> PD. Original alemany 1919.
-    ("phenomenologyofm00hege", "phenomenologyofm00hege_djvu.txt",
+    ("phenomenologyofm02hege", "phenomenologyofm02hege_djvu.txt",
      "Hegel", "The Phenomenology of Mind (Baillie)", "English",
      "Complete work", "Written by the author",
      "Obra central de Hegel (Phänomenologie des Geistes, 1807); traducció anglesa "
      "de J. B. Baillie (1910), domini públic. Digitalització OCR.",
      "Hegel__Phenomenology_of_Mind_Baillie_en.txt"),
-    ("philosophyofrigh0000hege", "philosophyofrigh0000hege_djvu.txt",
+    ("in.ernet.dli.2015.36249", "2015.36249.Hegel--S-Philosophy-Of-Right_djvu.txt",
      "Hegel", "Philosophy of Right (Grundlinien der Philosophie des Rechts)",
      "English", "Complete work", "Written by the author",
      "Filosofia del dret de Hegel (1820); traducció anglesa de S. W. Dyde (1896), "
