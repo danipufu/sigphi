@@ -456,7 +456,10 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
 
         def _pick_examples(lang):
             pool = EXAMPLE_POOLS.get(lang, EXAMPLE_POOLS["English"])
-            return gr.update(samples=[[q] for q in random.sample(pool, N_EXAMPLES)])
+            qs = random.sample(pool, N_EXAMPLES)
+            # samples = valors (el que s'envia); sample_labels = el que es MOSTRA al
+            # chip. Actualitzem tots dos perquè el text visible canviï d'idioma.
+            return gr.update(samples=[[q] for q in qs], sample_labels=qs)
 
         outputs = [hero, header, footer]
         if dataset is not None:
