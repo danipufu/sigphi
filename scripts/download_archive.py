@@ -525,6 +525,27 @@ TEXTS = [
      "del Concili de Trento (1545-63); síntesi doctrinal catòlica posconciliar "
      "i manual estàndard per als capellans catòlics durant segles. Traducció anglesa PD. OCR.",
      "Pius_V__Catechismus_Romanus_en.txt"),
+
+    # --- Lot 21: textos papals en llatí (edicions PD) ---
+    # Innocenci III (1194-95, com a cardenal Lotario dei Conti) -> PD.
+    # Ed. crít. Achterfeldt 1855: PD. Nicolau I (mort 867) -> PD. PL 119 (Migne, 1852): PD.
+    ("decontemptumund00achtgoog", "decontemptumund00achtgoog_djvu.txt",
+     "Innocent III",
+     "De miseria humanae conditionis (De contemptu mundi)",
+     "Latin", "Complete work", "Written by the author",
+     "Tractat de Lotario dei Conti (futur Innocenci III) escrit ~1194-95 sobre la misèria "
+     "de la condició humana; un dels textos medievals més difosos. "
+     "Ed. crítica J. H. Achterfeldt (Bonn, 1855), text llatí complet. OCR.",
+     "Innocent_III__De_miseria_humanae_conditionis_la.txt"),
+    ("patrologiaecursu0119mign", "patrologiaecursu0119mign_djvu.txt",
+     "Nicholas I",
+     "Epistolae et Responsa ad consulta Bulgarorum (Patrologia Latina vol. 119)",
+     "Latin", "Complete work", "Written by the author",
+     "Patrologia Latina vol. 119 (Migne, 1852): conté les epístoles i documents de Nicolau I "
+     "(papa 858-867), incl. el famós 'Responsa Nicolai ad consulta Bulgarorum' (866 dC), "
+     "peça clau del dret canònic medieval i del primat pontifici. "
+     "Text llatí original. OCR.",
+     "Nicholas_I__Epistolae_Responsa_Bulgarorum_PL119_la.txt"),
 ]
 
 
