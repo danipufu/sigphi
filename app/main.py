@@ -140,13 +140,17 @@ gradio-app { background: var(--sig-cream); }
   box-shadow:0 1px 4px rgba(26,42,79,.06); }
 #sigphi-chat a { color:var(--sig-navy); text-decoration:underline; text-decoration-color:var(--sig-gold); }
 
-/* Botons primaris i exemples en to marca */
+/* Botons primaris en to marca */
 button.primary, .primary { background:var(--sig-navy) !important; border-color:var(--sig-navy) !important; }
-.examples .example, [class*="example"] button {
+
+/* Exemples propis (botons-chip) */
+#sigphi-examples { gap:8px !important; flex-wrap:wrap; margin-top:10px; }
+#sigphi-examples button {
   border:1px solid #e3ddcf !important; border-radius:12px !important; background:#fff !important;
-  color:var(--sig-navy) !important; transition:all .15s;
+  color:var(--sig-navy) !important; font-size:.86rem !important; font-weight:400 !important;
+  white-space:normal; text-align:left;
 }
-.examples .example:hover, [class*="example"] button:hover { border-color:var(--sig-gold) !important; box-shadow:0 2px 8px rgba(201,162,39,.18); }
+#sigphi-examples button:hover { border-color:var(--sig-gold) !important; box-shadow:0 2px 8px rgba(201,162,39,.18); }
 
 /* Peu */
 #sigphi-footer { text-align:center; color:#9ca3af; font-size:.8rem; margin:14px 0 4px; }
@@ -182,144 +186,42 @@ SIGPHI_THEME = gr.themes.Soft(
     block_border_width="1px",
 )
 
-# Pou d'exemples PER IDIOMA. A cada càrrega de pàgina (i en canviar d'idioma)
-# se'n trien N_EXAMPLES a l'atzar, en l'idioma de la UI. El bot respon igualment
+# Pou d'exemples (en anglès). A cada càrrega de pàgina (via @gr.render) se'n
+# trien N_EXAMPLES a l'atzar, així varien a cada refresc. El bot respon igualment
 # en l'idioma de la pregunta; aquests només són la mostra.
 N_EXAMPLES = 3
-EXAMPLE_POOLS = {
-    "Català": [
-        "Què deia Plató sobre la justícia?",
-        "Quins són els cinc pilars de l'islam?",
-        "Què deia Marc Aureli sobre la mort?",
-        "Quin és el sentit de la vida?",
-        "Què ensenya el Tao Te Ching sobre el wu wei?",
-        "Què deia Epictet sobre allò que depèn de nosaltres?",
-        "Què és l'imperatiu categòric de Kant?",
-        "Com veuen la mort el budisme i el cristianisme?",
-        "Què volia dir Nietzsche amb la voluntat de poder?",
-        "Què pensava Sèneca sobre la brevetat de la vida?",
-    ],
-    "Español": [
-        "¿Qué decía Platón sobre la justicia?",
-        "¿Cuáles son los cinco pilares del islam?",
-        "¿Qué decía Marco Aurelio sobre la muerte?",
-        "¿Cuál es el sentido de la vida?",
-        "¿Qué enseña el Tao Te Ching sobre el wu wei?",
-        "¿Qué decía Epicteto sobre lo que depende de nosotros?",
-        "¿Qué es el imperativo categórico de Kant?",
-        "¿Cómo ven la muerte el budismo y el cristianismo?",
-        "¿Qué quería decir Nietzsche con la voluntad de poder?",
-        "¿Qué pensaba Séneca sobre la brevedad de la vida?",
-    ],
-    "English": [
-        "What did Plato say about justice?",
-        "What are the Five Pillars of Islam?",
-        "What did Marcus Aurelius say about death?",
-        "What is the meaning of life?",
-        "What does the Tao Te Ching teach about wu wei?",
-        "What did Epictetus say about what is in our control?",
-        "What is Kant's categorical imperative?",
-        "How do Buddhism and Christianity view death?",
-        "What did Nietzsche mean by the will to power?",
-        "What did Seneca think about the shortness of life?",
-    ],
-    "Français": [
-        "Que disait Platon sur la justice ?",
-        "Quels sont les cinq piliers de l'islam ?",
-        "Que disait Marc Aurèle sur la mort ?",
-        "Quel est le sens de la vie ?",
-        "Qu'enseigne le Tao Tö King sur le wu wei ?",
-        "Que disait Épictète sur ce qui dépend de nous ?",
-        "Qu'est-ce que l'impératif catégorique de Kant ?",
-        "Comment le bouddhisme et le christianisme voient-ils la mort ?",
-        "Que voulait dire Nietzsche par la volonté de puissance ?",
-        "Que pensait Sénèque de la brièveté de la vie ?",
-    ],
-    "Deutsch": [
-        "Was sagte Platon über die Gerechtigkeit?",
-        "Was sind die fünf Säulen des Islam?",
-        "Was sagte Marc Aurel über den Tod?",
-        "Was ist der Sinn des Lebens?",
-        "Was lehrt das Tao Te King über das Wu Wei?",
-        "Was sagte Epiktet über das, was in unserer Macht steht?",
-        "Was ist Kants kategorischer Imperativ?",
-        "Wie sehen Buddhismus und Christentum den Tod?",
-        "Was meinte Nietzsche mit dem Willen zur Macht?",
-        "Was dachte Seneca über die Kürze des Lebens?",
-    ],
-    "Italiano": [
-        "Cosa diceva Platone sulla giustizia?",
-        "Quali sono i cinque pilastri dell'islam?",
-        "Cosa diceva Marco Aurelio sulla morte?",
-        "Qual è il senso della vita?",
-        "Cosa insegna il Tao Te Ching sul wu wei?",
-        "Cosa diceva Epitteto su ciò che dipende da noi?",
-        "Che cos'è l'imperativo categorico di Kant?",
-        "Come vedono la morte il buddismo e il cristianesimo?",
-        "Cosa intendeva Nietzsche con la volontà di potenza?",
-        "Cosa pensava Seneca della brevità della vita?",
-    ],
-    "Русский": [
-        "Что говорил Платон о справедливости?",
-        "Каковы пять столпов ислама?",
-        "Что говорил Марк Аврелий о смерти?",
-        "В чём смысл жизни?",
-        "Чему учит «Дао дэ цзин» о недеянии (у-вэй)?",
-        "Что говорил Эпиктет о том, что в нашей власти?",
-        "Что такое категорический императив Канта?",
-        "Как буддизм и христианство смотрят на смерть?",
-        "Что Ницше понимал под волей к власти?",
-        "Что думал Сенека о краткости жизни?",
-    ],
-    "中文": [
-        "柏拉图如何论述正义？",
-        "伊斯兰教的五功是什么？",
-        "马可·奥勒留如何看待死亡？",
-        "人生的意义是什么？",
-        "《道德经》如何论述无为？",
-        "爱比克泰德如何看待我们能掌控的事？",
-        "康德的绝对命令是什么？",
-        "佛教与基督教如何看待死亡？",
-        "尼采所说的权力意志是什么？",
-        "塞涅卡如何看待生命的短暂？",
-    ],
-    "日本語": [
-        "プラトンは正義について何と言ったか？",
-        "イスラム教の五行とは何か？",
-        "マルクス・アウレリウスは死について何と言ったか？",
-        "人生の意味とは何か？",
-        "『道徳経』は無為について何を説くか？",
-        "エピクテトスは自分次第のことについて何と言ったか？",
-        "カントの定言命法とは何か？",
-        "仏教とキリスト教は死をどう捉えるか？",
-        "ニーチェの言う「力への意志」とは何か？",
-        "セネカは人生の短さについてどう考えたか？",
-    ],
-    "العربية": [
-        "ماذا قال أفلاطون عن العدالة؟",
-        "ما هي أركان الإسلام الخمسة؟",
-        "ماذا قال ماركوس أوريليوس عن الموت؟",
-        "ما معنى الحياة؟",
-        "ماذا يعلّم كتاب التاو تي تشينغ عن اللافعل (وو وي)؟",
-        "ماذا قال إبكتيتوس عمّا هو في وسعنا؟",
-        "ما هو الأمر القطعي عند كانط؟",
-        "كيف تنظر البوذية والمسيحية إلى الموت؟",
-        "ماذا قصد نيتشه بإرادة القوة؟",
-        "ماذا رأى سينيكا في قِصَر الحياة؟",
-    ],
-    "हिन्दी": [
-        "प्लेटो ने न्याय के बारे में क्या कहा?",
-        "इस्लाम के पाँच स्तंभ क्या हैं?",
-        "मार्कस ऑरेलियस ने मृत्यु के बारे में क्या कहा?",
-        "जीवन का अर्थ क्या है?",
-        "ताओ ते चिंग 'वू वेई' के बारे में क्या सिखाता है?",
-        "एपिक्टेटस ने उस बारे में क्या कहा जो हमारे वश में है?",
-        "कांट का स्पष्ट आदेश क्या है?",
-        "बौद्ध और ईसाई धर्म मृत्यु को कैसे देखते हैं?",
-        "नीत्शे का 'शक्ति की इच्छा' से क्या तात्पर्य था?",
-        "सेनेका ने जीवन की क्षणभंगुरता के बारे में क्या सोचा?",
-    ],
-}
+EXAMPLE_POOL_EN = [
+    "What did Plato say about justice in The Republic?",
+    "What are the Five Pillars of Islam?",
+    "What did Marcus Aurelius say about death?",
+    "Compare Plato and Nietzsche on morality",
+    "What is the meaning of life according to the Stoics?",
+    "What does the Tao Te Ching teach about wu wei?",
+    "What did Epictetus say about what is in our control?",
+    "What is Nietzsche's idea of the will to power?",
+    "What did Aristotle mean by the golden mean?",
+    "How does the Bhagavad Gita describe duty (dharma)?",
+    "What did Seneca think about the shortness of life?",
+    "What is Kant's categorical imperative?",
+    "What did Confucius teach about virtue?",
+    "How do Buddhism and Christianity view death?",
+    "What did Marx say about class struggle?",
+    "What does 'I think, therefore I am' mean in Descartes?",
+    "What did Augustine say about time in the Confessions?",
+    "What does the Dhammapada say about the mind?",
+    "What did Machiavelli advise rulers in The Prince?",
+    "What is Spinoza's view of God in the Ethics?",
+    "What did Hume say about cause and effect?",
+    "What did Schopenhauer say about suffering?",
+    "What is the Stoic view of fate and providence?",
+    "What did Rousseau argue in The Social Contract?",
+    "What did Lao Tzu say about leadership?",
+    "How does the Quran describe mercy?",
+    "What did Cicero say about friendship?",
+    "What is Hegel's master–slave dialectic?",
+    "What did Mill argue in On Liberty?",
+    "What did Heraclitus mean that everything flows?",
+]
 
 # Descripció localitzada (sense títol: el hero ja mostra "SigPhi"). Primera línia
 # = què fa; segona línia = avís de fase beta (es mostra més tènue via CSS).
@@ -440,7 +342,6 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
         header = gr.Markdown(HEADERS["Català"], elem_id="sigphi-header")
         ci = gr.ChatInterface(
             fn=respond,
-            examples=random.sample(EXAMPLE_POOLS["Català"], N_EXAMPLES),
             chatbot=gr.Chatbot(elem_id="sigphi-chat", height=460, show_label=False),
             textbox=gr.Textbox(
                 placeholder="Fes una pregunta sobre filosofia… (en qualsevol idioma)",
@@ -449,31 +350,40 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
                 scale=7,
             ),
         )
+
+        # Exemples PROPIS (botons), no els del ChatInterface: el seu dataset intern
+        # no es refresca en viu. Amb @gr.render(triggers=[demo.load]) es recreen
+        # N_EXAMPLES a l'atzar A CADA CÀRREGA -> varien a cada refresc. En clicar,
+        # omplen el xat amb la pregunta i la responen (driving directe del chatbot).
+        def _run_example(question, history):
+            history = history or []
+            yield history + [
+                {"role": "user", "content": question},
+                {"role": "assistant", "content": "…"},
+            ]
+            answer = respond(question, history)
+            yield history + [
+                {"role": "user", "content": question},
+                {"role": "assistant", "content": answer},
+            ]
+
+        @gr.render(triggers=[demo.load])
+        def _render_examples():
+            with gr.Row(elem_id="sigphi-examples"):
+                for q in random.sample(EXAMPLE_POOL_EN, N_EXAMPLES):
+                    gr.Button(q, size="sm", elem_classes="sigphi-ex").click(
+                        _run_example,
+                        inputs=[gr.State(q), ci.chatbot],
+                        outputs=ci.chatbot,
+                    )
+
         footer = gr.HTML(_footer_html("Català"))
 
-        # Exemples: N_EXAMPLES a l'atzar del pou de l'IDIOMA de la UI.
-        dataset = getattr(getattr(ci, "examples_handler", None), "dataset", None)
-
-        def _pick_examples(lang):
-            pool = EXAMPLE_POOLS.get(lang, EXAMPLE_POOLS["English"])
-            qs = random.sample(pool, N_EXAMPLES)
-            # samples = valors (el que s'envia); sample_labels = el que es MOSTRA al
-            # chip. Actualitzem tots dos perquè el text visible canviï d'idioma.
-            return gr.update(samples=[[q] for q in qs], sample_labels=qs)
-
-        outputs = [hero, header, footer]
-        if dataset is not None:
-            outputs.append(dataset)
-
-        def _on_lang(l):
-            base = (_hero_html(l), HEADERS[l], _footer_html(l))
-            return base + (_pick_examples(l),) if dataset is not None else base
-
-        lang.change(_on_lang, inputs=lang, outputs=outputs)
-
-        # A cada càrrega de pàgina: exemples nous, en l'idioma per defecte.
-        if dataset is not None:
-            demo.load(lambda: _pick_examples("Català"), inputs=None, outputs=dataset)
+        lang.change(
+            lambda l: (_hero_html(l), HEADERS[l], _footer_html(l)),
+            inputs=lang,
+            outputs=[hero, header, footer],
+        )
     return demo
 
 
