@@ -11,24 +11,28 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 _log = logging.getLogger("sigphi")
 
 
-# Stopwords distintives per a idiomes en alfabet llatí (per desambiguar la llengua
-# de la pregunta actual i poder anomenar-la EXPLÍCITAMENT al model — molt més fiable
-# que "respon en el mateix idioma", que el model ignora si l'historial és en un altre).
+# Marcadors DISCRIMINATIUS per idioma (alfabet llatí). Per desambiguar la llengua
+# de la pregunta actual i anomenar-la EXPLÍCITAMENT al model (molt més fiable que
+# "respon en el mateix idioma", que el model ignora si l'historial és en un altre).
+# CLAU: només tokens que discriminen — s'EVITEN paraules compartides ("que", "sobre",
+# "la", "de"...) que confonien (ex.: un català sense accents "que ... sobre" es
+# detectava com a portuguès). Els articles plurals (els/los/os/les/gli) i el verb
+# "dir" (diu/dice/diz/dit) discriminen molt bé català/espanyol/portuguès.
 _LATIN_STOP = {
-    "English": {"the", "what", "did", "does", "is", "how", "about", "why", "who",
-                "was", "were", "according", "say", "said"},
-    "Spanish": {"qué", "cómo", "cuál", "quién", "por", "sobre", "del", "los", "las",
-                "decía", "según", "qué", "cuáles", "pensaba"},
-    "Catalan": {"què", "deia", "sobre", "quina", "quins", "és", "com", "segons",
-                "allò", "nosaltres", "pensava", "què"},
-    "French": {"que", "qu'est", "quoi", "comment", "disait", "pourquoi", "selon",
-               "sur", "était", "pensait", "quels"},
-    "German": {"was", "wie", "warum", "über", "sagte", "nach", "und", "ist", "des",
-               "dachte", "den", "Säulen"},
-    "Italian": {"che", "cosa", "come", "perché", "secondo", "diceva", "sul", "è",
-                "pensava", "quali"},
-    "Portuguese": {"que", "como", "porque", "porquê", "sobre", "segundo", "dizia",
-                   "pensava", "quais", "são"},
+    "English": {"the", "what", "which", "did", "does", "how", "why", "who", "whose",
+                "about", "say", "said", "are", "was", "were"},
+    "Spanish": {"los", "las", "qué", "cómo", "cuál", "cuáles", "quién", "dice",
+                "decía", "está", "según", "pero", "hizo", "pensaba"},
+    "Catalan": {"els", "amb", "això", "aquest", "aquesta", "aquests", "dels", "diu",
+                "diuen", "deia", "perquè", "però", "nosaltres", "vostè", "què", "són"},
+    "French": {"les", "qu'est", "quoi", "comment", "pourquoi", "c'est", "vous",
+               "votre", "dit", "disait", "était", "selon", "dans"},
+    "German": {"was", "über", "und", "ist", "der", "die", "das", "nicht", "wie",
+               "warum", "sagt", "sagte", "den", "dem", "eine"},
+    "Italian": {"gli", "della", "delle", "perché", "sono", "cosa", "diceva", "sulla",
+                "quali", "dei", "nella", "è"},
+    "Portuguese": {"não", "você", "vocês", "então", "diz", "dizem", "porquê", "os",
+                   "as", "uma", "à", "às"},
 }
 
 
