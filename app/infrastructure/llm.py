@@ -36,12 +36,39 @@ _LATIN_STOP = {
 }
 
 
+# Peticions EXPLÍCITES de canvi d'idioma com a seguiment ("en català", "in english",
+# "auf deutsch"): el nom demanat -> la llengua de la resposta.
+_LANG_REQUEST: dict[str, str] = {}
+for _names, _lang in [
+    (("català", "catala", "catalan"), "Catalan"),
+    (("castellà", "castella", "castellano", "español", "espanol", "espanyol", "spanish"), "Spanish"),
+    (("anglès", "angles", "anglés", "english", "inglés", "ingles", "inglese"), "English"),
+    (("francès", "frances", "francés", "français", "francais", "french", "francese"), "French"),
+    (("alemany", "deutsch", "german", "alemán", "aleman", "tedesco"), "German"),
+    (("italià", "italia", "italiano", "italian"), "Italian"),
+    (("rus", "russian", "ruso", "russe"), "Russian"),
+    (("xinès", "xines", "chinese", "chino", "chinois"), "Chinese"),
+    (("japonès", "japones", "japanese", "japonés", "japonais"), "Japanese"),
+    (("àrab", "arab", "arabic", "árabe", "arabe"), "Arabic"),
+    (("hindi",), "Hindi"),
+    (("portuguès", "portugues", "português", "portuguese", "portugués"), "Portuguese"),
+]:
+    for _n in _names:
+        _LANG_REQUEST[_n] = _lang
+
+
 def _detect_language(text: str) -> str | None:
     """Nom (en anglès) de l'idioma de `text`, o None si no és prou clar. Els scripts
     no-llatins són senyal fort; per al llatí, desambigua amb stopwords distintives."""
     t = (text or "").strip()
     if not t:
         return None
+
+    # Petició explícita: "en/in/auf <idioma>" (missatge curt) -> aquell idioma.
+    if len(t.split()) <= 3:
+        mreq = re.match(r"^(?:en|in|auf|på|по)\s+([^\s,.;:!?]+)", t, re.I)
+        if mreq and mreq.group(1).lower() in _LANG_REQUEST:
+            return _LANG_REQUEST[mreq.group(1).lower()]
 
     def cnt(lo: str, hi: str) -> int:
         return sum(1 for c in t if lo <= c <= hi)

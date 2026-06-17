@@ -15,6 +15,33 @@ from app.services.retrieval import RetrievalService
 # Captura [[NO_SOURCES]] (i variants amb un sol claudàtor) en qualsevol posició.
 _NO_SOURCES_RE = re.compile(r"\s*\[+\s*NO_SOURCES\s*\]+\s*")
 
+# SEGUIMENTS: missatges que NO introdueixen un tema nou sinó que demanen re-fer la
+# resposta anterior (canvi d'idioma, més detall, "per què", etc.). Per a aquests, el
+# retrieval ha de reutilitzar el TEMA de la pregunta ANTERIOR (si no, "En català"
+# recupera textos catalans aleatoris i el bot denega). NO inclou "i/and X" perquè
+# sovint introdueixen tema nou.
+_LANG_REQUEST_RE = re.compile(
+    r"^\s*(?:en|in|auf|på|по)\s+[\w'’]+\s*[!.?]*\s*$"
+    r"|^\s*(?:translat\w*|tradu\w+|traduis\w*|traduci\w*)\b",
+    re.I,
+)
+_META_KW_RE = re.compile(
+    r"\b(?:m[ée]s|more|explica\w*|explain\w*|amplia\w*|detalla\w*|elaborate|resum\w*|"
+    r"summar\w*|simplif\w*|simpler|shorter|breu\w*|briefly|per\s*qu[èe]|perqu[èe]|why|"
+    r"pourquoi|por\s*qu[ée]|warum|continua|continue|seg[uü]eix)\b",
+    re.I,
+)
+
+
+def _is_followup(query: str) -> bool:
+    """El missatge demana re-fer/ajustar la resposta anterior (no obre tema nou)?"""
+    q = (query or "").strip()
+    if not q:
+        return False
+    if _LANG_REQUEST_RE.match(q):  # "en català", "in english", "tradueix"...
+        return True
+    return len(q.split()) <= 3 and bool(_META_KW_RE.search(q))  # curt + paraula meta
+
 
 @dataclass(frozen=True, slots=True)
 class ChatResult:
@@ -75,7 +102,17 @@ class ChatService:
         query: str,
         history: list[tuple[str, str]] | None = None,
     ) -> ChatResult:
-        retrieved = self._retrieval.retrieve(query)
+        # Per a seguiments (canvi d'idioma, "explica més"...) recuperem amb el TEMA
+        # de la pregunta anterior, no amb el text literal del seguiment. L'LLM, però,
+        # rep la instrucció ORIGINAL + l'historial, així re-fà la resposta com es demana.
+        retrieval_query = query
+        hist_pairs = history or []
+        if hist_pairs and _is_followup(query):
+            prev_q = hist_pairs[-1][0]
+            if prev_q:
+                retrieval_query = f"{prev_q}\n{query}"
+
+        retrieved = self._retrieval.retrieve(retrieval_query)
         if not retrieved:
             return ChatResult(answer=NO_CORPUS_MESSAGE, sources=[], retrieved=[])
         context = format_context(retrieved)
