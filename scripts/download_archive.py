@@ -468,6 +468,63 @@ TEXTS = [
      "Primer volum de les Cartes erudites de Feijóo (1742-1760); ed. 1773, CC Public Domain. "
      "Complement del Teatro crítico universal. OCR (Tesseract, es).",
      "Benito_Feijoo__Cartas_eruditas_Vol1_es.txt"),
+
+    # --- Lot 20: textos papals patrístics i clàssics (OCR Archive.org; PD) ---
+    # Climent I (~96 dC), Lleó I (mort 461), Gregori I (mort 604), Pius V (mort 1572) -> PD.
+    # Traduccions del s. XIX: Chevallier 1846, NPNF 1895, Bliss 1844 -> PD.
+    ("TranslationOfTheEpistlesOfClement", "TranslationOfTheEpistlesOfClement_djvu.txt",
+     "Clement I",
+     "Epistola ad Corinthios (1 Clement); Polycarp, Ignatius, Justin Martyr",
+     "English", "Complete work", "Written by the author",
+     "Recull patrístic (Chevallier tr., 1846): 1ª Carta de Climent I als Corintis (~96 dC), "
+     "Epístola de Policarp als Filipencs, Cartes d'Ignaci d'Antioquia i "
+     "1ª Apologia de Justí Màrtir. Pares Apostòlics. OCR.",
+     "Clement_I__Epistola_Corinthios_Apostolic_Fathers_en.txt"),
+    ("LeoTheGreat.GregoryTheGreat", "leo_the_great_gregory_the_great_djvu.txt",
+     "Leo I",
+     "Tractatus Septem et Nonaginta; Tomus ad Flavianum (Leo I); Regula Pastoralis (Gregory I)",
+     "English", "Complete work", "Written by the author",
+     "NPNF 2a sèrie, Vol. 12 (1895): sermons i cartes de Lleó I el Gran "
+     "(incl. Tomus ad Flavianum, definició cristològica del Concili de Calcedònia 451) "
+     "i Regula Pastoralis + epístoles de Gregori I el Gran. Traduccions PD.",
+     "Leo_I__Gregory_I__NPNF_Vol12_en.txt"),
+    ("moralsonbookofj01greg", "moralsonbookofj01greg_djvu.txt",
+     "Gregory I",
+     "Moralia in Job (Morals on the Book of Job), Vol. I",
+     "English", "Complete work", "Written by the author",
+     "Magna Moralia de Gregori I el Gran (~578-595 dC), comentari moral sobre Job; "
+     "traducció de James Bliss (Oxford: Parker, 1844). Vol. I. PD. OCR.",
+     "Gregory_I__Moralia_in_Job_Vol1_Bliss_en.txt"),
+    ("moralsonbookofj02greg", "moralsonbookofj02greg_djvu.txt",
+     "Gregory I",
+     "Moralia in Job (Morals on the Book of Job), Vol. II",
+     "English", "Complete work", "Written by the author",
+     "Magna Moralia de Gregori I el Gran; traducció James Bliss (Oxford: Parker, 1844). "
+     "Vol. II. PD. OCR.",
+     "Gregory_I__Moralia_in_Job_Vol2_Bliss_en.txt"),
+    ("moralsonbookofj03greg", "moralsonbookofj03greg_djvu.txt",
+     "Gregory I",
+     "Moralia in Job (Morals on the Book of Job), Vol. III",
+     "English", "Complete work", "Written by the author",
+     "Magna Moralia de Gregori I el Gran; traducció James Bliss (Oxford: Parker, 1844). "
+     "Vol. III. PD. OCR.",
+     "Gregory_I__Moralia_in_Job_Vol3_Bliss_en.txt"),
+    ("PopeSt.GregoryTheGreatDialogues", "Pope St. Gregory the Great - Dialogues_djvu.txt",
+     "Gregory I",
+     "Dialogi de vita et miraculis patrum Italicorum",
+     "English", "Complete work", "Written by the author",
+     "Diàlegs de Gregori I (~593-94 dC) sobre les vides i miracles dels sants italians; "
+     "inclou la vida de Sant Benet (Diàleg II, font principal sobre la Regla Benedictina). "
+     "Traducció anglesa PD. OCR d'Archive.org.",
+     "Gregory_I__Dialogi_en.txt"),
+    ("catechism-of-the-council-of-trent", "Catechism_of_the_Council of_Trent_djvu.txt",
+     "Pius V",
+     "Catechismus Romanus ad Parochos (Catechism of the Council of Trent)",
+     "English", "Complete work", "Written by the author",
+     "Catecisme Romà (1566) encarregat per Pius V per implementar els decrets "
+     "del Concili de Trento (1545-63); síntesi doctrinal catòlica posconciliar "
+     "i manual estàndard per als capellans catòlics durant segles. Traducció anglesa PD. OCR.",
+     "Pius_V__Catechismus_Romanus_en.txt"),
 ]
 
 

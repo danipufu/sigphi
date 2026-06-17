@@ -72,6 +72,16 @@ TEXTS: list[tuple] = [
      "traducció anglesa de Richard M. Gummere (Loeb, 1917-25), domini públic. "
      "Text de Wikisource.",
      "Seneca__Moral_Letters_to_Lucilius_en.txt"),
+    ("en", "The Great Encyclical Letters of Pope Leo XIII",
+     "Leo XIII",
+     "Great Encyclical Letters (incl. Aeterni Patris, Providentissimus Deus, etc.)",
+     "English", "Complete work", "Written by the author",
+     "Col·lecció de 30 encíclics de Lleó XIII (1878-1903), ed. Benziger Brothers (1903), PD; "
+     "inclou: Aeterni Patris (1879, restauració de la filosofia tomista), "
+     "Providentissimus Deus (1893, estudis bíblics), Divinum Illud Munus (1897, Esperit Sant), "
+     "Satis Cognitum (1896, unitat de l'Església) i 26 encíclics més sobre política, "
+     "família i doctrina social. Text de Wikisource.",
+     "Leo_XIII__Great_Encyclical_Letters_en.txt"),
 ]
 
 _SKIP_TAGS = {"script", "style", "sup", "table"}

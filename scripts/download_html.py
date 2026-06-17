@@ -23,6 +23,39 @@ TEXTS = [
      "Assaig de Karl Marx (1844); traducció anglesa de domini públic (Marxists.org), "
      "no l'alemany original.",
      "Karl_Marx__On_the_Jewish_Question_en.txt"),
+    # Encíclics papals moderns (textos PD; font: papalencyclicals.net pàgines individuals HTML)
+    ("https://www.papalencyclicals.net/pius09/p9ineff.htm",
+     "Pius IX", "Ineffabilis Deus (1854)", "English",
+     "Complete work", "Written by the author",
+     "Butlla de Pius IX (8 des. 1854) que defineix dogmàticament la Immaculada Concepció "
+     "de la Verge Maria. Text PD (1854). Papalencyclicals.net.",
+     "Pius_IX__Ineffabilis_Deus_en.txt"),
+    ("https://www.papalencyclicals.net/ben15/b15spiri.htm",
+     "Benedict XV", "Spiritus Paraclitus (1920)", "English",
+     "Complete work", "Written by the author",
+     "Encíclica de Benet XV (15 set. 1920) sobre Sant Jeroni i els estudis bíblics, "
+     "amb motiu del 1500è aniversari de la mort del Doctor Màxim. Text PD. Papalencyclicals.net.",
+     "Benedict_XV__Spiritus_Paraclitus_en.txt"),
+    ("https://www.papalencyclicals.net/pius11/p11morta.htm",
+     "Pius XI", "Mortalium Animos (1928)", "English",
+     "Complete work", "Written by the author",
+     "Encíclica de Pius XI (6 gen. 1928) sobre la unitat de l'Església "
+     "i els perills del moviment ecumènic modern. Text PD. Papalencyclicals.net.",
+     "Pius_XI__Mortalium_Animos_en.txt"),
+    ("https://www.papalencyclicals.net/pius11/p11rappr.htm",
+     "Pius XI", "Divini Illius Magistri (1929)", "English",
+     "Complete work", "Written by the author",
+     "Encíclica de Pius XI (31 des. 1929) sobre l'educació cristiana de la joventut; "
+     "drets i deures de l'Església, la família i l'Estat en matèria educativa. "
+     "Text PD. Papalencyclicals.net.",
+     "Pius_XI__Divini_Illius_Magistri_en.txt"),
+    ("https://www.papalencyclicals.net/pius11/p11casti.htm",
+     "Pius XI", "Casti Connubii (1930)", "English",
+     "Complete work", "Written by the author",
+     "Encíclica de Pius XI (31 des. 1930) sobre el matrimoni cristià, "
+     "la família i la moral sexual; resposta als moviments de control de natalitat. "
+     "Text PD. Papalencyclicals.net.",
+     "Pius_XI__Casti_Connubii_en.txt"),
 ]
 
 _SKIP = {"script", "style", "head", "title", "nav", "footer"}
