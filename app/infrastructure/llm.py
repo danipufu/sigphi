@@ -2,12 +2,78 @@
 from __future__ import annotations
 
 import logging
+import re
 import time
 
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 _log = logging.getLogger("sigphi")
+
+
+# Stopwords distintives per a idiomes en alfabet llatí (per desambiguar la llengua
+# de la pregunta actual i poder anomenar-la EXPLÍCITAMENT al model — molt més fiable
+# que "respon en el mateix idioma", que el model ignora si l'historial és en un altre).
+_LATIN_STOP = {
+    "English": {"the", "what", "did", "does", "is", "how", "about", "why", "who",
+                "was", "were", "according", "say", "said"},
+    "Spanish": {"qué", "cómo", "cuál", "quién", "por", "sobre", "del", "los", "las",
+                "decía", "según", "qué", "cuáles", "pensaba"},
+    "Catalan": {"què", "deia", "sobre", "quina", "quins", "és", "com", "segons",
+                "allò", "nosaltres", "pensava", "què"},
+    "French": {"que", "qu'est", "quoi", "comment", "disait", "pourquoi", "selon",
+               "sur", "était", "pensait", "quels"},
+    "German": {"was", "wie", "warum", "über", "sagte", "nach", "und", "ist", "des",
+               "dachte", "den", "Säulen"},
+    "Italian": {"che", "cosa", "come", "perché", "secondo", "diceva", "sul", "è",
+                "pensava", "quali"},
+    "Portuguese": {"que", "como", "porque", "porquê", "sobre", "segundo", "dizia",
+                   "pensava", "quais", "são"},
+}
+
+
+def _detect_language(text: str) -> str | None:
+    """Nom (en anglès) de l'idioma de `text`, o None si no és prou clar. Els scripts
+    no-llatins són senyal fort; per al llatí, desambigua amb stopwords distintives."""
+    t = (text or "").strip()
+    if not t:
+        return None
+
+    def cnt(lo: str, hi: str) -> int:
+        return sum(1 for c in t if lo <= c <= hi)
+
+    kana = cnt("぀", "ヿ")
+    han = cnt("一", "鿿")
+    if kana >= 1:
+        return "Japanese"
+    if cnt("가", "힣") >= 1:
+        return "Korean"
+    if han >= 1:
+        return "Chinese"
+    if cnt("Ѐ", "ӿ") >= 2:
+        return "Russian"
+    if cnt("؀", "ۿ") >= 2:
+        return "Arabic"
+    if cnt("֐", "׿") >= 2:
+        return "Hebrew"
+    if cnt("ऀ", "ॿ") >= 2:
+        return "Hindi"
+    if cnt("Ͱ", "Ͽ") + cnt("ἀ", "῿") >= 2:
+        return "Greek"
+
+    words = re.findall(r"[a-zàáâäçèéêëìíîïñòóôöùúûü'’]+", t.lower())
+    if len(words) < 2:
+        return None
+    wset = set(words)
+    scores = {lang: len(wset & {w.lower() for w in sw}) for lang, sw in _LATIN_STOP.items()}
+    best = max(scores, key=scores.get)
+    top = scores[best]
+    if top == 0:
+        return None
+    # Empat clar (dos idiomes amb la mateixa puntuació màxima) -> no arrisquem.
+    if sum(1 for v in scores.values() if v == top) > 1:
+        return None
+    return best
 
 # Missatge amable quan Gemini està saturat (429) i s'esgoten els reintents. Trilingüe
 # perquè no sabem encara l'idioma de la pregunta a aquest nivell.
@@ -70,13 +136,21 @@ class GeminiLLM:
         # Recordatori d'idioma ENGANXAT a la pregunta (salient just abans de generar):
         # contraresta el biaix de l'historial (ex.: torns anteriors en català fan que
         # el model segueixi en català encara que la pregunta actual sigui en castellà).
-        messages.append(
-            HumanMessage(
-                content=user_query
-                + "\n\n[IMPORTANT: write your entire reply in the SAME language as THIS "
+        # Si podem detectar la llengua, l'ANOMENEM explícitament (molt més fiable que
+        # "el mateix idioma", que el model ignora quan l'historial és en un altre).
+        lang = _detect_language(user_query)
+        if lang:
+            directive = (
+                f"\n\n[IMPORTANT: the user's CURRENT question is in {lang}. Write your "
+                f"ENTIRE reply in {lang}, regardless of the language of earlier turns or "
+                "of the sources.]"
+            )
+        else:
+            directive = (
+                "\n\n[IMPORTANT: write your entire reply in the SAME language as THIS "
                 "question, regardless of the language of earlier turns or of the sources.]"
             )
-        )
+        messages.append(HumanMessage(content=user_query + directive))
 
         # Reintents amb espera creixent: el pla gratuït de Gemini limita ~req/min i
         # retorna 429 en ràfegues. Sense això, l'excepció arribaria a l'usuari com un 500.
