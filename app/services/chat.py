@@ -69,6 +69,7 @@ def format_context(
         header = f"Source: {c.author} — {c.work}"
         if c.language:
             header += f" ({c.language})"
+        header += f" [relevance: {r.score:.0%}]"
         caveat_parts = []
         disc = discriminatory_warning(c.author, c.work, c.text)
         if disc:

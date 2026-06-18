@@ -68,7 +68,7 @@ class Settings(BaseSettings):
     biographies_path: Path = Path("./app/data/biographies.json")
 
     # === Retrieval ===
-    top_k: int = 15
+    top_k: int = 20
 
     # === Ingest ===
     ingest_batch_size: int = 100
