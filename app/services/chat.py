@@ -7,7 +7,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
-from app.domain.caveats import discriminatory_warning
+from app.domain.caveats import discriminatory_warning, historical_context_note
 from app.domain.interfaces import LLMInterface
 from app.domain.models import RetrievedChunk
 from app.services.biographies import background_block
@@ -73,6 +73,9 @@ def format_context(
         disc = discriminatory_warning(c.author, c.work, c.text)
         if disc:
             caveat_parts.append(disc)
+        ctx = historical_context_note(c.author, c.work, c.text)
+        if ctx:
+            caveat_parts.append(ctx)
         if c.note and c.note != "—":
             caveat_parts.append(c.note)
         if caveat_parts:
@@ -93,6 +96,11 @@ def get_sources(retrieved: list[RetrievedChunk]) -> list[str]:
         for r in retrieved
         if discriminatory_warning(r.chunk.author, r.chunk.work, r.chunk.text)
     }
+    ctx_works = {
+        (r.chunk.author, r.chunk.work)
+        for r in retrieved
+        if historical_context_note(r.chunk.author, r.chunk.work, r.chunk.text)
+    }
     seen: set[str] = set()
     sources: list[str] = []
     for r in retrieved:
@@ -101,6 +109,8 @@ def get_sources(retrieved: list[RetrievedChunk]) -> list[str]:
         flags = []
         if (c.author, c.work) in disc_works:
             flags.append("contingut discriminatori")
+        if (c.author, c.work) in ctx_works:
+            flags.append("context històric")
         if c.note and c.note != "—":
             if c.completeness and c.completeness != "Complete work":
                 flags.append(c.completeness.lower())

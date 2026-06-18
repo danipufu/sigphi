@@ -148,6 +148,28 @@ DISCRIMINATORY_CONTENT: dict[tuple[str, str], tuple[str, tuple[str, ...] | None]
 }
 
 
+# ── Textos amb NOTA DE CONTEXT històric/ideològic (NO discriminació de grup) ──
+# Per a fonts primàries que són apologètica directa d'un règim/ideologia responsable
+# de greus danys, on convé contextualitzar (no avalar) SENSE l'avís dur de
+# discriminació de la regla 17. Mateixa estructura i semàntica que
+# DISCRIMINATORY_CONTENT (triggers None = nivell d'obra; (...) = nivell de passatge).
+HISTORICAL_CONTEXT: dict[tuple[str, str], tuple[str, tuple[str, ...] | None]] = {
+    # Gentile: textos fundacionals/apologètics del feixisme. NO porten avís de
+    # discriminació (no ataquen un grup; la Dottrina és de 1932, abans de les lleis
+    # racials de 1938, a les quals Gentile s'oposà), però es contextualitzen.
+    ("gentile", "dottrina del fascismo"): (
+        "NOTA DE CONTEXT: text fundacional de la doctrina feixista, apologètica del "
+        "règim de Mussolini. Inclòs pel seu valor historiogràfic, no com a aval.",
+        None,
+    ),
+    ("gentile", "manifesto degli intellettuali fascisti"): (
+        "NOTA DE CONTEXT: manifest d'adhesió al feixisme italià (1925). Inclòs pel seu "
+        "valor historiogràfic, no com a aval.",
+        None,
+    ),
+}
+
+
 def _norm(s):
     return re.sub(r'[_\s]+', ' ', (s or '')).strip().lower()
 
@@ -169,6 +191,20 @@ def discriminatory_warning(author: str, work: str, text: str = "") -> str | None
     """
     a, w, t = _norm(author), _norm(work), _norm(text)
     for (ka, kw), (msg, triggers) in DISCRIMINATORY_CONTENT.items():
+        if ka in a and kw in w:
+            if triggers is None:
+                return msg
+            if any(trig in t for trig in triggers):
+                return msg
+    return None
+
+
+def historical_context_note(author: str, work: str, text: str = "") -> str | None:
+    """Nota de context històric/ideològic (p. ex. apologètica feixista). Categoria
+    més lleugera que discriminatory_warning: contextualitza sense alarma de grup.
+    Mateixa mecànica (obra/passatge)."""
+    a, w, t = _norm(author), _norm(work), _norm(text)
+    for (ka, kw), (msg, triggers) in HISTORICAL_CONTEXT.items():
         if ka in a and kw in w:
             if triggers is None:
                 return msg
