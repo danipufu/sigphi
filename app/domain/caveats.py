@@ -101,8 +101,12 @@ DISCRIMINATORY_CONTENT: dict[tuple[str, str], tuple[str, tuple[str, ...] | None]
         ("slave by nature", "slaves by nature", "by nature a slave", "natural slave",
          "intended by nature to be a slave", "the male is by nature"),
     ),
-    # Marx: els estereotips són a la 2a part. Cas DEBATUT -> es nota el debat.
-    ("karl marx", "jewish question"): (
+    # Marx: els estereotips són a la 2a part. obra_substr="" perquè el mateix text
+    # viu tant a "On the Jewish Question" com a "Selected Essays by Karl Marx"; els
+    # disparadors són tots específics del judaisme (no falsegen en altres obres seves).
+    # Cobreix dues traduccions ("secular cult"/"worldly religion of the Jew"). Cas
+    # DEBATUT -> la redacció nota el debat en comptes d'emetre un veredicte.
+    ("karl marx", ""): (
         "CONTINGUT DISCRIMINATORI: en aquesta part l'assaig identifica el judaisme amb "
         "els diners, l'egoisme i el comerç fent servir el vocabulari i els estereotips "
         "antijueus corrents al s. XIX ('els diners són el déu gelós d'Israel'). La "
@@ -110,9 +114,9 @@ DISCRIMINATORY_CONTENT: dict[tuple[str, str], tuple[str, tuple[str, ...] | None]
         "del capitalisme i la societat burgesa —no un atac als jueus com a poble— "
         "(Marx era d'ascendència jueva i la 1a part del text defensa l'emancipació "
         "civil dels jueus). Cal contextualitzar, no avalar.",
-        ("huckstering", "jealous god of israel", "worldly religion of the jew",
-         "worldly god of the jew", "chimerical nationality of the jew",
-         "emancipation of society from judaism"),
+        ("cult of the jew", "religion of the jew", "secular basis of judaism",
+         "jealous god of israel", "chimerical nationality of the jew",
+         "emancipation of society from judaism", "emancipation of mankind from judaism"),
     ),
     # Hume: nota racista a l'assaig 'Of National Characters' (dins les seves col·leccions).
     ("david hume", ""): (
@@ -130,13 +134,16 @@ DISCRIMINATORY_CONTENT: dict[tuple[str, str], tuple[str, tuple[str, ...] | None]
         "pel seu valor historiogràfic, no com a aval.",
         ("negers von afrika", "neger von afrika", "ganz schwarz, ein deutlicher beweis"),
     ),
-    # Schopenhauer: assaig 'On Women' (dins 'Studies in Pessimism'/'Essays').
+    # Schopenhauer: assaig 'On Women' (dins 'Essays'/'Studies in Pessimism'…). Frase
+    # principal verificada al corpus: "the fundamental fault in the character of women
+    # is that they have no 'sense of justice'". S'eviten frases amb cometes internes
+    # (la normalització no les treu i trencarien el match per subcadena).
     ("schopenhauer", ""): (
         "CONTINGUT DISCRIMINATORI: l'assaig 'Sobre les dones' (On Women) sosté la "
         "inferioritat de les dones. Misogínia pròpia del s. XIX; inclosa pel seu valor "
         "historiogràfic, no com a aval.",
-        ("want of sense of justice", "big children all their life",
-         "childish, frivolous, and short-sighted", "the unaesthetic sex"),
+        ("fault in the character of women", "want of sense of justice",
+         "guilty of perjury", "big children", "the unaesthetic sex"),
     ),
 }
 
