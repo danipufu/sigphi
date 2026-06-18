@@ -36,6 +36,10 @@ _SURNAME_STOP = {
     "dead", "war", "world", "life", "good", "soul", "mind", "love", "rights",
     "song", "book", "laws", "gods", "duty", "things", "nature", "state", "man",
     "king", "james",  # "Shi King" (Shijing) i "King James"/nom comú -> falsos positius
+    # Epítets/llocs finals de noms patrístics (no són cognoms distintius): evita que
+    # "Justin Martyr"->"martyr", "Ignatius of Antioch"->"antioch", "Polycarp of
+    # Smyrna"->"smyrna" generin àlies genèrics.
+    "martyr", "antioch", "smyrna",
 }
 
 

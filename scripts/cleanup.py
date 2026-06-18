@@ -27,6 +27,9 @@ REMOVE_AUTHORS = [
     # Ortega y Gasset: mort 1955; sota la regla espanyola de 80 anys pma (TRLPI
     # disposicio transitoria), les seves obres no seran PD a Espanya fins al 2036.
     "Ortega y Gasset",
+    # Nicholas I = un volum SENCER de la Patrologia Latina (PL 119, Migne): compilacio
+    # multi-autor en llati atribuida erroniament a un sol papa. Lot 22 (18 juny 2026).
+    "Nicholas I",
 ]
 
 # Obres concretes a eliminar: (autor, fragment_del_titol). Match per "conte" (LIKE),
@@ -212,6 +215,17 @@ REMOVE_WORKS_CONTAINS = [
     # wikitable |+Volumes of the Works of Aristotle"), 6 chunks, no text filosofic.
     # Es conserven les obres reals (Metaphysics, Nicomachean Ethics, Politics...):
     ("Aristotle", "The Works of Aristotle"),
+
+    # --- Lot 10 (18 juny 2026): bundles multi-autor partits per autor a
+    # download_archive.py SPLIT_TEXTS. Es treuen les OBRES COMBINADES antigues; els
+    # fitxers nous (un per autor) s'ingesten amb add_sacred. ---
+    # Recull de Climent (Chevallier): 75% era Policarp/Ignasi/Justi atribuit a "Clement I".
+    # Fragment unic del titol combinat antic ("...; Polycarp, Ignatius, Justin Martyr"):
+    ("Clement I", "Polycarp, Ignatius"),
+    # Volum NPNF Vol.12: la Regula Pastoralis de Gregori estava sota "Leo I". El titol
+    # combinat antic conte "Regula Pastoralis"; el nou de Lleo ("Letters and Sermons...")
+    # no, i el nou de Gregori va sota "Gregory I":
+    ("Leo I", "Regula Pastoralis"),
 ]
 
 

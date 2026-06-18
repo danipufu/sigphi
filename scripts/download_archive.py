@@ -472,22 +472,10 @@ TEXTS = [
     # --- Lot 20: textos papals patrístics i clàssics (OCR Archive.org; PD) ---
     # Climent I (~96 dC), Lleó I (mort 461), Gregori I (mort 604), Pius V (mort 1572) -> PD.
     # Traduccions del s. XIX: Chevallier 1846, NPNF 1895, Bliss 1844 -> PD.
-    ("TranslationOfTheEpistlesOfClement", "TranslationOfTheEpistlesOfClement_djvu.txt",
-     "Clement I",
-     "Epistola ad Corinthios (1 Clement); Polycarp, Ignatius, Justin Martyr",
-     "English", "Complete work", "Written by the author",
-     "Recull patrístic (Chevallier tr., 1846): 1ª Carta de Climent I als Corintis (~96 dC), "
-     "Epístola de Policarp als Filipencs, Cartes d'Ignaci d'Antioquia i "
-     "1ª Apologia de Justí Màrtir. Pares Apostòlics. OCR.",
-     "Clement_I__Epistola_Corinthios_Apostolic_Fathers_en.txt"),
-    ("LeoTheGreat.GregoryTheGreat", "leo_the_great_gregory_the_great_djvu.txt",
-     "Leo I",
-     "Tractatus Septem et Nonaginta; Tomus ad Flavianum (Leo I); Regula Pastoralis (Gregory I)",
-     "English", "Complete work", "Written by the author",
-     "NPNF 2a sèrie, Vol. 12 (1895): sermons i cartes de Lleó I el Gran "
-     "(incl. Tomus ad Flavianum, definició cristològica del Concili de Calcedònia 451) "
-     "i Regula Pastoralis + epístoles de Gregori I el Gran. Traduccions PD.",
-     "Leo_I__Gregory_I__NPNF_Vol12_en.txt"),
+    # NOTA: els reculls multi-autor del fitxer de Climent (Chevallier: Climent +
+    # Policarp + Ignasi + Justí) i del NPNF Vol.12 (Lleó I + Gregori I) NO van aquí:
+    # es parteixen per autor a SPLIT_TEXTS (vegeu més avall) per no atribuir l'obra
+    # d'un autor a un altre.
     ("moralsonbookofj01greg", "moralsonbookofj01greg_djvu.txt",
      "Gregory I",
      "Moralia in Job (Morals on the Book of Job), Vol. I",
@@ -528,7 +516,11 @@ TEXTS = [
 
     # --- Lot 21: textos papals en llatí (edicions PD) ---
     # Innocenci III (1194-95, com a cardenal Lotario dei Conti) -> PD.
-    # Ed. crít. Achterfeldt 1855: PD. Nicolau I (mort 867) -> PD. PL 119 (Migne, 1852): PD.
+    # Ed. crít. Achterfeldt 1855: PD.
+    # NOTA: Nicolau I / PL 119 (patrologiaecursu0119mign) RETIRAT: un volum de la
+    # Patrologia Latina és una compilació de MOLTS autors, no atribuïble a un sol papa
+    # (atribució incorrecta). La Responsa ad consulta Bulgarorum es pot re-incorporar
+    # més endavant des d'una font d'un sol text. Tret també de la BD via cleanup.py.
     ("decontemptumund00achtgoog", "decontemptumund00achtgoog_djvu.txt",
      "Innocent III",
      "De miseria humanae conditionis (De contemptu mundi)",
@@ -537,15 +529,6 @@ TEXTS = [
      "de la condició humana; un dels textos medievals més difosos. "
      "Ed. crítica J. H. Achterfeldt (Bonn, 1855), text llatí complet. OCR.",
      "Innocent_III__De_miseria_humanae_conditionis_la.txt"),
-    ("patrologiaecursu0119mign", "patrologiaecursu0119mign_djvu.txt",
-     "Nicholas I",
-     "Epistolae et Responsa ad consulta Bulgarorum (Patrologia Latina vol. 119)",
-     "Latin", "Complete work", "Written by the author",
-     "Patrologia Latina vol. 119 (Migne, 1852): conté les epístoles i documents de Nicolau I "
-     "(papa 858-867), incl. el famós 'Responsa Nicolai ad consulta Bulgarorum' (866 dC), "
-     "peça clau del dret canònic medieval i del primat pontifici. "
-     "Text llatí original. OCR.",
-     "Nicholas_I__Epistolae_Responsa_Bulgarorum_PL119_la.txt"),
 
     # --- Lot 22: Reforma Protestant - textos no disponibles a Gutenberg ---
     # Zwingli mort 1531 -> PD. Ed. Jackson 1901 (U. of Pennsylvania): PD.
@@ -569,6 +552,68 @@ TEXTS = [
      "(LWF) el 2015. Inclòs únicament per al seu valor historiogràfic i per a la "
      "comprensió crítica de l'antisemitisme cristià precursor. Trad. anglesa PD. OCR.",
      "Martin_Luther__On_the_Jews_and_Their_Lies_en.txt"),
+]
+
+
+# Fitxers que contenen DIVERSES obres/autors i s'han de PARTIR en fitxers separats
+# (si no, tots els chunks s'atribueixen a un sol autor -> atribució incorrecta).
+# El tall és per MARCADORS DE TEXT (incipits/títols) verificats localment contra el
+# text NET (clean_ocr); com que el VPS baixa el mateix fitxer, el tall és reproduïble.
+# Cada secció va del seu marcador fins al marcador següent (l'última fins a end_marker,
+# o fins al final si és None). El text abans del 1r marcador (front matter editorial)
+# i a partir d'end_marker (índex final) es descarta.
+#   (identifier, djvu, language, end_marker|None,
+#    [ (start_marker, author, work, completeness, authorship, note, out_filename), ... ])
+SPLIT_TEXTS = [
+    # Recull de Chevallier (1846): Climent + Policarp + Ignasi + Justí. Només ~25% és
+    # de Climent; es parteix pels incipits de cada obra (verificats; marcadors únics
+    # en ordre de document; Ignasi reutilitza "Theophorus" a cada carta -> s'agafa la 1a).
+    ("TranslationOfTheEpistlesOfClement", "TranslationOfTheEpistlesOfClement_djvu.txt",
+     "English", "INDEX.", [
+        ("Church of God which is at Rome",
+         "Clement I", "Epistle to the Corinthians (1 Clement)",
+         "Complete work", "Written by the author",
+         "1a Carta de Climent de Roma als Corintis (~96 dC); trad. anglesa de T. Chevallier "
+         "(1846), domini públic. OCR. Separada del recull patrístic original (un sol autor).",
+         "Clement_I__Epistle_to_the_Corinthians_en.txt"),
+        ("Polycarp, and the Presbyters that are with him",
+         "Polycarp", "Epistle to the Philippians",
+         "Complete work", "Written by the author",
+         "Carta de Policarp d'Esmirna als Filipencs (s. II dC); trad. Chevallier (1846), PD. OCR.",
+         "Polycarp__Epistle_to_the_Philippians_en.txt"),
+        ("who is also called Theophorus",
+         "Ignatius of Antioch",
+         "Epistles (Ephesians, Magnesians, Trallians, Romans, Philadelphians, Smyrneans, "
+         "to Polycarp); Martyrdom of Ignatius; Martyrdom of Polycarp",
+         "Complete work", "Written by the author",
+         "Cartes d'Ignasi d'Antioquia (s. II dC) i els relats del martiri d'Ignasi i de "
+         "Policarp (anònims, de la comunitat d'Esmirna); trad. Chevallier (1846), PD. OCR.",
+         "Ignatius_of_Antioch__Epistles_en.txt"),
+        ("FIRST APOLOGY",
+         "Justin Martyr", "First Apology",
+         "Complete work", "Written by the author",
+         "1a Apologia de Justí Màrtir (~155 dC) adreçada a l'emperador Antoní Pius; "
+         "trad. Chevallier (1846), PD. OCR.",
+         "Justin_Martyr__First_Apology_en.txt"),
+     ]),
+    # NPNF 2a sèrie, Vol. 12 (Sage Digital, text net): Lleó I (Feltoe) + Gregori I
+    # (Barmby). Es parteix al títol de la secció de Gregori; sense índex final.
+    ("LeoTheGreat.GregoryTheGreat", "leo_the_great_gregory_the_great_djvu.txt",
+     "English", None, [
+        ("LETTERS AND SERMONS",
+         "Leo I", "Letters and Sermons (incl. the Tome to Flavian)",
+         "Complete work", "Written by the author",
+         "Cartes i sermons de Lleó I el Gran, incl. el Tomus ad Flavianum (base cristològica "
+         "del Concili de Calcedònia, 451); trad. C. L. Feltoe (NPNF 2a sèrie, Vol. 12, 1895), "
+         "PD. OCR. Separat del volum combinat amb Gregori I.",
+         "Leo_I__Letters_and_Sermons_Feltoe_en.txt"),
+        ("BOOK OF PASTORAL RULE",
+         "Gregory I", "The Book of Pastoral Rule and Selected Epistles",
+         "Complete work", "Written by the author",
+         "Regula Pastoralis i epístoles seleccionades de Gregori I el Gran; trad. James Barmby "
+         "(NPNF 2a sèrie, Vol. 12, 1895), PD. OCR. Separat del volum combinat amb Lleó I.",
+         "Gregory_I__Pastoral_Rule_Barmby_en.txt"),
+     ]),
 ]
 
 
@@ -634,6 +679,61 @@ def clean_ocr(text: str) -> str:
     return text.strip()
 
 
+def _write_section(author, work, lang, comp, auth, note, fname, seg) -> bool:
+    dest = CORPUS / fname
+    if dest.exists():
+        print(f"[skip] ja existeix: {fname}")
+        return True
+    if len(seg) < 2000:
+        print(f"   AVÍS: secció curta ({len(seg)} car.) -> {fname}; revisa els marcadors")
+        if not seg:
+            return False
+    header = (
+        "=====SIGPHI=====\n"
+        f"author: {author}\nwork: {work}\nlanguage: {lang}\n"
+        f"completeness: {comp}\nauthorship: {auth}\nnote: {note}\n"
+        "=====\n\n"
+    )
+    dest.write_text(header + seg, encoding="utf-8")
+    print(f"   OK split -> {fname} ({len(seg)//1024} KB)")
+    return True
+
+
+def process_split(ident, djvu, lang, end_marker, sections) -> int:
+    """Baixa un fitxer multi-autor i el parteix en N fitxers (un per autor/obra) pels
+    marcadors de text. Si algun marcador no es troba, NO parteix (evita escriure
+    fitxers mal tallats)."""
+    if all((CORPUS / s[6]).exists() for s in sections):
+        print(f"[skip] split ja fet: {ident}")
+        return len(sections)
+    print(f"[baixant+partint] {ident}...")
+    raw = fetch(ident, djvu)
+    if not raw:
+        return 0
+    body = clean_ocr(raw)
+    starts, cur = [], 0
+    for sec in sections:  # marcadors en ordre de document (cada un després de l'anterior)
+        p = body.find(sec[0], cur)
+        if p == -1:
+            print(f"   ERROR: marcador no trobat {sec[0]!r} a {ident} -> NO es parteix")
+            return 0
+        starts.append(p)
+        cur = p + len(sec[0])
+    if end_marker:
+        e = body.find(end_marker, starts[-1] + 1)
+        last_end = e if e != -1 else len(body)
+    else:
+        last_end = len(body)
+    ok = 0
+    for i, sec in enumerate(sections):
+        _, author, work, comp, auth, note, fname = sec
+        seg_end = starts[i + 1] if i + 1 < len(sections) else last_end
+        seg = body[starts[i]:seg_end].strip()
+        if _write_section(author, work, lang, comp, auth, note, fname, seg):
+            ok += 1
+    return ok
+
+
 def main() -> None:
     CORPUS.mkdir(parents=True, exist_ok=True)
     ok = 0
@@ -660,6 +760,11 @@ def main() -> None:
         print(f"   OK -> {fname} ({len(body)//1024} KB)")
         ok += 1
     print(f"\n{ok}/{len(TEXTS)} textos d'archive.org a punt a corpus/.")
+    nsplit = 0
+    for ident, djvu, lang, end_marker, sections in SPLIT_TEXTS:
+        nsplit += process_split(ident, djvu, lang, end_marker, sections)
+    if SPLIT_TEXTS:
+        print(f"{nsplit} fitxers de SPLIT_TEXTS a punt a corpus/.")
     print("Ara re-ingesta els nous (resumible):  bash deploy/run_ingest.sh")
 
 
