@@ -206,6 +206,17 @@ TEXTS: list[tuple] = [
      "defensa el paper energitzador del mite de la vaga general i la violència com a "
      "força moral de les classes treballadores. Text de Wikisource.",
      "Sorel__Reflexions_sur_la_violence_fr.txt"),
+
+    # === Condorcet ===
+    ("fr", "Esquisse d'un tableau historique des progrès de l'esprit humain",
+     "Condorcet", "Esquisse d'un tableau historique des progrès de l'esprit humain",
+     "French",
+     "Complete work", "Written by the author",
+     "Esbós d'un quadre històric dels progressos de l'esperit humà (1795, pòstum) de "
+     "Condorcet: teoria del progrés indefinit de la humanitat a través de la raó i "
+     "la ciència, redactada mentre l'autor era amagat durant el Terror revolucionari. "
+     "Text de Wikisource.",
+     "Condorcet__Esquisse_progres_esprit_humain_fr.txt"),
 ]
 
 _SKIP_TAGS = {"script", "style", "sup", "table"}

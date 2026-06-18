@@ -3126,5 +3126,42 @@
   "ar": "جيامباتيستا فيكو",
   "hi": "जियाम्बत्तिस्ता विको",
   "ja": "ジャンバッティスタ・ヴィーコ"
+ },
+ "Thomas More": {
+  "en": "Thomas More",
+  "ca": "Tomàs Moro",
+  "es": "Tomás Moro",
+  "fr": "Thomas More",
+  "ru": "Томас Мор",
+  "zh": "托马斯·莫尔",
+  "ar": "توماس مور",
+  "hi": "थॉमस मोर",
+  "de": "Thomas Morus",
+  "ja": "トマス・モア",
+  "it": "Tommaso Moro",
+  "orig": "Thomas More",
+  "w_en": "Utopia",
+  "w_es": "Utopía",
+  "w_ca": "Utopia",
+  "w_fr": "L'Utopie",
+  "w_de": "Utopia",
+  "w_it": "Utopia"
+ },
+ "Condorcet": {
+  "en": "Marquis de Condorcet",
+  "a1": "Condorcet",
+  "ca": "Condorcet",
+  "es": "Condorcet",
+  "fr": "Condorcet",
+  "ru": "Кондорсе",
+  "zh": "孔多塞",
+  "ar": "كوندورسيه",
+  "hi": "कोंडोर्से",
+  "de": "Condorcet",
+  "ja": "コンドルセ",
+  "it": "Condorcet",
+  "orig": "Nicolas de Condorcet",
+  "w_fr": "Esquisse d'un tableau historique des progrès de l'esprit humain",
+  "w_en": "Sketch for a Historical Picture of the Progress of the Human Mind"
  }
 }

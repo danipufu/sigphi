@@ -41,6 +41,8 @@ _SURNAME_STOP = {
     # "Polycarp of Smyrna"->"smyrna", "Anselm of Canterbury"->"canterbury",
     # "Ausiàs March"->"march" (mes de l'any / verb anglès) generin àlies genèrics.
     "martyr", "antioch", "smyrna", "canterbury", "march",
+    # "Thomas More" -> "more" (paraula anglesa molt freqüent -> falsos positius massius)
+    "more",
 }
 
 

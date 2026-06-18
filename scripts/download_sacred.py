@@ -390,6 +390,78 @@ TEXTS = [
      "les cartes tracten la vida monàstica, l'amor, la filosofia i la teologia. "
      "Traducció anglesa de Scott Moncrieff (1925), domini públic.",
      "Abelard__Letters_of_Abelard_and_Heloise_en.txt"),
+
+    # --- Lot 16: Thomas More, William James, Henri Bergson, Alexis de Tocqueville ---
+    (2130, "Thomas More", "Utopia", "English",
+     "Complete work", "Written by the author",
+     "Utopia de Tomàs Moro (1516): diàleg humanista que descriu una societat "
+     "insular ideal governada per la raó; primer gran clàssic de la literatura "
+     "utòpica occidental. Traducció anglesa de Ralph Robynson (1551, revisada), "
+     "domini públic.",
+     "Thomas_More__Utopia_en.txt"),
+
+    (621, "William James", "The Varieties of Religious Experience", "English",
+     "Complete work", "Written by the author",
+     "Les varietats de l'experiència religiosa (1902) de William James: "
+     "conferències Gifford a Edimburg sobre la psicologia i la filosofia de "
+     "l'experiència religiosa individual; obra fundacional de la psicologia de "
+     "la religió i del pluralisme religiós pragmatista.",
+     "William_James__Varieties_of_Religious_Experience_en.txt"),
+
+    (26659, "William James", "The Will to Believe, and Other Essays", "English",
+     "Complete work", "Written by the author",
+     "La voluntat de creure (1897) de William James: col·lecció d'assaigs que "
+     "defensen el dret de creure en absència de proves decisives i exposen el "
+     "criteri pragmatista de la veritat i la seva aplicació a la religió i l'ètica.",
+     "William_James__Will_to_Believe_en.txt"),
+
+    (5116, "William James", "Pragmatism: A New Name for Some Old Ways of Thinking", "English",
+     "Complete work", "Written by the author",
+     "Pragmatisme (1907) de William James: vuit conferències en les quals James "
+     "presenta el pragmatisme com a mètode filosòfic i teoria de la veritat "
+     "(veritable = útil, conseqüent en la pràctica); obra de divulgació filosòfica "
+     "de gran influència.",
+     "William_James__Pragmatism_en.txt"),
+
+    (26163, "Henri Bergson", "Creative Evolution", "English",
+     "Complete work", "Written by the author",
+     "L'evolució creadora (1907) de Henri Bergson: teoria de l'élan vital com a "
+     "força creadora de la vida, crítica del mecanicisme darwinista i del finalisme; "
+     "va contribuir decisivament a obtenir el Premi Nobel de Literatura (1927). "
+     "Traducció anglesa d'Arthur Mitchell (1911), domini públic.",
+     "Henri_Bergson__Creative_Evolution_en.txt"),
+
+    (56852, "Henri Bergson", "Time and Free Will", "English",
+     "Complete work", "Written by the author",
+     "Assaig sobre les dades immediates de la consciència (1889) de Henri Bergson "
+     "(tesi doctoral): distingeix entre temps mesurat (ciència) i durada viscuda "
+     "(consciència), i fonamenta el lliure albir en la irreductibilitat del jo profund. "
+     "Traducció anglesa de F. L. Pogson (1910), domini públic.",
+     "Henri_Bergson__Time_and_Free_Will_en.txt"),
+
+    (4352, "Henri Bergson", "Laughter: An Essay on the Meaning of the Comic", "English",
+     "Complete work", "Written by the author",
+     "El riure (1900) de Henri Bergson: assaig sobre el mecanisme còmic; el riure "
+     "sorgeix quan la rigidesa mecànica substitueix la fluïdesa de la vida; inclou "
+     "la teoria de la comèdia i la seva funció social correctiva. Traducció "
+     "anglesa de C. Brereton i F. Rothwell (1911), domini públic.",
+     "Henri_Bergson__Laughter_en.txt"),
+
+    (815, "Alexis de Tocqueville", "Democracy in America — Volume 1", "English",
+     "Complete work", "Written by the author",
+     "La democràcia a Amèrica, vol. I (1835) d'Alexis de Tocqueville: observació "
+     "directa de les institucions nord-americanes; analitza la igualtat de "
+     "condicions, el jurat, la premsa lliure i els perills de la tirania de la "
+     "majoria. Traducció anglesa de Henry Reeve (1835), domini públic.",
+     "Tocqueville__Democracy_in_America_Vol1_en.txt"),
+
+    (816, "Alexis de Tocqueville", "Democracy in America — Volume 2", "English",
+     "Complete work", "Written by the author",
+     "La democràcia a Amèrica, vol. II (1840) d'Alexis de Tocqueville: efectes "
+     "de la igualtat democràtica sobre el pensament, la literatura, el caràcter "
+     "i els costums; introdueix el concepte de 'despotisme suau'. Traducció "
+     "anglesa de Henry Reeve (1840), domini públic.",
+     "Tocqueville__Democracy_in_America_Vol2_en.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)
