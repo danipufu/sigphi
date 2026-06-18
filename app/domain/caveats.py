@@ -83,6 +83,12 @@ DISCRIMINATORY_CONTENT: dict[tuple[str, str], str] = {
         "subordinació natural de les dones i dels 'bàrbars'. Passatges propis del seu "
         "context (s. IV aC); inclosos pel seu valor historiogràfic, no com a aval."
     ),
+    ("voltaire", "philosophical dictionary"): (
+        "CONTINGUT DISCRIMINATORI: el Diccionari conté entrades —notablement l'article "
+        "'Dels jueus' (Juifs)— amb estereotips i passatges antijueus, a més de polèmica "
+        "despectiva contra altres grups religiosos, propis de la controvèrsia del s. "
+        "XVIII. Inclòs pel seu valor historiogràfic, no com a aval."
+    ),
 }
 
 

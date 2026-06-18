@@ -197,6 +197,21 @@ REMOVE_WORKS_CONTAINS = [
     # les seves cartes. Les seves cartes de preso reals son a "Briefe aus dem
     # Gefangnis" (alemany). Fragment unic: nomes casa amb aquesta entrada.
     ("Rosa Luxemburg", "Liebknecht (Afterword)"),
+
+    # --- Lot 9 (escaneig de falsos positius sobre el cataleg en viu, 18 juny 2026;
+    # tots verificats verbatim via /api/sample) ---
+    # David Hume "...A Linked Index to the Project Gutenberg Ed": fitxer-INDEX de
+    # navegacio de Gutenberg (boilerplate de llicencia + taula de continguts cap als
+    # volums de la History of England), 24 chunks sense prosa. Es conserven els
+    # volums reals ("The History of England, Volume I", etc.):
+    ("David Hume", "Linked Index"),
+    # Denis Diderot "The Great Infidels": NO es de Diderot -> es de Robert G.
+    # Ingersoll (conferencia, 1881), mal atribuida. 101 chunks:
+    ("Denis Diderot", "Great Infidels"),
+    # Aristotle "The Works of Aristotle": pagina-INDEX en wiki-markup ("{| class=
+    # wikitable |+Volumes of the Works of Aristotle"), 6 chunks, no text filosofic.
+    # Es conserven les obres reals (Metaphysics, Nicomachean Ethics, Politics...):
+    ("Aristotle", "The Works of Aristotle"),
 ]
 
 
