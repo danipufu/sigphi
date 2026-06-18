@@ -70,7 +70,7 @@ def format_context(
         if c.language:
             header += f" ({c.language})"
         caveat_parts = []
-        disc = discriminatory_warning(c.author, c.work)
+        disc = discriminatory_warning(c.author, c.work, c.text)
         if disc:
             caveat_parts.append(disc)
         if c.note and c.note != "—":
@@ -85,13 +85,21 @@ def format_context(
 
 def get_sources(retrieved: list[RetrievedChunk]) -> list[str]:
     """Llista de fonts úniques, amb marca ⚠ si fragmentàries/no directes o discriminatòries."""
+    # Obres (autor+títol) amb almenys UN chunk recuperat que dispara l'avís: així la
+    # marca de la font és coherent encara que l'avís sigui a nivell de passatge i els
+    # chunks arribin en qualsevol ordre (la deduplicació per etiqueta no perd el flag).
+    disc_works = {
+        (r.chunk.author, r.chunk.work)
+        for r in retrieved
+        if discriminatory_warning(r.chunk.author, r.chunk.work, r.chunk.text)
+    }
     seen: set[str] = set()
     sources: list[str] = []
     for r in retrieved:
         c = r.chunk
         label = f"{c.author} — {c.work}".strip(" —") if c.author else c.work
         flags = []
-        if discriminatory_warning(c.author, c.work):
+        if (c.author, c.work) in disc_works:
             flags.append("contingut discriminatori")
         if c.note and c.note != "—":
             if c.completeness and c.completeness != "Complete work":

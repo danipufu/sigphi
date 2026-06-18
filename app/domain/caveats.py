@@ -45,49 +45,98 @@ FRAGMENT_TITLE = ["fragment"]
 
 
 # ── Textos amb CONTINGUT DISCRIMINATORI ─────────────────────────────────────
-# Clau: (fragment_autor_norm, fragment_obra_norm); valor: avís a mostrar. El match
-# (caveats.discriminatory_warning) és per SUBCADENA normalitzada: l'autor del chunk
-# ha de contenir la 1a clau I l'obra la 2a (2a clau buida = qualsevol obra d'aquell
-# autor). Manté la redacció mesurada: descriu el contingut + desvinculació, mai
-# judici de valor sobre l'autor.
-# NOTA: la revisió completa obra-per-obra requereix el catàleg en viu (títols i
-# presència reals); aquí només hi ha els casos d'alta confiança. Vegeu la memòria
-# sigphi-corpus-discrimination per als candidats pendents de verificar.
-DISCRIMINATORY_CONTENT: dict[tuple[str, str], str] = {
+# Cada regla: clau (autor_substr, obra_substr) -> valor (avís, triggers).
+# El match d'autor/obra és per SUBCADENA normalitzada (obra_substr = "" -> qualsevol
+# obra d'aquell autor; útil quan l'assaig viu dins una col·lecció gran i el trigger
+# el localitza).
+#   triggers = None  -> NIVELL D'OBRA: avisa a QUALSEVOL chunk de l'obra. Per a textos
+#                       on la discriminació és pervasiva/definitòria de tot el text.
+#   triggers = (...) -> NIVELL DE PASSATGE: només avisa si el TEXT del chunk conté
+#                       alguna de les frases (normalitzades). Evita sobre-avisar quan
+#                       la part discriminatòria és només un capítol/assaig dins una
+#                       obra gran (p. ex. l'esclavitud és al Llibre I de la Política).
+#                       COMPROMÍS: més precís, però si la traducció del corpus difereix
+#                       de les frases pot deixar d'avisar; per això s'hi posen diverses
+#                       variants. Si cap casa, NO avisa.
+# Redacció mesurada: descriu el contingut + desvinculació; en casos DEBATUTS (Marx)
+# es nota el debat en comptes d'emetre un veredicte.
+DISCRIMINATORY_CONTENT: dict[tuple[str, str], tuple[str, tuple[str, ...] | None]] = {
+    # — Nivell d'obra (discriminació pervasiva/definitòria) —
     ("martin luther", "jews"): (
         "CONTINGUT DISCRIMINATORI: tractat violentament antisemita. Luter proposa "
         "cremar sinagogues i expulsar els jueus. Citat per la propaganda nazi. "
         "Repudiat per la Federació Luterana Mundial (LWF, 2015). Inclòs únicament "
-        "per al seu valor historiogràfic."
-    ),
-    ("karl marx", "jewish question"): (
-        "CONTINGUT DISCRIMINATORI: l'assaig conté estereotips antisemites sobre els "
-        "jueus i els diners, típics del discurs del segle XIX. Text fundacional del "
-        "pensament marxista, però amb elements de discurs antisemita."
+        "per al seu valor historiogràfic.",
+        None,
     ),
     ("laws of manu", ""): (
         "CONTINGUT DISCRIMINATORI: codi legal-religiós que estableix la jerarquia de "
         "castes, amb nombroses disposicions que subordinen els xudres, els grups "
         "'intocables' i les dones. Text històric d'estudi; inclòs pel seu valor "
-        "historiogràfic, no com a aval del seu contingut."
-    ),
-    ("aristotle", "politic"): (
-        "CONTINGUT DISCRIMINATORI: l'obra defensa l'esclavitud 'natural' i la "
-        "subordinació natural de les dones i dels 'bàrbars'. Passatges propis del seu "
-        "context (s. IV aC); inclosos pel seu valor historiogràfic, no com a aval."
-    ),
-    # Traduccions angleses antigues de la Política titulen l'obra "A Treatise on
-    # Government" (Ellis): mateix avís, títol alternatiu.
-    ("aristotle", "treatise on government"): (
-        "CONTINGUT DISCRIMINATORI: l'obra defensa l'esclavitud 'natural' i la "
-        "subordinació natural de les dones i dels 'bàrbars'. Passatges propis del seu "
-        "context (s. IV aC); inclosos pel seu valor historiogràfic, no com a aval."
+        "historiogràfic, no com a aval del seu contingut.",
+        None,
     ),
     ("voltaire", "philosophical dictionary"): (
         "CONTINGUT DISCRIMINATORI: el Diccionari conté entrades —notablement l'article "
         "'Dels jueus' (Juifs)— amb estereotips i passatges antijueus, a més de polèmica "
         "despectiva contra altres grups religiosos, propis de la controvèrsia del s. "
-        "XVIII. Inclòs pel seu valor historiogràfic, no com a aval."
+        "XVIII. Inclòs pel seu valor historiogràfic, no com a aval.",
+        None,  # obra multi-tema; frases-disparador fiables encara per verificar
+    ),
+    # — Nivell de passatge (la discriminació és un capítol/assaig localitzat) —
+    # Aristòtil: l'esclavitud 'natural' i la subordinació de les dones són al Llibre I
+    # (no a tota la Política). Frases d'Ellis ("Politics A Treatise on Government") i
+    # Rackham ("Politics EN").
+    ("aristotle", "politic"): (
+        "CONTINGUT DISCRIMINATORI: el Llibre I defensa l'esclavitud 'natural' i la "
+        "subordinació natural de les dones i dels 'bàrbars'. Passatge propi del seu "
+        "context (s. IV aC); inclòs pel seu valor historiogràfic, no com a aval.",
+        ("slave by nature", "slaves by nature", "by nature a slave", "natural slave",
+         "intended by nature to be a slave", "the male is by nature"),
+    ),
+    ("aristotle", "treatise on government"): (
+        "CONTINGUT DISCRIMINATORI: el Llibre I defensa l'esclavitud 'natural' i la "
+        "subordinació natural de les dones i dels 'bàrbars'. Passatge propi del seu "
+        "context (s. IV aC); inclòs pel seu valor historiogràfic, no com a aval.",
+        ("slave by nature", "slaves by nature", "by nature a slave", "natural slave",
+         "intended by nature to be a slave", "the male is by nature"),
+    ),
+    # Marx: els estereotips són a la 2a part. Cas DEBATUT -> es nota el debat.
+    ("karl marx", "jewish question"): (
+        "CONTINGUT DISCRIMINATORI: en aquesta part l'assaig identifica el judaisme amb "
+        "els diners, l'egoisme i el comerç fent servir el vocabulari i els estereotips "
+        "antijueus corrents al s. XIX ('els diners són el déu gelós d'Israel'). La "
+        "lectura n'és debatuda: molts especialistes hi veuen 'judaisme' com a metàfora "
+        "del capitalisme i la societat burgesa —no un atac als jueus com a poble— "
+        "(Marx era d'ascendència jueva i la 1a part del text defensa l'emancipació "
+        "civil dels jueus). Cal contextualitzar, no avalar.",
+        ("huckstering", "jealous god of israel", "worldly religion of the jew",
+         "worldly god of the jew", "chimerical nationality of the jew",
+         "emancipation of society from judaism"),
+    ),
+    # Hume: nota racista a l'assaig 'Of National Characters' (dins les seves col·leccions).
+    ("david hume", ""): (
+        "CONTINGUT DISCRIMINATORI: en una nota de l'assaig 'Of National Characters', "
+        "Hume hi afirma la inferioritat 'natural' dels negres respecte als blancs. "
+        "Afirmació racista pròpia del s. XVIII; inclosa pel seu valor historiogràfic, "
+        "no com a aval.",
+        ("apt to suspect the negroes", "naturally inferior to the whites",
+         "no ingenious manufactures amongst them"),
+    ),
+    # Kant: afirmacions racistes sobre els africans a les 'Beobachtungen' (alemany).
+    ("kant", ""): (
+        "CONTINGUT DISCRIMINATORI: en aquesta obra primerenca (Beobachtungen) Kant fa "
+        "afirmacions racistes sobre els africans. Passatge propi del s. XVIII; inclòs "
+        "pel seu valor historiogràfic, no com a aval.",
+        ("negers von afrika", "neger von afrika", "ganz schwarz, ein deutlicher beweis"),
+    ),
+    # Schopenhauer: assaig 'On Women' (dins 'Studies in Pessimism'/'Essays').
+    ("schopenhauer", ""): (
+        "CONTINGUT DISCRIMINATORI: l'assaig 'Sobre les dones' (On Women) sosté la "
+        "inferioritat de les dones. Misogínia pròpia del s. XIX; inclosa pel seu valor "
+        "historiogràfic, no com a aval.",
+        ("want of sense of justice", "big children all their life",
+         "childish, frivolous, and short-sighted", "the unaesthetic sex"),
     ),
 }
 
@@ -103,12 +152,21 @@ def _match(text, mapping):
     return None
 
 
-def discriminatory_warning(author: str, work: str) -> str | None:
-    """Retorna l'avís de contingut discriminatori si l'autor+obra hi coincideix."""
-    a, w = _norm(author), _norm(work)
-    for (ka, kw), msg in DISCRIMINATORY_CONTENT.items():
+def discriminatory_warning(author: str, work: str, text: str = "") -> str | None:
+    """Retorna l'avís de contingut discriminatori si escau.
+
+    Per a regles a NIVELL D'OBRA (triggers=None) n'hi ha prou que l'autor+obra hi
+    coincideixin. Per a regles a NIVELL DE PASSATGE (triggers=(...)) cal, a més, que
+    el TEXT del chunk contingui alguna frase-disparador (així l'avís només surt quan
+    el fragment recuperat conté realment el passatge discriminatori, no a tota l'obra).
+    """
+    a, w, t = _norm(author), _norm(work), _norm(text)
+    for (ka, kw), (msg, triggers) in DISCRIMINATORY_CONTENT.items():
         if ka in a and kw in w:
-            return msg
+            if triggers is None:
+                return msg
+            if any(trig in t for trig in triggers):
+                return msg
     return None
 
 
