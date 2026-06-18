@@ -3028,5 +3028,35 @@
   "ar": "أولريش زوينغلي",
   "hi": "उलरिक ज्विंगली",
   "orig": "Huldrych Zwingli"
+ },
+ "Juan de la Cruz": {
+  "en": "John of the Cross",
+  "a1": "Juan de la Cruz",
+  "a2": "San Juan de la Cruz",
+  "ca": "Joan de la Creu",
+  "es": "Juan de la Cruz",
+  "fr": "Jean de la Croix",
+  "de": "Johannes vom Kreuz",
+  "it": "Giovanni della Croce",
+  "ru": "Хуан де ла Крус",
+  "zh": "十字若望",
+  "ar": "يوحنا الصليبي",
+  "hi": "क्रूस का जुआन",
+  "ja": "十字架の聖ヨハネ",
+  "orig": "Juan de Yepes Álvarez"
+ },
+ "Georges Sorel": {
+  "en": "Georges Sorel",
+  "a1": "Sorel",
+  "ca": "Georges Sorel",
+  "es": "Georges Sorel",
+  "fr": "Georges Sorel",
+  "de": "Georges Sorel",
+  "it": "Georges Sorel",
+  "ru": "Жорж Сорель",
+  "zh": "乔治·索雷尔",
+  "ar": "جورج سوريل",
+  "hi": "जॉर्ज सोरेल",
+  "ja": "ジョルジュ・ソレル"
  }
 }

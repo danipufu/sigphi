@@ -82,6 +82,80 @@ TEXTS: list[tuple] = [
      "Satis Cognitum (1896, unitat de l'Església) i 26 encíclics més sobre política, "
      "família i doctrina social. Text de Wikisource.",
      "Leo_XIII__Great_Encyclical_Letters_en.txt"),
+
+    # === Juan de la Cruz ===
+    ("es", "Noche oscura del alma",
+     "Juan de la Cruz", "Noche oscura del alma", "Spanish",
+     "Complete work", "Written by the author",
+     "Poema i comentari en prosa de Juan de la Cruz (c. 1578-1584) sobre el camí de "
+     "purificació mística de l'ànima cap a la unió amb Déu. Text de Wikisource.",
+     "Juan_de_la_Cruz__Noche_oscura_del_alma_es.txt"),
+    ("es", "Cántico espiritual",
+     "Juan de la Cruz", "Cántico espiritual", "Spanish",
+     "Complete work", "Written by the author",
+     "Poema místic i comentari en prosa de Juan de la Cruz (c. 1578), al·legoritzant "
+     "la recerca de l'ànima per l'Estimat; inspirat en el Càntic dels Càntics. "
+     "Text de Wikisource.",
+     "Juan_de_la_Cruz__Cantico_espiritual_es.txt"),
+
+    # === Ramon Llull — obres en català de Wikisource ===
+    ("ca", "Libre del gentil e los tres savis",
+     "Ramon Llull", "Libre del gentil e los tres savis", "Catalan",
+     "Complete work", "Written by the author",
+     "Diàleg apologètic de Ramon Llull (c. 1274-1276) en el qual un gentil debat amb "
+     "tres savis de les tres religions abrahamiques. Català medieval. Text de Wikisource.",
+     "Llull__Libre_del_gentil_ca.txt"),
+    ("ca", "Libre de mil proverbis",
+     "Ramon Llull", "Libre de mil proverbis", "Catalan",
+     "Complete work", "Written by the author",
+     "Col·lecció de mil proverbis morals i filosòfics de Ramon Llull (1302). "
+     "Català medieval. Text de Wikisource.",
+     "Llull__Libre_de_mil_proverbis_ca.txt"),
+    ("ca", "Libre de la primera e segona intencio",
+     "Ramon Llull", "Libre de la primera e segona intenció", "Catalan",
+     "Complete work", "Written by the author",
+     "Tractat filosòfic de Ramon Llull sobre la primera intenció (amor a Déu) i la "
+     "segona intenció (bens creats), central en la seva Ars. Català medieval. "
+     "Text de Wikisource.",
+     "Llull__Libre_de_la_primera_intencio_ca.txt"),
+    ("ca", "Llibre d'amic e amat",
+     "Ramon Llull", "Llibre d'amic e amat", "Catalan",
+     "Complete work", "Written by the author",
+     "Apèndix del Blanquerna de Ramon Llull (c. 1283): 366 versicles poètics sobre "
+     "l'amic (l'ànima) i l'Amat (Déu). Joia de la literatura mística catalana medieval. "
+     "Text de Wikisource.",
+     "Llull__Llibre_d_amic_e_amat_ca.txt"),
+
+    # === Rousseau — originals en francès ===
+    ("fr", "Du contrat social",
+     "Rousseau", "Du contrat social (Le contrat social)", "French",
+     "Complete work", "Written by the author",
+     "Tractat de filosofia política de Jean-Jacques Rousseau (1762) que formula la "
+     "teoria de la sobirania popular i el contracte social. Text de Wikisource.",
+     "Rousseau__Du_contrat_social_fr.txt"),
+    ("fr", "Discours sur l'origine et les fondements de l'inégalité parmi les hommes",
+     "Rousseau",
+     "Discours sur l'origine et les fondements de l'inégalité parmi les hommes",
+     "French", "Complete work", "Written by the author",
+     "Segon Discurs de Rousseau (1755): critica la propietat privada i la civilització "
+     "com a origen de la desigualtat humana. Text de Wikisource.",
+     "Rousseau__Discours_sur_l_inegalite_fr.txt"),
+    ("fr", "Discours sur les sciences et les arts",
+     "Rousseau", "Discours sur les sciences et les arts", "French",
+     "Complete work", "Written by the author",
+     "Primer Discurs de Rousseau (1750), premiat per l'Acadèmia de Dijon: argumenta "
+     "que el progrés de les ciències i les arts ha corromput els costums. "
+     "Text de Wikisource.",
+     "Rousseau__Discours_sur_les_sciences_fr.txt"),
+
+    # === Georges Sorel ===
+    ("fr", "Réflexions sur la violence",
+     "Georges Sorel", "Réflexions sur la violence", "French",
+     "Complete work", "Written by the author",
+     "Obra principal de Georges Sorel (1908): teoria sindicalista revolucionària que "
+     "defensa el paper energitzador del mite de la vaga general i la violència com a "
+     "força moral de les classes treballadores. Text de Wikisource.",
+     "Sorel__Reflexions_sur_la_violence_fr.txt"),
 ]
 
 _SKIP_TAGS = {"script", "style", "sup", "table"}
