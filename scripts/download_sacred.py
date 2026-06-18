@@ -319,6 +319,63 @@ TEXTS = [
      "Obra apologètica de Balmes (1842-1844) que compara protestantisme i catolicisme; "
      "original castellà, domini públic. (Volums 1-2 en un sol ebook.)",
      "Jaime_Balmes__El_Protestantismo_comparado_es.txt"),
+
+    # --- Lot 14: Reformadors protestants (Gutenberg PD) ---
+    # Luther mort 1546 -> PD. Traduccions Holman 1915-1916 (PD als EUA).
+    # Calvin mort 1564 -> PD. Trad. Beveridge 1845 (PD als EUA).
+    # Melanchthon mort 1560 -> PD.
+    (31604, "Martin Luther", "Works of Martin Luther, Volume I", "English",
+     "Complete work", "Written by the author",
+     "Obres de Martí Luter vol. I (Holman, Philadelphia, 1915): inclou les 95 Tesis "
+     "(Disputatio, 1517), Tractat del Baptisme (1519), Tractat de les Bones Obres "
+     "(1520), La Papessa a Roma (1520), i altres escrits del període fundacional de "
+     "la Reforma Protestant. Traducció anglesa PD.",
+     "Martin_Luther__Works_Vol_I_en.txt"),
+    (34904, "Martin Luther", "Works of Martin Luther, Volume II", "English",
+     "Complete work", "Written by the author",
+     "Obres de Martí Luter vol. II (Holman, 1916): inclou els tres grans tractats "
+     "del 1520 — la Carta Oberta a la Noblesa Cristiana Alemanya, La Captivitat "
+     "Babilònica de l'Església i Un Tractat sobre la Llibertat Cristiana — més "
+     "els Sermons de Wittenberg (1522). Texts fonamentals de la Reforma. PD.",
+     "Martin_Luther__Works_Vol_II_en.txt"),
+    (273, "Martin Luther", "The Smalcald Articles (1537)", "English",
+     "Complete work", "Written by the author",
+     "Articles de Smalcalda (1537) de Martí Luter: definició luterana ortodoxa "
+     "sobre el primat papal, la missa i els sagraments; redactats per encàrrec "
+     "de l'Elector Joan Frederic de Saxònia. Text confessional fonamental del "
+     "luteranisme. Traducció anglesa PD.",
+     "Martin_Luther__Smalcald_Articles_en.txt"),
+    (1549, "Martin Luther", "Commentary on the Epistle to the Galatians (1535)", "English",
+     "Complete work", "Written by the author",
+     "Comentari de Luter a l'Epístola als Gàlates (1535, ed. definitiva): la seva "
+     "obra teològica més elaborada sobre la justificació per la fe sola (sola fide), "
+     "la distinció llei/gràcia i la llibertat cristiana. Traducció anglesa PD.",
+     "Martin_Luther__Commentary_on_Galatians_en.txt"),
+    (45001, "John Calvin", "Institutes of the Christian Religion, Volume I", "English",
+     "Complete work", "Written by the author",
+     "Institució de la Religió Cristiana de Joan Calví (ed. def. 1559), vol. I "
+     "(Llibres I-II): el coneixement de Déu Creador, l'autoritat de l'Escriptura, "
+     "la Providència, el pecat original i la predestinació. Traducció anglesa "
+     "d'Henry Beveridge (1845), domini públic. Obra mestra de la teologia reformada.",
+     "John_Calvin__Institutes_Vol_I_en.txt"),
+    (64392, "John Calvin", "Institutes of the Christian Religion, Volume II", "English",
+     "Complete work", "Written by the author",
+     "Institució de la Religió Cristiana de Joan Calví, vol. II (Llibres III-IV): "
+     "la fe, la justificació per la gràcia, la predestinació, el govern de l'Església "
+     "i els sagraments. Traducció anglesa d'Henry Beveridge (1845), domini públic.",
+     "John_Calvin__Institutes_Vol_II_en.txt"),
+    (275, "Philip Melanchthon", "The Augsburg Confession (Confessio Augustana, 1530)", "English",
+     "Complete work", "Written by the author",
+     "Confessió d'Augsburg (1530) de Filip Melanchthon: document confessional luterà "
+     "presentat a l'emperador Carles V a la Dieta d'Augsburg; base dogmàtica del "
+     "luteranisme i punt de referència per al diàleg catòlic-protestant. PD.",
+     "Philip_Melanchthon__Augsburg_Confession_en.txt"),
+    (6744, "Philip Melanchthon", "Apology of the Augsburg Confession (1531)", "English",
+     "Complete work", "Written by the author",
+     "Apologia de la Confessió d'Augsburg (1531) de Filip Melanchthon: defensa "
+     "detallada dels 21 articles de la Confessió contra la Confutació Catòlica; "
+     "text doctrinal fonamental del luteranisme primerenc. Traducció anglesa PD.",
+     "Philip_Melanchthon__Apology_Augsburg_Confession_en.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)

@@ -7,6 +7,7 @@ from __future__ import annotations
 import re
 from dataclasses import dataclass
 
+from app.domain.caveats import discriminatory_warning
 from app.domain.interfaces import LLMInterface
 from app.domain.models import RetrievedChunk
 from app.services.prompts import NO_CORPUS_MESSAGE, SYSTEM_PROMPT
@@ -59,27 +60,35 @@ def format_context(retrieved: list[RetrievedChunk]) -> str:
         header = f"Source: {c.author} — {c.work}"
         if c.language:
             header += f" ({c.language})"
+        caveat_parts = []
+        disc = discriminatory_warning(c.author, c.work)
+        if disc:
+            caveat_parts.append(disc)
         if c.note and c.note != "—":
-            header += f"\nCAVEAT: {c.note}"
+            caveat_parts.append(c.note)
+        if caveat_parts:
+            header += f"\nCAVEAT: {' | '.join(caveat_parts)}"
         sections.append(f"[{header}]\n{c.text}")
     return "\n\n---\n\n".join(sections)
 
 
 def get_sources(retrieved: list[RetrievedChunk]) -> list[str]:
-    """Llista de fonts úniques, amb marca ⚠ si són fragmentàries o no directes."""
+    """Llista de fonts úniques, amb marca ⚠ si fragmentàries/no directes o discriminatòries."""
     seen: set[str] = set()
     sources: list[str] = []
     for r in retrieved:
         c = r.chunk
         label = f"{c.author} — {c.work}".strip(" —") if c.author else c.work
+        flags = []
+        if discriminatory_warning(c.author, c.work):
+            flags.append("contingut discriminatori")
         if c.note and c.note != "—":
-            flags = []
             if c.completeness and c.completeness != "Complete work":
                 flags.append(c.completeness.lower())
             if c.authorship and c.authorship != "Written by the author":
                 flags.append(c.authorship.lower())
-            if flags:
-                label += f" [⚠ {'; '.join(flags)}]"
+        if flags:
+            label += f" [⚠ {'; '.join(flags)}]"
         if label not in seen:
             seen.add(label)
             sources.append(label)

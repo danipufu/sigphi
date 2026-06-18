@@ -44,6 +44,23 @@ PARTIAL_TITLE  = ["selection", "selections", "abridg", "extract", "excerpt", "an
 FRAGMENT_TITLE = ["fragment"]
 
 
+# ── Textos amb CONTINGUT DISCRIMINATORI ─────────────────────────────────────
+# Clau: (fragment_autor_norm, fragment_obra_norm); valor: avís a mostrar.
+DISCRIMINATORY_CONTENT: dict[tuple[str, str], str] = {
+    ("martin luther", "jews"): (
+        "CONTINGUT DISCRIMINATORI: tractat violentament antisemita. Luter proposa "
+        "cremar sinagogues i expulsar els jueus. Citat per la propaganda nazi. "
+        "Repudiat per la Federació Luterana Mundial (LWF, 2015). Inclòs únicament "
+        "per al seu valor historiogràfic."
+    ),
+    ("karl marx", "jewish question"): (
+        "CONTINGUT DISCRIMINATORI: l'assaig conté estereotips antisemites sobre els "
+        "jueus i els diners, típics del discurs del segle XIX. Text fundacional del "
+        "pensament marxista, però amb elements de discurs antisemita."
+    ),
+}
+
+
 def _norm(s):
     return re.sub(r'[_\s]+', ' ', (s or '')).strip().lower()
 
@@ -51,6 +68,15 @@ def _norm(s):
 def _match(text, mapping):
     for key, msg in mapping.items():
         if key in text:
+            return msg
+    return None
+
+
+def discriminatory_warning(author: str, work: str) -> str | None:
+    """Retorna l'avís de contingut discriminatori si l'autor+obra hi coincideix."""
+    a, w = _norm(author), _norm(work)
+    for (ka, kw), msg in DISCRIMINATORY_CONTENT.items():
+        if ka in a and kw in w:
             return msg
     return None
 

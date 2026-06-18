@@ -546,6 +546,29 @@ TEXTS = [
      "peça clau del dret canònic medieval i del primat pontifici. "
      "Text llatí original. OCR.",
      "Nicholas_I__Epistolae_Responsa_Bulgarorum_PL119_la.txt"),
+
+    # --- Lot 22: Reforma Protestant - textos no disponibles a Gutenberg ---
+    # Zwingli mort 1531 -> PD. Ed. Jackson 1901 (U. of Pennsylvania): PD.
+    # Luther "On the Jews..." (1543) -> PD. Avís de contingut discriminatori obligatori.
+    ("huldreichzwingli00jackuoft", "huldreichzwingli00jackuoft_djvu.txt",
+     "Ulrich Zwingli",
+     "Selected Works of Huldreich Zwingli (1484-1531)",
+     "English", "Selection / partial", "Written by the author",
+     "Selecció d'obres d'Ulric Zwingli (ed. Samuel Macaulay Jackson, University of "
+     "Pennsylvania, 1901), domini públic; conté texts clau de la Reforma Suïssa "
+     "(escrits sobre reforma eclesiàstica, providència divina, sagraments). OCR.",
+     "Ulrich_Zwingli__Selected_Works_en.txt"),
+    ("OnTheJewsAndTheirLiesMartinLuther1543",
+     "On the Jews and Their Lies, Martin Luther (1543)_djvu.txt",
+     "Martin Luther",
+     "On the Jews and Their Lies (Von den Juden und ihren Lügen, 1543)",
+     "English", "Complete work", "Written by the author",
+     "Tractat antisemita violent de Martí Luter (1543): proposa cremar sinagogues, "
+     "confiscar béns i expulsar els jueus d'Alemanya. Va ser citat directament per "
+     "la propaganda nazi. Repudiat formalment per la Federació Luterana Mundial "
+     "(LWF) el 2015. Inclòs únicament per al seu valor historiogràfic i per a la "
+     "comprensió crítica de l'antisemitisme cristià precursor. Trad. anglesa PD. OCR.",
+     "Martin_Luther__On_the_Jews_and_Their_Lies_en.txt"),
 ]
 
 
