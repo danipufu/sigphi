@@ -148,6 +148,56 @@ TEXTS: list[tuple] = [
      "Text de Wikisource.",
      "Rousseau__Discours_sur_les_sciences_fr.txt"),
 
+    # === Bernat Metge ===
+    ("ca", "Lo somni",
+     "Bernat Metge", "Lo somni (El somni)", "Catalan",
+     "Complete work", "Written by the author",
+     "Diàleg humanista de Bernat Metge (1399) en el qual apareix l'ànima del rei "
+     "Joan I i debaten sobre l'immortalitat de l'ànima, l'amor i la condició "
+     "humana. Obra fundacional de la prosa catalana renaixentista. Text de Wikisource.",
+     "Bernat_Metge__Lo_somni_ca.txt"),
+
+    # === Ausiàs March ===
+    ("ca", "Obras del poeta valenciá Ausias March",
+     "Ausiàs March", "Poesia completa (Obras del poeta valencià Ausiàs March)", "Catalan",
+     "Complete work", "Written by the author",
+     "Corpus poètic complet d'Ausiàs March (c. 1400-1459), cavaller i poeta "
+     "valencià, mestre de la lírica catalana medieval. Poesia amorosa, moral i de "
+     "mort en llengua valenciana medieval. Text de Wikisource.",
+     "Ausias_March__Poesia_ca.txt"),
+
+    # === Anselm de Canterbury ===
+    ("fr", "Proslogion",
+     "Anselm of Canterbury", "Proslogion (Discours sur l'existence de Dieu)", "French",
+     "Complete work", "Written by the author",
+     "Tractat d'Anselm de Canterbury (1077-1078) que formula l'argument ontològic "
+     "per a l'existència de Déu ('allò que no es pot concebre com a major'). "
+     "Traducció francesa de domini públic. Text de Wikisource.",
+     "Anselm__Proslogion_fr.txt"),
+
+    # === Giambattista Vico — La scienza nuova (3 volums, italià) ===
+    ("it", "La scienza nuova - Volume I",
+     "Giambattista Vico", "La scienza nuova — Volume I", "Italian",
+     "Complete work", "Written by the author",
+     "Primer volum de la Scienza Nuova de Giambattista Vico (3a ed., 1744): "
+     "la teoria dels tres cicles de la civilització (dels déus, dels herois i dels "
+     "homes) i els principis de la ciència nova de la història. Original italià. "
+     "Text de Wikisource.",
+     "Vico__Scienza_nuova_I_it.txt"),
+    ("it", "La scienza nuova - Volume II",
+     "Giambattista Vico", "La scienza nuova — Volume II", "Italian",
+     "Complete work", "Written by the author",
+     "Segon volum de la Scienza Nuova de Giambattista Vico (3a ed., 1744). "
+     "Original italià. Text de Wikisource.",
+     "Vico__Scienza_nuova_II_it.txt"),
+    ("it", "La scienza nuova - Volume III",
+     "Giambattista Vico", "La scienza nuova — Volume III", "Italian",
+     "Complete work", "Written by the author",
+     "Tercer volum de la Scienza Nuova de Giambattista Vico (3a ed., 1744): "
+     "conclou la teoria del corsi e ricorsi i aplica els principis al dret romà. "
+     "Original italià. Text de Wikisource.",
+     "Vico__Scienza_nuova_III_it.txt"),
+
     # === Georges Sorel ===
     ("fr", "Réflexions sur la violence",
      "Georges Sorel", "Réflexions sur la violence", "French",

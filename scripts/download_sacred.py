@@ -376,6 +376,20 @@ TEXTS = [
      "detallada dels 21 articles de la Confessió contra la Confutació Catòlica; "
      "text doctrinal fonamental del luteranisme primerenc. Traducció anglesa PD.",
      "Philip_Melanchthon__Apology_Augsburg_Confession_en.txt"),
+
+    # --- Lot 15: medievals i renaixentistes (Gutenberg PD) ---
+    (14268, "Peter Abelard", "Historia Calamitatum (The Story of My Misfortunes)", "English",
+     "Complete work", "Written by the author",
+     "Autobiografia epistolar de Pere Abelard (c. 1132) en la qual narra la seva "
+     "vida intel·lectual, la relació amb Heloïsa i les seves persecucions. "
+     "Traducció anglesa de Henry Adams Bellows (1922), domini públic.",
+     "Abelard__Historia_Calamitatum_en.txt"),
+    (35977, "Peter Abelard", "Letters of Abelard and Heloise", "English",
+     "Complete work", "Written by the author",
+     "Correspondència entre Pere Abelard i Heloïsa d'Argenteuil (s. XII): "
+     "les cartes tracten la vida monàstica, l'amor, la filosofia i la teologia. "
+     "Traducció anglesa de Scott Moncrieff (1925), domini públic.",
+     "Abelard__Letters_of_Abelard_and_Heloise_en.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)

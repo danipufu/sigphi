@@ -3058,5 +3058,73 @@
   "ar": "جورج سوريل",
   "hi": "जॉर्ज सोरेल",
   "ja": "ジョルジュ・ソレル"
+ },
+ "Bernat Metge": {
+  "en": "Bernat Metge",
+  "a1": "Metge",
+  "ca": "Bernat Metge",
+  "es": "Bernardo Metge",
+  "fr": "Bernat Metge",
+  "de": "Bernat Metge",
+  "it": "Bernat Metge",
+  "orig": "Bernat Metge"
+ },
+ "Ausiàs March": {
+  "en": "Ausias March",
+  "a1": "Ausiàs March",
+  "a2": "Ausias March",
+  "ca": "Ausiàs March",
+  "es": "Ausiàs March",
+  "fr": "Ausiàs March",
+  "de": "Ausiàs March",
+  "it": "Ausiàs March",
+  "orig": "Ausiàs March"
+ },
+ "Anselm of Canterbury": {
+  "en": "Anselm of Canterbury",
+  "a1": "Saint Anselm",
+  "a2": "Anselm of Aosta",
+  "ca": "Anselm de Canterbury",
+  "es": "Anselmo de Canterbury",
+  "fr": "Anselme de Canterbury",
+  "de": "Anselm von Canterbury",
+  "it": "Anselmo d'Aosta",
+  "la": "Anselmus Cantuariensis",
+  "ru": "Ансельм Кентерберийский",
+  "zh": "坎特伯雷的安瑟伦",
+  "ar": "أنسلم الكنتربيري",
+  "hi": "कैंटरबरी के अन्सेल्म",
+  "ja": "カンタベリーのアンセルムス"
+ },
+ "Peter Abelard": {
+  "en": "Peter Abelard",
+  "a1": "Abelard",
+  "a2": "Pierre Abélard",
+  "a3": "Abelardus",
+  "ca": "Pere Abelard",
+  "es": "Pedro Abelardo",
+  "fr": "Pierre Abélard",
+  "de": "Peter Abälard",
+  "it": "Pietro Abelardo",
+  "la": "Petrus Abaelardus",
+  "ru": "Пьер Абеляр",
+  "zh": "彼得·阿伯拉尔",
+  "ar": "بيتر أبيلار",
+  "hi": "पीटर अबेलार्ड",
+  "ja": "ピエール・アベラール"
+ },
+ "Giambattista Vico": {
+  "en": "Giambattista Vico",
+  "a1": "Vico",
+  "ca": "Giambattista Vico",
+  "es": "Giambattista Vico",
+  "fr": "Giambattista Vico",
+  "de": "Giambattista Vico",
+  "it": "Giambattista Vico",
+  "ru": "Джамбаттиста Вико",
+  "zh": "詹巴蒂斯塔·维科",
+  "ar": "جيامباتيستا فيكو",
+  "hi": "जियाम्बत्तिस्ता विको",
+  "ja": "ジャンバッティスタ・ヴィーコ"
  }
 }
