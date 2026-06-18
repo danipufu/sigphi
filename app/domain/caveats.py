@@ -45,7 +45,14 @@ FRAGMENT_TITLE = ["fragment"]
 
 
 # ── Textos amb CONTINGUT DISCRIMINATORI ─────────────────────────────────────
-# Clau: (fragment_autor_norm, fragment_obra_norm); valor: avís a mostrar.
+# Clau: (fragment_autor_norm, fragment_obra_norm); valor: avís a mostrar. El match
+# (caveats.discriminatory_warning) és per SUBCADENA normalitzada: l'autor del chunk
+# ha de contenir la 1a clau I l'obra la 2a (2a clau buida = qualsevol obra d'aquell
+# autor). Manté la redacció mesurada: descriu el contingut + desvinculació, mai
+# judici de valor sobre l'autor.
+# NOTA: la revisió completa obra-per-obra requereix el catàleg en viu (títols i
+# presència reals); aquí només hi ha els casos d'alta confiança. Vegeu la memòria
+# sigphi-corpus-discrimination per als candidats pendents de verificar.
 DISCRIMINATORY_CONTENT: dict[tuple[str, str], str] = {
     ("martin luther", "jews"): (
         "CONTINGUT DISCRIMINATORI: tractat violentament antisemita. Luter proposa "
@@ -57,6 +64,24 @@ DISCRIMINATORY_CONTENT: dict[tuple[str, str], str] = {
         "CONTINGUT DISCRIMINATORI: l'assaig conté estereotips antisemites sobre els "
         "jueus i els diners, típics del discurs del segle XIX. Text fundacional del "
         "pensament marxista, però amb elements de discurs antisemita."
+    ),
+    ("laws of manu", ""): (
+        "CONTINGUT DISCRIMINATORI: codi legal-religiós que estableix la jerarquia de "
+        "castes, amb nombroses disposicions que subordinen els xudres, els grups "
+        "'intocables' i les dones. Text històric d'estudi; inclòs pel seu valor "
+        "historiogràfic, no com a aval del seu contingut."
+    ),
+    ("aristotle", "politic"): (
+        "CONTINGUT DISCRIMINATORI: l'obra defensa l'esclavitud 'natural' i la "
+        "subordinació natural de les dones i dels 'bàrbars'. Passatges propis del seu "
+        "context (s. IV aC); inclosos pel seu valor historiogràfic, no com a aval."
+    ),
+    # Traduccions angleses antigues de la Política titulen l'obra "A Treatise on
+    # Government" (Ellis): mateix avís, títol alternatiu.
+    ("aristotle", "treatise on government"): (
+        "CONTINGUT DISCRIMINATORI: l'obra defensa l'esclavitud 'natural' i la "
+        "subordinació natural de les dones i dels 'bàrbars'. Passatges propis del seu "
+        "context (s. IV aC); inclosos pel seu valor historiogràfic, no com a aval."
     ),
 }
 

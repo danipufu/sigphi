@@ -64,6 +64,9 @@ class Settings(BaseSettings):
     # === Aliases multilingües (12 idiomes + original) ===
     aliases_path: Path = Path("./app/data/authors_aliases.json")
 
+    # === Biografies/notes d'origen per autor (context editorial, NO citable) ===
+    biographies_path: Path = Path("./app/data/biographies.json")
+
     # === Retrieval ===
     top_k: int = 15
 

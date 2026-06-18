@@ -10,6 +10,7 @@ from dataclasses import dataclass
 from app.domain.caveats import discriminatory_warning
 from app.domain.interfaces import LLMInterface
 from app.domain.models import RetrievedChunk
+from app.services.biographies import background_block
 from app.services.prompts import NO_CORPUS_MESSAGE, SYSTEM_PROMPT
 from app.services.retrieval import RetrievalService
 
@@ -52,11 +53,19 @@ class ChatResult:
     retrieved: list[RetrievedChunk]
 
 
-def format_context(retrieved: list[RetrievedChunk]) -> str:
-    """Munta el context per al LLM, amb capçalera i CAVEAT per bloc."""
+def format_context(
+    retrieved: list[RetrievedChunk], bios: dict[str, str] | None = None
+) -> str:
+    """Munta el context per al LLM, amb capçalera i CAVEAT per bloc.
+
+    Si hi ha biografies, s'anteposa un bloc de REREFONS d'autor (context editorial
+    no citable) per als autors presents, abans de les fonts primàries."""
     sections = []
+    authors: list[str] = []
     for r in retrieved:
         c = r.chunk
+        if c.author and c.author not in authors:
+            authors.append(c.author)
         header = f"Source: {c.author} — {c.work}"
         if c.language:
             header += f" ({c.language})"
@@ -69,7 +78,9 @@ def format_context(retrieved: list[RetrievedChunk]) -> str:
         if caveat_parts:
             header += f"\nCAVEAT: {' | '.join(caveat_parts)}"
         sections.append(f"[{header}]\n{c.text}")
-    return "\n\n---\n\n".join(sections)
+    body = "\n\n---\n\n".join(sections)
+    bg = background_block(authors, bios or {})
+    return f"{bg}\n\n=====\n\n{body}" if bg else body
 
 
 def get_sources(retrieved: list[RetrievedChunk]) -> list[str]:
@@ -101,10 +112,12 @@ class ChatService:
         llm: LLMInterface,
         retrieval: RetrievalService,
         max_history: int = 5,
+        biographies: dict[str, str] | None = None,
     ) -> None:
         self._llm = llm
         self._retrieval = retrieval
         self._max_history = max_history
+        self._bios = biographies or {}
 
     def answer(
         self,
@@ -124,7 +137,7 @@ class ChatService:
         retrieved = self._retrieval.retrieve(retrieval_query)
         if not retrieved:
             return ChatResult(answer=NO_CORPUS_MESSAGE, sources=[], retrieved=[])
-        context = format_context(retrieved)
+        context = format_context(retrieved, self._bios)
         hist = (history or [])[-self._max_history :]
         text = self._llm.generate(SYSTEM_PROMPT, query, context, hist)
         # Si l'LLM marca que NO ha fet servir les fonts (salutació, meta, regla

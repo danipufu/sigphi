@@ -27,6 +27,7 @@ from app.infrastructure.chunk_store import ChunkStore
 from app.infrastructure.embedder import SentenceTransformersEmbedder
 from app.infrastructure.llm import GeminiLLM
 from app.infrastructure.vector_db import build_vector_db
+from app.services.biographies import load_biographies
 from app.services.chat import ChatService
 from app.services.retrieval import RetrievalService
 
@@ -39,10 +40,11 @@ async def lifespan(app: FastAPI):
     vector_db = build_vector_db(s, chunk_store=chunk_store)
     llm = GeminiLLM(s.google_api_key, model=s.gemini_model)
     retrieval = RetrievalService(embedder, vector_db, s.aliases_path, top_k=s.top_k)
+    bios = load_biographies(s.biographies_path)
 
     app.state.chunk_store = chunk_store
     app.state.vector_db = vector_db
-    app.state.chat_service = ChatService(llm, retrieval)
+    app.state.chat_service = ChatService(llm, retrieval, biographies=bios)
     yield
     chunk_store.close()
 
