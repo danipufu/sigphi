@@ -50,7 +50,11 @@
   "de": "Alexis de Tocqueville",
   "ja": "アレクシ・ド・トクヴィル",
   "it": "Alexis de Tocqueville",
-  "orig": "Alexis de Tocqueville"
+  "orig": "Alexis de Tocqueville",
+  "w_en": "Democracy in America",
+  "w_fr": "De la Démocratie en Amérique",
+  "w_es": "La democracia en América",
+  "w_ca": "La democràcia a Amèrica"
  },
  "Aristotle": {
   "en": "Aristotle",
@@ -1727,7 +1731,9 @@
   "w_en": "The Varieties of Religious Experience",
   "w_es": "Las variedades de la experiencia religiosa",
   "wb_en": "The Will to Believe",
-  "wb_es": "La voluntad de creer"
+  "wb_es": "La voluntad de creer",
+  "wp_en": "Pragmatism",
+  "wpp_en": "The Principles of Psychology"
  },
  "William of Ockham": {
   "en": "William of Ockham",

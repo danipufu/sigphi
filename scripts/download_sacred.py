@@ -462,6 +462,53 @@ TEXTS = [
      "i els costums; introdueix el concepte de 'despotisme suau'. Traducció "
      "anglesa de Henry Reeve (1840), domini públic.",
      "Tocqueville__Democracy_in_America_Vol2_en.txt"),
+
+    # --- Lot 17: originals en francès de Tocqueville + Principles of Psychology de James ---
+    (30513, "Alexis de Tocqueville",
+     "De la Démocratie en Amérique, tome premier", "French",
+     "Complete work", "Written by the author",
+     "La democràcia a Amèrica, tom I (1835) en el text original francès de "
+     "Tocqueville: primer volum de quatre, sobre les institucions locals, el "
+     "sistema judicial i el perill de tirania de la majoria.",
+     "Tocqueville__Democratie_en_Amerique_t1_fr.txt"),
+
+    (30514, "Alexis de Tocqueville",
+     "De la Démocratie en Amérique, tome deuxième", "French",
+     "Complete work", "Written by the author",
+     "La democràcia a Amèrica, tom II (1835) en el text original francès: "
+     "continua l'anàlisi de les institucions polítiques i socials americanes.",
+     "Tocqueville__Democratie_en_Amerique_t2_fr.txt"),
+
+    (30515, "Alexis de Tocqueville",
+     "De la Démocratie en Amérique, tome troisième", "French",
+     "Complete work", "Written by the author",
+     "La democràcia a Amèrica, tom III (1840) en el text original francès: "
+     "efectes de la igualtat sobre els costums, la vida intel·lectual i les arts.",
+     "Tocqueville__Democratie_en_Amerique_t3_fr.txt"),
+
+    (30516, "Alexis de Tocqueville",
+     "De la Démocratie en Amérique, tome quatrième", "French",
+     "Complete work", "Written by the author",
+     "La democràcia a Amèrica, tom IV (1840) en el text original francès: "
+     "efectes de la igualtat sobre el caràcter, la política i el perill del "
+     "despotisme suau.",
+     "Tocqueville__Democratie_en_Amerique_t4_fr.txt"),
+
+    (57628, "William James",
+     "The Principles of Psychology, Volume 1 (of 2)", "English",
+     "Complete work", "Written by the author",
+     "Els principis de la psicologia (1890) de William James, vol. I: obra "
+     "fundacional de la psicologia científica nord-americana; tracta la consciència "
+     "com a flux (stream of consciousness), les emocions, l'hàbit i la percepció.",
+     "William_James__Principles_of_Psychology_Vol1_en.txt"),
+
+    (57634, "William James",
+     "The Principles of Psychology, Volume 2 (of 2)", "English",
+     "Complete work", "Written by the author",
+     "Els principis de la psicologia (1890) de William James, vol. II: continua "
+     "l'anàlisi de la memòria, la imaginació, la raó, les instints i la voluntat; "
+     "conclou amb el capítol sobre el necessarisme i l'esforç.",
+     "William_James__Principles_of_Psychology_Vol2_en.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)
