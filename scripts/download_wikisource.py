@@ -217,6 +217,18 @@ TEXTS: list[tuple] = [
      "la ciència, redactada mentre l'autor era amagat durant el Terror revolucionari. "
      "Text de Wikisource.",
      "Condorcet__Esquisse_progres_esprit_humain_fr.txt"),
+
+    # === Aristòtil: De Anima (reemplaça la versió Perseus que contenia els Ocells
+    # d'Aristòfanes). Traducció anglesa de Charles Collier (1855), domini públic.
+    # Wikisource conté els 3 llibres complets en subpàgines Book_1/Chapter_N etc. ===
+    ("en", "On the Vital Principle",
+     "Aristotle", "De Anima (On the Soul)", "English",
+     "Complete work", "Written by the author",
+     "De Anima (Sobre l'ànima) d'Aristòtil: els tres llibres sobre les facultats "
+     "vegetativa, sensitiva i intel·lectiva de l'ànima; traducció anglesa de Charles "
+     "Collier (1855), domini públic. Substitueix un fitxer Perseus corrupte. "
+     "Text de Wikisource.",
+     "Aristotle__De_Anima_en.txt"),
 ]
 
 _SKIP_TAGS = {"script", "style", "sup", "table"}
