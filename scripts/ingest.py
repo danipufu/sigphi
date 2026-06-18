@@ -69,16 +69,39 @@ def parse_header(text: str) -> tuple[dict, str]:
 # Plató-). Sempre és DINS els crèdits inicials, abans del cos de l'obra.
 _PERSEUS_LICENSE_ANCHOR = "You offer Perseus any modifications you make."
 
+# Patró CVS/RCS $Log: blocks (historial de revisió del XML de Perseus Digital Library).
+# Formats: "$Log: fitxer.xml,v $\nRevision X.Y  YYYY/MM/DD...\n...\n$\n"
+# Aquests blocs estan escampats pel cos del text (no al front-matter) i generen
+# soroll massiu als embeddings: dates, usernames, missatges de commit en anglès.
+_CVS_LOG_RE = re.compile(
+    r"\$Log:[^\n]*\n"        # línia inicial: $Log: fitxer.xml,v $
+    r"(?:.*\n)*?"            # qualsevol nombre de línies (lazy)
+    r"\$[ \t]*\n",           # línia final: $ solitari
+    re.MULTILINE,
+)
+
+
+def _strip_cvs_logs(text: str) -> str:
+    """Elimina blocs $Log: ... $ d'historial CVS/RCS (artefactes de Perseus XML)."""
+    cleaned = _CVS_LOG_RE.sub("", text)
+    # Neteja línies soltes que puguin quedar: "$ " o "$\n" sense context de bloc
+    cleaned = re.sub(r"^\$[ \t]*$", "", cleaned, flags=re.MULTILINE)
+    # Col·lapsa triples (o més) línies en blanc a doble salt de línia
+    cleaned = re.sub(r"\n{3,}", "\n\n", cleaned)
+    return cleaned
+
 
 def strip_perseus_frontmatter(body: str) -> str:
-    """Treu el front-matter de crèdits de Perseus tallant fins a la línia de
-    llicència inclosa. És SEGUR per construcció: l'àncora viu sempre als crèdits
-    inicials (mai dins l'obra), així que no s'elimina cap text real. Si no hi ha
-    àncora (text no-Perseus), retorna el cos intacte. Idempotent."""
+    """Treu el front-matter de crèdits de Perseus + blocs CVS $Log: del cos.
+
+    L'àncora de llicència viu sempre als crèdits inicials (mai dins l'obra), de
+    manera que tallar-ne el principi és segur. Els blocs $Log: CVS estan escampats
+    pel cos i generen soroll als embeddings; _strip_cvs_logs els elimina. Si no hi ha
+    àncora (text no-Perseus), s'aplica igualment el strip CVS per si de cas. Idempotent."""
     idx = body.find(_PERSEUS_LICENSE_ANCHOR)
-    if idx == -1:
-        return body
-    return body[idx + len(_PERSEUS_LICENSE_ANCHOR):].lstrip("\n").lstrip()
+    if idx != -1:
+        body = body[idx + len(_PERSEUS_LICENSE_ANCHOR):].lstrip("\n").lstrip()
+    return _strip_cvs_logs(body)
 
 
 def split_text(text: str, size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list[str]:
