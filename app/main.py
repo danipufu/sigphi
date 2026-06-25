@@ -395,32 +395,35 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
                 {"role": "assistant", "content": md},
             ], suggestions
 
-        # Exemples PROPIS (botons): amb @gr.render(triggers=[demo.load]) es recreen
-        # N_EXAMPLES a l'atzar A CADA CÀRREGA -> varien a cada refresc.
-        @gr.render(triggers=[demo.load])
-        def _render_examples():
-            with gr.Row(elem_id="sigphi-examples"):
-                for q in random.sample(EXAMPLE_POOL_EN, N_EXAMPLES):
-                    gr.Button(q, size="sm", elem_classes="sigphi-ex").click(
-                        _run_question,
-                        inputs=[gr.State(q), ci.chatbot],
-                        outputs=[ci.chatbot, suggestions_state],
-                    )
+        # Chips sota el xat. UN sol render decideix QUÈ mostrar segons l'estat:
+        #   - conversa NO començada -> N_EXAMPLES exemples a l'atzar (varien a cada
+        #     càrrega de pàgina);
+        #   - hi ha preguntes suggerides (regla 21) -> les mostra a ELLES (els
+        #     exemples desapareixen);
+        #   - conversa començada però sense suggeriments (salutació, out-of-corpus…)
+        #     -> cap chip.
+        # Clicar un chip llança la pregunta i genera els suggeriments següents
+        # -> bucle d'exploració. Es dispara al carregar i quan canvien xat/suggeriments.
+        def _chip(question: str, elem_class: str) -> None:
+            gr.Button(question, size="sm", elem_classes=elem_class).click(
+                _run_question,
+                inputs=[gr.State(question), ci.chatbot],
+                outputs=[ci.chatbot, suggestions_state],
+            )
 
-        # Preguntes suggerides (regla 21): chips de seguiment SOTA la resposta. Es
-        # recreen cada cop que suggestions_state canvia; clicar-ne un llança la
-        # pregunta (i genera els suggeriments següents -> bucle d'exploració).
-        @gr.render(inputs=[suggestions_state], triggers=[suggestions_state.change])
-        def _render_suggestions(suggestions):
-            if not suggestions:
-                return
-            with gr.Row(elem_id="sigphi-suggestions"):
-                for q in suggestions:
-                    gr.Button(q, size="sm", elem_classes="sigphi-sugg").click(
-                        _run_question,
-                        inputs=[gr.State(q), ci.chatbot],
-                        outputs=[ci.chatbot, suggestions_state],
-                    )
+        @gr.render(
+            inputs=[suggestions_state, ci.chatbot],
+            triggers=[demo.load, suggestions_state.change, ci.chatbot.change],
+        )
+        def _render_chips(suggestions, history):
+            if suggestions:
+                with gr.Row(elem_id="sigphi-suggestions"):
+                    for q in suggestions:
+                        _chip(q, "sigphi-sugg")
+            elif not history:  # conversa encara no començada -> exemples inicials
+                with gr.Row(elem_id="sigphi-examples"):
+                    for q in random.sample(EXAMPLE_POOL_EN, N_EXAMPLES):
+                        _chip(q, "sigphi-ex")
 
         footer = gr.HTML(_footer_html("Català"))
 
