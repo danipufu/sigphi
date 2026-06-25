@@ -1,0 +1,198 @@
+[
+  {
+    "id": "seneca-death-ca",
+    "query": "Què deia Sèneca sobre la mort?",
+    "lang": "ca",
+    "expect": "cited",
+    "must_mention": ["Seneca"],
+    "expect_suggestions": true,
+    "note": "Tema filosòfic central; ha de citar Sèneca i oferir seguiments."
+  },
+  {
+    "id": "aristotle-virtue-en",
+    "query": "What is Aristotle's view of virtue and the golden mean?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": ["Aristotle"],
+    "expect_suggestions": true
+  },
+  {
+    "id": "nietzsche-morality-es",
+    "query": "¿Qué pensaba Nietzsche sobre la moral y los valores?",
+    "lang": "es",
+    "expect": "cited",
+    "must_mention": ["Nietzsche"],
+    "expect_suggestions": true
+  },
+  {
+    "id": "kant-categorical-ca",
+    "query": "Què és l'imperatiu categòric de Kant?",
+    "lang": "ca",
+    "expect": "cited",
+    "must_mention": ["Kant"],
+    "expect_suggestions": true
+  },
+  {
+    "id": "meaning-of-life-ca",
+    "query": "Quin és el sentit de la vida segons els filòsofs?",
+    "lang": "ca",
+    "expect": "cited",
+    "must_mention": [],
+    "expect_suggestions": true,
+    "note": "Pregunta àmplia (regla 3): NO ha de refusar, ha de sintetitzar i citar."
+  },
+  {
+    "id": "marcus-aurelius-en",
+    "query": "What does Marcus Aurelius say about controlling our reactions?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": ["Marcus Aurelius"],
+    "expect_suggestions": true
+  },
+  {
+    "id": "compare-plato-aristotle-soul-ca",
+    "query": "Compara la visió de l'ànima de Plató i d'Aristòtil.",
+    "lang": "ca",
+    "expect": "cited",
+    "must_mention": ["Plato", "Aristotle"],
+    "expect_suggestions": true,
+    "note": "Regla 6: estructura comparativa multi-autor, cada posició atribuïda."
+  },
+  {
+    "id": "five-pillars-en",
+    "query": "What are the five pillars of Islam?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": [],
+    "expect_suggestions": true,
+    "note": "Regla 16: sintetitzar els elements encara que el corpus no usi l'etiqueta."
+  },
+  {
+    "id": "stoic-fate-en",
+    "query": "How did the Stoics understand fate and acceptance?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": [],
+    "expect_suggestions": true
+  },
+  {
+    "id": "marx-alienation-ca",
+    "query": "Què és l'alienació segons Marx?",
+    "lang": "ca",
+    "expect": "cited",
+    "must_mention": ["Marx"],
+    "expect_suggestions": true
+  },
+  {
+    "id": "luther-jews-caveat-ca",
+    "query": "Què escrivia Luther sobre els jueus?",
+    "lang": "ca",
+    "expect": "cited",
+    "must_mention": ["Luther"],
+    "must_include": ["⚠"],
+    "expect_suggestions": true,
+    "note": "Regla 17: AVÍS de contingut discriminatori obligatori abans de res."
+  },
+  {
+    "id": "epictetus-control-en",
+    "query": "What is within our control according to Epictetus?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": ["Epictetus"],
+    "expect_suggestions": true,
+    "note": "Regla 9: avisar que Epictet no va escriure res (recollit per Arrià)."
+  },
+  {
+    "id": "confucius-virtue-en",
+    "query": "What does Confucius teach about virtue and the gentleman?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": ["Confucius"],
+    "expect_suggestions": true
+  },
+  {
+    "id": "hegel-history-ca",
+    "query": "Com entenia Hegel la història?",
+    "lang": "ca",
+    "expect": "cited",
+    "must_mention": ["Hegel"],
+    "expect_suggestions": true,
+    "note": "Text NOU (Filosofia de la Història): comprova que s'ha ingerit i es recupera."
+  },
+  {
+    "id": "aquinas-god-en",
+    "query": "What are Aquinas's arguments for the existence of God?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": ["Aquinas"],
+    "expect_suggestions": true,
+    "note": "Text NOU (Summa Contra Gentiles)."
+  },
+  {
+    "id": "holdings-plato-ca",
+    "query": "Tens textos de Plató?",
+    "lang": "ca",
+    "expect": "no_sources",
+    "note": "Regla 14: pregunta de holdings -> NO_SOURCES, sense llistar fonts ni suggeriments."
+  },
+  {
+    "id": "holdings-heidegger-en",
+    "query": "Do you have any texts by Heidegger?",
+    "lang": "en",
+    "expect": "no_sources",
+    "note": "Regla 14 (holdings) + Heidegger absent del corpus."
+  },
+  {
+    "id": "out-of-corpus-heidegger-en",
+    "query": "What did Heidegger say about Being and Dasein?",
+    "lang": "en",
+    "expect": "no_sources",
+    "note": "Regla 20: autor absent -> missatge fora de corpus, sense fonts ni suggeriments."
+  },
+  {
+    "id": "out-of-corpus-foucault-es",
+    "query": "¿Qué decía Foucault sobre el poder y la disciplina?",
+    "lang": "es",
+    "expect": "no_sources",
+    "note": "Regla 20: Foucault absent del corpus."
+  },
+  {
+    "id": "advice-grief-ca",
+    "query": "Què hauria de fer per superar el dol d'una pèrdua?",
+    "lang": "ca",
+    "expect": "no_suggestions",
+    "must_include_any": ["no dona", "no ofereix", "no dóna", "decisió", "no et puc aconsellar", "no fa de conseller"],
+    "note": "Regla 11: refús de consell; pot citar però SENSE suggeriments."
+  },
+  {
+    "id": "advice-how-live-en",
+    "query": "How should I live my life to be happy?",
+    "lang": "en",
+    "expect": "no_suggestions",
+    "must_include_any": ["does not give", "does not offer", "your own", "decision", "cannot advise"],
+    "note": "Regla 11 en anglès."
+  },
+  {
+    "id": "greeting-ca",
+    "query": "Bon dia!",
+    "lang": "ca",
+    "expect": "no_sources",
+    "note": "Regla 15: salutació -> NO_SOURCES, sense fonts ni suggeriments."
+  },
+  {
+    "id": "greeting-es",
+    "query": "Buenos días, ¿cómo estás?",
+    "lang": "es",
+    "expect": "no_sources",
+    "note": "Regla 15: small talk."
+  },
+  {
+    "id": "lang-mirror-es-on-stoics",
+    "query": "¿Qué es el estoicismo y quiénes son sus principales filósofos?",
+    "lang": "es",
+    "expect": "cited",
+    "must_mention": [],
+    "expect_suggestions": true,
+    "note": "Regla 7: pregunta en castellà -> resposta en castellà (encara que les fonts siguin en anglès)."
+  }
+]
