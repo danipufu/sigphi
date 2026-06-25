@@ -46,6 +46,26 @@ def looks_like_garbage(text: str, threshold: float = 0.5) -> bool:
     return clean_word_ratio(text) < threshold
 
 
+# --- Detecció de SOROLL DE MARCATGE / boilerplate ---------------------------------
+# clean_word_ratio NO el caça: el cos pot ser prosa neta amb marcatge incrustat
+# (p. ex. el Cato llatí de Wikisource amb __NOTOC__ / "= I ="), o residus de Gutenberg.
+
+_MARKUP_MARKERS = (
+    "__NOTOC__", "__TOC__", "{|", "|}", "{{", "}}", "[[", "]]", "<ref",
+    "*** START OF", "*** END OF", "Project Gutenberg", "Produced by ",
+)
+_HTML_ENTITY_RE = re.compile(r"&(?:amp|lt|gt|quot|nbsp|#\d+);")
+
+
+def find_markup(text: str) -> list[str]:
+    """Marcadors de marcatge/boilerplate residual que no s'haurien d'haver colat al
+    cos del text. Retorna la llista de marcadors trobats (buida = net)."""
+    found = [m for m in _MARKUP_MARKERS if m in text]
+    if len(_HTML_ENTITY_RE.findall(text)) >= 3:  # entitats HTML sense descodificar
+        found.append("HTML-entities")
+    return found
+
+
 # --- Detecció de duplicats per títol (mateix autor) -------------------------------
 
 def _norm_title(s: str) -> str:
@@ -86,6 +106,7 @@ def main() -> int:
     garbage: list[tuple[str, str, float]] = []
     tiny: list[tuple[str, str, int]] = []
     dups: list[tuple[str, str, str]] = []
+    markup: list[tuple[str, str, list[str]]] = []
 
     for entry in catalog:
         author = entry["author"]
@@ -100,6 +121,9 @@ def main() -> int:
                 ratio = sum(clean_word_ratio(s) for s in samples) / len(samples)
                 if ratio < args.garbage_threshold:
                     garbage.append((author, work, ratio))
+                marks = sorted({m for s in samples for m in find_markup(s)})
+                if marks:
+                    markup.append((author, work, marks))
     cs.close()
 
     print(f"=== SALUT DEL CORPUS ===  autors={len(catalog)} obres={sum(len(e['works']) for e in catalog)}\n")
@@ -109,11 +133,14 @@ def main() -> int:
     print(f"\n## OBRES TÍSIQUES (<{args.min_chunks} chunks) ({len(tiny)}):")
     for a, w, n in sorted(tiny, key=lambda x: x[2]):
         print(f"  [{n} chunks] {a} — {w}")
+    print(f"\n## SOROLL DE MARCATGE / boilerplate ({len(markup)}):")
+    for a, w, marks in markup:
+        print(f"  [{', '.join(marks)}] {a} — {w}")
     print(f"\n## DUPLICATS de títol candidats ({len(dups)}):")
     for a, w1, w2 in dups:
         print(f"  {a}: '{w1}'  <=>  '{w2}'")
 
-    problems = len(garbage) + len(tiny) + len(dups)
+    problems = len(garbage) + len(tiny) + len(markup) + len(dups)
     print(f"\nTotal problemes: {problems}")
     return 1 if problems else 0
 
