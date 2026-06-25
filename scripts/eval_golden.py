@@ -68,8 +68,9 @@ def judge(item: dict, resp: dict) -> tuple[list[str], list[str], list[str]]:
         if tag in answer:
             fails.append(f"tag filtrat a la resposta: {tag}")
 
-    # Idioma (heurístic): si s'espera ca/es però la resposta sembla anglès -> fail.
-    if item.get("lang") in {"ca", "es"} and looks_english(answer):
+    # Idioma (heurístic): si s'espera una llengua no-anglesa però la resposta sembla
+    # anglesa -> fail (detecta el mode de fallada principal de la regla 7).
+    if item.get("lang") in {"ca", "es", "de", "fr", "it"} and looks_english(answer):
         fails.append(f"idioma: sembla anglès però s'esperava {item['lang']}")
 
     if expect == "cited":

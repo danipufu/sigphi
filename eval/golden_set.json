@@ -194,5 +194,60 @@
     "must_mention": [],
     "expect_suggestions": true,
     "note": "Regla 7: pregunta en castellà -> resposta en castellà (encara que les fonts siguin en anglès)."
+  },
+  {
+    "id": "hobbes-state-of-nature-en",
+    "query": "What is Hobbes's view of the state of nature before government?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": ["Hobbes"],
+    "expect_suggestions": true,
+    "note": "Text NOU (Elements of Law/Behemoth + Leviathan existent): regressió post-deploy."
+  },
+  {
+    "id": "spencer-state-en",
+    "query": "What is Spencer's argument against the expansion of the state?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": ["Spencer"],
+    "expect_suggestions": true,
+    "note": "Text NOU (The Man versus the State): regressió post-deploy."
+  },
+  {
+    "id": "aristotle-syllogism-en",
+    "query": "How does Aristotle define the syllogism and valid deduction?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": ["Aristotle"],
+    "expect_suggestions": true,
+    "note": "Text NOU (Organon: Prior Analytics): regressió post-deploy."
+  },
+  {
+    "id": "aristotle-motion-en",
+    "query": "What does Aristotle say about motion, causes and the unmoved mover?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": ["Aristotle"],
+    "expect_suggestions": true,
+    "note": "Text NOU (Física): regressió post-deploy."
+  },
+  {
+    "id": "kant-duty-de",
+    "query": "Was sagt Kant über die Pflicht und den guten Willen?",
+    "lang": "de",
+    "expect": "cited",
+    "must_mention": ["Kant"],
+    "expect_suggestions": true,
+    "note": "Regla 7 en alemany: pregunta en alemany -> resposta en alemany."
+  },
+  {
+    "id": "manu-caste-caveat-en",
+    "query": "What do the Laws of Manu say about the caste system and social duties?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": ["Manu"],
+    "must_include": ["⚠"],
+    "expect_suggestions": true,
+    "note": "Regla 17: avís de contingut discriminatori (casta) obligatori."
   }
 ]
