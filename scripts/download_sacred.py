@@ -509,6 +509,42 @@ TEXTS = [
      "l'anàlisi de la memòria, la imaginació, la raó, les instints i la voluntat; "
      "conclou amb el capítol sobre el necessarisme i l'esforç.",
      "William_James__Principles_of_Psychology_Vol2_en.txt"),
+
+    # --- Lot 18: Hegel, Història de la Filosofia vols 1-2 (faltaven; ja hi ha el vol 3) ---
+    # Lliçons pòstumes (Haldane & Simson, 1892-96), domini públic.
+    (51635, "Hegel",
+     "Hegel's Lectures on the History of Philosophy Volume 1 (of 3)", "English",
+     "Complete work", "Recorded/compiled by others",
+     "Lliçons sobre la història de la filosofia de Hegel, vol. I (oriental, presocràtics "
+     "i sofistes fins a Sòcrates): la filosofia com a desplegament històric de la raó. "
+     "Traducció d'E. S. Haldane (1892), domini públic. Lliçons recollides pels deixebles "
+     "a partir dels apunts de Hegel.",
+     "Hegel__History_of_Philosophy_Vol1_en.txt"),
+    (51636, "Hegel",
+     "Hegel's Lectures on the History of Philosophy Volume 2 (of 3)", "English",
+     "Complete work", "Recorded/compiled by others",
+     "Lliçons sobre la història de la filosofia de Hegel, vol. II (Plató, Aristòtil, "
+     "estoics, epicuris, escèptics i neoplatònics). Traducció d'E. S. Haldane i Frances "
+     "H. Simson (1894), domini públic. Lliçons recollides pels deixebles.",
+     "Hegel__History_of_Philosophy_Vol2_en.txt"),
+
+    # --- Lot 19: tram Mitjà (Hobbes i Spencer infra-coberts) ---
+    # Hobbes (mort 1679) i Spencer (mort 1903): escrits originalment en anglès, PD arreu.
+    (74236, "Thomas Hobbes",
+     "Human Nature, De Corpore Politico (The Elements of Law) and Of Liberty and Necessity",
+     "English", "Complete work", "Written by the author",
+     "Obres polítiques i de filosofia natural de Thomas Hobbes recollides al vol. IV "
+     "de les English Works (ed. Molesworth, 1840): 'Human Nature' i 'De Corpore Politico' "
+     "(que junts formen els Elements of Law, 1640, el seu primer tractat polític, anterior "
+     "al De Cive i al Leviatan) i 'Of Liberty and Necessity' (sobre el lliure albir). "
+     "Text original anglès, domini públic.",
+     "Thomas_Hobbes__Elements_of_Law_EnglishWorks_IV_en.txt"),
+    (46129, "Herbert Spencer", "The Data of Ethics", "English",
+     "Complete work", "Written by the author",
+     "Els fonaments de l'ètica (1879) de Herbert Spencer, primera part dels Principles "
+     "of Ethics: fonamentació evolucionista de la conducta moral com a forma de conducta "
+     "millor adaptada a la vida. Text original anglès, domini públic.",
+     "Herbert_Spencer__Data_of_Ethics_en.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)

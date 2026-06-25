@@ -552,6 +552,66 @@ TEXTS = [
      "(LWF) el 2015. Inclòs únicament per al seu valor historiogràfic i per a la "
      "comprensió crítica de l'antisemitisme cristià precursor. Trad. anglesa PD. OCR.",
      "Martin_Luther__On_the_Jews_and_Their_Lies_en.txt"),
+
+    # --- Lot 23: buits canònics d'autors majors (auditoria de cobertura) ---
+    # Tots amb traducció en DOMINI PÚBLIC verificada. Fonts no disponibles a Gutenberg.
+    ("philosophyofhist00hegerich", "philosophyofhist00hegerich_djvu.txt",
+     "Hegel", "The Philosophy of History (Lectures, Sibree)", "English",
+     "Complete work", "Recorded/compiled by others",
+     "Lliçons sobre la filosofia de la història de G. W. F. Hegel (impartides 1822-31, "
+     "publicades pòstumament): la història universal entesa com el desplegament racional "
+     "de la llibertat de l'esperit. Traducció anglesa de J. Sibree (revisió de 1899, "
+     "Colonial Press), domini públic, no l'alemany original. Lliçons recollides i "
+     "editades pels deixebles a partir dels apunts de Hegel. OCR d'Archive.org.",
+     "Hegel__Philosophy_of_History_Sibree_en.txt"),
+    ("in.ernet.dli.2015.185285", "2015.185285.Aristotle-The-Organon_djvu.txt",
+     "Aristotle",
+     "The Organon (Categories, On Interpretation, Prior & Posterior Analytics, Topics, Sophistical Refutations)",
+     "English", "Complete work", "Written by the author",
+     "Els sis tractats de lògica d'Aristòtil (l'Organon) en un sol volum; traducció "
+     "d'Octavius Freire Owen (Bohn's Classical Library, 1853), domini públic, no el grec "
+     "original. Aporta els Primers Analítics, De la Interpretació, els Tòpics i les "
+     "Refutacions sofístiques, que faltaven al corpus. OCR d'Archive.org.",
+     "Aristotle__The_Organon_Owen_en.txt"),
+    ("in.ernet.dli.2015.183335", "2015.183335.Aristotle-The-Physics-Vol-i_djvu.txt",
+     "Aristotle", "The Physics, Vol. I (Books I-IV)", "English",
+     "Complete work", "Written by the author",
+     "La Física d'Aristòtil, vol. I (llibres I-IV): la naturalesa, les quatre causes, "
+     "el moviment, l'infinit, el lloc, el buit i el temps. Traducció de P. H. Wicksteed "
+     "i F. M. Cornford (Loeb, 1929), no el grec original; tradudors morts fa més de 70 "
+     "anys (domini públic a la UE). OCR d'Archive.org.",
+     "Aristotle__Physics_Vol1_en.txt"),
+    ("in.ernet.dli.2015.183610", "2015.183610.Aristotle-The-Physics-Voll-Ii_djvu.txt",
+     "Aristotle", "The Physics, Vol. II (Books V-VIII)", "English",
+     "Complete work", "Written by the author",
+     "La Física d'Aristòtil, vol. II (llibres V-VIII): el canvi, el continu i el primer "
+     "motor immòbil. Traducció de Wicksteed i Cornford (Loeb, 1934), no el grec original. "
+     "Domini públic a la UE (tradudors +70 anys); als EUA no és PD fins al 2030. OCR.",
+     "Aristotle__Physics_Vol2_en.txt"),
+    ("OfGodAndHisCreatures", "OfGodAndHisCreatures_djvu.txt",
+     "Thomas Aquinas", "Of God and His Creatures (Summa Contra Gentiles)", "English",
+     "Selection / partial", "Written by the author",
+     "Summa Contra Gentiles de Tomàs d'Aquino (1259-65), la seva segona gran síntesi: "
+     "defensa racional de la fe cristiana davant dels no-creients, sobre Déu, la creació, "
+     "la providència i la fi última de l'home. Traducció anotada de Joseph Rickaby (1905), "
+     "domini públic; és una traducció amb cert abreujament (no íntegra). OCR d'Archive.org.",
+     "Thomas_Aquinas__Summa_Contra_Gentiles_Rickaby_en.txt"),
+
+    # --- Lot 24: tram Mitjà (Hobbes i Spencer) — edicions autònomes amb títol clar ---
+    ("cu31924028063893", "cu31924028063893_djvu.txt",
+     "Thomas Hobbes", "Behemoth; or, The Long Parliament", "English",
+     "Complete work", "Written by the author",
+     "Behemoth (escrit ~1668, publicat 1681) de Thomas Hobbes: anàlisi de les causes "
+     "de la Guerra Civil anglesa (1640-60) en forma de diàleg, on aplica la seva teoria "
+     "política a un cas històric concret. Text original anglès, domini públic. OCR d'Archive.org.",
+     "Thomas_Hobbes__Behemoth_en.txt"),
+    ("manversusstate00spen", "manversusstate00spen_djvu.txt",
+     "Herbert Spencer", "The Man versus the State", "English",
+     "Complete work", "Written by the author",
+     "L'home contra l'Estat (1884) de Herbert Spencer: assaigs (incl. 'The New Toryism', "
+     "'The Coming Slavery', 'The Sins of Legislators') que defensen el liberalisme "
+     "individualista i critiquen l'expansió de l'Estat. Text original anglès, domini públic. OCR.",
+     "Herbert_Spencer__Man_versus_the_State_en.txt"),
 ]
 
 
