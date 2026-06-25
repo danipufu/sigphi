@@ -545,6 +545,14 @@ TEXTS = [
      "of Ethics: fonamentació evolucionista de la conducta moral com a forma de conducta "
      "millor adaptada a la vida. Text original anglès, domini públic.",
      "Herbert_Spencer__Data_of_Ethics_en.txt"),
+
+    # --- Lot 20: buits menors de l'auditoria (diàleg de Plató que faltava) ---
+    (1579, "Plato", "Lysis", "English",
+     "Complete work", "Written by the author",
+     "Diàleg de Plató sobre l'amistat (philia): què és un amic i si l'amistat es funda "
+     "en la semblança o en la utilitat. Traducció de Benjamin Jowett (1871), domini "
+     "públic, no el grec original.",
+     "Plato__Lysis_Jowett_en.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)
