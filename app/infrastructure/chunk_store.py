@@ -128,6 +128,17 @@ class ChunkStore:
         )
         return [r[0] for r in cur.fetchall()]
 
+    def chunk_ids_of_file(self, filename: str) -> list[str]:
+        """Chunks provinents d'un FITXER d'origen concret. El chunk_id és
+        `{nom_fitxer}#{n}` (vegeu ingest.py), així que es pot discriminar pel fitxer
+        encara que dues entrades comparteixin autor+títol (p.ex. difereixin només en
+        majúscules) i no es puguin separar amb find_works (LIKE, insensible a majúsc.)."""
+        cur = self._conn.execute(
+            "SELECT chunk_id FROM chunks WHERE chunk_id LIKE ? ESCAPE '\\'",
+            (filename.replace("\\", "\\\\").replace("%", "\\%").replace("_", "\\_") + "#%",),
+        )
+        return [r[0] for r in cur.fetchall()]
+
     def chunk_ids_of(self, author: str, work: str | None = None) -> list[str]:
         if work:
             cur = self._conn.execute(
