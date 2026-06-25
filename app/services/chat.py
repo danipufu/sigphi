@@ -5,7 +5,7 @@ resposta fidel a les fonts -> recull la llista de fonts (amb avisos ⚠).
 """
 from __future__ import annotations
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 from app.domain.caveats import discriminatory_warning, historical_context_note
 from app.domain.interfaces import LLMInterface
@@ -16,6 +16,29 @@ from app.services.retrieval import RetrievalService
 
 # Captura [[NO_SOURCES]] (i variants amb un sol claudàtor) en qualsevol posició.
 _NO_SOURCES_RE = re.compile(r"\s*\[+\s*NO_SOURCES\s*\]+\s*")
+
+# Bloc de preguntes suggerides que l'LLM afegeix AL FINAL (regla 21). El separem de
+# la resposta visible i el retornem a part perquè la UI el mostri com a chips
+# clicables. Tolera variants amb un sol claudàtor i text fins al final del missatge.
+_SUGGESTIONS_RE = re.compile(r"\[+\s*SUGGESTIONS\s*\]+\s*(.*)\Z", re.IGNORECASE | re.DOTALL)
+
+
+def split_suggestions(text: str) -> tuple[str, list[str]]:
+    """Separa la resposta del bloc [[SUGGESTIONS]] final.
+
+    Retorna (resposta_neta, llista_de_preguntes). Si no hi ha bloc, la llista és
+    buida i la resposta queda intacta. Treu vinyetes/numeració de cada línia i
+    limita a 3 suggeriments (robust a sortides una mica desviades del format)."""
+    m = _SUGGESTIONS_RE.search(text)
+    if not m:
+        return text, []
+    answer = text[: m.start()].rstrip()
+    suggestions: list[str] = []
+    for line in m.group(1).splitlines():
+        q = re.sub(r"^\s*(?:[-*•·]|\d+[.)])\s*", "", line).strip()
+        if q:
+            suggestions.append(q)
+    return answer, suggestions[:3]
 
 # SEGUIMENTS: missatges que NO introdueixen un tema nou sinó que demanen re-fer la
 # resposta anterior (canvi d'idioma, més detall, "per què", etc.). Per a aquests, el
@@ -47,10 +70,11 @@ def _is_followup(query: str) -> bool:
 
 @dataclass(frozen=True, slots=True)
 class ChatResult:
-    """Resultat d'un torn de xat: resposta + fonts citables + chunks crus."""
+    """Resultat d'un torn de xat: resposta + fonts citables + chunks crus + suggeriments."""
     answer: str
     sources: list[str]
     retrieved: list[RetrievedChunk]
+    suggestions: list[str] = field(default_factory=list)
 
 
 def format_context(
@@ -159,11 +183,17 @@ class ChatService:
         context = format_context(retrieved, self._bios)
         hist = (history or [])[-self._max_history :]
         text = self._llm.generate(SYSTEM_PROMPT, query, context, hist)
+        # Separa primer el bloc de preguntes suggerides (regla 21), així no es cola
+        # mai a la resposta visible encara que l'LLM l'afegeixi en un cas NO_SOURCES.
+        text, suggestions = split_suggestions(text)
         # Si l'LLM marca que NO ha fet servir les fonts (salutació, meta, regla
-        # 3/14...), treu la marca i amaga la llista de fonts.
+        # 3/14/20...), treu la marca, amaga les fonts i descarta els suggeriments.
         if "NO_SOURCES" in text:
             text = _NO_SOURCES_RE.sub(" ", text).strip()
-            sources: list[str] = []
-        else:
-            sources = get_sources(retrieved)
-        return ChatResult(answer=text, sources=sources, retrieved=retrieved)
+            return ChatResult(answer=text, sources=[], retrieved=retrieved, suggestions=[])
+        return ChatResult(
+            answer=text,
+            sources=get_sources(retrieved),
+            retrieved=retrieved,
+            suggestions=suggestions,
+        )

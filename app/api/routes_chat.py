@@ -26,6 +26,7 @@ class ChatRequest(BaseModel):
 class ChatResponse(BaseModel):
     answer: str
     sources: list[str]
+    suggestions: list[str] = Field(default_factory=list)
 
 
 @router.post("/chat", response_model=ChatResponse)
@@ -36,7 +37,7 @@ def chat(
     chat_service: ChatService = Depends(get_chat_service),
 ) -> ChatResponse:
     res = chat_service.answer(body.query, body.history)
-    return ChatResponse(answer=res.answer, sources=res.sources)
+    return ChatResponse(answer=res.answer, sources=res.sources, suggestions=res.suggestions)
 
 
 @router.get("/ask", response_model=ChatResponse)
@@ -54,7 +55,7 @@ def ask(
     if not secret or key != secret:
         raise HTTPException(status_code=404, detail="Not Found")
     res = chat_service.answer(q, [])
-    return ChatResponse(answer=res.answer, sources=res.sources)
+    return ChatResponse(answer=res.answer, sources=res.sources, suggestions=res.suggestions)
 
 
 @router.get("/catalog")

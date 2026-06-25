@@ -154,6 +154,17 @@ button.primary, .primary { background:var(--sig-navy) !important; border-color:v
 }
 #sigphi-examples button:hover { border-color:var(--sig-gold) !important; box-shadow:0 2px 8px rgba(201,162,39,.18); }
 
+/* Preguntes suggerides (chips de seguiment sota la resposta). Accent daurat a
+   l'esquerra per distingir-les dels exemples i convidar a continuar explorant. */
+#sigphi-suggestions { gap:8px !important; flex-wrap:wrap; margin-top:8px; }
+#sigphi-suggestions button {
+  border:1px solid #e3ddcf !important; border-left:3px solid var(--sig-gold) !important;
+  border-radius:12px !important; background:#fbfaf6 !important;
+  color:var(--sig-navy) !important; font-size:.84rem !important; font-weight:400 !important;
+  white-space:normal; text-align:left;
+}
+#sigphi-suggestions button:hover { border-color:var(--sig-gold) !important; box-shadow:0 2px 8px rgba(201,162,39,.18); }
+
 /* Peu */
 #sigphi-footer { text-align:center; color:#9ca3af; font-size:.8rem; margin:14px 0 4px; }
 #sigphi-footer b { color:var(--sig-gold); }
@@ -286,14 +297,20 @@ HEADERS = {
 }
 
 
+def _format_answer_md(res) -> str:
+    """Resposta + llista de fonts en Markdown. Les preguntes suggerides NO van aquí:
+    es retornen a part (res.suggestions) i la UI principal les mostra com a chips."""
+    if res.sources:
+        srcs = "\n".join(f"- {s}" for s in res.sources)
+        return f"{res.answer}\n\n---\n**Fonts:**\n{srcs}"
+    return res.answer
+
+
 def _make_respond(app: FastAPI):
+    """Responder string-only per a la UI de reserva (sense chips de suggeriments)."""
     def respond(message, history):
-        chat_service = app.state.chat_service
-        res = chat_service.answer(message, _history_to_tuples(history))
-        if res.sources:
-            srcs = "\n".join(f"- {s}" for s in res.sources)
-            return f"{res.answer}\n\n---\n**Fonts:**\n{srcs}"
-        return res.answer
+        res = app.state.chat_service.answer(message, _history_to_tuples(history))
+        return _format_answer_md(res)
 
     return respond
 
@@ -326,7 +343,12 @@ _MOUNT_SUPPORTS_CSS = "css" in _inspect.signature(gr.mount_gradio_app).parameter
 
 
 def _build_gradio(app: FastAPI) -> gr.Blocks:
-    respond = _make_respond(app)
+    def respond_full(message, history):
+        """UI principal: retorna (markdown_amb_fonts, llista_suggeriments). El segon
+        valor va a additional_outputs -> suggestions_state -> chips de seguiment."""
+        res = app.state.chat_service.answer(message, _history_to_tuples(history))
+        return _format_answer_md(res), res.suggestions
+
     # A Gradio <6, theme/css van al Blocks; a >=6 van a mount_gradio_app (a sota).
     blocks_kwargs = {} if _MOUNT_SUPPORTS_CSS else {"theme": SIGPHI_THEME, "css": SIGPHI_CSS}
     with gr.Blocks(title="SigPhi", **blocks_kwargs) as demo:
@@ -342,8 +364,12 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
             elem_id="sigphi-lang",
         )
         header = gr.Markdown(HEADERS["Català"], elem_id="sigphi-header")
+        # Estat amb les preguntes suggerides de l'ÚLTIMA resposta. S'omple via
+        # additional_outputs del ChatInterface (i del runner de chips). Quan canvia,
+        # @gr.render recrea els chips de seguiment.
+        suggestions_state = gr.State([])
         ci = gr.ChatInterface(
-            fn=respond,
+            fn=respond_full,
             chatbot=gr.Chatbot(elem_id="sigphi-chat", height=460, show_label=False),
             textbox=gr.Textbox(
                 placeholder="Fes una pregunta sobre filosofia… (en qualsevol idioma)",
@@ -351,32 +377,49 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
                 container=False,
                 scale=7,
             ),
+            additional_outputs=[suggestions_state],
         )
 
-        # Exemples PROPIS (botons), no els del ChatInterface: el seu dataset intern
-        # no es refresca en viu. Amb @gr.render(triggers=[demo.load]) es recreen
-        # N_EXAMPLES a l'atzar A CADA CÀRREGA -> varien a cada refresc. En clicar,
-        # omplen el xat amb la pregunta i la responen (driving directe del chatbot).
-        def _run_example(question, history):
+        # Runner compartit per als chips (exemples i suggeriments): omple el xat amb
+        # la pregunta, la respon, i actualitza els suggeriments (buida'ls mentre
+        # carrega -> reapareixen amb els nous). Surt a (chatbot, suggestions_state).
+        def _run_question(question, history):
             history = history or []
             yield history + [
                 {"role": "user", "content": question},
                 {"role": "assistant", "content": "…"},
-            ]
-            answer = respond(question, history)
+            ], []
+            md, suggestions = respond_full(question, history)
             yield history + [
                 {"role": "user", "content": question},
-                {"role": "assistant", "content": answer},
-            ]
+                {"role": "assistant", "content": md},
+            ], suggestions
 
+        # Exemples PROPIS (botons): amb @gr.render(triggers=[demo.load]) es recreen
+        # N_EXAMPLES a l'atzar A CADA CÀRREGA -> varien a cada refresc.
         @gr.render(triggers=[demo.load])
         def _render_examples():
             with gr.Row(elem_id="sigphi-examples"):
                 for q in random.sample(EXAMPLE_POOL_EN, N_EXAMPLES):
                     gr.Button(q, size="sm", elem_classes="sigphi-ex").click(
-                        _run_example,
+                        _run_question,
                         inputs=[gr.State(q), ci.chatbot],
-                        outputs=ci.chatbot,
+                        outputs=[ci.chatbot, suggestions_state],
+                    )
+
+        # Preguntes suggerides (regla 21): chips de seguiment SOTA la resposta. Es
+        # recreen cada cop que suggestions_state canvia; clicar-ne un llança la
+        # pregunta (i genera els suggeriments següents -> bucle d'exploració).
+        @gr.render(inputs=[suggestions_state], triggers=[suggestions_state.change])
+        def _render_suggestions(suggestions):
+            if not suggestions:
+                return
+            with gr.Row(elem_id="sigphi-suggestions"):
+                for q in suggestions:
+                    gr.Button(q, size="sm", elem_classes="sigphi-sugg").click(
+                        _run_question,
+                        inputs=[gr.State(q), ci.chatbot],
+                        outputs=[ci.chatbot, suggestions_state],
                     )
 
         footer = gr.HTML(_footer_html("Català"))
