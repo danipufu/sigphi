@@ -131,3 +131,12 @@ def test_markup_html_entities_detected():
 
 def test_clean_prose_has_no_markup():
     assert find_markup("O Tite si quid ego adiuero curamve levasso quae nunc te coquit") == []
+
+
+def test_chinese_not_garbage():
+    assert clean_word_ratio("學而時習之不亦說乎有朋自遠方來") == 1.0
+    assert not looks_like_garbage("學而時習之不亦說乎有朋自遠方來")
+
+
+def test_greek_not_garbage():
+    assert not looks_like_garbage("Ἐν ἀρχῇ ἦν ὁ λόγος καὶ ὁ λόγος ἦν πρὸς τὸν θεόν")

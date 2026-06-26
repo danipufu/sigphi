@@ -28,12 +28,38 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 _WORD_RE = re.compile(r"[^\W\d_]{3,}", re.UNICODE)  # paraula = 3+ lletres (qualsevol idioma)
 _TOKEN_RE = re.compile(r"\S+")
 
+# Alfabets no-llatins: l'heurística de "paraules de 3+ lletres separades per espais"
+# NO hi aplica (el xinès no té espais; el grec/ciríl·lic surten amb símbols il·legibles
+# a terminals no-UTF8). S'eximeixen per no marcar-los com a brossa falsament.
+_NONLATIN_RANGES = (
+    ("一", "鿿"),  # CJK (xinès/kanji)
+    ("぀", "ヿ"),  # kana japonès
+    ("가", "힣"),  # hangul coreà
+    ("Ͱ", "Ͽ"),  # grec
+    ("ἀ", "῿"),  # grec estès
+    ("Ѐ", "ӿ"),  # ciríl·lic
+    ("֐", "׿"),  # hebreu
+    ("؀", "ۿ"),  # àrab
+    ("ऀ", "ॿ"),  # devanagari
+)
+
+
+def _is_nonlatin_script(text: str) -> bool:
+    """True si >30% de les lletres són d'un alfabet no-llatí (CJK, grec, ciríl·lic…)."""
+    letters = [c for c in text if c.isalpha()]
+    if not letters:
+        return False
+    nonlatin = sum(1 for c in letters if any(lo <= c <= hi for lo, hi in _NONLATIN_RANGES))
+    return nonlatin / len(letters) > 0.3
+
 
 def clean_word_ratio(text: str) -> float:
     """Fracció de 'paraules netes' (3+ lletres seguides) sobre el total de chunks de
-    text separats per espais. La prosa real (en qualsevol idioma de l'alfabet llatí,
-    grec, etc.) en té molta (>0.6); la brossa d'OCR, dominada per fragments curts i
-    símbols ('ae LD) ate | tees AR Lt)'), molt poca (<0.4). 1.0 = text buit (no penalitza)."""
+    text separats per espais. La prosa real (alfabet llatí) en té molta (>0.6); la brossa
+    d'OCR, dominada per fragments curts i símbols ('ae LD) ate | tees AR Lt)'), molt poca
+    (<0.4). 1.0 = text buit O d'alfabet no-llatí (no penalitza: l'heurística no hi aplica)."""
+    if _is_nonlatin_script(text):
+        return 1.0
     tokens = _TOKEN_RE.findall(text)
     if not tokens:
         return 1.0
