@@ -67,8 +67,11 @@ def clean_word_ratio(text: str) -> float:
     return good / len(tokens)
 
 
-def looks_like_garbage(text: str, threshold: float = 0.5) -> bool:
-    """True si el text sembla brossa d'OCR (poca prosa real)."""
+def looks_like_garbage(text: str, threshold: float = 0.35) -> bool:
+    """True si el text sembla brossa d'OCR (poca prosa real). Llindar 0.35: la prosa
+    real amb moltes paraules curtes (articles, preposicions: "de la el to of") puntua
+    0.35-0.6 segons l'idioma; la brossa d'OCR real ('ae LD) ate | tees AR Lt)') queda
+    sota 0.15. Els stubs (índexs sense cos) cauen igualment al detector de tísiques."""
     return clean_word_ratio(text) < threshold
 
 
@@ -152,7 +155,7 @@ def find_duplicate_titles(works: list[str]) -> list[tuple[str, str]]:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="Verificador de salut del corpus")
-    ap.add_argument("--garbage-threshold", type=float, default=0.5)
+    ap.add_argument("--garbage-threshold", type=float, default=0.35)
     ap.add_argument("--min-chunks", type=int, default=3, help="obres amb menys chunks = sospitoses")
     ap.add_argument("--sample", type=int, default=3, help="chunks per obra a inspeccionar")
     args = ap.parse_args()
