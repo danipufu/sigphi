@@ -15,6 +15,10 @@ FILES=(
   "Marcus_Aurelius__Thoughts_of_Marcus_Aurelius_en.txt"
   "Plotinus__Select_works_of_Plotinus_translated_from_the_Greek_en.txt"
   "Nietzsche__The_Will_to_Power_An_Attempted_Transvaluation_of_A_en.txt"
+  # William James: fitxers vells (noms curts) substituïts per versions Gutenberg completes
+  "William_James__Varieties_of_Religious_Experience_en.txt"
+  "William_James__Pragmatism_en.txt"
+  "William_James__Will_to_Believe_en.txt"
 )
 
 echo "=== DRY-RUN (--apply no inclòs) ==="
