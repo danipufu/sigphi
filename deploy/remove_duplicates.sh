@@ -18,7 +18,7 @@ FILES=(
 )
 
 echo "=== DRY-RUN (--apply no inclòs) ==="
-VECTOR_DB_TYPE=qdrant python scripts/remove_files.py "${FILES[@]}"
+VECTOR_DB_TYPE=qdrant python3 scripts/remove_files.py "${FILES[@]}"
 
 echo ""
 read -p "Confirmes l'eliminació? (s/N) " ans
@@ -28,5 +28,5 @@ if [[ "$ans" != "s" && "$ans" != "S" ]]; then
 fi
 
 echo "=== APLICANT ==="
-VECTOR_DB_TYPE=qdrant python scripts/remove_files.py --apply "${FILES[@]}"
+VECTOR_DB_TYPE=qdrant python3 scripts/remove_files.py --apply "${FILES[@]}"
 echo "Fet."
