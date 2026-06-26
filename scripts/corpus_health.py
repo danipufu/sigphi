@@ -72,10 +72,22 @@ def _norm_title(s: str) -> str:
     return re.sub(r"[^a-z0-9]", "", s.lower())
 
 
+# Sufix que indica que la versió llarga és un volum/part de la mateixa obra, no un
+# duplicat. Exemples normalitzats: "i", "ii", "vol1", "vol1of4", "tomo2", "part3".
+_VOLUME_SUFFIX_RE = re.compile(
+    r"^(vol(ume)?|tomo|part(e)?|livre|band|tome|book|section)?[ivxlcdm\d]+(of\d+)?$"
+)
+
+
 def find_duplicate_titles(works: list[str]) -> list[tuple[str, str]]:
     """Parelles d'obres del mateix autor amb títol quasi idèntic: un títol normalitzat
-    és igual a l'altre o n'és prefix (>=12 car.). NO marca volums (Vol. I/II) perquè el
-    número els fa divergir aviat. Retorna (a, b) candidats a duplicat."""
+    és igual a l'altre o n'és prefix (>=12 car.).
+
+    NO marca volums/toms: si el sufix que diferencia les dues formes normalitzades és
+    un numeral romà, un número aràbic o un prefix de volum (vol, tomo, part…) seguit de
+    número, s'interpreta com a sèrie i es descarta.
+
+    Retorna (a, b) candidats a duplicat real."""
     pairs: list[tuple[str, str]] = []
     norm = [(_norm_title(w), w) for w in works]
     for i in range(len(norm)):
@@ -86,6 +98,9 @@ def find_duplicate_titles(works: list[str]) -> list[tuple[str, str]]:
                 continue
             short, long_ = (n1, n2) if len(n1) <= len(n2) else (n2, n1)
             if len(short) >= 12 and long_.startswith(short):
+                suffix = long_[len(short):]
+                if _VOLUME_SUFFIX_RE.fullmatch(suffix):
+                    continue  # és un volum de la mateixa sèrie, no un duplicat
                 pairs.append((w1, w2))
     return pairs
 

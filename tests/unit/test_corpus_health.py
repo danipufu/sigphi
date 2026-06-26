@@ -45,8 +45,33 @@ def test_punctuation_duplicate_detected():
 
 
 def test_distinct_volumes_not_flagged():
-    # Volums diferents de la mateixa obra NO són duplicats.
+    # Volums diferents de la mateixa obra NO són duplicats (dígits àrabs que divergeixen).
     works = ["Plutarch's Lives, Volume 1 (of 4)", "Plutarch's Lives, Volume 2 (of 4)"]
+    assert find_duplicate_titles(works) == []
+
+
+def test_roman_numeral_volumes_not_flagged():
+    # "Tomo I/II/III/IV" (sufix "i"/"ii"/"iii"/"iv" normalitzat) NO és un duplicat.
+    works = [
+        "Filosofía fundamental, Tomo I",
+        "Filosofía fundamental, Tomo II",
+        "Filosofía fundamental, Tomo III",
+        "Filosofía fundamental, Tomo IV",
+    ]
+    assert find_duplicate_titles(works) == []
+
+
+def test_volume_suffix_not_flagged():
+    # "A System of Logic [...] (Vol. 1 of 2)" no és duplicat de la versió base.
+    works = [
+        "A System of Logic Ratiocinative and Inductive",
+        "A System of Logic Ratiocinative and Inductive (Vol. 1 of 2)",
+    ]
+    assert find_duplicate_titles(works) == []
+
+
+def test_works_of_author_volume_series_not_flagged():
+    works = ["Works of Martin Luther, Volume I", "Works of Martin Luther, Volume II"]
     assert find_duplicate_titles(works) == []
 
 
