@@ -75,6 +75,27 @@ def test_works_of_author_volume_series_not_flagged():
     assert find_duplicate_titles(works) == []
 
 
+def test_language_tag_suffix_not_flagged():
+    # "(French)" com a sufix és una etiqueta d'idioma, no un duplicat.
+    works = [
+        "De la Démocratie en Amérique, tome deuxième",
+        "De la Démocratie en Amérique, tome deuxième (French)",
+    ]
+    assert find_duplicate_titles(works) == []
+
+
+def test_by_author_suffix_not_flagged():
+    # "by Desiderius Erasmus" com a sufix és atribució d'autoria, no un duplicat.
+    works = ["The Education of Children", "The Education of Children by Desiderius Erasmus"]
+    assert find_duplicate_titles(works) == []
+
+
+def test_real_duplicate_still_detected():
+    # Un duplicat real sense sufix especial SEGUEIX sent detectat.
+    works = ["Novum Organum", "Novum organum or True suggestions for the interpretation"]
+    assert len(find_duplicate_titles(works)) == 1
+
+
 def test_distinct_works_not_flagged():
     works = ["The Prince", "Discourses on Livy", "History of Florence"]
     assert find_duplicate_titles(works) == []

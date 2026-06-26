@@ -78,14 +78,26 @@ _VOLUME_SUFFIX_RE = re.compile(
     r"^(vol(ume)?|tomo|part(e)?|livre|band|tome|book|section)?[ivxlcdm\d]+(of\d+)?$"
 )
 
+# Sufix que és simplement una etiqueta d'idioma entre parèntesis, p.ex. "(French)".
+# Normalitzat: "french", "latin", "english"...
+_LANGUAGE_SUFFIX_RE = re.compile(
+    r"^(french|english|latin|spanish|german|italian|portuguese|greek|"
+    r"arabic|dutch|swedish|danish|norwegian|russian|chinese|japanese)$"
+)
+
+# Sufix que és una atribució d'autoria afegida al títol ("by Desiderius Erasmus",
+# "by Juan Luis Vives"). Normalitzat: "by" + almenys 4 lletres.
+_BY_AUTHOR_SUFFIX_RE = re.compile(r"^by[a-z]{4,}.*$")
+
 
 def find_duplicate_titles(works: list[str]) -> list[tuple[str, str]]:
     """Parelles d'obres del mateix autor amb títol quasi idèntic: un títol normalitzat
     és igual a l'altre o n'és prefix (>=12 car.).
 
-    NO marca volums/toms: si el sufix que diferencia les dues formes normalitzades és
-    un numeral romà, un número aràbic o un prefix de volum (vol, tomo, part…) seguit de
-    número, s'interpreta com a sèrie i es descarta.
+    NO marca en tres casos:
+    - Volums/toms: sufix numèric o de sèrie (vol, tomo, part… + número).
+    - Etiquetes d'idioma: sufix "(French)", "(Latin)"… afegit al títol base.
+    - Atribució d'autoria: sufix "by Desiderius Erasmus"… afegit al títol base.
 
     Retorna (a, b) candidats a duplicat real."""
     pairs: list[tuple[str, str]] = []
@@ -100,7 +112,11 @@ def find_duplicate_titles(works: list[str]) -> list[tuple[str, str]]:
             if len(short) >= 12 and long_.startswith(short):
                 suffix = long_[len(short):]
                 if _VOLUME_SUFFIX_RE.fullmatch(suffix):
-                    continue  # és un volum de la mateixa sèrie, no un duplicat
+                    continue  # volum de la mateixa sèrie
+                if _LANGUAGE_SUFFIX_RE.fullmatch(suffix):
+                    continue  # etiqueta d'idioma
+                if _BY_AUTHOR_SUFFIX_RE.fullmatch(suffix):
+                    continue  # atribució d'autoria
                 pairs.append((w1, w2))
     return pairs
 
