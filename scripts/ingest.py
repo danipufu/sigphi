@@ -104,6 +104,32 @@ def strip_perseus_frontmatter(body: str) -> str:
     return _strip_cvs_logs(body)
 
 
+# Àncores de Project Gutenberg: tot el que hi ha ABANS de START i DESPRÉS d'END
+# és llicència/boilerplate que no ha d'arribar als embeddings.
+_PG_START_RE = re.compile(
+    r"^[ \t]*\*\*\*\s*START OF (?:THE |THIS )?PROJECT GUTENBERG.*?\*\*\*[ \t]*$",
+    re.IGNORECASE | re.MULTILINE,
+)
+_PG_END_RE = re.compile(
+    r"^[ \t]*\*\*\*\s*END OF (?:THE |THIS )?PROJECT GUTENBERG.*?\*\*\*[ \t]*$",
+    re.IGNORECASE | re.MULTILINE,
+)
+
+
+def strip_gutenberg_boilerplate(body: str) -> str:
+    """Treu capçalera i peu de pàgina de llicència de Project Gutenberg.
+
+    Manté únicament el text comprès entre '*** START OF ***' i '*** END OF ***'.
+    Si no existeixen les àncores (text no-PG) retorna el cos intacte. Idempotent."""
+    m_start = _PG_START_RE.search(body)
+    if m_start:
+        body = body[m_start.end():].lstrip("\n")
+    m_end = _PG_END_RE.search(body)
+    if m_end:
+        body = body[:m_end.start()].rstrip()
+    return body
+
+
 def split_text(text: str, size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list[str]:
     """Parteix el text. Usa RecursiveCharacterTextSplitter si està disponible;
     si no, fallback per longitud amb overlap."""
@@ -202,7 +228,8 @@ def run_ingest(
         try:
             raw = path.read_text(encoding="utf-8")
             meta, body = parse_header(raw)
-            body = strip_perseus_frontmatter(body)  # treu crèdits editorials Perseus (no-op si no n'hi ha)
+            body = strip_perseus_frontmatter(body)   # treu crèdits editorials Perseus (no-op si no n'hi ha)
+            body = strip_gutenberg_boilerplate(body)  # treu capçalera/peu Project Gutenberg (no-op si no n'hi ha)
             md = file_metadata(path, meta)
             pieces = split_text(body)
             if not pieces:
