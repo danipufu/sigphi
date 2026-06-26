@@ -113,8 +113,12 @@ def test_markup_wikisource_notoc_detected():
 
 def test_markup_gutenberg_boilerplate_detected():
     gut = "The Project Gutenberg eBook of X. *** START OF THE PROJECT GUTENBERG EBOOK"
-    found = find_markup(gut)
-    assert "Project Gutenberg" in found and "*** START OF" in found
+    assert "*** START OF" in find_markup(gut)
+
+
+def test_produced_by_is_not_flagged():
+    # "Produced by" / "Project Gutenberg" sols (sense *** START/END) són cosmètics.
+    assert find_markup("Produced by John Bickers. Project Gutenberg edition.") == []
 
 
 def test_markup_mediawiki_tables_detected():

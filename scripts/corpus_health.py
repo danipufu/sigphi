@@ -50,9 +50,12 @@ def looks_like_garbage(text: str, threshold: float = 0.5) -> bool:
 # clean_word_ratio NO el caça: el cos pot ser prosa neta amb marcatge incrustat
 # (p. ex. el Cato llatí de Wikisource amb __NOTOC__ / "= I ="), o residus de Gutenberg.
 
+# NOMÉS marcatge ESTRUCTURAL (MediaWiki/Wikisource/HTML). NO s'hi inclou "Produced by"
+# ni "Project Gutenberg": són mencions incidentals d'una sola línia (la firma del
+# transcriptor després de *** START OF ***), cosmètiques, no soroll estructural.
 _MARKUP_MARKERS = (
     "__NOTOC__", "__TOC__", "{|", "|}", "{{", "}}", "[[", "]]", "<ref",
-    "*** START OF", "*** END OF", "Project Gutenberg", "Produced by ",
+    "*** START OF", "*** END OF",
 )
 _HTML_ENTITY_RE = re.compile(r"&(?:amp|lt|gt|quot|nbsp|#\d+);")
 
