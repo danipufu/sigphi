@@ -130,6 +130,33 @@ def strip_gutenberg_boilerplate(body: str) -> str:
     return body
 
 
+def strip_mediawiki_markup(text: str) -> str:
+    """Neteja CONSERVADORA de marcatge de MediaWiki/Wikisource. Tracta només patrons
+    SEGURS (entitats HTML, èmfasi, enllaços, plantilles, <ref>, directives) i NO toca
+    les taules {|...|}: en alguns textos (drama, vers) el contingut real viu dins
+    cel·les i eliminar-les destruiria l'obra. Idempotent; no-op sobre text sense marcatge."""
+    text = re.sub(r"__[A-Z]+__", "", text)                      # __NOTOC__, __TOC__...
+    for _ in range(3):                                          # plantilles {{...}} (fins 3 nivells)
+        new = re.sub(r"\{\{[^{}]*\}\}", "", text)
+        if new == text:
+            break
+        text = new
+    text = re.sub(r"<ref[^>]*>.*?</ref>", "", text, flags=re.DOTALL | re.IGNORECASE)
+    text = re.sub(r"<ref[^>]*/>", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"</?[a-zA-Z][^>]*>", "", text)               # altres tags HTML
+    text = re.sub(r"\[\[(?:Category|File|Image|Categoria|Fitxer|Fichier):[^\]]*\]\]",
+                  "", text, flags=re.IGNORECASE)                # [[Category:..]] -> fora
+    text = re.sub(r"\[\[(?:[^\]|]*\|)?([^\]]*)\]\]", r"\1", text)  # [[destí|text]] -> text
+    text = re.sub(r"\[https?://\S+\s+([^\]]*)\]", r"\1", text)  # [url text] -> text
+    text = re.sub(r"\[https?://\S+\]", "", text)                # [url] sol -> fora
+    text = text.replace("'''", "").replace("''", "")           # negreta/cursiva
+    text = text.replace("&nbsp;", " ").replace("&shy;", "").replace("&amp;", "&")
+    text = re.sub(r"&[a-zA-Z]+;", " ", text)                    # altres entitats HTML
+    text = re.sub(r"&#\d+;", " ", text)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
 def split_text(text: str, size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list[str]:
     """Parteix el text. Usa RecursiveCharacterTextSplitter si està disponible;
     si no, fallback per longitud amb overlap."""
@@ -230,6 +257,8 @@ def run_ingest(
             meta, body = parse_header(raw)
             body = strip_perseus_frontmatter(body)   # treu crèdits editorials Perseus (no-op si no n'hi ha)
             body = strip_gutenberg_boilerplate(body)  # treu capçalera/peu Project Gutenberg (no-op si no n'hi ha)
+            if "wikisource" in (meta.get("source") or "").lower():
+                body = strip_mediawiki_markup(body)   # neteja marcatge MediaWiki (només fonts Wikisource)
             md = file_metadata(path, meta)
             pieces = split_text(body)
             if not pieces:

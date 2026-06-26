@@ -75,3 +75,41 @@ def test_pg_indented_end_marker():
     assert "Text real." in result
     assert "Footer." not in result
     assert "*** END OF" not in result
+
+
+# --- strip_mediawiki_markup (conservador: NO toca taules) -------------------
+
+from scripts.ingest import strip_mediawiki_markup
+
+
+def test_mw_html_entities():
+    assert strip_mediawiki_markup("a &nbsp; b &amp; c &shy;d") == "a   b & c d"
+
+
+def test_mw_internal_links():
+    assert strip_mediawiki_markup("see [[Plato|the sage]] now") == "see the sage now"
+    assert strip_mediawiki_markup("[[Stoicism]] rocks") == "Stoicism rocks"
+
+
+def test_mw_category_and_templates_removed():
+    assert strip_mediawiki_markup("[[Category:Stoics]] body").strip() == "body"
+    assert strip_mediawiki_markup("{{cite|a=1}}word") == "word"
+
+
+def test_mw_emphasis_stripped():
+    assert strip_mediawiki_markup("'''bold''' and ''italic''") == "bold and italic"
+
+
+def test_mw_external_link_keeps_text():
+    assert strip_mediawiki_markup("[https://x.org/y Index here]") == "Index here"
+
+
+def test_mw_tables_preserved():
+    # CLAU: el contingut dins taules (vers/drama) NO s'ha de perdre.
+    src = "{|\n|-\n| Magnum ingenium Luculli\n|}"
+    out = strip_mediawiki_markup(src)
+    assert "{|" in out and "Magnum ingenium Luculli" in out
+
+
+def test_mw_noop_on_plain_prose():
+    assert strip_mediawiki_markup("Plain Latin prose here") == "Plain Latin prose here"
