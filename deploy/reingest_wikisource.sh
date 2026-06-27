@@ -6,6 +6,15 @@
 #   tail -f ~/reingest_wiki.log
 set -e
 
+# GUARD: una sola instància alhora. La consola web del VPS de vegades duplica el
+# text enganxat i s'arribaven a llançar 2 re-ingestes concurrents (locks SQLite,
+# chunks duplicats). El flock fa que la 2a còpia surti immediatament sense fer res.
+exec 9>/tmp/reingest_wikisource.lock
+if ! flock -n 9; then
+  echo ">>> Ja hi ha una re-ingesta en curs (lock /tmp/reingest_wikisource.lock). Surto."
+  exit 0
+fi
+
 cd /home/daniel/sigphi
 PY=/home/daniel/sigphi/venv/bin/python3
 

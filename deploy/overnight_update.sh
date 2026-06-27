@@ -13,6 +13,14 @@
 # El web estarà avall durant la re-ingesta (~1h) i s'aixeca sol al final.
 # El servei es REAIXECA sempre, encara que algun pas falli (trap EXIT).
 
+# GUARD: una sola instància (la consola web de vegades duplica l'enganxat -> 2 runs
+# concurrents corromprien l'índex). La 2a còpia surt immediatament.
+exec 9>/tmp/overnight_update.lock
+if ! flock -n 9; then
+  echo ">>> Ja hi ha un overnight_update en curs. Surto."
+  exit 0
+fi
+
 cd /home/daniel/sigphi
 PY=/home/daniel/sigphi/venv/bin/python3
 log(){ echo ""; echo "===== $(date '+%F %H:%M:%S')  $*  ====="; }
