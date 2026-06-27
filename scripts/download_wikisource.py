@@ -235,13 +235,22 @@ TEXTS: list[tuple] = [
     # remove_stubs.sh). Traducció d'Octavius F. Owen (1853, Bohn), domini públic.
     # Wikisource les té en subpàgines (Prior Analytics/Book_1-2, Topics/Book_1-8);
     # collect() les segueix. strip_mediawiki_markup neteja el marcatge a la ingesta. ===
-    ("en", "Organon (Owen)/Prior Analytics",
-     "Aristotle", "Prior Analytics (Organon)", "English",
+    # Prior Analytics té només 2 subpàgines (Book 1/2) -> collect() NO les segueix
+    # (llindar >=5); cal afegir-les explícitament o queda un stub de 5KB.
+    ("en", "Organon (Owen)/Prior Analytics/Book 1",
+     "Aristotle", "Prior Analytics, Book 1 (Organon)", "English",
      "Complete work", "Written by the author",
-     "Primers Analítics d'Aristòtil: la teoria del sil·logisme i la deducció vàlida "
-     "(els dos llibres); traducció anglesa d'Octavius F. Owen (1853), domini públic. "
+     "Primers Analítics d'Aristòtil, llibre I: la teoria del sil·logisme i les figures "
+     "de la deducció vàlida; traducció anglesa d'Octavius F. Owen (1853), domini "
+     "públic. Text de Wikisource.",
+     "Aristotle__Prior_Analytics_Book1_Owen_en.txt"),
+    ("en", "Organon (Owen)/Prior Analytics/Book 2",
+     "Aristotle", "Prior Analytics, Book 2 (Organon)", "English",
+     "Complete work", "Written by the author",
+     "Primers Analítics d'Aristòtil, llibre II: propietats dels sil·logismes, inducció "
+     "i exemples; traducció anglesa d'Octavius F. Owen (1853), domini públic. "
      "Text de Wikisource.",
-     "Aristotle__Prior_Analytics_Owen_en.txt"),
+     "Aristotle__Prior_Analytics_Book2_Owen_en.txt"),
     ("en", "Organon (Owen)/On Interpretation",
      "Aristotle", "On Interpretation (Organon)", "English",
      "Complete work", "Written by the author",
