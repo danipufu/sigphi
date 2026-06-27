@@ -17,6 +17,7 @@ Característiques:
 """
 from __future__ import annotations
 import argparse
+import html
 import json
 import re
 import sys
@@ -130,6 +131,30 @@ def strip_gutenberg_boilerplate(body: str) -> str:
     return body
 
 
+def _strip_table_skeleton(text: str) -> str:
+    """Treu l'esquelet de taula MediaWiki (`{|`, `|}`, `|-`, `|+`) conservant el TEXT
+    de les cel·les (en drama/vers el contingut viu dins cel·les, p.ex. Seneca Thyestes).
+    `{|`/`|}` són inequívocament marcatge i no surten en prosa, per això és segur a
+    qualsevol font."""
+    out: list[str] = []
+    for line in text.splitlines():
+        s = line.lstrip()
+        if s.startswith(("{|", "|}", "|-", "|+")):
+            continue                                            # bastida de taula
+        if s.startswith(("|", "!")):
+            c = s[1:]
+            if c.startswith(("|", "!")):                        # cel·la en línia "||"/"!!"
+                c = c[1:]
+            if "|" in c:                                        # "atributs | contingut"
+                left, right = c.split("|", 1)
+                if "=" in left and len(left) < 80:
+                    c = right
+            out.append(c.strip())
+        else:
+            out.append(line)
+    return "\n".join(out)
+
+
 def strip_mediawiki_markup(text: str) -> str:
     """Neteja de marcatge de MediaWiki/Wikisource PRESERVANT el contingut. Treu
     plantilles (i fragments orfes de plantilles no expandides), enllaços, èmfasi,
@@ -148,24 +173,7 @@ def strip_mediawiki_markup(text: str) -> str:
     # paràmetre orfe "|nom = valor" SENSE segon | (un segon | indica cel·la de taula
     # amb atributs+contingut, que s'ha de conservar i es tracta més avall).
     text = re.sub(r"(?m)^\s*\|\s*[A-Za-z][\w .-]*\s*=[^|]*$", "", text)
-    # Taules: treure l'esquelet, conservar el text de les cel·les
-    out: list[str] = []
-    for line in text.splitlines():
-        s = line.lstrip()
-        if s.startswith(("{|", "|}", "|-", "|+")):
-            continue                                            # bastida de taula
-        if s.startswith(("|", "!")):
-            c = s[1:]
-            if c.startswith(("|", "!")):                        # cel·la en línia "||"/"!!"
-                c = c[1:]
-            if "|" in c:                                        # "atributs | contingut"
-                left, right = c.split("|", 1)
-                if "=" in left and len(left) < 80:
-                    c = right
-            out.append(c.strip())
-        else:
-            out.append(line)
-    text = "\n".join(out)
+    text = _strip_table_skeleton(text)                          # taules: bastida fora, cel·les es conserven
     text = re.sub(r"<ref[^>]*>.*?</ref>", "", text, flags=re.DOTALL | re.IGNORECASE)
     text = re.sub(r"<ref[^>]*/>", "", text, flags=re.IGNORECASE)
     text = re.sub(r"</?[a-zA-Z][^>]*>", "", text)               # altres tags HTML
@@ -184,6 +192,22 @@ def strip_mediawiki_markup(text: str) -> str:
     text = text.replace("[[", "").replace("]]", "").replace("{{", "").replace("}}", "")
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
+
+
+def clean_residual_markup(text: str) -> str:
+    """Neteja SEGURA aplicable a QUALSEVOL font (no només Wikisource): descodifica
+    entitats HTML (numèriques `&#8217;` i amb nom `&amp;`) i treu claudàtors de wiki
+    residuals (`[[ ]]`, `{{ }}`), que mai apareixen en prosa real. Imprescindible per
+    a les fonts marxists.org (Rosa Luxemburg, Lenin...), que duen cometes/guions
+    tipogràfics codificats com a entitats. Idempotent."""
+    text = html.unescape(text)                       # &#8217;->' , &amp;->& , &nbsp;->\xa0
+    text = text.replace("\xa0", " ")                 # nbsp descodificat -> espai normal
+    text = _strip_table_skeleton(text)               # taules {| |} a inici de línia (cel·les es conserven)
+    text = re.sub(r"\[\[#?[^\]|]*\|", "", text)       # [[àncora|text -> conserva el text
+    text = text.replace("[[", "").replace("]]", "").replace("{{", "").replace("}}", "")
+    # `{|` / `|}` residuals a MIG de línia (soroll d'OCR en llatí/grec): mai en prosa.
+    text = text.replace("{|", "").replace("|}", "")
+    return text
 
 
 def split_text(text: str, size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list[str]:
@@ -287,7 +311,8 @@ def run_ingest(
             body = strip_perseus_frontmatter(body)   # treu crèdits editorials Perseus (no-op si no n'hi ha)
             body = strip_gutenberg_boilerplate(body)  # treu capçalera/peu Project Gutenberg (no-op si no n'hi ha)
             if "wikisource" in (meta.get("source") or "").lower():
-                body = strip_mediawiki_markup(body)   # neteja marcatge MediaWiki (només fonts Wikisource)
+                body = strip_mediawiki_markup(body)   # marcatge MediaWiki complet (només Wikisource)
+            body = clean_residual_markup(body)        # entitats HTML + claudàtors residuals (TOTES les fonts)
             md = file_metadata(path, meta)
             pieces = split_text(body)
             if not pieces:

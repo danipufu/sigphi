@@ -144,3 +144,31 @@ def test_mw_double_braces_removed():
 
 def test_mw_noop_on_plain_prose():
     assert strip_mediawiki_markup("Plain Latin prose here") == "Plain Latin prose here"
+
+
+# --- clean_residual_markup (universal: entitats HTML + claudàtors, qualsevol font) ---
+
+from scripts.ingest import clean_residual_markup
+
+
+def test_cr_decodes_numeric_entities():
+    # marxists.org: cometes/guions tipogràfics com a entitats numèriques.
+    out = clean_residual_markup("workers&#8217; &#8220;mass action&#8221;")
+    assert "&#" not in out and "workers" in out
+
+
+def test_cr_decodes_named_entities():
+    assert clean_residual_markup("Marx &amp; Engels") == "Marx & Engels"
+
+
+def test_cr_strips_page_brackets():
+    assert clean_residual_markup("leaf [[page 2]] closes") == "leaf page 2 closes"
+
+
+def test_cr_strips_midline_table_noise():
+    # soroll d'OCR llatí/grec: {| |} enmig de línia.
+    assert "{|" not in clean_residual_markup("medicina {| quod |} corpus")
+
+
+def test_cr_noop_on_clean_prose():
+    assert clean_residual_markup("Plain prose with no markup.") == "Plain prose with no markup."
