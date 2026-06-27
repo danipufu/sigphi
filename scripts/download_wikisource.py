@@ -229,6 +229,40 @@ TEXTS: list[tuple] = [
      "Collier (1855), domini públic. Substitueix un fitxer Perseus corrupte. "
      "Text de Wikisource.",
      "Aristotle__De_Anima_en.txt"),
+
+    # === Aristòtil: parts de l'Organon que faltaven (teníem Categories + Posterior
+    # Analytics; l'antic "Organon_en" era només la pàgina-índex, treta per
+    # remove_stubs.sh). Traducció d'Octavius F. Owen (1853, Bohn), domini públic.
+    # Wikisource les té en subpàgines (Prior Analytics/Book_1-2, Topics/Book_1-8);
+    # collect() les segueix. strip_mediawiki_markup neteja el marcatge a la ingesta. ===
+    ("en", "Organon (Owen)/Prior Analytics",
+     "Aristotle", "Prior Analytics (Organon)", "English",
+     "Complete work", "Written by the author",
+     "Primers Analítics d'Aristòtil: la teoria del sil·logisme i la deducció vàlida "
+     "(els dos llibres); traducció anglesa d'Octavius F. Owen (1853), domini públic. "
+     "Text de Wikisource.",
+     "Aristotle__Prior_Analytics_Owen_en.txt"),
+    ("en", "Organon (Owen)/On Interpretation",
+     "Aristotle", "On Interpretation (Organon)", "English",
+     "Complete work", "Written by the author",
+     "Sobre la interpretació (De Interpretatione) d'Aristòtil: proposicions, judici i "
+     "modalitat; traducció anglesa d'Octavius F. Owen (1853), domini públic. "
+     "Text de Wikisource.",
+     "Aristotle__On_Interpretation_Owen_en.txt"),
+    ("en", "Organon (Owen)/Topics",
+     "Aristotle", "Topics (Organon)", "English",
+     "Complete work", "Written by the author",
+     "Tòpics d'Aristòtil: el raonament dialèctic a partir d'opinions plausibles (vuit "
+     "llibres); traducció anglesa d'Octavius F. Owen (1853), domini públic. "
+     "Text de Wikisource.",
+     "Aristotle__Topics_Owen_en.txt"),
+    ("en", "Organon (Owen)/The Sophistical Elenchi",
+     "Aristotle", "Sophistical Refutations (Organon)", "English",
+     "Complete work", "Written by the author",
+     "Refutacions sofístiques (De Sophisticis Elenchis) d'Aristòtil: el tractament de "
+     "les fal·làcies lògiques; traducció anglesa d'Octavius F. Owen (1853), domini "
+     "públic. Text de Wikisource.",
+     "Aristotle__Sophistical_Refutations_Owen_en.txt"),
 ]
 
 _SKIP_TAGS = {"script", "style", "sup", "table"}

@@ -612,6 +612,30 @@ TEXTS = [
      "'The Coming Slavery', 'The Sins of Legislators') que defensen el liberalisme "
      "individualista i critiquen l'expansió de l'Estat. Text original anglès, domini públic. OCR.",
      "Herbert_Spencer__Man_versus_the_State_en.txt"),
+
+    # --- Lot 25: obres angleses de Montesquieu (només teníem el francès; els
+    # antics "..._en" eren stubs-índex de Wikisource, trets per remove_stubs.sh).
+    # Nugent mort 1772, Davidson mort 1909 -> traduccions en domini públic. ---
+    ("spiritoflaws01montuoft", "spiritoflaws01montuoft_djvu.txt",
+     "Montesquieu", "The Spirit of Laws, Volume 1", "English",
+     "Complete work", "Written by the author",
+     "L'esperit de les lleis (1748) de Montesquieu, vol. I; traducció anglesa de "
+     "Thomas Nugent (ed. Colonial Press, 1899), domini públic. Complementa l'Esprit "
+     "des lois francès ja present. Digitalització OCR.",
+     "Montesquieu__The_Spirit_of_Laws_Volume_1_en.txt"),
+    ("spiritoflaws02montuoft", "spiritoflaws02montuoft_djvu.txt",
+     "Montesquieu", "The Spirit of Laws, Volume 2", "English",
+     "Complete work", "Written by the author",
+     "L'esperit de les lleis (1748) de Montesquieu, vol. II; traducció anglesa de "
+     "Thomas Nugent (ed. Colonial Press, 1899), domini públic. Digitalització OCR.",
+     "Montesquieu__The_Spirit_of_Laws_Volume_2_en.txt"),
+    ("in.ernet.dli.2015.97067", "2015.97067.Montesquieu-Persian-Letters_djvu.txt",
+     "Montesquieu", "Persian Letters", "English",
+     "Complete work", "Written by the author",
+     "Cartes perses (1721) de Montesquieu: novel·la epistolar (161 cartes) de crítica "
+     "social i política; traducció anglesa de John Davidson (1891), domini públic. "
+     "Complementa les Lettres persanes franceses ja presents. Digitalització OCR.",
+     "Montesquieu__Persian_Letters_Davidson_en.txt"),
 ]
 
 
