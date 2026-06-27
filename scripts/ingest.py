@@ -131,16 +131,41 @@ def strip_gutenberg_boilerplate(body: str) -> str:
 
 
 def strip_mediawiki_markup(text: str) -> str:
-    """Neteja CONSERVADORA de marcatge de MediaWiki/Wikisource. Tracta només patrons
-    SEGURS (entitats HTML, èmfasi, enllaços, plantilles, <ref>, directives) i NO toca
-    les taules {|...|}: en alguns textos (drama, vers) el contingut real viu dins
-    cel·les i eliminar-les destruiria l'obra. Idempotent; no-op sobre text sense marcatge."""
+    """Neteja de marcatge de MediaWiki/Wikisource PRESERVANT el contingut. Treu
+    plantilles (i fragments orfes de plantilles no expandides), enllaços, èmfasi,
+    entitats, <ref> i l'ESQUELET de taules — però conserva el TEXT de les cel·les
+    (en drama/vers el contingut viu dins cel·les; eliminar-les destruiria l'obra,
+    p.ex. Seneca Thyestes). Idempotent; no-op sobre text sense marcatge."""
     text = re.sub(r"__[A-Z]+__", "", text)                      # __NOTOC__, __TOC__...
     for _ in range(3):                                          # plantilles {{...}} (fins 3 nivells)
         new = re.sub(r"\{\{[^{}]*\}\}", "", text)
         if new == text:
             break
         text = new
+    # Fragments ORFES de plantilles de Wikisource que no van expandir (deixen el
+    # tancament/paràmetres al cos): " {{nom...", " |nom = valor", " }}" a inici de línia.
+    text = re.sub(r"(?m)^\s*\{\{[A-Za-z].*$", "", text)
+    # paràmetre orfe "|nom = valor" SENSE segon | (un segon | indica cel·la de taula
+    # amb atributs+contingut, que s'ha de conservar i es tracta més avall).
+    text = re.sub(r"(?m)^\s*\|\s*[A-Za-z][\w .-]*\s*=[^|]*$", "", text)
+    # Taules: treure l'esquelet, conservar el text de les cel·les
+    out: list[str] = []
+    for line in text.splitlines():
+        s = line.lstrip()
+        if s.startswith(("{|", "|}", "|-", "|+")):
+            continue                                            # bastida de taula
+        if s.startswith(("|", "!")):
+            c = s[1:]
+            if c.startswith(("|", "!")):                        # cel·la en línia "||"/"!!"
+                c = c[1:]
+            if "|" in c:                                        # "atributs | contingut"
+                left, right = c.split("|", 1)
+                if "=" in left and len(left) < 80:
+                    c = right
+            out.append(c.strip())
+        else:
+            out.append(line)
+    text = "\n".join(out)
     text = re.sub(r"<ref[^>]*>.*?</ref>", "", text, flags=re.DOTALL | re.IGNORECASE)
     text = re.sub(r"<ref[^>]*/>", "", text, flags=re.IGNORECASE)
     text = re.sub(r"</?[a-zA-Z][^>]*>", "", text)               # altres tags HTML
@@ -153,6 +178,10 @@ def strip_mediawiki_markup(text: str) -> str:
     text = text.replace("&nbsp;", " ").replace("&shy;", "").replace("&amp;", "&")
     text = re.sub(r"&[a-zA-Z]+;", " ", text)                    # altres entitats HTML
     text = re.sub(r"&#\d+;", " ", text)
+    text = re.sub(r"(?m)^:+\s*", "", text)                      # indentació ":" de MediaWiki
+    # Neteja final: {{ }} [[ ]] mai surten en prosa real (orfes, imbricats, mal formats).
+    text = re.sub(r"\[\[#?[^\]|]*\|", "", text)                 # [[àncora|text -> conserva text
+    text = text.replace("[[", "").replace("]]", "").replace("{{", "").replace("}}", "")
     text = re.sub(r"\n{3,}", "\n\n", text)
     return text.strip()
 

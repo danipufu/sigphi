@@ -104,11 +104,42 @@ def test_mw_external_link_keeps_text():
     assert strip_mediawiki_markup("[https://x.org/y Index here]") == "Index here"
 
 
-def test_mw_tables_preserved():
-    # CLAU: el contingut dins taules (vers/drama) NO s'ha de perdre.
+def test_mw_table_content_preserved_skeleton_removed():
+    # CLAU: el text de les cel·les (vers/drama) es conserva; l'esquelet de taula es treu.
     src = "{|\n|-\n| Magnum ingenium Luculli\n|}"
     out = strip_mediawiki_markup(src)
-    assert "{|" in out and "Magnum ingenium Luculli" in out
+    assert "Magnum ingenium Luculli" in out
+    assert "{|" not in out and "|}" not in out
+
+
+def test_mw_inline_cell_verse_preserved():
+    # Cel·la en línia "||" amb vers (cas Seneca Thyestes).
+    out = strip_mediawiki_markup("|| Quis inferorum sede ab infausta extrahit")
+    assert out == "Quis inferorum sede ab infausta extrahit"
+
+
+def test_mw_styled_cell_keeps_content():
+    out = strip_mediawiki_markup('| style="text-align:right" | actual content')
+    assert out == "actual content"
+
+
+def test_mw_orphan_template_fragment_removed():
+    # Plantilla de Wikisource no expandida que deixa tancament + paràmetre orfes.
+    src = "Real letter body here.\n\n |translation = \n}}"
+    out = strip_mediawiki_markup(src)
+    assert "Real letter body here." in out
+    assert "}}" not in out and "translation =" not in out
+
+
+def test_mw_anchor_link_with_nested_brackets():
+    # [[#àncora|text [QQ. 6-17]]] -> conserva el text, treu els claudàtors dobles.
+    out = strip_mediawiki_markup("(1) [[#The Nature|What makes a human act? [QQ. 6-17]]]")
+    assert "What makes a human act?" in out
+    assert "[[" not in out and "]]" not in out
+
+
+def test_mw_double_braces_removed():
+    assert strip_mediawiki_markup("text }}}} more") == "text  more"
 
 
 def test_mw_noop_on_plain_prose():

@@ -17,6 +17,7 @@ FILES=(
   "Epictetus__Enchiridion_Epictetus__en.txt"
   "Emma_Goldman__Prison_Memoirs_of_an_Anarchist_en.txt"
   "Emma_Goldman__Mother_Earth_en.txt"
+  "Hegel__Lectures_on_the_Philosophy_of_Religion_en.txt"  # 2KB: nomes Editor's Preface + taula, no l'obra
 )
 
 echo "=== DRY-RUN ==="
