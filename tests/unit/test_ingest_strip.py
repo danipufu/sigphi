@@ -172,3 +172,38 @@ def test_cr_strips_midline_table_noise():
 
 def test_cr_noop_on_clean_prose():
     assert clean_residual_markup("Plain prose with no markup.") == "Plain prose with no markup."
+
+
+# --- strip_editorial_boilerplate (procedència: [Illustration], Produced by, escaneig) ---
+
+from scripts.ingest import strip_editorial_boilerplate
+
+
+def test_eb_illustration_removed():
+    assert strip_editorial_boilerplate("Real. [Illustration: portrait] More.") == "Real.  More."
+
+
+def test_eb_produced_by_line_removed():
+    out = strip_editorial_boilerplate("BOOK\nProduced by John Bickers and David Widger\n\nCHAPTER I")
+    assert "Produced by" not in out and "CHAPTER I" in out
+
+
+def test_eb_scan_footers_removed():
+    assert "Digitized by" not in strip_editorial_boilerplate("text\nDigitized by Microsoft\nmore")
+    assert "Google Book Search" not in strip_editorial_boilerplate("x\nGoogle Book Search\ny")
+
+
+def test_eb_transcriber_note_header_removed_curly_apostrophe():
+    # apòstrof tipogràfic (’), com surt a molts fitxers reals
+    out = strip_editorial_boilerplate("Body.\nTranscriber’s Notes:\nfixed typos\n")
+    assert "Transcriber’s Notes" not in out
+
+
+def test_eb_keeps_legit_prose_mentions():
+    # mencions reals de 'produced by' / 'transcribers' a mig de frase NO s'esborren
+    assert strip_editorial_boilerplate("corrupted by transcribers of old") == "corrupted by transcribers of old"
+    assert strip_editorial_boilerplate("a play produced by the author") == "a play produced by the author"
+
+
+def test_eb_noop_on_clean_prose():
+    assert strip_editorial_boilerplate("Kant on the categorical imperative.") == "Kant on the categorical imperative."

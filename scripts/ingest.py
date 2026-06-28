@@ -210,6 +210,30 @@ def clean_residual_markup(text: str) -> str:
     return text
 
 
+# Boilerplate de PROCEDÈNCIA (no és part de l'obra): marques d'il·lustració, firmes de
+# transcriptor de Gutenberg, notes de transcriptor i peus d'escaneig de Google/IA. Mai
+# apareixen en prosa filosòfica real, així que es poden treure a qualsevol font.
+_SCAN_BOILERPLATE_RE = re.compile(
+    r"(?im)^.*(?:Digitized by |Google Book Search|"
+    r"This is a digital copy of a book|generated for .+ on \d|"
+    r"\*\*\*\s*(?:START|END) OF (?:THE |THIS )?PROJECT GUTENBERG).*$"
+)
+
+
+def strip_editorial_boilerplate(text: str) -> str:
+    """Treu marques editorials i boilerplate de PROCEDÈNCIA que no formen part de
+    l'obra: [Illustration: ...], firmes de transcriptor de Gutenberg ('Produced by'),
+    notes de transcriptor i peus d'escaneig de Google/Internet Archive. Aplicable a
+    qualsevol font; idempotent."""
+    text = re.sub(r"\[Illustration[^\]]*\]", "", text)                  # [Illustration: ...]
+    text = re.sub(r"\[Transcriber[^\]]*\]", "", text, flags=re.IGNORECASE)
+    text = re.sub(r"(?im)^[ \t]*Produced by .*$", "", text)             # firma de transcriptor
+    text = re.sub(r"(?im)^[ \t]*Transcriber['’]?s? Notes?\b.*$", "", text)  # encapçalament de nota (apòstrof recte o tipogràfic)
+    text = _SCAN_BOILERPLATE_RE.sub("", text)                           # peus d'escaneig
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
 def split_text(text: str, size: int = CHUNK_SIZE, overlap: int = CHUNK_OVERLAP) -> list[str]:
     """Parteix el text. Usa RecursiveCharacterTextSplitter si està disponible;
     si no, fallback per longitud amb overlap."""
@@ -313,6 +337,7 @@ def run_ingest(
             if "wikisource" in (meta.get("source") or "").lower():
                 body = strip_mediawiki_markup(body)   # marcatge MediaWiki complet (només Wikisource)
             body = clean_residual_markup(body)        # entitats HTML + claudàtors residuals (TOTES les fonts)
+            body = strip_editorial_boilerplate(body)  # [Illustration], 'Produced by', peus d'escaneig (TOTES)
             md = file_metadata(path, meta)
             pieces = split_text(body)
             if not pieces:
