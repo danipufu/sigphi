@@ -249,5 +249,50 @@
     "must_include": ["⚠"],
     "expect_suggestions": true,
     "note": "Regla 17: avís de contingut discriminatori (casta) obligatori."
+  },
+  {
+    "id": "anselm-incarnation-en",
+    "query": "What is Anselm's argument in Cur Deus Homo for why God became man?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": ["Anselm"],
+    "expect_suggestions": true,
+    "note": "Text NOU (Cur Deus Homo, Deane 1903): forat d'Anselm omplert."
+  },
+  {
+    "id": "anselm-ontological-en",
+    "query": "How does Anselm argue for the existence of God in the Proslogion?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": ["Anselm"],
+    "expect_suggestions": true,
+    "note": "Argument ontològic; Proslogium de la traducció Deane."
+  },
+  {
+    "id": "spencer-sociology-en",
+    "query": "What difficulties does Herbert Spencer say stand in the way of the study of sociology?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": ["Spencer"],
+    "expect_suggestions": true,
+    "note": "Text NOU (The Study of Sociology): forat de Spencer omplert."
+  },
+  {
+    "id": "montesquieu-powers-en",
+    "query": "What does Montesquieu say about the separation of powers in The Spirit of Laws?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": ["Montesquieu"],
+    "expect_suggestions": true,
+    "note": "Text NOU (Spirit of Laws EN, Nugent): abans només teníem el francès."
+  },
+  {
+    "id": "montesquieu-powers-ca",
+    "query": "Què deia Montesquieu sobre la separació de poders?",
+    "lang": "ca",
+    "expect": "cited",
+    "must_mention": ["Montesquieu"],
+    "expect_suggestions": true,
+    "note": "Regla 7 (CA->CA) + text nou; recupera de fonts EN/FR i respon en català."
   }
 ]
