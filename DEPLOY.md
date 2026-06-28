@@ -1,79 +1,102 @@
-# Desplegament de SigPhi al VPS (Qdrant + corpus complet)
+# Desplegament i manteniment de SigPhi
 
-Estat: tot el codi (Blocs 7–12 + backend Qdrant) validat. Qdrant ja instal·lat
-al VPS (`docker ps` ha de mostrar el contenidor `qdrant`).
+Servidor: **VPS Netcup Ubuntu 24.04** (IP 185.233.107.117, domini **sigphiai.com**).
+App com a usuari **`daniel`** a `/home/daniel/sigphi`. Vector DB: **Qdrant** (Docker,
+només localhost). LLM: **Gemini** (`GOOGLE_API_KEY` al `.env`). HTTPS: **Caddy**.
 
-Treballa com a usuari **`daniel`**, dins el venv, a `/home/daniel/sigphi`.
+> ⚠️ El 27-juny-2026 el servidor antic va ser compromès (miner via SSH amb
+> contrasenya feble) i es va reconstruir de zero amb l'enduriment de la Part A.
+> Veure la memòria `sigphi-vps-rebuild`.
 
 ---
 
-## Pas 3 — Pujar el corpus al VPS (~145 MB comprimit)
+## Part A — Enduriment del servidor (FER PRIMER, sempre)
 
-El corpus ja està comprimit a Windows: `C:\Users\danie\corpus.tar.gz` (941 fitxers, 145 MB).
-Com que l'scp està bloquejat per la xarxa, cal un intermediari web. Opcions:
+El forat va ser **SSH amb contrasenya de root feble**. L'enduriment el tanca:
 
-**A) GitHub Release (recomanat).** Crea un release a
-`https://github.com/danipufu/sigphi/releases/new`, arrossega-hi `corpus.tar.gz`
-com a asset, publica'l i copia la URL de descàrrega. Després, al VPS:
+1. **Reinstal·lar l'OS** des del panell SCP de Netcup (servercontrolpanel.de →
+   Media → Images → Ubuntu 24.04 UEFI) amb contrasenya forta.
+2. **Tallafoc + fail2ban** (com a root):
+   ```bash
+   apt update && NEEDRESTART_MODE=a apt -y upgrade && apt install -y ufw fail2ban
+   ufw allow OpenSSH && ufw allow 80/tcp && ufw allow 443/tcp && ufw --force enable
+   printf '[sshd]\nenabled = true\nbackend = systemd\nmaxretry = 5\nbantime = 1h\n' > /etc/fail2ban/jail.local
+   systemctl enable --now fail2ban && systemctl restart fail2ban
+   ```
+3. **Claus SSH + desactivar contrasenyes** (genera la clau al PC: `ssh-keygen -t ed25519`,
+   copia la pública a `~/.ssh/authorized_keys`, prova que entres amb clau, i llavors):
+   ```bash
+   printf 'PasswordAuthentication no\nKbdInteractiveAuthentication no\nPubkeyAuthentication yes\nPermitRootLogin prohibit-password\n' > /etc/ssh/sshd_config.d/00-hardening.conf
+   sshd -t && systemctl restart ssh
+   ```
+   El prefix `00-` guanya l'ordre dels drop-ins (Ubuntu 24.04 posa
+   `PasswordAuthentication yes` a `50-cloud-init.conf`).
+
+**Auditoria** (després de qualsevol incident): `bash deploy/forensics.sh` (només
+lectura: miner, persistència cron, claus-porta, logins, ports).
+
+---
+
+## Part B — Desplegament de SigPhi (de zero)
+
 ```bash
+# Base + usuari
+apt install -y git python3-venv python3-pip
+adduser --disabled-password --gecos "" daniel
+su - daniel -c "git clone https://github.com/danipufu/sigphi.git /home/daniel/sigphi"
+
 cd /home/daniel/sigphi
-wget -O corpus.tar.gz "URL_DEL_RELEASE"
-tar -xzf corpus.tar.gz           # crea/omple corpus/
-ls corpus | wc -l                # ha de dir ~941
+bash deploy/add_swap.sh          # 4 GB de swap (evita OOM a la ingesta)
+bash deploy/install_qdrant.sh    # Docker + Qdrant a 127.0.0.1:6333
+
+su - daniel -c "cd ~/sigphi && python3 -m venv venv && venv/bin/pip install -r requirements.txt"
+# .env (com a daniel):  GOOGLE_API_KEY=...   i   VECTOR_DB_TYPE=qdrant
+
+bash deploy/get_corpus.sh        # baixa el paquet base (release corpus-v1, ~941 fitxers)
+bash deploy/run_ingest.sh        # ingesta en segon pla (hores).  tail -f ingest.log
+bash deploy/start_app.sh         # servei systemd (sigphi.service, com a daniel)
+bash deploy/setup_caddy.sh       # HTTPS Let's Encrypt per sigphiai.com
+bash deploy/set_ask_key.sh       # genera ASK_API_KEY (per a /api/ask i l'eval)
 ```
 
-**B) Google Drive.** Puja el zip a Drive, fes-lo "qualsevol amb l'enllaç", i:
-```bash
-pip install gdown && gdown "ID_DEL_FITXER" -O corpus.tar.gz && tar -xzf corpus.tar.gz
-```
+Tots els serveis queden `enabled` → sobreviuen a un reinici del VPS.
 
 ---
 
-## Pas 4 — Ingest a Qdrant
+## Part C — Manteniment i QC del corpus
 
-1. Posa el backend al `.env`:
-   ```bash
-   echo "VECTOR_DB_TYPE=qdrant" >> .env
-   ```
-2. **Prova ràpida** (5 fitxers) abans de l'ingest llarg:
-   ```bash
-   VECTOR_DB_TYPE=qdrant python scripts/ingest.py --max-files 5
-   ```
-3. **Ingest complet en segon pla** (resumible; triga hores):
-   ```bash
-   bash deploy/run_ingest.sh
-   tail -f ingest.log              # seguir el progrés
-   ```
-   Si es talla, torna a executar `bash deploy/run_ingest.sh`: continua on anava.
+Tots són **dry-run o demanen confirmació** per defecte; treuen de Qdrant + ChunkStore
+(+ `rm` del `.txt` quan cal, perquè una re-ingesta no els ressusciti).
 
----
+| Script | Què fa |
+|---|---|
+| `deploy/dedup.sh [apply]` | Treu obres **byte-idèntiques** del mateix autor (hash del text); conserva'n 1 |
+| `deploy/remove_stubs.sh` | Treu pàgines-índex de Wikisource (TOC sense text) |
+| `deploy/remove_duplicates.sh` | Treu còpies dolentes de duplicats no idèntics (OCR brossa, etc.) |
+| `deploy/final_polish.sh` | Tot junt: stubs + duplicats + baixar textos nous + re-ingest |
+| `deploy/reingest_clean.sh` | Re-ingereix els fitxers amb boilerplate de procedència (neteja editorial) |
+| `scripts/corpus_health.py` | Verificador: brossa OCR, marcatge, obres tísiques, duplicats candidats |
+| `scripts/eval_golden.py` | Banc de proves de qualitat de respostes (gasta quota Gemini; 20/dia!) |
 
-## Pas 5 — Aixecar l'app i provar
-
-```bash
-VECTOR_DB_TYPE=qdrant uvicorn app.main:app --host 0.0.0.0 --port 8000 &
-curl -s localhost:8000/api/health
-curl -s -X POST localhost:8000/api/chat -H "Content-Type: application/json" \
-  -d '{"query":"Què deia Plató sobre la justícia?","history":[]}'
-```
+**Afegir textos nous:** edita `scripts/download_archive.py` (archive.org),
+`scripts/download_sacred.py` (Gutenberg) o `scripts/download_wikisource.py`, després
+al VPS `git pull` → `venv/bin/python3 scripts/download_*.py` → `ingest.py`.
+**Regla de domini públic:** PD UE = 70 anys post-mortem (autor **i** traductor).
 
 ---
 
-## Pas 6 — Servei permanent (systemd)
+## Part D — Neteja del text a la ingesta (`scripts/ingest.py`)
 
-```bash
-sudo cp deploy/systemd/sigphi.service /etc/systemd/system/sigphi.service
-sudo systemctl daemon-reload
-sudo systemctl enable --now sigphi
-systemctl status sigphi
-```
+Cada fitxer passa per (en ordre):
 
-## Pas 7 — HTTPS públic (Caddy) — quan tinguis un domini
-Edita `deploy/Caddyfile` amb el teu domini i:
-```bash
-sudo apt install -y caddy
-sudo cp deploy/Caddyfile /etc/caddy/Caddyfile
-sudo systemctl reload caddy
-```
-> Nota: des de la xarxa actual (Andorra) l'accés HTTP al VPS està bloquejat;
-> prova per `curl localhost` a la VNC. L'accés públic funcionarà des d'altres xarxes.
+1. `strip_perseus_frontmatter` — crèdits editorials Perseus + blocs CVS `$Log:`.
+2. `strip_gutenberg_boilerplate` — capçalera/peu `*** START/END OF PROJECT GUTENBERG ***`.
+3. `strip_mediawiki_markup` (només `source: wikisource`) — plantilles, enllaços, `<ref>`,
+   èmfasi, i l'**esquelet** de taules (conserva el text de les cel·les: vers/drama).
+4. `clean_residual_markup` (totes les fonts) — `html.unescape` (entitats numèriques de
+   marxists.org) + claudàtors `[[ ]] {{ }}` i soroll `{| |}` residual.
+5. `strip_editorial_boilerplate` (totes) — `[Illustration:...]`, firmes `Produced by`,
+   notes de transcriptor, peus d'escaneig de Google/Internet Archive.
+
+El text NET es guarda i es mostra a l'LLM; el text EMBEGUT du a més un prefix amb el
+nom de l'autor en 12 idiomes (cerca cross-lingual).
