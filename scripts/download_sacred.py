@@ -553,6 +553,13 @@ TEXTS = [
      "en la semblança o en la utilitat. Traducció de Benjamin Jowett (1871), domini "
      "públic, no el grec original.",
      "Plato__Lysis_Jowett_en.txt"),
+
+    # --- Lot 21: omplir forats d'autors ---
+    (16510, "Herbert Spencer", "Essays on Education and Kindred Subjects", "English",
+     "Complete work", "Written by the author",
+     "Assaigs de Herbert Spencer sobre educació intel·lectual, moral i física (1861) i "
+     "temes afins. Original anglès, domini públic.",
+     "Herbert_Spencer__Essays_on_Education_en.txt"),
 ]
 
 _START = re.compile(r"\*\*\*\s*START OF (THE|THIS) PROJECT GUTENBERG.*?\*\*\*", re.I | re.S)

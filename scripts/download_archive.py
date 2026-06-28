@@ -636,6 +636,27 @@ TEXTS = [
      "social i política; traducció anglesa de John Davidson (1891), domini públic. "
      "Complementa les Lettres persanes franceses ja presents. Digitalització OCR.",
      "Montesquieu__Persian_Letters_Davidson_en.txt"),
+
+    # --- Lot 26: omplir forats d'autors (obres canòniques que faltaven, totes PD) ---
+    ("proslogiummonol00deangoog", "proslogiummonol00deangoog_djvu.txt",
+     "Anselm of Canterbury", "Proslogium, Monologium, and Cur Deus Homo (Deane)", "English",
+     "Complete work", "Written by the author",
+     "Obres principals d'Anselm de Canterbury (s. XI): Proslogium (argument ontològic), "
+     "Monologium, l'apèndix de Gaunilo i Cur Deus Homo (per què Déu es va fer home); "
+     "traducció anglesa de Sidney Norton Deane (1903), domini públic. Digitalització OCR.",
+     "Anselm_of_Canterbury__Proslogium_Monologium_Cur_Deus_Homo_Deane_en.txt"),
+    ("studyofsociology12spenuoft", "studyofsociology12spenuoft_djvu.txt",
+     "Herbert Spencer", "The Study of Sociology", "English",
+     "Complete work", "Written by the author",
+     "L'estudi de la sociologia (1873) de Herbert Spencer: el mètode, els biaixos i les "
+     "dificultats de la ciència social. Original anglès, domini públic. Digitalització OCR.",
+     "Herbert_Spencer__The_Study_of_Sociology_en.txt"),
+    ("cu31924077682825", "cu31924077682825_djvu.txt",
+     "Herbert Spencer", "Social Statics", "English",
+     "Complete work", "Written by the author",
+     "Social Statics (1851) de Herbert Spencer: les condicions per a la felicitat humana "
+     "i la llei de la igual llibertat. Original anglès, domini públic. Digitalització OCR.",
+     "Herbert_Spencer__Social_Statics_en.txt"),
 ]
 
 
