@@ -121,6 +121,10 @@ _LANGUAGE_SUFFIX_RE = re.compile(
 # "by Juan Luis Vives"). Normalitzat: "by" + almenys 4 lletres.
 _BY_AUTHOR_SUFFIX_RE = re.compile(r"^by[a-z]{4,}.*$")
 
+# Sufix amb una atribució de TRADUCTOR ("Translated by X", "with an English
+# translation by X"): és la mateixa obra amb el traductor anomenat, no un duplicat.
+_TRANSLATOR_SUFFIX_RE = re.compile(r"transl(ated|ation)by")
+
 
 def find_duplicate_titles(works: list[str]) -> list[tuple[str, str]]:
     """Parelles d'obres del mateix autor amb títol quasi idèntic: un títol normalitzat
@@ -149,6 +153,8 @@ def find_duplicate_titles(works: list[str]) -> list[tuple[str, str]]:
                     continue  # etiqueta d'idioma
                 if _BY_AUTHOR_SUFFIX_RE.fullmatch(suffix):
                     continue  # atribució d'autoria
+                if _TRANSLATOR_SUFFIX_RE.search(suffix):
+                    continue  # atribució de traductor (mateixa obra, traducció anomenada)
                 pairs.append((w1, w2))
     return pairs
 
