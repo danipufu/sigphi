@@ -181,6 +181,16 @@ class GeminiLLM:
                 "\n\n[IMPORTANT: write your entire reply in the SAME language as THIS "
                 "question, regardless of the language of earlier turns or of the sources.]"
             )
+        # Recordatori de la regla 21 ENGANXAT al final (instrucció més recent = molt més
+        # obeïda pels models petits que la regla soterrada al system prompt). Si la
+        # resposta no és un cas NO_SOURCES, ha d'acabar amb el bloc [[SUGGESTIONS]].
+        directive += (
+            "\n\n[REMINDER — rule 21: unless this is a [[NO_SOURCES]] reply (greeting, "
+            "holdings/meta, advice refusal, out-of-corpus, or not-in-the-texts), you MUST "
+            "finish with the block, as the very last thing and nothing after it:\n"
+            "[[SUGGESTIONS]]\n- <q1>\n- <q2>\n- <q3>\n"
+            "Three short follow-up questions in the user's language. Do NOT omit this block.]"
+        )
         messages.append(HumanMessage(content=user_query + directive))
 
         # Reintents amb espera creixent: el pla gratuït de Gemini limita ~req/min i
