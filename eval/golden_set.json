@@ -294,5 +294,23 @@
     "must_mention": ["Montesquieu"],
     "expect_suggestions": true,
     "note": "Regla 7 (CA->CA) + text nou; recupera de fonts EN/FR i respon en català."
+  },
+  {
+    "id": "leibniz-innate-ideas-en",
+    "query": "How does Leibniz argue against Locke that there are innate ideas?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": ["Leibniz"],
+    "expect_suggestions": true,
+    "note": "Text NOU (New Essays Concerning Human Understanding, Langley): autor prim reforçat."
+  },
+  {
+    "id": "berkeley-freethinkers-en",
+    "query": "What is Berkeley's argument against the freethinkers in Alciphron?",
+    "lang": "en",
+    "expect": "cited",
+    "must_mention": ["Berkeley"],
+    "expect_suggestions": true,
+    "note": "Text NOU (Alciphron): autor prim reforçat."
   }
 ]

@@ -657,6 +657,22 @@ TEXTS = [
      "Social Statics (1851) de Herbert Spencer: les condicions per a la felicitat humana "
      "i la llei de la igual llibertat. Original anglès, domini públic. Digitalització OCR.",
      "Herbert_Spencer__Social_Statics_en.txt"),
+
+    # --- Lot 27: reforçar autors prims amb obres canòniques que faltaven (totes PD) ---
+    ("newessaysconcern00leibuoft", "newessaysconcern00leibuoft_djvu.txt",
+     "Leibniz", "New Essays Concerning Human Understanding", "English",
+     "Complete work", "Written by the author",
+     "Resposta de Leibniz a l'Assaig de Locke (obra major, publicada pòstumament): "
+     "defensa de les idees innates i de l'apercepció. Traducció d'Alfred G. Langley "
+     "(1896), domini públic. Digitalització OCR.",
+     "Leibniz__New_Essays_Concerning_Human_Understanding_Langley_en.txt"),
+    ("alciphron00berk", "alciphron00berk_djvu.txt",
+     "George Berkeley", "Alciphron, or the Minute Philosopher", "English",
+     "Complete work", "Written by the author",
+     "Sèrie de diàlegs (1732) de George Berkeley en defensa de la religió cristiana "
+     "contra els lliurepensadors ('minute philosophers'); inclou la seva teoria del "
+     "llenguatge i dels signes. Original anglès, domini públic. Digitalització OCR.",
+     "George_Berkeley__Alciphron_en.txt"),
 ]
 
 
