@@ -367,18 +367,18 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
     # A Gradio <6, theme/css van al Blocks; a >=6 van a mount_gradio_app (a sota).
     blocks_kwargs = {} if _MOUNT_SUPPORTS_CSS else {"theme": SIGPHI_THEME, "css": SIGPHI_CSS}
     with gr.Blocks(title="SigPhi", **blocks_kwargs) as demo:
-        hero = gr.HTML(_hero_html("Català"))
+        hero = gr.HTML(_hero_html("English"))
         lang = gr.Radio(
             [
                 "Català", "Español", "English", "Français", "Deutsch", "Italiano",
                 "Русский", "中文", "日本語", "العربية", "हिन्दी",
             ],
-            value="Català",
+            value="English",
             show_label=False,
             container=False,
             elem_id="sigphi-lang",
         )
-        header = gr.Markdown(HEADERS["Català"], elem_id="sigphi-header")
+        header = gr.Markdown(HEADERS["English"], elem_id="sigphi-header")
         # Estat amb les preguntes suggerides de l'ÚLTIMA resposta. S'omple via
         # additional_outputs del ChatInterface (i del runner de chips). Quan canvia,
         # @gr.render recrea els chips de seguiment.
@@ -387,7 +387,7 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
             fn=respond_full,
             chatbot=gr.Chatbot(elem_id="sigphi-chat", height=460, show_label=False),
             textbox=gr.Textbox(
-                placeholder="Fes una pregunta sobre filosofia… (en qualsevol idioma)",
+                placeholder="Ask a question about philosophy… (in any language)",
                 elem_id="sigphi-input",
                 container=False,
                 scale=7,
@@ -440,7 +440,33 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
                     for q in random.sample(EXAMPLE_POOL_EN, N_EXAMPLES):
                         _chip(q, "sigphi-ex")
 
-        footer = gr.HTML(_footer_html("Català"))
+        footer = gr.HTML(_footer_html("English"))
+
+        # Catàleg complet (autors + obres) que coneix la IA, plegable. Es pobla al
+        # carregar la pàgina (demo.load), quan chunk_store ja és a app.state.
+        with gr.Accordion(
+            "📚 Authors & texts in the corpus", open=False, elem_id="sigphi-catalog"
+        ):
+            catalog_md = gr.Markdown("")
+
+        def _catalog_md() -> str:
+            cs = app.state.chunk_store
+            items = cs.catalog()
+            n_authors = len(items)
+            n_works = sum(len(i["works"]) for i in items)
+            n_chunks = cs.count()
+            lines = [
+                f"**{n_authors} authors · {n_works} works · {n_chunks:,} passages**",
+                "",
+            ]
+            for it in items:
+                lines.append(
+                    f"- **{it['author']}** ({len(it['works'])}): "
+                    + "; ".join(it["works"])
+                )
+            return "\n".join(lines)
+
+        demo.load(_catalog_md, outputs=catalog_md)
 
         lang.change(
             lambda l: (_hero_html(l), HEADERS[l], _footer_html(l)),
