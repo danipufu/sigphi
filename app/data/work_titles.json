@@ -1,0 +1,91 @@
+[
+  {"keys": ["The Prince"],
+   "titles": {"ca":"El príncep","es":"El príncipe","fr":"Le Prince","de":"Der Fürst","it":"Il principe","ru":"Государь","zh":"君主论","ja":"君主論","ar":"الأمير","hi":"द प्रिंस"}},
+
+  {"keys": ["The Republic", "The Republic of Plato"],
+   "titles": {"ca":"La República","es":"La República","fr":"La République","de":"Politeia","it":"La Repubblica","ru":"Государство","zh":"理想国","ja":"国家","ar":"الجمهورية","hi":"रिपब्लिक"}},
+
+  {"keys": ["Nicomachean Ethics EN", "The Nicomachean ethics of Aristotle"],
+   "titles": {"ca":"Ètica nicomaquea","es":"Ética nicomáquea","fr":"Éthique à Nicomaque","de":"Nikomachische Ethik","it":"Etica Nicomachea","ru":"Никомахова этика","zh":"尼各马可伦理学","ja":"ニコマコス倫理学","ar":"الأخلاق النيقوماخية","hi":"निकोमेकियन नीतिशास्त्र"}},
+
+  {"keys": ["Metaphysics EN"],
+   "titles": {"ca":"Metafísica","es":"Metafísica","fr":"Métaphysique","de":"Metaphysik","it":"Metafisica","ru":"Метафизика","zh":"形而上学","ja":"形而上学","ar":"ما وراء الطبيعة","hi":"मेटाफिजिक्स"}},
+
+  {"keys": ["Politics EN", "Politics A Treatise on Government"],
+   "titles": {"ca":"Política","es":"Política","fr":"Politique","de":"Politik","it":"Politica","ru":"Политика","zh":"政治学","ja":"政治学","ar":"السياسة","hi":"पॉलिटिक्स"}},
+
+  {"keys": ["Poetics EN", "The Poetics of Aristotle", "Aristotle on the art of poetry"],
+   "titles": {"ca":"Poètica","es":"Poética","fr":"Poétique","de":"Poetik","it":"Poetica","ru":"Поэтика","zh":"诗学","ja":"詩学","ar":"فن الشعر","hi":"पोएटिक्स"}},
+
+  {"keys": ["Meditations", "The Meditations of the Emperor Marcus Aurelius Antoninus", "Thoughts of Marcus Aurelius Antoninus"],
+   "titles": {"ca":"Meditacions","es":"Meditaciones","fr":"Pensées pour moi-même","de":"Selbstbetrachtungen","it":"Colloqui con sé stesso","ru":"К самому себе","zh":"沉思录","ja":"自省録","ar":"التأملات"}},
+
+  {"keys": ["Thus Spake Zarathustra A Book for All and None"],
+   "titles": {"ca":"Així parlà Zaratustra","es":"Así habló Zaratustra","fr":"Ainsi parlait Zarathoustra","de":"Also sprach Zarathustra","it":"Così parlò Zarathustra","ru":"Так говорил Заратустра","zh":"查拉图斯特拉如是说","ja":"ツァラトゥストラはこう語った","ar":"هكذا تكلم زرادشت"}},
+
+  {"keys": ["Beyond Good and Evil"],
+   "titles": {"ca":"Més enllà del bé i del mal","es":"Más allá del bien y del mal","fr":"Par-delà le bien et le mal","de":"Jenseits von Gut und Böse","it":"Al di là del bene e del male","ru":"По ту сторону добра и зла","zh":"善恶的彼岸","ja":"善悪の彼岸","ar":"ما وراء الخير والشر"}},
+
+  {"keys": ["The Genealogy of Morals"],
+   "titles": {"ca":"La genealogia de la moral","es":"La genealogía de la moral","fr":"Généalogie de la morale","de":"Zur Genealogie der Moral","it":"Genealogia della morale","zh":"道德谱系学","ja":"道徳の系譜","ar":"في علم أنساب الأخلاق"}},
+
+  {"keys": ["The Critique of Pure Reason"],
+   "titles": {"ca":"Crítica de la raó pura","es":"Crítica de la razón pura","fr":"Critique de la raison pure","de":"Kritik der reinen Vernunft","it":"Critica della ragion pura","ru":"Критика чистого разума","zh":"纯粹理性批判","ja":"純粋理性批判","ar":"نقد العقل الخالص","hi":"शुद्ध तर्कबुद्धि की समालोचना"}},
+
+  {"keys": ["The Critique of Practical Reason", "Critique of Practical Reason"],
+   "titles": {"ca":"Crítica de la raó pràctica","es":"Crítica de la razón práctica","fr":"Critique de la raison pratique","de":"Kritik der praktischen Vernunft","it":"Critica della ragion pratica","ru":"Критика практического разума","zh":"实践理性批判","ja":"実践理性批判","ar":"نقد العقل العملي"}},
+
+  {"keys": ["Groundwork of the Metaphysics of Morals", "Fundamental Principles of the Metaphysic of Morals"],
+   "titles": {"ca":"Fonamentació de la metafísica dels costums","es":"Fundamentación de la metafísica de las costumbres","fr":"Fondements de la métaphysique des mœurs","de":"Grundlegung zur Metaphysik der Sitten","it":"Fondazione della metafisica dei costumi","ru":"Основы метафизики нравственности","zh":"道德形上学基础","ja":"人倫の形而上学の基礎づけ","ar":"أسس غيبيات الأخلاق"}},
+
+  {"keys": ["Discourse on the Method of Rightly Conducting One's Reason and of Seeking Truth", "A Discourse of a Method for the Well Guiding of Reason"],
+   "titles": {"ca":"Discurs del mètode","es":"Discurso del método","fr":"Discours de la méthode","de":"Discours de la méthode","it":"Discorso sul metodo","ru":"Рассуждение о методе","zh":"談談方法","ja":"方法序説","ar":"مقال عن المنهج"}},
+
+  {"keys": ["Six metaphysical meditations"],
+   "titles": {"ca":"Meditacions metafísiques","es":"Meditaciones metafísicas","fr":"Méditations métaphysiques","de":"Meditationes de prima philosophia","it":"Meditazioni metafisiche","ru":"Размышления о первой философии","zh":"第一哲学沉思集","ja":"省察","ar":"تأملات في الفلسفة الأولى"}},
+
+  {"keys": ["Ethics"],
+   "titles": {"ca":"Ètica","es":"Ética","fr":"Éthique","de":"Ethica","it":"Ethica","ru":"Этика","zh":"伦理学","ja":"エチカ","ar":"أخلاقيات"}},
+
+  {"keys": ["Leviathan"],
+   "titles": {"ca":"Leviatan","es":"Leviatán","fr":"Léviathan","de":"Leviathan","it":"Leviatano","ru":"Левиафан","zh":"利维坦","ja":"リヴァイアサン","ar":"الليفياثان"}},
+
+  {"keys": ["Du contrat social (Le contrat social)"],
+   "titles": {"ca":"El contracte social","es":"El contrato social","fr":"Du contrat social","de":"Vom Gesellschaftsvertrag","it":"Il contratto sociale","ru":"Об общественном договоре","zh":"社会契约论","ja":"社会契約論","ar":"العقد الاجتماعي"}},
+
+  {"keys": ["Emile"],
+   "titles": {"ca":"Emili, o De l'educació","es":"Emilio, o De la educación","fr":"Émile ou De l'éducation","de":"Émile oder Über die Erziehung","it":"Emilio o dell'educazione","ru":"Эмиль, или О воспитании","zh":"爱弥儿","ja":"エミール"}},
+
+  {"keys": ["A Discourse Upon the Origin and the Foundation of the Inequality Among Mankind"],
+   "titles": {"ca":"Discurs sobre l'origen i els fonaments de la desigualtat entre els homes","es":"Discurso sobre el origen y los fundamentos de la desigualdad entre los hombres","fr":"Discours sur l'origine et les fondements de l'inégalité parmi les hommes","de":"Abhandlung über den Ursprung und die Grundlagen der Ungleichheit unter den Menschen","it":"Discorso sull'origine e i fondamenti della diseguaglianza tra gli uomini","zh":"论人类不平等的起源与基础","ja":"人間不平等起源論"}},
+
+  {"keys": ["The Confessions of Jean Jacques Rousseau — Complete"],
+   "titles": {"fr":"Les Confessions","de":"Die Bekenntnisse","it":"Le confessioni","ru":"Исповедь","zh":"忏悔录","ja":"告白","ar":"اعترافات جان جاك روسو"}},
+
+  {"keys": ["The Communist Manifesto", "Manifesto of the Communist Party"],
+   "titles": {"ca":"El manifest comunista","es":"Manifiesto del Partido Comunista","fr":"Manifeste du parti communiste","de":"Manifest der Kommunistischen Partei","it":"Manifesto del Partito Comunista","ru":"Манифест Коммунистической партии","zh":"共产党宣言","ja":"共産党宣言","ar":"بيان الحزب الشيوعي","hi":"कम्युनिस्ट पार्टी का घोषणापत्र"}},
+
+  {"keys": ["On Liberty"],
+   "titles": {"ca":"Sobre la llibertat","es":"Sobre la libertad","fr":"De la liberté","it":"Saggio sulla libertà","zh":"论自由","ja":"自由論","ar":"عن الحرية"}},
+
+  {"keys": ["Utilitarianism"],
+   "titles": {"ca":"L'utilitarisme","es":"El utilitarismo","de":"Der Utilitarismus","zh":"效益主义","ja":"功利主義論","ar":"النفعية"}},
+
+  {"keys": ["The Subjection of Women"],
+   "titles": {"ca":"La submissió de les dones","es":"La esclavitud de las mujeres","fr":"De l'assujettissement des femmes","de":"Die Hörigkeit der Frau","it":"La servitù delle donne","zh":"妇女的屈从地位","ar":"استعباد النساء","hi":"स्त्रियों की पराधीनता"}},
+
+  {"keys": ["Confessions EN", "The Confessions of St. Augustine"],
+   "titles": {"ca":"Confessions","es":"Confesiones","fr":"Les Confessions","de":"Confessiones","it":"Confessioni","ru":"Исповедь","zh":"忏悔录","ja":"告白","ar":"اعترافات القديس أوغسطين"}},
+
+  {"keys": ["City of God EN"],
+   "titles": {"ca":"La ciutat de Déu","es":"La ciudad de Dios","fr":"La Cité de Dieu","de":"De civitate Dei","it":"La città di Dio","ru":"О граде Божьем","zh":"上帝之城","ja":"神の国","ar":"مدينة الله"}},
+
+  {"keys": ["The Analects of Confucius (from the Chinese Classics)"],
+   "titles": {"ca":"Analectes de Confuci","es":"Analectas de Confucio","fr":"Entretiens de Confucius","de":"Gespräche des Konfuzius","it":"Dialoghi","ru":"Лунь юй","zh":"论语","ja":"論語","ar":"تعاليم كونفوشيوس","hi":"कन्फ्यूशियस सूक्ति-संग्रह"}},
+
+  {"keys": ["An Inquiry into the Nature and Causes of the Wealth of Nations"],
+   "titles": {"ca":"La riquesa de les nacions","es":"La riqueza de las naciones","fr":"Recherches sur la nature et les causes de la richesse des nations","de":"Der Wohlstand der Nationen","it":"La ricchezza delle nazioni","ru":"Исследование о природе и причинах богатства народов","zh":"国富论","ja":"国富論","ar":"ثروة الأمم","hi":"राष्ट्रों का धन"}},
+
+  {"keys": ["The Theory of Moral Sentiments"],
+   "titles": {"ca":"Teoria dels sentiments morals","es":"La teoría de los sentimientos morales","fr":"Théorie des sentiments moraux","de":"Theorie der ethischen Gefühle","it":"Teoria dei sentimenti morali","ru":"Теория нравственных чувств","zh":"道德情操论","ja":"道徳感情論","ar":"نظرية المشاعر الأخلاقية"}}
+]

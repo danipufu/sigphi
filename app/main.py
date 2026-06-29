@@ -444,14 +444,18 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
         footer = gr.HTML(_footer_html("English"))
 
         # Catàleg que coneix la IA, plegable: recompte + selector d'autor cercable.
-        # Els NOMS d'autor es localitzen segons l'idioma (àlies en 11 llengües); els
-        # TÍTOLS d'obra es deixen en l'original (citables; molts són llatí/grec). Es
-        # pobla a demo.load i es desa a _cat per no re-consultar a cada selecció.
+        # Els NOMS d'autor es queden canònics (ja en alfabet llatí); els TÍTOLS
+        # d'obra es tradueixen al títol publicat real per idioma (mapa curat
+        # work_titles.json, font: enllaços interlingües de Wikipedia), amb fallback
+        # a l'original. Es pobla a demo.load i es desa a _cat.
         import json as _json
         try:
-            _ALIASES = _json.loads(get_settings().aliases_path.read_text(encoding="utf-8"))
+            _wt = _json.loads(
+                (get_settings().aliases_path.parent / "work_titles.json").read_text(encoding="utf-8")
+            )
+            _TITLES = {k: e["titles"] for e in _wt for k in e["keys"]}
         except Exception:
-            _ALIASES = {}
+            _TITLES = {}
         _LANG_CODE = {
             "Català": "ca", "Español": "es", "English": "en", "Français": "fr",
             "Deutsch": "de", "Italiano": "it", "Русский": "ru", "中文": "zh",
@@ -459,13 +463,9 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
         }
         _cat: dict[str, list[str]] = {}
 
-        def _author_label(author: str, code: str) -> str:
-            """Nom de l'autor en l'idioma 'code' (àlies), o el canònic si no hi és."""
-            return (_ALIASES.get(author) or {}).get(code, author)
-
-        def _author_choices(code: str):
-            # (etiqueta localitzada, valor canònic); conserva l'ordre del catàleg
-            return [(_author_label(a, code), a) for a in _cat]
+        def _title(work: str, code: str) -> str:
+            """Títol de l'obra en l'idioma 'code', o l'original si no hi ha traducció."""
+            return (_TITLES.get(work) or {}).get(code, work)
 
         with gr.Accordion(
             "📚 Authors & texts in the corpus", open=False, elem_id="sigphi-catalog"
@@ -476,7 +476,7 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
             )
             works_md = gr.Markdown("")
 
-        def _catalog_init(lang_value):
+        def _catalog_init():
             cs = app.state.chunk_store
             _cat.clear()
             for it in cs.catalog():
@@ -484,26 +484,24 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
             n_works = sum(len(w) for w in _cat.values())
             summary = (
                 f"**{len(_cat)} authors · {n_works} works · {cs.count():,} passages** — "
-                "pick an author to see their works. Titles are shown in their original language."
+                "pick an author to see their works."
             )
-            code = _LANG_CODE.get(lang_value, "en")
-            return summary, gr.update(choices=_author_choices(code), value=None), ""
+            return summary, gr.update(choices=list(_cat.keys()), value=None), ""
 
         def _author_works(author, lang_value):
             works = _cat.get(author or "", [])
             if not works:
                 return ""
-            name = _author_label(author, _LANG_CODE.get(lang_value, "en"))
-            body = "\n".join(f"- {w}" for w in works)
-            return f"**{name}** — {len(works)} works:\n\n{body}"
-
-        def _relabel_catalog(lang_value, author):
             code = _LANG_CODE.get(lang_value, "en")
-            return gr.update(choices=_author_choices(code), value=author), _author_works(author, lang_value)
+            body = "\n".join(f"- {_title(w, code)}" for w in works)
+            return f"**{author}** — {len(works)} works:\n\n{body}"
 
-        demo.load(_catalog_init, inputs=lang, outputs=[catalog_summary, author_pick, works_md])
+        def _relabel_works(lang_value, author):
+            return _author_works(author, lang_value)
+
+        demo.load(_catalog_init, outputs=[catalog_summary, author_pick, works_md])
         author_pick.change(_author_works, inputs=[author_pick, lang], outputs=works_md)
-        lang.change(_relabel_catalog, inputs=[lang, author_pick], outputs=[author_pick, works_md])
+        lang.change(_relabel_works, inputs=[lang, author_pick], outputs=works_md)
 
         lang.change(
             lambda l: (_hero_html(l), HEADERS[l], _footer_html(l)),
