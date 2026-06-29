@@ -368,7 +368,7 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
     blocks_kwargs = {} if _MOUNT_SUPPORTS_CSS else {"theme": SIGPHI_THEME, "css": SIGPHI_CSS}
     with gr.Blocks(title="SigPhi", **blocks_kwargs) as demo:
         hero = gr.HTML(_hero_html("English"))
-        lang = gr.Radio(
+        lang = gr.Dropdown(
             [
                 "Català", "Español", "English", "Français", "Deutsch", "Italiano",
                 "Русский", "中文", "日本語", "العربية", "हिन्दी",
@@ -376,6 +376,7 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
             value="English",
             show_label=False,
             container=False,
+            filterable=False,
             elem_id="sigphi-lang",
         )
         header = gr.Markdown(HEADERS["English"], elem_id="sigphi-header")
@@ -442,31 +443,42 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
 
         footer = gr.HTML(_footer_html("English"))
 
-        # Catàleg complet (autors + obres) que coneix la IA, plegable. Es pobla al
-        # carregar la pàgina (demo.load), quan chunk_store ja és a app.state.
+        # Catàleg que coneix la IA, plegable: recompte + selector d'autor cercable
+        # que mostra les obres de l'autor triat. Es pobla a demo.load (chunk_store
+        # ja és a app.state) i es desa a _cat per no re-consultar a cada selecció.
+        _cat: dict[str, list[str]] = {}
+
         with gr.Accordion(
             "📚 Authors & texts in the corpus", open=False, elem_id="sigphi-catalog"
         ):
-            catalog_md = gr.Markdown("")
+            catalog_summary = gr.Markdown("")
+            author_pick = gr.Dropdown(
+                choices=[], label="Browse by author", elem_id="sigphi-author-pick"
+            )
+            works_md = gr.Markdown("")
 
-        def _catalog_md() -> str:
+        def _catalog_init():
             cs = app.state.chunk_store
             items = cs.catalog()
-            n_authors = len(items)
-            n_works = sum(len(i["works"]) for i in items)
-            n_chunks = cs.count()
-            lines = [
-                f"**{n_authors} authors · {n_works} works · {n_chunks:,} passages**",
-                "",
-            ]
+            _cat.clear()
             for it in items:
-                lines.append(
-                    f"- **{it['author']}** ({len(it['works'])}): "
-                    + "; ".join(it["works"])
-                )
-            return "\n".join(lines)
+                _cat[it["author"]] = it["works"]
+            n_works = sum(len(w) for w in _cat.values())
+            summary = (
+                f"**{len(_cat)} authors · {n_works} works · {cs.count():,} passages** — "
+                "pick an author to see their works."
+            )
+            return summary, gr.update(choices=list(_cat.keys()), value=None), ""
 
-        demo.load(_catalog_md, outputs=catalog_md)
+        def _author_works(author):
+            works = _cat.get(author or "", [])
+            if not works:
+                return ""
+            body = "\n".join(f"- {w}" for w in works)
+            return f"**{author}** — {len(works)} works:\n\n{body}"
+
+        demo.load(_catalog_init, outputs=[catalog_summary, author_pick, works_md])
+        author_pick.change(_author_works, inputs=author_pick, outputs=works_md)
 
         lang.change(
             lambda l: (_hero_html(l), HEADERS[l], _footer_html(l)),
