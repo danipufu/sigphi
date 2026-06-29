@@ -17,6 +17,13 @@ from app.services.retrieval import RetrievalService
 # Captura [[NO_SOURCES]] (i variants amb un sol claudàtor) en qualsevol posició.
 _NO_SOURCES_RE = re.compile(r"\s*\[+\s*NO_SOURCES\s*\]+\s*")
 
+# Missatge quan s'arriba al tope de despesa mensual (protecció de factura). Trilingüe.
+_BUDGET_MSG = (
+    "⏳ SigPhi ha arribat al límit d'ús d'aquest mes. Disculpa les molèsties; torna-ho a provar més endavant.\n"
+    "⏳ SigPhi ha alcanzado el límite de uso de este mes. Disculpa las molestias; inténtalo más adelante.\n"
+    "⏳ SigPhi has reached this month's usage limit. Sorry for the inconvenience; please try again later."
+)
+
 # Bloc de preguntes suggerides que l'LLM afegeix AL FINAL (regla 21). El separem de
 # la resposta visible i el retornem a part perquè la UI el mostri com a chips
 # clicables. Tolera variants amb un sol claudàtor i text fins al final del missatge.
@@ -156,17 +163,30 @@ class ChatService:
         retrieval: RetrievalService,
         max_history: int = 5,
         biographies: dict[str, str] | None = None,
+        meter=None,
+        monthly_budget_eur: float = 0.0,
     ) -> None:
         self._llm = llm
         self._retrieval = retrieval
         self._max_history = max_history
         self._bios = biographies or {}
+        self._meter = meter  # UsageMeter-like (.month_cost_eur()) o None
+        self._budget = monthly_budget_eur
 
     def answer(
         self,
         query: str,
         history: list[tuple[str, str]] | None = None,
     ) -> ChatResult:
+        # Tope de despesa mensual: si s'hi ha arribat, no cridem l'LLM (protecció de
+        # factura). El retrieval és local (gratuït), però l'estalviem igualment.
+        if (
+            self._meter is not None
+            and self._budget > 0
+            and self._meter.month_cost_eur() >= self._budget
+        ):
+            return ChatResult(answer=_BUDGET_MSG, sources=[], retrieved=[])
+
         # Per a seguiments (canvi d'idioma, "explica més"...) recuperem amb el TEMA
         # de la pregunta anterior, no amb el text literal del seguiment. L'LLM, però,
         # rep la instrucció ORIGINAL + l'historial, així re-fà la resposta com es demana.

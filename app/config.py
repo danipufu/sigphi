@@ -76,6 +76,18 @@ class Settings(BaseSettings):
     # === Rate limit (FastAPI/slowapi) ===
     rate_limit: str = "10/minute"
 
+    # === Tope de despesa de l'LLM (protecció de factura) ===
+    # L'app deixa de cridar Gemini si el cost estimat del mes hi arriba. 0 = sense tope.
+    monthly_budget_eur: float = 10.0
+    # Preus de Gemini per 1M de tokens (EUR aprox., ajustables). flash-lite ~ 0.10/0.40.
+    llm_price_input_per_million_eur: float = 0.10
+    llm_price_output_per_million_eur: float = 0.40
+    # Sostre de llargada de la resposta: evita generacions desbocades però prou ampli
+    # per NO truncar respostes llargues ni el bloc [[SUGGESTIONS]] final. Per-tier a la Fase 1.
+    max_output_tokens: int = 2048
+    # Comptador d'ús (SQLite, agregat per mes)
+    usage_store_path: Path = Path("./data/usage.sqlite")
+
 
 @lru_cache(maxsize=1)
 def get_settings() -> Settings:

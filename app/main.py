@@ -30,6 +30,7 @@ from app.infrastructure.vector_db import build_vector_db
 from app.services.biographies import load_biographies
 from app.services.chat import ChatService
 from app.services.retrieval import RetrievalService
+from app.services.usage import UsageMeter
 
 
 @asynccontextmanager
@@ -38,15 +39,29 @@ async def lifespan(app: FastAPI):
     embedder = SentenceTransformersEmbedder(s.embed_model)
     chunk_store = ChunkStore(s.chunk_store_path)
     vector_db = build_vector_db(s, chunk_store=chunk_store)
-    llm = GeminiLLM(s.google_api_key, model=s.gemini_model)
+    meter = UsageMeter(
+        s.usage_store_path,
+        s.llm_price_input_per_million_eur,
+        s.llm_price_output_per_million_eur,
+    )
+    llm = GeminiLLM(
+        s.google_api_key,
+        model=s.gemini_model,
+        max_output_tokens=s.max_output_tokens,
+        meter=meter,
+    )
     retrieval = RetrievalService(embedder, vector_db, s.aliases_path, top_k=s.top_k)
     bios = load_biographies(s.biographies_path)
 
     app.state.chunk_store = chunk_store
     app.state.vector_db = vector_db
-    app.state.chat_service = ChatService(llm, retrieval, biographies=bios)
+    app.state.usage_meter = meter
+    app.state.chat_service = ChatService(
+        llm, retrieval, biographies=bios, meter=meter, monthly_budget_eur=s.monthly_budget_eur
+    )
     yield
     chunk_store.close()
+    meter.close()
 
 
 def _history_to_tuples(history) -> list[tuple[str, str]]:

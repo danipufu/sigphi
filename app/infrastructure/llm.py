@@ -127,20 +127,41 @@ class GeminiLLM:
     temperature=0.2: respostes consistents i fidels a la font, poc creatives.
     """
 
-    def __init__(self, api_key: str, model: str = "gemini-2.5-flash-lite") -> None:
+    def __init__(
+        self,
+        api_key: str,
+        model: str = "gemini-2.5-flash-lite",
+        max_output_tokens: int = 800,
+        meter=None,
+    ) -> None:
         if not api_key:
             raise ValueError(
                 "GOOGLE_API_KEY no està configurada. Defineix-la al .env "
                 "o com a variable d'entorn abans d'instanciar GeminiLLM."
             )
+        self._meter = meter  # UsageMeter-like (.record(in, out)) o None; comptabilitat de tokens
         self._llm = ChatGoogleGenerativeAI(
             model=model,
             temperature=0.2,
             google_api_key=api_key,
+            max_output_tokens=max_output_tokens,  # acota la llargada (i el cost) de la resposta
             timeout=20,      # cada crida falla en <=20s en lloc de penjar-se indefinidament
             max_retries=0,   # desactiva la tempesta de reintents interns de langchain
             #                  (en fem de propis, acotats, a generate())
         )
+
+    def _record_usage(self, messages: list, resp) -> None:
+        """Registra els tokens consumits al comptador d'ús (si n'hi ha). Usa la
+        metadata real de Gemini; si no hi és, els estima per longitud (chars/4)."""
+        if self._meter is None:
+            return
+        um = getattr(resp, "usage_metadata", None) or {}
+        in_tok = um.get("input_tokens") or sum(len(str(m.content)) for m in messages) // 4
+        out_tok = um.get("output_tokens") or max(1, len(str(resp.content)) // 4)
+        try:
+            self._meter.record(in_tok, out_tok)
+        except Exception:
+            _log.warning("No s'ha pogut registrar l'ús de l'LLM", exc_info=True)
 
     def generate(
         self,
@@ -198,7 +219,9 @@ class GeminiLLM:
         last_err: Exception | None = None
         for attempt in range(2):  # 2 intents (cada un acotat a 20s pel timeout)
             try:
-                return self._llm.invoke(messages).content
+                resp = self._llm.invoke(messages)
+                self._record_usage(messages, resp)
+                return resp.content
             except Exception as e:  # 429 / timeout / errors transitoris de l'API
                 last_err = e
                 _log.warning("Gemini invoke ha fallat (intent %d/2): %s", attempt + 1, e)

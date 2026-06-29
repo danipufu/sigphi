@@ -7,6 +7,7 @@ from pydantic import BaseModel, Field
 from app.api.dependencies import (
     get_chat_service,
     get_chunk_store,
+    get_usage_meter,
     get_vector_db,
     limiter,
     rate_limit,
@@ -56,6 +57,19 @@ def ask(
         raise HTTPException(status_code=404, detail="Not Found")
     res = chat_service.answer(q, [])
     return ChatResponse(answer=res.answer, sources=res.sources, suggestions=res.suggestions)
+
+
+@router.get("/usage")
+def usage(
+    key: str = Query("", description="Clau secreta (ASK_API_KEY)"),
+    meter=Depends(get_usage_meter),
+) -> dict:
+    """Despesa estimada de l'LLM del mes en curs (tokens, cost, pressupost restant).
+    Protegit amb clau, per a monitoratge. Retorna 404 si la clau no és correcta."""
+    secret = get_settings().ask_api_key
+    if not secret or key != secret:
+        raise HTTPException(status_code=404, detail="Not Found")
+    return meter.snapshot(get_settings().monthly_budget_eur)
 
 
 @router.get("/catalog")
