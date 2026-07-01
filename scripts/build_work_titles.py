@@ -21,6 +21,9 @@ from pathlib import Path
 OUT = Path(__file__).resolve().parent.parent / "app" / "data" / "work_titles.json"
 # Idiomes de la UI (en = original; no cal desar-lo).
 LANGS = ["ca", "es", "fr", "de", "it", "ru", "zh", "ja", "ar", "hi"]
+# Idiomes d'escriptura no-llatina: un valor en ASCII pur és una fuita (títol anglès/
+# llatí per una redirecció al concepte, article inexistent, etc.) -> es descarta.
+_NONLATIN = {"ru", "zh", "ja", "ar", "hi"}
 UA = {"User-Agent": "SigPhi-catalog-builder/1.0 (philosophy RAG; contact danipufu)"}
 API = "https://en.wikipedia.org/w/api.php"
 
@@ -227,6 +230,62 @@ WORKS: list[tuple[str, list[str]]] = [
     ("The Varieties of Religious Experience", ["The Varieties of Religious Experience A Study in Human Nature"]),
     ("The Will to Believe", ["The Will to Believe, and Other Essays in Popular Philosophy"]),
     ("The Principles of Psychology", ["The Principles of Psychology, Volume 1 (of 2)", "The Principles of Psychology, Volume 2 (of 2)"]),
+    # --- Tocqueville ---
+    ("Democracy in America", ["Democracy in America — Volume 1", "Democracy in America — Volume 2", "De la Démocratie en Amérique, tome premier", "De la Démocratie en Amérique, tome deuxième", "De la Démocratie en Amérique, tome troisième", "De la Démocratie en Amérique, tome quatrième", "American Institutions and Their Influence"]),
+    # --- Anselm ---
+    ("Proslogion", ["Proslogium, Monologium, and Cur Deus Homo (Deane)", "Proslogion (Discours sur l'existence de Dieu)"]),
+    # --- Boeci ---
+    ("The Consolation of Philosophy", ["De consolatione philosophiae (CSEL 67)", "The Consolation Of Philosophy"]),
+    # --- Darwin ---
+    ("On the Origin of Species", ["On the Origin of Species by Means of Natural Selection", "The Origin of Species by Means of Natural Selection"]),
+    ("The Descent of Man, and Selection in Relation to Sex", ["The Descent of Man, and Selection in Relation to Sex"]),
+    ("The Voyage of the Beagle", ["The Voyage of the Beagle"]),
+    ("The Expression of the Emotions in Man and Animals", ["The Expression of the Emotions in Man and Animals"]),
+    # --- Hume ---
+    ("A Treatise of Human Nature", ["A Treatise of Human Nature"]),
+    ("An Enquiry Concerning Human Understanding", ["An Enquiry Concerning Human Understanding"]),
+    ("An Enquiry Concerning the Principles of Morals", ["An Enquiry Concerning the Principles of Morals"]),
+    ("Dialogues Concerning Natural Religion", ["Dialogues Concerning Natural Religion"]),
+    # --- Epicur ---
+    ("Letter to Menoeceus", ["Letter to Menoeceus"]),
+    ("Principal Doctrines", ["Principal Doctrines"]),
+    # --- Berkeley ---
+    ("A Treatise Concerning the Principles of Human Knowledge", ["A Treatise Concerning the Principles of Human Knowledge"]),
+    ("Three Dialogues between Hylas and Philonous", ["Three Dialogues Between Hylas and Philonous in Opposition to Sceptics and Atheis"]),
+    ("An Essay Towards a New Theory of Vision", ["An Essay Towards a New Theory of Vision"]),
+    # --- Bergson ---
+    ("Creative Evolution (book)", ["Creative Evolution"]),
+    ("Matter and Memory", ["Matter and memory"]),
+    ("Time and Free Will", ["Time and free will, an essay on the immediate data of consciousness"]),
+    # --- Bentham ---
+    ("Panopticon", ["Panopticon or the Inspection-House"]),
+    # --- Fichte ---
+    ("Addresses to the German Nation", ["Addresses to the German nation", "Reden an die deutsche Nation (German)"]),
+    ("The Vocation of Man", ["The vocation of man"]),
+    # --- Lucreci ---
+    ("De rerum natura", ["On the Nature of Things", "De Rerum Natura EN", "De Rerum Natura LA", "Translations from Lucretius"]),
+    # --- Wollstonecraft ---
+    ("A Vindication of the Rights of Woman", ["A Vindication of the Rights of Woman"]),
+    ("A Vindication of the Rights of Men", ["A vindication of the rights of men, in a letter to the Right Honourable Edmund B"]),
+    # --- Plotí ---
+    ("Enneads", ["Plotinos Complete Works, v. 1", "Plotinos Complete Works, v. 2", "Plotinos Complete Works, v. 3", "Plotinos Complete Works, v. 4", "Select Works of Plotinus"]),
+    # --- Emerson ---
+    ("Nature (essay)", ["Nature"]),
+    ("Essays: First Series", ["Essays — First Series"]),
+    ("Essays: Second Series", ["Essays — Second Series"]),
+    ("Representative Men", ["Representative Men Seven Lectures"]),
+    ("The Conduct of Life", ["The Conduct of Life"]),
+    ("English Traits", ["English Traits"]),
+    # --- Freud ---
+    ("Civilization and Its Discontents", ["Civilization and Its Discontents"]),
+    ("The Interpretation of Dreams", ["Die Traumdeutung (German)"]),
+    ("The Future of an Illusion", ["The Future of an Illusion"]),
+    ("Totem and Taboo", ["Totem und Tabu (German)"]),
+    ("Three Essays on the Theory of Sexuality", ["Drei Abhandlungen zur Sexualtheorie (German)"]),
+    ("Beyond the Pleasure Principle", ["Jenseits des Lustprinzips (German)"]),
+    ("Group Psychology and the Analysis of the Ego", ["Massenpsychologie und Ich-Analyse (German)"]),
+    # --- Paine ---
+    ("Common Sense (pamphlet)", ["Common Sense"]),
 ]
 
 
@@ -251,8 +310,12 @@ def fetch_lang(articles: list[str], lang: str) -> dict[str, str]:
         for a in chunk:
             t = redir.get(norm.get(a, a), norm.get(a, a))
             val = by.get(t)
-            if val:
-                out[a] = clean(val)
+            if not val:
+                continue
+            c = clean(val)
+            if lang in _NONLATIN and c.isascii():  # fuita -> descarta
+                continue
+            out[a] = c
         time.sleep(1.0)
     return out
 

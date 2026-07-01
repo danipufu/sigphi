@@ -2008,5 +2008,486 @@
    "ja": "心理学原理",
    "ar": "مبادئ علم النفس"
   }
+ },
+ {
+  "keys": [
+   "Democracy in America — Volume 1",
+   "Democracy in America — Volume 2",
+   "De la Démocratie en Amérique, tome premier",
+   "De la Démocratie en Amérique, tome deuxième",
+   "De la Démocratie en Amérique, tome troisième",
+   "De la Démocratie en Amérique, tome quatrième",
+   "American Institutions and Their Influence"
+  ],
+  "titles": {
+   "ca": "La democràcia a Amèrica",
+   "es": "La democracia en América",
+   "fr": "De la démocratie en Amérique",
+   "de": "Über die Demokratie in Amerika",
+   "it": "La democrazia in America",
+   "ru": "Демократия в Америке",
+   "zh": "民主在美國",
+   "ja": "アメリカのデモクラシー",
+   "ar": "الديمقراطية في أمريكا"
+  }
+ },
+ {
+  "keys": [
+   "Proslogium, Monologium, and Cur Deus Homo (Deane)",
+   "Proslogion (Discours sur l'existence de Dieu)"
+  ],
+  "titles": {
+   "ca": "Proslogion",
+   "es": "Proslogion",
+   "fr": "Proslogion",
+   "de": "Proslogion",
+   "it": "Proslogion",
+   "ru": "Прослогион"
+  }
+ },
+ {
+  "keys": [
+   "De consolatione philosophiae (CSEL 67)",
+   "The Consolation Of Philosophy"
+  ],
+  "titles": {
+   "ca": "Consolació de la filosofia",
+   "es": "Consolación de la filosofía",
+   "fr": "De la consolation de la philosophie",
+   "de": "Der Trost der Philosophie",
+   "it": "De consolatione philosophiae",
+   "ru": "Утешение Философией",
+   "zh": "哲学的慰藉",
+   "ja": "哲学の慰め",
+   "ar": "عزاء الفلسفة"
+  }
+ },
+ {
+  "keys": [
+   "On the Origin of Species by Means of Natural Selection",
+   "The Origin of Species by Means of Natural Selection"
+  ],
+  "titles": {
+   "ca": "L'origen de les espècies",
+   "es": "El origen de las especies",
+   "fr": "L'Origine des espèces",
+   "de": "Über die Entstehung der Arten",
+   "it": "L'origine delle specie",
+   "ru": "Происхождение видов",
+   "zh": "物种起源",
+   "ja": "種の起源",
+   "ar": "أصل الأنواع",
+   "hi": "जीवजाति का उद्भव"
+  }
+ },
+ {
+  "keys": [
+   "The Descent of Man, and Selection in Relation to Sex"
+  ],
+  "titles": {
+   "ca": "La descendència de l'home i sobre la selecció en relació amb el sexe",
+   "es": "El origen del hombre",
+   "fr": "La Filiation de l'homme et la sélection liée au sexe",
+   "de": "Die Abstammung des Menschen und die geschlechtliche Zuchtwahl",
+   "it": "L'origine dell'uomo e la selezione sessuale",
+   "zh": "人类的由来",
+   "ja": "人間の進化と性淘汰",
+   "ar": "أصل الإنسان والاختيار فيما يتعلق بالجنس"
+  }
+ },
+ {
+  "keys": [
+   "The Voyage of the Beagle"
+  ],
+  "titles": {
+   "ca": "El viatge del Beagle",
+   "es": "El viaje del Beagle",
+   "fr": "Le Voyage du Beagle",
+   "it": "Viaggio di un naturalista intorno al mondo",
+   "zh": "小獵犬號航海記",
+   "ja": "ビーグル号航海記",
+   "ar": "رحلة البيجل"
+  }
+ },
+ {
+  "keys": [
+   "The Expression of the Emotions in Man and Animals"
+  ],
+  "titles": {
+   "ca": "L'expressió i les emocions en l'home i els animals",
+   "es": "La expresión de las emociones en el hombre y en los animales",
+   "fr": "L'Expression des émotions chez l'homme et les animaux",
+   "de": "Der Ausdruck der Gemütsbewegungen bei dem Menschen und den Tieren",
+   "it": "L'espressione delle emozioni nell'uomo e negli animali"
+  }
+ },
+ {
+  "keys": [
+   "A Treatise of Human Nature"
+  ],
+  "titles": {
+   "ca": "Tractat sobre la naturalesa humana",
+   "es": "Tratado de la naturaleza humana",
+   "fr": "Traité de la nature humaine",
+   "it": "Trattato sulla natura umana",
+   "zh": "人性論",
+   "ja": "人間本性論",
+   "ar": "رسالة في الطبيعة البشرية",
+   "hi": "मानव स्वभाव का ग्रंथ-प्रबंध"
+  }
+ },
+ {
+  "keys": [
+   "An Enquiry Concerning Human Understanding"
+  ],
+  "titles": {
+   "es": "Investigación sobre el entendimiento humano",
+   "fr": "Enquête sur l'entendement humain",
+   "de": "Eine Untersuchung über den menschlichen Verstand",
+   "it": "Ricerca sull'intelletto umano",
+   "ru": "Исследование о человеческом познании",
+   "zh": "人类理智研究",
+   "ar": "مبحث في الفاهمة البشرية",
+   "hi": "मानव समझ के संबंध में अन्वीक्षा"
+  }
+ },
+ {
+  "keys": [
+   "An Enquiry Concerning the Principles of Morals"
+  ],
+  "titles": {
+   "es": "Investigación sobre los principios de la moral",
+   "de": "Eine Untersuchung über die Prinzipien der Moral",
+   "zh": "道德原則研究",
+   "ar": "مبحث في الأخلاق"
+  }
+ },
+ {
+  "keys": [
+   "Dialogues Concerning Natural Religion"
+  ],
+  "titles": {
+   "es": "Diálogos sobre la religión natural",
+   "fr": "Dialogues sur la religion naturelle",
+   "de": "Dialoge über natürliche Religion",
+   "ru": "Диалоги о естественной религии",
+   "ar": "محاورات في الدين الطبيعي"
+  }
+ },
+ {
+  "keys": [
+   "Letter to Menoeceus"
+  ],
+  "titles": {
+   "ca": "Epicur",
+   "es": "Epicuro",
+   "fr": "Épicure",
+   "de": "Epikur",
+   "it": "Epicuro",
+   "ru": "Эпикур",
+   "zh": "伊壁鸠鲁",
+   "ja": "エピクロス",
+   "ar": "إبيقور",
+   "hi": "एपिकुरुस"
+  }
+ },
+ {
+  "keys": [
+   "A Treatise Concerning the Principles of Human Knowledge"
+  ],
+  "titles": {
+   "ca": "Tractat sobre els principis del coneixement humà",
+   "es": "Tratado sobre los principios del conocimiento humano",
+   "fr": "Principes de la connaissance humaine",
+   "it": "Trattato sui principi della conoscenza umana",
+   "ja": "人知原理論",
+   "ar": "رسالة في مبادئ المعرفة الإنسانية",
+   "hi": "मानव ज्ञान के सिद्धांतों के संबंध में ग्रंथ-प्रबंध"
+  }
+ },
+ {
+  "keys": [
+   "Three Dialogues Between Hylas and Philonous in Opposition to Sceptics and Atheis"
+  ],
+  "titles": {
+   "fr": "Trois dialogues entre Hylas et Philonous",
+   "ru": "Три разговора между Гиласом и Филонусом"
+  }
+ },
+ {
+  "keys": [
+   "Creative Evolution"
+  ],
+  "titles": {
+   "es": "La evolución creadora",
+   "fr": "L'Évolution créatrice",
+   "ru": "Творческая эволюция",
+   "zh": "创化论",
+   "ja": "創造的進化",
+   "ar": "التطور الخلاق"
+  }
+ },
+ {
+  "keys": [
+   "Matter and memory"
+  ],
+  "titles": {
+   "es": "Materia y memoria",
+   "fr": "Matière et mémoire",
+   "de": "Materie und Gedächtnis",
+   "ru": "Материя и память",
+   "ja": "物質と記憶"
+  }
+ },
+ {
+  "keys": [
+   "Time and free will, an essay on the immediate data of consciousness"
+  ],
+  "titles": {
+   "fr": "Essai sur les données immédiates de la conscience",
+   "de": "Zeit und Freiheit"
+  }
+ },
+ {
+  "keys": [
+   "Panopticon or the Inspection-House"
+  ],
+  "titles": {
+   "ca": "Panòptic",
+   "es": "Panóptico",
+   "fr": "Panoptique",
+   "de": "Panopticon",
+   "it": "Panopticon",
+   "ru": "Паноптикум",
+   "zh": "圆形监狱",
+   "ja": "パノプティコン",
+   "ar": "بانوبتيكون",
+   "hi": "पनोप्टिकॉन"
+  }
+ },
+ {
+  "keys": [
+   "Addresses to the German nation",
+   "Reden an die deutsche Nation (German)"
+  ],
+  "titles": {
+   "es": "Discursos a la nación alemana",
+   "fr": "Discours à la nation allemande",
+   "de": "Reden an die deutsche Nation",
+   "it": "Discorsi alla nazione tedesca",
+   "zh": "對德意志民族的演講",
+   "ja": "ドイツ国民に告ぐ",
+   "ar": "خطابات إلى الأمة الألمانية"
+  }
+ },
+ {
+  "keys": [
+   "The vocation of man"
+  ],
+  "titles": {
+   "de": "Die Bestimmung des Menschen",
+   "it": "La destinazione dell'uomo"
+  }
+ },
+ {
+  "keys": [
+   "On the Nature of Things",
+   "De Rerum Natura EN",
+   "De Rerum Natura LA",
+   "Translations from Lucretius"
+  ],
+  "titles": {
+   "ca": "De la natura",
+   "es": "De la naturaleza de las cosas",
+   "fr": "De rerum natura",
+   "de": "De rerum natura",
+   "it": "De rerum natura",
+   "zh": "物性論",
+   "ja": "事物の本性について",
+   "ar": "في طبيعة الأشياء"
+  }
+ },
+ {
+  "keys": [
+   "A Vindication of the Rights of Woman"
+  ],
+  "titles": {
+   "ca": "Vindicació dels drets de la dona",
+   "es": "Vindicación de los derechos de la mujer",
+   "fr": "Défense des droits de la femme",
+   "de": "Verteidigung der Rechte der Frau",
+   "it": "Rivendicazione dei diritti della donna",
+   "ru": "В защиту прав женщин",
+   "zh": "女權辯護",
+   "ja": "女性の権利の擁護",
+   "ar": "دفاعا عن حقوق المرأة"
+  }
+ },
+ {
+  "keys": [
+   "A vindication of the rights of men, in a letter to the Right Honourable Edmund B"
+  ],
+  "titles": {
+   "es": "Vindicación de los derechos del hombre",
+   "fr": "Défense des droits des hommes",
+   "ru": "Защита прав человека",
+   "zh": "为人权辩护",
+   "ar": "دفاعا عن حقوق الرجال"
+  }
+ },
+ {
+  "keys": [
+   "Plotinos Complete Works, v. 1",
+   "Plotinos Complete Works, v. 2",
+   "Plotinos Complete Works, v. 3",
+   "Plotinos Complete Works, v. 4",
+   "Select Works of Plotinus"
+  ],
+  "titles": {
+   "ca": "Ennèades",
+   "es": "Enéadas",
+   "fr": "Ennéades",
+   "de": "Plotin#Werk",
+   "it": "Enneadi",
+   "ru": "Эннеады",
+   "ja": "エンネアデス",
+   "ar": "تاسوعات"
+  }
+ },
+ {
+  "keys": [
+   "Nature"
+  ],
+  "titles": {
+   "fr": "Nature",
+   "ru": "Природа"
+  }
+ },
+ {
+  "keys": [
+   "The Conduct of Life"
+  ],
+  "titles": {
+   "it": "Condotta di vita"
+  }
+ },
+ {
+  "keys": [
+   "Civilization and Its Discontents"
+  ],
+  "titles": {
+   "ca": "El malestar en la cultura",
+   "es": "El malestar en la cultura",
+   "fr": "Malaise dans la civilisation",
+   "de": "Das Unbehagen in der Kultur",
+   "it": "Il disagio della civiltà",
+   "ru": "Недовольство культурой",
+   "ar": "قلق في الحضارة"
+  }
+ },
+ {
+  "keys": [
+   "Die Traumdeutung (German)"
+  ],
+  "titles": {
+   "ca": "La interpretació dels somnis",
+   "es": "La interpretación de los sueños",
+   "fr": "L'Interprétation du rêve",
+   "de": "Die Traumdeutung",
+   "it": "L'interpretazione dei sogni",
+   "ru": "Толкование сновидений",
+   "zh": "夢的解析",
+   "ja": "夢判断",
+   "ar": "تفسير الأحلام",
+   "hi": "द इंटरप्रिटेशन ऑफ ड्रीम्स"
+  }
+ },
+ {
+  "keys": [
+   "The Future of an Illusion"
+  ],
+  "titles": {
+   "ca": "Die Zukunft einer Illusion",
+   "es": "El porvenir de una ilusión",
+   "fr": "L'Avenir d'une illusion",
+   "de": "Die Zukunft einer Illusion",
+   "it": "L'avvenire di un'illusione",
+   "ru": "Будущее одной иллюзии",
+   "zh": "一個幻覺的未來",
+   "ar": "مستقبل الوهم"
+  }
+ },
+ {
+  "keys": [
+   "Totem und Tabu (German)"
+  ],
+  "titles": {
+   "ca": "Tòtem i tabú",
+   "es": "Tótem y tabú",
+   "fr": "Totem et Tabou",
+   "de": "Totem und Tabu",
+   "it": "Totem e tabù",
+   "ru": "Тотем и табу",
+   "zh": "图腾与禁忌",
+   "ar": "الطوطم والتابو"
+  }
+ },
+ {
+  "keys": [
+   "Drei Abhandlungen zur Sexualtheorie (German)"
+  ],
+  "titles": {
+   "ca": "Drei Abhandlungen zur Sexualtheorie",
+   "es": "Tres ensayos sobre teoría sexual",
+   "fr": "Trois essais sur la théorie sexuelle",
+   "it": "Tre saggi sulla teoria sessuale",
+   "ru": "Три очерка по теории сексуальности",
+   "zh": "性学三论",
+   "ar": "ثلاث مقالات في النظرية الجنسية"
+  }
+ },
+ {
+  "keys": [
+   "Jenseits des Lustprinzips (German)"
+  ],
+  "titles": {
+   "ca": "Més enllà del principi de plaer",
+   "es": "Más allá del principio de placer",
+   "fr": "Au-delà du principe de plaisir",
+   "de": "Jenseits des Lustprinzips",
+   "it": "Al di là del principio di piacere",
+   "ru": "По ту сторону принципа удовольствия",
+   "zh": "超越快樂原則",
+   "ar": "ما وراء مبدأ اللذة"
+  }
+ },
+ {
+  "keys": [
+   "Massenpsychologie und Ich-Analyse (German)"
+  ],
+  "titles": {
+   "ca": "Psicologia de les masses i anàlisi del jo",
+   "es": "Psicología de las masas y análisis del yo",
+   "fr": "Psychologie des masses et analyse du moi",
+   "de": "Massenpsychologie und Ich-Analyse",
+   "it": "Psicologia delle masse e analisi dell'Io",
+   "ru": "Психология масс и анализ Я"
+  }
+ },
+ {
+  "keys": [
+   "Common Sense"
+  ],
+  "titles": {
+   "ca": "Sentit comú",
+   "es": "El sentido común",
+   "fr": "Le Sens commun",
+   "de": "Common Sense",
+   "it": "Senso comune",
+   "ru": "Здравый смысл",
+   "zh": "常識",
+   "ja": "コモン・センス",
+   "ar": "الفطرة السليمة"
+  }
  }
 ]
