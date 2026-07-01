@@ -553,6 +553,12 @@ WORKS: list[tuple[str, list[str]]] = [
     ("Principles of the Philosophy of the Future", ["Grundsätze der Philosophie der Zukunft"]),
     ("The General Idea of the Revolution in the Nineteenth Century",
      ["Idée générale de la Révolution au dix-neuvième siècle"]),
+    # --- Lot 31 ---
+    ("An Introduction to the Principles of Morals and Legislation",
+     ["An Introduction to the Principles of Morals and Legislation"]),
+    ("Lectures on Jurisprudence", ["Lectures on Justice, Police, Revenue and Arms"]),
+    ("The Theory of Mind as Pure Act", ["The Theory of Mind as Pure Act"]),
+    ("Elements of Theology", ["Elements of Theology"]),
 ]
 
 

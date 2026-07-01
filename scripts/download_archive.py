@@ -701,6 +701,38 @@ TEXTS = [
      "traduccions angleses modernes no són PD; Feuerbach †1872 -> l'original sí). "
      "Digitalització OCR.",
      "Ludwig_Feuerbach__Grundsaetze_der_Philosophie_der_Zukunft_de.txt"),
+
+    # --- Lot 31: forats a autors amb 3-5 obres (obra major que faltava, totes PD) ---
+    ("introductiontopr02bent", "introductiontopr02bent_djvu.txt",
+     "Jeremy Bentham", "An Introduction to the Principles of Morals and Legislation", "English",
+     "Complete work", "Written by the author",
+     "L'obra fonacional de l'utilitarisme (1789): el principi de màxima utilitat com "
+     "a fonament de la moral i la legislació. Original anglès, domini públic "
+     "(Bentham †1832). Digitalització OCR.",
+     "Jeremy_Bentham__Introduction_to_Principles_of_Morals_and_Legislation_en.txt"),
+    ("lecturesonjustic00smituoft", "lecturesonjustic00smituoft_djvu.txt",
+     "Adam Smith", "Lectures on Justice, Police, Revenue and Arms", "English",
+     "Complete work", "Written by the author",
+     "Apunts de les lliçons de jurisprudència d'Adam Smith a la Universitat de "
+     "Glasgow (1763), reconstruïts a partir de notes d'estudiants i publicats per "
+     "primera vegada per Edwin Cannan (1896). Original anglès, domini públic. "
+     "Digitalització OCR.",
+     "Adam_Smith__Lectures_on_Justice_Police_Revenue_and_Arms_en.txt"),
+    ("thetheoryofminda00gentuoft", "thetheoryofminda00gentuoft_djvu.txt",
+     "Giovanni Gentile", "The Theory of Mind as Pure Act", "English",
+     "Complete work", "Written by the author",
+     "L'obra filosòfica major de Giovanni Gentile (1916), fonament de l'actualisme: "
+     "la ment com a acte pur, no com a substància. Traducció anglesa de H. Wildon "
+     "Carr (1922; Carr †1931 -> domini públic). Digitalització OCR.",
+     "Giovanni_Gentile__The_Theory_of_Mind_as_Pure_Act_Carr_en.txt"),
+    ("sixbooksproclus00unkngoog", "sixbooksproclus00unkngoog_djvu.txt",
+     "Proclus", "Elements of Theology", "English",
+     "Complete work", "Written by the author",
+     "Tractat sistemàtic de metafísica neoplatònica de Procle en 211 proposicions, "
+     "des de la unitat divina fins al descens de les ànimes individuals al món "
+     "material. Traducció anglesa de Thomas Taylor (1816; Taylor †1835 -> domini "
+     "públic). Digitalització OCR.",
+     "Proclus__Elements_of_Theology_Taylor_en.txt"),
 ]
 
 
