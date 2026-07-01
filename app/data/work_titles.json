@@ -6709,5 +6709,1212 @@
    "ar": "تغير الحيوانات والنباتات في ظل التدجين",
    "hi": "पालतू बनाने के अंतर्गत पशुओं और पौधों में विविधता"
   }
+ },
+ {
+  "keys": [
+   "Catena aurea in quatuor Evangelia"
+  ],
+  "titles": {
+   "ca": "Cadena d'or sobre els quatre evangelis",
+   "es": "Cadena de oro sobre los cuatro evangelios",
+   "fr": "Chaîne d'or sur les quatre évangiles",
+   "de": "Goldene Kette zu den vier Evangelien",
+   "it": "Catena d'oro sui quattro vangeli",
+   "ru": "Золотая цепь на четыре Евангелия",
+   "zh": "四福音书金链注疏",
+   "ja": "四福音書についての黄金の鎖",
+   "ar": "السلسلة الذهبية على الأناجيل الأربعة",
+   "hi": "चार सुसमाचारों पर स्वर्ण शृंखला"
+  }
+ },
+ {
+  "keys": [
+   "Compendium theologiae"
+  ],
+  "titles": {
+   "ca": "Compendi de teologia",
+   "es": "Compendio de teología",
+   "fr": "Abrégé de théologie",
+   "de": "Kompendium der Theologie",
+   "it": "Compendio di teologia",
+   "ru": "Сборник богословия",
+   "zh": "神学纲要",
+   "ja": "神学綱要",
+   "ar": "موجز اللاهوت",
+   "hi": "धर्मशास्त्र का संक्षेप"
+  }
+ },
+ {
+  "keys": [
+   "De anima"
+  ],
+  "titles": {
+   "ca": "Sobre l'ànima (Aquino)",
+   "es": "Sobre el alma (Aquino)",
+   "fr": "De l'âme (Thomas d'Aquin)",
+   "de": "Über die Seele (Thomas von Aquin)",
+   "it": "Sull'anima (Tommaso d'Aquino)",
+   "ru": "О душе (Фома Аквинский)",
+   "zh": "论灵魂（阿奎那）",
+   "ja": "霊魂論（トマス・アクィナス）",
+   "ar": "في النفس (توما الأكويني)",
+   "hi": "आत्मा पर (एक्विनास)"
+  }
+ },
+ {
+  "keys": [
+   "De ente et essentia"
+  ],
+  "titles": {
+   "ca": "Sobre l'ens i l'essència",
+   "es": "Sobre el ente y la esencia",
+   "fr": "De l'étant et de l'essence",
+   "de": "Über das Seiende und das Wesen",
+   "it": "Sull'ente e l'essenza",
+   "ru": "О сущем и сущности",
+   "zh": "论存在与本质",
+   "ja": "有と本質について",
+   "ar": "في الموجود والماهية",
+   "hi": "सत्ता और सार पर"
+  }
+ },
+ {
+  "keys": [
+   "De principiis naturae"
+  ],
+  "titles": {
+   "ca": "Sobre els principis de la natura",
+   "es": "Sobre los principios de la naturaleza",
+   "fr": "Des principes de la nature",
+   "de": "Über die Prinzipien der Natur",
+   "it": "Sui principi della natura",
+   "ru": "О началах природы",
+   "zh": "论自然的原理",
+   "ja": "自然の諸原理について",
+   "ar": "في مبادئ الطبيعة",
+   "hi": "प्रकृति के सिद्धांतों पर"
+  }
+ },
+ {
+  "keys": [
+   "De regno ad regem Cypri"
+  ],
+  "titles": {
+   "ca": "Sobre el govern, al rei de Xipre",
+   "es": "Sobre el gobierno, al rey de Chipre",
+   "fr": "Du gouvernement, au roi de Chypre",
+   "de": "Über die Regierung, an den König von Zypern",
+   "it": "Sul governo, al re di Cipro",
+   "ru": "О правлении, королю Кипра",
+   "zh": "论君主政治（致塞浦路斯国王）",
+   "ja": "統治論（キプロス王へ）",
+   "ar": "في الحكم، إلى ملك قبرص",
+   "hi": "शासन पर, साइप्रस के राजा को"
+  }
+ },
+ {
+  "keys": [
+   "De unitate intellectus contra Averroistas"
+  ],
+  "titles": {
+   "ca": "Sobre la unitat de l'intel·lecte contra els averroistes",
+   "es": "Sobre la unidad del intelecto contra los averroístas",
+   "fr": "De l'unité de l'intellect contre les averroïstes",
+   "de": "Über die Einheit des Intellekts gegen die Averroisten",
+   "it": "Sull'unità dell'intelletto contro gli averroisti",
+   "ru": "О единстве разума против аверроистов",
+   "zh": "论理智的统一性驳阿威罗伊主义者",
+   "ja": "アヴェロエス主義者に対する知性の単一性について",
+   "ar": "في وحدة العقل ضد الرشديين",
+   "hi": "बुद्धि की एकता पर, एवेरोइस्टों के विरुद्ध"
+  }
+ },
+ {
+  "keys": [
+   "In librum Boethii De hebdomadibus expositio"
+  ],
+  "titles": {
+   "ca": "Exposició sobre el llibre De hebdomadibus de Boeci",
+   "es": "Exposición sobre el libro De hebdomadibus de Boecio",
+   "fr": "Exposition sur le livre De hebdomadibus de Boèce",
+   "de": "Auslegung zum Buch De hebdomadibus des Boethius",
+   "it": "Esposizione sul libro De hebdomadibus di Boezio",
+   "ru": "Толкование на книгу Боэция De hebdomadibus",
+   "zh": "波埃修《七日谈》注疏",
+   "ja": "ボエティウス『七日論』註解",
+   "ar": "شرح كتاب بوئيثيوس De hebdomadibus",
+   "hi": "बोएथियस की De hebdomadibus पुस्तक की व्याख्या"
+  }
+ },
+ {
+  "keys": [
+   "On prayer and the contemplative life"
+  ],
+  "titles": {
+   "ca": "Sobre la pregària i la vida contemplativa",
+   "es": "Sobre la oración y la vida contemplativa",
+   "fr": "De la prière et de la vie contemplative",
+   "de": "Über das Gebet und das kontemplative Leben",
+   "it": "Sulla preghiera e la vita contemplativa",
+   "ru": "О молитве и созерцательной жизни",
+   "zh": "论祈祷与静观生活",
+   "ja": "祈りと観想生活について",
+   "ar": "في الصلاة والحياة التأملية",
+   "hi": "प्रार्थना और चिंतनशील जीवन पर"
+  }
+ },
+ {
+  "keys": [
+   "Summa Theologica, Part I (Prima Pars)"
+  ],
+  "titles": {
+   "ca": "Summa Teològica, Part I (Prima Pars)",
+   "es": "Suma teológica, Parte I (Prima Pars)",
+   "fr": "Somme théologique, Partie I (Prima Pars)",
+   "de": "Summa theologica, Teil I (Prima Pars)",
+   "it": "Summa Theologiae, Parte I (Prima Pars)",
+   "ru": "Сумма теологии, часть I (Prima Pars)",
+   "zh": "神学大全 第一部分（Prima Pars）",
+   "ja": "神学大全 第一部（Prima Pars）",
+   "ar": "الخلاصة اللاهوتية، الجزء الأول (Prima Pars)",
+   "hi": "सुम्मा थियोलॉजिका, भाग I (Prima Pars)"
+  }
+ },
+ {
+  "keys": [
+   "Summa Theologica, Part I-II (Pars Prima Secundae)"
+  ],
+  "titles": {
+   "ca": "Summa Teològica, Part I-II (Pars Prima Secundae)",
+   "es": "Suma teológica, Parte I-II (Pars Prima Secundae)",
+   "fr": "Somme théologique, Partie I-II (Pars Prima Secundae)",
+   "de": "Summa theologica, Teil I-II (Pars Prima Secundae)",
+   "it": "Summa Theologiae, Parte I-II (Pars Prima Secundae)",
+   "ru": "Сумма теологии, часть I-II (Pars Prima Secundae)",
+   "zh": "神学大全 第一之二部分（Pars Prima Secundae）",
+   "ja": "神学大全 第一・二部（Pars Prima Secundae）",
+   "ar": "الخلاصة اللاهوتية، الجزء الأول-الثاني (Pars Prima Secundae)",
+   "hi": "सुम्मा थियोलॉजिका, भाग I-II (Pars Prima Secundae)"
+  }
+ },
+ {
+  "keys": [
+   "Summa Theologica, Part II-II (Secunda Secundae)"
+  ],
+  "titles": {
+   "ca": "Summa Teològica, Part II-II (Secunda Secundae)",
+   "es": "Suma teológica, Parte II-II (Secunda Secundae)",
+   "fr": "Somme théologique, Partie II-II (Secunda Secundae)",
+   "de": "Summa theologica, Teil II-II (Secunda Secundae)",
+   "it": "Summa Theologiae, Parte II-II (Secunda Secundae)",
+   "ru": "Сумма теологии, часть II-II (Secunda Secundae)",
+   "zh": "神学大全 第二之二部分（Secunda Secundae）",
+   "ja": "神学大全 第二・二部（Secunda Secundae）",
+   "ar": "الخلاصة اللاهوتية، الجزء الثاني-الثاني (Secunda Secundae)",
+   "hi": "सुम्मा थियोलॉजिका, भाग II-II (Secunda Secundae)"
+  }
+ },
+ {
+  "keys": [
+   "Summa Theologica, Part III (Tertia Pars)"
+  ],
+  "titles": {
+   "ca": "Summa Teològica, Part III (Tertia Pars)",
+   "es": "Suma teológica, Parte III (Tertia Pars)",
+   "fr": "Somme théologique, Partie III (Tertia Pars)",
+   "de": "Summa theologica, Teil III (Tertia Pars)",
+   "it": "Summa Theologiae, Parte III (Tertia Pars)",
+   "ru": "Сумма теологии, часть III (Tertia Pars)",
+   "zh": "神学大全 第三部分（Tertia Pars）",
+   "ja": "神学大全 第三部（Tertia Pars）",
+   "ar": "الخلاصة اللاهوتية، الجزء الثالث (Tertia Pars)",
+   "hi": "सुम्मा थियोलॉजिका, भाग III (Tertia Pars)"
+  }
+ },
+ {
+  "keys": [
+   "Super I Epistolam B. Pauli ad Corinthios lectura"
+  ],
+  "titles": {
+   "ca": "Lectura sobre la Primera Epístola de sant Pau als Corintis",
+   "es": "Lectura sobre la Primera Epístola de san Pablo a los Corintios",
+   "fr": "Lecture sur la Première Épître de saint Paul aux Corinthiens",
+   "de": "Vorlesung über den Ersten Korintherbrief des heiligen Paulus",
+   "it": "Lettura sulla Prima Epistola di san Paolo ai Corinzi",
+   "ru": "Толкование на Первое послание апостола Павла к Коринфянам",
+   "zh": "圣保罗致哥林多人第一书讲疏",
+   "ja": "聖パウロのコリント人への第一の手紙講解",
+   "ar": "شرح الرسالة الأولى للقديس بولس إلى أهل كورنثوس",
+   "hi": "संत पॉल के कुरिन्थियों को पहले पत्र पर व्याख्यान"
+  }
+ },
+ {
+  "keys": [
+   "Treatise on Habits (part 2b)"
+  ],
+  "titles": {
+   "ca": "Tractat sobre els hàbits",
+   "es": "Tratado sobre los hábitos",
+   "fr": "Traité des habitus",
+   "de": "Abhandlung über die Habitus",
+   "it": "Trattato sugli abiti",
+   "ru": "Трактат о навыках",
+   "zh": "论习性",
+   "ja": "習慣論",
+   "ar": "رسالة في الملكات",
+   "hi": "आदतों पर ग्रंथ"
+  }
+ },
+ {
+  "keys": [
+   "Treatise on Human Acts (part 1)"
+  ],
+  "titles": {
+   "ca": "Tractat sobre els actes humans (part 1)",
+   "es": "Tratado sobre los actos humanos (parte 1)",
+   "fr": "Traité des actes humains (partie 1)",
+   "de": "Abhandlung über die menschlichen Handlungen (Teil 1)",
+   "it": "Trattato sugli atti umani (parte 1)",
+   "ru": "Трактат о человеческих действиях (часть 1)",
+   "zh": "论人的行为（第一部分）",
+   "ja": "人間の行為についての論考（第1部）",
+   "ar": "رسالة في الأفعال الإنسانية (الجزء 1)",
+   "hi": "मानवीय कर्मों पर ग्रंथ (भाग 1)"
+  }
+ },
+ {
+  "keys": [
+   "Treatise on Human Acts (part 2)"
+  ],
+  "titles": {
+   "ca": "Tractat sobre els actes humans (part 2)",
+   "es": "Tratado sobre los actos humanos (parte 2)",
+   "fr": "Traité des actes humains (partie 2)",
+   "de": "Abhandlung über die menschlichen Handlungen (Teil 2)",
+   "it": "Trattato sugli atti umani (parte 2)",
+   "ru": "Трактат о человеческих действиях (часть 2)",
+   "zh": "论人的行为（第二部分）",
+   "ja": "人間の行為についての論考（第2部）",
+   "ar": "رسالة في الأفعال الإنسانية (الجزء 2)",
+   "hi": "मानवीय कर्मों पर ग्रंथ (भाग 2)"
+  }
+ },
+ {
+  "keys": [
+   "Deerbrook"
+  ],
+  "titles": {
+   "ca": "Deerbrook",
+   "es": "Deerbrook",
+   "fr": "Deerbrook",
+   "de": "Deerbrook",
+   "it": "Deerbrook",
+   "ru": "Дирбрук",
+   "zh": "迪尔布鲁克",
+   "ja": "ディアブルック",
+   "ar": "ديربروك",
+   "hi": "डियरब्रुक"
+  }
+ },
+ {
+  "keys": [
+   "Household Education"
+  ],
+  "titles": {
+   "ca": "Educació domèstica",
+   "es": "Educación doméstica",
+   "fr": "Éducation domestique",
+   "de": "Häusliche Erziehung",
+   "it": "Educazione domestica",
+   "ru": "Домашнее воспитание",
+   "zh": "家庭教育",
+   "ja": "家庭教育",
+   "ar": "التربية المنزلية",
+   "hi": "घरेलू शिक्षा"
+  }
+ },
+ {
+  "keys": [
+   "How to Observe Morals and Manners"
+  ],
+  "titles": {
+   "ca": "Com observar la moral i els costums",
+   "es": "Cómo observar la moral y las costumbres",
+   "fr": "Comment observer les mœurs",
+   "de": "Wie man Sitten und Gebräuche beobachtet",
+   "it": "Come osservare la morale e i costumi",
+   "ru": "Как наблюдать нравы и обычаи",
+   "zh": "如何观察道德与风俗",
+   "ja": "道徳と風俗の観察法",
+   "ar": "كيفية ملاحظة الأخلاق والعادات",
+   "hi": "नैतिकता और रीति-रिवाजों का अवलोकन कैसे करें"
+  }
+ },
+ {
+  "keys": [
+   "Illustrations of political economy, Volume 1 (of 9)"
+  ],
+  "titles": {
+   "ca": "Il·lustracions d'economia política, volum 1 (de 9)",
+   "es": "Ilustraciones de economía política, volumen 1 (de 9)",
+   "fr": "Illustrations d'économie politique, volume 1 (sur 9)",
+   "de": "Illustrationen der politischen Ökonomie, Band 1 (von 9)",
+   "it": "Illustrazioni di economia politica, volume 1 (di 9)",
+   "ru": "Иллюстрации политической экономии, том 1 (из 9)",
+   "zh": "政治经济学图解，第1卷（共9卷）",
+   "ja": "経済学例解 第1巻（全9巻）",
+   "ar": "توضيحات الاقتصاد السياسي، المجلد 1 (من 9)",
+   "hi": "राजनीतिक अर्थशास्त्र के उदाहरण, खंड 1 (9 में से)"
+  }
+ },
+ {
+  "keys": [
+   "Illustrations of political economy, Volume 3 (of 9)"
+  ],
+  "titles": {
+   "ca": "Il·lustracions d'economia política, volum 3 (de 9)",
+   "es": "Ilustraciones de economía política, volumen 3 (de 9)",
+   "fr": "Illustrations d'économie politique, volume 3 (sur 9)",
+   "de": "Illustrationen der politischen Ökonomie, Band 3 (von 9)",
+   "it": "Illustrazioni di economia politica, volume 3 (di 9)",
+   "ru": "Иллюстрации политической экономии, том 3 (из 9)",
+   "zh": "政治经济学图解，第3卷（共9卷）",
+   "ja": "経済学例解 第3巻（全9巻）",
+   "ar": "توضيحات الاقتصاد السياسي، المجلد 3 (من 9)",
+   "hi": "राजनीतिक अर्थशास्त्र के उदाहरण, खंड 3 (9 में से)"
+  }
+ },
+ {
+  "keys": [
+   "Illustrations of political economy, Volume 4 (of 9)"
+  ],
+  "titles": {
+   "ca": "Il·lustracions d'economia política, volum 4 (de 9)",
+   "es": "Ilustraciones de economía política, volumen 4 (de 9)",
+   "fr": "Illustrations d'économie politique, volume 4 (sur 9)",
+   "de": "Illustrationen der politischen Ökonomie, Band 4 (von 9)",
+   "it": "Illustrazioni di economia politica, volume 4 (di 9)",
+   "ru": "Иллюстрации политической экономии, том 4 (из 9)",
+   "zh": "政治经济学图解，第4卷（共9卷）",
+   "ja": "経済学例解 第4巻（全9巻）",
+   "ar": "توضيحات الاقتصاد السياسي، المجلد 4 (من 9)",
+   "hi": "राजनीतिक अर्थशास्त्र के उदाहरण, खंड 4 (9 में से)"
+  }
+ },
+ {
+  "keys": [
+   "Illustrations of political economy, Volume 6 (of 9)"
+  ],
+  "titles": {
+   "ca": "Il·lustracions d'economia política, volum 6 (de 9)",
+   "es": "Ilustraciones de economía política, volumen 6 (de 9)",
+   "fr": "Illustrations d'économie politique, volume 6 (sur 9)",
+   "de": "Illustrationen der politischen Ökonomie, Band 6 (von 9)",
+   "it": "Illustrazioni di economia politica, volume 6 (di 9)",
+   "ru": "Иллюстрации политической экономии, том 6 (из 9)",
+   "zh": "政治经济学图解，第6卷（共9卷）",
+   "ja": "経済学例解 第6巻（全9巻）",
+   "ar": "توضيحات الاقتصاد السياسي، المجلد 6 (من 9)",
+   "hi": "राजनीतिक अर्थशास्त्र के उदाहरण, खंड 6 (9 में से)"
+  }
+ },
+ {
+  "keys": [
+   "Illustrations of political economy, Volume 8 (of 9)"
+  ],
+  "titles": {
+   "ca": "Il·lustracions d'economia política, volum 8 (de 9)",
+   "es": "Ilustraciones de economía política, volumen 8 (de 9)",
+   "fr": "Illustrations d'économie politique, volume 8 (sur 9)",
+   "de": "Illustrationen der politischen Ökonomie, Band 8 (von 9)",
+   "it": "Illustrazioni di economia politica, volume 8 (di 9)",
+   "ru": "Иллюстрации политической экономии, том 8 (из 9)",
+   "zh": "政治经济学图解，第8卷（共9卷）",
+   "ja": "経済学例解 第8巻（全9巻）",
+   "ar": "توضيحات الاقتصاد السياسي، المجلد 8 (من 9)",
+   "hi": "राजनीतिक अर्थशास्त्र के उदाहरण, खंड 8 (9 में से)"
+  }
+ },
+ {
+  "keys": [
+   "Illustrations of taxation"
+  ],
+  "titles": {
+   "ca": "Il·lustracions de la tributació",
+   "es": "Ilustraciones de la tributación",
+   "fr": "Illustrations de la fiscalité",
+   "de": "Illustrationen der Besteuerung",
+   "it": "Illustrazioni della tassazione",
+   "ru": "Иллюстрации налогообложения",
+   "zh": "税收图解",
+   "ja": "課税例解",
+   "ar": "توضيحات الضرائب",
+   "hi": "कराधान के उदाहरण"
+  }
+ },
+ {
+  "keys": [
+   "Retrospect of Western Travel, Volume 1 (of 2)"
+  ],
+  "titles": {
+   "ca": "Retrospectiva d'un viatge per Occident, volum 1 (de 2)",
+   "es": "Retrospectiva de un viaje por Occidente, volumen 1 (de 2)",
+   "fr": "Rétrospective d'un voyage en Occident, volume 1 (sur 2)",
+   "de": "Rückblick auf eine Reise durch den Westen, Band 1 (von 2)",
+   "it": "Retrospettiva di un viaggio in Occidente, volume 1 (di 2)",
+   "ru": "Взгляд назад на путешествие по Западу, том 1 (из 2)",
+   "zh": "西行游记回顾，第1卷（共2卷）",
+   "ja": "西方旅行の回顧 第1巻（全2巻）",
+   "ar": "استعادة رحلة غربية، المجلد 1 (من 2)",
+   "hi": "पश्चिमी यात्रा की पुनरावलोकन, खंड 1 (2 में से)"
+  }
+ },
+ {
+  "keys": [
+   "Retrospect of Western Travel, Volume 2 (of 2)"
+  ],
+  "titles": {
+   "ca": "Retrospectiva d'un viatge per Occident, volum 2 (de 2)",
+   "es": "Retrospectiva de un viaje por Occidente, volumen 2 (de 2)",
+   "fr": "Rétrospective d'un voyage en Occident, volume 2 (sur 2)",
+   "de": "Rückblick auf eine Reise durch den Westen, Band 2 (von 2)",
+   "it": "Retrospettiva di un viaggio in Occidente, volume 2 (di 2)",
+   "ru": "Взгляд назад на путешествие по Западу, том 2 (из 2)",
+   "zh": "西行游记回顾，第2卷（共2卷）",
+   "ja": "西方旅行の回顧 第2巻（全2巻）",
+   "ar": "استعادة رحلة غربية، المجلد 2 (من 2)",
+   "hi": "पश्चिमी यात्रा की पुनरावलोकन, खंड 2 (2 में से)"
+  }
+ },
+ {
+  "keys": [
+   "Society in America, Volume 1 (of 2)"
+  ],
+  "titles": {
+   "ca": "La societat a Amèrica, volum 1 (de 2)",
+   "es": "La sociedad en América, volumen 1 (de 2)",
+   "fr": "La société en Amérique, volume 1 (sur 2)",
+   "de": "Die Gesellschaft in Amerika, Band 1 (von 2)",
+   "it": "La società in America, volume 1 (di 2)",
+   "ru": "Общество в Америке, том 1 (из 2)",
+   "zh": "美国社会，第1卷（共2卷）",
+   "ja": "アメリカの社会 第1巻（全2巻）",
+   "ar": "المجتمع في أمريكا، المجلد 1 (من 2)",
+   "hi": "अमेरिका में समाज, खंड 1 (2 में से)"
+  }
+ },
+ {
+  "keys": [
+   "Society in America, Volume 2 (of 2)"
+  ],
+  "titles": {
+   "ca": "La societat a Amèrica, volum 2 (de 2)",
+   "es": "La sociedad en América, volumen 2 (de 2)",
+   "fr": "La société en Amérique, volume 2 (sur 2)",
+   "de": "Die Gesellschaft in Amerika, Band 2 (von 2)",
+   "it": "La società in America, volume 2 (di 2)",
+   "ru": "Общество в Америке, том 2 (из 2)",
+   "zh": "美国社会，第2卷（共2卷）",
+   "ja": "アメリカの社会 第2巻（全2巻）",
+   "ar": "المجتمع في أمريكا، المجلد 2 (من 2)",
+   "hi": "अमेरिका में समाज, खंड 2 (2 में से)"
+  }
+ },
+ {
+  "keys": [
+   "The Crofton Boys"
+  ],
+  "titles": {
+   "ca": "Els nois de Crofton",
+   "es": "Los muchachos de Crofton",
+   "fr": "Les garçons de Crofton",
+   "de": "Die Jungen von Crofton",
+   "it": "I ragazzi di Crofton",
+   "ru": "Мальчики Крофтона",
+   "zh": "克罗夫顿的男孩们",
+   "ja": "クロフトンの少年たち",
+   "ar": "فتيان كروفتون",
+   "hi": "क्रॉफ्टन के लड़के"
+  }
+ },
+ {
+  "keys": [
+   "The Hour and the Man, An Historical Romance"
+  ],
+  "titles": {
+   "ca": "L'hora i l'home: un romanç històric",
+   "es": "La hora y el hombre: un romance histórico",
+   "fr": "L'heure et l'homme : un roman historique",
+   "de": "Die Stunde und der Mann: eine historische Romanze",
+   "it": "L'ora e l'uomo: un romanzo storico",
+   "ru": "Час и человек: исторический роман",
+   "zh": "时代与英雄：一部历史传奇",
+   "ja": "時と人：歴史ロマンス",
+   "ar": "الساعة والرجل: رواية تاريخية",
+   "hi": "घड़ी और आदमी: एक ऐतिहासिक रोमांस"
+  }
+ },
+ {
+  "keys": [
+   "China, Japan and the U.S.A."
+  ],
+  "titles": {
+   "ca": "Xina, Japó i els EUA",
+   "es": "China, Japón y los EE. UU.",
+   "fr": "Chine, Japon et États-Unis",
+   "de": "China, Japan und die USA",
+   "it": "Cina, Giappone e Stati Uniti",
+   "ru": "Китай, Япония и США",
+   "zh": "中国、日本与美国",
+   "ja": "中国、日本、そしてアメリカ",
+   "ar": "الصين واليابان والولايات المتحدة",
+   "hi": "चीन, जापान और अमेरिका"
+  }
+ },
+ {
+  "keys": [
+   "Creative Intelligence Essays in the Pragmatic Attitude"
+  ],
+  "titles": {
+   "ca": "Intel·ligència creativa: assaigs sobre l'actitud pragmàtica",
+   "es": "Inteligencia creativa: ensayos sobre la actitud pragmática",
+   "fr": "Intelligence créatrice : essais sur l'attitude pragmatique",
+   "de": "Schöpferische Intelligenz: Essays zur pragmatischen Haltung",
+   "it": "Intelligenza creativa: saggi sull'atteggiamento pragmatico",
+   "ru": "Творческий интеллект: очерки о прагматической установке",
+   "zh": "创造性智慧：实用主义态度论集",
+   "ja": "創造的知性：プラグマティズム的態度に関する試論",
+   "ar": "الذكاء الخلاق: مقالات في الموقف البراغماتي",
+   "hi": "रचनात्मक बुद्धि: व्यावहारिक दृष्टिकोण पर निबंध"
+  }
+ },
+ {
+  "keys": [
+   "Essays in Experimental Logic"
+  ],
+  "titles": {
+   "ca": "Assaigs de lògica experimental",
+   "es": "Ensayos de lógica experimental",
+   "fr": "Essais de logique expérimentale",
+   "de": "Essays zur experimentellen Logik",
+   "it": "Saggi di logica sperimentale",
+   "ru": "Очерки экспериментальной логики",
+   "zh": "实验逻辑论集",
+   "ja": "実験論理学試論",
+   "ar": "مقالات في المنطق التجريبي",
+   "hi": "प्रायोगिक तर्कशास्त्र पर निबंध"
+  }
+ },
+ {
+  "keys": [
+   "German philosophy and politics"
+  ],
+  "titles": {
+   "ca": "La filosofia i la política alemanyes",
+   "es": "La filosofía y la política alemanas",
+   "fr": "La philosophie et la politique allemandes",
+   "de": "Deutsche Philosophie und Politik",
+   "it": "La filosofia e la politica tedesche",
+   "ru": "Немецкая философия и политика",
+   "zh": "德国哲学与政治",
+   "ja": "ドイツの哲学と政治",
+   "ar": "الفلسفة والسياسة الألمانية",
+   "hi": "जर्मन दर्शन और राजनीति"
+  }
+ },
+ {
+  "keys": [
+   "Human Nature and Conduct An introduction to social psychology"
+  ],
+  "titles": {
+   "ca": "La naturalesa humana i la conducta: una introducció a la psicologia social",
+   "es": "La naturaleza humana y la conducta: una introducción a la psicología social",
+   "fr": "Nature humaine et conduite : une introduction à la psychologie sociale",
+   "de": "Menschliche Natur und Verhalten: eine Einführung in die Sozialpsychologie",
+   "it": "La natura umana e la condotta: un'introduzione alla psicologia sociale",
+   "ru": "Человеческая природа и поведение: введение в социальную психологию",
+   "zh": "人性与行为：社会心理学导论",
+   "ja": "人間性と行為：社会心理学入門",
+   "ar": "الطبيعة البشرية والسلوك: مقدمة في علم النفس الاجتماعي",
+   "hi": "मानव स्वभाव और आचरण: सामाजिक मनोविज्ञान का परिचय"
+  }
+ },
+ {
+  "keys": [
+   "Leibniz's New Essays Concerning the Human Understanding A Critical Exposition"
+  ],
+  "titles": {
+   "ca": "Els nous assaigs de Leibniz sobre l'enteniment humà: una exposició crítica",
+   "es": "Los nuevos ensayos de Leibniz sobre el entendimiento humano: una exposición crítica",
+   "fr": "Les nouveaux essais de Leibniz sur l'entendement humain : un exposé critique",
+   "de": "Leibniz' Neue Abhandlungen über den menschlichen Verstand: eine kritische Darstellung",
+   "it": "I nuovi saggi di Leibniz sull'intelletto umano: un'esposizione critica",
+   "ru": "Новые опыты Лейбница о человеческом разумении: критическое изложение",
+   "zh": "莱布尼茨《人类理智新论》批判性阐释",
+   "ja": "ライプニッツ『人間知性新論』批判的解説",
+   "ar": "مقالات لايبنتز الجديدة في الفهم البشري: عرض نقدي",
+   "hi": "लाइबनिट्ज़ के मानव बोध पर नए निबंध: एक आलोचनात्मक प्रस्तुति"
+  }
+ },
+ {
+  "keys": [
+   "Moral Principles in Education"
+  ],
+  "titles": {
+   "ca": "Principis morals en l'educació",
+   "es": "Principios morales en la educación",
+   "fr": "Principes moraux dans l'éducation",
+   "de": "Moralische Prinzipien in der Erziehung",
+   "it": "Principi morali nell'educazione",
+   "ru": "Нравственные принципы в образовании",
+   "zh": "教育中的道德原则",
+   "ja": "教育における道徳的原理",
+   "ar": "المبادئ الأخلاقية في التربية",
+   "hi": "शिक्षा में नैतिक सिद्धांत"
+  }
+ },
+ {
+  "keys": [
+   "Psychology and Social Practice"
+  ],
+  "titles": {
+   "ca": "Psicologia i pràctica social",
+   "es": "Psicología y práctica social",
+   "fr": "Psychologie et pratique sociale",
+   "de": "Psychologie und soziale Praxis",
+   "it": "Psicologia e pratica sociale",
+   "ru": "Психология и социальная практика",
+   "zh": "心理学与社会实践",
+   "ja": "心理学と社会的実践",
+   "ar": "علم النفس والممارسة الاجتماعية",
+   "hi": "मनोविज्ञान और सामाजिक व्यवहार"
+  }
+ },
+ {
+  "keys": [
+   "Reconstruction in Philosophy"
+  ],
+  "titles": {
+   "ca": "Reconstrucció en filosofia",
+   "es": "Reconstrucción en filosofía",
+   "fr": "Reconstruction en philosophie",
+   "de": "Wiederaufbau der Philosophie",
+   "it": "Ricostruzione della filosofia",
+   "ru": "Реконструкция в философии",
+   "zh": "哲学的重建",
+   "ja": "哲学の再構成",
+   "ar": "إعادة البناء في الفلسفة",
+   "hi": "दर्शनशास्त्र में पुनर्निर्माण"
+  }
+ },
+ {
+  "keys": [
+   "Schools of to-morrow"
+  ],
+  "titles": {
+   "ca": "Les escoles de demà",
+   "es": "Las escuelas del mañana",
+   "fr": "Les écoles de demain",
+   "de": "Die Schulen von morgen",
+   "it": "Le scuole di domani",
+   "ru": "Школы будущего",
+   "zh": "明日之学校",
+   "ja": "明日の学校",
+   "ar": "مدارس الغد",
+   "hi": "कल के विद्यालय"
+  }
+ },
+ {
+  "keys": [
+   "Studies in Logical Theory"
+  ],
+  "titles": {
+   "ca": "Estudis de teoria lògica",
+   "es": "Estudios de teoría lógica",
+   "fr": "Études de théorie logique",
+   "de": "Studien zur Logiktheorie",
+   "it": "Studi di teoria logica",
+   "ru": "Исследования по логической теории",
+   "zh": "逻辑理论研究",
+   "ja": "論理学理論の研究",
+   "ar": "دراسات في النظرية المنطقية",
+   "hi": "तार्किक सिद्धांत पर अध्ययन"
+  }
+ },
+ {
+  "keys": [
+   "The Child and the Curriculum"
+  ],
+  "titles": {
+   "ca": "L'infant i el currículum",
+   "es": "El niño y el currículo",
+   "fr": "L'enfant et le programme scolaire",
+   "de": "Das Kind und der Lehrplan",
+   "it": "Il bambino e il curricolo",
+   "ru": "Ребёнок и учебная программа",
+   "zh": "儿童与课程",
+   "ja": "子どもとカリキュラム",
+   "ar": "الطفل والمنهج الدراسي",
+   "hi": "बच्चा और पाठ्यक्रम"
+  }
+ },
+ {
+  "keys": [
+   "The Influence of Darwin on Philosophy, and other essays in contemporary thought"
+  ],
+  "titles": {
+   "ca": "La influència de Darwin en la filosofia, i altres assaigs de pensament contemporani",
+   "es": "La influencia de Darwin en la filosofía, y otros ensayos de pensamiento contemporáneo",
+   "fr": "L'influence de Darwin sur la philosophie, et autres essais de pensée contemporaine",
+   "de": "Der Einfluss Darwins auf die Philosophie und andere Essays zeitgenössischen Denkens",
+   "it": "L'influenza di Darwin sulla filosofia, e altri saggi di pensiero contemporaneo",
+   "ru": "Влияние Дарвина на философию и другие очерки современной мысли",
+   "zh": "达尔文对哲学的影响及其他当代思想论集",
+   "ja": "ダーウィンが哲学に与えた影響、その他現代思想論集",
+   "ar": "تأثير داروين على الفلسفة، ومقالات أخرى في الفكر المعاصر",
+   "hi": "दर्शनशास्त्र पर डार्विन का प्रभाव, और समकालीन विचार पर अन्य निबंध"
+  }
+ },
+ {
+  "keys": [
+   "The Social Possibilities of War"
+  ],
+  "titles": {
+   "ca": "Les possibilitats socials de la guerra",
+   "es": "Las posibilidades sociales de la guerra",
+   "fr": "Les possibilités sociales de la guerre",
+   "de": "Die sozialen Möglichkeiten des Krieges",
+   "it": "Le possibilità sociali della guerra",
+   "ru": "Социальные возможности войны",
+   "zh": "战争的社会可能性",
+   "ja": "戦争の社会的可能性",
+   "ar": "الإمكانات الاجتماعية للحرب",
+   "hi": "युद्ध की सामाजिक संभावनाएँ"
+  }
+ },
+ {
+  "keys": [
+   "The public and its problems"
+  ],
+  "titles": {
+   "ca": "El públic i els seus problemes",
+   "es": "El público y sus problemas",
+   "fr": "Le public et ses problèmes",
+   "de": "Die Öffentlichkeit und ihre Probleme",
+   "it": "Il pubblico e i suoi problemi",
+   "ru": "Публика и её проблемы",
+   "zh": "公众及其问题",
+   "ja": "公衆とその諸問題",
+   "ar": "الجمهور ومشكلاته",
+   "hi": "जनता और उसकी समस्याएँ"
+  }
+ },
+ {
+  "keys": [
+   "Letters from China and Japan"
+  ],
+  "titles": {
+   "ca": "Cartes des de la Xina i el Japó",
+   "es": "Cartas desde China y Japón",
+   "fr": "Lettres de Chine et du Japon",
+   "de": "Briefe aus China und Japan",
+   "it": "Lettere dalla Cina e dal Giappone",
+   "ru": "Письма из Китая и Японии",
+   "zh": "来自中国与日本的信",
+   "ja": "中国と日本からの手紙",
+   "ar": "رسائل من الصين واليابان",
+   "hi": "चीन और जापान से पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Der Briefwechsel zwischen Friedrich Engels und Karl Marx 1844 bis 1883, Erster B"
+  ],
+  "titles": {
+   "ca": "La correspondència entre Friedrich Engels i Karl Marx, 1844-1883, primer volum",
+   "es": "La correspondencia entre Friedrich Engels y Karl Marx, 1844-1883, primer volumen",
+   "fr": "La correspondance entre Friedrich Engels et Karl Marx, 1844-1883, premier volume",
+   "de": "Der Briefwechsel zwischen Friedrich Engels und Karl Marx 1844 bis 1883, Erster Band",
+   "it": "La corrispondenza tra Friedrich Engels e Karl Marx, 1844-1883, primo volume",
+   "ru": "Переписка между Фридрихом Энгельсом и Карлом Марксом, 1844-1883, первый том",
+   "zh": "恩格斯与马克思通信集，1844-1883，第一卷",
+   "ja": "エンゲルスとマルクスの往復書簡、1844-1883年、第1巻",
+   "ar": "مراسلات فريدريك إنجلز وكارل ماركس، 1844-1883، المجلد الأول",
+   "hi": "फ्रेडरिक एंगेल्स और कार्ल मार्क्स के बीच पत्राचार, 1844-1883, पहला खंड"
+  }
+ },
+ {
+  "keys": [
+   "History of the International Workingmen's Association"
+  ],
+  "titles": {
+   "ca": "Història de l'Associació Internacional dels Treballadors",
+   "es": "Historia de la Asociación Internacional de los Trabajadores",
+   "fr": "Histoire de l'Association internationale des travailleurs",
+   "de": "Geschichte der Internationalen Arbeiterassoziation",
+   "it": "Storia dell'Associazione Internazionale dei Lavoratori",
+   "ru": "История Международного товарищества рабочих",
+   "zh": "国际工人协会史",
+   "ja": "国際労働者協会の歴史",
+   "ar": "تاريخ الرابطة الأممية للعمال",
+   "hi": "अंतर्राष्ट्रीय श्रमिक संघ का इतिहास"
+  }
+ },
+ {
+  "keys": [
+   "MarxEngels Biography"
+  ],
+  "titles": {
+   "ca": "Biografia de Marx i Engels",
+   "es": "Biografía de Marx y Engels",
+   "fr": "Biographie de Marx et Engels",
+   "de": "Biographie von Marx und Engels",
+   "it": "Biografia di Marx ed Engels",
+   "ru": "Биография Маркса и Энгельса",
+   "zh": "马克思与恩格斯传",
+   "ja": "マルクスとエンゲルスの伝記",
+   "ar": "سيرة ماركس وإنجلز",
+   "hi": "मार्क्स और एंगेल्स की जीवनी"
+  }
+ },
+ {
+  "keys": [
+   "MarxEngels Letters"
+  ],
+  "titles": {
+   "ca": "Cartes de Marx i Engels",
+   "es": "Cartas de Marx y Engels",
+   "fr": "Lettres de Marx et Engels",
+   "de": "Briefe von Marx und Engels",
+   "it": "Lettere di Marx ed Engels",
+   "ru": "Письма Маркса и Энгельса",
+   "zh": "马克思与恩格斯书信集",
+   "ja": "マルクスとエンゲルスの書簡",
+   "ar": "رسائل ماركس وإنجلز",
+   "hi": "मार्क्स और एंगेल्स के पत्र"
+  }
+ },
+ {
+  "keys": [
+   "On the Consequences of using Machinery under Capitalism"
+  ],
+  "titles": {
+   "ca": "Sobre les conseqüències de l'ús de la maquinària sota el capitalisme",
+   "es": "Sobre las consecuencias del uso de la maquinaria bajo el capitalismo",
+   "fr": "Sur les conséquences de l'usage des machines sous le capitalisme",
+   "de": "Über die Folgen des Maschineneinsatzes unter dem Kapitalismus",
+   "it": "Sulle conseguenze dell'uso dei macchinari sotto il capitalismo",
+   "ru": "О последствиях применения машин при капитализме",
+   "zh": "论资本主义下使用机器的后果",
+   "ja": "資本主義下における機械使用の帰結について",
+   "ar": "في عواقب استخدام الآلات في ظل الرأسمالية",
+   "hi": "पूंजीवाद के अंतर्गत मशीनरी के उपयोग के परिणामों पर"
+  }
+ },
+ {
+  "keys": [
+   "On the Successes of The International in Germany and France"
+  ],
+  "titles": {
+   "ca": "Sobre els èxits de la Internacional a Alemanya i França",
+   "es": "Sobre los éxitos de la Internacional en Alemania y Francia",
+   "fr": "Sur les succès de l'Internationale en Allemagne et en France",
+   "de": "Über die Erfolge der Internationale in Deutschland und Frankreich",
+   "it": "Sui successi dell'Internazionale in Germania e Francia",
+   "ru": "Об успехах Интернационала в Германии и Франции",
+   "zh": "论国际工人协会在德国与法国的成就",
+   "ja": "ドイツとフランスにおけるインターナショナルの成功について",
+   "ar": "في نجاحات الأممية في ألمانيا وفرنسا",
+   "hi": "जर्मनी और फ्रांस में इंटरनेशनल की सफलताओं पर"
+  }
+ },
+ {
+  "keys": [
+   "Response to Lawrence &amp; Wishart statement on MECW"
+  ],
+  "titles": {
+   "ca": "Resposta a la declaració de Lawrence & Wishart sobre les MECW",
+   "es": "Respuesta a la declaración de Lawrence & Wishart sobre las MECW",
+   "fr": "Réponse à la déclaration de Lawrence & Wishart sur les MECW",
+   "de": "Antwort auf die Erklärung von Lawrence & Wishart zu den MECW",
+   "it": "Risposta alla dichiarazione di Lawrence & Wishart sulle MECW",
+   "ru": "Ответ на заявление Lawrence & Wishart об MECW",
+   "zh": "对劳伦斯与威沙特关于马恩全集声明的回应",
+   "ja": "MECWに関するローレンス＆ウィシャート社の声明への回答",
+   "ar": "الرد على بيان Lawrence & Wishart بشأن أعمال ماركس وإنجلز الكاملة",
+   "hi": "MECW पर लॉरेंस एंड विशार्ट के बयान का जवाब"
+  }
+ },
+ {
+  "keys": [
+   "Revolution and Counter-Revolution; Or, Germany in 1848"
+  ],
+  "titles": {
+   "ca": "Revolució i contrarevolució, o Alemanya el 1848",
+   "es": "Revolución y contrarrevolución, o Alemania en 1848",
+   "fr": "Révolution et contre-révolution, ou l'Allemagne en 1848",
+   "de": "Revolution und Konterrevolution, oder Deutschland im Jahre 1848",
+   "it": "Rivoluzione e controrivoluzione, ovvero la Germania nel 1848",
+   "ru": "Революция и контрреволюция, или Германия в 1848 году",
+   "zh": "革命与反革命：1848年的德国",
+   "ja": "革命と反革命、あるいは1848年のドイツ",
+   "ar": "الثورة والثورة المضادة، أو ألمانيا عام 1848",
+   "hi": "क्रांति और प्रति-क्रांति, अथवा 1848 में जर्मनी"
+  }
+ },
+ {
+  "keys": [
+   "Secret Diplomatic History of The Eighteenth Century"
+  ],
+  "titles": {
+   "ca": "Història diplomàtica secreta del segle XVIII",
+   "es": "Historia diplomática secreta del siglo XVIII",
+   "fr": "Histoire diplomatique secrète du XVIIIe siècle",
+   "de": "Geheime diplomatische Geschichte des 18. Jahrhunderts",
+   "it": "Storia diplomatica segreta del XVIII secolo",
+   "ru": "Тайная дипломатическая история XVIII века",
+   "zh": "十八世纪秘密外交史",
+   "ja": "十八世紀秘密外交史",
+   "ar": "التاريخ الدبلوماسي السري للقرن الثامن عشر",
+   "hi": "अठारहवीं शताब्दी का गुप्त कूटनीतिक इतिहास"
+  }
+ },
+ {
+  "keys": [
+   "Archive of eBooks, Print-ready Books, and Audiobooks of Marx and Engels"
+  ],
+  "titles": {
+   "ca": "Arxiu de llibres electrònics, llibres per imprimir i audiollibres de Marx i Engels",
+   "es": "Archivo de libros electrónicos, libros listos para imprimir y audiolibros de Marx y Engels",
+   "fr": "Archive de livres électroniques, livres imprimables et livres audio de Marx et Engels",
+   "de": "Archiv von E-Books, druckfertigen Büchern und Hörbüchern von Marx und Engels",
+   "it": "Archivio di ebook, libri pronti per la stampa e audiolibri di Marx ed Engels",
+   "ru": "Архив электронных книг, книг для печати и аудиокниг Маркса и Энгельса",
+   "zh": "马克思与恩格斯电子书、印刷版书籍与有声书档案",
+   "ja": "マルクスとエンゲルスの電子書籍・印刷用書籍・オーディオブックのアーカイブ",
+   "ar": "أرشيف الكتب الإلكترونية والكتب الجاهزة للطباعة والكتب الصوتية لماركس وإنجلز",
+   "hi": "मार्क्स और एंगेल्स की ई-पुस्तकों, मुद्रण-योग्य पुस्तकों और ऑडियोबुक का संग्रह"
+  }
+ },
+ {
+  "keys": [
+   "Marx and Engels Collected Works"
+  ],
+  "titles": {
+   "ca": "Obres completes de Marx i Engels",
+   "es": "Obras completas de Marx y Engels",
+   "fr": "Œuvres complètes de Marx et Engels",
+   "de": "Gesammelte Werke von Marx und Engels",
+   "it": "Opere complete di Marx ed Engels",
+   "ru": "Собрание сочинений Маркса и Энгельса",
+   "zh": "马克思恩格斯全集",
+   "ja": "マルクス・エンゲルス全集",
+   "ar": "الأعمال الكاملة لماركس وإنجلز",
+   "hi": "मार्क्स और एंगेल्स की संकलित रचनाएँ"
+  }
+ },
+ {
+  "keys": [
+   "Marx and Engels Subject Archive"
+  ],
+  "titles": {
+   "ca": "Arxiu temàtic de Marx i Engels",
+   "es": "Archivo temático de Marx y Engels",
+   "fr": "Archive thématique de Marx et Engels",
+   "de": "Themenarchiv von Marx und Engels",
+   "it": "Archivio tematico di Marx ed Engels",
+   "ru": "Тематический архив Маркса и Энгельса",
+   "zh": "马克思与恩格斯主题档案",
+   "ja": "マルクスとエンゲルスの主題別アーカイブ",
+   "ar": "الأرشيف الموضوعي لماركس وإنجلز",
+   "hi": "मार्क्स और एंगेल्स का विषय संग्रह"
+  }
+ },
+ {
+  "keys": [
+   "Selected Essays by Karl Marx"
+  ],
+  "titles": {
+   "ca": "Assaigs escollits de Karl Marx",
+   "es": "Ensayos escogidos de Karl Marx",
+   "fr": "Essais choisis de Karl Marx",
+   "de": "Ausgewählte Essays von Karl Marx",
+   "it": "Saggi scelti di Karl Marx",
+   "ru": "Избранные очерки Карла Маркса",
+   "zh": "卡尔·马克思文选",
+   "ja": "カール・マルクス選集",
+   "ar": "مقالات مختارة لكارل ماركس",
+   "hi": "कार्ल मार्क्स के चयनित निबंध"
+  }
+ },
+ {
+  "keys": [
+   "worksdateindex.htm"
+  ],
+  "titles": {
+   "ca": "Índex cronològic de les obres",
+   "es": "Índice cronológico de las obras",
+   "fr": "Index chronologique des œuvres",
+   "de": "Chronologisches Werkverzeichnis",
+   "it": "Indice cronologico delle opere",
+   "ru": "Хронологический указатель произведений",
+   "zh": "著作年表索引",
+   "ja": "著作年代順索引",
+   "ar": "فهرس زمني للأعمال",
+   "hi": "रचनाओं की कालानुक्रमिक सूची"
+  }
+ },
+ {
+  "keys": [
+   "Addresses to the German nation. Translated by R.F. Jones and G.H. Turnbull"
+  ],
+  "titles": {
+   "ca": "Discursos a la nació alemanya (trad. R.F. Jones i G.H. Turnbull)",
+   "es": "Discursos a la nación alemana (trad. R.F. Jones y G.H. Turnbull)",
+   "fr": "Discours à la nation allemande (trad. R.F. Jones et G.H. Turnbull)",
+   "de": "Reden an die deutsche Nation (übers. R.F. Jones und G.H. Turnbull)",
+   "it": "Discorsi alla nazione tedesca (trad. R.F. Jones e G.H. Turnbull)",
+   "ru": "Речи к немецкой нации (пер. Р.Ф. Джонса и Г.Х. Тёрнбулла)",
+   "zh": "对德意志民族的演讲（琼斯与特恩布尔译本）",
+   "ja": "ドイツ国民に告ぐ（R.F.ジョーンズ、G.H.ターンブル訳）",
+   "ar": "خطابات إلى الأمة الألمانية (ترجمة ر.ف. جونز وج.هـ. ترنبل)",
+   "hi": "जर्मन राष्ट्र को संबोधन (आर.एफ. जोन्स और जी.एच. टर्नबुल अनुवाद)"
+  }
+ },
+ {
+  "keys": [
+   "Memoir of Johann Gottlieb Fichte"
+  ],
+  "titles": {
+   "ca": "Memòria de Johann Gottlieb Fichte",
+   "es": "Memoria de Johann Gottlieb Fichte",
+   "fr": "Mémoire de Johann Gottlieb Fichte",
+   "de": "Lebenserinnerung an Johann Gottlieb Fichte",
+   "it": "Memoria di Johann Gottlieb Fichte",
+   "ru": "Воспоминания о Иоганне Готлибе Фихте",
+   "zh": "约翰·哥特利布·费希特纪传",
+   "ja": "ヨハン・ゴットリープ・フィヒテ回想録",
+   "ar": "مذكرات يوهان غوتليب فيشته",
+   "hi": "योहान गोटलीब फिष्टे का संस्मरण"
+  }
+ },
+ {
+  "keys": [
+   "The Dignity of Man"
+  ],
+  "titles": {
+   "ca": "La dignitat de l'home",
+   "es": "La dignidad del hombre",
+   "fr": "La dignité de l'homme",
+   "de": "Die Würde des Menschen",
+   "it": "La dignità dell'uomo",
+   "ru": "Достоинство человека",
+   "zh": "人的尊严",
+   "ja": "人間の尊厳",
+   "ar": "كرامة الإنسان",
+   "hi": "मनुष्य की गरिमा"
+  }
+ },
+ {
+  "keys": [
+   "The Philosophy of Fichte in its Relation to Pragmatism"
+  ],
+  "titles": {
+   "ca": "La filosofia de Fichte en relació amb el pragmatisme",
+   "es": "La filosofía de Fichte en relación con el pragmatismo",
+   "fr": "La philosophie de Fichte dans sa relation avec le pragmatisme",
+   "de": "Fichtes Philosophie in ihrer Beziehung zum Pragmatismus",
+   "it": "La filosofia di Fichte in relazione al pragmatismo",
+   "ru": "Философия Фихте в её отношении к прагматизму",
+   "zh": "费希特哲学与实用主义的关系",
+   "ja": "プラグマティズムとの関係におけるフィヒテ哲学",
+   "ar": "فلسفة فيشته في علاقتها بالبراغماتية",
+   "hi": "व्यावहारिकतावाद से फिष्टे के दर्शन का संबंध"
+  }
+ },
+ {
+  "keys": [
+   "The Religious Significance of the Science of Knowledge"
+  ],
+  "titles": {
+   "ca": "El significat religiós de la ciència del saber",
+   "es": "El significado religioso de la ciencia del saber",
+   "fr": "La signification religieuse de la doctrine de la science",
+   "de": "Die religiöse Bedeutung der Wissenschaftslehre",
+   "it": "Il significato religioso della dottrina della scienza",
+   "ru": "Религиозное значение наукоучения",
+   "zh": "知识学的宗教意义",
+   "ja": "知識学の宗教的意義",
+   "ar": "الدلالة الدينية لعلم المعرفة",
+   "hi": "ज्ञान-विज्ञान का धार्मिक महत्व"
+  }
+ },
+ {
+  "keys": [
+   "The popular works of Johann Gottlieb Fichte"
+  ],
+  "titles": {
+   "ca": "Les obres populars de Johann Gottlieb Fichte",
+   "es": "Las obras populares de Johann Gottlieb Fichte",
+   "fr": "Les œuvres populaires de Johann Gottlieb Fichte",
+   "de": "Die populären Schriften von Johann Gottlieb Fichte",
+   "it": "Le opere popolari di Johann Gottlieb Fichte",
+   "ru": "Популярные сочинения Иоганна Готлиба Фихте",
+   "zh": "约翰·哥特利布·费希特通俗著作集",
+   "ja": "ヨハン・ゴットリープ・フィヒテ通俗著作集",
+   "ar": "الأعمال الشعبية ليوهان غوتليب فيشته",
+   "hi": "योहान गोटलीब फिष्टे की लोकप्रिय रचनाएँ"
+  }
+ },
+ {
+  "keys": [
+   "Not Paul, but Jesus"
+  ],
+  "titles": {
+   "ca": "No Pau, sinó Jesús",
+   "es": "No Pablo, sino Jesús",
+   "fr": "Pas Paul, mais Jésus",
+   "de": "Nicht Paulus, sondern Jesus",
+   "it": "Non Paolo, ma Gesù",
+   "ru": "Не Павел, а Иисус",
+   "zh": "非保罗，乃耶稣",
+   "ja": "パウロにあらずイエス",
+   "ar": "ليس بولس، بل يسوع",
+   "hi": "पॉल नहीं, बल्कि यीशु"
+  }
+ },
+ {
+  "keys": [
+   "Of the Levelling System"
+  ],
+  "titles": {
+   "ca": "Sobre el sistema anivellador",
+   "es": "Sobre el sistema nivelador",
+   "fr": "Du système nivelant",
+   "de": "Über das Nivellierungssystem",
+   "it": "Sul sistema livellatore",
+   "ru": "О системе уравнивания",
+   "zh": "论平均主义体系",
+   "ja": "平等化制度について",
+   "ar": "في نظام التسوية",
+   "hi": "समतावादी प्रणाली पर"
+  }
+ },
+ {
+  "keys": [
+   "Short Review of the Declaration"
+  ],
+  "titles": {
+   "ca": "Breu revisió de la Declaració",
+   "es": "Breve revisión de la Declaración",
+   "fr": "Brève critique de la Déclaration",
+   "de": "Kurze Prüfung der Erklärung",
+   "it": "Breve rassegna della Dichiarazione",
+   "ru": "Краткий обзор Декларации",
+   "zh": "对宣言的简短评述",
+   "ja": "宣言に関する短評",
+   "ar": "مراجعة موجزة للإعلان",
+   "hi": "घोषणा की संक्षिप्त समीक्षा"
+  }
  }
 ]
