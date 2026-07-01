@@ -134,13 +134,14 @@ WORKS: list[tuple[str, list[str]]] = [
     # --- Spinoza ---
     ("Ethics (Spinoza)", ["Ethics"]),
     ("Political Treatise", ["Tractatus Politicus"]),
-    ("Treatise on the Emendation of the Intellect", ["On the Improvement of the Understanding"]),
+    ("Treatise on the Emendation of the Intellect", ["On the Improvement of the Understanding",
+                                                    "Tractatus de intellectus emendatione, et de via qua optime in veram rerum cognit"]),
     # --- Hobbes ---
     ("Leviathan (Hobbes book)", ["Leviathan"]),
     ("De Cive", ["De Cive"]),
     ("Behemoth (book)", ["Behemoth; or, The Long Parliament"]),
     # --- Rousseau ---
-    ("The Social Contract", ["Du contrat social (Le contrat social)"]),
+    ("The Social Contract", ["Du contrat social (Le contrat social)", "The social contract &amp; discourses"]),
     ("Emile, or On Education", ["Emile", "Émile; Or, Concerning Education; Extracts"]),
     ("Discourse on Inequality", ["A Discourse Upon the Origin and the Foundation of the Inequality Among Mankind"]),
     ("Confessions (Rousseau)", ["The Confessions of Jean Jacques Rousseau — Complete"]),
@@ -327,7 +328,8 @@ WORKS: list[tuple[str, list[str]]] = [
     ("Mencius (book)", ["孟子 (Chinese)"]),
     ("Zhuangzi (book)", ["Chuang Tzu Mystic, Moralist, and Social Reformer"]),
     ("The Art of War", ["The Art of War", "Sun Tzŭ on the Art of War The Oldest Military Treatise in the World"]),
-    ("Bhagavad Gita", ["Bhagavad Gita (The Song Celestial)"]),
+    ("Bhagavad Gita", ["Bhagavad Gita (The Song Celestial)",
+                      "Bhagavad-Gita with the Commentary of Sri Shankaracharya, translated to English b"]),
     ("Dhammapada", ["The Dhammapada"]),
     ("Upanishads", ["The Upanishads"]),
     # --- Al-Ghazali ---
@@ -437,6 +439,102 @@ WORKS: list[tuple[str, list[str]]] = [
                          "Épître d'Othéa, déesse de la Prudence à Hector, chef des Troyens. Reproduction d"]),
     ("El Criticón", ["El Criticón (tom 1)", "El Criticón (tom 2)"]),
     ("Oráculo manual y arte de prudencia", ["Agudeza y arte de ingenio; Oráculo manual y arte de prudencia (1669)"]),
+    # --- Ciceró: discursos i tractats individuals ---
+    ("Pro Archia", ["Pro A. Licinio Archia poeta"]),
+    ("Pro Caecina", ["Pro Aulo Caecina"]),
+    ("Pro Cluentio", ["Pro Aulo Cluentio Habito"]),
+    ("Pro Murena", ["Pro Lucio Murena"]),
+    ("Pro Sulla", ["Pro P. Sulla"]),
+    ("Pro Quinctio", ["Pro Publio Quinctio"]),
+    ("Pro Roscio Amerino", ["Pro Sexto Roscio Amerino"]),
+    ("De Fato (Cicero)", ["De fato (Marcus Tullius Cicero)"]),
+    ("Brutus (Cicero)", ["Brutus", "Cicero's Brutus or History of Famous Orators; also His Orator, or Accomplished S"]),
+    ("Topica (Cicero)", ["Topica (Marcus Tullius Cicero)"]),
+    ("Orator (Cicero)", ["Orator"]),
+    ("Academica (Cicero)", ["Academica Priora"]),
+    ("Pro Lege Manilia", ["De imperio Cn. Pompei ad quirites"]),
+    # --- Sèneca: tragèdies i consolacions ---
+    ("Hercules Furens", ["Hercules furens"]),
+    ("Troades (Seneca)", ["Troades"]),
+    ("Phoenissae (Seneca)", ["Phoenissae"]),
+    ("Agamemnon (Seneca)", ["Agamemnon"]),
+    ("Octavia (praetexta)", ["Octavia"]),
+    ("Oedipus (Seneca)", ["Oedipus"]),
+    ("De Consolatione ad Helviam", ["Ad Helviam matrem, de Consolatione"]),
+    ("De Consolatione ad Marciam", ["Ad Marciam, de Consolatione"]),
+    ("De Consolatione ad Polybium", ["Ad Polybium, de Consolatione"]),
+    # --- Xenofont: menors ---
+    ("Hiero (dialogue)", ["Hiero"]),
+    ("Agesilaus (Xenophon)", ["Agesilaus"]),
+    ("On Horsemanship", ["On Horsemanship"]),
+    ("Ways and Means (Xenophon)", ["On Revenues"]),
+    ("Cynegeticus", ["The Sportsman On Hunting, a Sportsman's Manual, Commonly Called Cynegeticus"]),
+    # --- Ramon Llull ---
+    ("Book of the Lover and the Beloved", ["Llibre d'amic e amat", "The Book of the Lover and the Beloved"]),
+    ("Llibre del gentil e dels tres savis", ["Libre del gentil e los tres savis"]),
+    ("Llibre de les bèsties", ["Llibre de les besties text original am prolec, notes bibliografiques i glosari d"]),
+    ("Libre del orde de cavalleria", ["The Buke of the Order of Knighthood", "The Buke of the Order of Knyghthood"]),
+    # --- Christine de Pizan ---
+    ("Le Livre du Duc des vrais amants", ["The Book of the Duke of True Lovers"]),
+    ("Le Chemin de long estude", ["Le chemin de long estude de dame Cristine de Pise. Ou est descrit le debat esmeu"]),
+    # --- Proclus ---
+    ("De Diis et Mundo", ["Sallust On the Gods and the World"]),
+    ("Platonic Theology (Proclus)", ["The six books of Proclus, the Platonic successor, on the theology of Plato (vol."]),
+    ("Commentary on the First Book of Euclid's Elements", ["The philosophical and mathematical commentaries of Proclus on the first book of"]),
+    # --- Diderot ---
+    ("The Indiscreet Jewels", ["Les Bijoux Indiscrets, or, The Indiscreet Toys"]),
+    ("Ceci n'est pas un conte", ["This is not a story"]),
+    # --- Epictet ---
+    ("Discourses of Epictetus", ["A Selection from the Discourses of Epictetus with the Encheiridion",
+                                 "The Golden Sayings of Epictetus, with the Hymn of Cleanthes",
+                                 "The Teaching of Epictetus"]),
+    # --- Erasme ---
+    ("Querela Pacis", ["The Complaint of Peace"]),
+    # --- Francis Bacon ---
+    ("Instauratio Magna", ["The Great Instauration"]),
+    # --- Giovanni Gentile ---
+    ("The Doctrine of Fascism", ["La dottrina del fascismo"]),
+    # --- Kierkegaard ---
+    ("Edifying Discourses", ["Edifying discourses, a selection"]),
+    # --- Martin Luther ---
+    ("Commentary on Galatians", ["Commentary on the Epistle to the Galatians (1535)"]),
+    ("On the Jews and Their Lies", ["On the Jews and Their Lies (Von den Juden und ihren Lügen, 1543)"]),
+    ("Smalcald Articles", ["The Smalcald Articles (1537)"]),
+    # --- Mary Astell ---
+    ("A Serious Proposal to the Ladies", ["A serious proposal to the Ladies, for the advancement of their true and greatest"]),
+    # --- Olympe de Gouges ---
+    ("Declaration of the Rights of Woman and of the Female Citizen", ["Déclaration Des Droits De La Femme Et De La Citoyenne Suivi De Préface Pour Les"]),
+    # --- Hume ---
+    ("Political Discourses", ["Hume's Political Discourses"]),
+    # --- Juan de la Cruz ---
+    ("Spiritual Canticle", ["Cántico espiritual"]),
+    ("Dark Night of the Soul", ["Noche oscura del alma"]),
+    # --- Montaigne ---
+    ("Travel Journal (Montaigne)", ["The journal of Montaigne's travels in Italy by way of Switzerland and Germany in"]),
+    # --- Teresa of Ávila ---
+    ("The Life of Teresa of Jesus", ["The Life of St. Teresa of Jesus, of the Order of Our Lady of Carmel"]),
+    # --- Bartolomé de las Casas ---
+    ("A Short Account of the Destruction of the Indies", ["A Brief Account of the Destruction of the Indies"]),
+    # --- Francisco de Vitoria ---
+    ("De Indis", ["De Indis et De iure belli relectiones (Carnegie Classics, Bate tr., 1917)"]),
+    # --- Patrística ---
+    ("First Apology of Justin Martyr", ["First Apology"]),
+    ("First Epistle of Clement", ["Epistle to the Corinthians (1 Clement)"]),
+    ("De miseria condicionis humanae", ["De miseria humanae conditionis (De contemptu mundi)"]),
+    ("Dialogues (Gregory the Great)", ["Dialogi de vita et miraculis patrum Italicorum"]),
+    # --- Unamuno ---
+    ("San Manuel Bueno, mártir", ["San Manuel Bueno, mártir (1933)"]),
+    # --- Schelling ---
+    ("Ages of the World", ["The Ages Of The World"]),
+    # --- Simón Bolívar ---
+    ("Angostura Address", ["Discurso de Angostura (1819)"]),
+    # --- Hobbes ---
+    ("The Elements of Law, Natural and Politic", ["Human Nature, De Corpore Politico (The Elements of Law) and Of Liberty and Necessity"]),
+    # --- Fichte ---
+    ("The Characteristics of the Present Age", ["Characteristics Lectures by Fichte"]),
+    # --- Aquinas ---
+    ("De Principiis Naturae", ["De principiis naturae"]),
+    ("De Unitate Intellectus", ["De unitate intellectus contra Averroistas"]),
 ]
 
 

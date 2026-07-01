@@ -1025,7 +1025,8 @@
  },
  {
   "keys": [
-   "On the Improvement of the Understanding"
+   "On the Improvement of the Understanding",
+   "Tractatus de intellectus emendatione, et de via qua optime in veram rerum cognit"
   ],
   "titles": {
    "fr": "Traité de la réforme de l'entendement",
@@ -1075,7 +1076,8 @@
  },
  {
   "keys": [
-   "Du contrat social (Le contrat social)"
+   "Du contrat social (Le contrat social)",
+   "The social contract &amp; discourses"
   ],
   "titles": {
    "ca": "El contracte social",
@@ -2968,7 +2970,8 @@
  },
  {
   "keys": [
-   "Bhagavad Gita (The Song Celestial)"
+   "Bhagavad Gita (The Song Celestial)",
+   "Bhagavad-Gita with the Commentary of Sri Shankaracharya, translated to English b"
   ],
   "titles": {
    "ca": "Bhagavad Gita",
@@ -3983,6 +3986,378 @@
    "de": "Oráculo manual y arte de prudencia",
    "it": "Oracolo manuale e arte della prudenza",
    "ru": "Карманный оракул"
+  }
+ },
+ {
+  "keys": [
+   "Pro A. Licinio Archia poeta"
+  ],
+  "titles": {
+   "ca": "Defensa d'Àrquias",
+   "es": "Pro Archia Poeta",
+   "fr": "Pro Archia",
+   "de": "Pro Archia",
+   "it": "Pro Archia poeta"
+  }
+ },
+ {
+  "keys": [
+   "Pro Aulo Caecina"
+  ],
+  "titles": {
+   "ca": "Defensa d'Aulus Cecina",
+   "it": "Pro Caecina"
+  }
+ },
+ {
+  "keys": [
+   "Pro Aulo Cluentio Habito"
+  ],
+  "titles": {
+   "ca": "Defensa d'Aulus Cluenci",
+   "de": "Pro Cluentio",
+   "it": "Pro Cluentio",
+   "ru": "В защиту Авла Клуенция Габита"
+  }
+ },
+ {
+  "keys": [
+   "Pro Publio Quinctio"
+  ],
+  "titles": {
+   "ca": "En defensa de Quincti",
+   "fr": "Pro Quinctio",
+   "it": "Pro Quinctio",
+   "ru": "В защиту Квинкция"
+  }
+ },
+ {
+  "keys": [
+   "Pro Sexto Roscio Amerino"
+  ],
+  "titles": {
+   "ca": "Pro Roscio Amerino",
+   "es": "Pro Roscio Amerino",
+   "fr": "Pro Roscio Amerino",
+   "it": "Pro Roscio Amerino",
+   "ru": "В защиту Росция из Америи"
+  }
+ },
+ {
+  "keys": [
+   "Brutus",
+   "Cicero's Brutus or History of Famous Orators; also His Orator, or Accomplished S"
+  ],
+  "titles": {
+   "ca": "Brutus",
+   "es": "Brutus",
+   "fr": "Brutus",
+   "it": "Brutus",
+   "ru": "Брут, или О знаменитых ораторах"
+  }
+ },
+ {
+  "keys": [
+   "Orator"
+  ],
+  "titles": {
+   "ca": "Orator",
+   "es": "Orator ad Brutum",
+   "fr": "Orator ad Brutum",
+   "de": "Orator",
+   "it": "Orator"
+  }
+ },
+ {
+  "keys": [
+   "Academica Priora"
+  ],
+  "titles": {
+   "ca": "Acadèmiques",
+   "fr": "Académiques",
+   "it": "Academica"
+  }
+ },
+ {
+  "keys": [
+   "De imperio Cn. Pompei ad quirites"
+  ],
+  "titles": {
+   "ca": "Sobre el comandament de Gneu Pompeu",
+   "es": "En defensa de la Ley Manilia",
+   "fr": "Sur les pouvoirs de Pompée",
+   "it": "De imperio Cn. Pompei",
+   "ru": "О предоставлении империя Гнею Помпею"
+  }
+ },
+ {
+  "keys": [
+   "Troades"
+  ],
+  "titles": {
+   "ca": "Les troianes",
+   "es": "Las troyanas",
+   "fr": "Les Troyennes",
+   "de": "Die Troerinnen",
+   "it": "Le troiane",
+   "ru": "Троянки"
+  }
+ },
+ {
+  "keys": [
+   "Phoenissae"
+  ],
+  "titles": {
+   "ca": "Les fenícies",
+   "es": "Las fenicias",
+   "fr": "Les Phéniciennes",
+   "de": "Phoenissae",
+   "it": "Le fenicie",
+   "ru": "Финикиянки"
+  }
+ },
+ {
+  "keys": [
+   "Agamemnon"
+  ],
+  "titles": {
+   "fr": "Agamemnon",
+   "de": "Agamemnon",
+   "it": "Agamennone",
+   "ru": "Агамемнон"
+  }
+ },
+ {
+  "keys": [
+   "Oedipus"
+  ],
+  "titles": {
+   "es": "Edipo",
+   "fr": "Œdipe",
+   "de": "Oedipus",
+   "it": "Edipo",
+   "ru": "Эдип"
+  }
+ },
+ {
+  "keys": [
+   "Agesilaus"
+  ],
+  "titles": {
+   "fr": "Agésilas",
+   "it": "Agesilao",
+   "ru": "Агесилай"
+  }
+ },
+ {
+  "keys": [
+   "On Horsemanship"
+  ],
+  "titles": {
+   "fr": "De l'équitation",
+   "de": "Über die Reitkunst",
+   "it": "Sull'equitazione"
+  }
+ },
+ {
+  "keys": [
+   "On Revenues"
+  ],
+  "titles": {
+   "fr": "Des revenus",
+   "de": "Poroi",
+   "it": "Poroi",
+   "ru": "О доходах"
+  }
+ },
+ {
+  "keys": [
+   "The Sportsman On Hunting, a Sportsman's Manual, Commonly Called Cynegeticus"
+  ],
+  "titles": {
+   "fr": "Cynégétique",
+   "it": "Caccia con i cani"
+  }
+ },
+ {
+  "keys": [
+   "Le chemin de long estude de dame Cristine de Pise. Ou est descrit le debat esmeu"
+  ],
+  "titles": {
+   "fr": "Le Chemin de longue étude",
+   "de": "Le Livre du Chemin de long estude"
+  }
+ },
+ {
+  "keys": [
+   "Les Bijoux Indiscrets, or, The Indiscreet Toys"
+  ],
+  "titles": {
+   "fr": "Les Bijoux indiscrets",
+   "de": "Die indiskreten Kleinode",
+   "it": "I gioielli indiscreti",
+   "zh": "八卦珠宝",
+   "ja": "不謹慎な宝石",
+   "ar": "الحلي الظاهرة"
+  }
+ },
+ {
+  "keys": [
+   "This is not a story"
+  ],
+  "titles": {
+   "fr": "Ceci n'est pas un conte",
+   "de": "Dies ist keine Erzählung"
+  }
+ },
+ {
+  "keys": [
+   "A Selection from the Discourses of Epictetus with the Encheiridion",
+   "The Golden Sayings of Epictetus, with the Hymn of Cleanthes",
+   "The Teaching of Epictetus"
+  ],
+  "titles": {
+   "es": "Discursos",
+   "fr": "Entretiens d'Épictète",
+   "it": "Diatribe",
+   "zh": "爱比克泰德论说集"
+  }
+ },
+ {
+  "keys": [
+   "The Great Instauration"
+  ],
+  "titles": {
+   "ca": "Novum Organum",
+   "es": "Novum organum",
+   "fr": "Novum organum",
+   "de": "Novum Organum",
+   "it": "Novum Organum",
+   "ru": "Новый Органон",
+   "zh": "新工具论：或解释自然的一些指导",
+   "ja": "ノヴム・オルガヌム",
+   "ar": "الأورجانون الجديد"
+  }
+ },
+ {
+  "keys": [
+   "La dottrina del fascismo"
+  ],
+  "titles": {
+   "es": "La doctrina del fascismo",
+   "fr": "La Doctrine du fascisme",
+   "de": "Der Geist des Faschismus",
+   "it": "La dottrina del fascismo",
+   "ru": "Доктрина фашизма",
+   "ja": "ファシズムの原理"
+  }
+ },
+ {
+  "keys": [
+   "On the Jews and Their Lies (Von den Juden und ihren Lügen, 1543)"
+  ],
+  "titles": {
+   "ca": "Sobre els jueus i les seves mentides",
+   "es": "Sobre los judíos y sus mentiras",
+   "fr": "Des Juifs et de leurs mensonges",
+   "de": "Martin Luther und die Juden#Von den Juden und ihren L.C3.BCgen .28Januar 1543.29",
+   "it": "Degli ebrei e delle loro menzogne",
+   "ru": "О евреях и их лжи",
+   "ja": "ユダヤ人と彼らの嘘について",
+   "ar": "عن اليهود وأكاذيبهم"
+  }
+ },
+ {
+  "keys": [
+   "The Smalcald Articles (1537)"
+  ],
+  "titles": {
+   "es": "Artículos de Esmalcalda",
+   "de": "Schmalkaldische Artikel",
+   "it": "Articoli di Smalcalda",
+   "ru": "Шмалькальденские артикулы",
+   "ja": "シュマルカルデン条項"
+  }
+ },
+ {
+  "keys": [
+   "Déclaration Des Droits De La Femme Et De La Citoyenne Suivi De Préface Pour Les"
+  ],
+  "titles": {
+   "ca": "Declaració dels Drets de la Dona i de la Ciutadana",
+   "es": "Declaración de los Derechos de la Mujer y de la Ciudadana",
+   "fr": "Déclaration des droits de la femme et de la citoyenne",
+   "de": "Erklärung der Rechte der Frau und Bürgerin",
+   "it": "Dichiarazione dei diritti della donna e della cittadina",
+   "ru": "Декларация прав женщины и гражданки",
+   "zh": "婦女和女性公民權利宣言",
+   "ar": "بيان حقوق المرأة والمواطنة"
+  }
+ },
+ {
+  "keys": [
+   "Cántico espiritual"
+  ],
+  "titles": {
+   "es": "Cántico espiritual",
+   "fr": "Le Cantique spirituel"
+  }
+ },
+ {
+  "keys": [
+   "Noche oscura del alma"
+  ],
+  "titles": {
+   "es": "Noche oscura del alma",
+   "fr": "La Nuit obscure",
+   "de": "Die dunkle Nacht der Seele",
+   "ru": "Тёмная ночь души",
+   "ar": "ليلة الروح المظلمة"
+  }
+ },
+ {
+  "keys": [
+   "A Brief Account of the Destruction of the Indies"
+  ],
+  "titles": {
+   "ca": "Brevíssima relació de la destrucció de les Índies",
+   "es": "Brevísima relación de la destrucción de las Indias",
+   "fr": "Brevísima relación de la destrucción de las Indias",
+   "it": "Brevissima relazione della distruzione delle Indie",
+   "zh": "西印度毀滅述略",
+   "ja": "インディアスの破壊についての簡潔な報告"
+  }
+ },
+ {
+  "keys": [
+   "First Apology"
+  ],
+  "titles": {
+   "ca": "Primera Apologia de Justí Màrtir",
+   "es": "Primera Apología de Justino Mártir",
+   "it": "Prima apologia"
+  }
+ },
+ {
+  "keys": [
+   "Epistle to the Corinthians (1 Clement)"
+  ],
+  "titles": {
+   "ca": "Primera Epístola de Climent",
+   "es": "Primera epístola de Clemente",
+   "fr": "Première épître de Clément",
+   "de": "Erster Clemensbrief",
+   "it": "Prima lettera di Clemente",
+   "zh": "克萊孟一書",
+   "ar": "رسالة إقليموس الأولى"
+  }
+ },
+ {
+  "keys": [
+   "San Manuel Bueno, mártir (1933)"
+  ],
+  "titles": {
+   "es": "San Manuel Bueno, mártir"
   }
  }
 ]
