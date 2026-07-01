@@ -9497,5 +9497,872 @@
    "ar": "الفلسفة الأساسية، المجلد الرابع",
    "hi": "मूलभूत दर्शन, खंड IV"
   }
+ },
+ {
+  "keys": [
+   "Auguste Comte and Positivism"
+  ],
+  "titles": {
+   "ca": "Auguste Comte i el positivisme",
+   "es": "Auguste Comte y el positivismo",
+   "fr": "Auguste Comte et le positivisme",
+   "de": "Auguste Comte und der Positivismus",
+   "it": "Auguste Comte e il positivismo",
+   "ru": "Огюст Конт и позитивизм",
+   "zh": "孔德与实证主义",
+   "ja": "オーギュスト・コントと実証主義",
+   "ar": "أوغست كونت والوضعية",
+   "hi": "ऑगस्ट कॉम्त और प्रत्यक्षवाद"
+  }
+ },
+ {
+  "keys": [
+   "Autobiography"
+  ],
+  "titles": {
+   "ca": "Autobiografia",
+   "es": "Autobiografía",
+   "fr": "Autobiographie",
+   "de": "Autobiographie",
+   "it": "Autobiografia",
+   "ru": "Автобиография",
+   "zh": "自传",
+   "ja": "自伝",
+   "ar": "السيرة الذاتية",
+   "hi": "आत्मकथा"
+  }
+ },
+ {
+  "keys": [
+   "Essays on some unsettled Questions of Political Economy"
+  ],
+  "titles": {
+   "ca": "Assaigs sobre algunes qüestions no resoltes de l'economia política",
+   "es": "Ensayos sobre algunas cuestiones no resueltas de la economía política",
+   "fr": "Essais sur quelques questions non résolues de l'économie politique",
+   "de": "Essays über einige ungelöste Fragen der politischen Ökonomie",
+   "it": "Saggi su alcune questioni irrisolte dell'economia politica",
+   "ru": "Очерки о некоторых нерешённых вопросах политической экономии",
+   "zh": "政治经济学若干未决问题论集",
+   "ja": "経済学の未解決のいくつかの問題に関する試論",
+   "ar": "مقالات في بعض المسائل غير المحسومة في الاقتصاد السياسي",
+   "hi": "राजनीतिक अर्थशास्त्र के कुछ अनसुलझे प्रश्नों पर निबंध"
+  }
+ },
+ {
+  "keys": [
+   "Socialism"
+  ],
+  "titles": {
+   "ca": "El socialisme",
+   "es": "El socialismo",
+   "fr": "Le socialisme",
+   "de": "Der Sozialismus",
+   "it": "Il socialismo",
+   "ru": "Социализм",
+   "zh": "论社会主义",
+   "ja": "社会主義論",
+   "ar": "الاشتراكية",
+   "hi": "समाजवाद"
+  }
+ },
+ {
+  "keys": [
+   "Speech In Favor of Capital Punishment"
+  ],
+  "titles": {
+   "ca": "Discurs a favor de la pena de mort",
+   "es": "Discurso a favor de la pena de muerte",
+   "fr": "Discours en faveur de la peine de mort",
+   "de": "Rede für die Todesstrafe",
+   "it": "Discorso a favore della pena di morte",
+   "ru": "Речь в защиту смертной казни",
+   "zh": "支持死刑的演讲",
+   "ja": "死刑支持演説",
+   "ar": "خطاب مؤيد لعقوبة الإعدام",
+   "hi": "मृत्युदंड के पक्ष में भाषण"
+  }
+ },
+ {
+  "keys": [
+   "The Contest in America"
+  ],
+  "titles": {
+   "ca": "El conflicte a Amèrica",
+   "es": "El conflicto en América",
+   "fr": "Le conflit en Amérique",
+   "de": "Der Konflikt in Amerika",
+   "it": "Il conflitto in America",
+   "ru": "Конфликт в Америке",
+   "zh": "美国的冲突",
+   "ja": "アメリカにおける争い",
+   "ar": "الصراع في أمريكا",
+   "hi": "अमेरिका में संघर्ष"
+  }
+ },
+ {
+  "keys": [
+   "Libre del gentil e los tres savis"
+  ],
+  "titles": {
+   "ca": "Llibre del gentil e los tres savis",
+   "es": "Libro del gentil y los tres sabios",
+   "fr": "Livre du gentil et des trois sages",
+   "de": "Buch vom Heiden und den drei Weisen",
+   "it": "Libro del gentile e dei tre savi",
+   "ru": "Книга о язычнике и трёх мудрецах",
+   "zh": "异教徒与三贤者之书",
+   "ja": "異教徒と三賢者の書",
+   "ar": "كتاب الوثني والحكماء الثلاثة",
+   "hi": "अन्यजाति और तीन ज्ञानियों की पुस्तक"
+  }
+ },
+ {
+  "keys": [
+   "Llibre d'amic e amat"
+  ],
+  "titles": {
+   "ca": "Llibre d'amic e amat",
+   "es": "Libro del amigo y del amado",
+   "fr": "Livre de l'ami et de l'aimé",
+   "de": "Buch vom Freund und dem Geliebten",
+   "it": "Libro dell'amico e dell'amato",
+   "ru": "Книга о друге и возлюбленном",
+   "zh": "友与爱人之书",
+   "ja": "友と愛する者の書",
+   "ar": "كتاب الصديق والمحبوب",
+   "hi": "मित्र और प्रिय की पुस्तक"
+  }
+ },
+ {
+  "keys": [
+   "Llibre de les besties text original am prolec, notes bibliografiques i glosari d"
+  ],
+  "titles": {
+   "ca": "Llibre de les bèsties",
+   "es": "Libro de las bestias",
+   "fr": "Livre des bêtes",
+   "de": "Buch der Tiere",
+   "it": "Libro delle bestie",
+   "ru": "Книга о зверях",
+   "zh": "兽类之书",
+   "ja": "獣の書",
+   "ar": "كتاب البهائم",
+   "hi": "पशुओं की पुस्तक"
+  }
+ },
+ {
+  "keys": [
+   "The Book of the Lover and the Beloved"
+  ],
+  "titles": {
+   "ca": "Llibre d'amic e amat",
+   "es": "Libro del amigo y del amado",
+   "fr": "Livre de l'ami et de l'aimé",
+   "de": "Buch vom Freund und dem Geliebten",
+   "it": "Libro dell'amico e dell'amato",
+   "ru": "Книга о друге и возлюбленном",
+   "zh": "友与爱人之书",
+   "ja": "友と愛する者の書",
+   "ar": "كتاب الصديق والمحبوب",
+   "hi": "मित्र और प्रिय की पुस्तक"
+  }
+ },
+ {
+  "keys": [
+   "The Buke of the Order of Knighthood"
+  ],
+  "titles": {
+   "ca": "Llibre de l'orde de cavalleria",
+   "es": "Libro de la orden de caballería",
+   "fr": "Livre de l'ordre de chevalerie",
+   "de": "Buch vom Ritterorden",
+   "it": "Libro dell'ordine di cavalleria",
+   "ru": "Книга о рыцарском ордене",
+   "zh": "骑士团之书",
+   "ja": "騎士団の書",
+   "ar": "كتاب نظام الفروسية",
+   "hi": "शौर्य-व्यवस्था की पुस्तक"
+  }
+ },
+ {
+  "keys": [
+   "The Buke of the Order of Knyghthood"
+  ],
+  "titles": {
+   "ca": "Llibre de l'orde de cavalleria",
+   "es": "Libro de la orden de caballería",
+   "fr": "Livre de l'ordre de chevalerie",
+   "de": "Buch vom Ritterorden",
+   "it": "Libro dell'ordine di cavalleria",
+   "ru": "Книга о рыцарском ордене",
+   "zh": "骑士团之书",
+   "ja": "騎士団の書",
+   "ar": "كتاب نظام الفروسية",
+   "hi": "शौर्य-व्यवस्था की पुस्तक"
+  }
+ },
+ {
+  "keys": [
+   "Chinese literature Comprising the Analects of Confucius, the Sayings of Mencius,"
+  ],
+  "titles": {
+   "ca": "Literatura xinesa: els Analectes de Confuci, les màximes de Mengzi…",
+   "es": "Literatura china: los Analectas de Confucio, las máximas de Mencio…",
+   "fr": "Littérature chinoise : les Entretiens de Confucius, les maximes de Mencius…",
+   "de": "Chinesische Literatur: die Gespräche des Konfuzius, die Sprüche des Menzius…",
+   "it": "Letteratura cinese: gli Analecta di Confucio, i detti di Mencio…",
+   "ru": "Китайская литература: Лунь юй Конфуция, изречения Мэн-цзы…",
+   "zh": "中国文学：论语、孟子语录……",
+   "ja": "中国文学：論語、孟子の言葉……",
+   "ar": "الأدب الصيني: تعاليم كونفوشيوس، أقوال منشيوس...",
+   "hi": "चीनी साहित्य: कन्फ्यूशियस के सूक्तिसंग्रह, मेन्शियस की उक्तियाँ..."
+  }
+ },
+ {
+  "keys": [
+   "The Four Books I: Analects, Great Learning, Doctrine of the Mean (Legge)"
+  ],
+  "titles": {
+   "ca": "Els Quatre Llibres I: Analectes, El Gran Aprenentatge, La Doctrina del Mig (Legge)",
+   "es": "Los Cuatro Libros I: Analectas, El Gran Aprendizaje, La Doctrina del Medio (Legge)",
+   "fr": "Les Quatre Livres I : Entretiens, La Grande Étude, Le Juste Milieu (Legge)",
+   "de": "Die Vier Bücher I: Gespräche, Die Große Lehre, Die Lehre von der Mitte (Legge)",
+   "it": "I Quattro Libri I: Analecta, Il Grande Studio, La Dottrina del Mezzo (Legge)",
+   "ru": "Четверокнижие I: Лунь юй, Великое учение, Учение о середине (Легг)",
+   "zh": "四书之一：论语、大学、中庸（理雅各译）",
+   "ja": "四書之一：論語、大学、中庸（レッグ訳）",
+   "ar": "الكتب الأربعة الأول: التعاليم، التعلم العظيم، مذهب الوسط (ترجمة ليج)",
+   "hi": "चार पुस्तकें I: सूक्तिसंग्रह, महान शिक्षा, मध्य का सिद्धांत (लेग)"
+  }
+ },
+ {
+  "keys": [
+   "The Life, Labours and Doctrines of Confucius"
+  ],
+  "titles": {
+   "ca": "La vida, els treballs i les doctrines de Confuci",
+   "es": "La vida, las labores y las doctrinas de Confucio",
+   "fr": "La vie, les travaux et les doctrines de Confucius",
+   "de": "Das Leben, die Werke und die Lehren des Konfuzius",
+   "it": "La vita, le opere e le dottrine di Confucio",
+   "ru": "Жизнь, труды и учения Конфуция",
+   "zh": "孔子的生平、事业与学说",
+   "ja": "孔子の生涯、業績、教説",
+   "ar": "حياة كونفوشيوس وأعماله وتعاليمه",
+   "hi": "कन्फ्यूशियस का जीवन, कार्य और सिद्धांत"
+  }
+ },
+ {
+  "keys": [
+   "The Wisdom of Confucius"
+  ],
+  "titles": {
+   "ca": "La saviesa de Confuci",
+   "es": "La sabiduría de Confucio",
+   "fr": "La sagesse de Confucius",
+   "de": "Die Weisheit des Konfuzius",
+   "it": "La saggezza di Confucio",
+   "ru": "Мудрость Конфуция",
+   "zh": "孔子的智慧",
+   "ja": "孔子の知恵",
+   "ar": "حكمة كونفوشيوس",
+   "hi": "कन्फ्यूशियस की बुद्धि"
+  }
+ },
+ {
+  "keys": [
+   "The book of filial duty"
+  ],
+  "titles": {
+   "ca": "El llibre del deure filial",
+   "es": "El libro del deber filial",
+   "fr": "Le livre du devoir filial",
+   "de": "Das Buch der kindlichen Pflicht",
+   "it": "Il libro del dovere filiale",
+   "ru": "Книга сыновнего долга",
+   "zh": "孝经",
+   "ja": "孝経",
+   "ar": "كتاب الواجب البنوي",
+   "hi": "पितृभक्ति कर्तव्य की पुस्तक"
+  }
+ },
+ {
+  "keys": [
+   "A Proposal for the Better Supplying of Churches in Our Foreign Plantations, and"
+  ],
+  "titles": {
+   "ca": "Una proposta per proveir millor d'esglésies les nostres colònies estrangeres, i…",
+   "es": "Una propuesta para proveer mejor de iglesias a nuestras colonias extranjeras, y…",
+   "fr": "Une proposition pour mieux pourvoir en églises nos plantations étrangères, et…",
+   "de": "Ein Vorschlag zur besseren Versorgung unserer ausländischen Pflanzungen mit Kirchen, und…",
+   "it": "Una proposta per fornire meglio di chiese le nostre piantagioni straniere, e…",
+   "ru": "Предложение о лучшем обеспечении церквями наших заморских поселений и…",
+   "zh": "关于更好地为我们海外殖民地提供教会之建议……",
+   "ja": "我々の海外植民地に教会をより良く供給するための提案、および……",
+   "ar": "اقتراح لتزويد مستعمراتنا الخارجية بالكنائس على نحو أفضل، و...",
+   "hi": "हमारे विदेशी उपनिवेशों को चर्चों की बेहतर आपूर्ति हेतु प्रस्ताव, और..."
+  }
+ },
+ {
+  "keys": [
+   "Alciphron, or the Minute Philosopher"
+  ],
+  "titles": {
+   "ca": "Alcifró, o el filòsof minuciós",
+   "es": "Alcifrón, o el filósofo minucioso",
+   "fr": "Alciphron, ou le philosophe minutieux",
+   "de": "Alciphron, oder der peinlich genaue Philosoph",
+   "it": "Alcifrone, o il filosofo minuzioso",
+   "ru": "Алкифрон, или Мелочный философ",
+   "zh": "阿尔西弗龙，或细密的哲学家",
+   "ja": "アルシフロン、あるいは些事にこだわる哲学者",
+   "ar": "ألسيفرون، أو الفيلسوف الدقيق",
+   "hi": "एल्सिफ्रॉन, अथवा सूक्ष्म दार्शनिक"
+  }
+ },
+ {
+  "keys": [
+   "An Essay Towards a New Theory of Vision"
+  ],
+  "titles": {
+   "ca": "Un assaig cap a una nova teoria de la visió",
+   "es": "Un ensayo hacia una nueva teoría de la visión",
+   "fr": "Un essai vers une nouvelle théorie de la vision",
+   "de": "Ein Versuch zu einer neuen Theorie des Sehens",
+   "it": "Un saggio verso una nuova teoria della visione",
+   "ru": "Опыт новой теории зрения",
+   "zh": "迈向视觉新论的一篇论文",
+   "ja": "視覚の新理論への試論",
+   "ar": "مقال نحو نظرية جديدة للرؤية",
+   "hi": "दृष्टि के एक नए सिद्धांत की ओर एक निबंध"
+  }
+ },
+ {
+  "keys": [
+   "The Querist"
+  ],
+  "titles": {
+   "ca": "El qüestionador",
+   "es": "El cuestionador",
+   "fr": "L'interrogateur",
+   "de": "Der Fragensteller",
+   "it": "L'interrogatore",
+   "ru": "Вопрошатель",
+   "zh": "问题集",
+   "ja": "質問者",
+   "ar": "السائل",
+   "hi": "प्रश्नकर्ता"
+  }
+ },
+ {
+  "keys": [
+   "The Works of George Berkeley. Vol. 1 of 4 Philosophical Works, 1705-21"
+  ],
+  "titles": {
+   "ca": "Les obres de George Berkeley, vol. 1 de 4: obres filosòfiques, 1705-21",
+   "es": "Las obras de George Berkeley, vol. 1 de 4: obras filosóficas, 1705-21",
+   "fr": "Les œuvres de George Berkeley, vol. 1 sur 4 : œuvres philosophiques, 1705-21",
+   "de": "Die Werke von George Berkeley, Bd. 1 von 4: Philosophische Werke, 1705-21",
+   "it": "Le opere di George Berkeley, vol. 1 di 4: opere filosofiche, 1705-21",
+   "ru": "Сочинения Джорджа Беркли, т. 1 из 4: философские труды, 1705-21",
+   "zh": "乔治·贝克莱著作集，第1卷（共4卷）：哲学著作，1705-21",
+   "ja": "ジョージ・バークリー著作集 第1巻（全4巻）：哲学著作、1705-21年",
+   "ar": "أعمال جورج بيركلي، المجلد 1 من 4: الأعمال الفلسفية، 1705-21",
+   "hi": "जॉर्ज बर्कले की रचनाएँ, खंड 1/4: दार्शनिक रचनाएँ, 1705-21"
+  }
+ },
+ {
+  "keys": [
+   "Dialogi de vita et miraculis patrum Italicorum"
+  ],
+  "titles": {
+   "ca": "Diàlegs sobre la vida i els miracles dels pares italians",
+   "es": "Diálogos sobre la vida y los milagros de los padres italianos",
+   "fr": "Dialogues sur la vie et les miracles des pères italiens",
+   "de": "Dialoge über das Leben und die Wunder der italienischen Väter",
+   "it": "Dialoghi sulla vita e i miracoli dei padri italiani",
+   "ru": "Диалоги о жизни и чудесах италийских отцов",
+   "zh": "意大利教父的生活与神迹对话录",
+   "ja": "イタリアの教父たちの生涯と奇跡についての対話",
+   "ar": "حوارات في حياة ومعجزات الآباء الإيطاليين",
+   "hi": "इतालवी संतों के जीवन और चमत्कारों पर संवाद"
+  }
+ },
+ {
+  "keys": [
+   "Moralia in Job (Morals on the Book of Job), Vol. I"
+  ],
+  "titles": {
+   "ca": "Moralia in Job (Comentaris morals sobre el llibre de Job), vol. I",
+   "es": "Moralia in Job (Comentarios morales sobre el libro de Job), vol. I",
+   "fr": "Moralia in Job (Commentaires moraux sur le livre de Job), vol. I",
+   "de": "Moralia in Job (Moralische Betrachtungen zum Buch Ijob), Bd. I",
+   "it": "Moralia in Job (Commenti morali sul libro di Giobbe), vol. I",
+   "ru": "Moralia in Job (Нравственные толкования на книгу Иова), т. I",
+   "zh": "《约伯记道德注疏》，第一卷",
+   "ja": "『ヨブ記倫理注解』第1巻",
+   "ar": "موراليا في أيوب (تعليقات أخلاقية على سفر أيوب)، المجلد الأول",
+   "hi": "मोरालिया इन जॉब (अय्यूब की पुस्तक पर नैतिक टिप्पणी), खंड I"
+  }
+ },
+ {
+  "keys": [
+   "Moralia in Job (Morals on the Book of Job), Vol. II"
+  ],
+  "titles": {
+   "ca": "Moralia in Job (Comentaris morals sobre el llibre de Job), vol. II",
+   "es": "Moralia in Job (Comentarios morales sobre el libro de Job), vol. II",
+   "fr": "Moralia in Job (Commentaires moraux sur le livre de Job), vol. II",
+   "de": "Moralia in Job (Moralische Betrachtungen zum Buch Ijob), Bd. II",
+   "it": "Moralia in Job (Commenti morali sul libro di Giobbe), vol. II",
+   "ru": "Moralia in Job (Нравственные толкования на книгу Иова), т. II",
+   "zh": "《约伯记道德注疏》，第二卷",
+   "ja": "『ヨブ記倫理注解』第2巻",
+   "ar": "موراليا في أيوب (تعليقات أخلاقية على سفر أيوب)، المجلد الثاني",
+   "hi": "मोरालिया इन जॉब (अय्यूब की पुस्तक पर नैतिक टिप्पणी), खंड II"
+  }
+ },
+ {
+  "keys": [
+   "Moralia in Job (Morals on the Book of Job), Vol. III"
+  ],
+  "titles": {
+   "ca": "Moralia in Job (Comentaris morals sobre el llibre de Job), vol. III",
+   "es": "Moralia in Job (Comentarios morales sobre el libro de Job), vol. III",
+   "fr": "Moralia in Job (Commentaires moraux sur le livre de Job), vol. III",
+   "de": "Moralia in Job (Moralische Betrachtungen zum Buch Ijob), Bd. III",
+   "it": "Moralia in Job (Commenti morali sul libro di Giobbe), vol. III",
+   "ru": "Moralia in Job (Нравственные толкования на книгу Иова), т. III",
+   "zh": "《约伯记道德注疏》，第三卷",
+   "ja": "『ヨブ記倫理注解』第3巻",
+   "ar": "موراليا في أيوب (تعليقات أخلاقية على سفر أيوب)، المجلد الثالث",
+   "hi": "मोरालिया इन जॉब (अय्यूब की पुस्तक पर नैतिक टिप्पणी), खंड III"
+  }
+ },
+ {
+  "keys": [
+   "The Book of Pastoral Rule and Selected Epistles"
+  ],
+  "titles": {
+   "ca": "El llibre de la regla pastoral i epístoles escollides",
+   "es": "El libro de la regla pastoral y epístolas escogidas",
+   "fr": "Le livre de la règle pastorale et épîtres choisies",
+   "de": "Das Buch der pastoralen Regel und ausgewählte Briefe",
+   "it": "Il libro della regola pastorale ed epistole scelte",
+   "ru": "Книга пастырского правила и избранные послания",
+   "zh": "《牧灵训规》与书信选",
+   "ja": "『牧会規則の書』および選書簡集",
+   "ar": "كتاب القاعدة الرعوية ورسائل مختارة",
+   "hi": "पास्टोरल नियम की पुस्तक और चयनित पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Dreams"
+  ],
+  "titles": {
+   "ca": "Els somnis",
+   "es": "Los sueños",
+   "fr": "Le rêve",
+   "de": "Der Traum",
+   "it": "I sogni",
+   "ru": "Сновидения",
+   "zh": "梦",
+   "ja": "夢",
+   "ar": "الأحلام",
+   "hi": "स्वप्न"
+  }
+ },
+ {
+  "keys": [
+   "Laughter"
+  ],
+  "titles": {
+   "ca": "El riure",
+   "es": "La risa",
+   "fr": "Le rire",
+   "de": "Das Lachen",
+   "it": "Il riso",
+   "ru": "Смех",
+   "zh": "论笑",
+   "ja": "笑い",
+   "ar": "الضحك",
+   "hi": "हँसी"
+  }
+ },
+ {
+  "keys": [
+   "Laughter An Essay on the Meaning of the Comic"
+  ],
+  "titles": {
+   "ca": "El riure: assaig sobre el significat de la comicitat",
+   "es": "La risa: ensayo sobre el significado de lo cómico",
+   "fr": "Le rire : essai sur la signification du comique",
+   "de": "Das Lachen: ein Essay über die Bedeutung des Komischen",
+   "it": "Il riso: saggio sul significato del comico",
+   "ru": "Смех: очерк о значении комического",
+   "zh": "论笑：论滑稽的意义",
+   "ja": "笑い：滑稽の意義に関する試論",
+   "ar": "الضحك: مقال في دلالة الكوميديا",
+   "hi": "हँसी: हास्य के अर्थ पर निबंध"
+  }
+ },
+ {
+  "keys": [
+   "The Meaning of the War Life &amp; Matter in Conflict"
+  ],
+  "titles": {
+   "ca": "El significat de la guerra: la vida i la matèria en conflicte",
+   "es": "El significado de la guerra: la vida y la materia en conflicto",
+   "fr": "La signification de la guerre : la vie et la matière en conflit",
+   "de": "Die Bedeutung des Krieges: Leben und Materie im Konflikt",
+   "it": "Il significato della guerra: la vita e la materia in conflitto",
+   "ru": "Смысл войны: жизнь и материя в конфликте",
+   "zh": "战争的意义：生命与物质的冲突",
+   "ja": "戦争の意義：生と物質の相克",
+   "ar": "معنى الحرب: الحياة والمادة في صراع",
+   "hi": "युद्ध का अर्थ: जीवन और पदार्थ का संघर्ष"
+  }
+ },
+ {
+  "keys": [
+   "The Philosophy of Bergson (Russell)"
+  ],
+  "titles": {
+   "ca": "La filosofia de Bergson (Russell)",
+   "es": "La filosofía de Bergson (Russell)",
+   "fr": "La philosophie de Bergson (Russell)",
+   "de": "Die Philosophie Bergsons (Russell)",
+   "it": "La filosofia di Bergson (Russell)",
+   "ru": "Философия Бергсона (Рассел)",
+   "zh": "柏格森的哲学（罗素著）",
+   "ja": "ベルクソンの哲学（ラッセル）",
+   "ar": "فلسفة برجسون (رسل)",
+   "hi": "बर्गसों का दर्शन (रसल)"
+  }
+ },
+ {
+  "keys": [
+   "Essays on Education and Kindred Subjects"
+  ],
+  "titles": {
+   "ca": "Assaigs sobre educació i temes afins",
+   "es": "Ensayos sobre educación y temas afines",
+   "fr": "Essais sur l'éducation et sujets connexes",
+   "de": "Essays über Erziehung und verwandte Themen",
+   "it": "Saggi sull'educazione e argomenti affini",
+   "ru": "Очерки об образовании и смежных предметах",
+   "zh": "论教育及相关主题",
+   "ja": "教育および関連主題に関する試論",
+   "ar": "مقالات في التربية والمواضيع ذات الصلة",
+   "hi": "शिक्षा और संबंधित विषयों पर निबंध"
+  }
+ },
+ {
+  "keys": [
+   "First Principles"
+  ],
+  "titles": {
+   "ca": "Primers principis",
+   "es": "Primeros principios",
+   "fr": "Premiers principes",
+   "de": "Erste Prinzipien",
+   "it": "Primi principi",
+   "ru": "Основные начала",
+   "zh": "第一原理",
+   "ja": "第一原理",
+   "ar": "المبادئ الأولى",
+   "hi": "प्रथम सिद्धांत"
+  }
+ },
+ {
+  "keys": [
+   "The Data of Ethics"
+  ],
+  "titles": {
+   "ca": "Les dades de l'ètica",
+   "es": "Los datos de la ética",
+   "fr": "Les données de l'éthique",
+   "de": "Die Tatsachen der Ethik",
+   "it": "I dati dell'etica",
+   "ru": "Основания этики",
+   "zh": "伦理学的数据",
+   "ja": "倫理学のデータ",
+   "ar": "معطيات الأخلاق",
+   "hi": "नीतिशास्त्र के आधार"
+  }
+ },
+ {
+  "keys": [
+   "The Man versus the State"
+  ],
+  "titles": {
+   "ca": "L'individu contra l'Estat",
+   "es": "El individuo contra el Estado",
+   "fr": "L'individu contre l'État",
+   "de": "Der Mensch gegen den Staat",
+   "it": "L'individuo contro lo Stato",
+   "ru": "Личность против государства",
+   "zh": "个人与国家",
+   "ja": "個人対国家",
+   "ar": "الفرد ضد الدولة",
+   "hi": "व्यक्ति बनाम राज्य"
+  }
+ },
+ {
+  "keys": [
+   "The Study of Sociology"
+  ],
+  "titles": {
+   "ca": "L'estudi de la sociologia",
+   "es": "El estudio de la sociología",
+   "fr": "L'étude de la sociologie",
+   "de": "Das Studium der Soziologie",
+   "it": "Lo studio della sociologia",
+   "ru": "Изучение социологии",
+   "zh": "社会学研究",
+   "ja": "社会学の研究",
+   "ar": "دراسة علم الاجتماع",
+   "hi": "समाजशास्त्र का अध्ययन"
+  }
+ },
+ {
+  "keys": [
+   "Early Greek Philosophy &amp; Other Essays"
+  ],
+  "titles": {
+   "ca": "La filosofia grega primitiva i altres assaigs",
+   "es": "La filosofía griega temprana y otros ensayos",
+   "fr": "La philosophie grecque archaïque et autres essais",
+   "de": "Die vorplatonischen Philosophen und andere Essays",
+   "it": "La filosofia greca arcaica e altri saggi",
+   "ru": "Ранняя греческая философия и другие очерки",
+   "zh": "早期希腊哲学及其他论文",
+   "ja": "初期ギリシア哲学およびその他の論考",
+   "ar": "الفلسفة اليونانية المبكرة ومقالات أخرى",
+   "hi": "प्रारंभिक यूनानी दर्शन और अन्य निबंध"
+  }
+ },
+ {
+  "keys": [
+   "Homer and Classical Philology"
+  ],
+  "titles": {
+   "ca": "Homer i la filologia clàssica",
+   "es": "Homero y la filología clásica",
+   "fr": "Homère et la philologie classique",
+   "de": "Homer und die klassische Philologie",
+   "it": "Omero e la filologia classica",
+   "ru": "Гомер и классическая филология",
+   "zh": "荷马与古典语文学",
+   "ja": "ホメロスと古典文献学",
+   "ar": "هوميروس وعلم اللغة الكلاسيكي",
+   "hi": "होमर और शास्त्रीय भाषाशास्त्र"
+  }
+ },
+ {
+  "keys": [
+   "On the Use and Abuse of History for Life"
+  ],
+  "titles": {
+   "ca": "Sobre l'ús i l'abús de la història per a la vida",
+   "es": "Sobre la utilidad y el perjuicio de la historia para la vida",
+   "fr": "De l'utilité et des inconvénients de l'histoire pour la vie",
+   "de": "Vom Nutzen und Nachteil der Historie für das Leben",
+   "it": "Sull'utilità e il danno della storia per la vita",
+   "ru": "О пользе и вреде истории для жизни",
+   "zh": "论历史对人生的用途与弊害",
+   "ja": "生に対する歴史の利害について",
+   "ar": "في فائدة التاريخ وضرره للحياة",
+   "hi": "जीवन के लिए इतिहास के उपयोग और दुरुपयोग पर"
+  }
+ },
+ {
+  "keys": [
+   "Selected Letters of Friedrich Nietzsche"
+  ],
+  "titles": {
+   "ca": "Cartes escollides de Friedrich Nietzsche",
+   "es": "Cartas escogidas de Friedrich Nietzsche",
+   "fr": "Lettres choisies de Friedrich Nietzsche",
+   "de": "Ausgewählte Briefe von Friedrich Nietzsche",
+   "it": "Lettere scelte di Friedrich Nietzsche",
+   "ru": "Избранные письма Фридриха Ницше",
+   "zh": "尼采书信选",
+   "ja": "フリードリヒ・ニーチェ書簡選集",
+   "ar": "رسائل مختارة لفريدريش نيتشه",
+   "hi": "फ्रेडरिक नीत्शे के चयनित पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Thoughts Out of Season, Part I (David Strauss; Richard Wagner in Bayreuth)"
+  ],
+  "titles": {
+   "ca": "Consideracions intempestives, part I (David Strauss; Richard Wagner a Bayreuth)",
+   "es": "Consideraciones intempestivas, parte I (David Strauss; Richard Wagner en Bayreuth)",
+   "fr": "Considérations inactuelles, partie I (David Strauss ; Richard Wagner à Bayreuth)",
+   "de": "Unzeitgemässe Betrachtungen, Teil I (David Strauss; Richard Wagner in Bayreuth)",
+   "it": "Considerazioni inattuali, parte I (David Strauss; Richard Wagner a Bayreuth)",
+   "ru": "Несвоевременные размышления, часть I (Давид Штраус; Рихард Вагнер в Байройте)",
+   "zh": "不合时宜的沉思，第一部分（大卫·施特劳斯；拜罗伊特的理查德·瓦格纳）",
+   "ja": "反時代的考察 第1部（ダーフィト・シュトラウス、バイロイトのリヒャルト・ワーグナー）",
+   "ar": "تأملات غير عصرية، الجزء الأول (ديفيد شتراوس؛ ريتشارد فاغنر في بايرويت)",
+   "hi": "असामयिक विचार, भाग I (डेविड स्ट्रॉस; बेयरॉयट में रिचर्ड वैगनर)"
+  }
+ },
+ {
+  "keys": [
+   "The Writings Of Thomas Paine, Volume III."
+  ],
+  "titles": {
+   "ca": "Els escrits de Thomas Paine, volum III",
+   "es": "Los escritos de Thomas Paine, volumen III",
+   "fr": "Les écrits de Thomas Paine, volume III",
+   "de": "Die Schriften von Thomas Paine, Band III",
+   "it": "Gli scritti di Thomas Paine, volume III",
+   "ru": "Сочинения Томаса Пейна, том III",
+   "zh": "托马斯·潘恩文集，第三卷",
+   "ja": "トマス・ペイン著作集 第3巻",
+   "ar": "كتابات توماس بين، المجلد الثالث",
+   "hi": "थॉमस पेन की रचनाएँ, खंड III"
+  }
+ },
+ {
+  "keys": [
+   "The Writings of Thomas Paine — Volume 1 (1774-1779) The American Crisis"
+  ],
+  "titles": {
+   "ca": "Els escrits de Thomas Paine, volum 1 (1774-1779): La crisi americana",
+   "es": "Los escritos de Thomas Paine, volumen 1 (1774-1779): La crisis americana",
+   "fr": "Les écrits de Thomas Paine, volume 1 (1774-1779) : La crise américaine",
+   "de": "Die Schriften von Thomas Paine, Band 1 (1774-1779): Die amerikanische Krise",
+   "it": "Gli scritti di Thomas Paine, volume 1 (1774-1779): La crisi americana",
+   "ru": "Сочинения Томаса Пейна, том 1 (1774-1779): Американский кризис",
+   "zh": "托马斯·潘恩文集，第1卷（1774-1779）：美国危机",
+   "ja": "トマス・ペイン著作集 第1巻（1774-1779年）：アメリカの危機",
+   "ar": "كتابات توماس بين، المجلد 1 (1774-1779): الأزمة الأمريكية",
+   "hi": "थॉमस पेन की रचनाएँ, खंड 1 (1774-1779): अमेरिकी संकट"
+  }
+ },
+ {
+  "keys": [
+   "The Writings of Thomas Paine — Volume 2 (1779-1792) The Rights of Man"
+  ],
+  "titles": {
+   "ca": "Els escrits de Thomas Paine, volum 2 (1779-1792): Els drets de l'home",
+   "es": "Los escritos de Thomas Paine, volumen 2 (1779-1792): Los derechos del hombre",
+   "fr": "Les écrits de Thomas Paine, volume 2 (1779-1792) : Les droits de l'homme",
+   "de": "Die Schriften von Thomas Paine, Band 2 (1779-1792): Die Rechte des Menschen",
+   "it": "Gli scritti di Thomas Paine, volume 2 (1779-1792): I diritti dell'uomo",
+   "ru": "Сочинения Томаса Пейна, том 2 (1779-1792): Права человека",
+   "zh": "托马斯·潘恩文集，第2卷（1779-1792）：人的权利",
+   "ja": "トマス・ペイン著作集 第2巻（1779-1792年）：人間の権利",
+   "ar": "كتابات توماس بين، المجلد 2 (1779-1792): حقوق الإنسان",
+   "hi": "थॉमस पेन की रचनाएँ, खंड 2 (1779-1792): मनुष्य के अधिकार"
+  }
+ },
+ {
+  "keys": [
+   "The Writings of Thomas Paine — Volume 4 (1794-1796) The Age of Reason"
+  ],
+  "titles": {
+   "ca": "Els escrits de Thomas Paine, volum 4 (1794-1796): L'edat de la raó",
+   "es": "Los escritos de Thomas Paine, volumen 4 (1794-1796): La edad de la razón",
+   "fr": "Les écrits de Thomas Paine, volume 4 (1794-1796) : L'âge de la raison",
+   "de": "Die Schriften von Thomas Paine, Band 4 (1794-1796): Das Zeitalter der Vernunft",
+   "it": "Gli scritti di Thomas Paine, volume 4 (1794-1796): L'età della ragione",
+   "ru": "Сочинения Томаса Пейна, том 4 (1794-1796): Век разума",
+   "zh": "托马斯·潘恩文集，第4卷（1794-1796）：理性时代",
+   "ja": "トマス・ペイン著作集 第4巻（1794-1796年）：理性の時代",
+   "ar": "كتابات توماس بين، المجلد 4 (1794-1796): عصر العقل",
+   "hi": "थॉमस पेन की रचनाएँ, खंड 4 (1794-1796): तर्क का युग"
+  }
+ },
+ {
+  "keys": [
+   "The Writings of Thomas Paine, Complete"
+  ],
+  "titles": {
+   "ca": "Els escrits de Thomas Paine, complets",
+   "es": "Los escritos de Thomas Paine, completos",
+   "fr": "Les écrits de Thomas Paine, complets",
+   "de": "Die Schriften von Thomas Paine, vollständig",
+   "it": "Gli scritti di Thomas Paine, completi",
+   "ru": "Сочинения Томаса Пейна, полное собрание",
+   "zh": "托马斯·潘恩文集全编",
+   "ja": "トマス・ペイン著作集、完全版",
+   "ar": "كتابات توماس بين، كاملة",
+   "hi": "थॉमस पेन की रचनाएँ, संपूर्ण"
+  }
+ },
+ {
+  "keys": [
+   "Hiero"
+  ],
+  "titles": {
+   "ca": "Hieró",
+   "es": "Hierón",
+   "fr": "Hiéron",
+   "de": "Hieron",
+   "it": "Ierone",
+   "ru": "Гиерон",
+   "zh": "希厄罗",
+   "ja": "ヒエロン",
+   "ar": "هيرون",
+   "hi": "हिएरो"
+  }
+ },
+ {
+  "keys": [
+   "The Apology"
+  ],
+  "titles": {
+   "ca": "L'Apologia de Sòcrates (Xenofont)",
+   "es": "La Apología de Sócrates (Jenofonte)",
+   "fr": "L'Apologie de Socrate (Xénophon)",
+   "de": "Die Verteidigungsrede des Sokrates (Xenophon)",
+   "it": "L'Apologia di Socrate (Senofonte)",
+   "ru": "Апология Сократа (Ксенофонт)",
+   "zh": "苏格拉底的申辩（色诺芬）",
+   "ja": "ソクラテスの弁明（クセノフォン）",
+   "ar": "دفاع سقراط (كسينوفون)",
+   "hi": "सुकरात की क्षमायाचना (ज़ेनोफ़न)"
+  }
+ },
+ {
+  "keys": [
+   "The Cavalry General"
+  ],
+  "titles": {
+   "ca": "El comandant de cavalleria",
+   "es": "El comandante de caballería",
+   "fr": "Le commandant de cavalerie",
+   "de": "Der Reiteroberst",
+   "it": "Il comandante di cavalleria",
+   "ru": "Гиппарх",
+   "zh": "骑兵指挥官论",
+   "ja": "騎兵隊長論",
+   "ar": "قائد الفرسان",
+   "hi": "अश्वारोही सेनापति"
+  }
+ },
+ {
+  "keys": [
+   "The Polity of the Athenians and the Lacedaemonians"
+  ],
+  "titles": {
+   "ca": "La constitució dels atenesos i dels lacedemonis",
+   "es": "La constitución de los atenienses y de los lacedemonios",
+   "fr": "La constitution des Athéniens et des Lacédémoniens",
+   "de": "Die Verfassung der Athener und der Lakedaimonier",
+   "it": "La costituzione degli Ateniesi e dei Lacedemoni",
+   "ru": "Государственное устройство афинян и лакедемонян",
+   "zh": "雅典人与拉栖代梦人政制",
+   "ja": "アテナイ人とラケダイモン人の国制",
+   "ar": "دستور الأثينيين واللاقدمونيين",
+   "hi": "एथेनियाई और लेसेडेमोनियाई शासन-व्यवस्था"
+  }
  }
 ]
