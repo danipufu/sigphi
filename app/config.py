@@ -82,9 +82,14 @@ class Settings(BaseSettings):
     # Preus de Gemini per 1M de tokens (EUR aprox., ajustables). flash-lite ~ 0.10/0.40.
     llm_price_input_per_million_eur: float = 0.10
     llm_price_output_per_million_eur: float = 0.40
-    # Sostre de llargada de la resposta: evita generacions desbocades però prou ampli
-    # per NO truncar respostes llargues ni el bloc [[SUGGESTIONS]] final. Per-tier a la Fase 1.
-    max_output_tokens: int = 2048
+    # Sostre de llargada de la resposta: NOMÉS defensa contra una generació
+    # desbocada (bug del model), no un límit de cost real (això ja el fa
+    # monthly_budget_eur). 2048 va demostrar-se INSUFICIENT: tallava respostes
+    # llargues amb cites abans del bloc [[SUGGESTIONS]] final (regla 21) -> l'LLM
+    # mai emetia els suggeriments encara que la resposta fos correcta i completa
+    # fins aquell punt. 8192 (el màxim de flash-lite) reprodueix el comportament
+    # sense tope d'abans de la Fase 0. Per-tier a la Fase 1.
+    max_output_tokens: int = 8192
     # Comptador d'ús (SQLite, agregat per mes)
     usage_store_path: Path = Path("./data/usage.sqlite")
 
