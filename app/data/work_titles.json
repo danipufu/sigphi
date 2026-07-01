@@ -10364,5 +10364,617 @@
    "ar": "دستور الأثينيين واللاقدمونيين",
    "hi": "एथेनियाई और लेसेडेमोनियाई शासन-व्यवस्था"
   }
+ },
+ {
+  "keys": [
+   "On Christian Doctrine / City of God (NPNF First Series Vol. 2)"
+  ],
+  "titles": {
+   "ca": "Sobre la doctrina cristiana / La ciutat de Déu (NPNF, primera sèrie, vol. 2)",
+   "es": "Sobre la doctrina cristiana / La ciudad de Dios (NPNF, primera serie, vol. 2)",
+   "fr": "De la doctrine chrétienne / La Cité de Dieu (NPNF, première série, vol. 2)",
+   "de": "Über die christliche Lehre / Vom Gottesstaat (NPNF, erste Reihe, Bd. 2)",
+   "it": "Sulla dottrina cristiana / La città di Dio (NPNF, prima serie, vol. 2)",
+   "ru": "О христианском учении / О граде Божьем (NPNF, первая серия, т. 2)",
+   "zh": "论基督教教义／上帝之城（NPNF第一辑，第2卷）",
+   "ja": "キリスト教の教えについて／神の国（NPNF第一シリーズ、第2巻）",
+   "ar": "في التعليم المسيحي / مدينة الله (NPNF، السلسلة الأولى، المجلد 2)",
+   "hi": "ईसाई सिद्धांत पर / ईश्वर का नगर (NPNF, प्रथम श्रृंखला, खंड 2)"
+  }
+ },
+ {
+  "keys": [
+   "On the Trinity (De Trinitate)"
+  ],
+  "titles": {
+   "ca": "Sobre la Trinitat (De Trinitate)",
+   "es": "Sobre la Trinidad (De Trinitate)",
+   "fr": "De la Trinité (De Trinitate)",
+   "de": "Über die Dreifaltigkeit (De Trinitate)",
+   "it": "Sulla Trinità (De Trinitate)",
+   "ru": "О Троице (De Trinitate)",
+   "zh": "论三位一体（De Trinitate）",
+   "ja": "三位一体論（De Trinitate）",
+   "ar": "في الثالوث (De Trinitate)",
+   "hi": "त्रित्व पर (De Trinitate)"
+  }
+ },
+ {
+  "keys": [
+   "The City of God, Volume I"
+  ],
+  "titles": {
+   "ca": "La ciutat de Déu, volum I",
+   "es": "La ciudad de Dios, volumen I",
+   "fr": "La Cité de Dieu, volume I",
+   "de": "Vom Gottesstaat, Band I",
+   "it": "La città di Dio, volume I",
+   "ru": "О граде Божьем, том I",
+   "zh": "上帝之城，第一卷",
+   "ja": "神の国 第1巻",
+   "ar": "مدينة الله، المجلد الأول",
+   "hi": "ईश्वर का नगर, खंड I"
+  }
+ },
+ {
+  "keys": [
+   "The City of God, Volume II"
+  ],
+  "titles": {
+   "ca": "La ciutat de Déu, volum II",
+   "es": "La ciudad de Dios, volumen II",
+   "fr": "La Cité de Dieu, volume II",
+   "de": "Vom Gottesstaat, Band II",
+   "it": "La città di Dio, volume II",
+   "ru": "О граде Божьем, том II",
+   "zh": "上帝之城，第二卷",
+   "ja": "神の国 第2巻",
+   "ar": "مدينة الله، المجلد الثاني",
+   "hi": "ईश्वर का नगर, खंड II"
+  }
+ },
+ {
+  "keys": [
+   "Erasmus Against War"
+  ],
+  "titles": {
+   "ca": "Erasme contra la guerra",
+   "es": "Erasmo contra la guerra",
+   "fr": "Érasme contre la guerre",
+   "de": "Erasmus gegen den Krieg",
+   "it": "Erasmo contro la guerra",
+   "ru": "Эразм против войны",
+   "zh": "伊拉斯谟反战论",
+   "ja": "エラスムス、戦争に反対す",
+   "ar": "إيراسموس ضد الحرب",
+   "hi": "युद्ध के विरुद्ध इरास्मस"
+  }
+ },
+ {
+  "keys": [
+   "The Colloquies of Erasmus, Volume I."
+  ],
+  "titles": {
+   "ca": "Els col·loquis d'Erasme, volum I",
+   "es": "Los coloquios de Erasmo, volumen I",
+   "fr": "Les colloques d'Érasme, volume I",
+   "de": "Die Gespräche des Erasmus, Band I",
+   "it": "I colloqui di Erasmo, volume I",
+   "ru": "Разговоры Эразма, том I",
+   "zh": "伊拉斯谟对话录，第一卷",
+   "ja": "エラスムス対話集 第1巻",
+   "ar": "محاورات إيراسموس، المجلد الأول",
+   "hi": "इरास्मस के संवाद, खंड I"
+  }
+ },
+ {
+  "keys": [
+   "The Complaint of Peace"
+  ],
+  "titles": {
+   "ca": "La queixa de la pau",
+   "es": "La queja de la paz",
+   "fr": "La plainte de la paix",
+   "de": "Die Klage des Friedens",
+   "it": "Il lamento della pace",
+   "ru": "Жалоба мира",
+   "zh": "和平的抱怨",
+   "ja": "平和の訴え",
+   "ar": "شكوى السلام",
+   "hi": "शांति की शिकायत"
+  }
+ },
+ {
+  "keys": [
+   "The Education of Children"
+  ],
+  "titles": {
+   "ca": "L'educació dels infants",
+   "es": "La educación de los niños",
+   "fr": "L'éducation des enfants",
+   "de": "Die Erziehung der Kinder",
+   "it": "L'educazione dei fanciulli",
+   "ru": "Воспитание детей",
+   "zh": "论儿童教育",
+   "ja": "子どもの教育について",
+   "ar": "تربية الأطفال",
+   "hi": "बच्चों की शिक्षा"
+  }
+ },
+ {
+  "keys": [
+   "Ocellus Lucanus on the nature of the universe Taurus, the Platonic philosopher,"
+  ],
+  "titles": {
+   "ca": "Ocel·lus Lucà sobre la natura de l'univers; Taure, el filòsof platònic…",
+   "es": "Ocelo Lucano sobre la naturaleza del universo; Tauro, el filósofo platónico…",
+   "fr": "Ocellus de Lucanie sur la nature de l'univers ; Taurus, le philosophe platonicien…",
+   "de": "Ocellus Lucanus über die Natur des Universums; Taurus, der platonische Philosoph…",
+   "it": "Ocello Lucano sulla natura dell'universo; Tauro, il filosofo platonico…",
+   "ru": "Оцелл Луканский о природе Вселенной; Тавр, философ-платоник…",
+   "zh": "卢卡尼亚的奥克鲁斯论宇宙本质；柏拉图派哲学家陶鲁斯……",
+   "ja": "ルカニアのオケロスによる宇宙の本性について；プラトン派哲学者タウロス……",
+   "ar": "أوسيلوس اللوكاني في طبيعة الكون؛ تاوروس، الفيلسوف الأفلاطوني...",
+   "hi": "ओसेलस लुकानस, ब्रह्मांड की प्रकृति पर; टॉरस, प्लेटोवादी दार्शनिक..."
+  }
+ },
+ {
+  "keys": [
+   "Sallust On the Gods and the World"
+  ],
+  "titles": {
+   "ca": "Sal·lusti sobre els déus i el món",
+   "es": "Salustio sobre los dioses y el mundo",
+   "fr": "Salluste sur les dieux et le monde",
+   "de": "Sallustius über die Götter und die Welt",
+   "it": "Sallustio sugli dèi e il mondo",
+   "ru": "Саллюстий о богах и мире",
+   "zh": "萨鲁斯提乌斯论神与世界",
+   "ja": "サルスティウス『神々と世界について』",
+   "ar": "سالوستيوس في الآلهة والعالم",
+   "hi": "सैलस्ट, देवताओं और संसार पर"
+  }
+ },
+ {
+  "keys": [
+   "The philosophical and mathematical commentaries of Proclus on the first book of"
+  ],
+  "titles": {
+   "ca": "Els comentaris filosòfics i matemàtics de Procle sobre el primer llibre d'…",
+   "es": "Los comentarios filosóficos y matemáticos de Proclo sobre el primer libro de…",
+   "fr": "Les commentaires philosophiques et mathématiques de Proclus sur le premier livre d'…",
+   "de": "Die philosophischen und mathematischen Kommentare des Proklos zum ersten Buch der…",
+   "it": "I commenti filosofici e matematici di Proclo al primo libro degli…",
+   "ru": "Философские и математические комментарии Прокла к первой книге…",
+   "zh": "普罗克洛斯对……第一卷的哲学与数学注疏",
+   "ja": "プロクロスによる……第一巻についての哲学的・数学的注解",
+   "ar": "تعليقات بروكلوس الفلسفية والرياضية على الكتاب الأول من...",
+   "hi": "प्रोक्लस की ... की पहली पुस्तक पर दार्शनिक एवं गणितीय टिप्पणियाँ"
+  }
+ },
+ {
+  "keys": [
+   "The six books of Proclus, the Platonic successor, on the theology of Plato (vol."
+  ],
+  "titles": {
+   "ca": "Els sis llibres de Procle, el successor platònic, sobre la teologia de Plató (vol…)",
+   "es": "Los seis libros de Proclo, el sucesor platónico, sobre la teología de Platón (vol…)",
+   "fr": "Les six livres de Proclus, le successeur platonicien, sur la théologie de Platon (vol…)",
+   "de": "Die sechs Bücher des Proklos, des platonischen Nachfolgers, über die Theologie Platons (Bd…)",
+   "it": "I sei libri di Proclo, il successore platonico, sulla teologia di Platone (vol…)",
+   "ru": "Шесть книг Прокла, платоновского преемника, о богословии Платона (т. …)",
+   "zh": "柏拉图学派继承人普罗克洛斯《柏拉图神学》六卷（第…卷）",
+   "ja": "プラトン学派の後継者プロクロスによる『プラトン神学』全六巻（第…巻）",
+   "ar": "الكتب الستة لبروكلوس، خليفة أفلاطون، في لاهوت أفلاطون (المجلد...)",
+   "hi": "प्रोक्लस के छह ग्रंथ, प्लेटो के उत्तराधिकारी, प्लेटो के धर्मशास्त्र पर (खंड...)"
+  }
+ },
+ {
+  "keys": [
+   "Baldwin Dictionary Definition of Pragmatic (1) and (2) Pragmatism"
+  ],
+  "titles": {
+   "ca": "Definició del Diccionari Baldwin de «pragmàtic» (1) i «pragmatisme» (2)",
+   "es": "Definición del Diccionario Baldwin de «pragmático» (1) y «pragmatismo» (2)",
+   "fr": "Définition du Dictionnaire Baldwin de « pragmatique » (1) et « pragmatisme » (2)",
+   "de": "Baldwin-Wörterbuch-Definition von „pragmatisch\" (1) und „Pragmatismus\" (2)",
+   "it": "Definizione del Dizionario Baldwin di «pragmatico» (1) e «pragmatismo» (2)",
+   "ru": "Определение из словаря Болдуина: «прагматический» (1) и «прагматизм» (2)",
+   "zh": "鲍德温词典对「实用的」（1）与「实用主义」（2）的定义",
+   "ja": "ボールドウィン辞典による「プラグマティック」（1）と「プラグマティズム」（2）の定義",
+   "ar": "تعريف قاموس بالدوين لـ«البراغماتي» (1) و«البراغماتية» (2)",
+   "hi": "बाल्डविन शब्दकोश में «व्यावहारिक» (1) और «व्यावहारिकतावाद» (2) की परिभाषा"
+  }
+ },
+ {
+  "keys": [
+   "Chance, Love, and Logic Philosophical Essays"
+  ],
+  "titles": {
+   "ca": "Atzar, amor i lògica: assaigs filosòfics",
+   "es": "Azar, amor y lógica: ensayos filosóficos",
+   "fr": "Hasard, amour et logique : essais philosophiques",
+   "de": "Zufall, Liebe und Logik: philosophische Essays",
+   "it": "Caso, amore e logica: saggi filosofici",
+   "ru": "Случай, любовь и логика: философские очерки",
+   "zh": "机遇、爱与逻辑：哲学论集",
+   "ja": "偶然、愛、論理：哲学的試論",
+   "ar": "الصدفة والحب والمنطق: مقالات فلسفية",
+   "hi": "संयोग, प्रेम और तर्क: दार्शनिक निबंध"
+  }
+ },
+ {
+  "keys": [
+   "The Fixation of Belief"
+  ],
+  "titles": {
+   "ca": "La fixació de la creença",
+   "es": "La fijación de la creencia",
+   "fr": "La fixation de la croyance",
+   "de": "Die Festlegung der Überzeugung",
+   "it": "La fissazione della credenza",
+   "ru": "Закрепление верования",
+   "zh": "信念的确立",
+   "ja": "信念の固定",
+   "ar": "تثبيت الاعتقاد",
+   "hi": "विश्वास का स्थिरीकरण"
+  }
+ },
+ {
+  "keys": [
+   "Epicurus's Morals"
+  ],
+  "titles": {
+   "ca": "La moral d'Epicur",
+   "es": "La moral de Epicuro",
+   "fr": "La morale d'Épicure",
+   "de": "Die Moral Epikurs",
+   "it": "La morale di Epicuro",
+   "ru": "Мораль Эпикура",
+   "zh": "伊壁鸠鲁的道德论",
+   "ja": "エピクロスの道徳論",
+   "ar": "أخلاق أبيقور",
+   "hi": "एपिक्यूरस की नैतिकता"
+  }
+ },
+ {
+  "keys": [
+   "Letter to Herodotus"
+  ],
+  "titles": {
+   "ca": "Carta a Herodot",
+   "es": "Carta a Heródoto",
+   "fr": "Lettre à Hérodote",
+   "de": "Brief an Herodot",
+   "it": "Lettera a Erodoto",
+   "ru": "Письмо к Геродоту",
+   "zh": "致希罗多德的信",
+   "ja": "ヘロドトスへの手紙",
+   "ar": "رسالة إلى هيرودوت",
+   "hi": "हेरोडोटस को पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Principal Doctrines"
+  ],
+  "titles": {
+   "ca": "Màximes capitals",
+   "es": "Máximas capitales",
+   "fr": "Maximes capitales",
+   "de": "Grundlehren",
+   "it": "Massime capitali",
+   "ru": "Главные мысли",
+   "zh": "主要原理",
+   "ja": "主要教説",
+   "ar": "المبادئ الأساسية",
+   "hi": "प्रमुख सिद्धांत"
+  }
+ },
+ {
+  "keys": [
+   "Hegel's Philosophy of Mind"
+  ],
+  "titles": {
+   "ca": "La filosofia de l'esperit de Hegel",
+   "es": "La filosofía del espíritu de Hegel",
+   "fr": "La philosophie de l'esprit de Hegel",
+   "de": "Hegels Philosophie des Geistes",
+   "it": "La filosofia dello spirito di Hegel",
+   "ru": "Философия духа Гегеля",
+   "zh": "黑格尔精神哲学",
+   "ja": "ヘーゲル精神哲学",
+   "ar": "فلسفة العقل عند هيغل",
+   "hi": "हेगेल का मन दर्शन"
+  }
+ },
+ {
+  "keys": [
+   "The Introduction to Hegel's Philosophy of Fine Arts"
+  ],
+  "titles": {
+   "ca": "La introducció a la filosofia de les belles arts de Hegel",
+   "es": "La introducción a la filosofía de las bellas artes de Hegel",
+   "fr": "L'introduction à la philosophie des beaux-arts de Hegel",
+   "de": "Die Einleitung zu Hegels Philosophie der schönen Künste",
+   "it": "L'introduzione alla filosofia delle belle arti di Hegel",
+   "ru": "Введение в философию изящных искусств Гегеля",
+   "zh": "黑格尔美的艺术哲学导论",
+   "ja": "ヘーゲル美術哲学序論",
+   "ar": "مقدمة في فلسفة الفنون الجميلة عند هيغل",
+   "hi": "हेगेल के ललित कला दर्शन का परिचय"
+  }
+ },
+ {
+  "keys": [
+   "The Logic of Hegel"
+  ],
+  "titles": {
+   "ca": "La lògica de Hegel",
+   "es": "La lógica de Hegel",
+   "fr": "La logique de Hegel",
+   "de": "Hegels Logik",
+   "it": "La logica di Hegel",
+   "ru": "Логика Гегеля",
+   "zh": "黑格尔逻辑学",
+   "ja": "ヘーゲル論理学",
+   "ar": "منطق هيغل",
+   "hi": "हेगेल का तर्कशास्त्र"
+  }
+ },
+ {
+  "keys": [
+   "Edifying discourses, a selection"
+  ],
+  "titles": {
+   "ca": "Discursos edificants, una selecció",
+   "es": "Discursos edificantes, una selección",
+   "fr": "Discours édifiants, une sélection",
+   "de": "Erbauliche Reden, eine Auswahl",
+   "it": "Discorsi edificanti, una selezione",
+   "ru": "Назидательные речи, избранное",
+   "zh": "造就性讲道选集",
+   "ja": "教化的講話選集",
+   "ar": "خطابات تهذيبية، مختارات",
+   "hi": "उन्नयनकारी प्रवचन, एक चयन"
+  }
+ },
+ {
+  "keys": [
+   "EitherOr"
+  ],
+  "titles": {
+   "ca": "O l'un o l'altre",
+   "es": "O lo uno o lo otro",
+   "fr": "Ou bien... ou bien",
+   "de": "Entweder/Oder",
+   "it": "Aut-Aut",
+   "ru": "Или — или",
+   "zh": "非此即彼",
+   "ja": "あれかこれか",
+   "ar": "إما/أو",
+   "hi": "अथवा"
+  }
+ },
+ {
+  "keys": [
+   "Selections from the writings of Kierkegaard"
+  ],
+  "titles": {
+   "ca": "Seleccions dels escrits de Kierkegaard",
+   "es": "Selecciones de los escritos de Kierkegaard",
+   "fr": "Sélections des écrits de Kierkegaard",
+   "de": "Auswahl aus den Schriften Kierkegaards",
+   "it": "Selezioni dagli scritti di Kierkegaard",
+   "ru": "Избранные сочинения Кьеркегора",
+   "zh": "克尔凯郭尔文选",
+   "ja": "キェルケゴール著作選",
+   "ar": "مختارات من كتابات كيركغارد",
+   "hi": "किर्कगार्द के लेखन से चयन"
+  }
+ },
+ {
+  "keys": [
+   "The Mabinogion Vol. 1"
+  ],
+  "titles": {
+   "ca": "El Mabinogion, vol. 1",
+   "es": "El Mabinogion, vol. 1",
+   "fr": "Le Mabinogion, vol. 1",
+   "de": "Das Mabinogion, Bd. 1",
+   "it": "Il Mabinogion, vol. 1",
+   "ru": "Мабиногион, т. 1",
+   "zh": "马比诺吉昂，第1卷",
+   "ja": "マビノギオン 第1巻",
+   "ar": "المابينوجيون، المجلد 1",
+   "hi": "मैबिनोजियन, खंड 1"
+  }
+ },
+ {
+  "keys": [
+   "The Mabinogion Vol. 2"
+  ],
+  "titles": {
+   "ca": "El Mabinogion, vol. 2",
+   "es": "El Mabinogion, vol. 2",
+   "fr": "Le Mabinogion, vol. 2",
+   "de": "Das Mabinogion, Bd. 2",
+   "it": "Il Mabinogion, vol. 2",
+   "ru": "Мабиногион, т. 2",
+   "zh": "马比诺吉昂，第2卷",
+   "ja": "マビノギオン 第2巻",
+   "ar": "المابينوجيون، المجلد 2",
+   "hi": "मैबिनोजियन, खंड 2"
+  }
+ },
+ {
+  "keys": [
+   "The Mabinogion Vol. 3"
+  ],
+  "titles": {
+   "ca": "El Mabinogion, vol. 3",
+   "es": "El Mabinogion, vol. 3",
+   "fr": "Le Mabinogion, vol. 3",
+   "de": "Das Mabinogion, Bd. 3",
+   "it": "Il Mabinogion, vol. 3",
+   "ru": "Мабиногион, т. 3",
+   "zh": "马比诺吉昂，第3卷",
+   "ja": "マビノギオン 第3巻",
+   "ar": "المابينوجيون، المجلد 3",
+   "hi": "मैबिनोजियन, खंड 3"
+  }
+ },
+ {
+  "keys": [
+   "Commentary on the Epistle to the Galatians (1535)"
+  ],
+  "titles": {
+   "ca": "Comentari a l'Epístola als Gàlates (1535)",
+   "es": "Comentario a la Epístola a los Gálatas (1535)",
+   "fr": "Commentaire de l'Épître aux Galates (1535)",
+   "de": "Kommentar zum Galaterbrief (1535)",
+   "it": "Commento all'Epistola ai Galati (1535)",
+   "ru": "Толкование на Послание к Галатам (1535)",
+   "zh": "加拉太书注释（1535）",
+   "ja": "ガラテヤ人への手紙註解（1535年）",
+   "ar": "شرح رسالة غلاطية (1535)",
+   "hi": "गलातियों को पत्र पर टीका (1535)"
+  }
+ },
+ {
+  "keys": [
+   "Works of Martin Luther, Volume I"
+  ],
+  "titles": {
+   "ca": "Obres de Martí Luter, volum I",
+   "es": "Obras de Martín Lutero, volumen I",
+   "fr": "Œuvres de Martin Luther, volume I",
+   "de": "Werke Martin Luthers, Band I",
+   "it": "Opere di Martin Lutero, volume I",
+   "ru": "Сочинения Мартина Лютера, том I",
+   "zh": "马丁·路德文集，第一卷",
+   "ja": "マルティン・ルター著作集 第1巻",
+   "ar": "أعمال مارتن لوثر، المجلد الأول",
+   "hi": "मार्टिन लूथर की रचनाएँ, खंड I"
+  }
+ },
+ {
+  "keys": [
+   "Works of Martin Luther, Volume II"
+  ],
+  "titles": {
+   "ca": "Obres de Martí Luter, volum II",
+   "es": "Obras de Martín Lutero, volumen II",
+   "fr": "Œuvres de Martin Luther, volume II",
+   "de": "Werke Martin Luthers, Band II",
+   "it": "Opere di Martin Lutero, volume II",
+   "ru": "Сочинения Мартина Лютера, том II",
+   "zh": "马丁·路德文集，第二卷",
+   "ja": "マルティン・ルター著作集 第2巻",
+   "ar": "أعمال مارتن لوثر، المجلد الثاني",
+   "hi": "मार्टिन लूथर की रचनाएँ, खंड II"
+  }
+ },
+ {
+  "keys": [
+   "A serious proposal to the Ladies, for the advancement of their true and greatest"
+  ],
+  "titles": {
+   "ca": "Una proposta seriosa a les dames, per a la promoció del seu veritable i major…",
+   "es": "Una propuesta seria a las damas, para el fomento de su verdadero y mayor…",
+   "fr": "Une proposition sérieuse aux dames, pour l'avancement de leur véritable et plus grand…",
+   "de": "Ein ernsthafter Vorschlag an die Damen, zur Förderung ihres wahren und größten…",
+   "it": "Una proposta seria alle dame, per la promozione del loro vero e più grande…",
+   "ru": "Серьёзное предложение дамам, для содействия их истинному и величайшему…",
+   "zh": "致淑女们的一项郑重提议，为增进其真正而最大之……",
+   "ja": "貴婦人方への真摯な提案——その真の最大の……の促進のために",
+   "ar": "اقتراح جاد للسيدات، من أجل تعزيز خيرهن الحقيقي والأعظم...",
+   "hi": "महिलाओं के प्रति एक गंभीर प्रस्ताव, उनके सच्चे और सर्वोत्तम... की उन्नति हेतु"
+  }
+ },
+ {
+  "keys": [
+   "An essay in defence of the female sex"
+  ],
+  "titles": {
+   "ca": "Un assaig en defensa del sexe femení",
+   "es": "Un ensayo en defensa del sexo femenino",
+   "fr": "Un essai en défense du sexe féminin",
+   "de": "Ein Essay zur Verteidigung des weiblichen Geschlechts",
+   "it": "Un saggio in difesa del sesso femminile",
+   "ru": "Опыт в защиту женского пола",
+   "zh": "为女性辩护的一篇论文",
+   "ja": "女性の擁護の試論",
+   "ar": "مقال في الدفاع عن الجنس الأنثوي",
+   "hi": "स्त्री-लिंग की रक्षा में एक निबंध"
+  }
+ },
+ {
+  "keys": [
+   "Some Reflections Upon Marriage."
+  ],
+  "titles": {
+   "ca": "Algunes reflexions sobre el matrimoni",
+   "es": "Algunas reflexiones sobre el matrimonio",
+   "fr": "Quelques réflexions sur le mariage",
+   "de": "Einige Betrachtungen über die Ehe",
+   "it": "Alcune riflessioni sul matrimonio",
+   "ru": "Некоторые размышления о браке",
+   "zh": "关于婚姻的若干思考",
+   "ja": "結婚についての考察",
+   "ar": "بعض التأملات في الزواج",
+   "hi": "विवाह पर कुछ विचार"
+  }
+ },
+ {
+  "keys": [
+   "Letters Written During a Short Residence in Sweden, Norway, and Denmark"
+  ],
+  "titles": {
+   "ca": "Cartes escrites durant una breu estada a Suècia, Noruega i Dinamarca",
+   "es": "Cartas escritas durante una breve estancia en Suecia, Noruega y Dinamarca",
+   "fr": "Lettres écrites pendant un court séjour en Suède, en Norvège et au Danemark",
+   "de": "Briefe, geschrieben während eines kurzen Aufenthalts in Schweden, Norwegen und Dänemark",
+   "it": "Lettere scritte durante un breve soggiorno in Svezia, Norvegia e Danimarca",
+   "ru": "Письма, написанные во время краткого пребывания в Швеции, Норвегии и Дании",
+   "zh": "瑞典、挪威与丹麦短暂旅居书简",
+   "ja": "スウェーデン、ノルウェー、デンマーク短期滞在中に書かれた手紙",
+   "ar": "رسائل كُتبت أثناء إقامة قصيرة في السويد والنرويج والدنمارك",
+   "hi": "स्वीडन, नॉर्वे और डेनमार्क में संक्षिप्त प्रवास के दौरान लिखे गए पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Maria; Or, The Wrongs of Woman"
+  ],
+  "titles": {
+   "ca": "Maria, o els greuges de la dona",
+   "es": "María, o los agravios de la mujer",
+   "fr": "Maria, ou les torts faits à la femme",
+   "de": "Maria, oder die Unrechte der Frau",
+   "it": "Maria, o i torti della donna",
+   "ru": "Мария, или Обиды женщины",
+   "zh": "玛丽亚，或女性所受的冤屈",
+   "ja": "マライア、あるいは女性の受けた不当な扱い",
+   "ar": "ماريا، أو مظالم المرأة",
+   "hi": "मारिया, अथवा स्त्री के प्रति अन्याय"
+  }
+ },
+ {
+  "keys": [
+   "The Love Letters of Mary Wollstonecraft to Gilbert Imlay"
+  ],
+  "titles": {
+   "ca": "Les cartes d'amor de Mary Wollstonecraft a Gilbert Imlay",
+   "es": "Las cartas de amor de Mary Wollstonecraft a Gilbert Imlay",
+   "fr": "Les lettres d'amour de Mary Wollstonecraft à Gilbert Imlay",
+   "de": "Die Liebesbriefe von Mary Wollstonecraft an Gilbert Imlay",
+   "it": "Le lettere d'amore di Mary Wollstonecraft a Gilbert Imlay",
+   "ru": "Любовные письма Мэри Уолстонкрафт к Гилберту Имлею",
+   "zh": "玛丽·沃斯通克拉夫特致吉尔伯特·伊姆利的情书",
+   "ja": "メアリ・ウルストンクラフトからギルバート・イムレイへの恋文",
+   "ar": "رسائل الحب من ماري وولستونكرافت إلى غيلبرت إيمالي",
+   "hi": "मैरी वोल्स्टनक्राफ़्ट के गिल्बर्ट इमले को प्रेम-पत्र"
+  }
  }
 ]
