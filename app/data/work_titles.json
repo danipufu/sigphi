@@ -3257,5 +3257,732 @@
    "ar": "بيير جوزيف برودون",
    "hi": "पिएर जोसेफ प्रूधों"
   }
+ },
+ {
+  "keys": [
+   "The Qur'an"
+  ],
+  "titles": {
+   "ca": "Alcorà",
+   "es": "Corán",
+   "fr": "Coran",
+   "de": "Koran",
+   "it": "Corano",
+   "ru": "Коран",
+   "zh": "古兰经",
+   "ja": "クルアーン",
+   "ar": "القرآن",
+   "hi": "क़ुरआन"
+  }
+ },
+ {
+  "keys": [
+   "The Rig Veda"
+  ],
+  "titles": {
+   "ca": "Rigveda",
+   "es": "Rigveda",
+   "fr": "Rig-Véda",
+   "de": "Rigveda",
+   "it": "Ṛgveda",
+   "ru": "Ригведа",
+   "zh": "梨俱吠陀",
+   "ja": "リグ・ヴェーダ",
+   "ar": "ريجفيدا",
+   "hi": "ऋग्वेद"
+  }
+ },
+ {
+  "keys": [
+   "The Mahabharata, Vol. I (Books 1-3: Adi, Sabha, Vana) — Ganguli",
+   "The Mahabharata, Vol. II (Books 4-7: Virata...Drona) — Ganguli",
+   "The Mahabharata, Vol. III (Books 8-12) — Ganguli",
+   "The Mahabharata, Vol. IV (Books 13-18) — Ganguli"
+  ],
+  "titles": {
+   "ca": "Mahabharata",
+   "es": "Mahabharata",
+   "fr": "Mahabharata",
+   "de": "Mahabharata",
+   "it": "Mahābhārata",
+   "ru": "Махабхарата",
+   "zh": "摩诃婆罗多",
+   "ja": "マハーバーラタ",
+   "ar": "مهابهاراتا",
+   "hi": "महाभारत"
+  }
+ },
+ {
+  "keys": [
+   "The Ramayan of Valmiki (Griffith)"
+  ],
+  "titles": {
+   "ca": "Ramàiana",
+   "es": "Ramayana",
+   "fr": "Ramayana",
+   "de": "Ramayana",
+   "it": "Rāmāyaṇa",
+   "ru": "Рамаяна",
+   "zh": "罗摩衍那",
+   "ja": "ラーマーヤナ",
+   "ar": "رامايانا",
+   "hi": "रामायण"
+  }
+ },
+ {
+  "keys": [
+   "The Epic of Gilgamesh"
+  ],
+  "titles": {
+   "ca": "Epopeia de Guilgameix",
+   "es": "Poema de Gilgamesh",
+   "fr": "Épopée de Gilgamesh",
+   "de": "Gilgamesch-Epos",
+   "it": "Epopea di Gilgameš",
+   "ru": "Эпос о Гильгамеше",
+   "zh": "吉尔伽美什史诗",
+   "ja": "ギルガメシュ叙事詩",
+   "ar": "ملحمة جلجامش"
+  }
+ },
+ {
+  "keys": [
+   "The Popol Vuh The Mythic and Heroic Sagas of the Kichés of Central America"
+  ],
+  "titles": {
+   "ca": "Pòpol Vuh",
+   "es": "Popol Vuh",
+   "fr": "Popol Vuh",
+   "de": "Popol Vuh",
+   "it": "Popol Vuh",
+   "ru": "Пополь-Вух",
+   "zh": "波波爾·烏",
+   "ja": "ポポル・ヴフ",
+   "ar": "بوبول فو"
+  }
+ },
+ {
+  "keys": [
+   "The Poetic Edda"
+  ],
+  "titles": {
+   "ca": "Edda poètica",
+   "es": "Edda poética",
+   "fr": "Edda poétique",
+   "de": "Lieder-Edda",
+   "it": "Edda poetica",
+   "ru": "Старшая Эдда",
+   "zh": "詩體埃達",
+   "ja": "古エッダ",
+   "ar": "أشعار الإيدا"
+  }
+ },
+ {
+  "keys": [
+   "The Prose Edda (Younger Edda)"
+  ],
+  "titles": {
+   "ca": "Edda prosaica",
+   "es": "Edda prosaica",
+   "fr": "Edda de Snorri",
+   "de": "Snorra-Edda",
+   "it": "Edda in prosa",
+   "ru": "Младшая Эдда",
+   "zh": "散文埃達",
+   "ja": "スノッリのエッダ",
+   "ar": "نثر إيدا"
+  }
+ },
+ {
+  "keys": [
+   "The Egyptian Book of the Dead (Papyrus of Ani)"
+  ],
+  "titles": {
+   "ca": "Llibre dels Morts",
+   "es": "Libro de los muertos",
+   "fr": "Livre des morts des Anciens Égyptiens",
+   "de": "Ägyptisches Totenbuch",
+   "it": "Libro dei morti",
+   "ru": "Древнеегипетская Книга мёртвых",
+   "zh": "死者之书",
+   "ja": "死者の書",
+   "ar": "كتاب الموتى"
+  }
+ },
+ {
+  "keys": [
+   "The Mabinogion"
+  ],
+  "titles": {
+   "ca": "Mabinogion",
+   "es": "Mabinogion",
+   "fr": "Mabinogion",
+   "de": "Mabinogion",
+   "it": "Mabinogion",
+   "ru": "Мабиногион",
+   "zh": "马比诺吉昂",
+   "ja": "マビノギオン",
+   "ar": "مابينوغون"
+  }
+ },
+ {
+  "keys": [
+   "Rubaiyat of Omar Khayyam (FitzGerald)"
+  ],
+  "titles": {
+   "ca": "Rubaiyat",
+   "es": "Rubaiyat",
+   "fr": "Rubaiyat",
+   "it": "Rubʿayyāt",
+   "ru": "Рубайат Омара Хайяма",
+   "zh": "鲁拜集",
+   "ja": "ルバイヤート",
+   "ar": "رباعيات الخيام"
+  }
+ },
+ {
+  "keys": [
+   "The Yoga Sutras of Patanjali"
+  ],
+  "titles": {
+   "ca": "Ioga sutra",
+   "es": "Yoga sutra",
+   "fr": "Yoga sūtra",
+   "de": "Yogasutra",
+   "it": "Yoga Sūtra",
+   "ru": "Йога-сутры",
+   "zh": "瑜伽經",
+   "ja": "ヨーガ・スートラ",
+   "ar": "يوغا سوترا",
+   "hi": "पतञ्जलि योगसूत्र"
+  }
+ },
+ {
+  "keys": [
+   "The Laws of Manu (Manusmriti, SBE vol. XXV)"
+  ],
+  "titles": {
+   "ca": "Manu Smriti",
+   "es": "Leyes de Manu",
+   "fr": "Lois de Manu",
+   "de": "Manusmriti",
+   "it": "Manusmṛti",
+   "ru": "Ману-смрити",
+   "zh": "摩奴法論",
+   "ja": "マヌ法典",
+   "ar": "مانوسمريتي",
+   "hi": "मनुस्मृति"
+  }
+ },
+ {
+  "keys": [
+   "The I Ching (Book of Changes)"
+  ],
+  "titles": {
+   "ca": "Yijing",
+   "es": "I Ching",
+   "fr": "Yi Jing",
+   "de": "I Ging",
+   "it": "Il libro dei mutamenti",
+   "ru": "Книга Перемен",
+   "zh": "易经",
+   "ja": "易経",
+   "ar": "كتاب التغيرات",
+   "hi": "इत्सिंग"
+  }
+ },
+ {
+  "keys": [
+   "The Saddharma-Pundarika (Lotus of the True Law, SBE XXI)"
+  ],
+  "titles": {
+   "ca": "Sutra del Lotus",
+   "es": "Sutra del loto",
+   "fr": "Sūtra du Lotus",
+   "de": "Lotos-Sutra",
+   "it": "Sutra del Loto",
+   "ru": "Лотосовая сутра",
+   "zh": "妙法莲华经",
+   "ja": "法華経",
+   "hi": "सद्धर्मपुण्डरीक सूत्र"
+  }
+ },
+ {
+  "keys": [
+   "The Book of Poetry (Shih King, Legge)"
+  ],
+  "titles": {
+   "es": "Clásico de poesía",
+   "fr": "Classique des vers",
+   "de": "Buch der Lieder",
+   "it": "Shijing",
+   "ru": "Ши цзин",
+   "zh": "诗经",
+   "ja": "詩経",
+   "ar": "كتاب الأغاني",
+   "hi": "श चिंग"
+  }
+ },
+ {
+  "keys": [
+   "Kojiki (Records of Ancient Matters)"
+  ],
+  "titles": {
+   "ca": "Kojiki",
+   "es": "Kojiki",
+   "fr": "Kojiki",
+   "de": "Kojiki",
+   "it": "Kojiki",
+   "ru": "Кодзики",
+   "zh": "古事記",
+   "ja": "古事記",
+   "ar": "كوجيكي",
+   "hi": "कोजिकी"
+  }
+ },
+ {
+  "keys": [
+   "Nihongi: Chronicles of Japan, Vol. I (Aston)",
+   "Nihongi: Chronicles of Japan, Vol. II (Aston)"
+  ],
+  "titles": {
+   "ca": "Nihon Shoki",
+   "es": "Nihonshoki",
+   "fr": "Nihon shoki",
+   "de": "Nihonshoki",
+   "it": "Nihon shoki",
+   "ru": "Нихон сёки",
+   "zh": "日本書紀",
+   "ja": "日本書紀",
+   "ar": "نيهون شوكي",
+   "hi": "निहोन शोकी"
+  }
+ },
+ {
+  "keys": [
+   "The Holy Scriptures according to the Masoretic Text (JPS 1917)"
+  ],
+  "titles": {
+   "es": "Biblia hebrea",
+   "it": "Bibbia ebraica",
+   "ru": "Еврейская Библия",
+   "zh": "希伯來聖經",
+   "ja": "ヘブライ語聖書",
+   "ar": "الكتاب العبري",
+   "hi": "इब्रानी बाइबिल"
+  }
+ },
+ {
+  "keys": [
+   "The Holy Bible (King James Version)"
+  ],
+  "titles": {
+   "ca": "Bíblia",
+   "es": "Biblia",
+   "fr": "Bible",
+   "de": "Bibel",
+   "it": "Bibbia",
+   "ru": "Библия",
+   "zh": "聖經",
+   "ja": "聖書",
+   "ar": "الكتاب المقدس",
+   "hi": "बाइबिल"
+  }
+ },
+ {
+  "keys": [
+   "The Adi Granth (Holy Scriptures of the Sikhs)"
+  ],
+  "titles": {
+   "ca": "Guru Granth Sahib Ji",
+   "es": "Sri Gurú Granth Sahib Ji",
+   "fr": "Guru Granth Sahib",
+   "de": "Adi Granth",
+   "it": "Guru Granth Sahib",
+   "ru": "Гуру Грантх Сахиб",
+   "zh": "古鲁·格兰特·萨希卜",
+   "ja": "グル・グラント・サーヒブ",
+   "ar": "جورو جرانث صاحب",
+   "hi": "गुरु ग्रन्थ साहिब"
+  }
+ },
+ {
+  "keys": [
+   "Muhammad in the Hadees: Sayings of the Prophet (Mirza Abu'l-Fadl)",
+   "The Speeches and Table-Talk of the Prophet Mohammad (Lane-Poole)"
+  ],
+  "titles": {
+   "ca": "Hadit",
+   "es": "Hadiz",
+   "fr": "Hadith",
+   "de": "Hadith",
+   "it": "Ḥadīth",
+   "ru": "Хадис",
+   "zh": "聖訓",
+   "ja": "ハディース",
+   "ar": "الحديث النبوي",
+   "hi": "हदीस"
+  }
+ },
+ {
+  "keys": [
+   "The Imitation of Christ"
+  ],
+  "titles": {
+   "ca": "Imitació de Crist",
+   "es": "Imitación de Cristo",
+   "fr": "L'Imitation de Jésus-Christ",
+   "de": "Nachfolge Christi",
+   "it": "Imitazione di Cristo",
+   "ru": "О подражании Христу",
+   "zh": "师主篇",
+   "ja": "キリストに倣いて",
+   "ar": "الاقتداء بالمسيح"
+  }
+ },
+ {
+  "keys": [
+   "Historia Calamitatum (The Story of My Misfortunes)"
+  ],
+  "titles": {
+   "fr": "Historia calamitatum",
+   "ru": "История моих бедствий"
+  }
+ },
+ {
+  "keys": [
+   "The Augsburg Confession (Confessio Augustana, 1530)"
+  ],
+  "titles": {
+   "ca": "Confessió d'Augsburg",
+   "es": "Confesión de fe de Augsburgo",
+   "fr": "Confession d'Augsbourg",
+   "de": "Confessio Augustana",
+   "it": "Confessione augustana",
+   "ru": "Аугсбургское исповедание",
+   "zh": "奥格斯堡信条",
+   "ja": "アウクスブルク信仰告白",
+   "ar": "إقرار أوغسبورغ"
+  }
+ },
+ {
+  "keys": [
+   "Apology of the Augsburg Confession (1531)"
+  ],
+  "titles": {
+   "de": "Apologie der Confessio Augustana",
+   "it": "Apologia della confessione di Augusta",
+   "ru": "Апология аугсбургского исповедания",
+   "ja": "アウクスブルク信仰告白の弁証"
+  }
+ },
+ {
+  "keys": [
+   "Theogony and Works and Days"
+  ],
+  "titles": {
+   "ca": "Els treballs i els dies",
+   "es": "Trabajos y días",
+   "fr": "Les Travaux et les Jours",
+   "de": "Werke und Tage",
+   "it": "Le opere e i giorni",
+   "ru": "Труды и дни",
+   "zh": "工作與時日",
+   "ja": "仕事と日",
+   "ar": "الأعمال والأيام"
+  }
+ },
+ {
+  "keys": [
+   "The Lives and Opinions of Eminent Philosophers"
+  ],
+  "titles": {
+   "ca": "Diògenes Laerci",
+   "es": "Diógenes Laercio",
+   "fr": "Diogène Laërce",
+   "de": "Diogenes Laertios",
+   "it": "Diogene Laerzio",
+   "ru": "Диоген Лаэртский",
+   "zh": "第欧根尼·拉尔修",
+   "ja": "ディオゲネス・ラエルティオス",
+   "ar": "ديوجانس اللايرتي"
+  }
+ },
+ {
+  "keys": [
+   "Capital, Vol. I: A Critical Analysis of Capitalist Production",
+   "Capital, Vol. II: The Process of Circulation of Capital",
+   "Capital, Vol. III: The Process of Capitalist Production as a Whole"
+  ],
+  "titles": {
+   "ca": "El capital",
+   "es": "El capital",
+   "fr": "Le Capital",
+   "de": "Das Kapital",
+   "it": "Il Capitale",
+   "ru": "Капитал",
+   "zh": "资本论",
+   "ja": "資本論",
+   "ar": "رأس المال",
+   "hi": "दास कैपिटल"
+  }
+ },
+ {
+  "keys": [
+   "Landmarks of Scientific Socialism Anti-Duehring"
+  ],
+  "titles": {
+   "ca": "Anti-Dühring",
+   "es": "Anti-Dühring",
+   "fr": "Anti-Dühring",
+   "de": "Herrn Eugen Dührings Umwälzung der Wissenschaft",
+   "it": "Anti-Dühring",
+   "ru": "Анти-Дюринг",
+   "zh": "反杜林论",
+   "ja": "反デューリング論",
+   "ar": "ضد دوهرنغ"
+  }
+ },
+ {
+  "keys": [
+   "Socialism, Utopian and Scientific"
+  ],
+  "titles": {
+   "ca": "Socialisme utòpic i socialisme científic",
+   "es": "Del socialismo utópico al socialismo científico",
+   "fr": "Socialisme utopique et socialisme scientifique",
+   "de": "Die Entwicklung des Sozialismus von der Utopie zur Wissenschaft",
+   "it": "L'evoluzione del socialismo dall'utopia alla scienza",
+   "ru": "Развитие социализма от утопии к науке",
+   "zh": "社会主义从空想到科学的发展",
+   "ja": "空想から科学へ"
+  }
+ },
+ {
+  "keys": [
+   "The origin of the family, private property, and the state"
+  ],
+  "titles": {
+   "ca": "L'origen de la família, la propietat privada i l'estat",
+   "es": "El origen de la familia, la propiedad privada y el Estado",
+   "fr": "L'Origine de la famille, de la propriété privée et de l'État",
+   "de": "Der Ursprung der Familie, des Privateigenthums und des Staats",
+   "it": "L'origine della famiglia, della proprietà privata e dello Stato",
+   "ru": "Происхождение семьи, частной собственности и государства",
+   "zh": "家庭、私有制和国家的起源",
+   "ja": "家族・私有財産・国家の起源",
+   "ar": "أصل العائلة والملكية الخاصة والدولة"
+  }
+ },
+ {
+  "keys": [
+   "The Condition of the Working-Class in England in 1844"
+  ],
+  "titles": {
+   "ca": "La situació de la classe obrera a Anglaterra",
+   "es": "La situación de la clase obrera en Inglaterra",
+   "fr": "La Situation de la classe ouvrière en Angleterre en 1844",
+   "de": "Die Lage der arbeitenden Klasse in England",
+   "it": "La situazione della classe operaia in Inghilterra",
+   "ru": "Положение рабочего класса в Англии",
+   "zh": "英国工人阶级状况",
+   "ar": "حالة الطبقة العاملة في إنجلترا"
+  }
+ },
+ {
+  "keys": [
+   "The Accumulation of Capital"
+  ],
+  "titles": {
+   "es": "La acumulación del capital",
+   "fr": "L'Accumulation du capital",
+   "de": "Die Akkumulation des Kapitals. Ein Beitrag zur ökonomischen Erklärung des Imperialismus",
+   "ru": "Накопление капитала"
+  }
+ },
+ {
+  "keys": [
+   "Discourse on Metaphysics, Correspondence with Arnauld, and Monadology (1902)"
+  ],
+  "titles": {
+   "es": "Discurso de metafísica",
+   "fr": "Discours de métaphysique",
+   "ru": "Рассуждение о метафизике"
+  }
+ },
+ {
+  "keys": [
+   "God and the State"
+  ],
+  "titles": {
+   "ca": "Déu i l'Estat",
+   "es": "Dios y el Estado",
+   "fr": "Dieu et l'État",
+   "de": "Gott und der Staat",
+   "zh": "上帝与国家",
+   "ar": "الله والدولة"
+  }
+ },
+ {
+  "keys": [
+   "An Essay on the Principle of Population"
+  ],
+  "titles": {
+   "ca": "An Essay on the Principle of Population",
+   "es": "Ensayo sobre el principio de la población",
+   "fr": "Essai sur le principe de population",
+   "de": "Bevölkerungsgesetz",
+   "it": "Saggio sul principio di popolazione",
+   "ru": "Опыт закона о народонаселении",
+   "zh": "人口論",
+   "ja": "人口論",
+   "ar": "مقالة عن مبدأ السكان"
+  }
+ },
+ {
+  "keys": [
+   "On the Principles of Political Economy and Taxation"
+  ],
+  "titles": {
+   "es": "Principios de economía política y tributación",
+   "fr": "Des principes de l'économie politique et de l'impôt",
+   "it": "Principi di economia politica e dell'imposta",
+   "zh": "政治经济学和税收原理",
+   "ja": "経済学および課税の原理"
+  }
+ },
+ {
+  "keys": [
+   "Prison Memoirs of an Anarchist"
+  ],
+  "titles": {
+   "es": "Memorias de un anarquista en prisión"
+  }
+ },
+ {
+  "keys": [
+   "Anarchism and Other Essays"
+  ],
+  "titles": {
+   "ca": "Anarquisme i altres assaigs",
+   "es": "Anarquismo y otros ensayos",
+   "fr": "Anarchism and Other Essays"
+  }
+ },
+ {
+  "keys": [
+   "My Disillusionment in Russia"
+  ],
+  "titles": {
+   "ca": "El meu desencís amb Rússia",
+   "es": "Mi desilusión con Rusia"
+  }
+ },
+ {
+  "keys": [
+   "Réflexions sur la violence"
+  ],
+  "titles": {
+   "es": "Reflexiones sobre la violencia",
+   "fr": "Réflexions sur la violence",
+   "ja": "暴力論"
+  }
+ },
+ {
+  "keys": [
+   "The Spirits' Book"
+  ],
+  "titles": {
+   "fr": "Le Livre des Esprits",
+   "it": "Il libro degli spiriti",
+   "ja": "霊の書",
+   "ar": "كتاب الأرواح"
+  }
+ },
+ {
+  "keys": [
+   "Democracy and Education An Introduction to the Philosophy of Education"
+  ],
+  "titles": {
+   "it": "Democrazia e educazione",
+   "ja": "民主主義と教育",
+   "ar": "الديمقراطية والتربية"
+  }
+ },
+ {
+  "keys": [
+   "How We Think"
+  ],
+  "titles": {
+   "it": "Come pensiamo"
+  }
+ },
+ {
+  "keys": [
+   "The School and Society"
+  ],
+  "titles": {
+   "it": "Scuola e società",
+   "ja": "学校と社会"
+  }
+ },
+ {
+  "keys": [
+   "The science of knowledge y J.G. Fichte. Tr. from the German A.E. Kroeger",
+   "Concerning the Conception of the Science of Knowledge Generally"
+  ],
+  "titles": {
+   "ca": "Epistemologia",
+   "es": "Epistemología",
+   "fr": "Épistémologie",
+   "de": "Erkenntnistheorie",
+   "it": "Epistemologia",
+   "ru": "Эпистемология",
+   "zh": "认识论",
+   "ja": "認識論",
+   "ar": "نظرية المعرفة",
+   "hi": "ज्ञानमीमांसा"
+  }
+ },
+ {
+  "keys": [
+   "The epistle of Othea to Hector; or, The boke of knyghthode",
+   "Épître d'Othéa, déesse de la Prudence à Hector, chef des Troyens. Reproduction d"
+  ],
+  "titles": {
+   "ca": "Christine de Pisan",
+   "es": "Christine de Pizan",
+   "fr": "Christine de Pizan",
+   "de": "Christine de Pizan",
+   "it": "Christine de Pizan",
+   "ru": "Кристина Пизанская",
+   "zh": "克里斯蒂娜·德·皮桑",
+   "ja": "クリスティーヌ・ド・ピザン",
+   "ar": "كريستين دي بيزان"
+  }
+ },
+ {
+  "keys": [
+   "El Criticón (tom 1)",
+   "El Criticón (tom 2)"
+  ],
+  "titles": {
+   "ca": "El Criticón",
+   "es": "El Criticón",
+   "fr": "El Criticón",
+   "ru": "Критикон"
+  }
+ },
+ {
+  "keys": [
+   "Agudeza y arte de ingenio; Oráculo manual y arte de prudencia (1669)"
+  ],
+  "titles": {
+   "es": "Oráculo manual y arte de prudencia",
+   "fr": "L'Homme de cour",
+   "de": "Oráculo manual y arte de prudencia",
+   "it": "Oracolo manuale e arte della prudenza",
+   "ru": "Карманный оракул"
+  }
  }
 ]
