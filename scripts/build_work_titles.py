@@ -535,6 +535,15 @@ WORKS: list[tuple[str, list[str]]] = [
     # --- Aquinas ---
     ("De Principiis Naturae", ["De principiis naturae"]),
     ("De Unitate Intellectus", ["De unitate intellectus contra Averroistas"]),
+    # --- Darrera passada de polit ---
+    ("Daybreak (Nietzsche book)", ["The Dawn of Day"]),
+    ("On the Use and Abuse of History for Life", ["On the Use and Abuse of History for Life"]),
+    ("Richard Wagner in Bayreuth", ["Richard Wagner in Bayreuth"]),
+    ("Schopenhauer as Educator", ["Schopenhauer as Educator"]),
+    ("Autobiography (John Stuart Mill)", ["Autobiography"]),
+    ("Anarchical Fallacies", ["Anarchical Fallacies; being an Examination of the Declarations of Rights issued"]),
+    ("The Data of Ethics", ["The Data of Ethics"]),
+    ("The Querist", ["The Querist"]),
 ]
 
 

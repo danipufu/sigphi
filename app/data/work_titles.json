@@ -4359,5 +4359,43 @@
   "titles": {
    "es": "San Manuel Bueno, mártir"
   }
+ },
+ {
+  "keys": [
+   "The Dawn of Day"
+  ],
+  "titles": {
+   "ca": "Aurora. Reflexions sobre els prejudicis morals",
+   "es": "Aurora. Reflexiones sobre los prejuicios morales",
+   "fr": "Aurore",
+   "de": "Morgenröte. Gedanken über die moralischen Vorurteile",
+   "it": "Aurora. Pensieri sui pregiudizi morali"
+  }
+ },
+ {
+  "keys": [
+   "Richard Wagner in Bayreuth"
+  ],
+  "titles": {
+   "ca": "Unzeitgemässe Betrachtungen",
+   "es": "Consideraciones intempestivas",
+   "fr": "Considérations inactuelles",
+   "de": "Unzeitgemäße Betrachtungen",
+   "it": "Considerazioni inattuali",
+   "ja": "反時代的考察"
+  }
+ },
+ {
+  "keys": [
+   "Schopenhauer as Educator"
+  ],
+  "titles": {
+   "ca": "Unzeitgemässe Betrachtungen",
+   "es": "Consideraciones intempestivas",
+   "fr": "Considérations inactuelles",
+   "de": "Unzeitgemäße Betrachtungen",
+   "it": "Considerazioni inattuali",
+   "ja": "反時代的考察"
+  }
  }
 ]
