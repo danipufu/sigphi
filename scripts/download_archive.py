@@ -673,6 +673,24 @@ TEXTS = [
      "contra els lliurepensadors ('minute philosophers'); inclou la seva teoria del "
      "llenguatge i dels signes. Original anglès, domini públic. Digitalització OCR.",
      "George_Berkeley__Alciphron_en.txt"),
+
+    # --- Lot 28: reforçar autors prims (anarquistes/socialistes), totes PD verificades ---
+    ("reflectionsonvio00soreuoft", "reflectionsonvio00soreuoft_djvu.txt",
+     "Georges Sorel", "Reflections on Violence", "English",
+     "Complete work", "Written by the author",
+     "Assaig de Georges Sorel (1908) sobre el paper de la vaga general revolucionària "
+     "i el mite social; obra fundacional del sindicalisme revolucionari. Traducció "
+     "anglesa de T. E. Hulme (1915; Hulme va morir el 1917 -> domini públic). "
+     "Digitalització OCR.",
+     "Georges_Sorel__Reflections_on_Violence_Hulme_en.txt"),
+    ("memoirsofrevolut00krop_1", "memoirsofrevolut00krop_1_djvu.txt",
+     "Peter Kropotkin", "Memoirs of a Revolutionist", "English",
+     "Complete work", "Written by the author",
+     "Autobiografia de Piotr Kropotkin (1899), escrita originalment en anglès per a "
+     "The Atlantic Monthly; recorre la seva vida com a científic, geògraf i "
+     "revolucionari anarquista. Original anglès, domini públic (Kropotkin †1921). "
+     "Digitalització OCR.",
+     "Peter_Kropotkin__Memoirs_of_a_Revolutionist_en.txt"),
 ]
 
 

@@ -544,6 +544,9 @@ WORKS: list[tuple[str, list[str]]] = [
     ("Anarchical Fallacies", ["Anarchical Fallacies; being an Examination of the Declarations of Rights issued"]),
     ("The Data of Ethics", ["The Data of Ethics"]),
     ("The Querist", ["The Querist"]),
+    # --- Lot 28 ---
+    ("Reflections on Violence", ["Reflections on Violence"]),
+    ("Memoirs of a Revolutionist", ["Memoirs of a Revolutionist"]),
 ]
 
 
@@ -590,9 +593,23 @@ def main() -> None:
             entries.append({"keys": keys, "titles": titles[article]})
         else:
             empty.append(article)
-    OUT.write_text(json.dumps(entries, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+
+    # MERGE, no sobreescriure: conserva qualsevol entrada ja present a OUT que no
+    # vingui d'aquesta execució (p. ex. traduccions pròpies fusionades amb
+    # merge_self_translations.py). Sense això, una re-execució esborraria feina
+    # que no prové de la llista WORKS d'aquest fitxer.
+    existing: list[dict] = []
+    existing_keys: set[str] = set()
+    if OUT.exists():
+        existing = json.loads(OUT.read_text(encoding="utf-8"))
+        new_keys = {k for e in entries for k in e["keys"]}
+        existing = [e for e in existing if not (set(e["keys"]) & new_keys)]
+        existing_keys = {k for e in existing for k in e["keys"]}
+    merged = existing + entries
+    OUT.write_text(json.dumps(merged, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     nk = sum(len(e["keys"]) for e in entries)
-    print(f"Escrites {len(entries)} obres ({nk} títols-clau) a {OUT.name}.")
+    print(f"Escrites {len(entries)} obres noves/actualitzades ({nk} títols-clau); "
+          f"{len(existing)} entrades preexistents conservades. Total: {len(merged)}.")
     print(f"Mitjana d'idiomes/obra: {sum(len(e['titles']) for e in entries) / max(1, len(entries)):.1f}")
     if empty:
         print(f"SENSE langlinks ({len(empty)}) -> revisar el nom de l'article:")
