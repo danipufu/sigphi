@@ -1,91 +1,1499 @@
 [
-  {"keys": ["The Prince"],
-   "titles": {"ca":"El príncep","es":"El príncipe","fr":"Le Prince","de":"Der Fürst","it":"Il principe","ru":"Государь","zh":"君主论","ja":"君主論","ar":"الأمير","hi":"द प्रिंस"}},
-
-  {"keys": ["The Republic", "The Republic of Plato"],
-   "titles": {"ca":"La República","es":"La República","fr":"La République","de":"Politeia","it":"La Repubblica","ru":"Государство","zh":"理想国","ja":"国家","ar":"الجمهورية","hi":"रिपब्लिक"}},
-
-  {"keys": ["Nicomachean Ethics EN", "The Nicomachean ethics of Aristotle"],
-   "titles": {"ca":"Ètica nicomaquea","es":"Ética nicomáquea","fr":"Éthique à Nicomaque","de":"Nikomachische Ethik","it":"Etica Nicomachea","ru":"Никомахова этика","zh":"尼各马可伦理学","ja":"ニコマコス倫理学","ar":"الأخلاق النيقوماخية","hi":"निकोमेकियन नीतिशास्त्र"}},
-
-  {"keys": ["Metaphysics EN"],
-   "titles": {"ca":"Metafísica","es":"Metafísica","fr":"Métaphysique","de":"Metaphysik","it":"Metafisica","ru":"Метафизика","zh":"形而上学","ja":"形而上学","ar":"ما وراء الطبيعة","hi":"मेटाफिजिक्स"}},
-
-  {"keys": ["Politics EN", "Politics A Treatise on Government"],
-   "titles": {"ca":"Política","es":"Política","fr":"Politique","de":"Politik","it":"Politica","ru":"Политика","zh":"政治学","ja":"政治学","ar":"السياسة","hi":"पॉलिटिक्स"}},
-
-  {"keys": ["Poetics EN", "The Poetics of Aristotle", "Aristotle on the art of poetry"],
-   "titles": {"ca":"Poètica","es":"Poética","fr":"Poétique","de":"Poetik","it":"Poetica","ru":"Поэтика","zh":"诗学","ja":"詩学","ar":"فن الشعر","hi":"पोएटिक्स"}},
-
-  {"keys": ["Meditations", "The Meditations of the Emperor Marcus Aurelius Antoninus", "Thoughts of Marcus Aurelius Antoninus"],
-   "titles": {"ca":"Meditacions","es":"Meditaciones","fr":"Pensées pour moi-même","de":"Selbstbetrachtungen","it":"Colloqui con sé stesso","ru":"К самому себе","zh":"沉思录","ja":"自省録","ar":"التأملات"}},
-
-  {"keys": ["Thus Spake Zarathustra A Book for All and None"],
-   "titles": {"ca":"Així parlà Zaratustra","es":"Así habló Zaratustra","fr":"Ainsi parlait Zarathoustra","de":"Also sprach Zarathustra","it":"Così parlò Zarathustra","ru":"Так говорил Заратустра","zh":"查拉图斯特拉如是说","ja":"ツァラトゥストラはこう語った","ar":"هكذا تكلم زرادشت"}},
-
-  {"keys": ["Beyond Good and Evil"],
-   "titles": {"ca":"Més enllà del bé i del mal","es":"Más allá del bien y del mal","fr":"Par-delà le bien et le mal","de":"Jenseits von Gut und Böse","it":"Al di là del bene e del male","ru":"По ту сторону добра и зла","zh":"善恶的彼岸","ja":"善悪の彼岸","ar":"ما وراء الخير والشر"}},
-
-  {"keys": ["The Genealogy of Morals"],
-   "titles": {"ca":"La genealogia de la moral","es":"La genealogía de la moral","fr":"Généalogie de la morale","de":"Zur Genealogie der Moral","it":"Genealogia della morale","zh":"道德谱系学","ja":"道徳の系譜","ar":"في علم أنساب الأخلاق"}},
-
-  {"keys": ["The Critique of Pure Reason"],
-   "titles": {"ca":"Crítica de la raó pura","es":"Crítica de la razón pura","fr":"Critique de la raison pure","de":"Kritik der reinen Vernunft","it":"Critica della ragion pura","ru":"Критика чистого разума","zh":"纯粹理性批判","ja":"純粋理性批判","ar":"نقد العقل الخالص","hi":"शुद्ध तर्कबुद्धि की समालोचना"}},
-
-  {"keys": ["The Critique of Practical Reason", "Critique of Practical Reason"],
-   "titles": {"ca":"Crítica de la raó pràctica","es":"Crítica de la razón práctica","fr":"Critique de la raison pratique","de":"Kritik der praktischen Vernunft","it":"Critica della ragion pratica","ru":"Критика практического разума","zh":"实践理性批判","ja":"実践理性批判","ar":"نقد العقل العملي"}},
-
-  {"keys": ["Groundwork of the Metaphysics of Morals", "Fundamental Principles of the Metaphysic of Morals"],
-   "titles": {"ca":"Fonamentació de la metafísica dels costums","es":"Fundamentación de la metafísica de las costumbres","fr":"Fondements de la métaphysique des mœurs","de":"Grundlegung zur Metaphysik der Sitten","it":"Fondazione della metafisica dei costumi","ru":"Основы метафизики нравственности","zh":"道德形上学基础","ja":"人倫の形而上学の基礎づけ","ar":"أسس غيبيات الأخلاق"}},
-
-  {"keys": ["Discourse on the Method of Rightly Conducting One's Reason and of Seeking Truth", "A Discourse of a Method for the Well Guiding of Reason"],
-   "titles": {"ca":"Discurs del mètode","es":"Discurso del método","fr":"Discours de la méthode","de":"Discours de la méthode","it":"Discorso sul metodo","ru":"Рассуждение о методе","zh":"談談方法","ja":"方法序説","ar":"مقال عن المنهج"}},
-
-  {"keys": ["Six metaphysical meditations"],
-   "titles": {"ca":"Meditacions metafísiques","es":"Meditaciones metafísicas","fr":"Méditations métaphysiques","de":"Meditationes de prima philosophia","it":"Meditazioni metafisiche","ru":"Размышления о первой философии","zh":"第一哲学沉思集","ja":"省察","ar":"تأملات في الفلسفة الأولى"}},
-
-  {"keys": ["Ethics"],
-   "titles": {"ca":"Ètica","es":"Ética","fr":"Éthique","de":"Ethica","it":"Ethica","ru":"Этика","zh":"伦理学","ja":"エチカ","ar":"أخلاقيات"}},
-
-  {"keys": ["Leviathan"],
-   "titles": {"ca":"Leviatan","es":"Leviatán","fr":"Léviathan","de":"Leviathan","it":"Leviatano","ru":"Левиафан","zh":"利维坦","ja":"リヴァイアサン","ar":"الليفياثان"}},
-
-  {"keys": ["Du contrat social (Le contrat social)"],
-   "titles": {"ca":"El contracte social","es":"El contrato social","fr":"Du contrat social","de":"Vom Gesellschaftsvertrag","it":"Il contratto sociale","ru":"Об общественном договоре","zh":"社会契约论","ja":"社会契約論","ar":"العقد الاجتماعي"}},
-
-  {"keys": ["Emile"],
-   "titles": {"ca":"Emili, o De l'educació","es":"Emilio, o De la educación","fr":"Émile ou De l'éducation","de":"Émile oder Über die Erziehung","it":"Emilio o dell'educazione","ru":"Эмиль, или О воспитании","zh":"爱弥儿","ja":"エミール"}},
-
-  {"keys": ["A Discourse Upon the Origin and the Foundation of the Inequality Among Mankind"],
-   "titles": {"ca":"Discurs sobre l'origen i els fonaments de la desigualtat entre els homes","es":"Discurso sobre el origen y los fundamentos de la desigualdad entre los hombres","fr":"Discours sur l'origine et les fondements de l'inégalité parmi les hommes","de":"Abhandlung über den Ursprung und die Grundlagen der Ungleichheit unter den Menschen","it":"Discorso sull'origine e i fondamenti della diseguaglianza tra gli uomini","zh":"论人类不平等的起源与基础","ja":"人間不平等起源論"}},
-
-  {"keys": ["The Confessions of Jean Jacques Rousseau — Complete"],
-   "titles": {"fr":"Les Confessions","de":"Die Bekenntnisse","it":"Le confessioni","ru":"Исповедь","zh":"忏悔录","ja":"告白","ar":"اعترافات جان جاك روسو"}},
-
-  {"keys": ["The Communist Manifesto", "Manifesto of the Communist Party"],
-   "titles": {"ca":"El manifest comunista","es":"Manifiesto del Partido Comunista","fr":"Manifeste du parti communiste","de":"Manifest der Kommunistischen Partei","it":"Manifesto del Partito Comunista","ru":"Манифест Коммунистической партии","zh":"共产党宣言","ja":"共産党宣言","ar":"بيان الحزب الشيوعي","hi":"कम्युनिस्ट पार्टी का घोषणापत्र"}},
-
-  {"keys": ["On Liberty"],
-   "titles": {"ca":"Sobre la llibertat","es":"Sobre la libertad","fr":"De la liberté","it":"Saggio sulla libertà","zh":"论自由","ja":"自由論","ar":"عن الحرية"}},
-
-  {"keys": ["Utilitarianism"],
-   "titles": {"ca":"L'utilitarisme","es":"El utilitarismo","de":"Der Utilitarismus","zh":"效益主义","ja":"功利主義論","ar":"النفعية"}},
-
-  {"keys": ["The Subjection of Women"],
-   "titles": {"ca":"La submissió de les dones","es":"La esclavitud de las mujeres","fr":"De l'assujettissement des femmes","de":"Die Hörigkeit der Frau","it":"La servitù delle donne","zh":"妇女的屈从地位","ar":"استعباد النساء","hi":"स्त्रियों की पराधीनता"}},
-
-  {"keys": ["Confessions EN", "The Confessions of St. Augustine"],
-   "titles": {"ca":"Confessions","es":"Confesiones","fr":"Les Confessions","de":"Confessiones","it":"Confessioni","ru":"Исповедь","zh":"忏悔录","ja":"告白","ar":"اعترافات القديس أوغسطين"}},
-
-  {"keys": ["City of God EN"],
-   "titles": {"ca":"La ciutat de Déu","es":"La ciudad de Dios","fr":"La Cité de Dieu","de":"De civitate Dei","it":"La città di Dio","ru":"О граде Божьем","zh":"上帝之城","ja":"神の国","ar":"مدينة الله"}},
-
-  {"keys": ["The Analects of Confucius (from the Chinese Classics)"],
-   "titles": {"ca":"Analectes de Confuci","es":"Analectas de Confucio","fr":"Entretiens de Confucius","de":"Gespräche des Konfuzius","it":"Dialoghi","ru":"Лунь юй","zh":"论语","ja":"論語","ar":"تعاليم كونفوشيوس","hi":"कन्फ्यूशियस सूक्ति-संग्रह"}},
-
-  {"keys": ["An Inquiry into the Nature and Causes of the Wealth of Nations"],
-   "titles": {"ca":"La riquesa de les nacions","es":"La riqueza de las naciones","fr":"Recherches sur la nature et les causes de la richesse des nations","de":"Der Wohlstand der Nationen","it":"La ricchezza delle nazioni","ru":"Исследование о природе и причинах богатства народов","zh":"国富论","ja":"国富論","ar":"ثروة الأمم","hi":"राष्ट्रों का धन"}},
-
-  {"keys": ["The Theory of Moral Sentiments"],
-   "titles": {"ca":"Teoria dels sentiments morals","es":"La teoría de los sentimientos morales","fr":"Théorie des sentiments moraux","de":"Theorie der ethischen Gefühle","it":"Teoria dei sentimenti morali","ru":"Теория нравственных чувств","zh":"道德情操论","ja":"道徳感情論","ar":"نظرية المشاعر الأخلاقية"}}
+ {
+  "keys": [
+   "The Republic",
+   "The Republic of Plato",
+   "Republic GR"
+  ],
+  "titles": {
+   "ca": "La República",
+   "es": "República",
+   "fr": "La République",
+   "de": "Politeia",
+   "it": "La Repubblica",
+   "ru": "Государство",
+   "zh": "理想国",
+   "ja": "国家",
+   "ar": "الجمهورية",
+   "hi": "रिपब्लिक"
+  }
+ },
+ {
+  "keys": [
+   "Apology",
+   "Apology EN"
+  ],
+  "titles": {
+   "ca": "Apologia de Sòcrates",
+   "es": "Apología de Sócrates",
+   "fr": "Apologie de Socrate",
+   "de": "Apologie",
+   "it": "Apologia di Socrate",
+   "ru": "Апология Сократа",
+   "zh": "苏格拉底的申辩",
+   "ja": "ソクラテスの弁明",
+   "ar": "دفاع سقراط",
+   "hi": "अपॉलॉजी"
+  }
+ },
+ {
+  "keys": [
+   "Charmides"
+  ],
+  "titles": {
+   "ca": "Càrmides",
+   "es": "Cármides",
+   "fr": "Charmide",
+   "de": "Charmides",
+   "it": "Carmide",
+   "ru": "Хармид",
+   "ja": "カルミデス",
+   "ar": "خارميدس"
+  }
+ },
+ {
+  "keys": [
+   "Cratylus"
+  ],
+  "titles": {
+   "ca": "Cràtil",
+   "es": "Crátilo",
+   "fr": "Cratyle",
+   "de": "Kratylos",
+   "it": "Cratilo",
+   "ru": "Кратил",
+   "zh": "克拉底魯篇",
+   "ja": "クラテュロス",
+   "ar": "كراتيلوس"
+  }
+ },
+ {
+  "keys": [
+   "Critias"
+  ],
+  "titles": {
+   "ca": "Crítias",
+   "es": "Critias",
+   "fr": "Critias",
+   "de": "Kritias",
+   "it": "Crizia",
+   "ru": "Критий",
+   "ja": "クリティアス",
+   "ar": "كريتياس"
+  }
+ },
+ {
+  "keys": [
+   "Euthydemus"
+  ],
+  "titles": {
+   "ca": "Eutidem",
+   "es": "Eutidemo",
+   "fr": "Euthydème",
+   "de": "Euthydemos",
+   "it": "Eutidemo",
+   "ru": "Евтидем",
+   "ja": "エウテュデモス",
+   "ar": "يوثيديموس"
+  }
+ },
+ {
+  "keys": [
+   "Euthyphro"
+  ],
+  "titles": {
+   "ca": "Eutífron",
+   "es": "Eutifrón",
+   "fr": "Euthyphron",
+   "de": "Euthyphron",
+   "it": "Eutifrone",
+   "ru": "Евтифрон",
+   "zh": "游叙弗伦篇",
+   "ja": "エウテュプロン",
+   "ar": "يوثيفرو",
+   "hi": "यूथिफ्रो"
+  }
+ },
+ {
+  "keys": [
+   "Gorgias"
+  ],
+  "titles": {
+   "ca": "Gòrgias",
+   "es": "Gorgias",
+   "fr": "Gorgias",
+   "de": "Gorgias",
+   "it": "Gorgia",
+   "ru": "Горгий",
+   "zh": "高尔吉亚篇",
+   "ja": "ゴルギアス",
+   "ar": "غورغياس",
+   "hi": "गॉर्गियास"
+  }
+ },
+ {
+  "keys": [
+   "Ion"
+  ],
+  "titles": {
+   "ca": "Ió",
+   "es": "Ion",
+   "fr": "Ion",
+   "de": "Ion",
+   "it": "Ione",
+   "ru": "Ион",
+   "ja": "イオン",
+   "ar": "أيون"
+  }
+ },
+ {
+  "keys": [
+   "Laches"
+  ],
+  "titles": {
+   "ca": "Laques",
+   "es": "Laques",
+   "fr": "Lachès",
+   "de": "Laches",
+   "it": "Lachete",
+   "ru": "Лахес",
+   "ja": "ラケス",
+   "ar": "لاخيس"
+  }
+ },
+ {
+  "keys": [
+   "Laws"
+  ],
+  "titles": {
+   "ca": "Les Lleis",
+   "es": "Leyes",
+   "fr": "Les Lois",
+   "de": "Nomoi",
+   "it": "Leggi",
+   "ru": "Законы",
+   "zh": "法律篇",
+   "ja": "法律",
+   "ar": "القوانين"
+  }
+ },
+ {
+  "keys": [
+   "Lesser Hippias"
+  ],
+  "titles": {
+   "ca": "Hípias menor",
+   "es": "Hipias menor",
+   "fr": "Hippias mineur",
+   "de": "Hippias minor",
+   "it": "Ippia minore",
+   "ru": "Гиппий меньший",
+   "ja": "ヒッピアス",
+   "ar": "هيبياس الأصغر"
+  }
+ },
+ {
+  "keys": [
+   "Lysis"
+  ],
+  "titles": {
+   "ca": "Lisis",
+   "es": "Lisis",
+   "fr": "Lysis",
+   "de": "Lysis",
+   "it": "Liside",
+   "ru": "Лисид",
+   "ja": "リュシス",
+   "ar": "ليسيس"
+  }
+ },
+ {
+  "keys": [
+   "Menexenus"
+  ],
+  "titles": {
+   "ca": "Menexen",
+   "es": "Menexeno",
+   "fr": "Ménexène",
+   "de": "Menexenos",
+   "it": "Menesseno",
+   "ru": "Менексен",
+   "zh": "美涅克塞努篇",
+   "ja": "メネクセノス"
+  }
+ },
+ {
+  "keys": [
+   "Meno"
+  ],
+  "titles": {
+   "ca": "Menó",
+   "es": "Menón",
+   "fr": "Ménon",
+   "de": "Menon",
+   "it": "Menone",
+   "ru": "Менон",
+   "zh": "美诺篇",
+   "ja": "メノン",
+   "ar": "مينو",
+   "hi": "मीनो"
+  }
+ },
+ {
+  "keys": [
+   "Parmenides"
+  ],
+  "titles": {
+   "ca": "Parmènides",
+   "es": "Parménides",
+   "fr": "Parménide",
+   "de": "Parmenides",
+   "it": "Parmenide",
+   "ru": "Парменид",
+   "zh": "巴曼尼得斯篇",
+   "ja": "パルメニデス",
+   "ar": "بارمنيدس"
+  }
+ },
+ {
+  "keys": [
+   "Phaedo",
+   "Phaedo EN"
+  ],
+  "titles": {
+   "ca": "Fedó",
+   "es": "Fedón",
+   "fr": "Phédon",
+   "de": "Phaidon",
+   "it": "Fedone",
+   "ru": "Федон",
+   "zh": "斐多篇",
+   "ja": "パイドン",
+   "ar": "فايدو",
+   "hi": "फीदो"
+  }
+ },
+ {
+  "keys": [
+   "Phaedrus"
+  ],
+  "titles": {
+   "ca": "Fedre",
+   "es": "Fedro",
+   "fr": "Phèdre",
+   "de": "Phaidros",
+   "it": "Fedro",
+   "ru": "Федр",
+   "zh": "費德魯斯篇",
+   "ja": "パイドロス",
+   "ar": "فيدروس"
+  }
+ },
+ {
+  "keys": [
+   "Philebus"
+  ],
+  "titles": {
+   "ca": "Fileb",
+   "es": "Filebo",
+   "fr": "Philèbe",
+   "de": "Philebos",
+   "it": "Filebo",
+   "ru": "Филеб",
+   "zh": "菲力帕斯篇",
+   "ja": "ピレボス",
+   "ar": "فيليبوس"
+  }
+ },
+ {
+  "keys": [
+   "Protagoras"
+  ],
+  "titles": {
+   "ca": "Protàgoras",
+   "es": "Protágoras",
+   "fr": "Protagoras",
+   "de": "Protagoras",
+   "it": "Protagora",
+   "ru": "Протагор",
+   "ja": "プロタゴラス",
+   "ar": "بروتاغوراس"
+  }
+ },
+ {
+  "keys": [
+   "Sophist"
+  ],
+  "titles": {
+   "ca": "El Sofista",
+   "es": "Sofista",
+   "fr": "Le Sophiste",
+   "de": "Sophistes",
+   "it": "Sofista",
+   "ru": "Софист",
+   "zh": "智者篇",
+   "ja": "ソピステス",
+   "ar": "السفسطائي"
+  }
+ },
+ {
+  "keys": [
+   "Statesman"
+  ],
+  "titles": {
+   "ca": "El Polític",
+   "es": "Político",
+   "fr": "Le Politique",
+   "de": "Politikos",
+   "it": "Politico",
+   "ru": "Политик",
+   "zh": "政治家篇",
+   "ja": "政治家",
+   "ar": "رجل الدولة"
+  }
+ },
+ {
+  "keys": [
+   "Symposium",
+   "Symposium EN",
+   "Symposium GR"
+  ],
+  "titles": {
+   "ca": "El convit",
+   "es": "El banquete",
+   "fr": "Le Banquet",
+   "de": "Symposion",
+   "it": "Simposio",
+   "ru": "Пир",
+   "zh": "會飲篇",
+   "ja": "饗宴",
+   "ar": "الندوة",
+   "hi": "सिम्पोज़ियम"
+  }
+ },
+ {
+  "keys": [
+   "Theaetetus"
+  ],
+  "titles": {
+   "ca": "Teetet",
+   "es": "Teeteto",
+   "fr": "Théétète",
+   "de": "Theaitetos",
+   "it": "Teeteto",
+   "ru": "Теэтет",
+   "zh": "泰阿泰德篇",
+   "ja": "テアイテトス",
+   "ar": "ثياتيتوس"
+  }
+ },
+ {
+  "keys": [
+   "Timaeus",
+   "Timaeus EN"
+  ],
+  "titles": {
+   "ca": "Timeu",
+   "es": "Timeo",
+   "fr": "Timée",
+   "de": "Timaios",
+   "it": "Timeo",
+   "ru": "Тимей",
+   "zh": "蒂邁歐篇",
+   "ja": "ティマイオス",
+   "ar": "طيماوس"
+  }
+ },
+ {
+  "keys": [
+   "Nicomachean Ethics EN",
+   "The Nicomachean ethics of Aristotle"
+  ],
+  "titles": {
+   "ca": "Ètica nicomaquea",
+   "es": "Ética nicomáquea",
+   "fr": "Éthique à Nicomaque",
+   "de": "Nikomachische Ethik",
+   "it": "Etica Nicomachea",
+   "ru": "Никомахова этика",
+   "zh": "尼各马可伦理学",
+   "ja": "ニコマコス倫理学",
+   "ar": "الأخلاق النيقوماخية",
+   "hi": "निकोमेकियन नीतिशास्त्र"
+  }
+ },
+ {
+  "keys": [
+   "Politics EN",
+   "Politics A Treatise on Government"
+  ],
+  "titles": {
+   "ca": "Política",
+   "es": "Política",
+   "fr": "Politique",
+   "de": "Politik",
+   "it": "Politica",
+   "ru": "Политика",
+   "zh": "政治学",
+   "ja": "政治学",
+   "ar": "السياسة",
+   "hi": "पोलिटिक्स"
+  }
+ },
+ {
+  "keys": [
+   "Metaphysics EN"
+  ],
+  "titles": {
+   "ca": "Metafísica",
+   "es": "Metafísica",
+   "fr": "Métaphysique",
+   "de": "Metaphysik",
+   "it": "Metafisica",
+   "ru": "Метафизика",
+   "zh": "形而上学",
+   "ja": "形而上学",
+   "ar": "ما وراء الطبيعة",
+   "hi": "मेटाफिजिक्स"
+  }
+ },
+ {
+  "keys": [
+   "Poetics EN",
+   "The Poetics of Aristotle",
+   "Aristotle on the art of poetry"
+  ],
+  "titles": {
+   "ca": "Poètica",
+   "es": "Poética",
+   "fr": "Poétique",
+   "de": "Poetik",
+   "it": "Poetica",
+   "ru": "Поэтика",
+   "zh": "诗学",
+   "ja": "詩学",
+   "ar": "فن الشعر",
+   "hi": "पोएटिक्स"
+  }
+ },
+ {
+  "keys": [
+   "De Anima (On the Soul)",
+   "De Anima EN"
+  ],
+  "titles": {
+   "ca": "Sobre l'ànima",
+   "es": "Acerca del alma",
+   "fr": "De l'âme",
+   "de": "De anima",
+   "it": "Sull'anima",
+   "ru": "О душе",
+   "zh": "论灵魂",
+   "ja": "霊魂論",
+   "ar": "كتاب النفس"
+  }
+ },
+ {
+  "keys": [
+   "The Physics, Vol. I (Books I-IV)",
+   "The Physics, Vol. II (Books V-VIII)"
+  ],
+  "titles": {
+   "es": "Física",
+   "fr": "Physique",
+   "de": "Physik",
+   "it": "Fisica",
+   "ru": "Физика",
+   "zh": "物理学",
+   "ja": "自然学",
+   "ar": "السماع الطبيعي",
+   "hi": "फिज़िक्स"
+  }
+ },
+ {
+  "keys": [
+   "The Categories"
+  ],
+  "titles": {
+   "ca": "Categories",
+   "es": "Categorías",
+   "fr": "Catégories",
+   "de": "Kategorien",
+   "it": "Categorie",
+   "ru": "Категории",
+   "zh": "范畴篇",
+   "ja": "範疇論",
+   "ar": "المقولات"
+  }
+ },
+ {
+  "keys": [
+   "On Interpretation (Organon)"
+  ],
+  "titles": {
+   "ca": "De la interpretació",
+   "es": "Sobre la interpretación",
+   "fr": "De l'interprétation",
+   "de": "De interpretatione",
+   "it": "Sull'interpretazione",
+   "ru": "Об истолковании",
+   "zh": "解释篇",
+   "ja": "命題論",
+   "ar": "العبارة"
+  }
+ },
+ {
+  "keys": [
+   "Prior Analytics, Book 1 (Organon)",
+   "Prior Analytics, Book 2 (Organon)"
+  ],
+  "titles": {
+   "ca": "Primers analítics",
+   "es": "Primeros analíticos",
+   "fr": "Premiers Analytiques",
+   "de": "Analytica priora",
+   "it": "Analitici primi",
+   "ja": "分析論前書",
+   "ar": "القياس"
+  }
+ },
+ {
+  "keys": [
+   "Posterior Analytics (Bouchier)"
+  ],
+  "titles": {
+   "ca": "Segons analítics",
+   "es": "Segundos analíticos",
+   "fr": "Seconds Analytiques",
+   "de": "Analytica posteriora",
+   "it": "Analitici secondi",
+   "ja": "分析論後書",
+   "ar": "البرهان"
+  }
+ },
+ {
+  "keys": [
+   "Topics (Organon)"
+  ],
+  "titles": {
+   "ca": "Tòpics",
+   "es": "Tópicos",
+   "fr": "Topiques",
+   "de": "Topik",
+   "it": "Topici",
+   "ru": "Топика",
+   "ja": "トピカ"
+  }
+ },
+ {
+  "keys": [
+   "Sophistical Refutations (Organon)"
+  ],
+  "titles": {
+   "ca": "Refutacions sofístiques",
+   "es": "Refutaciones sofísticas",
+   "fr": "Réfutations sophistiques",
+   "de": "Sophistische Widerlegungen",
+   "it": "Elenchi sofistici",
+   "ru": "О софистических опровержениях",
+   "zh": "辨谬篇",
+   "ja": "詭弁論駁論"
+  }
+ },
+ {
+  "keys": [
+   "Rhetoric (Treatise on Rhetoric)"
+  ],
+  "titles": {
+   "ca": "Ars Rhetorica",
+   "es": "Retórica",
+   "fr": "Rhétorique",
+   "de": "Rhetorik",
+   "it": "Retorica",
+   "ru": "Риторика",
+   "zh": "修辭學",
+   "ja": "弁論術",
+   "ar": "الخطابة",
+   "hi": "रेटोरिक"
+  }
+ },
+ {
+  "keys": [
+   "The Athenian Constitution"
+  ],
+  "titles": {
+   "it": "Costituzione degli Ateniesi",
+   "zh": "雅典政制"
+  }
+ },
+ {
+  "keys": [
+   "Aristotle's History of Animals"
+  ],
+  "titles": {
+   "ca": "Història dels animals",
+   "es": "Historia de los animales",
+   "fr": "Histoire des animaux",
+   "de": "Historia animalium",
+   "it": "Historia animalium",
+   "ru": "История животных",
+   "zh": "动物志",
+   "ja": "動物誌",
+   "ar": "طباع الحيوان"
+  }
+ },
+ {
+  "keys": [
+   "Meditations",
+   "The Meditations of the Emperor Marcus Aurelius Antoninus",
+   "Thoughts of Marcus Aurelius Antoninus",
+   "Meditations GR"
+  ],
+  "titles": {
+   "ca": "Meditacions",
+   "es": "Meditaciones",
+   "fr": "Pensées pour moi-même",
+   "de": "Selbstbetrachtungen",
+   "it": "Colloqui con sé stesso",
+   "ru": "К самому себе",
+   "zh": "沉思录",
+   "ja": "自省録",
+   "ar": "التأملات"
+  }
+ },
+ {
+  "keys": [
+   "Thus Spake Zarathustra A Book for All and None"
+  ],
+  "titles": {
+   "ca": "Així parlà Zaratustra",
+   "es": "Así habló Zaratustra",
+   "fr": "Ainsi parlait Zarathoustra",
+   "de": "Also sprach Zarathustra",
+   "it": "Così parlò Zarathustra",
+   "ru": "Так говорил Заратустра",
+   "zh": "查拉图斯特拉如是说",
+   "ja": "ツァラトゥストラはこう語った",
+   "ar": "هكذا تكلم زرادشت"
+  }
+ },
+ {
+  "keys": [
+   "Beyond Good and Evil"
+  ],
+  "titles": {
+   "ca": "Més enllà del bé i del mal",
+   "es": "Más allá del bien y del mal",
+   "fr": "Par-delà le bien et le mal",
+   "de": "Jenseits von Gut und Böse",
+   "it": "Al di là del bene e del male",
+   "ru": "По ту сторону добра и зла",
+   "zh": "善惡的彼岸",
+   "ja": "善悪の彼岸",
+   "ar": "ما وراء الخير والشر"
+  }
+ },
+ {
+  "keys": [
+   "The Genealogy of Morals"
+  ],
+  "titles": {
+   "ca": "La genealogia de la moral",
+   "es": "La genealogía de la moral",
+   "fr": "Généalogie de la morale",
+   "de": "Zur Genealogie der Moral",
+   "it": "Genealogia della morale",
+   "zh": "道德譜系學",
+   "ja": "道徳の系譜",
+   "ar": "في علم أنساب الأخلاق"
+  }
+ },
+ {
+  "keys": [
+   "The Antichrist"
+  ],
+  "titles": {
+   "ca": "L'Anticrist",
+   "es": "El Anticristo",
+   "fr": "L'Antéchrist",
+   "de": "Der Antichrist",
+   "it": "L'Anticristo",
+   "ru": "Антихрист. Проклятие христианству",
+   "zh": "反基督",
+   "ar": "نقيض المسيح",
+   "hi": "थे एंटीक्रिस्ट"
+  }
+ },
+ {
+  "keys": [
+   "Ecce Homo"
+  ],
+  "titles": {
+   "ca": "Ecce homo",
+   "es": "Ecce homo. Cómo se llega a ser lo que se es",
+   "fr": "Ecce homo",
+   "de": "Ecce homo",
+   "it": "Ecce homo. Come si diventa ciò che si è",
+   "ru": "Ecce Homo. Как становятся сами собою",
+   "zh": "瞧！这个人",
+   "ja": "この人を見よ",
+   "ar": "هو ذا الإنسان"
+  }
+ },
+ {
+  "keys": [
+   "The Birth of Tragedy; or, Hellenism and Pessimism"
+  ],
+  "titles": {
+   "ca": "El naixement de la tragèdia",
+   "es": "El nacimiento de la tragedia desde el espíritu de la música",
+   "fr": "La Naissance de la tragédie",
+   "de": "Die Geburt der Tragödie aus dem Geiste der Musik",
+   "it": "La nascita della tragedia",
+   "ru": "Рождение трагедии из духа музыки",
+   "zh": "悲剧的诞生",
+   "ja": "悲劇の誕生",
+   "ar": "مولد التراجيديا"
+  }
+ },
+ {
+  "keys": [
+   "The Twilight of the Idols; or, How to Philosophize with the Hammer. The Antichri"
+  ],
+  "titles": {
+   "es": "El ocaso de los ídolos o cómo se filosofa a martillazos",
+   "fr": "Crépuscule des idoles",
+   "de": "Götzen-Dämmerung oder Wie man mit dem Hammer philosophirt",
+   "it": "Il crepuscolo degli idoli",
+   "ru": "Сумерки идолов",
+   "zh": "偶像的黄昏",
+   "ar": "أفول الأصنام"
+  }
+ },
+ {
+  "keys": [
+   "The Will to Power"
+  ],
+  "titles": {
+   "fr": "La Volonté de puissance",
+   "de": "Der Wille zur Macht",
+   "it": "La volontà di potenza",
+   "ru": "Воля к власти",
+   "zh": "權力意志",
+   "ja": "権力への意志",
+   "ar": "إرادة القوة"
+  }
+ },
+ {
+  "keys": [
+   "The Joyful Wisdom (La Gaya Scienza)"
+  ],
+  "titles": {
+   "ca": "La gaia ciència",
+   "es": "La gaya ciencia",
+   "fr": "Le Gai Savoir",
+   "de": "Die fröhliche Wissenschaft",
+   "it": "La gaia scienza",
+   "ru": "Весёлая наука",
+   "zh": "快樂的科學",
+   "ar": "العلم المرح"
+  }
+ },
+ {
+  "keys": [
+   "Human, All-Too-Human A Book for Free Spirits, Part 1",
+   "Human, All-Too-Human A Book for Free Spirits, Part 2"
+  ],
+  "titles": {
+   "es": "Humano, demasiado humano",
+   "fr": "Humain, trop humain",
+   "de": "Menschliches, Allzumenschliches",
+   "it": "Umano, troppo umano",
+   "ru": "Человеческое, слишком человеческое",
+   "zh": "人性的，太人性的",
+   "ar": "إنسان مفرط في إنسانيته"
+  }
+ },
+ {
+  "keys": [
+   "The Case of Wagner, Nietzsche Contra Wagner, and Selected Aphorisms."
+  ],
+  "titles": {
+   "fr": "Le Cas Wagner",
+   "de": "Der Fall Wagner",
+   "it": "Il caso Wagner",
+   "ru": "Казус Вагнер",
+   "zh": "華格納事件",
+   "ar": "قضية فاغنر"
+  }
+ },
+ {
+  "keys": [
+   "The Critique of Pure Reason"
+  ],
+  "titles": {
+   "ca": "Crítica de la raó pura",
+   "es": "Crítica de la razón pura",
+   "fr": "Critique de la raison pure",
+   "de": "Kritik der reinen Vernunft",
+   "it": "Critica della ragion pura",
+   "ru": "Критика чистого разума",
+   "zh": "纯粹理性批判",
+   "ja": "純粋理性批判",
+   "ar": "نقد العقل الخالص",
+   "hi": "शुद्ध तर्कबुद्धि की समालोचना"
+  }
+ },
+ {
+  "keys": [
+   "The Critique of Practical Reason",
+   "Critique of Practical Reason"
+  ],
+  "titles": {
+   "ca": "Crítica de la raó pràctica",
+   "es": "Crítica de la razón práctica",
+   "fr": "Critique de la raison pratique",
+   "de": "Kritik der praktischen Vernunft",
+   "it": "Critica della ragion pratica",
+   "ru": "Критика практического разума",
+   "zh": "实践理性批判",
+   "ja": "実践理性批判",
+   "ar": "نقد العقل العملي"
+  }
+ },
+ {
+  "keys": [
+   "Kant's Critique of Judgement"
+  ],
+  "titles": {
+   "ca": "Crítica del judici",
+   "es": "Crítica del juicio",
+   "fr": "Critique de la faculté de juger",
+   "de": "Kritik der Urteilskraft",
+   "it": "Critica del giudizio",
+   "ru": "Критика способности суждения",
+   "zh": "判断力批判",
+   "ja": "判断力批判",
+   "ar": "نقد ملكة الحكم"
+  }
+ },
+ {
+  "keys": [
+   "Groundwork of the Metaphysics of Morals",
+   "Fundamental Principles of the Metaphysic of Morals"
+  ],
+  "titles": {
+   "ca": "Fonamentació de la metafísica dels costums",
+   "es": "Fundamentación de la metafísica de las costumbres",
+   "fr": "Fondements de la métaphysique des mœurs",
+   "de": "Grundlegung zur Metaphysik der Sitten",
+   "it": "Fondazione della metafisica dei costumi",
+   "ru": "Основы метафизики нравственности",
+   "zh": "道德形上學基礎",
+   "ja": "人倫の形而上学の基礎づけ",
+   "ar": "أسس غيبيات الأخلاق"
+  }
+ },
+ {
+  "keys": [
+   "Kant's Prolegomena to Any Future Metaphysics"
+  ],
+  "titles": {
+   "es": "Prolegómenos a toda metafísica futura que pueda presentarse como ciencia",
+   "fr": "Prolégomènes à toute métaphysique future",
+   "de": "Prolegomena zu einer jeden künftigen Metaphysik, die als Wissenschaft wird auftreten können",
+   "it": "Prolegomeni ad ogni metafisica futura che vorrà presentarsi come scienza",
+   "ru": "Пролегомены ко всякой будущей метафизике",
+   "zh": "任何一種能夠作為科學出現的未來形而上學導論",
+   "ja": "学として現れるであろうあらゆる将来の形而上学のためのプロレゴメナ"
+  }
+ },
+ {
+  "keys": [
+   "Perpetual Peace A Philosophical Essay"
+  ],
+  "titles": {
+   "ca": "La pau perpètua: un projecte filosòfic",
+   "es": "Sobre la paz perpetua",
+   "fr": "Vers la paix perpétuelle",
+   "de": "Zum ewigen Frieden",
+   "it": "Per la pace perpetua",
+   "ru": "К вечному миру",
+   "zh": "论永久和平",
+   "ja": "永遠平和のために",
+   "ar": "السلام الدائم: مخطط فلسفي"
+  }
+ },
+ {
+  "keys": [
+   "The Metaphysical Elements of Ethics"
+  ],
+  "titles": {
+   "es": "Metafísica de las costumbres",
+   "fr": "Métaphysique des mœurs",
+   "de": "Die Metaphysik der Sitten",
+   "it": "La metafisica dei costumi",
+   "ja": "人倫の形而上学",
+   "ar": "ميتافيزيقيا الأخلاق"
+  }
+ },
+ {
+  "keys": [
+   "Discourse on the Method of Rightly Conducting One's Reason and of Seeking Truth",
+   "A Discourse of a Method for the Well Guiding of Reason"
+  ],
+  "titles": {
+   "ca": "Discurs del mètode",
+   "es": "Discurso del método",
+   "fr": "Discours de la méthode",
+   "de": "Discours de la méthode",
+   "it": "Discorso sul metodo",
+   "ru": "Рассуждение о методе",
+   "zh": "談談方法",
+   "ja": "方法序説",
+   "ar": "مقال عن المنهج"
+  }
+ },
+ {
+  "keys": [
+   "Six metaphysical meditations"
+  ],
+  "titles": {
+   "ca": "Meditacions metafísiques",
+   "es": "Meditaciones metafísicas",
+   "fr": "Méditations métaphysiques",
+   "de": "Meditationes de prima philosophia",
+   "it": "Meditazioni metafisiche",
+   "ru": "Размышления о первой философии",
+   "zh": "第一哲學沉思集",
+   "ja": "省察",
+   "ar": "تأملات في الفلسفة الأولى"
+  }
+ },
+ {
+  "keys": [
+   "Selections from the Principles of Philosophy"
+  ],
+  "titles": {
+   "ca": "Els principis de la filosofia",
+   "es": "Principios de la filosofía",
+   "fr": "Les Principes de la philosophie",
+   "de": "Principia philosophiae",
+   "ru": "Первоначала философии",
+   "ar": "مبادئ الفلسفة"
+  }
+ },
+ {
+  "keys": [
+   "Rules for the Direction of the Mind"
+  ],
+  "titles": {
+   "ca": "Regles per a la direcció de l'enginy",
+   "es": "Reglas para la dirección de la mente",
+   "fr": "Règles pour la direction de l'esprit",
+   "de": "Regulae ad directionem ingenii",
+   "it": "Regole per la guida dell'intelligenza",
+   "zh": "指导心智的规则"
+  }
+ },
+ {
+  "keys": [
+   "Ethics"
+  ],
+  "titles": {
+   "ca": "Ètica demostrada segons l'ordre geomètric",
+   "es": "Ética",
+   "fr": "Éthique",
+   "de": "Ethica, ordine geometrico demonstrata",
+   "it": "Ethica",
+   "ru": "Этика",
+   "zh": "伦理学",
+   "ja": "エチカ",
+   "ar": "أخلاقيات"
+  }
+ },
+ {
+  "keys": [
+   "Tractatus Politicus"
+  ],
+  "titles": {
+   "fr": "Traité politique",
+   "de": "Tractatus politicus",
+   "it": "Trattato politico",
+   "ru": "Политический трактат"
+  }
+ },
+ {
+  "keys": [
+   "On the Improvement of the Understanding"
+  ],
+  "titles": {
+   "fr": "Traité de la réforme de l'entendement",
+   "it": "Trattato sull'emendazione dell'intelletto"
+  }
+ },
+ {
+  "keys": [
+   "Leviathan"
+  ],
+  "titles": {
+   "ca": "Leviatan",
+   "es": "Leviatán",
+   "fr": "Léviathan",
+   "de": "Leviathan",
+   "it": "Leviatano",
+   "ru": "Левиафан",
+   "zh": "利维坦",
+   "ja": "リヴァイアサン",
+   "ar": "اللفياثان"
+  }
+ },
+ {
+  "keys": [
+   "De Cive"
+  ],
+  "titles": {
+   "ca": "De cive",
+   "es": "De Cive",
+   "fr": "De Cive",
+   "de": "De Cive",
+   "it": "De cive"
+  }
+ },
+ {
+  "keys": [
+   "Behemoth; or, The Long Parliament"
+  ],
+  "titles": {
+   "es": "Behemoth",
+   "fr": "Behemoth",
+   "de": "Behemoth",
+   "it": "Behemoth",
+   "ru": "Бегемот",
+   "ja": "ビヒモス"
+  }
+ },
+ {
+  "keys": [
+   "Du contrat social (Le contrat social)"
+  ],
+  "titles": {
+   "ca": "El contracte social",
+   "es": "El contrato social",
+   "fr": "Du contrat social",
+   "de": "Vom Gesellschaftsvertrag oder Prinzipien des Staatsrechtes",
+   "it": "Il contratto sociale",
+   "ru": "Об Общественном договоре",
+   "zh": "社会契约论",
+   "ja": "社会契約論",
+   "ar": "العقد الاجتماعي"
+  }
+ },
+ {
+  "keys": [
+   "Emile",
+   "Émile; Or, Concerning Education; Extracts"
+  ],
+  "titles": {
+   "ca": "Emili, o De l'educació",
+   "es": "Emilio, o De la educación",
+   "fr": "Émile ou De l'éducation",
+   "de": "Émile oder Über die Erziehung",
+   "it": "Emilio o dell'educazione",
+   "ru": "Эмиль, или О воспитании",
+   "zh": "爱弥儿",
+   "ja": "エミール",
+   "ar": "في التربية: إميل نموذجا"
+  }
+ },
+ {
+  "keys": [
+   "A Discourse Upon the Origin and the Foundation of the Inequality Among Mankind"
+  ],
+  "titles": {
+   "ca": "Discurs sobre l'origen i els fonaments de la desigualtat entre els homes",
+   "es": "Discurso sobre el origen y los fundamentos de la desigualdad entre los hombres",
+   "fr": "Discours sur l'origine et les fondements de l'inégalité parmi les hommes",
+   "de": "Abhandlung über den Ursprung und die Grundlagen der Ungleichheit unter den Menschen",
+   "it": "Discorso sull'origine e i fondamenti della diseguaglianza tra gli uomini",
+   "zh": "论人类不平等的起源与基础",
+   "ja": "人間不平等起源論"
+  }
+ },
+ {
+  "keys": [
+   "The Confessions of Jean Jacques Rousseau — Complete"
+  ],
+  "titles": {
+   "fr": "Les Confessions",
+   "de": "Die Bekenntnisse",
+   "it": "Le confessioni",
+   "ru": "Исповедь",
+   "zh": "忏悔录",
+   "ja": "告白",
+   "ar": "اعترافات جان جاك روسو"
+  }
+ },
+ {
+  "keys": [
+   "Discours sur les sciences et les arts"
+  ],
+  "titles": {
+   "ca": "Discurs sobre les ciències i les arts",
+   "es": "Discurso sobre las ciencias y las artes",
+   "fr": "Discours sur les sciences et les arts",
+   "de": "Abhandlung über die Wissenschaften und die Künste",
+   "it": "Discorso sulle scienze e le arti",
+   "zh": "论科学与艺术",
+   "ja": "学問芸術論"
+  }
+ },
+ {
+  "keys": [
+   "Reveries of the Solitary Walker (Fletcher, Routledge)"
+  ],
+  "titles": {
+   "es": "Ensoñaciones del paseante solitario",
+   "fr": "Les Rêveries du promeneur solitaire",
+   "it": "Le fantasticherie del passeggiatore solitario",
+   "zh": "一個孤獨漫步者的遐想"
+  }
+ },
+ {
+  "keys": [
+   "Eloisa or, A series of original letters"
+  ],
+  "titles": {
+   "es": "Julia, o la nueva Eloísa",
+   "fr": "Julie ou la Nouvelle Héloïse",
+   "de": "Julie oder Die neue Heloise",
+   "it": "Giulia o la nuova Eloisa",
+   "ru": "Юлия, или Новая Элоиза",
+   "zh": "新爱洛伊斯",
+   "ja": "新エロイーズ"
+  }
+ },
+ {
+  "keys": [
+   "The Prince"
+  ],
+  "titles": {
+   "ca": "El príncep",
+   "es": "El príncipe",
+   "fr": "Le Prince",
+   "de": "Der Fürst",
+   "it": "Il principe",
+   "ru": "Государь",
+   "zh": "君主论",
+   "ja": "君主論",
+   "ar": "الأمير",
+   "hi": "द प्रिंस"
+  }
+ },
+ {
+  "keys": [
+   "Discourses on the First Decade of Titus Livius"
+  ],
+  "titles": {
+   "ca": "Discursos sobre la primera dècada de Titus Livi",
+   "es": "Discursos sobre la primera década de Tito Livio",
+   "fr": "Discours sur la première décade de Tite-Live",
+   "de": "Discorsi sopra la prima deca di Tito Livio",
+   "it": "Discorsi sopra la prima Deca di Tito Livio",
+   "zh": "李維論",
+   "ja": "政略論",
+   "ar": "نقاشات حول ليفي"
+  }
+ },
+ {
+  "keys": [
+   "History of Florence and of the Affairs of Italy"
+  ],
+  "titles": {
+   "fr": "Histoire de Florence",
+   "it": "Istorie fiorentine",
+   "ru": "История Флоренции",
+   "zh": "佛罗伦萨史",
+   "ar": "تاريخ فلورنسا"
+  }
+ },
+ {
+  "keys": [
+   "The Communist Manifesto",
+   "Manifesto of the Communist Party"
+  ],
+  "titles": {
+   "ca": "El manifest comunista",
+   "es": "Manifiesto del Partido Comunista",
+   "fr": "Manifeste du parti communiste",
+   "de": "Manifest der Kommunistischen Partei",
+   "it": "Manifesto del Partito Comunista",
+   "ru": "Манифест Коммунистической партии",
+   "zh": "共产党宣言",
+   "ja": "共産党宣言",
+   "ar": "بيان الحزب الشيوعي",
+   "hi": "कम्युनिस्ट पार्टी का घोषणापत्र"
+  }
+ },
+ {
+  "keys": [
+   "A Contribution to the Critique of Political Economy"
+  ],
+  "titles": {
+   "ca": "Contribució a la crítica de l'economia política",
+   "es": "Una contribución a la crítica de la economía política",
+   "fr": "Critique de l'économie politique",
+   "de": "Zur Kritik der politischen Ökonomie",
+   "it": "Per la critica dell'economia politica",
+   "ru": "К критике политической экономии",
+   "zh": "政治经济学批判",
+   "ja": "経済学批判",
+   "ar": "مساهمة في نقد الاقتصاد السياسي"
+  }
+ },
+ {
+  "keys": [
+   "The Eighteenth Brumaire of Louis Bonaparte"
+  ],
+  "titles": {
+   "ca": "El 18è de Brumari de Louis Napoleon",
+   "es": "El 18 de brumario de Luis Bonaparte",
+   "fr": "Le 18 Brumaire de Louis Bonaparte",
+   "de": "Der achtzehnte Brumaire des Louis Bonaparte",
+   "it": "Il 18 brumaio di Luigi Bonaparte",
+   "ru": "Восемнадцатое брюмера Луи Бонапарта",
+   "zh": "路易·波拿巴的雾月十八日",
+   "ja": "ルイ・ボナパルトのブリュメール18日",
+   "ar": "الثامن عشر من برومير لويس بونابرت"
+  }
+ },
+ {
+  "keys": [
+   "Critique of the Gotha Programme"
+  ],
+  "titles": {
+   "es": "Crítica del Programa de Gotha",
+   "fr": "Critique du programme de Gotha",
+   "de": "Kritik des Gothaer Programms",
+   "it": "Critica del Programma di Gotha",
+   "ru": "Критика Готской программы",
+   "zh": "哥达纲领批判",
+   "ja": "ゴータ綱領批判",
+   "ar": "نقد برنامج غوتا"
+  }
+ },
+ {
+  "keys": [
+   "Misère de la philosophie (The Poverty of Philosophy)"
+  ],
+  "titles": {
+   "ca": "La misèria de la filosofia",
+   "es": "La miseria de la filosofía",
+   "fr": "Misère de la philosophie",
+   "de": "Das Elend der Philosophie",
+   "it": "Miseria della filosofia",
+   "ru": "Нищета философии",
+   "zh": "哲学的贫困",
+   "ja": "哲学の貧困",
+   "ar": "بؤس الفلسفة"
+  }
+ },
+ {
+  "keys": [
+   "Theses on Feuerbach"
+  ],
+  "titles": {
+   "ca": "Tesis sobre Feuerbach",
+   "es": "Tesis sobre Feuerbach",
+   "fr": "Thèses sur Feuerbach",
+   "de": "Thesen über Feuerbach",
+   "it": "Tesi su Feuerbach",
+   "ru": "Тезисы о Фейербахе",
+   "zh": "关于费尔巴哈的提纲",
+   "ja": "フォイエルバッハに関するテーゼ",
+   "ar": "أطروحات حول فويرباخ"
+  }
+ },
+ {
+  "keys": [
+   "Wages, Price and Profit"
+  ],
+  "titles": {
+   "es": "Salario, precio y ganancia",
+   "fr": "Salaire, prix et plus-value",
+   "de": "Lohn, Preis und Profit",
+   "it": "Salario, prezzo e profitto",
+   "ru": "Заработная плата, цена и прибыль",
+   "ja": "賃金、価格、利潤"
+  }
+ },
+ {
+  "keys": [
+   "On Liberty"
+  ],
+  "titles": {
+   "ca": "Sobre la llibertat",
+   "es": "Sobre la libertad",
+   "fr": "De la liberté",
+   "de": "On Liberty",
+   "it": "Saggio sulla libertà",
+   "zh": "论自由",
+   "ja": "自由論",
+   "ar": "عن الحرية"
+  }
+ },
+ {
+  "keys": [
+   "Utilitarianism"
+  ],
+  "titles": {
+   "ca": "L'utilitarisme",
+   "es": "El utilitarismo",
+   "de": "Der Utilitarismus",
+   "zh": "效益主義",
+   "ja": "功利主義論",
+   "ar": "النفعية"
+  }
+ },
+ {
+  "keys": [
+   "The Subjection of Women"
+  ],
+  "titles": {
+   "ca": "La submissió de les dones",
+   "es": "La esclavitud de las mujeres",
+   "fr": "De l'assujettissement des femmes",
+   "de": "Die Hörigkeit der Frau",
+   "it": "La servitù delle donne",
+   "zh": "妇女的屈从地位",
+   "ar": "استعباد النساء",
+   "hi": "स्त्रियों की पराधीनता"
+  }
+ },
+ {
+  "keys": [
+   "A System of Logic, Ratiocinative and Inductive"
+  ],
+  "titles": {
+   "es": "Un sistema de lógica",
+   "ja": "論理学体系",
+   "ar": "نظام المنطق"
+  }
+ },
+ {
+  "keys": [
+   "Principles of Political Economy"
+  ],
+  "titles": {
+   "ar": "مبادئ الاقتصاد السياسي"
+  }
+ },
+ {
+  "keys": [
+   "Considerations on Representative Government"
+  ],
+  "titles": {
+   "es": "Consideraciones sobre el gobierno representativo",
+   "de": "Considerations on Representative Government",
+   "ja": "代議制統治論"
+  }
+ },
+ {
+  "keys": [
+   "Confessions EN",
+   "The Confessions of St. Augustine"
+  ],
+  "titles": {
+   "ca": "Confessions",
+   "es": "Confesiones",
+   "fr": "Les Confessions",
+   "de": "Confessiones",
+   "it": "Confessioni",
+   "ru": "Исповедь",
+   "zh": "忏悔录",
+   "ja": "告白",
+   "ar": "اعترافات القديس أوغسطين"
+  }
+ },
+ {
+  "keys": [
+   "City of God EN"
+  ],
+  "titles": {
+   "ca": "La ciutat de Déu",
+   "es": "La ciudad de Dios",
+   "fr": "La Cité de Dieu",
+   "de": "De civitate Dei",
+   "it": "La città di Dio",
+   "ru": "О граде Божьем",
+   "zh": "上帝之城",
+   "ja": "神の国",
+   "ar": "مدينة الله"
+  }
+ },
+ {
+  "keys": [
+   "Of God and His Creatures (Summa Contra Gentiles)"
+  ],
+  "titles": {
+   "ca": "Summa contra gentiles",
+   "es": "Summa contra gentiles",
+   "fr": "Somme contre les Gentils",
+   "de": "Summa contra gentiles",
+   "it": "Summa contra Gentiles",
+   "ru": "Сумма против язычников",
+   "zh": "哲学大全"
+  }
+ },
+ {
+  "keys": [
+   "The Analects of Confucius (from the Chinese Classics)",
+   "The Sayings of Confucius"
+  ],
+  "titles": {
+   "ca": "Analectes de Confuci",
+   "es": "Analectas de Confucio",
+   "fr": "Entretiens de Confucius",
+   "de": "Gespräche des Konfuzius",
+   "it": "Dialoghi",
+   "ru": "Лунь юй",
+   "zh": "论语",
+   "ja": "論語",
+   "ar": "تعاليم كونفوشيوس",
+   "hi": "कन्फ्यूशियस सूक्ति - संग्रह"
+  }
+ },
+ {
+  "keys": [
+   "An Inquiry into the Nature and Causes of the Wealth of Nations"
+  ],
+  "titles": {
+   "ca": "Indagació sobre la naturalesa i les causes de la riquesa de les nacions",
+   "es": "La riqueza de las naciones",
+   "fr": "Recherches sur la nature et les causes de la richesse des nations",
+   "de": "Der Wohlstand der Nationen",
+   "it": "La ricchezza delle nazioni",
+   "ru": "Исследование о природе и причинах богатства народов",
+   "zh": "國富論",
+   "ja": "国富論",
+   "ar": "ثروة الأمم",
+   "hi": "राष्ट्रों का धन"
+  }
+ },
+ {
+  "keys": [
+   "The Theory of Moral Sentiments"
+  ],
+  "titles": {
+   "ca": "Teoria dels sentiments morals",
+   "es": "La teoría de los sentimientos morales",
+   "fr": "Théorie des sentiments moraux",
+   "de": "Theorie der ethischen Gefühle",
+   "it": "Teoria dei sentimenti morali",
+   "ru": "Теория нравственных чувств",
+   "zh": "道德情操論",
+   "ja": "道徳感情論",
+   "ar": "نظرية المشاعر الأخلاقية"
+  }
+ }
 ]
