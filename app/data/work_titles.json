@@ -10976,5 +10976,1331 @@
    "ar": "رسائل الحب من ماري وولستونكرافت إلى غيلبرت إيمالي",
    "hi": "मैरी वोल्स्टनक्राफ़्ट के गिल्बर्ट इमले को प्रेम-पत्र"
   }
+ },
+ {
+  "keys": [
+   "Disputa de l'ase"
+  ],
+  "titles": {
+   "ca": "Disputa de l'ase",
+   "es": "Disputa del asno",
+   "fr": "Dispute de l'âne",
+   "de": "Der Streit des Esels",
+   "it": "Disputa dell'asino",
+   "ru": "Спор осла",
+   "zh": "驴之辩",
+   "ja": "ロバの論争",
+   "ar": "مناظرة الحمار",
+   "hi": "गधे का विवाद"
+  }
+ },
+ {
+  "keys": [
+   "Llibre de bons amonestaments"
+  ],
+  "titles": {
+   "ca": "Llibre de bons amonestaments",
+   "es": "Libro de buenos consejos",
+   "fr": "Livre des bons conseils",
+   "de": "Buch der guten Ermahnungen",
+   "it": "Libro dei buoni ammonimenti",
+   "ru": "Книга добрых наставлений",
+   "zh": "善训之书",
+   "ja": "善き訓戒の書",
+   "ar": "كتاب النصائح الحسنة",
+   "hi": "अच्छी सीखों की पुस्तक"
+  }
+ },
+ {
+  "keys": [
+   "Cartas eruditas y curiosas, Vol. I (1773)"
+  ],
+  "titles": {
+   "ca": "Cartes erudites i curioses, vol. I (1773)",
+   "es": "Cartas eruditas y curiosas, vol. I (1773)",
+   "fr": "Lettres érudites et curieuses, vol. I (1773)",
+   "de": "Gelehrte und kuriose Briefe, Bd. I (1773)",
+   "it": "Lettere erudite e curiose, vol. I (1773)",
+   "ru": "Учёные и любопытные письма, т. I (1773)",
+   "zh": "博学奇趣书简，第一卷（1773）",
+   "ja": "学識ある珍奇な書簡集 第1巻（1773年）",
+   "ar": "رسائل علمية وطريفة، المجلد الأول (1773)",
+   "hi": "विद्वतापूर्ण और रोचक पत्र, खंड I (1773)"
+  }
+ },
+ {
+  "keys": [
+   "Teatro crítico universal (selecció de discursos)"
+  ],
+  "titles": {
+   "ca": "Teatre crític universal (selecció de discursos)",
+   "es": "Teatro crítico universal (selección de discursos)",
+   "fr": "Théâtre critique universel (sélection de discours)",
+   "de": "Universales kritisches Theater (Auswahl von Reden)",
+   "it": "Teatro critico universale (selezione di discorsi)",
+   "ru": "Всеобщий критический театр (избранные рассуждения)",
+   "zh": "世界批判剧场（演讲选集）",
+   "ja": "世界批判劇場（講話選集）",
+   "ar": "المسرح النقدي الشامل (مختارات من الخطب)",
+   "hi": "सार्वभौमिक आलोचनात्मक रंगमंच (भाषणों का चयन)"
+  }
+ },
+ {
+  "keys": [
+   "Les cent histoires de Troye L'epistre de Othea deesse de prudence envoyee a l'es"
+  ],
+  "titles": {
+   "ca": "Les cent històries de Troia; L'epístola d'Otea, deessa de la prudència, enviada a l'…",
+   "es": "Las cien historias de Troya; La epístola de Otea, diosa de la prudencia, enviada al…",
+   "fr": "Les cent histoires de Troie ; L'épître d'Othéa, déesse de prudence, envoyée à l'…",
+   "de": "Die hundert Geschichten von Troja; Der Brief der Othea, Göttin der Klugheit, gesandt an den…",
+   "it": "Le cento storie di Troia; L'epistola di Otea, dea della prudenza, inviata al…",
+   "ru": "Сто историй Трои; Послание Отеи, богини благоразумия, отправленное...",
+   "zh": "特洛伊百篇传奇；智慧女神奥忒亚致……的书信",
+   "ja": "トロイアの百物語；分別の女神オテアの書簡……",
+   "ar": "مئة قصة عن طروادة؛ رسالة أوثيا، ربة الحكمة، الموجهة إلى...",
+   "hi": "ट्रॉय की सौ कहानियाँ; विवेक की देवी ओथिया का पत्र, ... को भेजा गया"
+  }
+ },
+ {
+  "keys": [
+   "The Book of the Duke of True Lovers"
+  ],
+  "titles": {
+   "ca": "El llibre del duc dels veritables amants",
+   "es": "El libro del duque de los verdaderos amantes",
+   "fr": "Le livre du duc des vrais amants",
+   "de": "Das Buch des Herzogs der wahren Liebenden",
+   "it": "Il libro del duca dei veri amanti",
+   "ru": "Книга о герцоге истинных влюблённых",
+   "zh": "真爱公爵之书",
+   "ja": "真の恋人たちの公爵の書",
+   "ar": "كتاب دوق العشاق الحقيقيين",
+   "hi": "सच्चे प्रेमियों के ड्यूक की पुस्तक"
+  }
+ },
+ {
+  "keys": [
+   "Phenomena of the Universe Or Natural History for the Building Up of Philosophy"
+  ],
+  "titles": {
+   "ca": "Els fenòmens de l'univers, o història natural per a la construcció de la filosofia",
+   "es": "Los fenómenos del universo, o historia natural para la construcción de la filosofía",
+   "fr": "Les phénomènes de l'univers, ou histoire naturelle pour l'édification de la philosophie",
+   "de": "Die Phänomene des Universums, oder Naturgeschichte zum Aufbau der Philosophie",
+   "it": "I fenomeni dell'universo, ovvero storia naturale per la costruzione della filosofia",
+   "ru": "Явления Вселенной, или естественная история для построения философии",
+   "zh": "宇宙现象，或为建立哲学而作的自然史",
+   "ja": "宇宙の諸現象、あるいは哲学構築のための博物誌",
+   "ar": "ظواهر الكون، أو التاريخ الطبيعي لبناء الفلسفة",
+   "hi": "ब्रह्मांड की परिघटनाएँ, अथवा दर्शनशास्त्र की स्थापना हेतु प्राकृतिक इतिहास"
+  }
+ },
+ {
+  "keys": [
+   "Valerius Terminus Of the Interpretation of Nature"
+  ],
+  "titles": {
+   "ca": "Valerius Terminus, sobre la interpretació de la natura",
+   "es": "Valerius Terminus, sobre la interpretación de la naturaleza",
+   "fr": "Valerius Terminus, de l'interprétation de la nature",
+   "de": "Valerius Terminus, über die Auslegung der Natur",
+   "it": "Valerius Terminus, sull'interpretazione della natura",
+   "ru": "Валерий Терминус, о толковании природы",
+   "zh": "瓦莱里乌斯·特米努斯论自然之诠释",
+   "ja": "ワレリウス・テルミヌス『自然の解釈について』",
+   "ar": "فاليريوس تيرمينوس، في تفسير الطبيعة",
+   "hi": "वैलेरियस टर्मिनस, प्रकृति की व्याख्या पर"
+  }
+ },
+ {
+  "keys": [
+   "Manifesto degli intellettuali fascisti"
+  ],
+  "titles": {
+   "ca": "Manifest dels intel·lectuals feixistes",
+   "es": "Manifiesto de los intelectuales fascistas",
+   "fr": "Manifeste des intellectuels fascistes",
+   "de": "Manifest der faschistischen Intellektuellen",
+   "it": "Manifesto degli intellettuali fascisti",
+   "ru": "Манифест фашистских интеллектуалов",
+   "zh": "法西斯知识分子宣言",
+   "ja": "ファシスト知識人宣言",
+   "ar": "بيان المثقفين الفاشيين",
+   "hi": "फासीवादी बुद्धिजीवियों का घोषणापत्र"
+  }
+ },
+ {
+  "keys": [
+   "Scuola e filosofia concetti fondamentali e saggi di padagogia sulla scuola media"
+  ],
+  "titles": {
+   "ca": "Escola i filosofia: conceptes fonamentals i assaigs de pedagogia sobre l'escola mitjana",
+   "es": "Escuela y filosofía: conceptos fundamentales y ensayos de pedagogía sobre la escuela media",
+   "fr": "École et philosophie : concepts fondamentaux et essais de pédagogie sur l'école secondaire",
+   "de": "Schule und Philosophie: Grundbegriffe und pädagogische Essays zur Mittelschule",
+   "it": "Scuola e filosofia: concetti fondamentali e saggi di pedagogia sulla scuola media",
+   "ru": "Школа и философия: основные понятия и педагогические очерки о средней школе",
+   "zh": "学校与哲学：基本概念及中等学校教育学论集",
+   "ja": "学校と哲学：基本概念と中等学校に関する教育学的試論",
+   "ar": "المدرسة والفلسفة: مفاهيم أساسية ومقالات تربوية عن المدرسة المتوسطة",
+   "hi": "विद्यालय और दर्शन: मूल अवधारणाएँ और माध्यमिक विद्यालय पर शिक्षाशास्त्रीय निबंध"
+  }
+ },
+ {
+  "keys": [
+   "Fragments of Heraclitus (annotated)"
+  ],
+  "titles": {
+   "ca": "Fragments d'Heràclit (anotats)",
+   "es": "Fragmentos de Heráclito (anotados)",
+   "fr": "Fragments d'Héraclite (annotés)",
+   "de": "Fragmente des Heraklit (kommentiert)",
+   "it": "Frammenti di Eraclito (annotati)",
+   "ru": "Фрагменты Гераклита (с комментариями)",
+   "zh": "赫拉克利特残篇（附注）",
+   "ja": "ヘラクレイトス断片集（注釈付き）",
+   "ar": "شذرات هرقليطس (مع تعليقات)",
+   "hi": "हेराक्लिटस के अंश (टिप्पणी सहित)"
+  }
+ },
+ {
+  "keys": [
+   "The fragments of the work of Heraclitus of Ephesus on nature; translated from th"
+  ],
+  "titles": {
+   "ca": "Els fragments de l'obra d'Heràclit d'Efes sobre la natura; traduïts de…",
+   "es": "Los fragmentos de la obra de Heráclito de Éfeso sobre la naturaleza; traducidos de…",
+   "fr": "Les fragments de l'œuvre d'Héraclite d'Éphèse sur la nature ; traduits de…",
+   "de": "Die Fragmente des Werkes des Heraklit von Ephesus über die Natur; übersetzt aus…",
+   "it": "I frammenti dell'opera di Eraclito di Efeso sulla natura; tradotti da…",
+   "ru": "Фрагменты сочинения Гераклита Эфесского о природе; переведены с…",
+   "zh": "以弗所的赫拉克利特论自然残篇；译自……",
+   "ja": "エフェソスのヘラクレイトス『自然について』断片；……より翻訳",
+   "ar": "شذرات كتاب هرقليطس الأفسسي في الطبيعة؛ مترجمة عن...",
+   "hi": "इफिसस के हेराक्लिटस की प्रकृति पर रचना के अंश; ... से अनूदित"
+  }
+ },
+ {
+  "keys": [
+   "Institutes of the Christian Religion, Volume I"
+  ],
+  "titles": {
+   "ca": "Institució de la religió cristiana, volum I",
+   "es": "Institución de la religión cristiana, volumen I",
+   "fr": "Institution de la religion chrétienne, volume I",
+   "de": "Unterricht in der christlichen Religion, Band I",
+   "it": "Istituzione della religione cristiana, volume I",
+   "ru": "Наставление в христианской вере, том I",
+   "zh": "基督教要义，第一卷",
+   "ja": "キリスト教綱要 第1巻",
+   "ar": "مؤسسات الديانة المسيحية، المجلد الأول",
+   "hi": "ईसाई धर्म की संस्थाएँ, खंड I"
+  }
+ },
+ {
+  "keys": [
+   "Institutes of the Christian Religion, Volume II"
+  ],
+  "titles": {
+   "ca": "Institució de la religió cristiana, volum II",
+   "es": "Institución de la religión cristiana, volumen II",
+   "fr": "Institution de la religion chrétienne, volume II",
+   "de": "Unterricht in der christlichen Religion, Band II",
+   "it": "Istituzione della religione cristiana, volume II",
+   "ru": "Наставление в христианской вере, том II",
+   "zh": "基督教要义，第二卷",
+   "ja": "キリスト教綱要 第2巻",
+   "ar": "مؤسسات الديانة المسيحية، المجلد الثاني",
+   "hi": "ईसाई धर्म की संस्थाएँ, खंड II"
+  }
+ },
+ {
+  "keys": [
+   "Le mariage inattendu de Chérubin, comédie en trois actes et en prose. Par madame"
+  ],
+  "titles": {
+   "ca": "El matrimoni inesperat de Querubí, comèdia en tres actes i en prosa. Per la senyora…",
+   "es": "El matrimonio inesperado de Querubín, comedia en tres actos y en prosa. Por la señora…",
+   "fr": "Le mariage inattendu de Chérubin, comédie en trois actes et en prose. Par madame…",
+   "de": "Die unerwartete Heirat des Cherubin, Komödie in drei Akten und in Prosa. Von Madame…",
+   "it": "Il matrimonio inatteso di Cherubino, commedia in tre atti e in prosa. Di madame…",
+   "ru": "Неожиданная свадьба Керубино, комедия в трёх действиях в прозе. Сочинение мадам…",
+   "zh": "凯鲁比诺的意外婚姻，三幕散文喜剧。作者夫人……",
+   "ja": "ケルビーノの思いがけない結婚、散文による三幕の喜劇。夫人作……",
+   "ar": "زواج شيروبان غير المتوقع، مسرحية هزلية من ثلاثة فصول ونثر. للسيدة...",
+   "hi": "शेरुबिन का अप्रत्याशित विवाह, तीन अंकों की गद्य कॉमेडी। मैडम द्वारा..."
+  }
+ },
+ {
+  "keys": [
+   "Les droits de la femme à la reine."
+  ],
+  "titles": {
+   "ca": "Els drets de la dona, a la reina",
+   "es": "Los derechos de la mujer, a la reina",
+   "fr": "Les droits de la femme, à la reine",
+   "de": "Die Rechte der Frau, an die Königin",
+   "it": "I diritti della donna, alla regina",
+   "ru": "Права женщины, королеве",
+   "zh": "女权论：致王后",
+   "ja": "女性の権利、王妃へ",
+   "ar": "حقوق المرأة، إلى الملكة",
+   "hi": "स्त्री के अधिकार, रानी को"
+  }
+ },
+ {
+  "keys": [
+   "Reincarnation A Study in Human Evolution"
+  ],
+  "titles": {
+   "ca": "La reencarnació: un estudi sobre l'evolució humana",
+   "es": "La reencarnación: un estudio sobre la evolución humana",
+   "fr": "La réincarnation : une étude sur l'évolution humaine",
+   "de": "Reinkarnation: eine Studie zur menschlichen Evolution",
+   "it": "La reincarnazione: uno studio sull'evoluzione umana",
+   "ru": "Реинкарнация: исследование эволюции человека",
+   "zh": "轮回：人类进化研究",
+   "ja": "輪廻転生：人間進化の研究",
+   "ar": "التقمص: دراسة في التطور البشري",
+   "hi": "पुनर्जन्म: मानव विकास पर एक अध्ययन"
+  }
+ },
+ {
+  "keys": [
+   "The Life and Writings of Blaise Pascal"
+  ],
+  "titles": {
+   "ca": "La vida i els escrits de Blaise Pascal",
+   "es": "La vida y los escritos de Blaise Pascal",
+   "fr": "La vie et les écrits de Blaise Pascal",
+   "de": "Das Leben und die Schriften von Blaise Pascal",
+   "it": "La vita e gli scritti di Blaise Pascal",
+   "ru": "Жизнь и сочинения Блеза Паскаля",
+   "zh": "布莱兹·帕斯卡的生平与著作",
+   "ja": "ブレーズ・パスカルの生涯と著作",
+   "ar": "حياة وكتابات بليز باسكال",
+   "hi": "ब्लेज़ पास्कल का जीवन और लेखन"
+  }
+ },
+ {
+  "keys": [
+   "Apology, Crito, and Phaedo of Socrates"
+  ],
+  "titles": {
+   "ca": "Apologia, Critó i Fedó de Sòcrates",
+   "es": "Apología, Critón y Fedón de Sócrates",
+   "fr": "Apologie, Criton et Phédon de Socrate",
+   "de": "Apologie, Kriton und Phaidon des Sokrates",
+   "it": "Apologia, Critone e Fedone di Socrate",
+   "ru": "Апология, Критон и Федон Сократа",
+   "zh": "苏格拉底的申辩、克里托篇与斐多篇",
+   "ja": "ソクラテスの弁明、クリトン、パイドン",
+   "ar": "دفاع سقراط وكريتون وفايدو",
+   "hi": "सुकरात की क्षमायाचना, क्रितो और फीदो"
+  }
+ },
+ {
+  "keys": [
+   "The works of Plato (Vol. 1 of 6) A new and literal version chiefly from the text"
+  ],
+  "titles": {
+   "ca": "Les obres de Plató (vol. 1 de 6): una versió nova i literal, sobretot a partir del text…",
+   "es": "Las obras de Platón (vol. 1 de 6): una versión nueva y literal, principalmente a partir del texto…",
+   "fr": "Les œuvres de Platon (vol. 1 sur 6) : une version nouvelle et littérale, principalement d'après le texte…",
+   "de": "Die Werke Platons (Bd. 1 von 6): eine neue und wortgetreue Fassung, hauptsächlich nach dem Text…",
+   "it": "Le opere di Platone (vol. 1 di 6): una versione nuova e letterale, principalmente dal testo…",
+   "ru": "Сочинения Платона (т. 1 из 6): новый и буквальный перевод, главным образом по тексту…",
+   "zh": "柏拉图著作集（第1卷，共6卷）：一个新的直译版本，主要依据……文本",
+   "ja": "プラトン著作集（全6巻中第1巻）：主として……のテキストに基づく新しい逐語訳",
+   "ar": "أعمال أفلاطون (المجلد 1 من 6): نسخة جديدة وحرفية، مستندة أساسًا إلى النص...",
+   "hi": "प्लेटो की रचनाएँ (खंड 1/6): एक नया और शाब्दिक संस्करण, मुख्यतः ... पाठ पर आधारित"
+  }
+ },
+ {
+  "keys": [
+   "An Essay on the Beautiful, from the Greek of Plotinus"
+  ],
+  "titles": {
+   "ca": "Un assaig sobre el bell, del grec de Plotí",
+   "es": "Un ensayo sobre lo bello, del griego de Plotino",
+   "fr": "Un essai sur le beau, du grec de Plotin",
+   "de": "Ein Essay über das Schöne, aus dem Griechischen des Plotin",
+   "it": "Un saggio sul bello, dal greco di Plotino",
+   "ru": "Опыт о прекрасном, с греческого Плотина",
+   "zh": "论美：译自普罗提诺希腊原文",
+   "ja": "美について——プロティノスのギリシア語原典より",
+   "ar": "مقال في الجمال، عن اليونانية لأفلوطين",
+   "hi": "सौंदर्य पर एक निबंध, प्लोटिनस की ग्रीक से"
+  }
+ },
+ {
+  "keys": [
+   "Plotini platonicorum facile coryphaei Operum philosophicorum omnium libri 54 in"
+  ],
+  "titles": {
+   "ca": "Les obres filosòfiques completes de Plotí, príncep dels platònics, en 54 llibres…",
+   "es": "Las obras filosóficas completas de Plotino, príncipe de los platónicos, en 54 libros…",
+   "fr": "Les œuvres philosophiques complètes de Plotin, prince des platoniciens, en 54 livres…",
+   "de": "Die vollständigen philosophischen Werke Plotins, des Fürsten der Platoniker, in 54 Büchern…",
+   "it": "Le opere filosofiche complete di Plotino, principe dei platonici, in 54 libri…",
+   "ru": "Полное собрание философских сочинений Плотина, главы платоников, в 54 книгах…",
+   "zh": "柏拉图派翘楚普罗提诺哲学全集，凡54卷……",
+   "ja": "プラトン学派の第一人者プロティノスの哲学著作全集、全54書……",
+   "ar": "الأعمال الفلسفية الكاملة لأفلوطين، أمير الأفلاطونيين، في 54 كتابًا...",
+   "hi": "प्लोटिनस, प्लेटोवादियों के अग्रणी, की समस्त दार्शनिक रचनाएँ, 54 पुस्तकों में..."
+  }
+ },
+ {
+  "keys": [
+   "Santa Teresa An Appreciation"
+  ],
+  "titles": {
+   "ca": "Santa Teresa: una valoració",
+   "es": "Santa Teresa: una apreciación",
+   "fr": "Sainte Thérèse : une appréciation",
+   "de": "Die heilige Teresa: eine Würdigung",
+   "it": "Santa Teresa: un apprezzamento",
+   "ru": "Святая Тереза: признание",
+   "zh": "圣特雷莎：一份赞赏",
+   "ja": "聖テレサ——ある評価",
+   "ar": "القديسة تريزا: تقدير",
+   "hi": "संत तेरेसा: एक मूल्यांकन"
+  }
+ },
+ {
+  "keys": [
+   "The Life of St. Teresa of Jesus, of the Order of Our Lady of Carmel"
+  ],
+  "titles": {
+   "ca": "La vida de santa Teresa de Jesús, de l'orde de Nostra Senyora del Carme",
+   "es": "La vida de santa Teresa de Jesús, de la Orden de Nuestra Señora del Carmen",
+   "fr": "La vie de sainte Thérèse de Jésus, de l'Ordre de Notre-Dame du Carmel",
+   "de": "Das Leben der heiligen Teresa von Jesus, vom Orden Unserer Lieben Frau vom Karmel",
+   "it": "La vita di santa Teresa di Gesù, dell'Ordine di Nostra Signora del Carmelo",
+   "ru": "Жизнь святой Терезы Иисуса, ордена Богоматери Кармильской",
+   "zh": "耶稣德肋撒修女传，加尔默罗圣母会",
+   "ja": "イエスの聖テレサの生涯——カルメル山の聖母修道会",
+   "ar": "حياة القديسة تريزا يسوع، من رهبنة سيدة الكرمل",
+   "hi": "संत तेरेसा ऑफ जीसस का जीवन, हमारी लेडी ऑफ कार्मेल के आदेश से"
+  }
+ },
+ {
+  "keys": [
+   "Human Nature, De Corpore Politico (The Elements of Law) and Of Liberty and Necessity"
+  ],
+  "titles": {
+   "ca": "La naturalesa humana, De Corpore Politico (Els elements de la llei) i De la llibertat i la necessitat",
+   "es": "La naturaleza humana, De Corpore Politico (Los elementos de la ley) y De la libertad y la necesidad",
+   "fr": "La nature humaine, De Corpore Politico (Les éléments de la loi) et De la liberté et de la nécessité",
+   "de": "Die menschliche Natur, De Corpore Politico (Die Elemente des Rechts) und Über Freiheit und Notwendigkeit",
+   "it": "La natura umana, De Corpore Politico (Gli elementi della legge) e Della libertà e necessità",
+   "ru": "Человеческая природа, De Corpore Politico (Основы права) и О свободе и необходимости",
+   "zh": "人性论、政治体论（法律要义）及论自由与必然",
+   "ja": "人間性論、デ・コルポレ・ポリティコ（法の要綱）、および自由と必然について",
+   "ar": "الطبيعة البشرية، دي كوربوري بوليتيكو (عناصر القانون)، وفي الحرية والضرورة",
+   "hi": "मानव स्वभाव, डी कॉर्पोर पॉलिटिको (विधि के तत्व), और स्वतंत्रता एवं आवश्यकता पर"
+  }
+ },
+ {
+  "keys": [
+   "The English works of Thomas Hobbes of Malmesbury, Volume 03 (of 11)"
+  ],
+  "titles": {
+   "ca": "Les obres angleses de Thomas Hobbes de Malmesbury, volum 03 (d'11)",
+   "es": "Las obras inglesas de Thomas Hobbes de Malmesbury, volumen 03 (de 11)",
+   "fr": "Les œuvres anglaises de Thomas Hobbes de Malmesbury, volume 03 (sur 11)",
+   "de": "Die englischen Werke von Thomas Hobbes aus Malmesbury, Band 03 (von 11)",
+   "it": "Le opere inglesi di Thomas Hobbes di Malmesbury, volume 03 (di 11)",
+   "ru": "Английские сочинения Томаса Гоббса из Малмсбери, том 03 (из 11)",
+   "zh": "马姆斯伯里的托马斯·霍布斯英文著作集，第03卷（共11卷）",
+   "ja": "マームズベリーのトマス・ホッブズ英語著作集 第3巻（全11巻）",
+   "ar": "الأعمال الإنجليزية لتوماس هوبز أوف مالمزبري، المجلد 03 (من 11)",
+   "hi": "मैल्म्सबरी के थॉमस हॉब्स की अंग्रेजी रचनाएँ, खंड 03 (11 में से)"
+  }
+ },
+ {
+  "keys": [
+   "The Essays of Adam Smith"
+  ],
+  "titles": {
+   "ca": "Els assaigs d'Adam Smith",
+   "es": "Los ensayos de Adam Smith",
+   "fr": "Les essais d'Adam Smith",
+   "de": "Die Essays von Adam Smith",
+   "it": "I saggi di Adam Smith",
+   "ru": "Эссе Адама Смита",
+   "zh": "亚当·斯密随笔集",
+   "ja": "アダム・スミス随筆集",
+   "ar": "مقالات آدم سميث",
+   "hi": "एडम स्मिथ के निबंध"
+  }
+ },
+ {
+  "keys": [
+   "Idearium español"
+  ],
+  "titles": {
+   "ca": "Ideari espanyol",
+   "es": "Idearium español",
+   "fr": "Idéaire espagnol",
+   "de": "Spanisches Ideenbuch",
+   "it": "Ideario spagnolo",
+   "ru": "Испанская идеограмма",
+   "zh": "西班牙思想纲要",
+   "ja": "スペイン思想綱要",
+   "ar": "المنهاج الفكري الإسباني",
+   "hi": "स्पेनिश विचार-सार"
+  }
+ },
+ {
+  "keys": [
+   "A General View of Positivism"
+  ],
+  "titles": {
+   "ca": "Una visió general del positivisme",
+   "es": "Una visión general del positivismo",
+   "fr": "Vue d'ensemble du positivisme",
+   "de": "Ein allgemeiner Überblick über den Positivismus",
+   "it": "Una visione generale del positivismo",
+   "ru": "Общий взгляд на позитивизм",
+   "zh": "实证主义概观",
+   "ja": "実証主義概観",
+   "ar": "نظرة عامة على الوضعية",
+   "hi": "प्रत्यक्षवाद का सामान्य दृष्टिकोण"
+  }
+ },
+ {
+  "keys": [
+   "Poesia completa (Obras del poeta valencià Ausiàs March)"
+  ],
+  "titles": {
+   "ca": "Poesia completa",
+   "es": "Poesía completa (Obras del poeta valenciano Ausiàs March)",
+   "fr": "Poésie complète (Œuvres du poète valencien Ausiàs March)",
+   "de": "Gesamtwerk der Poesie (Werke des valencianischen Dichters Ausiàs March)",
+   "it": "Poesia completa (Opere del poeta valenciano Ausiàs March)",
+   "ru": "Полное собрание стихотворений (Сочинения валенсийского поэта Аузиаса Марка)",
+   "zh": "全集诗歌（瓦伦西亚诗人奥齐亚斯·马尔克作品）",
+   "ja": "詩全集（バレンシアの詩人アウジアス・マルクの作品）",
+   "ar": "الشعر الكامل (أعمال الشاعر الفالنسي أوسياس مارك)",
+   "hi": "संपूर्ण काव्य (वालेंसियाई कवि औसियास मार्च की रचनाएँ)"
+  }
+ },
+ {
+  "keys": [
+   "El Héroe; El Discreto (Farinelli, 1900)"
+  ],
+  "titles": {
+   "ca": "L'heroi; El discret (Farinelli, 1900)",
+   "es": "El Héroe; El Discreto (Farinelli, 1900)",
+   "fr": "Le Héros ; Le Discret (Farinelli, 1900)",
+   "de": "Der Held; Der Diskrete (Farinelli, 1900)",
+   "it": "L'Eroe; Il Discreto (Farinelli, 1900)",
+   "ru": "Герой; Благоразумный (Фаринелли, 1900)",
+   "zh": "英雄；审慎者（法里内利，1900）",
+   "ja": "英雄；分別ある人（ファリネッリ、1900年）",
+   "ar": "البطل؛ الحصيف (فارينيلي، 1900)",
+   "hi": "नायक; विवेकी (फ़रीनेल्ली, 1900)"
+  }
+ },
+ {
+  "keys": [
+   "The theological tractates, with an English translation by H.F. Stewart and E.K."
+  ],
+  "titles": {
+   "ca": "Els tractats teològics, amb traducció anglesa de H.F. Stewart i E.K.…",
+   "es": "Los tratados teológicos, con traducción inglesa de H.F. Stewart y E.K.…",
+   "fr": "Les traités théologiques, avec traduction anglaise de H.F. Stewart et E.K.…",
+   "de": "Die theologischen Traktate, mit englischer Übersetzung von H.F. Stewart und E.K.…",
+   "it": "I trattati teologici, con traduzione inglese di H.F. Stewart e E.K.…",
+   "ru": "Богословские трактаты, с английским переводом Х.Ф. Стюарта и Э.К.…",
+   "zh": "神学论文集，H.F.斯图尔特与E.K.……英译",
+   "ja": "神学論考集、H.F.スチュワートとE.K.……による英訳付き",
+   "ar": "الرسائل اللاهوتية، مع ترجمة إنجليزية لـH.F. ستيوارت وE.K....",
+   "hi": "धर्मशास्त्रीय ग्रंथ, एच.एफ. स्टीवर्ट और ई.के. .... द्वारा अंग्रेज़ी अनुवाद सहित"
+  }
+ },
+ {
+  "keys": [
+   "The Great Infidels"
+  ],
+  "titles": {
+   "ca": "Els grans infidels",
+   "es": "Los grandes infieles",
+   "fr": "Les grands infidèles",
+   "de": "Die großen Ungläubigen",
+   "it": "I grandi infedeli",
+   "ru": "Великие безбожники",
+   "zh": "伟大的异教徒们",
+   "ja": "偉大な不信心者たち",
+   "ar": "الكفرة العظماء",
+   "hi": "महान अविश्वासी"
+  }
+ },
+ {
+  "keys": [
+   "The fragments of Empedocles;"
+  ],
+  "titles": {
+   "ca": "Els fragments d'Empèdocles",
+   "es": "Los fragmentos de Empédocles",
+   "fr": "Les fragments d'Empédocle",
+   "de": "Die Fragmente des Empedokles",
+   "it": "I frammenti di Empedocle",
+   "ru": "Фрагменты Эмпедокла",
+   "zh": "恩培多克勒残篇",
+   "ja": "エンペドクレス断片集",
+   "ar": "شذرات إمبيدوقليس",
+   "hi": "एम्पेडोक्लीज़ के अंश"
+  }
+ },
+ {
+  "keys": [
+   "Pérégrinations d'une paria, tome I"
+  ],
+  "titles": {
+   "ca": "Peregrinacions d'una pària, tom I",
+   "es": "Peregrinaciones de una paria, tomo I",
+   "fr": "Pérégrinations d'une paria, tome I",
+   "de": "Wanderungen einer Paria, Band I",
+   "it": "Peregrinazioni di una paria, tomo I",
+   "ru": "Странствия париайки, том I",
+   "zh": "贱民漫游记，第一卷",
+   "ja": "パーリアの遍歴 第1巻",
+   "ar": "ترحال منبوذة، المجلد الأول",
+   "hi": "एक बहिष्कृत की यात्राएँ, खंड I"
+  }
+ },
+ {
+  "keys": [
+   "Regles de bona criança"
+  ],
+  "titles": {
+   "ca": "Regles de bona criança",
+   "es": "Reglas de buena crianza",
+   "fr": "Règles de bonne éducation",
+   "de": "Regeln der guten Erziehung",
+   "it": "Regole di buona educazione",
+   "ru": "Правила хорошего воспитания",
+   "zh": "良好教养守则",
+   "ja": "良き躾の規則",
+   "ar": "قواعد التربية الحسنة",
+   "hi": "सुसंस्कार के नियम"
+  }
+ },
+ {
+  "keys": [
+   "De Indis et De iure belli relectiones (Carnegie Classics, Bate tr., 1917)"
+  ],
+  "titles": {
+   "ca": "Relectiones De Indis i De iure belli (Carnegie Classics, trad. Bate, 1917)",
+   "es": "Relecciones De Indis y De iure belli (Carnegie Classics, trad. Bate, 1917)",
+   "fr": "Relectiones De Indis et De iure belli (Carnegie Classics, trad. Bate, 1917)",
+   "de": "Relectiones De Indis und De iure belli (Carnegie Classics, Übers. Bate, 1917)",
+   "it": "Relectiones De Indis e De iure belli (Carnegie Classics, trad. Bate, 1917)",
+   "ru": "Relectiones De Indis и De iure belli (Carnegie Classics, пер. Бейта, 1917)",
+   "zh": "论印第安人与战争法之重讲（卡内基经典丛书，贝特译，1917）",
+   "ja": "インディアスについて及び戦争法について（カーネギー古典叢書、ベイト訳、1917年）",
+   "ar": "محاضرات في شؤون الهنود وقانون الحرب (كارنيغي كلاسيكس، ترجمة بيت، 1917)",
+   "hi": "डी इंडिस और डी ज्यूर बेल्ली पुनर्व्याख्यान (कार्नेगी क्लासिक्स, बेट अनुवाद, 1917)"
+  }
+ },
+ {
+  "keys": [
+   "Feuerbach The roots of the socialist philosophy"
+  ],
+  "titles": {
+   "ca": "Feuerbach: les arrels de la filosofia socialista",
+   "es": "Feuerbach: las raíces de la filosofía socialista",
+   "fr": "Feuerbach : les racines de la philosophie socialiste",
+   "de": "Feuerbach: die Wurzeln der sozialistischen Philosophie",
+   "it": "Feuerbach: le radici della filosofia socialista",
+   "ru": "Фейербах: корни социалистической философии",
+   "zh": "费尔巴哈：社会主义哲学的根源",
+   "ja": "フォイエルバッハ——社会主義哲学の源流",
+   "ar": "فيورباخ: جذور الفلسفة الاشتراكية",
+   "hi": "फायरबाख: समाजवादी दर्शन की जड़ें"
+  }
+ },
+ {
+  "keys": [
+   "The Heroic Enthusiasts (Gli Eroici Furori) Part the First"
+  ],
+  "titles": {
+   "ca": "Els furors heroics (Gli Eroici Furori), primera part",
+   "es": "Los heroicos furores (Gli Eroici Furori), primera parte",
+   "fr": "Les fureurs héroïques (Gli Eroici Furori), première partie",
+   "de": "Die heroischen Leidenschaften (Gli Eroici Furori), erster Teil",
+   "it": "Gli Eroici Furori, parte prima",
+   "ru": "Героический энтузиазм (Gli Eroici Furori), часть первая",
+   "zh": "英雄的狂热（论英雄热情），第一部分",
+   "ja": "英雄的狂気（エロイチ・フローリ）第一部",
+   "ar": "الحماس البطولي (جلي إيرويتشي فوروري)، الجزء الأول",
+   "hi": "वीर उत्साही (Gli Eroici Furori), भाग प्रथम"
+  }
+ },
+ {
+  "keys": [
+   "Enfranchisement of women"
+  ],
+  "titles": {
+   "ca": "L'emancipació de les dones",
+   "es": "La emancipación de las mujeres",
+   "fr": "L'émancipation des femmes",
+   "de": "Die Emanzipation der Frauen",
+   "it": "L'emancipazione delle donne",
+   "ru": "Освобождение женщин",
+   "zh": "妇女的解放",
+   "ja": "女性の解放",
+   "ar": "تحرر النساء",
+   "hi": "महिलाओं की मुक्ति"
+  }
+ },
+ {
+  "keys": [
+   "Les Prolégomènes (Muqaddimah), Volume I"
+  ],
+  "titles": {
+   "ca": "Els Prolegòmens (Muqaddima), volum I",
+   "es": "Los Prolegómenos (Muqaddima), volumen I",
+   "fr": "Les Prolégomènes (Muqaddima), volume I",
+   "de": "Die Prolegomena (Muqaddima), Band I",
+   "it": "I Prolegomeni (Muqaddima), volume I",
+   "ru": "Пролегомены (Мукаддима), том I",
+   "zh": "历史绪论（穆卡迪玛），第一卷",
+   "ja": "歴史序説（ムカッディマ）第1巻",
+   "ar": "المقدمة، المجلد الأول",
+   "hi": "प्रोलेगोमेना (मुक़द्दिमा), खंड I"
+  }
+ },
+ {
+  "keys": [
+   "Epistles (Ephesians, Magnesians, Trallians, Romans, Philadelphians, Smyrneans, to Polycarp); Martyrdom of Ignatius; Martyrdom of Polycarp"
+  ],
+  "titles": {
+   "ca": "Epístoles (als efesis, magnesis, tral·lians, romans, filadelfis, esmirneus, a Policarp); Martiri d'Ignasi; Martiri de Policarp",
+   "es": "Epístolas (a los efesios, magnesios, tralianos, romanos, filadelfios, esmirneos, a Policarpo); Martirio de Ignacio; Martirio de Policarpo",
+   "fr": "Épîtres (aux Éphésiens, Magnésiens, Tralliens, Romains, Philadelphiens, Smyrniotes, à Polycarpe) ; Martyre d'Ignace ; Martyre de Polycarpe",
+   "de": "Briefe (an die Epheser, Magnesier, Traller, Römer, Philadelphier, Smyrnäer, an Polykarp); Martyrium des Ignatius; Martyrium des Polykarp",
+   "it": "Epistole (agli Efesini, ai Magnesi, ai Tralliani, ai Romani, ai Filadelfiesi, agli Smirnei, a Policarpo); Martirio di Ignazio; Martirio di Policarpo",
+   "ru": "Послания (к ефесянам, магнезийцам, траллийцам, римлянам, филадельфийцам, смирнянам, к Поликарпу); Мученичество Игнатия; Мученичество Поликарпа",
+   "zh": "书信集（致以弗所人、马格尼西亚人、特拉勒斯人、罗马人、非拉铁非人、士每拿人、致波利卡普）；伊格那丢殉道记；波利卡普殉道记",
+   "ja": "書簡集（エフェソ人、マグネシア人、トラレス人、ローマ人、フィラデルフィア人、スミルナ人へ、ポリュカルポスへ）；イグナティオスの殉教；ポリュカルポスの殉教",
+   "ar": "الرسائل (إلى أهل أفسس، ماغنيسيا، تراليس، رومية، فيلادلفيا، سميرنا، إلى بوليكاربوس)؛ استشهاد إغناطيوس؛ استشهاد بوليكاربوس",
+   "hi": "पत्र (इफिसियों, मैग्नेशियनों, ट्रैलियनों, रोमनों, फिलाडेल्फियनों, स्मिर्नियनों को, पॉलीकार्प को); इग्नेशियस का शहादत; पॉलीकार्प का शहादत"
+  }
+ },
+ {
+  "keys": [
+   "De miseria humanae conditionis (De contemptu mundi)"
+  ],
+  "titles": {
+   "ca": "Sobre la misèria de la condició humana (De contemptu mundi)",
+   "es": "Sobre la miseria de la condición humana (De contemptu mundi)",
+   "fr": "De la misère de la condition humaine (De contemptu mundi)",
+   "de": "Über das Elend der menschlichen Verfassung (De contemptu mundi)",
+   "it": "Sulla miseria della condizione umana (De contemptu mundi)",
+   "ru": "О ничтожестве человеческого удела (De contemptu mundi)",
+   "zh": "论人类境况之苦（蔑视尘世论）",
+   "ja": "人間の境遇の悲惨について（世俗蔑視論）",
+   "ar": "في بؤس الحالة البشرية (احتقار العالم)",
+   "hi": "मानवीय दशा की दयनीयता पर (De contemptu mundi)"
+  }
+ },
+ {
+  "keys": [
+   "Dialogues on the Supersensual Life"
+  ],
+  "titles": {
+   "ca": "Diàlegs sobre la vida suprasensible",
+   "es": "Diálogos sobre la vida suprasensible",
+   "fr": "Dialogues sur la vie suprasensible",
+   "de": "Gespräche von der übersinnlichen Leben",
+   "it": "Dialoghi sulla vita soprasensibile",
+   "ru": "Диалоги о сверхчувственной жизни",
+   "zh": "超感官生活对话录",
+   "ja": "超感覚的生についての対話",
+   "ar": "حوارات في الحياة فوق الحسية",
+   "hi": "अतीन्द्रिय जीवन पर संवाद"
+  }
+ },
+ {
+  "keys": [
+   "Jaina Sutras, Part I: Acaranga and Kalpa Sutra (SBE XXII)"
+  ],
+  "titles": {
+   "ca": "Els sutres jainistes, part I: Acaranga i Kalpa Sutra (SBE XXII)",
+   "es": "Los sutras jainistas, parte I: Acaranga y Kalpa Sutra (SBE XXII)",
+   "fr": "Les sutras jaïns, partie I : Acaranga et Kalpa Sutra (SBE XXII)",
+   "de": "Die Jaina-Sutren, Teil I: Acaranga und Kalpa Sutra (SBE XXII)",
+   "it": "I sutra giainisti, parte I: Acaranga e Kalpa Sutra (SBE XXII)",
+   "ru": "Джайнские сутры, часть I: Ачаранга и Кальпа-сутра (SBE XXII)",
+   "zh": "耆那教经，第一部：阿查兰伽经与劫波经（东方圣书第22卷）",
+   "ja": "ジャイナ教経典 第1部：アーチャーランガとカルパ・スートラ（東方聖書第22巻）",
+   "ar": "سوترات الجاينية، الجزء الأول: أشارانغا وكالبا سوترا (SBE XXII)",
+   "hi": "जैन सूत्र, भाग I: आचारांग और कल्प सूत्र (SBE XXII)"
+  }
+ },
+ {
+  "keys": [
+   "Anarchical Fallacies; being an Examination of the Declarations of Rights issued"
+  ],
+  "titles": {
+   "ca": "Fal·làcies anàrquiques: un examen de les declaracions de drets publicades…",
+   "es": "Falacias anárquicas: un examen de las declaraciones de derechos publicadas…",
+   "fr": "Sophismes anarchiques : un examen des déclarations des droits publiées…",
+   "de": "Anarchische Trugschlüsse: eine Untersuchung der veröffentlichten Rechtserklärungen…",
+   "it": "Fallacie anarchiche: un esame delle dichiarazioni dei diritti pubblicate…",
+   "ru": "Анархические заблуждения: разбор изданных деклараций прав…",
+   "zh": "无政府主义谬论：对所颁布权利宣言的考察……",
+   "ja": "アナーキーな誤謬——公布された権利宣言の検討……",
+   "ar": "مغالطات فوضوية: فحص لإعلانات الحقوق الصادرة...",
+   "hi": "अराजकतावादी भ्रांतियाँ: जारी किए गए अधिकार-घोषणाओं की एक परीक्षा..."
+  }
+ },
+ {
+  "keys": [
+   "Characteristics Lectures by Fichte"
+  ],
+  "titles": {
+   "ca": "Els trets característics de l'època present: conferències de Fichte",
+   "es": "Los rasgos característicos de la época actual: conferencias de Fichte",
+   "fr": "Les traits caractéristiques de l'époque actuelle : conférences de Fichte",
+   "de": "Die Grundzüge des gegenwärtigen Zeitalters: Vorlesungen von Fichte",
+   "it": "I tratti caratteristici dell'epoca attuale: conferenze di Fichte",
+   "ru": "Основные черты нынешней эпохи: лекции Фихте",
+   "zh": "当代基本特征：费希特讲座集",
+   "ja": "現代の根本的特徴：フィヒテ講義録",
+   "ar": "السمات المميزة للعصر الحاضر: محاضرات فيشته",
+   "hi": "वर्तमान युग की विशेषताएँ: फिष्टे के व्याख्यान"
+  }
+ },
+ {
+  "keys": [
+   "Ensayo sobre el catolicismo, el liberalismo y el socialismo (1851)"
+  ],
+  "titles": {
+   "ca": "Assaig sobre el catolicisme, el liberalisme i el socialisme (1851)",
+   "es": "Ensayo sobre el catolicismo, el liberalismo y el socialismo (1851)",
+   "fr": "Essai sur le catholicisme, le libéralisme et le socialisme (1851)",
+   "de": "Essay über Katholizismus, Liberalismus und Sozialismus (1851)",
+   "it": "Saggio sul cattolicesimo, il liberalismo e il socialismo (1851)",
+   "ru": "Очерк о католицизме, либерализме и социализме (1851)",
+   "zh": "论天主教、自由主义与社会主义（1851）",
+   "ja": "カトリシズム、自由主義、社会主義に関する試論（1851年）",
+   "ar": "مقال في الكاثوليكية والليبرالية والاشتراكية (1851)",
+   "hi": "कैथोलिकवाद, उदारवाद और समाजवाद पर निबंध (1851)"
+  }
+ },
+ {
+  "keys": [
+   "Tudor school-boy life the dialogues of Juan Luis Vives"
+  ],
+  "titles": {
+   "ca": "La vida de l'escolar Tudor: els diàlegs de Joan Lluís Vives",
+   "es": "La vida del escolar Tudor: los diálogos de Juan Luis Vives",
+   "fr": "La vie de l'écolier Tudor : les dialogues de Juan Luis Vives",
+   "de": "Das Leben des Tudor-Schuljungen: die Dialoge des Juan Luis Vives",
+   "it": "La vita dello scolaro Tudor: i dialoghi di Juan Luis Vives",
+   "ru": "Жизнь школьника тюдоровской эпохи: диалоги Хуана Луиса Вивеса",
+   "zh": "都铎学童生活：胡安·路易斯·维韦斯对话录",
+   "ja": "チューダー朝の学童生活：フアン・ルイス・ビベスの対話篇",
+   "ar": "حياة التلميذ في العصر التيودوري: حوارات خوان لويس فيبس",
+   "hi": "ट्यूडर स्कूली छात्र जीवन: जुआन लुइस विवेस के संवाद"
+  }
+ },
+ {
+  "keys": [
+   "Der Streit der Fakultäten (The Conflict of the Faculties)"
+  ],
+  "titles": {
+   "ca": "El conflicte de les facultats",
+   "es": "El conflicto de las facultades",
+   "fr": "Le conflit des facultés",
+   "de": "Der Streit der Fakultäten",
+   "it": "Il conflitto delle facoltà",
+   "ru": "Спор факультетов",
+   "zh": "学科之争",
+   "ja": "諸学部の争い",
+   "ar": "نزاع الكليات",
+   "hi": "संकायों का संघर्ष"
+  }
+ },
+ {
+  "keys": [
+   "Arthashastra (Treatise on Statecraft)"
+  ],
+  "titles": {
+   "ca": "Artha-xastra (tractat sobre l'art de governar)",
+   "es": "Arthashastra (tratado sobre el arte de gobernar)",
+   "fr": "Arthashastra (traité sur l'art de gouverner)",
+   "de": "Arthashastra (Abhandlung über die Staatskunst)",
+   "it": "Arthashastra (trattato sull'arte di governo)",
+   "ru": "Артхашастра (трактат о государственном управлении)",
+   "zh": "政事论（治国之术）",
+   "ja": "実利論（統治術に関する論考）",
+   "ar": "أرثاشاسترا (رسالة في فن الحكم)",
+   "hi": "अर्थशास्त्र (राजनीति पर ग्रंथ)"
+  }
+ },
+ {
+  "keys": [
+   "Letters and Sermons (incl. the Tome to Flavian)"
+  ],
+  "titles": {
+   "ca": "Cartes i sermons (inclòs el Tom a Flavià)",
+   "es": "Cartas y sermones (incluido el Tomo a Flaviano)",
+   "fr": "Lettres et sermons (y compris le Tome à Flavien)",
+   "de": "Briefe und Predigten (einschließlich des Tomus an Flavian)",
+   "it": "Lettere e sermoni (incluso il Tomo a Flaviano)",
+   "ru": "Письма и проповеди (включая Томос к Флавиану)",
+   "zh": "书信与讲道集（含《致弗拉维安书》）",
+   "ja": "書簡と説教集（フラウィアヌスへのトムスを含む）",
+   "ar": "الرسائل والعظات (بما في ذلك رسالة إلى فلابيانوس)",
+   "hi": "पत्र और प्रवचन (फ्लेवियन को टोम सहित)"
+  }
+ },
+ {
+  "keys": [
+   "Great Encyclical Letters (incl. Aeterni Patris, Providentissimus Deus, etc.)"
+  ],
+  "titles": {
+   "ca": "Grans cartes encícliques (inclosa Aeterni Patris, Providentissimus Deus, etc.)",
+   "es": "Grandes cartas encíclicas (incluida Aeterni Patris, Providentissimus Deus, etc.)",
+   "fr": "Grandes lettres encycliques (dont Aeterni Patris, Providentissimus Deus, etc.)",
+   "de": "Große Enzykliken (einschließlich Aeterni Patris, Providentissimus Deus usw.)",
+   "it": "Grandi lettere encicliche (incluse Aeterni Patris, Providentissimus Deus, ecc.)",
+   "ru": "Великие энциклики (включая Aeterni Patris, Providentissimus Deus и др.)",
+   "zh": "重要通谕集（含《永恒之父》《万有真原》等）",
+   "ja": "主要回勅集（アエテルニ・パトリス、プロウィデンティッシムス・デウス等を含む）",
+   "ar": "الرسائل العامة الكبرى (بما في ذلك Aeterni Patris وProvidentissimus Deus وغيرها)",
+   "hi": "महान विश्वपत्र (Aeterni Patris, Providentissimus Deus आदि सहित)"
+  }
+ },
+ {
+  "keys": [
+   "Taoist Teachings from the Book of Lieh-Tzu"
+  ],
+  "titles": {
+   "ca": "Ensenyaments taoistes del Llibre de Lie Ci",
+   "es": "Enseñanzas taoístas del Libro de Lie Zi",
+   "fr": "Enseignements taoïstes du Livre de Lie Zi",
+   "de": "Taoistische Lehren aus dem Buch Liezi",
+   "it": "Insegnamenti taoisti dal Libro di Liezi",
+   "ru": "Даосские учения из Книги Ле-цзы",
+   "zh": "列子书中的道家教诲",
+   "ja": "『列子』の道家的教え",
+   "ar": "تعاليم طاوية من كتاب ليه تزو",
+   "hi": "लीह-त्ज़ू की पुस्तक से ताओवादी शिक्षाएँ"
+  }
+ },
+ {
+  "keys": [
+   "Virgil &amp; Lucretius"
+  ],
+  "titles": {
+   "ca": "Virgili i Lucreci",
+   "es": "Virgilio y Lucrecio",
+   "fr": "Virgile et Lucrèce",
+   "de": "Vergil und Lukrez",
+   "it": "Virgilio e Lucrezio",
+   "ru": "Вергилий и Лукреций",
+   "zh": "维吉尔与卢克莱修",
+   "ja": "ウェルギリウスとルクレティウス",
+   "ar": "فيرجيل ولوكريتيوس",
+   "hi": "वर्जिल और ल्यूक्रेटियस"
+  }
+ },
+ {
+  "keys": [
+   "Machiavelli, Volume I"
+  ],
+  "titles": {
+   "ca": "Maquiavel, volum I",
+   "es": "Maquiavelo, volumen I",
+   "fr": "Machiavel, volume I",
+   "de": "Machiavelli, Band I",
+   "it": "Machiavelli, volume I",
+   "ru": "Макиавелли, том I",
+   "zh": "马基雅维利文集，第一卷",
+   "ja": "マキャヴェッリ全集 第1巻",
+   "ar": "مكيافيلي، المجلد الأول",
+   "hi": "मैकियावेली, खंड I"
+  }
+ },
+ {
+  "keys": [
+   "Buddhist Mahayana Texts: Diamond Sutra, Heart Sutra, Sukhavativyuha (SBE XLIX)"
+  ],
+  "titles": {
+   "ca": "Textos budistes del Mahayana: Sutra del Diamant, Sutra del Cor, Sukhavativyuha (SBE XLIX)",
+   "es": "Textos budistas del Mahayana: Sutra del Diamante, Sutra del Corazón, Sukhavativyuha (SBE XLIX)",
+   "fr": "Textes bouddhistes du Mahayana : Sutra du Diamant, Sutra du Cœur, Sukhavativyuha (SBE XLIX)",
+   "de": "Buddhistische Mahayana-Texte: Diamant-Sutra, Herz-Sutra, Sukhavativyuha (SBE XLIX)",
+   "it": "Testi buddisti Mahayana: Sutra del Diamante, Sutra del Cuore, Sukhavativyuha (SBE XLIX)",
+   "ru": "Буддийские тексты Махаяны: Алмазная сутра, Сутра сердца, Сукхавативьюха (SBE XLIX)",
+   "zh": "大乘佛教经典：金刚经、心经、无量寿经（东方圣书第49卷）",
+   "ja": "大乗仏教典籍：金剛経、般若心経、スカーヴァティーヴューハ（東方聖書第49巻）",
+   "ar": "نصوص ماهايانا البوذية: سوترا الماس، سوترا القلب، سوخافاتيفيوها (SBE XLIX)",
+   "hi": "बौद्ध महायान ग्रंथ: वज्रच्छेदिका सूत्र, हृदय सूत्र, सुखावतीव्यूह (SBE XLIX)"
+  }
+ },
+ {
+  "keys": [
+   "The eight chapters of Maimonides on ethics (Shemonah perakim);"
+  ],
+  "titles": {
+   "ca": "Els vuit capítols de Maimònides sobre ètica (Shemonà Perakim)",
+   "es": "Los ocho capítulos de Maimónides sobre ética (Shemonah Perakim)",
+   "fr": "Les huit chapitres de Maïmonide sur l'éthique (Shemonah Perakim)",
+   "de": "Die acht Kapitel des Maimonides über Ethik (Schemona Perakim)",
+   "it": "Gli otto capitoli di Maimonide sull'etica (Shemonah Perakim)",
+   "ru": "Восемь глав Маймонида об этике (Шмона перакимм)",
+   "zh": "迈蒙尼德伦理学八章（Shemonah Perakim）",
+   "ja": "マイモニデス倫理学八章（シェモナ・ペラキム）",
+   "ar": "الفصول الثمانية لموسى بن ميمون في الأخلاق (شمونة فراقيم)",
+   "hi": "नैतिकता पर मैमोनाइड्स के आठ अध्याय (शेमोना पेराकीम)"
+  }
+ },
+ {
+  "keys": [
+   "The journal of Montaigne's travels in Italy by way of Switzerland and Germany in"
+  ],
+  "titles": {
+   "ca": "El diari dels viatges de Montaigne per Itàlia, passant per Suïssa i Alemanya, l'any…",
+   "es": "El diario de los viajes de Montaigne por Italia, pasando por Suiza y Alemania, en el año…",
+   "fr": "Le journal des voyages de Montaigne en Italie, par la Suisse et l'Allemagne, en l'an…",
+   "de": "Das Reisetagebuch Montaignes durch Italien via Schweiz und Deutschland im Jahr…",
+   "it": "Il diario dei viaggi di Montaigne in Italia, attraverso la Svizzera e la Germania, nell'anno…",
+   "ru": "Дневник путешествий Монтеня по Италии через Швейцарию и Германию в… году",
+   "zh": "蒙田经瑞士、德意志赴意大利游记",
+   "ja": "モンテーニュのスイス・ドイツ経由イタリア旅行日記",
+   "ar": "يوميات رحلات مونتين إلى إيطاليا عبر سويسرا وألمانيا في عام...",
+   "hi": "स्विट्ज़रलैंड और जर्मनी होते हुए इटली में मोंटेन की यात्राओं की डायरी"
+  }
+ },
+ {
+  "keys": [
+   "The fragments of Parmenides"
+  ],
+  "titles": {
+   "ca": "Els fragments de Parmènides",
+   "es": "Los fragmentos de Parménides",
+   "fr": "Les fragments de Parménide",
+   "de": "Die Fragmente des Parmenides",
+   "it": "I frammenti di Parmenide",
+   "ru": "Фрагменты Парменида",
+   "zh": "巴门尼德残篇",
+   "ja": "パルメニデス断片集",
+   "ar": "شذرات بارمنيدس",
+   "hi": "पारमेनाइड्स के अंश"
+  }
+ },
+ {
+  "keys": [
+   "Letters of Abelard and Heloise"
+  ],
+  "titles": {
+   "ca": "Cartes d'Abelard i Eloïsa",
+   "es": "Cartas de Abelardo y Eloísa",
+   "fr": "Lettres d'Abélard et Héloïse",
+   "de": "Briefe von Abaelard und Heloise",
+   "it": "Lettere di Abelardo ed Eloisa",
+   "ru": "Письма Абеляра и Элоизы",
+   "zh": "阿伯拉尔与爱洛伊丝书信集",
+   "ja": "アベラールとエロイーズの書簡集",
+   "ar": "رسائل أبيلار وإلويز",
+   "hi": "एबेलार्ड और एलोइज़ के पत्र"
+  }
+ },
+ {
+  "keys": [
+   "The Works of Philo Judaeus, Vol. I (Yonge)"
+  ],
+  "titles": {
+   "ca": "Les obres de Filó d'Alexandria, vol. I (Yonge)",
+   "es": "Las obras de Filón de Alejandría, vol. I (Yonge)",
+   "fr": "Les œuvres de Philon d'Alexandrie, vol. I (Yonge)",
+   "de": "Die Werke des Philo von Alexandria, Bd. I (Yonge)",
+   "it": "Le opere di Filone di Alessandria, vol. I (Yonge)",
+   "ru": "Сочинения Филона Александрийского, т. I (Йонг)",
+   "zh": "亚历山大的斐洛著作集，第一卷（扬格译）",
+   "ja": "アレクサンドリアのフィロン著作集 第1巻（ヨンゲ訳）",
+   "ar": "أعمال فيلون الإسكندري، المجلد الأول (يونج)",
+   "hi": "फिलो ऑफ अलेक्जेंड्रिया की रचनाएँ, खंड I (योंगे)"
+  }
+ },
+ {
+  "keys": [
+   "Las nacionalidades"
+  ],
+  "titles": {
+   "ca": "Les nacionalitats",
+   "es": "Las nacionalidades",
+   "fr": "Les nationalités",
+   "de": "Die Nationalitäten",
+   "it": "Le nazionalità",
+   "ru": "Национальности",
+   "zh": "论民族性",
+   "ja": "諸民族性について",
+   "ar": "القوميات",
+   "hi": "राष्ट्रीयताएँ"
+  }
+ },
+ {
+  "keys": [
+   "Pistis Sophia a Gnostic miscellany being for the most part extracts from the boo"
+  ],
+  "titles": {
+   "ca": "Pistis Sophia: una miscel·lània gnòstica, majoritàriament extractes dels llibres…",
+   "es": "Pistis Sophia: una miscelánea gnóstica, en su mayor parte extractos de los libros…",
+   "fr": "Pistis Sophia : un recueil gnostique, principalement des extraits des livres…",
+   "de": "Pistis Sophia: eine gnostische Sammlung, größtenteils Auszüge aus den Büchern…",
+   "it": "Pistis Sophia: una miscellanea gnostica, per lo più estratti dai libri…",
+   "ru": "Пистис София: гностический сборник, по большей части извлечения из книг…",
+   "zh": "《信智慧》：诺斯底文集，主要摘自……书籍",
+   "ja": "ピスティス・ソフィア——グノーシス派文集、主に……の書からの抜粋",
+   "ar": "بيستيس صوفيا: مجموعة غنوصية، ومعظمها مقتطفات من كتب...",
+   "hi": "पिस्तिस सोफिया: एक ज्ञानवादी संकलन, अधिकांशतः पुस्तकों से उद्धरण..."
+  }
+ },
+ {
+  "keys": [
+   "Catechismus Romanus ad Parochos (Catechism of the Council of Trent)"
+  ],
+  "titles": {
+   "ca": "Catechismus Romanus ad Parochos (Catecisme del Concili de Trento)",
+   "es": "Catechismus Romanus ad Parochos (Catecismo del Concilio de Trento)",
+   "fr": "Catechismus Romanus ad Parochos (Catéchisme du Concile de Trente)",
+   "de": "Catechismus Romanus ad Parochos (Katechismus des Konzils von Trient)",
+   "it": "Catechismus Romanus ad Parochos (Catechismo del Concilio di Trento)",
+   "ru": "Catechismus Romanus ad Parochos (Катехизис Тридентского собора)",
+   "zh": "罗马教理问答（特伦特大公会议教理问答）",
+   "ja": "ローマ教理問答（トリエント公会議のカテキズム）",
+   "ar": "التعليم المسيحي الروماني للكهنة (تعليم مجمع ترنت)",
+   "hi": "कैटेकिज़्मस रोमानुस एड पैरोकोस (त्रेंत परिषद की धर्मशिक्षा)"
+  }
+ },
+ {
+  "keys": [
+   "Epistle to the Philippians"
+  ],
+  "titles": {
+   "ca": "Epístola als filipencs",
+   "es": "Epístola a los filipenses",
+   "fr": "Épître aux Philippiens",
+   "de": "Brief an die Philipper",
+   "it": "Epistola ai Filippesi",
+   "ru": "Послание к Филиппийцам",
+   "zh": "致腓立比人书",
+   "ja": "フィリピ人への手紙",
+   "ar": "الرسالة إلى أهل فيلبي",
+   "hi": "फिलिप्पियों को पत्री"
+  }
+ },
+ {
+  "keys": [
+   "A Discourse on Political Economy (tr. Cole)"
+  ],
+  "titles": {
+   "ca": "Discurs sobre l'economia política (trad. Cole)",
+   "es": "Discurso sobre la economía política (trad. Cole)",
+   "fr": "Discours sur l'économie politique (trad. Cole)",
+   "de": "Abhandlung über die politische Ökonomie (Übers. Cole)",
+   "it": "Discorso sull'economia politica (trad. Cole)",
+   "ru": "Рассуждение о политической экономии (пер. Коула)",
+   "zh": "论政治经济学（科尔译）",
+   "ja": "政治経済論（コール訳）",
+   "ar": "مقال في الاقتصاد السياسي (ترجمة كول)",
+   "hi": "राजनीतिक अर्थशास्त्र पर प्रवचन (कोल अनुवाद)"
+  }
+ },
+ {
+  "keys": [
+   "The Persian Mystics: Jalalu'd-din Rumi"
+  ],
+  "titles": {
+   "ca": "Els místics persans: Jalaluddín Rumi",
+   "es": "Los místicos persas: Jalaluddín Rumi",
+   "fr": "Les mystiques persans : Djalâl ad-Dîn Rûmî",
+   "de": "Die persischen Mystiker: Dschalal ad-Din Rumi",
+   "it": "I mistici persiani: Jalal al-Din Rumi",
+   "ru": "Персидские мистики: Джалаладдин Руми",
+   "zh": "波斯神秘主义者：贾拉勒丁·鲁米",
+   "ja": "ペルシアの神秘主義者たち：ジャラール・ウッディーン・ルーミー",
+   "ar": "المتصوفة الفرس: جلال الدين الرومي",
+   "hi": "फ़ारसी रहस्यवादी: जलालुद्दीन रूमी"
+  }
+ },
+ {
+  "keys": [
+   "The Ages Of The World"
+  ],
+  "titles": {
+   "ca": "Les edats del món",
+   "es": "Las edades del mundo",
+   "fr": "Les âges du monde",
+   "de": "Die Weltalter",
+   "it": "Le età del mondo",
+   "ru": "Мировые эпохи",
+   "zh": "世界的时代",
+   "ja": "世界の諸時代",
+   "ar": "عصور العالم",
+   "hi": "जगत के युग"
+  }
+ },
+ {
+  "keys": [
+   "Das Ich und das Es / Jenseits des Lustprinzips / Massenpsychologie (GW XIII)"
+  ],
+  "titles": {
+   "ca": "El jo i l'allò / Més enllà del principi del plaer / Psicologia de masses (GW XIII)",
+   "es": "El yo y el ello / Más allá del principio del placer / Psicología de las masas (GW XIII)",
+   "fr": "Le moi et le ça / Au-delà du principe de plaisir / Psychologie des masses (GW XIII)",
+   "de": "Das Ich und das Es / Jenseits des Lustprinzips / Massenpsychologie (GW XIII)",
+   "it": "L'io e l'es / Al di là del principio di piacere / Psicologia delle masse (GW XIII)",
+   "ru": "Я и Оно / По ту сторону принципа удовольствия / Психология масс (GW XIII)",
+   "zh": "自我与本我／超越快乐原则／群体心理学（全集第13卷）",
+   "ja": "自我とエス／快感原則の彼岸／集団心理学（全集第13巻）",
+   "ar": "الأنا والهو / ما وراء مبدأ اللذة / علم نفس الجماهير (GW XIII)",
+   "hi": "अहं और इद् / सुखसिद्धांत से परे / जनमानस मनोविज्ञान (GW XIII)"
+  }
+ },
+ {
+  "keys": [
+   "Discurso de Angostura (1819)"
+  ],
+  "titles": {
+   "ca": "Discurs d'Angostura (1819)",
+   "es": "Discurso de Angostura (1819)",
+   "fr": "Discours d'Angostura (1819)",
+   "de": "Rede von Angostura (1819)",
+   "it": "Discorso di Angostura (1819)",
+   "ru": "Ангостурская речь (1819)",
+   "zh": "安戈斯图拉演说（1819）",
+   "ja": "アンゴストゥーラ演説（1819年）",
+   "ar": "خطاب أنغوستورا (1819)",
+   "hi": "अंगोस्तूरा भाषण (1819)"
+  }
+ },
+ {
+  "keys": [
+   "Obras selectas de la celebre monja de Mejico, sor Juana Ines de la Cruz precedid"
+  ],
+  "titles": {
+   "ca": "Obres selectes de la cèlebre monja de Mèxic, sor Juana Inés de la Cruz, precedides…",
+   "es": "Obras selectas de la célebre monja de México, sor Juana Inés de la Cruz, precedidas…",
+   "fr": "Œuvres choisies de la célèbre religieuse du Mexique, sœur Juana Inés de la Cruz, précédées…",
+   "de": "Ausgewählte Werke der berühmten mexikanischen Nonne, Schwester Juana Inés de la Cruz, mit vorangestelltem…",
+   "it": "Opere scelte della celebre monaca messicana, suor Juana Inés de la Cruz, precedute…",
+   "ru": "Избранные сочинения знаменитой мексиканской монахини сестры Хуаны Инес де ла Крус, с предисловием…",
+   "zh": "墨西哥著名修女胡安娜·伊内斯·德拉克鲁斯选集，前有……",
+   "ja": "メキシコの著名な修道女フアナ・イネス・デ・ラ・クルスの選集、……を前置きとして",
+   "ar": "مختارات من أعمال الراهبة المكسيكية الشهيرة، الأخت خوانا إينيس دي لا كروز، مسبوقة بـ...",
+   "hi": "मेक्सिको की प्रसिद्ध साध्वी सोर जुआना इनेस डे ला क्रूज़ की चयनित रचनाएँ, ... से पूर्व"
+  }
+ },
+ {
+  "keys": [
+   "The Book of War The Military Classic of the Far East"
+  ],
+  "titles": {
+   "ca": "El llibre de la guerra: el clàssic militar de l'Extrem Orient",
+   "es": "El libro de la guerra: el clásico militar del Lejano Oriente",
+   "fr": "Le livre de la guerre : le classique militaire d'Extrême-Orient",
+   "de": "Das Buch des Krieges: der militärische Klassiker des Fernen Ostens",
+   "it": "Il libro della guerra: il classico militare dell'Estremo Oriente",
+   "ru": "Книга войны: военная классика Дальнего Востока",
+   "zh": "战争之书：远东军事经典",
+   "ja": "戦争の書——極東の軍事古典",
+   "ar": "كتاب الحرب: الكلاسيكية العسكرية للشرق الأقصى",
+   "hi": "युद्ध की पुस्तक: सुदूर पूर्व का सैन्य क्लासिक"
+  }
+ },
+ {
+  "keys": [
+   "Selected Works of Huldreich Zwingli (1484-1531)"
+  ],
+  "titles": {
+   "ca": "Obres escollides d'Ulrich Zwingli (1484-1531)",
+   "es": "Obras escogidas de Ulrico Zwinglio (1484-1531)",
+   "fr": "Œuvres choisies d'Ulrich Zwingli (1484-1531)",
+   "de": "Ausgewählte Werke von Huldrych Zwingli (1484-1531)",
+   "it": "Opere scelte di Ulrico Zwingli (1484-1531)",
+   "ru": "Избранные сочинения Ульриха Цвингли (1484-1531)",
+   "zh": "胡尔德里希·茨温利文选（1484-1531）",
+   "ja": "フルドリッヒ・ツヴィングリ選集（1484-1531年）",
+   "ar": "مختارات من أعمال هولدريخ تسفينغلي (1484-1531)",
+   "hi": "उलरिच ज़्विंग्ली की चयनित रचनाएँ (1484-1531)"
+  }
+ },
+ {
+  "keys": [
+   "Selected Works of Voltairine de Cleyre"
+  ],
+  "titles": {
+   "ca": "Obres escollides de Voltairine de Cleyre",
+   "es": "Obras escogidas de Voltairine de Cleyre",
+   "fr": "Œuvres choisies de Voltairine de Cleyre",
+   "de": "Ausgewählte Werke von Voltairine de Cleyre",
+   "it": "Opere scelte di Voltairine de Cleyre",
+   "ru": "Избранные сочинения Вольтерины де Клер",
+   "zh": "沃尔泰琳·德克莱尔文选",
+   "ja": "ヴォルテリーヌ・ド・クレール選集",
+   "ar": "مختارات من أعمال فولتيرين دي كلير",
+   "hi": "वॉल्टेरिन डी क्लेयर की चयनित रचनाएँ"
+  }
+ },
+ {
+  "keys": [
+   "An Enquiry Concerning Political Justice, Vol. I"
+  ],
+  "titles": {
+   "ca": "Una investigació sobre la justícia política, vol. I",
+   "es": "Una investigación sobre la justicia política, vol. I",
+   "fr": "Une enquête sur la justice politique, vol. I",
+   "de": "Eine Untersuchung über die politische Gerechtigkeit, Bd. I",
+   "it": "Un'indagine sulla giustizia politica, vol. I",
+   "ru": "Исследование о политической справедливости, т. I",
+   "zh": "政治正义论，第一卷",
+   "ja": "政治的正義に関する研究 第1巻",
+   "ar": "بحث في العدالة السياسية، المجلد الأول",
+   "hi": "राजनीतिक न्याय पर एक जांच, खंड I"
+  }
+ },
+ {
+  "keys": [
+   "Pragmatism A New Name for Some Old Ways of Thinking"
+  ],
+  "titles": {
+   "ca": "Pragmatisme: un nom nou per a algunes maneres antigues de pensar",
+   "es": "Pragmatismo: un nombre nuevo para algunas formas antiguas de pensar",
+   "fr": "Le pragmatisme : un nom nouveau pour d'anciennes manières de penser",
+   "de": "Pragmatismus: ein neuer Name für einige alte Denkweisen",
+   "it": "Pragmatismo: un nome nuovo per alcuni vecchi modi di pensare",
+   "ru": "Прагматизм: новое название для некоторых старых способов мышления",
+   "zh": "实用主义：旧思维方式的新名称",
+   "ja": "プラグマティズム——いくつかの古い思考様式のための新しい名前",
+   "ar": "البراغماتية: اسم جديد لبعض طرق التفكير القديمة",
+   "hi": "व्यावहारिकतावाद: कुछ पुरानी चिंतन-पद्धतियों के लिए एक नया नाम"
+  }
+ },
+ {
+  "keys": [
+   "Tractatus venerabilis inceptoris guilhelmi ocham de Sacramento altaris [tr. by T"
+  ],
+  "titles": {
+   "ca": "Tractat del venerable iniciador Guillem d'Occam sobre el sagrament de l'altar [trad. per T…]",
+   "es": "Tratado del venerable iniciador Guillermo de Occam sobre el sacramento del altar [trad. por T…]",
+   "fr": "Traité du vénérable inceptor Guillaume d'Ockham sur le sacrement de l'autel [trad. par T…]",
+   "de": "Traktat des ehrwürdigen Inceptors Wilhelm von Ockham über das Altarsakrament [übers. von T…]",
+   "it": "Trattato del venerabile inceptor Guglielmo di Occam sul sacramento dell'altare [trad. di T…]",
+   "ru": "Трактат почтенного инцептора Уильяма Оккама о таинстве алтаря [пер. Т…]",
+   "zh": "可敬的开创者奥卡姆的威廉论祭坛圣事之论著〔T……译〕",
+   "ja": "尊敬すべき創始者オッカムのウィリアムによる祭壇の秘跡についての論考〔T……訳〕",
+   "ar": "رسالة الموقر المؤسس غليوم الأوكامي في سر المذبح [ترجمة ت...]",
+   "hi": "आदरणीय प्रवर्तक विलियम ऑफ ओकम का वेदी संस्कार पर ग्रंथ [टी... द्वारा अनूदित]"
+  }
  }
 ]

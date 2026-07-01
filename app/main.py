@@ -450,6 +450,14 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
         # d'obra es tradueixen al títol publicat real (mapa curat work_titles.json,
         # font: enllaços interlingües de Wikipedia). Ambdós amb fallback a l'original.
         import json as _json
+        import unicodedata as _ud
+
+        def _nfc(s: str) -> str:
+            # el corpus barreja formes Unicode composta/descomposta pels accents
+            # (p. ex. "à" com a U+00E0 o com "a"+U+0300); normalitzem per no fallar
+            # una cerca exacta de diccionari per un simple detall de codificació.
+            return _ud.normalize("NFC", s)
+
         try:
             _ALIASES = _json.loads(get_settings().aliases_path.read_text(encoding="utf-8"))
         except Exception:
@@ -458,7 +466,7 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
             _wt = _json.loads(
                 (get_settings().aliases_path.parent / "work_titles.json").read_text(encoding="utf-8")
             )
-            _TITLES = {k: e["titles"] for e in _wt for k in e["keys"]}
+            _TITLES = {_nfc(k): e["titles"] for e in _wt for k in e["keys"]}
         except Exception:
             _TITLES = {}
         _LANG_CODE = {
@@ -478,7 +486,7 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
 
         def _title(work: str, code: str) -> str:
             """Títol de l'obra en l'idioma 'code', o l'original si no hi ha traducció."""
-            return (_TITLES.get(work) or {}).get(code, work)
+            return (_TITLES.get(_nfc(work)) or {}).get(code, work)
 
         with gr.Accordion(
             "📚 Authors & texts in the corpus", open=False, elem_id="sigphi-catalog"
