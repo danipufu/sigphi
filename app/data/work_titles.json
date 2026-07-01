@@ -8664,5 +8664,838 @@
    "ar": "مختصر في النفس",
    "hi": "आत्मा पर एक संक्षेप"
   }
+ },
+ {
+  "keys": [
+   "A Short Creed"
+  ],
+  "titles": {
+   "ca": "Un breu credo",
+   "es": "Un breve credo",
+   "fr": "Un bref credo",
+   "de": "Ein kurzes Glaubensbekenntnis",
+   "it": "Un breve credo",
+   "ru": "Краткое исповедание веры",
+   "zh": "简明信经",
+   "ja": "簡潔な信条",
+   "ar": "عقيدة موجزة",
+   "hi": "एक संक्षिप्त पंथ"
+  }
+ },
+ {
+  "keys": [
+   "Al-Ghazali letter to Administrative Heads of all Government Departments"
+  ],
+  "titles": {
+   "ca": "Al-Ghazali — Carta als caps administratius de tots els departaments governamentals",
+   "es": "Al-Ghazali — Carta a los jefes administrativos de todos los departamentos gubernamentales",
+   "fr": "Al-Ghazali — Lettre aux chefs administratifs de tous les départements gouvernementaux",
+   "de": "Al-Ghazali — Brief an die Verwaltungsleiter aller Regierungsabteilungen",
+   "it": "Al-Ghazali — Lettera ai capi amministrativi di tutti i dipartimenti governativi",
+   "ru": "Аль-Газали — Письмо руководителям всех правительственных ведомств",
+   "zh": "安萨里——致所有政府部门行政首长的信",
+   "ja": "ガザーリー——全政府部門の行政長官への手紙",
+   "ar": "الغزالي — رسالة إلى رؤساء جميع الدواوين الحكومية",
+   "hi": "अल-ग़ज़ाली — सभी सरकारी विभागों के प्रशासनिक प्रमुखों को पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Al-Ghazali letter to Ibn Ul Amil"
+  ],
+  "titles": {
+   "ca": "Al-Ghazali — Carta a Ibn al-Àmil",
+   "es": "Al-Ghazali — Carta a Ibn al-Amil",
+   "fr": "Al-Ghazali — Lettre à Ibn al-Amil",
+   "de": "Al-Ghazali — Brief an Ibn al-Amil",
+   "it": "Al-Ghazali — Lettera a Ibn al-Amil",
+   "ru": "Аль-Газали — Письмо Ибн аль-Амилю",
+   "zh": "安萨里——致伊本·阿米尔的信",
+   "ja": "ガザーリー——イブン・アル＝アミルへの手紙",
+   "ar": "الغزالي — رسالة إلى ابن العميل",
+   "hi": "अल-ग़ज़ाली — इब्न अल-आमिल को पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Al-Ghazali letter to Khwaja Abbas Khwarzam"
+  ],
+  "titles": {
+   "ca": "Al-Ghazali — Carta a Khwaja Abbas Khwarzam",
+   "es": "Al-Ghazali — Carta a Khwaja Abbas Khwarzam",
+   "fr": "Al-Ghazali — Lettre à Khwaja Abbas Khwarzam",
+   "de": "Al-Ghazali — Brief an Khwaja Abbas Khwarzam",
+   "it": "Al-Ghazali — Lettera a Khwaja Abbas Khwarzam",
+   "ru": "Аль-Газали — Письмо Ходже Аббасу Хварзаму",
+   "zh": "安萨里——致霍贾·阿巴斯·夸尔扎姆的信",
+   "ja": "ガザーリー——ホージャ・アッバース・フワーザムへの手紙",
+   "ar": "الغزالي — رسالة إلى خواجه عباس خوارزم",
+   "hi": "अल-ग़ज़ाली — ख्वाजा अब्बास ख्वारज़म को पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Al-Ghazali letter to Khwaja Imam Abbasi"
+  ],
+  "titles": {
+   "ca": "Al-Ghazali — Carta a Khwaja Imam Abbasi",
+   "es": "Al-Ghazali — Carta a Khwaja Imam Abbasi",
+   "fr": "Al-Ghazali — Lettre à Khwaja Imam Abbasi",
+   "de": "Al-Ghazali — Brief an Khwaja Imam Abbasi",
+   "it": "Al-Ghazali — Lettera a Khwaja Imam Abbasi",
+   "ru": "Аль-Газали — Письмо Ходже Имаму Аббаси",
+   "zh": "安萨里——致霍贾·伊玛目·阿巴西的信",
+   "ja": "ガザーリー——ホージャ・イマーム・アッバースィーへの手紙",
+   "ar": "الغزالي — رسالة إلى خواجه إمام عباسي",
+   "hi": "अल-ग़ज़ाली — ख्वाजा इमाम अब्बासी को पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Al-Ghazali letter to Muhir-ud-Deen"
+  ],
+  "titles": {
+   "ca": "Al-Ghazali — Carta a Muhir-ud-Din",
+   "es": "Al-Ghazali — Carta a Muhir-ud-Din",
+   "fr": "Al-Ghazali — Lettre à Muhir-ud-Din",
+   "de": "Al-Ghazali — Brief an Muhir-ud-Din",
+   "it": "Al-Ghazali — Lettera a Muhir-ud-Din",
+   "ru": "Аль-Газали — Письмо Мухир-уд-Дину",
+   "zh": "安萨里——致穆希尔丁的信",
+   "ja": "ガザーリー——ムヒルッディーンへの手紙",
+   "ar": "الغزالي — رسالة إلى مهر الدين",
+   "hi": "अल-ग़ज़ाली — मुहीरुद्दीन को पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Al-Ghazali letter to Nizamuddin Ahmed bin Ishak"
+  ],
+  "titles": {
+   "ca": "Al-Ghazali — Carta a Nizamuddin Ahmad ibn Ishaq",
+   "es": "Al-Ghazali — Carta a Nizamuddin Ahmad ibn Ishaq",
+   "fr": "Al-Ghazali — Lettre à Nizamuddin Ahmad ibn Ishaq",
+   "de": "Al-Ghazali — Brief an Nizamuddin Ahmad ibn Ishaq",
+   "it": "Al-Ghazali — Lettera a Nizamuddin Ahmad ibn Ishaq",
+   "ru": "Аль-Газали — Письмо Низамуддину Ахмаду ибн Исхаку",
+   "zh": "安萨里——致尼扎姆丁·艾哈迈德·本·伊斯哈克的信",
+   "ja": "ガザーリー——ニザームッディーン・アフマド・イブン・イスハークへの手紙",
+   "ar": "الغزالي — رسالة إلى نظام الدين أحمد بن إسحاق",
+   "hi": "अल-ग़ज़ाली — निज़ामुद्दीन अहमद बिन इशाक़ को पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Al-Ghazali letter to Qazis of Maghrib-i-Aqsa"
+  ],
+  "titles": {
+   "ca": "Al-Ghazali — Carta als cadís del Magrib al-Aqsà",
+   "es": "Al-Ghazali — Carta a los cadíes del Magreb al-Aqsa",
+   "fr": "Al-Ghazali — Lettre aux cadis du Maghreb al-Aqsa",
+   "de": "Al-Ghazali — Brief an die Kadis von Maghrib al-Aqsa",
+   "it": "Al-Ghazali — Lettera ai qadi del Maghreb al-Aqsa",
+   "ru": "Аль-Газали — Письмо кади Магриба аль-Акса",
+   "zh": "安萨里——致极西马格里布卡迪的信",
+   "ja": "ガザーリー——マグリブ・アル＝アクサーのカーディーへの手紙",
+   "ar": "الغزالي — رسالة إلى قضاة المغرب الأقصى",
+   "hi": "अल-ग़ज़ाली — मग़रिब अल-अक़्सा के क़ाज़ियों को पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Al-Ghazali letter to Shahabul-Islam"
+  ],
+  "titles": {
+   "ca": "Al-Ghazali — Carta a Shihab al-Islam",
+   "es": "Al-Ghazali — Carta a Shihab al-Islam",
+   "fr": "Al-Ghazali — Lettre à Shihab al-Islam",
+   "de": "Al-Ghazali — Brief an Shihab al-Islam",
+   "it": "Al-Ghazali — Lettera a Shihab al-Islam",
+   "ru": "Аль-Газали — Письмо Шихаб аль-Исламу",
+   "zh": "安萨里——致希哈布伊斯兰的信",
+   "ja": "ガザーリー——シハーブ・アル＝イスラームへの手紙",
+   "ar": "الغزالي — رسالة إلى شهاب الإسلام",
+   "hi": "अल-ग़ज़ाली — शहाबुल-इस्लाम को पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Al-Ghazali letter to Shihab-ul-Islam"
+  ],
+  "titles": {
+   "ca": "Al-Ghazali — Carta a Shihab al-Islam",
+   "es": "Al-Ghazali — Carta a Shihab al-Islam",
+   "fr": "Al-Ghazali — Lettre à Shihab al-Islam",
+   "de": "Al-Ghazali — Brief an Shihab al-Islam",
+   "it": "Al-Ghazali — Lettera a Shihab al-Islam",
+   "ru": "Аль-Газали — Письмо Шихаб аль-Исламу",
+   "zh": "安萨里——致希哈布伊斯兰的信",
+   "ja": "ガザーリー——シハーブ・アル＝イスラームへの手紙",
+   "ar": "الغزالي — رسالة إلى شهاب الإسلام",
+   "hi": "अल-ग़ज़ाली — शिहाबुल-इस्लाम को पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Al-Ghazali letter to Sultan Sanjar Seljuki"
+  ],
+  "titles": {
+   "ca": "Al-Ghazali — Carta al soldà Sanjar el Seljúcida",
+   "es": "Al-Ghazali — Carta al sultán Sanjar el Selyúcida",
+   "fr": "Al-Ghazali — Lettre au sultan Sandjar le Seldjoukide",
+   "de": "Al-Ghazali — Brief an Sultan Sandschar den Seldschuken",
+   "it": "Al-Ghazali — Lettera al sultano Sanjar il Selgiuchide",
+   "ru": "Аль-Газали — Письмо султану Санджару Сельджукскому",
+   "zh": "安萨里——致塞尔柱苏丹桑贾尔的信",
+   "ja": "ガザーリー——セルジューク朝スルタン、サンジャルへの手紙",
+   "ar": "الغزالي — رسالة إلى السلطان سنجر السلجوقي",
+   "hi": "अल-ग़ज़ाली — सुल्तान संजर सेल्जुक़ी को पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Al-Ghazali letter to all those who wishing to achieve a peaceful and pious life"
+  ],
+  "titles": {
+   "ca": "Al-Ghazali — Carta a tots els qui desitgen assolir una vida pacífica i pia",
+   "es": "Al-Ghazali — Carta a todos los que desean alcanzar una vida pacífica y piadosa",
+   "fr": "Al-Ghazali — Lettre à tous ceux qui désirent mener une vie paisible et pieuse",
+   "de": "Al-Ghazali — Brief an alle, die ein friedliches und frommes Leben führen möchten",
+   "it": "Al-Ghazali — Lettera a tutti coloro che desiderano una vita pacifica e pia",
+   "ru": "Аль-Газали — Письмо всем желающим достичь мирной и благочестивой жизни",
+   "zh": "安萨里——致所有渴望过和平虔诚生活之人的信",
+   "ja": "ガザーリー——平和で敬虔な生活を望むすべての人への手紙",
+   "ar": "الغزالي — رسالة إلى كل من يرغب في تحقيق حياة هادئة وتقية",
+   "hi": "अल-ग़ज़ाली — शांतिपूर्ण और पवित्र जीवन चाहने वाले सभी लोगों को पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Al-Ghazali letter to an Emir"
+  ],
+  "titles": {
+   "ca": "Al-Ghazali — Carta a un emir",
+   "es": "Al-Ghazali — Carta a un emir",
+   "fr": "Al-Ghazali — Lettre à un émir",
+   "de": "Al-Ghazali — Brief an einen Emir",
+   "it": "Al-Ghazali — Lettera a un emiro",
+   "ru": "Аль-Газали — Письмо эмиру",
+   "zh": "安萨里——致一位埃米尔的信",
+   "ja": "ガザーリー——ある首長への手紙",
+   "ar": "الغزالي — رسالة إلى أمير",
+   "hi": "अल-ग़ज़ाली — एक अमीर को पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Al-Ghazali letters to Mujir-ud-Deen"
+  ],
+  "titles": {
+   "ca": "Al-Ghazali — Cartes a Mujir-ud-Din",
+   "es": "Al-Ghazali — Cartas a Mujir-ud-Din",
+   "fr": "Al-Ghazali — Lettres à Mujir-ud-Din",
+   "de": "Al-Ghazali — Briefe an Mujir-ud-Din",
+   "it": "Al-Ghazali — Lettere a Mujir-ud-Din",
+   "ru": "Аль-Газали — Письма Муджир-уд-Дину",
+   "zh": "安萨里——致穆吉尔丁的信",
+   "ja": "ガザーリー——ムジールッディーンへの手紙",
+   "ar": "الغزالي — رسائل إلى مجير الدين",
+   "hi": "अल-ग़ज़ाली — मुजीरुद्दीन को पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Al-Ghazali letters to Nizamuddin Fakhrul Mulk"
+  ],
+  "titles": {
+   "ca": "Al-Ghazali — Cartes a Nizam al-Din Fakhr al-Mulk",
+   "es": "Al-Ghazali — Cartas a Nizam al-Din Fakhr al-Mulk",
+   "fr": "Al-Ghazali — Lettres à Nizam al-Din Fakhr al-Mulk",
+   "de": "Al-Ghazali — Briefe an Nizam al-Din Fakhr al-Mulk",
+   "it": "Al-Ghazali — Lettere a Nizam al-Din Fakhr al-Mulk",
+   "ru": "Аль-Газали — Письма Низам аль-Дину Фахр аль-Мульку",
+   "zh": "安萨里——致尼扎姆丁·法赫尔·穆尔克的信",
+   "ja": "ガザーリー——ニザームッディーン・ファフルルムルクへの手紙",
+   "ar": "الغزالي — رسائل إلى نظام الدين فخر الملك",
+   "hi": "अल-ग़ज़ाली — निज़ामुद्दीन फ़ख़रुल मुल्क को पत्र"
+  }
+ },
+ {
+  "keys": [
+   "History of the Saracens"
+  ],
+  "titles": {
+   "ca": "Història dels sarraïns",
+   "es": "Historia de los sarracenos",
+   "fr": "Histoire des Sarrasins",
+   "de": "Geschichte der Sarazenen",
+   "it": "Storia dei saraceni",
+   "ru": "История сарацин",
+   "zh": "撒拉森人史",
+   "ja": "サラセン人の歴史",
+   "ar": "تاريخ الصراقنة",
+   "hi": "सारासेन्स का इतिहास"
+  }
+ },
+ {
+  "keys": [
+   "Open letter by Al-Ghazali"
+  ],
+  "titles": {
+   "ca": "Carta oberta d'Al-Ghazali",
+   "es": "Carta abierta de Al-Ghazali",
+   "fr": "Lettre ouverte d'Al-Ghazali",
+   "de": "Offener Brief von Al-Ghazali",
+   "it": "Lettera aperta di Al-Ghazali",
+   "ru": "Открытое письмо аль-Газали",
+   "zh": "安萨里公开信",
+   "ja": "ガザーリーの公開書簡",
+   "ar": "رسالة مفتوحة من الغزالي",
+   "hi": "अल-ग़ज़ाली का खुला पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Some religious and moral teachings of Al-Ghazzali Being brief extracts from his"
+  ],
+  "titles": {
+   "ca": "Alguns ensenyaments religiosos i morals d'Al-Ghazali: breus extractes de la seva…",
+   "es": "Algunas enseñanzas religiosas y morales de Al-Ghazali: breves extractos de su…",
+   "fr": "Quelques enseignements religieux et moraux d'Al-Ghazali : brefs extraits de son…",
+   "de": "Einige religiöse und moralische Lehren Al-Ghazalis: kurze Auszüge aus seinem…",
+   "it": "Alcuni insegnamenti religiosi e morali di Al-Ghazali: brevi estratti dalla sua…",
+   "ru": "Некоторые религиозные и нравственные учения аль-Газали: краткие выдержки из его…",
+   "zh": "安萨里的若干宗教与道德教诲：摘自其……",
+   "ja": "ガザーリーのいくつかの宗教的・道徳的教え：その……からの抜粋",
+   "ar": "بعض التعاليم الدينية والأخلاقية للغزالي: مقتطفات موجزة من...",
+   "hi": "अल-ग़ज़ाली की कुछ धार्मिक और नैतिक शिक्षाएँ: उनके ... से संक्षिप्त अंश"
+  }
+ },
+ {
+  "keys": [
+   "The Confessions of Al Ghazzali"
+  ],
+  "titles": {
+   "ca": "Les confessions d'Al-Ghazali",
+   "es": "Las confesiones de Al-Ghazali",
+   "fr": "Les confessions d'Al-Ghazali",
+   "de": "Die Bekenntnisse Al-Ghazalis",
+   "it": "Le confessioni di Al-Ghazali",
+   "ru": "Исповедь аль-Газали",
+   "zh": "安萨里的忏悔录",
+   "ja": "ガザーリーの告白",
+   "ar": "اعترافات الغزالي",
+   "hi": "अल-ग़ज़ाली की स्वीकारोक्तियाँ"
+  }
+ },
+ {
+  "keys": [
+   "A Theological-Political Treatise [Part III]"
+  ],
+  "titles": {
+   "ca": "Tractat teologicopolític [part III]",
+   "es": "Tratado teológico-político [parte III]",
+   "fr": "Traité théologico-politique [partie III]",
+   "de": "Theologisch-politischer Traktat [Teil III]",
+   "it": "Trattato teologico-politico [parte III]",
+   "ru": "Богословско-политический трактат [часть III]",
+   "zh": "神学政治论 [第三部分]",
+   "ja": "神学・政治論 [第3部]",
+   "ar": "رسالة في اللاهوت والسياسة [الجزء الثالث]",
+   "hi": "धर्मशास्त्रीय-राजनीतिक ग्रंथ [भाग III]"
+  }
+ },
+ {
+  "keys": [
+   "A Theological-Political Treatise [Part IV]"
+  ],
+  "titles": {
+   "ca": "Tractat teologicopolític [part IV]",
+   "es": "Tratado teológico-político [parte IV]",
+   "fr": "Traité théologico-politique [partie IV]",
+   "de": "Theologisch-politischer Traktat [Teil IV]",
+   "it": "Trattato teologico-politico [parte IV]",
+   "ru": "Богословско-политический трактат [часть IV]",
+   "zh": "神学政治论 [第四部分]",
+   "ja": "神学・政治論 [第4部]",
+   "ar": "رسالة في اللاهوت والسياسة [الجزء الرابع]",
+   "hi": "धर्मशास्त्रीय-राजनीतिक ग्रंथ [भाग IV]"
+  }
+ },
+ {
+  "keys": [
+   "Theologico-Political Treatise — Part 1"
+  ],
+  "titles": {
+   "ca": "Tractat teologicopolític — part 1",
+   "es": "Tratado teológico-político — parte 1",
+   "fr": "Traité théologico-politique — partie 1",
+   "de": "Theologisch-politischer Traktat — Teil 1",
+   "it": "Trattato teologico-politico — parte 1",
+   "ru": "Богословско-политический трактат — часть 1",
+   "zh": "神学政治论——第一部分",
+   "ja": "神学・政治論——第1部",
+   "ar": "رسالة في اللاهوت والسياسة — الجزء 1",
+   "hi": "धर्मशास्त्रीय-राजनीतिक ग्रंथ — भाग 1"
+  }
+ },
+ {
+  "keys": [
+   "Theologico-Political Treatise — Part 2"
+  ],
+  "titles": {
+   "ca": "Tractat teologicopolític — part 2",
+   "es": "Tratado teológico-político — parte 2",
+   "fr": "Traité théologico-politique — partie 2",
+   "de": "Theologisch-politischer Traktat — Teil 2",
+   "it": "Trattato teologico-politico — parte 2",
+   "ru": "Богословско-политический трактат — часть 2",
+   "zh": "神学政治论——第二部分",
+   "ja": "神学・政治論——第2部",
+   "ar": "رسالة في اللاهوت والسياسة — الجزء 2",
+   "hi": "धर्मशास्त्रीय-राजनीतिक ग्रंथ — भाग 2"
+  }
+ },
+ {
+  "keys": [
+   "Epistolae (Benedictus de Spinoza)"
+  ],
+  "titles": {
+   "ca": "Epístoles",
+   "es": "Epístolas",
+   "fr": "Épîtres",
+   "de": "Briefe",
+   "it": "Epistole",
+   "ru": "Письма",
+   "zh": "书信集",
+   "ja": "書簡集",
+   "ar": "الرسائل",
+   "hi": "पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Ethics — Part 1"
+  ],
+  "titles": {
+   "ca": "Ètica — part 1",
+   "es": "Ética — parte 1",
+   "fr": "Éthique — partie 1",
+   "de": "Ethik — Teil 1",
+   "it": "Etica — parte 1",
+   "ru": "Этика — часть 1",
+   "zh": "伦理学——第一部分",
+   "ja": "エチカ——第1部",
+   "ar": "الأخلاق — الجزء 1",
+   "hi": "नीतिशास्त्र — भाग 1"
+  }
+ },
+ {
+  "keys": [
+   "Ethics — Part 2"
+  ],
+  "titles": {
+   "ca": "Ètica — part 2",
+   "es": "Ética — parte 2",
+   "fr": "Éthique — partie 2",
+   "de": "Ethik — Teil 2",
+   "it": "Etica — parte 2",
+   "ru": "Этика — часть 2",
+   "zh": "伦理学——第二部分",
+   "ja": "エチカ——第2部",
+   "ar": "الأخلاق — الجزء 2",
+   "hi": "नीतिशास्त्र — भाग 2"
+  }
+ },
+ {
+  "keys": [
+   "Ethics — Part 3"
+  ],
+  "titles": {
+   "ca": "Ètica — part 3",
+   "es": "Ética — parte 3",
+   "fr": "Éthique — partie 3",
+   "de": "Ethik — Teil 3",
+   "it": "Etica — parte 3",
+   "ru": "Этика — часть 3",
+   "zh": "伦理学——第三部分",
+   "ja": "エチカ——第3部",
+   "ar": "الأخلاق — الجزء 3",
+   "hi": "नीतिशास्त्र — भाग 3"
+  }
+ },
+ {
+  "keys": [
+   "Ethics — Part 4"
+  ],
+  "titles": {
+   "ca": "Ètica — part 4",
+   "es": "Ética — parte 4",
+   "fr": "Éthique — partie 4",
+   "de": "Ethik — Teil 4",
+   "it": "Etica — parte 4",
+   "ru": "Этика — часть 4",
+   "zh": "伦理学——第四部分",
+   "ja": "エチカ——第4部",
+   "ar": "الأخلاق — الجزء 4",
+   "hi": "नीतिशास्त्र — भाग 4"
+  }
+ },
+ {
+  "keys": [
+   "Ethics — Part 5"
+  ],
+  "titles": {
+   "ca": "Ètica — part 5",
+   "es": "Ética — parte 5",
+   "fr": "Éthique — partie 5",
+   "de": "Ethik — Teil 5",
+   "it": "Etica — parte 5",
+   "ru": "Этика — часть 5",
+   "zh": "伦理学——第五部分",
+   "ja": "エチカ——第5部",
+   "ar": "الأخلاق — الجزء 5",
+   "hi": "नीतिशास्त्र — भाग 5"
+  }
+ },
+ {
+  "keys": [
+   "The Philosophy of Spinoza"
+  ],
+  "titles": {
+   "ca": "La filosofia de Spinoza",
+   "es": "La filosofía de Spinoza",
+   "fr": "La philosophie de Spinoza",
+   "de": "Die Philosophie Spinozas",
+   "it": "La filosofia di Spinoza",
+   "ru": "Философия Спинозы",
+   "zh": "斯宾诺莎哲学",
+   "ja": "スピノザの哲学",
+   "ar": "فلسفة سبينوزا",
+   "hi": "स्पिनोज़ा का दर्शन"
+  }
+ },
+ {
+  "keys": [
+   "Between Heathenism and Christianity"
+  ],
+  "titles": {
+   "ca": "Entre el paganisme i el cristianisme",
+   "es": "Entre el paganismo y el cristianismo",
+   "fr": "Entre le paganisme et le christianisme",
+   "de": "Zwischen Heidentum und Christentum",
+   "it": "Tra paganesimo e cristianesimo",
+   "ru": "Между язычеством и христианством",
+   "zh": "异教与基督教之间",
+   "ja": "異教とキリスト教の間で",
+   "ar": "بين الوثنية والمسيحية",
+   "hi": "बुतपरस्ती और ईसाई धर्म के बीच"
+  }
+ },
+ {
+  "keys": [
+   "Plutarch on the Delay of the Divine Justice"
+  ],
+  "titles": {
+   "ca": "Plutarc sobre el retard de la justícia divina",
+   "es": "Plutarco sobre el retraso de la justicia divina",
+   "fr": "Plutarque sur les délais de la justice divine",
+   "de": "Plutarch über die Verzögerung der göttlichen Gerechtigkeit",
+   "it": "Plutarco sul ritardo della giustizia divina",
+   "ru": "Плутарх о запаздывании божественного правосудия",
+   "zh": "普鲁塔克论神的正义之迟延",
+   "ja": "プルタルコス『神罰の遅れについて』",
+   "ar": "بلوتارخ في تأخر العدالة الإلهية",
+   "hi": "दैवीय न्याय के विलंब पर प्लूटार्क"
+  }
+ },
+ {
+  "keys": [
+   "Plutarch's Romane Questions"
+  ],
+  "titles": {
+   "ca": "Les qüestions romanes de Plutarc",
+   "es": "Las cuestiones romanas de Plutarco",
+   "fr": "Les questions romaines de Plutarque",
+   "de": "Plutarchs Römische Fragen",
+   "it": "Le questioni romane di Plutarco",
+   "ru": "Римские вопросы Плутарха",
+   "zh": "普鲁塔克罗马问题集",
+   "ja": "プルタルコス『ローマ的な質問』",
+   "ar": "المسائل الرومانية لبلوتارخ",
+   "hi": "प्लूटार्क के रोमन प्रश्न"
+  }
+ },
+ {
+  "keys": [
+   "Selected Essays of Plutarch, Vol. I."
+  ],
+  "titles": {
+   "ca": "Assaigs escollits de Plutarc, vol. I",
+   "es": "Ensayos escogidos de Plutarco, vol. I",
+   "fr": "Essais choisis de Plutarque, vol. I",
+   "de": "Ausgewählte Essays von Plutarch, Bd. I",
+   "it": "Saggi scelti di Plutarco, vol. I",
+   "ru": "Избранные очерки Плутарха, т. I",
+   "zh": "普鲁塔克文选，第一卷",
+   "ja": "プルタルコス選集 第1巻",
+   "ar": "مقالات مختارة لبلوتارخ، المجلد الأول",
+   "hi": "प्लूटार्क के चयनित निबंध, खंड I"
+  }
+ },
+ {
+  "keys": [
+   "Selected Essays of Plutarch, Vol. II."
+  ],
+  "titles": {
+   "ca": "Assaigs escollits de Plutarc, vol. II",
+   "es": "Ensayos escogidos de Plutarco, vol. II",
+   "fr": "Essais choisis de Plutarque, vol. II",
+   "de": "Ausgewählte Essays von Plutarch, Bd. II",
+   "it": "Saggi scelti di Plutarco, vol. II",
+   "ru": "Избранные очерки Плутарха, т. II",
+   "zh": "普鲁塔克文选，第二卷",
+   "ja": "プルタルコス選集 第2巻",
+   "ar": "مقالات مختارة لبلوتارخ، المجلد الثاني",
+   "hi": "प्लूटार्क के चयनित निबंध, खंड II"
+  }
+ },
+ {
+  "keys": [
+   "The Boys' and Girls' Plutarch"
+  ],
+  "titles": {
+   "ca": "El Plutarc dels nois i les noies",
+   "es": "El Plutarco de los niños y las niñas",
+   "fr": "Le Plutarque des garçons et des filles",
+   "de": "Der Plutarch für Jungen und Mädchen",
+   "it": "Il Plutarco per ragazzi e ragazze",
+   "ru": "Плутарх для мальчиков и девочек",
+   "zh": "儿童版普鲁塔克",
+   "ja": "少年少女のためのプルタルコス",
+   "ar": "بلوتارخ للأولاد والبنات",
+   "hi": "बच्चों के लिए प्लूटार्क"
+  }
+ },
+ {
+  "keys": [
+   "A History of England from Early Times A Linked Index to the Project Gutenberg Ed"
+  ],
+  "titles": {
+   "ca": "Història d'Anglaterra des dels primers temps: índex enllaçat de l'edició de Project Gutenberg",
+   "es": "Historia de Inglaterra desde los primeros tiempos: índice enlazado de la edición de Project Gutenberg",
+   "fr": "Histoire de l'Angleterre depuis les premiers temps : index lié de l'édition Project Gutenberg",
+   "de": "Geschichte Englands von den frühesten Zeiten: verknüpfter Index der Project-Gutenberg-Ausgabe",
+   "it": "Storia dell'Inghilterra dai tempi antichi: indice collegato dell'edizione di Project Gutenberg",
+   "ru": "История Англии с древнейших времён: указатель издания Project Gutenberg",
+   "zh": "英格兰早期史：古登堡计划版链接索引",
+   "ja": "初期からのイングランド史：プロジェクト・グーテンベルク版リンク索引",
+   "ar": "تاريخ إنجلترا منذ العصور الأولى: فهرس مرتبط لطبعة مشروع غوتنبرغ",
+   "hi": "प्रारंभिक काल से इंग्लैंड का इतिहास: प्रोजेक्ट गुटेनबर्ग संस्करण की अनुक्रमित सूची"
+  }
+ },
+ {
+  "keys": [
+   "Essays"
+  ],
+  "titles": {
+   "ca": "Assaigs",
+   "es": "Ensayos",
+   "fr": "Essais",
+   "de": "Essays",
+   "it": "Saggi",
+   "ru": "Эссе",
+   "zh": "随笔集",
+   "ja": "随筆集",
+   "ar": "مقالات",
+   "hi": "निबंध"
+  }
+ },
+ {
+  "keys": [
+   "Hume's Political Discourses"
+  ],
+  "titles": {
+   "ca": "Discursos polítics",
+   "es": "Discursos políticos",
+   "fr": "Discours politiques",
+   "de": "Politische Diskurse",
+   "it": "Discorsi politici",
+   "ru": "Политические рассуждения",
+   "zh": "政治论集",
+   "ja": "政治論集",
+   "ar": "خطابات سياسية",
+   "hi": "राजनीतिक प्रवचन"
+  }
+ },
+ {
+  "keys": [
+   "Philosophical Works, v. 1 (of 4)"
+  ],
+  "titles": {
+   "ca": "Obres filosòfiques, vol. 1 (de 4)",
+   "es": "Obras filosóficas, vol. 1 (de 4)",
+   "fr": "Œuvres philosophiques, vol. 1 (sur 4)",
+   "de": "Philosophische Werke, Bd. 1 (von 4)",
+   "it": "Opere filosofiche, vol. 1 (di 4)",
+   "ru": "Философские сочинения, т. 1 (из 4)",
+   "zh": "哲学著作集，第1卷（共4卷）",
+   "ja": "哲学著作集 第1巻（全4巻）",
+   "ar": "الأعمال الفلسفية، المجلد 1 (من 4)",
+   "hi": "दार्शनिक रचनाएँ, खंड 1 (4 में से)"
+  }
+ },
+ {
+  "keys": [
+   "Philosophical Works, v. 2 (of 4)"
+  ],
+  "titles": {
+   "ca": "Obres filosòfiques, vol. 2 (de 4)",
+   "es": "Obras filosóficas, vol. 2 (de 4)",
+   "fr": "Œuvres philosophiques, vol. 2 (sur 4)",
+   "de": "Philosophische Werke, Bd. 2 (von 4)",
+   "it": "Opere filosofiche, vol. 2 (di 4)",
+   "ru": "Философские сочинения, т. 2 (из 4)",
+   "zh": "哲学著作集，第2卷（共4卷）",
+   "ja": "哲学著作集 第2巻（全4巻）",
+   "ar": "الأعمال الفلسفية، المجلد 2 (من 4)",
+   "hi": "दार्शनिक रचनाएँ, खंड 2 (4 में से)"
+  }
+ },
+ {
+  "keys": [
+   "The History of England in Three Volumes, Vol. I., Part D."
+  ],
+  "titles": {
+   "ca": "La història d'Anglaterra en tres volums, vol. I, part D",
+   "es": "La historia de Inglaterra en tres volúmenes, vol. I, parte D",
+   "fr": "L'histoire de l'Angleterre en trois volumes, vol. I, partie D",
+   "de": "Die Geschichte Englands in drei Bänden, Bd. I, Teil D",
+   "it": "La storia dell'Inghilterra in tre volumi, vol. I, parte D",
+   "ru": "История Англии в трёх томах, т. I, часть D",
+   "zh": "英格兰史（三卷本），第一卷，D部分",
+   "ja": "イングランド史（全3巻）第1巻 D部",
+   "ar": "تاريخ إنجلترا في ثلاثة مجلدات، المجلد الأول، الجزء D",
+   "hi": "तीन खंडों में इंग्लैंड का इतिहास, खंड I, भाग D"
+  }
+ },
+ {
+  "keys": [
+   "The History of England, Volume I"
+  ],
+  "titles": {
+   "ca": "La història d'Anglaterra, volum I",
+   "es": "La historia de Inglaterra, volumen I",
+   "fr": "L'histoire de l'Angleterre, volume I",
+   "de": "Die Geschichte Englands, Band I",
+   "it": "La storia dell'Inghilterra, volume I",
+   "ru": "История Англии, том I",
+   "zh": "英格兰史，第一卷",
+   "ja": "イングランド史 第1巻",
+   "ar": "تاريخ إنجلترا، المجلد الأول",
+   "hi": "इंग्लैंड का इतिहास, खंड I"
+  }
+ },
+ {
+  "keys": [
+   "El Criterio"
+  ],
+  "titles": {
+   "ca": "El Criteri",
+   "es": "El Criterio",
+   "fr": "Le Critère",
+   "de": "Das Kriterium",
+   "it": "Il Criterio",
+   "ru": "Критерий",
+   "zh": "准则论",
+   "ja": "基準論",
+   "ar": "المعيار",
+   "hi": "मापदंड"
+  }
+ },
+ {
+  "keys": [
+   "El Protestantismo comparado con el Catolicismo en sus relaciones con la Civilización Europea"
+  ],
+  "titles": {
+   "ca": "El protestantisme comparat amb el catolicisme en les seves relacions amb la civilització europea",
+   "es": "El protestantismo comparado con el catolicismo en sus relaciones con la civilización europea",
+   "fr": "Le protestantisme comparé au catholicisme dans ses rapports avec la civilisation européenne",
+   "de": "Der Protestantismus im Vergleich zum Katholizismus in seinen Beziehungen zur europäischen Zivilisation",
+   "it": "Il protestantesimo confrontato con il cattolicesimo nei suoi rapporti con la civiltà europea",
+   "ru": "Протестантизм в сравнении с католицизмом в его отношениях с европейской цивилизацией",
+   "zh": "新教与天主教对欧洲文明关系之比较",
+   "ja": "ヨーロッパ文明との関係におけるプロテスタンティズムとカトリシズムの比較",
+   "ar": "البروتستانتية مقارنة بالكاثوليكية في علاقتهما بالحضارة الأوروبية",
+   "hi": "यूरोपीय सभ्यता से संबंधों में प्रोटेस्टेंटवाद की कैथोलिकवाद से तुलना"
+  }
+ },
+ {
+  "keys": [
+   "Filosofía fundamental, Tomo I"
+  ],
+  "titles": {
+   "ca": "Filosofia fonamental, tom I",
+   "es": "Filosofía fundamental, tomo I",
+   "fr": "Philosophie fondamentale, tome I",
+   "de": "Grundlegende Philosophie, Band I",
+   "it": "Filosofia fondamentale, tomo I",
+   "ru": "Основы философии, том I",
+   "zh": "基础哲学，第一卷",
+   "ja": "基礎哲学 第1巻",
+   "ar": "الفلسفة الأساسية، المجلد الأول",
+   "hi": "मूलभूत दर्शन, खंड I"
+  }
+ },
+ {
+  "keys": [
+   "Filosofía fundamental, Tomo II"
+  ],
+  "titles": {
+   "ca": "Filosofia fonamental, tom II",
+   "es": "Filosofía fundamental, tomo II",
+   "fr": "Philosophie fondamentale, tome II",
+   "de": "Grundlegende Philosophie, Band II",
+   "it": "Filosofia fondamentale, tomo II",
+   "ru": "Основы философии, том II",
+   "zh": "基础哲学，第二卷",
+   "ja": "基礎哲学 第2巻",
+   "ar": "الفلسفة الأساسية، المجلد الثاني",
+   "hi": "मूलभूत दर्शन, खंड II"
+  }
+ },
+ {
+  "keys": [
+   "Filosofía fundamental, Tomo III"
+  ],
+  "titles": {
+   "ca": "Filosofia fonamental, tom III",
+   "es": "Filosofía fundamental, tomo III",
+   "fr": "Philosophie fondamentale, tome III",
+   "de": "Grundlegende Philosophie, Band III",
+   "it": "Filosofia fondamentale, tomo III",
+   "ru": "Основы философии, том III",
+   "zh": "基础哲学，第三卷",
+   "ja": "基礎哲学 第3巻",
+   "ar": "الفلسفة الأساسية، المجلد الثالث",
+   "hi": "मूलभूत दर्शन, खंड III"
+  }
+ },
+ {
+  "keys": [
+   "Filosofía fundamental, Tomo IV"
+  ],
+  "titles": {
+   "ca": "Filosofia fonamental, tom IV",
+   "es": "Filosofía fundamental, tomo IV",
+   "fr": "Philosophie fondamentale, tome IV",
+   "de": "Grundlegende Philosophie, Band IV",
+   "it": "Filosofia fondamentale, tomo IV",
+   "ru": "Основы философии, том IV",
+   "zh": "基础哲学，第四卷",
+   "ja": "基礎哲学 第4巻",
+   "ar": "الفلسفة الأساسية، المجلد الرابع",
+   "hi": "मूलभूत दर्शन, खंड IV"
+  }
  }
 ]
