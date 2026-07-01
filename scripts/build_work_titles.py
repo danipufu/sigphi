@@ -286,6 +286,50 @@ WORKS: list[tuple[str, list[str]]] = [
     ("Group Psychology and the Analysis of the Ego", ["Massenpsychologie und Ich-Analyse (German)"]),
     # --- Paine ---
     ("Common Sense (pamphlet)", ["Common Sense"]),
+    # --- Ciceró ---
+    ("De Officiis", ["De Officiis EN"]),
+    ("Cato Maior de Senectute", ["Cato Maior de Senectute with Introduction and Notes (Latin)", "Treatises on Friendship and Old Age"]),
+    ("Laelius de Amicitia", ["Laelius de Amicitia"]),
+    ("De Natura Deorum", ["De Natura Deorum EN"]),
+    ("Tusculanae Disputationes", ["Cicero's Tusculan Disputations"]),
+    ("De Oratore", ["De Oratore (On Oratory and Orators)"]),
+    ("De re publica", ["The republic of Cicero"]),
+    ("De Divinatione", ["On Divination and On the Laws (Yonge Treatises of Cicero)"]),
+    ("Paradoxa Stoicorum", ["Paradoxa Stoicorum"]),
+    # --- Sèneca ---
+    ("Epistulae Morales ad Lucilium", ["Moral Letters to Lucilius (Epistulae Morales)", "Epistles EN", "Epistles LA"]),
+    ("De Brevitate Vitae", ["De brevitate vitae"]),
+    ("De Clementia", ["De clementia"]),
+    ("De Constantia Sapientis", ["De constantia sapientis", "On the Firmness of the Wise Man"]),
+    ("De Otio", ["De otio", "Of Leisure"]),
+    ("De Providentia", ["De providentia", "Of Providence"]),
+    ("De Tranquillitate Animi", ["De tranquillitate animi", "Of Peace of Mind"]),
+    ("De Vita Beata", ["De vita beata"]),
+    ("De Beneficiis", ["L. Annaeus Seneca on Benefits"]),
+    ("Apocolocyntosis", ["Apocolocyntosis", "Apocolocyntosis divi Claudii"]),
+    ("Thyestes (Seneca)", ["Thyestes"]),
+    # --- Plutarc ---
+    ("Parallel Lives", ["Plutarch's Lives, Volume 1 (of 4)", "Plutarch's Lives, Volume 2 (of 4)", "Plutarch's Lives, Volume 3 (of 4)", "Plutarch's Lives, Volume 4 (of 4)", "Plutarch Lives of the noble Grecians and Romans", "Lives EN vol1"]),
+    ("Moralia", ["Plutarch's Morals", "Complete Works of Plutarch — Volume 3 Essays and Miscellanies"]),
+    # --- Xenofont ---
+    ("Anabasis (Xenophon)", ["Anabasis", "The First Four Books of Xenophon's Anabasis", "The retreat of the ten thousand"]),
+    ("Cyropaedia", ["Cyropaedia The Education of Cyrus"]),
+    ("Memorabilia (Xenophon)", ["The Memorabilia", "The Memorable Thoughts of Socrates"]),
+    ("Hellenica (Xenophon)", ["Hellenica"]),
+    ("Symposium (Xenophon)", ["The Symposium"]),
+    ("Oeconomicus", ["The Economist"]),
+    # --- Erasme ---
+    ("In Praise of Folly", ["In Praise of Folly", "The Praise of Folly"]),
+    # --- Thomas More ---
+    ("Utopia (book)", ["Utopia"]),
+    # --- Textos orientals / sagrats ---
+    ("Tao Te Ching", ["The Tao Teh King, or the Tao and its Characteristics", "道德經 by Laozi"]),
+    ("Mencius (book)", ["孟子 (Chinese)"]),
+    ("Zhuangzi (book)", ["Chuang Tzu Mystic, Moralist, and Social Reformer"]),
+    ("The Art of War", ["The Art of War", "Sun Tzŭ on the Art of War The Oldest Military Treatise in the World"]),
+    ("Bhagavad Gita", ["Bhagavad Gita (The Song Celestial)"]),
+    ("Dhammapada", ["The Dhammapada"]),
+    ("Upanishads", ["The Upanishads"]),
 ]
 
 

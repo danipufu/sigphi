@@ -2489,5 +2489,531 @@
    "ja": "コモン・センス",
    "ar": "الفطرة السليمة"
   }
+ },
+ {
+  "keys": [
+   "De Officiis EN"
+  ],
+  "titles": {
+   "ca": "Dels deures",
+   "es": "De officiis",
+   "fr": "De officiis",
+   "de": "De officiis",
+   "it": "De officiis",
+   "ru": "Об обязанностях",
+   "zh": "论义务",
+   "ja": "義務について"
+  }
+ },
+ {
+  "keys": [
+   "Cato Maior de Senectute with Introduction and Notes (Latin)",
+   "Treatises on Friendship and Old Age"
+  ],
+  "titles": {
+   "ca": "Cató el Vell: De la vellesa",
+   "fr": "Cato Maior de Senectute",
+   "de": "Cato maior de senectute",
+   "it": "Cato Maior de senectute",
+   "ru": "О старости",
+   "ja": "大カトー・老年について"
+  }
+ },
+ {
+  "keys": [
+   "Laelius de Amicitia"
+  ],
+  "titles": {
+   "ca": "Leli: De l'amistat",
+   "es": "Laelius de amicitia",
+   "fr": "Laelius de amicitia",
+   "de": "Laelius de amicitia",
+   "it": "Laelius de amicitia",
+   "ru": "Лелий, или О дружбе",
+   "zh": "論友誼",
+   "ja": "ラエリウス・友情について"
+  }
+ },
+ {
+  "keys": [
+   "De Natura Deorum EN"
+  ],
+  "titles": {
+   "ca": "La naturalesa dels déus",
+   "es": "De natura deorum",
+   "fr": "De natura deorum",
+   "de": "De natura deorum",
+   "it": "De natura deorum"
+  }
+ },
+ {
+  "keys": [
+   "Cicero's Tusculan Disputations"
+  ],
+  "titles": {
+   "ca": "Tusculanes",
+   "fr": "Tusculanes",
+   "de": "Tusculanae disputationes",
+   "it": "Tusculanae disputationes",
+   "ru": "Тускуланские беседы",
+   "ja": "トゥスクルム荘対談集"
+  }
+ },
+ {
+  "keys": [
+   "De Oratore (On Oratory and Orators)"
+  ],
+  "titles": {
+   "ca": "De l'orador",
+   "es": "De oratore",
+   "fr": "De oratore",
+   "de": "De oratore",
+   "it": "De oratore",
+   "ru": "Об ораторе",
+   "ja": "弁論家について"
+  }
+ },
+ {
+  "keys": [
+   "The republic of Cicero"
+  ],
+  "titles": {
+   "ca": "La República",
+   "es": "De re publica",
+   "fr": "De Republica",
+   "de": "De re publica",
+   "it": "De re publica",
+   "ru": "О государстве",
+   "zh": "國家篇",
+   "ja": "国家について"
+  }
+ },
+ {
+  "keys": [
+   "On Divination and On the Laws (Yonge Treatises of Cicero)"
+  ],
+  "titles": {
+   "ca": "De divinatione",
+   "es": "De divinatione",
+   "fr": "De divinatione",
+   "de": "De divinatione",
+   "it": "De divinatione",
+   "ja": "占いについて"
+  }
+ },
+ {
+  "keys": [
+   "Paradoxa Stoicorum"
+  ],
+  "titles": {
+   "ca": "Les paradoxes dels estoics",
+   "es": "Paradoxa Stoicorum",
+   "fr": "Paradoxes des stoïciens",
+   "de": "Paradoxa Stoicorum",
+   "it": "Paradoxa stoicorum",
+   "ru": "Парадоксы стоиков"
+  }
+ },
+ {
+  "keys": [
+   "Moral Letters to Lucilius (Epistulae Morales)",
+   "Epistles EN",
+   "Epistles LA"
+  ],
+  "titles": {
+   "ca": "Epistulae morales ad Lucilium",
+   "es": "Cartas a Lucilio",
+   "fr": "Lettres à Lucilius",
+   "de": "Epistulae morales",
+   "it": "Epistulae morales ad Lucilium",
+   "ru": "Нравственные письма к Луцилию",
+   "ar": "رسائل أخلاقية إلى لوسيلوس"
+  }
+ },
+ {
+  "keys": [
+   "De brevitate vitae"
+  ],
+  "titles": {
+   "ca": "Gaudeamus igitur",
+   "es": "Gaudeamus igitur",
+   "fr": "Gaudeamus igitur",
+   "de": "Gaudeamus igitur",
+   "it": "Gaudeamus igitur",
+   "ru": "Гаудеамус",
+   "zh": "让我们欢乐吧",
+   "ja": "ガウデアムス"
+  }
+ },
+ {
+  "keys": [
+   "De clementia"
+  ],
+  "titles": {
+   "es": "Sobre la clemencia",
+   "de": "De clementia",
+   "it": "De clementia"
+  }
+ },
+ {
+  "keys": [
+   "De constantia sapientis",
+   "On the Firmness of the Wise Man"
+  ],
+  "titles": {
+   "es": "De la firmeza del sabio",
+   "fr": "De la constance du sage",
+   "it": "De constantia sapientis"
+  }
+ },
+ {
+  "keys": [
+   "De otio",
+   "Of Leisure"
+  ],
+  "titles": {
+   "de": "De otio",
+   "it": "De otio",
+   "ar": "عن أوقات الفراغ"
+  }
+ },
+ {
+  "keys": [
+   "De providentia",
+   "Of Providence"
+  ],
+  "titles": {
+   "es": "De la providencia",
+   "fr": "De la providence",
+   "it": "De providentia"
+  }
+ },
+ {
+  "keys": [
+   "De tranquillitate animi",
+   "Of Peace of Mind"
+  ],
+  "titles": {
+   "es": "De tranquillitate animi",
+   "fr": "Sur la tranquillité de l'âme",
+   "it": "De tranquillitate animi"
+  }
+ },
+ {
+  "keys": [
+   "De vita beata"
+  ],
+  "titles": {
+   "ca": "De la vida benaurada",
+   "es": "De la felicidad",
+   "fr": "De la vie heureuse",
+   "de": "De vita beata",
+   "it": "De vita beata",
+   "ar": "عن الحياة السعيدة"
+  }
+ },
+ {
+  "keys": [
+   "L. Annaeus Seneca on Benefits"
+  ],
+  "titles": {
+   "ca": "De Beneficiis",
+   "es": "De los beneficios",
+   "fr": "Des bienfaits",
+   "it": "De beneficiis"
+  }
+ },
+ {
+  "keys": [
+   "Apocolocyntosis",
+   "Apocolocyntosis divi Claudii"
+  ],
+  "titles": {
+   "ca": "Apocolocyntosis divi Claudii",
+   "es": "Apocolocyntosis divi Claudii",
+   "fr": "Apocoloquintose",
+   "de": "Apocolocyntosis",
+   "it": "Apokolokyntosis",
+   "ru": "Отыквление"
+  }
+ },
+ {
+  "keys": [
+   "Thyestes"
+  ],
+  "titles": {
+   "fr": "Thyeste",
+   "de": "Thyestes",
+   "it": "Tieste",
+   "ru": "Фиест"
+  }
+ },
+ {
+  "keys": [
+   "Plutarch's Lives, Volume 1 (of 4)",
+   "Plutarch's Lives, Volume 2 (of 4)",
+   "Plutarch's Lives, Volume 3 (of 4)",
+   "Plutarch's Lives, Volume 4 (of 4)",
+   "Plutarch Lives of the noble Grecians and Romans",
+   "Lives EN vol1"
+  ],
+  "titles": {
+   "ca": "Vides paral·leles",
+   "es": "Vidas paralelas",
+   "fr": "Vies parallèles",
+   "de": "Plutarch#Parallelbiographien",
+   "it": "Vite parallele",
+   "ru": "Сравнительные жизнеописания",
+   "zh": "希腊罗马名人传",
+   "ja": "対比列伝",
+   "ar": "حيوات موازية"
+  }
+ },
+ {
+  "keys": [
+   "Plutarch's Morals",
+   "Complete Works of Plutarch — Volume 3 Essays and Miscellanies"
+  ],
+  "titles": {
+   "ca": "Escrits d'ètica pràctica",
+   "es": "Moralia",
+   "fr": "Œuvres morales",
+   "it": "Moralia",
+   "ru": "Моралии",
+   "ja": "モラリア"
+  }
+ },
+ {
+  "keys": [
+   "Anabasis",
+   "The First Four Books of Xenophon's Anabasis",
+   "The retreat of the ten thousand"
+  ],
+  "titles": {
+   "ca": "Anàbasi",
+   "es": "Anábasis",
+   "fr": "Anabase",
+   "de": "Anabasis",
+   "it": "Anabasi",
+   "ru": "Анабасис Кира",
+   "zh": "长征记",
+   "ja": "アナバシス",
+   "ar": "الأناباسيس"
+  }
+ },
+ {
+  "keys": [
+   "Cyropaedia The Education of Cyrus"
+  ],
+  "titles": {
+   "es": "Ciropedia",
+   "fr": "Cyropédie",
+   "it": "Ciropedia",
+   "ru": "Киропедия",
+   "zh": "居鲁士的教育",
+   "ja": "キュロスの教育"
+  }
+ },
+ {
+  "keys": [
+   "The Memorabilia",
+   "The Memorable Thoughts of Socrates"
+  ],
+  "titles": {
+   "fr": "Mémorables",
+   "it": "Memorabili",
+   "ru": "Воспоминания о Сократе",
+   "zh": "回憶蘇格拉底",
+   "ja": "ソクラテスの思い出"
+  }
+ },
+ {
+  "keys": [
+   "Hellenica"
+  ],
+  "titles": {
+   "ca": "Hel·lèniques",
+   "es": "Helénicas",
+   "fr": "Helléniques",
+   "de": "Hellenika",
+   "it": "Elleniche",
+   "ru": "Греческая история",
+   "zh": "希腊史",
+   "ja": "ギリシア史"
+  }
+ },
+ {
+  "keys": [
+   "The Symposium"
+  ],
+  "titles": {
+   "ca": "Simposi",
+   "fr": "Le Banquet",
+   "de": "Symposion",
+   "it": "Simposio",
+   "ru": "Пир",
+   "ja": "饗宴"
+  }
+ },
+ {
+  "keys": [
+   "The Economist"
+  ],
+  "titles": {
+   "ca": "Ecònomic",
+   "es": "Económico",
+   "fr": "Économique",
+   "de": "Oikonomikos",
+   "it": "Economico",
+   "ru": "Домострой",
+   "ja": "家政論"
+  }
+ },
+ {
+  "keys": [
+   "In Praise of Folly",
+   "The Praise of Folly"
+  ],
+  "titles": {
+   "ca": "Elogi de la follia",
+   "es": "Elogio de la locura",
+   "fr": "Éloge de la folie",
+   "de": "Lob der Torheit",
+   "it": "Elogio della follia",
+   "ru": "Похвала глупости",
+   "zh": "愚人颂",
+   "ja": "痴愚神礼讃",
+   "ar": "مديح الحمق"
+  }
+ },
+ {
+  "keys": [
+   "Utopia"
+  ],
+  "titles": {
+   "ca": "Utopia",
+   "es": "Utopía",
+   "fr": "L'Utopie",
+   "de": "Utopia",
+   "it": "Utopia",
+   "ru": "Утопия",
+   "zh": "乌托邦",
+   "ja": "ユートピア",
+   "ar": "يوتوبيا"
+  }
+ },
+ {
+  "keys": [
+   "The Tao Teh King, or the Tao and its Characteristics",
+   "道德經 by Laozi"
+  ],
+  "titles": {
+   "ca": "Daodejing",
+   "es": "Dàodé jīng",
+   "fr": "Dao de jing",
+   "de": "Daodejing",
+   "it": "Daodejing",
+   "ru": "Дао дэ цзин",
+   "zh": "老子",
+   "ja": "老子道徳経",
+   "ar": "داوديجنغ",
+   "hi": "ताओ-ते-चिंग"
+  }
+ },
+ {
+  "keys": [
+   "孟子 (Chinese)"
+  ],
+  "titles": {
+   "es": "Mencio",
+   "it": "Mencio",
+   "ru": "Мэнцзы",
+   "zh": "孟子",
+   "ja": "孟子"
+  }
+ },
+ {
+  "keys": [
+   "Chuang Tzu Mystic, Moralist, and Social Reformer"
+  ],
+  "titles": {
+   "ca": "Zhuangzi",
+   "es": "Libro de Zhuangzi",
+   "fr": "Zhuangzi",
+   "de": "Nanhua zhenjing",
+   "it": "Zhuāngzǐ",
+   "ru": "Чжуан-цзы",
+   "zh": "莊子",
+   "ja": "荘子",
+   "ar": "جوانغ زي"
+  }
+ },
+ {
+  "keys": [
+   "The Art of War",
+   "Sun Tzŭ on the Art of War The Oldest Military Treatise in the World"
+  ],
+  "titles": {
+   "ca": "L'Art de la Guerra",
+   "es": "El arte de la guerra",
+   "fr": "L'Art de la guerre",
+   "de": "Die Kunst des Krieges",
+   "it": "L'arte della guerra",
+   "ru": "Искусство войны",
+   "zh": "孙子兵法",
+   "ja": "孫子",
+   "ar": "فن الحرب",
+   "hi": "सून त्ज़ू बींग्फ़ा"
+  }
+ },
+ {
+  "keys": [
+   "Bhagavad Gita (The Song Celestial)"
+  ],
+  "titles": {
+   "ca": "Bhagavad Gita",
+   "es": "Bhagavad-gītā",
+   "fr": "Bhagavad-Gītā",
+   "de": "Bhagavad Gita",
+   "it": "Bhagavadgītā",
+   "ru": "Бхагавадгита",
+   "zh": "薄伽梵歌",
+   "ja": "バガヴァッド・ギーター",
+   "ar": "البهاغافاد غيتا",
+   "hi": "श्रीमद्भगवद्गीता"
+  }
+ },
+ {
+  "keys": [
+   "The Dhammapada"
+  ],
+  "titles": {
+   "ca": "Dhammapada",
+   "es": "Dhammapada",
+   "fr": "Dhammapada",
+   "de": "Dhammapada",
+   "it": "Dhammapada",
+   "ru": "Дхаммапада",
+   "zh": "法句經",
+   "ja": "法句経",
+   "hi": "धम्मपद"
+  }
+ },
+ {
+  "keys": [
+   "The Upanishads"
+  ],
+  "titles": {
+   "ca": "Upanixad",
+   "es": "Upanishad",
+   "fr": "Upanishad",
+   "de": "Upanishaden",
+   "it": "Upaniṣad",
+   "ru": "Упанишады",
+   "zh": "奥义书",
+   "ja": "ウパニシャッド",
+   "ar": "الأبانيشاد",
+   "hi": "उपनिषद्"
+  }
  }
 ]
