@@ -272,6 +272,16 @@ TEXTS: list[tuple] = [
      "les fal·làcies lògiques; traducció anglesa d'Octavius F. Owen (1853), domini "
      "públic. Text de Wikisource.",
      "Aristotle__Sophistical_Refutations_Owen_en.txt"),
+
+    # --- Lot 29: Bakunin en rus original (cap traducció anglesa segura en PD) ---
+    ("ru", "Государственность и анархия (Бакунин)",
+     "Mikhail Bakunin", "Государственность и анархия (Statism and Anarchy)", "Russian",
+     "Selection / partial", "Written by the author",
+     "Obra major de Bakunin (1873) sobre l'estat, el marxisme autoritari i "
+     "l'anarquisme; escrita originalment en rus (sense problema de traductor: "
+     "Bakunin †1876, domini públic). La transcripció de Wikisource és parcial "
+     "(talla a mig text) però substancial (~25.000 paraules). Text de Wikisource.",
+     "Bakunin__Gosudarstvennost_i_anarkhiya_ru.txt"),
 ]
 
 _SKIP_TAGS = {"script", "style", "sup", "table"}

@@ -12320,5 +12320,17 @@
   "titles": {
    "zh": "我的自传"
   }
+ },
+ {
+  "keys": [
+   "Государственность и анархия (Statism and Anarchy)"
+  ],
+  "titles": {
+   "ca": "Estatisme i anarquia",
+   "es": "Estatismo y anarquía",
+   "fr": "Étatisme et anarchie",
+   "it": "Stato e anarchia",
+   "ru": "Государственность и анархия"
+  }
  }
 ]

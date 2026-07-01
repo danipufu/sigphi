@@ -547,6 +547,8 @@ WORKS: list[tuple[str, list[str]]] = [
     # --- Lot 28 ---
     ("Reflections on Violence", ["Reflections on Violence"]),
     ("Memoirs of a Revolutionist", ["Memoirs of a Revolutionist"]),
+    # --- Lot 29 ---
+    ("Statism and Anarchy", ["Государственность и анархия (Statism and Anarchy)"]),
 ]
 
 
