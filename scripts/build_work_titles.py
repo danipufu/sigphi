@@ -549,6 +549,10 @@ WORKS: list[tuple[str, list[str]]] = [
     ("Memoirs of a Revolutionist", ["Memoirs of a Revolutionist"]),
     # --- Lot 29 ---
     ("Statism and Anarchy", ["Государственность и анархия (Statism and Anarchy)"]),
+    # --- Lot 30 ---
+    ("Principles of the Philosophy of the Future", ["Grundsätze der Philosophie der Zukunft"]),
+    ("The General Idea of the Revolution in the Nineteenth Century",
+     ["Idée générale de la Révolution au dix-neuvième siècle"]),
 ]
 
 

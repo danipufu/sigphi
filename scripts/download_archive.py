@@ -691,6 +691,16 @@ TEXTS = [
      "revolucionari anarquista. Original anglès, domini públic (Kropotkin †1921). "
      "Digitalització OCR.",
      "Peter_Kropotkin__Memoirs_of_a_Revolutionist_en.txt"),
+
+    # --- Lot 30: obra en idioma ORIGINAL quan la traducció anglesa no és PD/lliure ---
+    ("philosophiederzu00feue", "philosophiederzu00feue_djvu.txt",
+     "Ludwig Feuerbach", "Grundsätze der Philosophie der Zukunft", "German",
+     "Complete work", "Written by the author",
+     "Principis de la filosofia del futur (1843) de Feuerbach: crítica de l'idealisme "
+     "hegelià i fonamentació del materialisme antropològic. Alemany original (les "
+     "traduccions angleses modernes no són PD; Feuerbach †1872 -> l'original sí). "
+     "Digitalització OCR.",
+     "Ludwig_Feuerbach__Grundsaetze_der_Philosophie_der_Zukunft_de.txt"),
 ]
 
 

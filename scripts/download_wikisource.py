@@ -282,6 +282,16 @@ TEXTS: list[tuple] = [
      "Bakunin †1876, domini públic). La transcripció de Wikisource és parcial "
      "(talla a mig text) però substancial (~25.000 paraules). Text de Wikisource.",
      "Bakunin__Gosudarstvennost_i_anarkhiya_ru.txt"),
+
+    # --- Lot 30: francès original (la trad. anglesa Robinson 1923 és de préstec restringit) ---
+    ("fr", "Idée générale de la Révolution au dix-neuvième siècle/Texte entier",
+     "Proudhon", "Idée générale de la Révolution au dix-neuvième siècle", "French",
+     "Complete work", "Written by the author",
+     "Manifest de Proudhon (1851) a favor del federalisme mutualista i contra "
+     "l'estat centralitzat; obra fundacional de l'anarquisme. Francès original "
+     "(la traducció anglesa de John Beverly Robinson, 1923, PD, només es troba "
+     "en préstec restringit a Internet Archive). Text de Wikisource.",
+     "Proudhon__Idee_generale_de_la_Revolution_fr.txt"),
 ]
 
 _SKIP_TAGS = {"script", "style", "sup", "table"}
