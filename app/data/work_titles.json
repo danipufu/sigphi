@@ -3015,5 +3015,247 @@
    "ar": "الأبانيشاد",
    "hi": "उपनिषद्"
   }
+ },
+ {
+  "keys": [
+   "The positive philosophy of Auguste Comte;"
+  ],
+  "titles": {
+   "ca": "Curs de filosofia positiva",
+   "es": "Curso de filosofía positiva",
+   "fr": "Cours de philosophie positive",
+   "it": "Corso di filosofia positiva",
+   "zh": "實證哲學教程",
+   "ja": "実証哲学講義"
+  }
+ },
+ {
+  "keys": [
+   "On a New List of Categories"
+  ],
+  "titles": {
+   "ca": "Charles Sanders Peirce",
+   "es": "Charles Sanders Peirce",
+   "fr": "Charles Sanders Peirce",
+   "de": "Charles Sanders Peirce",
+   "it": "Charles Sanders Peirce",
+   "ru": "Пирс, Чарльз Сандерс",
+   "zh": "查尔斯·桑德斯·皮尔士",
+   "ja": "チャールズ・サンダース・パース",
+   "ar": "تشارلز ساندرز برس",
+   "hi": "चार्ल्स सैंडर्स पियर्स"
+  }
+ },
+ {
+  "keys": [
+   "De la division du travail social (1893)"
+  ],
+  "titles": {
+   "es": "La división del trabajo social",
+   "fr": "De la division du travail social",
+   "zh": "社会分工论",
+   "ja": "社会分業論"
+  }
+ },
+ {
+  "keys": [
+   "Le Suicide: Étude de sociologie"
+  ],
+  "titles": {
+   "fr": "Suicide",
+   "de": "Suicide",
+   "it": "Suicide",
+   "ru": "Самоубийство",
+   "ja": "自殺"
+  }
+ },
+ {
+  "keys": [
+   "Les Règles de la méthode sociologique (1895)"
+  ],
+  "titles": {
+   "ca": "Les règles de la méthode sociologique",
+   "es": "Las reglas del método sociológico",
+   "fr": "Les Règles de la méthode sociologique",
+   "zh": "社会学方法的准则"
+  }
+ },
+ {
+  "keys": [
+   "The Elementary Forms of the Religious Life"
+  ],
+  "titles": {
+   "es": "Las formas elementales de la vida religiosa",
+   "fr": "Les Formes élémentaires de la vie religieuse",
+   "de": "Die elementaren Formen des religiösen Lebens",
+   "zh": "宗教生活的基本形式"
+  }
+ },
+ {
+  "keys": [
+   "La scienza nuova — Volume I",
+   "La scienza nuova — Volume II",
+   "La scienza nuova — Volume III"
+  ],
+  "titles": {
+   "ca": "Scienza nuova",
+   "es": "Principios de ciencia nueva",
+   "it": "Scienza nuova",
+   "ru": "Новая наука",
+   "zh": "新科学"
+  }
+ },
+ {
+  "keys": [
+   "Social Statics"
+  ],
+  "titles": {
+   "ru": "Социальная статика"
+  }
+ },
+ {
+  "keys": [
+   "The Essence of Christianity"
+  ],
+  "titles": {
+   "es": "La esencia del cristianismo",
+   "fr": "L'Essence du christianisme",
+   "de": "Das Wesen des Christentums",
+   "zh": "基督教的本质"
+  }
+ },
+ {
+  "keys": [
+   "Tractatus Logico-Philosophicus (Ogden)"
+  ],
+  "titles": {
+   "ca": "Tractatus logico-philosophicus",
+   "es": "Tractatus logico-philosophicus",
+   "fr": "Tractatus logico-philosophicus",
+   "de": "Tractatus logico-philosophicus",
+   "it": "Tractatus logico-philosophicus",
+   "ru": "Логико-философский трактат",
+   "zh": "逻辑哲学论",
+   "ja": "論理哲学論考",
+   "ar": "مصنف منطقي فلسفي",
+   "hi": "ट्रक्टेटुस लॉजिको-फिलोसोफिक्स"
+  }
+ },
+ {
+  "keys": [
+   "The Guide of the Perplexed"
+  ],
+  "titles": {
+   "ca": "Guia de perplexos",
+   "es": "Guía de los perplejos",
+   "fr": "Guide des égarés",
+   "de": "Führer der Unschlüssigen",
+   "it": "La guida dei perplessi",
+   "ru": "Путеводитель растерянных",
+   "ar": "دلالة الحائرين"
+  }
+ },
+ {
+  "keys": [
+   "The Ego and His Own"
+  ],
+  "titles": {
+   "ca": "L'únic i la seva propietat",
+   "es": "El único y su propiedad",
+   "fr": "L'Unique et sa propriété",
+   "de": "Der Einzige und sein Eigentum",
+   "it": "L'Unico e la sua proprietà",
+   "ru": "Единственный и его достояние",
+   "zh": "唯一者及其所有物",
+   "ar": "الأنا وذاتها"
+  }
+ },
+ {
+  "keys": [
+   "The Protestant ethic and the spirit of capitalism"
+  ],
+  "titles": {
+   "ca": "L'ètica protestant i l'esperit del capitalisme",
+   "es": "La ética protestante y el espíritu del capitalismo",
+   "fr": "L'Éthique protestante et l'Esprit du capitalisme",
+   "de": "Die protestantische Ethik und der Geist des Kapitalismus",
+   "it": "L'etica protestante e lo spirito del capitalismo",
+   "ru": "Протестантская этика и дух капитализма",
+   "zh": "新教倫理與資本主義精神",
+   "ja": "プロテスタンティズムの倫理と資本主義の精神",
+   "ar": "الأخلاق البروتستانتية وروح الرأسمالية"
+  }
+ },
+ {
+  "keys": [
+   "Politik als Beruf (Politics as a Vocation)"
+  ],
+  "titles": {
+   "es": "La política como vocación",
+   "fr": "Le Savant et le Politique",
+   "de": "Politik als Beruf",
+   "it": "La politica come professione",
+   "ru": "Политика как призвание и профессия",
+   "ja": "職業としての政治"
+  }
+ },
+ {
+  "keys": [
+   "Wissenschaft als Beruf (Science as a Vocation)"
+  ],
+  "titles": {
+   "es": "La ciencia como vocación",
+   "de": "Wissenschaft als Beruf",
+   "it": "La scienza come professione",
+   "zh": "學術作為一種志業",
+   "ja": "職業としての学問"
+  }
+ },
+ {
+  "keys": [
+   "Mutual Aid: A Factor of Evolution"
+  ],
+  "titles": {
+   "ca": "El suport mutu: un factor d'evolució",
+   "es": "El apoyo mutuo",
+   "fr": "L'Entraide, un facteur de l'évolution",
+   "de": "Gegenseitige Hilfe in der Tier- und Menschenwelt",
+   "it": "Il mutuo appoggio: un fattore dell'evoluzione",
+   "zh": "互助论：进化的一个要素",
+   "ja": "相互扶助論",
+   "ar": "العون المتبادل: أحد عوامل التطور"
+  }
+ },
+ {
+  "keys": [
+   "The Conquest of Bread"
+  ],
+  "titles": {
+   "ca": "La conquesta del pa",
+   "es": "La conquista del pan",
+   "fr": "La Conquête du pain",
+   "de": "Die Eroberung des Brotes",
+   "ru": "Хлеб и воля",
+   "zh": "面包与自由",
+   "ja": "パンの略取",
+   "ar": "الاستيلاء على الخبز"
+  }
+ },
+ {
+  "keys": [
+   "What is Property? An Inquiry into the Principle of Right and of Government"
+  ],
+  "titles": {
+   "ca": "Pierre-Joseph Proudhon",
+   "es": "Pierre-Joseph Proudhon",
+   "fr": "Pierre-Joseph Proudhon",
+   "de": "Pierre-Joseph Proudhon",
+   "it": "Pierre-Joseph Proudhon",
+   "ru": "Прудон, Пьер-Жозеф",
+   "zh": "皮埃爾-約瑟夫·普魯東",
+   "ja": "ピエール・ジョゼフ・プルードン",
+   "ar": "بيير جوزيف برودون",
+   "hi": "पिएर जोसेफ प्रूधों"
+  }
  }
 ]

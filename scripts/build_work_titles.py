@@ -330,6 +330,46 @@ WORKS: list[tuple[str, list[str]]] = [
     ("Bhagavad Gita", ["Bhagavad Gita (The Song Celestial)"]),
     ("Dhammapada", ["The Dhammapada"]),
     ("Upanishads", ["The Upanishads"]),
+    # --- Al-Ghazali ---
+    ("Deliverance from Error", ["The Confessions of Al Ghazzali"]),
+    # --- Comte ---
+    ("A General View of Positivism", ["A General View of Positivism"]),
+    ("Course of Positive Philosophy", ["The positive philosophy of Auguste Comte;"]),
+    # --- Peirce ---
+    ("The Fixation of Belief", ["The Fixation of Belief"]),
+    ("On a New List of Categories", ["On a New List of Categories"]),
+    # --- Durkheim ---
+    ("The Division of Labour in Society", ["De la division du travail social (1893)"]),
+    ("Suicide (book)", ["Le Suicide: Étude de sociologie"]),
+    ("The Rules of Sociological Method", ["Les Règles de la méthode sociologique (1895)"]),
+    ("The Elementary Forms of the Religious Life", ["The Elementary Forms of the Religious Life"]),
+    # --- Vico ---
+    ("The New Science", ["La scienza nuova — Volume I", "La scienza nuova — Volume II", "La scienza nuova — Volume III"]),
+    # --- Giordano Bruno ---
+    ("De gli eroici furori", ["The Heroic Enthusiasts (Gli Eroici Furori) Part the First"]),
+    # --- Herbert Spencer ---
+    ("The Man Versus the State", ["The Man versus the State"]),
+    ("The Study of Sociology", ["The Study of Sociology"]),
+    ("Social Statics", ["Social Statics"]),
+    ("First Principles (book)", ["First Principles"]),
+    # --- Feuerbach ---
+    ("The Essence of Christianity", ["The Essence of Christianity"]),
+    # --- Wittgenstein ---
+    ("Tractatus Logico-Philosophicus", ["Tractatus Logico-Philosophicus (Ogden)"]),
+    # --- Maimònides ---
+    ("The Guide for the Perplexed", ["The Guide of the Perplexed"]),
+    ("Eight Chapters", ["The eight chapters of Maimonides on ethics (Shemonah perakim);"]),
+    # --- Stirner ---
+    ("The Ego and Its Own", ["The Ego and His Own"]),
+    # --- Weber ---
+    ("The Protestant Ethic and the Spirit of Capitalism", ["The Protestant ethic and the spirit of capitalism"]),
+    ("Politics as a Vocation", ["Politik als Beruf (Politics as a Vocation)"]),
+    ("Science as a Vocation", ["Wissenschaft als Beruf (Science as a Vocation)"]),
+    # --- Kropotkin ---
+    ("Mutual Aid: A Factor of Evolution", ["Mutual Aid: A Factor of Evolution"]),
+    ("The Conquest of Bread", ["The Conquest of Bread"]),
+    # --- Proudhon ---
+    ("What Is Property?", ["What is Property? An Inquiry into the Principle of Right and of Government"]),
 ]
 
 
