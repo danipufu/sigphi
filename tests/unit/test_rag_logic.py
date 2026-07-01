@@ -1,7 +1,7 @@
 """Capa 1 del banc de proves: tests DETERMINISTES de la lògica RAG (sense LLM ni BD).
 
 Cobreix les funcions pures que defineixen el comportament citable de SigPhi:
-  - split_suggestions  : separació del bloc [[SUGGESTIONS]] (regla 21)
+  - split_suggestions  : neteja defensiva d'un bloc [[SUGGESTIONS]] espontani
   - _is_followup       : detecció de seguiments (canvi d'idioma, "explica més"…)
   - caveats            : avisos de discriminació / context / completesa-autoria
   - get_sources        : marca ⚠ a les fonts fragmentàries o discriminatòries
@@ -17,7 +17,7 @@ from app.domain.models import Chunk, RetrievedChunk
 from app.services.chat import _is_followup, get_sources, split_suggestions
 
 
-# ───────────────────────── split_suggestions (regla 21) ─────────────────────────
+# ───────────────────────── split_suggestions (xarxa de seguretat) ───────────────
 
 def test_split_suggestions_extracts_three():
     text = "Resposta amb cites.\n\n[[SUGGESTIONS]]\n- Pregunta 1\n- Pregunta 2\n- Pregunta 3"

@@ -149,6 +149,17 @@ class GeminiLLM:
             max_retries=0,   # desactiva la tempesta de reintents interns de langchain
             #                  (en fem de propis, acotats, a generate())
         )
+        # Client SEPARAT per als suggeriments (crida curta i barata, desacoblada de
+        # la resposta principal). Tope baix a propòsit: només 3 preguntes curtes,
+        # mai necessita els 8192 tokens de la resposta citada.
+        self._suggest_llm = ChatGoogleGenerativeAI(
+            model=model,
+            temperature=0.2,
+            google_api_key=api_key,
+            max_output_tokens=256,
+            timeout=15,
+            max_retries=0,
+        )
 
     def _record_usage(self, messages: list, resp) -> None:
         """Registra els tokens consumits al comptador d'ús (si n'hi ha). Usa la
@@ -202,16 +213,6 @@ class GeminiLLM:
                 "\n\n[IMPORTANT: write your entire reply in the SAME language as THIS "
                 "question, regardless of the language of earlier turns or of the sources.]"
             )
-        # Recordatori de la regla 21 ENGANXAT al final (instrucció més recent = molt més
-        # obeïda pels models petits que la regla soterrada al system prompt). Si la
-        # resposta no és un cas NO_SOURCES, ha d'acabar amb el bloc [[SUGGESTIONS]].
-        directive += (
-            "\n\n[REMINDER — rule 21: unless this is a [[NO_SOURCES]] reply (greeting, "
-            "holdings/meta, advice refusal, out-of-corpus, or not-in-the-texts), you MUST "
-            "finish with the block, as the very last thing and nothing after it:\n"
-            "[[SUGGESTIONS]]\n- <q1>\n- <q2>\n- <q3>\n"
-            "Three short follow-up questions in the user's language. Do NOT omit this block.]"
-        )
         messages.append(HumanMessage(content=user_query + directive))
 
         # Reintents amb espera creixent: el pla gratuït de Gemini limita ~req/min i
@@ -229,3 +230,44 @@ class GeminiLLM:
                     time.sleep(2)  # una espera curta i tornem a provar
         _log.error("Gemini no respon després de 2 intents: %s", last_err)
         return _BUSY_MSG
+
+    def generate_suggestions(
+        self,
+        system_prompt: str,
+        user_query: str,
+        answer: str,
+        context: str,
+    ) -> list[str]:
+        """Crida SEPARADA i barata (tope 256 tokens) només per als 3 suggeriments.
+
+        Desacoblada de generate(): si aquesta crida falla o el model no
+        respon amb el format esperat, retorna [] i el torn de xat continua
+        normal (sense chips de seguiment), mai trenca la resposta principal."""
+        messages: list = [
+            SystemMessage(content=system_prompt),
+            HumanMessage(
+                content=(
+                    f"User's question:\n{user_query}\n\n"
+                    f"SigPhi's answer:\n{answer}\n\n"
+                    f"Source excerpts it drew on:\n{context}"
+                )
+            ),
+        ]
+        last_err: Exception | None = None
+        for attempt in range(2):
+            try:
+                resp = self._suggest_llm.invoke(messages)
+                self._record_usage(messages, resp)
+                questions: list[str] = []
+                for line in str(resp.content).splitlines():
+                    q = re.sub(r"^\s*(?:[-*•·]|\d+[.)])\s*", "", line).strip()
+                    if q:
+                        questions.append(q)
+                return questions[:3]
+            except Exception as e:
+                last_err = e
+                _log.warning("Gemini (suggestions) ha fallat (intent %d/2): %s", attempt + 1, e)
+                if attempt == 0:
+                    time.sleep(1)
+        _log.error("Gemini (suggestions) no respon després de 2 intents: %s", last_err)
+        return []

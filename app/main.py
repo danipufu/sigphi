@@ -414,7 +414,7 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
         # Chips sota el xat. UN sol render decideix QUÈ mostrar segons l'estat:
         #   - conversa NO començada -> N_EXAMPLES exemples a l'atzar (varien a cada
         #     càrrega de pàgina);
-        #   - hi ha preguntes suggerides (regla 21) -> les mostra a ELLES (els
+        #   - hi ha preguntes suggerides (crida separada de ChatService) -> les mostra a ELLES (els
         #     exemples desapareixen);
         #   - conversa començada però sense suggeriments (salutació, out-of-corpus…)
         #     -> cap chip.

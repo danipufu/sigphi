@@ -11,7 +11,7 @@ from app.domain.caveats import discriminatory_warning, historical_context_note
 from app.domain.interfaces import LLMInterface
 from app.domain.models import RetrievedChunk
 from app.services.biographies import background_block
-from app.services.prompts import NO_CORPUS_MESSAGE, SYSTEM_PROMPT
+from app.services.prompts import NO_CORPUS_MESSAGE, SUGGESTIONS_PROMPT, SYSTEM_PROMPT
 from app.services.retrieval import RetrievalService
 
 # Captura [[NO_SOURCES]] (i variants amb un sol claudàtor) en qualsevol posició.
@@ -24,14 +24,15 @@ _BUDGET_MSG = (
     "⏳ SigPhi has reached this month's usage limit. Sorry for the inconvenience; please try again later."
 )
 
-# Bloc de preguntes suggerides que l'LLM afegeix AL FINAL (regla 21). El separem de
-# la resposta visible i el retornem a part perquè la UI el mostri com a chips
-# clicables. Tolera variants amb un sol claudàtor i text fins al final del missatge.
+# Xarxa de seguretat DEFENSIVA: els suggeriments ja NO es demanen dins la resposta
+# principal (ara és una crida separada i garantida, veure generate_suggestions a
+# ChatService.answer). Aquest regex només neteja la resposta visible si el model,
+# per costum après, hi cola igualment un bloc [[SUGGESTIONS]] espontani.
 _SUGGESTIONS_RE = re.compile(r"\[+\s*SUGGESTIONS\s*\]+\s*(.*)\Z", re.IGNORECASE | re.DOTALL)
 
 
 def split_suggestions(text: str) -> tuple[str, list[str]]:
-    """Separa la resposta del bloc [[SUGGESTIONS]] final.
+    """Separa la resposta d'un bloc [[SUGGESTIONS]] espontani, si n'hi ha.
 
     Retorna (resposta_neta, llista_de_preguntes). Si no hi ha bloc, la llista és
     buida i la resposta queda intacta. Treu vinyetes/numeració de cada línia i
@@ -203,14 +204,18 @@ class ChatService:
         context = format_context(retrieved, self._bios)
         hist = (history or [])[-self._max_history :]
         text = self._llm.generate(SYSTEM_PROMPT, query, context, hist)
-        # Separa primer el bloc de preguntes suggerides (regla 21), així no es cola
-        # mai a la resposta visible encara que l'LLM l'afegeixi en un cas NO_SOURCES.
-        text, suggestions = split_suggestions(text)
+        # Neteja defensiva d'un bloc [[SUGGESTIONS]] espontani (ja no es demana a la
+        # resposta principal; els suggeriments "de veritat" venen d'una crida a part
+        # més avall, sempre que la resposta faci servir les fonts).
+        text, _ = split_suggestions(text)
         # Si l'LLM marca que NO ha fet servir les fonts (salutació, meta, regla
-        # 3/14/20...), treu la marca, amaga les fonts i descarta els suggeriments.
+        # 3/14/20...), treu la marca, amaga les fonts i no demanem suggeriments.
         if "NO_SOURCES" in text:
             text = _NO_SOURCES_RE.sub(" ", text).strip()
             return ChatResult(answer=text, sources=[], retrieved=retrieved, suggestions=[])
+        # Crida SEPARADA i garantida per als 3 suggeriments: no depèn que la resposta
+        # citada (que pot ser llarga) arribi a incloure el bloc abans de truncar-se.
+        suggestions = self._llm.generate_suggestions(SUGGESTIONS_PROMPT, query, text, context)
         return ChatResult(
             answer=text,
             sources=get_sources(retrieved),
