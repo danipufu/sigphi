@@ -7916,5 +7916,753 @@
    "ar": "مراجعة موجزة للإعلان",
    "hi": "घोषणा की संक्षिप्त समीक्षा"
   }
+ },
+ {
+  "keys": [
+   "Libre de la primera e segona intenció"
+  ],
+  "titles": {
+   "ca": "Llibre de la primera i segona intenció",
+   "es": "Libro de la primera y segunda intención",
+   "fr": "Livre de la première et seconde intention",
+   "de": "Buch von der ersten und zweiten Absicht",
+   "it": "Libro della prima e seconda intenzione",
+   "ru": "Книга о первом и втором намерении",
+   "zh": "论第一与第二意向之书",
+   "ja": "第一意向と第二意向の書",
+   "ar": "كتاب القصد الأول والثاني",
+   "hi": "प्रथम और द्वितीय आशय की पुस्तक"
+  }
+ },
+ {
+  "keys": [
+   "Libre de mil proverbis"
+  ],
+  "titles": {
+   "ca": "Llibre de mil proverbis",
+   "es": "Libro de los mil proverbios",
+   "fr": "Livre des mille proverbes",
+   "de": "Buch der tausend Sprichwörter",
+   "it": "Libro dei mille proverbi",
+   "ru": "Книга тысячи пословиц",
+   "zh": "千言箴言书",
+   "ja": "千の箴言の書",
+   "ar": "كتاب الأمثال الألف",
+   "hi": "सहस्र सूक्तियों की पुस्तक"
+  }
+ },
+ {
+  "keys": [
+   "A Philosophical Dictionary, Volume 02"
+  ],
+  "titles": {
+   "ca": "Diccionari filosòfic, volum 02",
+   "es": "Diccionario filosófico, volumen 02",
+   "fr": "Dictionnaire philosophique, volume 02",
+   "de": "Philosophisches Wörterbuch, Band 02",
+   "it": "Dizionario filosofico, volume 02",
+   "ru": "Философский словарь, том 02",
+   "zh": "哲学辞典，第02卷",
+   "ja": "哲学辞典 第02巻",
+   "ar": "القاموس الفلسفي، المجلد 02",
+   "hi": "दार्शनिक शब्दकोश, खंड 02"
+  }
+ },
+ {
+  "keys": [
+   "A Philosophical Dictionary, Volume 03"
+  ],
+  "titles": {
+   "ca": "Diccionari filosòfic, volum 03",
+   "es": "Diccionario filosófico, volumen 03",
+   "fr": "Dictionnaire philosophique, volume 03",
+   "de": "Philosophisches Wörterbuch, Band 03",
+   "it": "Dizionario filosofico, volume 03",
+   "ru": "Философский словарь, том 03",
+   "zh": "哲学辞典，第03卷",
+   "ja": "哲学辞典 第03巻",
+   "ar": "القاموس الفلسفي، المجلد 03",
+   "hi": "दार्शनिक शब्दकोश, खंड 03"
+  }
+ },
+ {
+  "keys": [
+   "A Philosophical Dictionary, Volume 04"
+  ],
+  "titles": {
+   "ca": "Diccionari filosòfic, volum 04",
+   "es": "Diccionario filosófico, volumen 04",
+   "fr": "Dictionnaire philosophique, volume 04",
+   "de": "Philosophisches Wörterbuch, Band 04",
+   "it": "Dizionario filosofico, volume 04",
+   "ru": "Философский словарь, том 04",
+   "zh": "哲学辞典，第04卷",
+   "ja": "哲学辞典 第04巻",
+   "ar": "القاموس الفلسفي، المجلد 04",
+   "hi": "दार्शनिक शब्दकोश, खंड 04"
+  }
+ },
+ {
+  "keys": [
+   "A Philosophical Dictionary, Volume 06"
+  ],
+  "titles": {
+   "ca": "Diccionari filosòfic, volum 06",
+   "es": "Diccionario filosófico, volumen 06",
+   "fr": "Dictionnaire philosophique, volume 06",
+   "de": "Philosophisches Wörterbuch, Band 06",
+   "it": "Dizionario filosofico, volume 06",
+   "ru": "Философский словарь, том 06",
+   "zh": "哲学辞典，第06卷",
+   "ja": "哲学辞典 第06巻",
+   "ar": "القاموس الفلسفي، المجلد 06",
+   "hi": "दार्शनिक शब्दकोश, खंड 06"
+  }
+ },
+ {
+  "keys": [
+   "A Philosophical Dictionary, Volume 10"
+  ],
+  "titles": {
+   "ca": "Diccionari filosòfic, volum 10",
+   "es": "Diccionario filosófico, volumen 10",
+   "fr": "Dictionnaire philosophique, volume 10",
+   "de": "Philosophisches Wörterbuch, Band 10",
+   "it": "Dizionario filosofico, volume 10",
+   "ru": "Философский словарь, том 10",
+   "zh": "哲学辞典，第10卷",
+   "ja": "哲学辞典 第10巻",
+   "ar": "القاموس الفلسفي، المجلد 10",
+   "hi": "दार्शनिक शब्दकोश, खंड 10"
+  }
+ },
+ {
+  "keys": [
+   "The Works of Voltaire"
+  ],
+  "titles": {
+   "ca": "Les obres de Voltaire",
+   "es": "Las obras de Voltaire",
+   "fr": "Les œuvres de Voltaire",
+   "de": "Die Werke Voltaires",
+   "it": "Le opere di Voltaire",
+   "ru": "Сочинения Вольтера",
+   "zh": "伏尔泰全集",
+   "ja": "ヴォルテール全集",
+   "ar": "أعمال فولتير",
+   "hi": "वॉल्टेयर की रचनाएँ"
+  }
+ },
+ {
+  "keys": [
+   "Voltaire's Romances, Complete in One Volume"
+  ],
+  "titles": {
+   "ca": "Els contes de Voltaire, complets en un sol volum",
+   "es": "Los cuentos de Voltaire, completos en un solo volumen",
+   "fr": "Les contes de Voltaire, complets en un seul volume",
+   "de": "Voltaires Erzählungen, vollständig in einem Band",
+   "it": "I racconti di Voltaire, completi in un unico volume",
+   "ru": "Повести Вольтера, полностью в одном томе",
+   "zh": "伏尔泰故事全集（合订本）",
+   "ja": "ヴォルテール物語集、全一巻",
+   "ar": "روايات فولتير، كاملة في مجلد واحد",
+   "hi": "वॉल्टेयर की कहानियाँ, एक ही खंड में पूर्ण"
+  }
+ },
+ {
+  "keys": [
+   "English Traits"
+  ],
+  "titles": {
+   "ca": "Trets anglesos",
+   "es": "Rasgos ingleses",
+   "fr": "Traits anglais",
+   "de": "Englische Charakterzüge",
+   "it": "Tratti inglesi",
+   "ru": "Английские черты",
+   "zh": "英国人的特质",
+   "ja": "イギリス人気質",
+   "ar": "السمات الإنجليزية",
+   "hi": "अंग्रेजी लक्षण"
+  }
+ },
+ {
+  "keys": [
+   "Essays by Ralph Waldo Emerson"
+  ],
+  "titles": {
+   "ca": "Assaigs de Ralph Waldo Emerson",
+   "es": "Ensayos de Ralph Waldo Emerson",
+   "fr": "Essais de Ralph Waldo Emerson",
+   "de": "Essays von Ralph Waldo Emerson",
+   "it": "Saggi di Ralph Waldo Emerson",
+   "ru": "Эссе Ральфа Уолдо Эмерсона",
+   "zh": "拉尔夫·沃尔多·爱默生随笔集",
+   "ja": "ラルフ・ウォルドー・エマソン随筆集",
+   "ar": "مقالات رالف والدو إيمرسون",
+   "hi": "राल्फ वाल्डो एमर्सन के निबंध"
+  }
+ },
+ {
+  "keys": [
+   "Essays — First Series"
+  ],
+  "titles": {
+   "ca": "Assaigs — primera sèrie",
+   "es": "Ensayos — primera serie",
+   "fr": "Essais — première série",
+   "de": "Essays — erste Reihe",
+   "it": "Saggi — prima serie",
+   "ru": "Эссе — первая серия",
+   "zh": "随笔集——第一辑",
+   "ja": "随筆集——第一集",
+   "ar": "مقالات — السلسلة الأولى",
+   "hi": "निबंध — प्रथम श्रृंखला"
+  }
+ },
+ {
+  "keys": [
+   "Essays — Second Series"
+  ],
+  "titles": {
+   "ca": "Assaigs — segona sèrie",
+   "es": "Ensayos — segunda serie",
+   "fr": "Essais — deuxième série",
+   "de": "Essays — zweite Reihe",
+   "it": "Saggi — seconda serie",
+   "ru": "Эссе — вторая серия",
+   "zh": "随笔集——第二辑",
+   "ja": "随筆集——第二集",
+   "ar": "مقالات — السلسلة الثانية",
+   "hi": "निबंध — द्वितीय श्रृंखला"
+  }
+ },
+ {
+  "keys": [
+   "Miscellanies embracing Nature, addresses, and lectures"
+  ],
+  "titles": {
+   "ca": "Miscel·lànies: Nature, discursos i conferències",
+   "es": "Misceláneas: Nature, discursos y conferencias",
+   "fr": "Mélanges : Nature, discours et conférences",
+   "de": "Vermischtes: Nature, Reden und Vorträge",
+   "it": "Miscellanee: Nature, discorsi e conferenze",
+   "ru": "Смесь: Природа, речи и лекции",
+   "zh": "杂集：《论自然》、演讲与讲座",
+   "ja": "雑纂：『自然論』、演説と講演",
+   "ar": "متفرقات: الطبيعة، الخطب والمحاضرات",
+   "hi": "विविध रचनाएँ: नेचर, भाषण और व्याख्यान"
+  }
+ },
+ {
+  "keys": [
+   "Poems"
+  ],
+  "titles": {
+   "ca": "Poemes",
+   "es": "Poemas",
+   "fr": "Poèmes",
+   "de": "Gedichte",
+   "it": "Poesie",
+   "ru": "Стихотворения",
+   "zh": "诗集",
+   "ja": "詩集",
+   "ar": "قصائد",
+   "hi": "कविताएँ"
+  }
+ },
+ {
+  "keys": [
+   "Representative Men Seven Lectures"
+  ],
+  "titles": {
+   "ca": "Homes representatius: set conferències",
+   "es": "Hombres representativos: siete conferencias",
+   "fr": "Hommes représentatifs : sept conférences",
+   "de": "Repräsentative Menschen: sieben Vorträge",
+   "it": "Uomini rappresentativi: sette conferenze",
+   "ru": "Представители человечества: семь лекций",
+   "zh": "代表人物：七篇讲座",
+   "ja": "代表的人間：七つの講演",
+   "ar": "رجال ممثلون: سبع محاضرات",
+   "hi": "प्रतिनिधि पुरुष: सात व्याख्यान"
+  }
+ },
+ {
+  "keys": [
+   "Society and solitude Twelve chapters"
+  ],
+  "titles": {
+   "ca": "Societat i solitud: dotze capítols",
+   "es": "Sociedad y soledad: doce capítulos",
+   "fr": "Société et solitude : douze chapitres",
+   "de": "Gesellschaft und Einsamkeit: zwölf Kapitel",
+   "it": "Società e solitudine: dodici capitoli",
+   "ru": "Общество и уединение: двенадцать глав",
+   "zh": "社会与孤独：十二章",
+   "ja": "社会と孤独：十二章",
+   "ar": "المجتمع والعزلة: اثنا عشر فصلاً",
+   "hi": "समाज और एकांत: बारह अध्याय"
+  }
+ },
+ {
+  "keys": [
+   "Essays of Michel de Montaigne — Complete"
+  ],
+  "titles": {
+   "ca": "Assaigs de Michel de Montaigne — complets",
+   "es": "Ensayos de Michel de Montaigne — completos",
+   "fr": "Essais de Michel de Montaigne — complets",
+   "de": "Essais von Michel de Montaigne — vollständig",
+   "it": "Saggi di Michel de Montaigne — completi",
+   "ru": "Опыты Мишеля де Монтеня — полное издание",
+   "zh": "蒙田随笔全集",
+   "ja": "モンテーニュ随想録——完全版",
+   "ar": "مقالات ميشيل دي مونتين — كاملة",
+   "hi": "मिशेल दे मोंटेन के निबंध — संपूर्ण"
+  }
+ },
+ {
+  "keys": [
+   "Essays of Michel de Montaigne — Volume 03"
+  ],
+  "titles": {
+   "ca": "Assaigs de Michel de Montaigne, volum 03",
+   "es": "Ensayos de Michel de Montaigne, volumen 03",
+   "fr": "Essais de Michel de Montaigne, volume 03",
+   "de": "Essais von Michel de Montaigne, Band 03",
+   "it": "Saggi di Michel de Montaigne, volume 03",
+   "ru": "Опыты Мишеля де Монтеня, том 03",
+   "zh": "蒙田随笔集，第03卷",
+   "ja": "モンテーニュ随想録 第03巻",
+   "ar": "مقالات ميشيل دي مونتين، المجلد 03",
+   "hi": "मिशेल दे मोंटेन के निबंध, खंड 03"
+  }
+ },
+ {
+  "keys": [
+   "Essays of Michel de Montaigne — Volume 07"
+  ],
+  "titles": {
+   "ca": "Assaigs de Michel de Montaigne, volum 07",
+   "es": "Ensayos de Michel de Montaigne, volumen 07",
+   "fr": "Essais de Michel de Montaigne, volume 07",
+   "de": "Essais von Michel de Montaigne, Band 07",
+   "it": "Saggi di Michel de Montaigne, volume 07",
+   "ru": "Опыты Мишеля де Монтеня, том 07",
+   "zh": "蒙田随笔集，第07卷",
+   "ja": "モンテーニュ随想録 第07巻",
+   "ar": "مقالات ميشيل دي مونتين، المجلد 07",
+   "hi": "मिशेल दे मोंटेन के निबंध, खंड 07"
+  }
+ },
+ {
+  "keys": [
+   "Essays of Michel de Montaigne — Volume 14"
+  ],
+  "titles": {
+   "ca": "Assaigs de Michel de Montaigne, volum 14",
+   "es": "Ensayos de Michel de Montaigne, volumen 14",
+   "fr": "Essais de Michel de Montaigne, volume 14",
+   "de": "Essais von Michel de Montaigne, Band 14",
+   "it": "Saggi di Michel de Montaigne, volume 14",
+   "ru": "Опыты Мишеля де Монтеня, том 14",
+   "zh": "蒙田随笔集，第14卷",
+   "ja": "モンテーニュ随想録 第14巻",
+   "ar": "مقالات ميشيل دي مونتين، المجلد 14",
+   "hi": "मिशेल दे मोंटेन के निबंध, खंड 14"
+  }
+ },
+ {
+  "keys": [
+   "Essays of Michel de Montaigne — Volume 18"
+  ],
+  "titles": {
+   "ca": "Assaigs de Michel de Montaigne, volum 18",
+   "es": "Ensayos de Michel de Montaigne, volumen 18",
+   "fr": "Essais de Michel de Montaigne, volume 18",
+   "de": "Essais von Michel de Montaigne, Band 18",
+   "it": "Saggi di Michel de Montaigne, volume 18",
+   "ru": "Опыты Мишеля де Монтеня, том 18",
+   "zh": "蒙田随笔集，第18卷",
+   "ja": "モンテーニュ随想録 第18巻",
+   "ar": "مقالات ميشيل دي مونتين، المجلد 18",
+   "hi": "मिशेल दे मोंटेन के निबंध, खंड 18"
+  }
+ },
+ {
+  "keys": [
+   "Literary and Philosophical Essays French, German and Italian"
+  ],
+  "titles": {
+   "ca": "Assaigs literaris i filosòfics: francesos, alemanys i italians",
+   "es": "Ensayos literarios y filosóficos: franceses, alemanes e italianos",
+   "fr": "Essais littéraires et philosophiques : français, allemands et italiens",
+   "de": "Literarische und philosophische Essays: französisch, deutsch und italienisch",
+   "it": "Saggi letterari e filosofici: francesi, tedeschi e italiani",
+   "ru": "Литературные и философские очерки: французские, немецкие и итальянские",
+   "zh": "法德意文学与哲学论集",
+   "ja": "文学・哲学随筆集：フランス、ドイツ、イタリア",
+   "ar": "مقالات أدبية وفلسفية: فرنسية وألمانية وإيطالية",
+   "hi": "साहित्यिक और दार्शनिक निबंध: फ्रेंच, जर्मन और इतालवी"
+  }
+ },
+ {
+  "keys": [
+   "A Plea for Captain John Brown"
+  ],
+  "titles": {
+   "ca": "Una defensa del capità John Brown",
+   "es": "Una defensa del capitán John Brown",
+   "fr": "Un plaidoyer pour le capitaine John Brown",
+   "de": "Ein Plädoyer für Captain John Brown",
+   "it": "Una difesa del capitano John Brown",
+   "ru": "В защиту капитана Джона Брауна",
+   "zh": "为约翰·布朗上尉辩护",
+   "ja": "ジョン・ブラウン大尉のための弁護",
+   "ar": "دفاع عن الكابتن جون براون",
+   "hi": "कैप्टन जॉन ब्राउन के लिए एक याचिका"
+  }
+ },
+ {
+  "keys": [
+   "Canoeing in the wilderness"
+  ],
+  "titles": {
+   "ca": "Navegant amb canoa per la natura salvatge",
+   "es": "Navegando en canoa por la naturaleza salvaje",
+   "fr": "Le canotage dans la nature sauvage",
+   "de": "Kanufahren in der Wildnis",
+   "it": "Andare in canoa nella natura selvaggia",
+   "ru": "Каноэ по дикой природе",
+   "zh": "荒野泛舟",
+   "ja": "荒野でのカヌー旅行",
+   "ar": "التجديف بالكانو في البرية",
+   "hi": "जंगल में नाव चलाना"
+  }
+ },
+ {
+  "keys": [
+   "Cape Cod"
+  ],
+  "titles": {
+   "ca": "Cape Cod",
+   "es": "Cape Cod",
+   "fr": "Cape Cod",
+   "de": "Cape Cod",
+   "it": "Cape Cod",
+   "ru": "Кейп-Код",
+   "zh": "科德角",
+   "ja": "ケープコッド",
+   "ar": "كيب كود",
+   "hi": "केप कॉड"
+  }
+ },
+ {
+  "keys": [
+   "Excursions"
+  ],
+  "titles": {
+   "ca": "Excursions",
+   "es": "Excursiones",
+   "fr": "Excursions",
+   "de": "Ausflüge",
+   "it": "Escursioni",
+   "ru": "Экскурсии",
+   "zh": "漫游集",
+   "ja": "逍遥記",
+   "ar": "جولات",
+   "hi": "भ्रमण"
+  }
+ },
+ {
+  "keys": [
+   "Excursions, and Poems"
+  ],
+  "titles": {
+   "ca": "Excursions, i poemes",
+   "es": "Excursiones, y poemas",
+   "fr": "Excursions, et poèmes",
+   "de": "Ausflüge, und Gedichte",
+   "it": "Escursioni, e poesie",
+   "ru": "Экскурсии и стихотворения",
+   "zh": "漫游集与诗集",
+   "ja": "逍遥記と詩集",
+   "ar": "جولات، وقصائد",
+   "hi": "भ्रमण, और कविताएँ"
+  }
+ },
+ {
+  "keys": [
+   "Familiar Letters"
+  ],
+  "titles": {
+   "ca": "Cartes familiars",
+   "es": "Cartas familiares",
+   "fr": "Lettres familières",
+   "de": "Vertraute Briefe",
+   "it": "Lettere familiari",
+   "ru": "Дружеские письма",
+   "zh": "家常书信集",
+   "ja": "親しい書簡集",
+   "ar": "رسائل ودية",
+   "hi": "आत्मीय पत्र"
+  }
+ },
+ {
+  "keys": [
+   "Journal 01, 1837-1846"
+  ],
+  "titles": {
+   "ca": "Diari 01, 1837-1846",
+   "es": "Diario 01, 1837-1846",
+   "fr": "Journal 01, 1837-1846",
+   "de": "Tagebuch 01, 1837-1846",
+   "it": "Diario 01, 1837-1846",
+   "ru": "Дневник 01, 1837-1846",
+   "zh": "日记 01，1837-1846",
+   "ja": "日記 01、1837-1846年",
+   "ar": "اليوميات 01، 1837-1846",
+   "hi": "डायरी 01, 1837-1846"
+  }
+ },
+ {
+  "keys": [
+   "Journal 02, 1850-September 15, 1851"
+  ],
+  "titles": {
+   "ca": "Diari 02, 1850 - 15 de setembre de 1851",
+   "es": "Diario 02, 1850 - 15 de septiembre de 1851",
+   "fr": "Journal 02, 1850 - 15 septembre 1851",
+   "de": "Tagebuch 02, 1850 - 15. September 1851",
+   "it": "Diario 02, 1850 - 15 settembre 1851",
+   "ru": "Дневник 02, 1850 - 15 сентября 1851",
+   "zh": "日记 02，1850年—1851年9月15日",
+   "ja": "日記 02、1850年～1851年9月15日",
+   "ar": "اليوميات 02، 1850 - 15 سبتمبر 1851",
+   "hi": "डायरी 02, 1850 - 15 सितंबर 1851"
+  }
+ },
+ {
+  "keys": [
+   "Poems of Nature"
+  ],
+  "titles": {
+   "ca": "Poemes de la natura",
+   "es": "Poemas de la naturaleza",
+   "fr": "Poèmes de la nature",
+   "de": "Naturgedichte",
+   "it": "Poesie della natura",
+   "ru": "Стихи о природе",
+   "zh": "自然诗集",
+   "ja": "自然の詩集",
+   "ar": "قصائد الطبيعة",
+   "hi": "प्रकृति की कविताएँ"
+  }
+ },
+ {
+  "keys": [
+   "The Maine Woods"
+  ],
+  "titles": {
+   "ca": "Els boscos de Maine",
+   "es": "Los bosques de Maine",
+   "fr": "Les forêts du Maine",
+   "de": "Die Wälder von Maine",
+   "it": "I boschi del Maine",
+   "ru": "Леса Мэна",
+   "zh": "缅因森林",
+   "ja": "メインの森",
+   "ar": "غابات مين",
+   "hi": "मेन के जंगल"
+  }
+ },
+ {
+  "keys": [
+   "Walking"
+  ],
+  "titles": {
+   "ca": "Caminar",
+   "es": "Caminar",
+   "fr": "Marcher",
+   "de": "Vom Wandern",
+   "it": "Camminare",
+   "ru": "Ходьба",
+   "zh": "论散步",
+   "ja": "歩くこと",
+   "ar": "المشي",
+   "hi": "पैदल चलना"
+  }
+ },
+ {
+  "keys": [
+   "Ai Palleschi"
+  ],
+  "titles": {
+   "ca": "Als Palleschi",
+   "es": "A los Palleschi",
+   "fr": "Aux Palleschi",
+   "de": "An die Palleschi",
+   "it": "Ai Palleschi",
+   "ru": "К Паллески",
+   "zh": "致帕莱斯基派",
+   "ja": "パッレスキ派へ",
+   "ar": "إلى أنصار آل ميديتشي",
+   "hi": "पैलेस्ची के नाम"
+  }
+ },
+ {
+  "keys": [
+   "Discorso delle cose fiorentine dopo la morte di Lorenzo"
+  ],
+  "titles": {
+   "ca": "Discurs sobre els afers florentins després de la mort de Llorenç",
+   "es": "Discurso sobre los asuntos florentinos tras la muerte de Lorenzo",
+   "fr": "Discours sur les affaires florentines après la mort de Laurent",
+   "de": "Rede über die florentinischen Angelegenheiten nach dem Tod Lorenzos",
+   "it": "Discorso delle cose fiorentine dopo la morte di Lorenzo",
+   "ru": "Рассуждение о флорентийских делах после смерти Лоренцо",
+   "zh": "洛伦佐死后的佛罗伦萨事务论",
+   "ja": "ロレンツォの死後のフィレンツェ情勢についての講話",
+   "ar": "خطاب حول الشؤون الفلورنسية بعد وفاة لورينزو",
+   "hi": "लोरेंज़ो की मृत्यु के बाद फ्लोरेंस के मामलों पर प्रवचन"
+  }
+ },
+ {
+  "keys": [
+   "Discorso fatto al Magistrato dei Dieci sopra le cose di Pisa"
+  ],
+  "titles": {
+   "ca": "Discurs fet al Magistrat dels Deu sobre els afers de Pisa",
+   "es": "Discurso hecho al Magistrado de los Diez sobre los asuntos de Pisa",
+   "fr": "Discours fait au Magistrat des Dix sur les affaires de Pise",
+   "de": "Rede an die Zehnerbehörde über die Angelegenheiten von Pisa",
+   "it": "Discorso fatto al Magistrato dei Dieci sopra le cose di Pisa",
+   "ru": "Речь, произнесённая перед Магистратом Десяти о делах Пизы",
+   "zh": "向十人议事会陈述比萨事务的演讲",
+   "ja": "十人委員会に対するピサ情勢についての講話",
+   "ar": "خطاب أمام قضاة العشرة حول شؤون بيزا",
+   "hi": "पीसा के मामलों पर दस के न्यायाधीशों को दिया गया भाषण"
+  }
+ },
+ {
+  "keys": [
+   "Parole da dirle sopra la previsione del danaio"
+  ],
+  "titles": {
+   "ca": "Paraules a dir sobre la previsió de diners",
+   "es": "Palabras a decir sobre la previsión de dinero",
+   "fr": "Paroles à dire sur la prévision d'argent",
+   "de": "Worte über die Geldbeschaffung",
+   "it": "Parole da dirle sopra la previsione del danaio",
+   "ru": "Слова о предоставлении денег",
+   "zh": "论筹款演说辞",
+   "ja": "資金調達についての演説草稿",
+   "ar": "كلمات تقال حول توفير المال",
+   "hi": "धन प्रावधान पर कहे जाने वाले शब्द"
+  }
+ },
+ {
+  "keys": [
+   "Colliget Auerrois totam medicinam ingentibus voluminibus ab aliis traditam ..."
+  ],
+  "titles": {
+   "ca": "Colliget d'Averrois: tota la medicina transmesa per altres en volums extensos…",
+   "es": "Colliget de Averroes: toda la medicina transmitida por otros en extensos volúmenes…",
+   "fr": "Colliget d'Averroès : toute la médecine transmise par d'autres en volumineux traités…",
+   "de": "Colliget des Averroes: die gesamte von anderen in umfangreichen Bänden überlieferte Medizin…",
+   "it": "Colliget di Averroè: tutta la medicina tramandata da altri in ampi volumi…",
+   "ru": "Коллигет Аверроэса: вся медицина, переданная другими в обширных томах…",
+   "zh": "阿威罗伊《医学通论》：他人以宏篇巨制传述之医学……",
+   "ja": "アヴェロエス『医学大全』：他者による浩瀚な書物で伝えられた医学のすべて……",
+   "ar": "الكليات لابن رشد: كل الطب المنقول عن آخرين في مجلدات ضخمة…",
+   "hi": "एवेरोज़ का कोलिजेट: अन्य विशाल खंडों में प्रसारित संपूर्ण चिकित्सा…"
+  }
+ },
+ {
+  "keys": [
+   "The philosophy and theology of Averroes"
+  ],
+  "titles": {
+   "ca": "La filosofia i la teologia d'Averrois",
+   "es": "La filosofía y la teología de Averroes",
+   "fr": "La philosophie et la théologie d'Averroès",
+   "de": "Die Philosophie und Theologie des Averroes",
+   "it": "La filosofia e la teologia di Averroè",
+   "ru": "Философия и теология Аверроэса",
+   "zh": "阿威罗伊的哲学与神学",
+   "ja": "アヴェロエスの哲学と神学",
+   "ar": "فلسفة ابن رشد ولاهوته",
+   "hi": "एवेरोज़ का दर्शन और धर्मशास्त्र"
+  }
+ },
+ {
+  "keys": [
+   "The Zend-Avesta, Part I: The Vendidad (SBE vol. IV)"
+  ],
+  "titles": {
+   "ca": "El Zend-Avesta, part I: el Vendidad",
+   "es": "El Zend-Avesta, parte I: el Vendidad",
+   "fr": "Le Zend-Avesta, partie I : le Vendidad",
+   "de": "Das Zend-Avesta, Teil I: das Vendidad",
+   "it": "Lo Zend-Avesta, parte I: il Vendidad",
+   "ru": "Зенд-Авеста, часть I: Вендидад",
+   "zh": "曾德—阿维斯陀，第一部：文迪达德",
+   "ja": "ゼンド・アヴェスター 第1部：ヴェンディダード",
+   "ar": "زند أفستا، الجزء الأول: الفنديداد",
+   "hi": "ज़ेंद-अवेस्ता, भाग I: वेंदीदाद"
+  }
+ },
+ {
+  "keys": [
+   "The Zend-Avesta, Part II: Sirozahs, Yasts, Nyayis (SBE vol. XXIII)"
+  ],
+  "titles": {
+   "ca": "El Zend-Avesta, part II: Sirozahs, Yashts, Nyayish",
+   "es": "El Zend-Avesta, parte II: Sirozahs, Yashts, Nyayish",
+   "fr": "Le Zend-Avesta, partie II : Sirozahs, Yashts, Nyayish",
+   "de": "Das Zend-Avesta, Teil II: Sirozahs, Yashts, Nyayish",
+   "it": "Lo Zend-Avesta, parte II: Sirozahs, Yashts, Nyayish",
+   "ru": "Зенд-Авеста, часть II: Сирозы, Яшты, Ньяиши",
+   "zh": "曾德—阿维斯陀，第二部：西罗扎、亚什特、尼亚耶什",
+   "ja": "ゼンド・アヴェスター 第2部：シーローザ、ヤシュト、ニヤーイシュ",
+   "ar": "زند أفستا، الجزء الثاني: سيروزه، ياشت، نيايش",
+   "hi": "ज़ेंद-अवेस्ता, भाग II: सिरोज़ाह, यश्त, न्यायिश"
+  }
+ },
+ {
+  "keys": [
+   "The Zend-Avesta, Part III: Yasna, Visparad, Gathas (SBE vol. XXXI)"
+  ],
+  "titles": {
+   "ca": "El Zend-Avesta, part III: Yasna, Visperad, Gathas",
+   "es": "El Zend-Avesta, parte III: Yasna, Visperad, Gathas",
+   "fr": "Le Zend-Avesta, partie III : Yasna, Visperad, Gathas",
+   "de": "Das Zend-Avesta, Teil III: Yasna, Visperad, Gathas",
+   "it": "Lo Zend-Avesta, parte III: Yasna, Visperad, Gathas",
+   "ru": "Зенд-Авеста, часть III: Ясна, Висперед, Гаты",
+   "zh": "曾德—阿维斯陀，第三部：亚斯纳、维斯佩拉德、伽萨",
+   "ja": "ゼンド・アヴェスター 第3部：ヤスナ、ヴィスパラド、ガーサー",
+   "ar": "زند أفستا، الجزء الثالث: ياسنا، ويسبراد، وغاثا",
+   "hi": "ज़ेंद-अवेस्ता, भाग III: यस्ना, विस्पेरद, गाथा"
+  }
+ },
+ {
+  "keys": [
+   "A Compendium on the Soul"
+  ],
+  "titles": {
+   "ca": "Un compendi sobre l'ànima",
+   "es": "Un compendio sobre el alma",
+   "fr": "Un abrégé sur l'âme",
+   "de": "Ein Kompendium über die Seele",
+   "it": "Un compendio sull'anima",
+   "ru": "Компендиум о душе",
+   "zh": "灵魂纲要",
+   "ja": "霊魂に関する綱要",
+   "ar": "مختصر في النفس",
+   "hi": "आत्मा पर एक संक्षेप"
+  }
  }
 ]
