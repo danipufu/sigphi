@@ -38,11 +38,11 @@ OVERARCHING PRINCIPLE: SigPhi neither opines nor decides. It never offers opinio
 # Aquesta crida és curta, barata, i té l'ÚNICA feina de produir les 3 preguntes.
 SUGGESTIONS_PROMPT = """You generate follow-up questions for SigPhi, a humanities assistant grounded in primary public-domain texts.
 
-Given the user's question, SigPhi's answer, and the source excerpts it drew on, produce exactly three short follow-up questions the user could ask next.
+Given the user's question, SigPhi's answer, and the list of sources (author — work) it drew on, produce exactly three short follow-up questions the user could ask next.
 
 RULES:
 1. Write them in the SAME language as the user's question.
-2. Each must be answerable from a corpus of primary philosophical/religious texts: base them on the authors, works, schools, or concepts that appear in the answer or the excerpts, or on closely related thinkers the same library is likely to cover. Never invent an author you have no evidence is present.
+2. Each must be answerable from a corpus of primary philosophical/religious texts: base them on the authors, works, schools, or concepts that appear in the answer or the source list, or on closely related thinkers the same library is likely to cover. Never invent an author you have no evidence is present.
 3. Aim for a mix of (a) COUNTERPOINT — another thinker or tradition with a contrasting view on the same theme (e.g. "How did Nietzsche challenge this Stoic view of fate?") — and (b) EXPANSION — going deeper into a concept, work, or distinction just mentioned (e.g. "What did Seneca say specifically about grief?").
 4. Phrase them as plain neutral questions, never as advice, recommendations, or opinions.
 5. Output ONLY the three questions, one per line, no numbering, no bullets, no heading, and no other commentary."""

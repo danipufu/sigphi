@@ -236,20 +236,24 @@ class GeminiLLM:
         system_prompt: str,
         user_query: str,
         answer: str,
-        context: str,
+        sources: str,
     ) -> list[str]:
         """Crida SEPARADA i barata (tope 256 tokens) només per als 3 suggeriments.
 
         Desacoblada de generate(): si aquesta crida falla o el model no
         respon amb el format esperat, retorna [] i el torn de xat continua
-        normal (sense chips de seguiment), mai trenca la resposta principal."""
+        normal (sense chips de seguiment), mai trenca la resposta principal.
+
+        `sources` és la llista compacta "Autor — Obra" (NO els fragments de
+        text sencers): per triar 3 preguntes de seguiment n'hi ha prou, i
+        estalvia reenviar com a input tot el context que ja va rebre generate()."""
         messages: list = [
             SystemMessage(content=system_prompt),
             HumanMessage(
                 content=(
                     f"User's question:\n{user_query}\n\n"
                     f"SigPhi's answer:\n{answer}\n\n"
-                    f"Source excerpts it drew on:\n{context}"
+                    f"Sources it drew on:\n{sources}"
                 )
             ),
         ]

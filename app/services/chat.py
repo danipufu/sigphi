@@ -215,10 +215,16 @@ class ChatService:
             return ChatResult(answer=text, sources=[], retrieved=retrieved, suggestions=[])
         # Crida SEPARADA i garantida per als 3 suggeriments: no depèn que la resposta
         # citada (que pot ser llarga) arribi a incloure el bloc abans de truncar-se.
-        suggestions = self._llm.generate_suggestions(SUGGESTIONS_PROMPT, query, text, context)
+        # NOMÉS li passem la llista d'AUTOR — OBRA (no el context sencer amb tots els
+        # fragments): per triar 3 preguntes de seguiment li basta saber QUÈ s'ha citat,
+        # no rellegir els fragments sencers. Estalvia ~5k tokens d'input per torn.
+        sources = get_sources(retrieved)
+        suggestions = self._llm.generate_suggestions(
+            SUGGESTIONS_PROMPT, query, text, "\n".join(sources)
+        )
         return ChatResult(
             answer=text,
-            sources=get_sources(retrieved),
+            sources=sources,
             retrieved=retrieved,
             suggestions=suggestions,
         )

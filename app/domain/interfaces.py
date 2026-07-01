@@ -80,11 +80,12 @@ class LLMInterface(Protocol):
         system_prompt: str,
         user_query: str,
         answer: str,
-        context: str,
+        sources: str,
     ) -> list[str]:
         """Crida SEPARADA i garantida per a fins a 3 preguntes de seguiment.
 
         Independent de generate(): no depèn que la resposta llarga i citada
         arribi a incloure el bloc de suggeriments abans de truncar-se. Si
-        falla, ha de retornar [] (mai trencar el torn de xat)."""
+        falla, ha de retornar [] (mai trencar el torn de xat). `sources` és
+        la llista compacta "Autor — Obra", NO els fragments de text sencers."""
         ...
