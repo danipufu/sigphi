@@ -174,6 +174,59 @@ WORKS: list[tuple[str, list[str]]] = [
     # --- Adam Smith ---
     ("The Wealth of Nations", ["An Inquiry into the Nature and Causes of the Wealth of Nations"]),
     ("The Theory of Moral Sentiments", ["The Theory of Moral Sentiments"]),
+    # --- Epictet ---
+    ("Enchiridion of Epictetus", ["The Enchiridion"]),
+    # --- Francis Bacon ---
+    ("New Atlantis", ["New Atlantis", "The New Atlantis"]),
+    ("Novum Organum", ["Novum organum or, True suggestions for the interpretation of nature"]),
+    ("The Advancement of Learning", ["The Advancement of Learning"]),
+    ("Essays (Francis Bacon)", ["The Essays or Counsels, Civil and Moral", "Bacon's Essays, and Wisdom of the Ancients"]),
+    # --- Hegel ---
+    ("The Phenomenology of Spirit", ["The Phenomenology of Mind (Baillie)", "Phänomenologie des Geistes (German)"]),
+    ("Elements of the Philosophy of Right", ["Philosophy of Right (Grundlinien der Philosophie des Rechts)"]),
+    ("Science of Logic", ["Wissenschaft der Logik — Band 1 (German)", "Wissenschaft der Logik — Band 2 (German)"]),
+    ("Lectures on the History of Philosophy", ["Hegel's Lectures on the History of Philosophy Volume 1 (of 3)", "Hegel's Lectures on the History of Philosophy Volume 2 (of 3)", "Hegel's Lectures on the History of Philosophy Volume 3 (of 3)"]),
+    ("Lectures on Aesthetics", ["The Philosophy of Fine Art, volume 1 (of 4)", "The Philosophy of Fine Art, volume 2 (of 4)", "The Philosophy of Fine Art, volume 3 (of 4)", "The Philosophy of Fine Art, volume 4 (of 4)"]),
+    # --- Kierkegaard ---
+    ("The Concept of Anxiety", ["the concept of dread"]),
+    ("Either/Or", ["EitherOr"]),
+    # --- Leibniz ---
+    ("Monadology", ["Leibnitz' Monadologie (German)"]),
+    ("New Essays on Human Understanding", ["New Essays Concerning Human Understanding"]),
+    ("Théodicée", ["Theodicy"]),
+    # --- Locke ---
+    ("A Letter Concerning Toleration", ["A Letter Concerning Toleration"]),
+    ("An Essay Concerning Human Understanding", ["An Essay Concerning Humane Understanding, Volume 1", "An Essay Concerning Humane Understanding, Volume 2"]),
+    ("Two Treatises of Government", ["Two Treatises of Government (First and Second)", "Second Treatise of Government"]),
+    ("Some Thoughts Concerning Education", ["Some Thoughts Concerning Education (1902)"]),
+    # --- Montesquieu ---
+    ("The Spirit of Law", ["The Spirit of Laws, Volume 1", "The Spirit of Laws, Volume 2", "Esprit des lois (French)"]),
+    ("Persian Letters", ["Persian Letters", "Lettres persanes, tome I (French)", "Lettres persanes, tome II (French)"]),
+    # --- Pascal ---
+    ("Pensées", ["Pascal's Pensées", "The Thoughts of Blaise Pascal"]),
+    ("Lettres provinciales", ["Lettres Provinciales", "The provincial letters of Blaise Pascal A new translation, with historical intro"]),
+    # --- Schopenhauer ---
+    ("The World as Will and Representation", ["The World as Will and Idea (Vol. 1 of 3)", "The World as Will and Idea (Vol. 2 of 3)", "The World as Will and Idea (Vol. 3 of 3)"]),
+    ("On the Fourfold Root of the Principle of Sufficient Reason", ["On the Fourfold Root of the Principle of Sufficient Reason, and On the Will in N"]),
+    ("The Art of Being Right", ["The Art of Being Right", "The Art of Controversy"]),
+    ("On the Basis of Morality", ["The Basis of Morality"]),
+    # --- Thoreau ---
+    ("Walden", ["Walden, and On The Duty Of Civil Disobedience"]),
+    ("Civil Disobedience (Thoreau)", ["On the Duty of Civil Disobedience"]),
+    ("A Week on the Concord and Merrimack Rivers", ["A Week on the Concord and Merrimack Rivers"]),
+    ("The Maine Woods", ["The Maine Woods"]),
+    ("Cape Cod (book)", ["Cape Cod"]),
+    # --- Voltaire ---
+    ("Candide", ["Candide", "Candide, ou l'optimisme (French)"]),
+    ("Philosophical Dictionary", ["Voltaire's Philosophical Dictionary"]),
+    ("Letters on the English", ["Letters on England"]),
+    ("Micromégas", ["Micromegas"]),
+    ("Zadig", ["Zadig; Or, The Book of Fate"]),
+    # --- William James ---
+    ("Pragmatism (book)", ["Pragmatism A New Name for Some Old Ways of Thinking"]),
+    ("The Varieties of Religious Experience", ["The Varieties of Religious Experience A Study in Human Nature"]),
+    ("The Will to Believe", ["The Will to Believe, and Other Essays in Popular Philosophy"]),
+    ("The Principles of Psychology", ["The Principles of Psychology, Volume 1 (of 2)", "The Principles of Psychology, Volume 2 (of 2)"]),
 ]
 
 

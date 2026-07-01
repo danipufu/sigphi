@@ -1495,5 +1495,518 @@
    "ja": "道徳感情論",
    "ar": "نظرية المشاعر الأخلاقية"
   }
+ },
+ {
+  "keys": [
+   "The Enchiridion"
+  ],
+  "titles": {
+   "es": "Enquiridion",
+   "fr": "Manuel d'Épictète",
+   "de": "Enchiridion des Epiktet",
+   "it": "Manuale di Epitteto",
+   "ar": "إنكيريديون"
+  }
+ },
+ {
+  "keys": [
+   "New Atlantis",
+   "The New Atlantis"
+  ],
+  "titles": {
+   "ca": "La Nova Atlàntida",
+   "es": "La Nueva Atlántida",
+   "fr": "La Nouvelle Atlantide",
+   "de": "Nova Atlantis",
+   "it": "La nuova Atlantide",
+   "ru": "Новая Атлантида",
+   "zh": "新大西島",
+   "ja": "ニュー・アトランティス",
+   "ar": "أطلانطس الجديدة"
+  }
+ },
+ {
+  "keys": [
+   "Novum organum or, True suggestions for the interpretation of nature"
+  ],
+  "titles": {
+   "ca": "Novum Organum",
+   "es": "Novum organum",
+   "fr": "Novum organum",
+   "de": "Novum Organum",
+   "it": "Novum Organum",
+   "ru": "Новый Органон",
+   "zh": "新工具论：或解释自然的一些指导",
+   "ja": "ノヴム・オルガヌム",
+   "ar": "الأورجانون الجديد"
+  }
+ },
+ {
+  "keys": [
+   "The Advancement of Learning"
+  ],
+  "titles": {
+   "zh": "学术的进展"
+  }
+ },
+ {
+  "keys": [
+   "The Essays or Counsels, Civil and Moral",
+   "Bacon's Essays, and Wisdom of the Ancients"
+  ],
+  "titles": {
+   "it": "Saggi",
+   "ru": "Опыты"
+  }
+ },
+ {
+  "keys": [
+   "The Phenomenology of Mind (Baillie)",
+   "Phänomenologie des Geistes (German)"
+  ],
+  "titles": {
+   "ca": "Fenomenologia de l'esperit",
+   "es": "Fenomenología del espíritu",
+   "fr": "Phénoménologie de l'esprit",
+   "de": "Phänomenologie des Geistes",
+   "it": "Fenomenologia dello spirito",
+   "ru": "Феноменология духа",
+   "zh": "精神现象学",
+   "ja": "精神現象学",
+   "ar": "ظاهريات الروح"
+  }
+ },
+ {
+  "keys": [
+   "Philosophy of Right (Grundlinien der Philosophie des Rechts)"
+  ],
+  "titles": {
+   "ca": "Grundlinien der Philosophie des Rechts",
+   "es": "Elementos de la filosofía del derecho",
+   "fr": "Principes de la philosophie du droit",
+   "de": "Grundlinien der Philosophie des Rechts",
+   "it": "Lineamenti di filosofia del diritto",
+   "ru": "Философия права",
+   "zh": "法哲学原理",
+   "ja": "法の哲学",
+   "ar": "أصول فلسفة الحق"
+  }
+ },
+ {
+  "keys": [
+   "Wissenschaft der Logik — Band 1 (German)",
+   "Wissenschaft der Logik — Band 2 (German)"
+  ],
+  "titles": {
+   "fr": "La Science de la logique",
+   "de": "Wissenschaft der Logik",
+   "it": "Scienza della logica",
+   "ru": "Наука логики",
+   "zh": "逻辑学"
+  }
+ },
+ {
+  "keys": [
+   "Hegel's Lectures on the History of Philosophy Volume 1 (of 3)",
+   "Hegel's Lectures on the History of Philosophy Volume 2 (of 3)",
+   "Hegel's Lectures on the History of Philosophy Volume 3 (of 3)"
+  ],
+  "titles": {
+   "fr": "Leçons sur l'histoire de la philosophie",
+   "it": "Lezioni sulla storia della filosofia",
+   "ar": "محاضرات في تاريخ الفلسفة"
+  }
+ },
+ {
+  "keys": [
+   "The Philosophy of Fine Art, volume 1 (of 4)",
+   "The Philosophy of Fine Art, volume 2 (of 4)",
+   "The Philosophy of Fine Art, volume 3 (of 4)",
+   "The Philosophy of Fine Art, volume 4 (of 4)"
+  ],
+  "titles": {
+   "fr": "Esthétique ou philosophie de l'art",
+   "it": "Estetica",
+   "ru": "Лекции по эстетике",
+   "ar": "محاضرات عن الجماليات"
+  }
+ },
+ {
+  "keys": [
+   "the concept of dread"
+  ],
+  "titles": {
+   "es": "El concepto de la angustia",
+   "fr": "Du concept d’angoisse",
+   "de": "Der Begriff Angst",
+   "it": "Il concetto dell'angoscia",
+   "ja": "不安の概念",
+   "ar": "مفهوم القلق"
+  }
+ },
+ {
+  "keys": [
+   "Leibnitz' Monadologie (German)"
+  ],
+  "titles": {
+   "ca": "Monadologia",
+   "es": "Monadología",
+   "fr": "Monadologie",
+   "de": "Monadologie",
+   "it": "Monadologia",
+   "ru": "Монадология",
+   "zh": "單子論",
+   "ar": "مونادولوجيا"
+  }
+ },
+ {
+  "keys": [
+   "New Essays Concerning Human Understanding"
+  ],
+  "titles": {
+   "es": "Nuevos ensayos sobre el entendimiento humano",
+   "fr": "Nouveaux Essais sur l'entendement humain",
+   "it": "Nuovi saggi sull'intelletto umano",
+   "ru": "Новые опыты о человеческом разумении"
+  }
+ },
+ {
+  "keys": [
+   "Theodicy"
+  ],
+  "titles": {
+   "ca": "Teodicea",
+   "es": "Théodicée",
+   "fr": "Essais de Théodicée",
+   "it": "Teodicea",
+   "ru": "Теодицея"
+  }
+ },
+ {
+  "keys": [
+   "A Letter Concerning Toleration"
+  ],
+  "titles": {
+   "ca": "Carta sobre la tolerància",
+   "es": "Carta sobre la tolerancia",
+   "fr": "Lettre sur la tolérance",
+   "de": "Brief über die Toleranz",
+   "it": "Lettera sulla tolleranza",
+   "ar": "رسالة في التسامح"
+  }
+ },
+ {
+  "keys": [
+   "An Essay Concerning Humane Understanding, Volume 1",
+   "An Essay Concerning Humane Understanding, Volume 2"
+  ],
+  "titles": {
+   "ca": "Assaig sobre l'enteniment humà",
+   "es": "Ensayo sobre el entendimiento humano",
+   "fr": "Essai sur l'entendement humain",
+   "de": "An Essay Concerning Humane Understanding",
+   "it": "Saggio sull'intelletto umano",
+   "ru": "Опыт о человеческом разумении",
+   "zh": "人類理解論",
+   "ja": "人間知性論",
+   "ar": "مبحث في الفاهمة البشرية",
+   "hi": "मानव समझ के संबंध में निबंध"
+  }
+ },
+ {
+  "keys": [
+   "Two Treatises of Government (First and Second)",
+   "Second Treatise of Government"
+  ],
+  "titles": {
+   "ca": "Dos tractats sobre el govern civil",
+   "es": "Dos tratados sobre el gobierno civil",
+   "fr": "Traité du gouvernement civil",
+   "de": "Zwei Abhandlungen über die Regierung",
+   "it": "Due trattati sul governo",
+   "ru": "Два трактата о правлении",
+   "zh": "政府論",
+   "ja": "統治二論",
+   "ar": "رسالتان في الحكم المدني"
+  }
+ },
+ {
+  "keys": [
+   "Some Thoughts Concerning Education (1902)"
+  ],
+  "titles": {
+   "ca": "Alguns pensaments sobre educació",
+   "es": "Algunos pensamientos sobre la educación",
+   "fr": "Pensées sur l'éducation",
+   "it": "Pensieri sull'educazione",
+   "ru": "Мысли о воспитании",
+   "zh": "教育漫话",
+   "ja": "教育に関する考察",
+   "ar": "بعض الأفكار عن التعليم"
+  }
+ },
+ {
+  "keys": [
+   "The Spirit of Laws, Volume 1",
+   "The Spirit of Laws, Volume 2",
+   "Esprit des lois (French)"
+  ],
+  "titles": {
+   "ca": "L'esperit de les lleis",
+   "es": "El espíritu de las leyes",
+   "fr": "De l'esprit des lois",
+   "de": "Vom Geist der Gesetze",
+   "it": "Lo spirito delle leggi",
+   "ru": "О духе законов",
+   "zh": "論法的精神",
+   "ja": "法の精神",
+   "ar": "روح القوانين"
+  }
+ },
+ {
+  "keys": [
+   "Persian Letters",
+   "Lettres persanes, tome I (French)",
+   "Lettres persanes, tome II (French)"
+  ],
+  "titles": {
+   "ca": "Cartes perses",
+   "es": "Cartas persas",
+   "fr": "Lettres persanes",
+   "de": "Persische Briefe",
+   "it": "Lettere persiane",
+   "ru": "Персидские письма",
+   "zh": "波斯人信札",
+   "ja": "ペルシア人の手紙",
+   "ar": "رسائل فارسية"
+  }
+ },
+ {
+  "keys": [
+   "Pascal's Pensées",
+   "The Thoughts of Blaise Pascal"
+  ],
+  "titles": {
+   "ca": "Pensaments",
+   "es": "Pensées",
+   "fr": "Pensées",
+   "de": "Pensées",
+   "it": "Pensieri",
+   "ru": "Мысли",
+   "zh": "思想錄",
+   "ja": "パンセ",
+   "ar": "أفكار"
+  }
+ },
+ {
+  "keys": [
+   "Lettres Provinciales",
+   "The provincial letters of Blaise Pascal A new translation, with historical intro"
+  ],
+  "titles": {
+   "es": "Lettres provinciales",
+   "fr": "Les Provinciales",
+   "de": "Lettres provinciales",
+   "it": "Le provinciali",
+   "ru": "Письма к провинциалу",
+   "ja": "プロヴァンシアル",
+   "ar": "الرسائل الإقليمية"
+  }
+ },
+ {
+  "keys": [
+   "The World as Will and Idea (Vol. 1 of 3)",
+   "The World as Will and Idea (Vol. 2 of 3)",
+   "The World as Will and Idea (Vol. 3 of 3)"
+  ],
+  "titles": {
+   "ca": "El món com a voluntat i representació",
+   "es": "El mundo como voluntad y representación",
+   "fr": "Le Monde comme volonté et comme représentation",
+   "de": "Die Welt als Wille und Vorstellung",
+   "it": "Il mondo come volontà e rappresentazione",
+   "ru": "Мир как воля и представление",
+   "zh": "作为意志和表象的世界",
+   "ja": "意志と表象としての世界",
+   "ar": "العالم إرادة وفكرة"
+  }
+ },
+ {
+  "keys": [
+   "On the Fourfold Root of the Principle of Sufficient Reason, and On the Will in N"
+  ],
+  "titles": {
+   "ca": "Sobre la quàdruple arrel del principi de raó suficient",
+   "es": "Sobre la cuádruple raíz del principio de razón suficiente",
+   "fr": "De la quadruple racine du principe de raison suffisante",
+   "it": "Sulla quadruplice radice del principio di ragion sufficiente",
+   "zh": "论充足理由律的四重根",
+   "ja": "根拠律の四つの根について"
+  }
+ },
+ {
+  "keys": [
+   "The Art of Being Right",
+   "The Art of Controversy"
+  ],
+  "titles": {
+   "es": "Dialéctica erística o el arte de tener razón, expuesta en 38 estratagemas",
+   "fr": "L'Art d'avoir toujours raison",
+   "de": "Eristische Dialektik",
+   "it": "L'arte di ottenere ragione",
+   "ru": "Искусство побеждать в спорах",
+   "ar": "فن أن تكون دائما على صواب"
+  }
+ },
+ {
+  "keys": [
+   "The Basis of Morality"
+  ],
+  "titles": {
+   "es": "Sobre la base de la moralidad",
+   "fr": "Fondement de la morale"
+  }
+ },
+ {
+  "keys": [
+   "Walden, and On The Duty Of Civil Disobedience"
+  ],
+  "titles": {
+   "ca": "Walden, o la vida als boscos",
+   "es": "Walden",
+   "fr": "Walden ou la Vie dans les bois",
+   "de": "Walden",
+   "it": "Walden ovvero Vita nei boschi",
+   "ru": "Уолден, или Жизнь в лесу",
+   "zh": "瓦爾登湖",
+   "ja": "ウォールデン 森の生活",
+   "ar": "والدن"
+  }
+ },
+ {
+  "keys": [
+   "On the Duty of Civil Disobedience"
+  ],
+  "titles": {
+   "ca": "La desobediència civil",
+   "es": "Desobediencia civil",
+   "fr": "La Désobéissance civile",
+   "de": "Über die Pflicht zum Ungehorsam gegen den Staat",
+   "it": "Disobbedienza civile",
+   "zh": "公民抗命論",
+   "ar": "العصيان المدني"
+  }
+ },
+ {
+  "keys": [
+   "A Week on the Concord and Merrimack Rivers"
+  ],
+  "titles": {
+   "zh": "河上一周",
+   "ja": "コンコード川とメリマック川の一週間"
+  }
+ },
+ {
+  "keys": [
+   "Candide",
+   "Candide, ou l'optimisme (French)"
+  ],
+  "titles": {
+   "ca": "Càndid o l'optimisme",
+   "es": "Cándido",
+   "fr": "Candide",
+   "de": "Candide oder der Optimismus",
+   "it": "Candido",
+   "ru": "Кандид, или Оптимизм",
+   "zh": "憨第德",
+   "ja": "カンディード",
+   "ar": "كانديد"
+  }
+ },
+ {
+  "keys": [
+   "Voltaire's Philosophical Dictionary"
+  ],
+  "titles": {
+   "ca": "Diccionari filosòfic",
+   "es": "Diccionario filosófico",
+   "fr": "Dictionnaire philosophique",
+   "de": "Dictionnaire philosophique",
+   "it": "Dizionario filosofico",
+   "ar": "قاموس فلسفي"
+  }
+ },
+ {
+  "keys": [
+   "Letters on England"
+  ],
+  "titles": {
+   "ca": "Cartes filosòfiques",
+   "es": "Cartas inglesas",
+   "fr": "Lettres philosophiques",
+   "de": "Lettres philosophiques",
+   "it": "Lettere inglesi",
+   "zh": "哲学通信"
+  }
+ },
+ {
+  "keys": [
+   "Micromegas"
+  ],
+  "titles": {
+   "ca": "Micromégas",
+   "es": "Micromegas",
+   "fr": "Micromégas",
+   "de": "Micromégas",
+   "it": "Micromega",
+   "ru": "Микромегас",
+   "zh": "微型巨人",
+   "ar": "ميكروميغاس"
+  }
+ },
+ {
+  "keys": [
+   "Zadig; Or, The Book of Fate"
+  ],
+  "titles": {
+   "ca": "Zadig",
+   "fr": "Zadig",
+   "de": "Zadig",
+   "it": "Zadig",
+   "ru": "Задиг",
+   "ar": "صادق"
+  }
+ },
+ {
+  "keys": [
+   "The Varieties of Religious Experience A Study in Human Nature"
+  ],
+  "titles": {
+   "es": "Las variedades de la experiencia religiosa",
+   "it": "Le varie forme dell'esperienza religiosa. Uno studio sulla natura umana",
+   "ru": "Многообразие религиозного опыта",
+   "ar": "تنويعات التجربة الدينية"
+  }
+ },
+ {
+  "keys": [
+   "The Will to Believe, and Other Essays in Popular Philosophy"
+  ],
+  "titles": {
+   "de": "The Will to Believe",
+   "ar": "إرادة الاعتقاد"
+  }
+ },
+ {
+  "keys": [
+   "The Principles of Psychology, Volume 1 (of 2)",
+   "The Principles of Psychology, Volume 2 (of 2)"
+  ],
+  "titles": {
+   "es": "Principios de psicología",
+   "fr": "The Principles of Psychology",
+   "ja": "心理学原理",
+   "ar": "مبادئ علم النفس"
+  }
  }
 ]
