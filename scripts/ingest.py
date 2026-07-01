@@ -214,8 +214,8 @@ def clean_residual_markup(text: str) -> str:
 # transcriptor de Gutenberg, notes de transcriptor i peus d'escaneig de Google/IA. Mai
 # apareixen en prosa filosòfica real, així que es poden treure a qualsevol font.
 _SCAN_BOILERPLATE_RE = re.compile(
-    r"(?im)^.*(?:Digitized by |Google Book Search|"
-    r"This is a digital copy of a book|generated for .+ on \d|"
+    r"(?im)^.*(?:Digitized\s+by\s+|Google\s+Book\s+Search|"
+    r"This\s+is\s+a\s+digital\s+copy\s+of\s+a\s+book|generated\s+for\s+.+\s+on\s+\d|"
     r"\*\*\*\s*(?:START|END) OF (?:THE |THIS )?PROJECT GUTENBERG).*$"
 )
 

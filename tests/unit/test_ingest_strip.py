@@ -193,6 +193,19 @@ def test_eb_scan_footers_removed():
     assert "Google Book Search" not in strip_editorial_boilerplate("x\nGoogle Book Search\ny")
 
 
+def test_eb_scan_footer_double_spaced_ocr():
+    # Google Books/IA: l'OCR sovint separa paraules amb espais dobles/triples
+    # (letter-spacing de la portada). Cas real: Proclus 'Elements of Theology'.
+    body = (
+        "Real content before.\n"
+        "This  is  a  digital  copy  of  a  book  that  was  preserved  for  generations.\n"
+        "Real content after."
+    )
+    out = strip_editorial_boilerplate(body)
+    assert "digital" not in out.lower()
+    assert "Real content before." in out and "Real content after." in out
+
+
 def test_eb_transcriber_note_header_removed_curly_apostrophe():
     # apòstrof tipogràfic (’), com surt a molts fitxers reals
     out = strip_editorial_boilerplate("Body.\nTranscriber’s Notes:\nfixed typos\n")
