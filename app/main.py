@@ -114,10 +114,23 @@ def _hero_html(lang: str = "Català") -> str:
         "</div>"
     )
 
+# <head> extra: metadades SEO/compartició + càrrega de font NO bloquejant
+# (abans Playfair entrava per @import dins el CSS, el mètode més lent).
+SIGPHI_HEAD = """
+<meta name="description" content="SigPhi — philosophy from primary sources. Answers only from public-domain primary texts, with verifiable citations.">
+<meta property="og:title" content="SigPhi — Φιλοσοφία · philosophy from primary sources">
+<meta property="og:description" content="Ask about any thinker, tradition or idea. Answers come only from primary public-domain texts, with verifiable citations.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sigphiai.com/">
+<meta property="og:image" content="https://sigphiai.com/static/logo.svg">
+<meta name="theme-color" content="#1a2a4f">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+"""
+
 # Paleta de marca + tipografia clàssica, responsive (desktop i mòbil).
 SIGPHI_CSS = """
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap');
-
 :root { --sig-navy:#1a2a4f; --sig-navy-2:#24386b; --sig-gold:#c9a227; --sig-cream:#f7f5ef; }
 
 /* Contenidor centrat i llegible */
@@ -137,14 +150,14 @@ gradio-app { background: var(--sig-cream); }
   background: var(--sig-gold); border-radius:3px;
 }
 
-/* Selector d'idioma com a píndoles */
-#sigphi-lang { display:flex; justify-content:center; margin:6px 0 2px; }
-#sigphi-lang .wrap, #sigphi-lang fieldset { display:flex !important; gap:6px; justify-content:center; flex-wrap:wrap; border:0 !important; }
-#sigphi-lang label {
-  border:1px solid #e3ddcf !important; border-radius:999px !important; padding:5px 16px !important;
-  background:#fff; color:var(--sig-navy); cursor:pointer; transition:all .15s; font-size:.9rem;
+/* Selector d'idioma: dropdown compacte i centrat, en to de marca.
+   (El component és un Dropdown; l'antic CSS de "píndoles" apuntava a un Radio
+   que ja no existeix i no s'aplicava mai.) */
+#sigphi-lang { max-width:210px; margin:6px auto 2px !important; }
+#sigphi-lang input { text-align:center; color:var(--sig-navy); font-size:.9rem; }
+#sigphi-lang .wrap, #sigphi-lang .container, #sigphi-lang .secondary-wrap {
+  border-color:#e3ddcf !important; border-radius:999px !important; background:#fff;
 }
-#sigphi-lang label:has(input:checked) { background:var(--sig-navy); color:#fff; border-color:var(--sig-navy) !important; }
 
 /* Capçalera descriptiva */
 #sigphi-header { text-align:center; color:#374151; max-width:640px; margin:4px auto 8px; }
@@ -156,6 +169,10 @@ gradio-app { background: var(--sig-cream); }
 #sigphi-chat { border:1px solid #e7e2d6 !important; border-radius:16px !important; background:#fff !important;
   box-shadow:0 1px 4px rgba(26,42,79,.06); }
 #sigphi-chat a { color:var(--sig-navy); text-decoration:underline; text-decoration-color:var(--sig-gold); }
+/* Idiomes RTL (àrab/hebreu): que cada paràgraf segueixi la direcció del seu text */
+#sigphi-chat .message, #sigphi-chat .prose p, #sigphi-chat .prose li { unicode-bidi: plaintext; }
+/* Pantalles altes: aprofita l'espai vertical en lloc del tope fix de 460px */
+@media (min-height: 900px) { #sigphi-chat { height: 580px !important; } }
 
 /* Botons primaris en to marca */
 button.primary, .primary { background:var(--sig-navy) !important; border-color:var(--sig-navy) !important; }
@@ -312,6 +329,81 @@ HEADERS = {
 }
 
 
+# Placeholder del quadre de pregunta, benvinguda del xat buit i cadenes del
+# catàleg, localitzats (abans quedaven fixos en anglès encara que la UI canviés
+# d'idioma). El resum del catàleg és plantilla amb {a}=autors {w}=obres {p}=passatges.
+PLACEHOLDERS = {
+    "Català": "Pregunta sobre filosofia… (en qualsevol idioma)",
+    "Español": "Pregunta sobre filosofía… (en cualquier idioma)",
+    "English": "Ask a question about philosophy… (in any language)",
+    "Français": "Posez une question de philosophie… (dans n'importe quelle langue)",
+    "Deutsch": "Stellen Sie eine Frage zur Philosophie… (in jeder Sprache)",
+    "Italiano": "Fai una domanda di filosofia… (in qualsiasi lingua)",
+    "Русский": "Задайте вопрос о философии… (на любом языке)",
+    "中文": "提出一个哲学问题……（任何语言均可）",
+    "日本語": "哲学について質問してください…（どの言語でも）",
+    "العربية": "اطرح سؤالاً في الفلسفة… (بأي لغة)",
+    "हिन्दी": "दर्शन के बारे में प्रश्न पूछें… (किसी भी भाषा में)",
+}
+WELCOMES = {
+    "Català": "**Φιλοσοφία**\n\nPregunta sobre qualsevol pensador, tradició o idea.\nLes respostes surten només de fonts primàries, amb cites.",
+    "Español": "**Φιλοσοφία**\n\nPregunta sobre cualquier pensador, tradición o idea.\nLas respuestas salen solo de fuentes primarias, con citas.",
+    "English": "**Φιλοσοφία**\n\nAsk about any thinker, tradition or idea.\nAnswers come only from primary sources, with citations.",
+    "Français": "**Φιλοσοφία**\n\nInterrogez n'importe quel penseur, tradition ou idée.\nLes réponses proviennent uniquement de sources primaires, avec citations.",
+    "Deutsch": "**Φιλοσοφία**\n\nFragen Sie nach Denkern, Traditionen oder Ideen.\nAntworten stammen nur aus Primärquellen, mit Zitaten.",
+    "Italiano": "**Φιλοσοφία**\n\nChiedi di qualsiasi pensatore, tradizione o idea.\nLe risposte provengono solo da fonti primarie, con citazioni.",
+    "Русский": "**Φιλοσοφία**\n\nСпросите о любом мыслителе, традиции или идее.\nОтветы — только из первоисточников, с цитатами.",
+    "中文": "**Φιλοσοφία**\n\n询问任何思想家、传统或观念。\n回答仅来自原始文献，并附引用。",
+    "日本語": "**Φιλοσοφία**\n\n思想家・伝統・概念について質問してください。\n回答は一次資料のみに基づき、出典付きです。",
+    "العربية": "**Φιλοσοφία**\n\nاسأل عن أي مفكر أو تقليد أو فكرة.\nالإجابات من المصادر الأولية فقط، مع الاستشهادات.",
+    "हिन्दी": "**Φιλοσοφία**\n\nकिसी भी विचारक, परंपरा या विचार के बारे में पूछें।\nउत्तर केवल मूल स्रोतों से, उद्धरणों के साथ।",
+}
+CATALOG_TITLES = {
+    "Català": "📚 Autors i textos del corpus",
+    "Español": "📚 Autores y textos del corpus",
+    "English": "📚 Authors & texts in the corpus",
+    "Français": "📚 Auteurs et textes du corpus",
+    "Deutsch": "📚 Autoren & Texte im Korpus",
+    "Italiano": "📚 Autori e testi del corpus",
+    "Русский": "📚 Авторы и тексты корпуса",
+    "中文": "📚 语料库中的作者与文本",
+    "日本語": "📚 コーパスの著者とテキスト",
+    "العربية": "📚 المؤلفون والنصوص في المكتبة",
+    "हिन्दी": "📚 संग्रह के लेखक और ग्रंथ",
+}
+BROWSE_LABELS = {
+    "Català": "Explora per autor",
+    "Español": "Explora por autor",
+    "English": "Browse by author",
+    "Français": "Parcourir par auteur",
+    "Deutsch": "Nach Autor stöbern",
+    "Italiano": "Sfoglia per autore",
+    "Русский": "Поиск по автору",
+    "中文": "按作者浏览",
+    "日本語": "著者から探す",
+    "العربية": "تصفح حسب المؤلف",
+    "हिन्दी": "लेखक के अनुसार देखें",
+}
+SUMMARY_TMPL = {
+    "Català": "**{a} autors · {w} obres · {p:,} passatges** — tria un autor per veure les seves obres.",
+    "Español": "**{a} autores · {w} obras · {p:,} pasajes** — elige un autor para ver sus obras.",
+    "English": "**{a} authors · {w} works · {p:,} passages** — pick an author to see their works.",
+    "Français": "**{a} auteurs · {w} œuvres · {p:,} passages** — choisissez un auteur pour voir ses œuvres.",
+    "Deutsch": "**{a} Autoren · {w} Werke · {p:,} Passagen** — wählen Sie einen Autor, um seine Werke zu sehen.",
+    "Italiano": "**{a} autori · {w} opere · {p:,} passi** — scegli un autore per vedere le sue opere.",
+    "Русский": "**{a} авторов · {w} произведений · {p:,} фрагментов** — выберите автора, чтобы увидеть его труды.",
+    "中文": "**{a} 位作者 · {w} 部作品 · {p:,} 个段落** — 选择作者查看其作品。",
+    "日本語": "**{a} 名の著者 · {w} 作品 · {p:,} 節** — 著者を選ぶと作品が表示されます。",
+    "العربية": "**{a} مؤلفًا · {w} عملاً · {p:,} مقطعًا** — اختر مؤلفًا لعرض أعماله.",
+    "हिन्दी": "**{a} लेखक · {w} कृतियाँ · {p:,} अंश** — कृतियाँ देखने के लिए लेखक चुनें।",
+}
+WORKS_WORD = {
+    "Català": "obres", "Español": "obras", "English": "works", "Français": "œuvres",
+    "Deutsch": "Werke", "Italiano": "opere", "Русский": "произведений", "中文": "部作品",
+    "日本語": "作品", "العربية": "أعمال", "हिन्दी": "कृतियाँ",
+}
+
+
 def _format_answer_md(res) -> str:
     """Resposta + llista de fonts en Markdown. Les preguntes suggerides NO van aquí:
     es retornen a part (res.suggestions) i la UI principal les mostra com a chips."""
@@ -355,6 +447,7 @@ def _footer_html(lang: str = "Català") -> str:
 import inspect as _inspect
 
 _MOUNT_SUPPORTS_CSS = "css" in _inspect.signature(gr.mount_gradio_app).parameters
+_MOUNT_SUPPORTS_HEAD = "head" in _inspect.signature(gr.mount_gradio_app).parameters
 
 
 def _build_gradio(app: FastAPI) -> gr.Blocks:
@@ -386,12 +479,18 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
         suggestions_state = gr.State([])
         ci = gr.ChatInterface(
             fn=respond_full,
-            chatbot=gr.Chatbot(elem_id="sigphi-chat", height=460, show_label=False),
+            chatbot=gr.Chatbot(
+                elem_id="sigphi-chat",
+                height=460,
+                show_label=False,
+                placeholder=WELCOMES["English"],  # benvinguda al xat buit (abans, caixa blanca)
+            ),
             textbox=gr.Textbox(
-                placeholder="Ask a question about philosophy… (in any language)",
+                placeholder=PLACEHOLDERS["English"],
                 elem_id="sigphi-input",
                 container=False,
                 scale=7,
+                autofocus=True,
             ),
             additional_outputs=[suggestions_state],
         )
@@ -489,26 +588,29 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
             return (_TITLES.get(_nfc(work)) or {}).get(code, work)
 
         with gr.Accordion(
-            "📚 Authors & texts in the corpus", open=False, elem_id="sigphi-catalog"
-        ):
+            CATALOG_TITLES["English"], open=False, elem_id="sigphi-catalog"
+        ) as catalog_acc:
             catalog_summary = gr.Markdown("")
             author_pick = gr.Dropdown(
-                choices=[], label="Browse by author", elem_id="sigphi-author-pick"
+                choices=[], label=BROWSE_LABELS["English"], elem_id="sigphi-author-pick"
             )
             works_md = gr.Markdown("")
 
-        def _catalog_init(lang_value):
-            cs = app.state.chunk_store
-            _cat.clear()
-            for it in cs.catalog():
-                _cat[it["author"]] = it["works"]
+        def _catalog_summary(lang_value) -> str:
             n_works = sum(len(w) for w in _cat.values())
-            summary = (
-                f"**{len(_cat)} authors · {n_works} works · {cs.count():,} passages** — "
-                "pick an author to see their works."
-            )
+            tmpl = SUMMARY_TMPL.get(lang_value, SUMMARY_TMPL["English"])
+            return tmpl.format(a=len(_cat), w=n_works, p=app.state.chunk_store.count())
+
+        def _catalog_init(lang_value):
+            _cat.clear()
+            for it in app.state.chunk_store.catalog():
+                _cat[it["author"]] = it["works"]
             code = _LANG_CODE.get(lang_value, "en")
-            return summary, gr.update(choices=_author_choices(code), value=None), ""
+            return (
+                _catalog_summary(lang_value),
+                gr.update(choices=_author_choices(code), value=None),
+                "",
+            )
 
         def _author_works(author, lang_value):
             works = _cat.get(author or "", [])
@@ -516,21 +618,41 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
                 return ""
             code = _LANG_CODE.get(lang_value, "en")
             name = _author_label(author, code)
+            works_word = WORKS_WORD.get(lang_value, WORKS_WORD["English"])
             body = "\n".join(f"- {_title(w, code)}" for w in works)
-            return f"**{name}** — {len(works)} works:\n\n{body}"
-
-        def _relabel_catalog(lang_value, author):
-            code = _LANG_CODE.get(lang_value, "en")
-            return gr.update(choices=_author_choices(code), value=author), _author_works(author, lang_value)
+            return f"**{name}** — {len(works)} {works_word}:\n\n{body}"
 
         demo.load(_catalog_init, inputs=lang, outputs=[catalog_summary, author_pick, works_md])
         author_pick.change(_author_works, inputs=[author_pick, lang], outputs=works_md)
-        lang.change(_relabel_catalog, inputs=[lang, author_pick], outputs=[author_pick, works_md])
+
+        # UN sol gestor de canvi d'idioma: re-etiqueta TOTA la UI (abans el
+        # placeholder del textbox, la benvinguda del xat i el catàleg quedaven
+        # sempre en anglès).
+        def _relang(l, author):
+            code = _LANG_CODE.get(l, "en")
+            return (
+                _hero_html(l),
+                HEADERS.get(l, HEADERS["English"]),
+                _footer_html(l),
+                gr.update(placeholder=PLACEHOLDERS.get(l, PLACEHOLDERS["English"])),
+                gr.update(placeholder=WELCOMES.get(l, WELCOMES["English"])),
+                gr.update(label=CATALOG_TITLES.get(l, CATALOG_TITLES["English"])),
+                _catalog_summary(l),
+                gr.update(
+                    choices=_author_choices(code),
+                    value=author,
+                    label=BROWSE_LABELS.get(l, BROWSE_LABELS["English"]),
+                ),
+                _author_works(author, l),
+            )
 
         lang.change(
-            lambda l: (_hero_html(l), HEADERS[l], _footer_html(l)),
-            inputs=lang,
-            outputs=[hero, header, footer],
+            _relang,
+            inputs=[lang, author_pick],
+            outputs=[
+                hero, header, footer, ci.textbox, ci.chatbot,
+                catalog_acc, catalog_summary, author_pick, works_md,
+            ],
         )
     return demo
 
@@ -553,6 +675,8 @@ def build_app() -> FastAPI:
     mount_kwargs = {"favicon_path": str(static_dir / "logo.svg")}
     if _MOUNT_SUPPORTS_CSS:  # Gradio 6+: l'estil s'aplica en muntar
         mount_kwargs.update(theme=SIGPHI_THEME, css=SIGPHI_CSS)
+    if _MOUNT_SUPPORTS_HEAD:  # metadades SEO/OG + font amb preconnect (no bloquejant)
+        mount_kwargs.update(head=SIGPHI_HEAD)
     app = gr.mount_gradio_app(app, demo, path="/", **mount_kwargs)
     return app
 
