@@ -36,6 +36,17 @@ existents (sense consell de vida, avisos de contingut, cites).
 exportar cites (BibTeX, Markdown), model premium per a preguntes fondes. La
 conversió depèn més del que hi ha darrere del mur que del preu exacte.
 
+**Condició de MODEL per tier (afegit jul-2026):** el pla **Gratuït queda lligat
+al model barat (Flash-Lite)** encara que el model principal de l'app pugi de
+tram; **Plus/Pro reben el model bo per defecte**. Motiu doble: (a) econòmic — si
+el model bo servís també els gratuïts, a l'escenari "Creixent" el cost del tram
+gratuït (~€126/mes amb 3 Flash) es menjaria pràcticament tot el benefici net
+projectat (~€131); (b) de venda — el golden-set (jul-2026) demostra QUÈ falla el
+model barat (regles 14/20: respon coses que hauria de refusar), així que "model
+millor" és un argument de conversió demostrable, no màrqueting buit. El model
+concret del tram de pagament es decideix amb l'A/B del golden-set
+(3.1 Flash-Lite vs 3 Flash).
+
 **Cap escalonat com a embut:** anònim (3/dia) → compte gratuït (5/dia, ja tens
 l'email) → Plus → Pro. Cada salt té un motiu. El cap també és el fre de risc: amb
 5/dia, l'exposició màxima d'un gratuït que mai paga és ~€0,15/mes.
@@ -53,16 +64,33 @@ finestres mòbils de Claude). El tier surt del producte de subscripció; el
 
 ## 3. Economia
 
-**Supòsits (tots discutibles):**
+**Supòsits (tots discutibles; recalculats jul-2026):**
+
+Des de jul-2026 cada resposta amb fonts fa **2 crides** a l'LLM (resposta +
+suggeriments de seguiment); la de suggeriments és petita (~€0,0002) i sempre pot
+quedar-se al model barat. Cost per consulta segons el model de la crida
+PRINCIPAL (~8k tokens in + ~700 out reals, mesurats):
+
+| Model principal | Cost/consulta (2 crides) | Notes |
+|---|---|---|
+| Gemini 2.5 Flash-Lite (actual) | ~€0,0012 | el supòsit original (~€0,001) aguanta |
+| Gemini 3.1 Flash-Lite | ~€0,0032 | candidat a "model bo" |
+| Gemini 3 Flash | ~€0,0063 | ⚠ Pro a 2.000/mes seria NET-NEGATIU (equilibri ~1.435) |
+| Premium (p. ex. Claude Haiku 4.5) | ~€0,012 | coincideix amb el supòsit original de premium |
 
 | Variable | Valor |
 |---|---|
-| Cost per consulta (Gemini Flash-Lite) | ~€0,001 (5k tokens in + 800 out) |
-| Cost per consulta (model premium, Pro) | ~€0,013 |
 | Cost fix mensual | ~€11 (VPS Netcup ~€10 + domini ~€1) |
 | Comissió de pagament (Lemon Squeezy, MoR) | ~5% + €0,46/transacció |
 | Supabase / hosting auth | €0 (tier gratuït) fins a escala |
 | Punt d'equilibri de la infraestructura | **~4 subscriptors** |
+
+**Guarda de marge al Pro (afegit jul-2026):** si el model bo acaba sent 3 Flash,
+el sostre Pro de 2.000/mes al pitjor cas dona marge negatiu (−€3,6). Sortides,
+per ordre de preferència: (a) Pro serveix 3.1 Flash-Lite per defecte + un
+SUB-TOPALL de consultes premium (p. ex. 200/mes amb el model car); (b) baixar el
+sostre Pro a ~1.200; (c) pujar Pro a €12. Es decideix quan l'A/B digui quin
+model cal de veritat.
 
 **La conclusió clau:** l'economia NO és el coll d'ampolla — el **trànsit** sí. El
 cost per consulta és tan baix que mai et tomba; l'única cosa que importa és
@@ -156,3 +184,18 @@ trànsit real ni provar res amb usuaris. Cal:
   (metering) · Gemini de pagament amb tope.
 - Fita 6-12 mesos: **2.000 usuaris/mes (~€130/mes net)**.
 - Següent pas concret: **Fase 0** (Gemini de pagament amb límit + rate-limiting).
+
+### Addèndum (jul-2026)
+- Estructura i preus REVALIDATS amb el cost real de 2 crides/consulta: aguanten.
+- Novetats que afecten el pla: **Gratuït lligat a Flash-Lite** (§2) i **guarda de
+  marge al Pro** si el model bo és 3 Flash (§3).
+- Els **caps del gratuït (3/5 per dia) es recalibraran amb telemetria real**
+  (TelemetryStore, en producció des de jul-2026): els chips de suggeriments
+  conviden a encadenar preguntes i poden menjar-se el cap en una sola exploració
+  — decidir amb 2-4 setmanes de dades de torns/sessió, no a cegues.
+- En activar la facturació de Gemini: **fer-ho en un projecte de Google Cloud
+  SEPARAT** (el tram gratuït desapareix del projecte facturat; conservar
+  l'actual gratuït per al banc de proves).
+- El tope de despesa de l'app (10€/mes, Fase 0) s'haurà de pujar en proporció
+  als subscriptors quan es llancin els plans (escenari Creixent amb model bo:
+  €60-130/mes de despesa LLM, coberta pels ~€180 d'ingressos).
