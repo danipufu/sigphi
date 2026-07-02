@@ -28,6 +28,20 @@ class ChatResponse(BaseModel):
     answer: str
     sources: list[str]
     suggestions: list[str] = Field(default_factory=list)
+    # Cites "(Autor, Obra)" que el verificador determinista (app/services/
+    # citations.py) NO ha pogut confirmar contra les fonts recuperades. Buida
+    # en el cas normal; informativa (la resposta NO es reescriu). Útil per a
+    # eval_golden.py i per a monitoratge extern.
+    unverified_citations: list[str] = Field(default_factory=list)
+
+
+def _to_response(res) -> ChatResponse:
+    return ChatResponse(
+        answer=res.answer,
+        sources=res.sources,
+        suggestions=res.suggestions,
+        unverified_citations=[f"{c.author}, {c.work}" for c in res.unverified_citations],
+    )
 
 
 @router.post("/chat", response_model=ChatResponse)
@@ -37,8 +51,7 @@ def chat(
     body: ChatRequest,
     chat_service: ChatService = Depends(get_chat_service),
 ) -> ChatResponse:
-    res = chat_service.answer(body.query, body.history)
-    return ChatResponse(answer=res.answer, sources=res.sources, suggestions=res.suggestions)
+    return _to_response(chat_service.answer(body.query, body.history))
 
 
 @router.get("/ask", response_model=ChatResponse)
@@ -55,8 +68,7 @@ def ask(
     secret = get_settings().ask_api_key
     if not secret or key != secret:
         raise HTTPException(status_code=404, detail="Not Found")
-    res = chat_service.answer(q, [])
-    return ChatResponse(answer=res.answer, sources=res.sources, suggestions=res.suggestions)
+    return _to_response(chat_service.answer(q, []))
 
 
 @router.get("/usage")

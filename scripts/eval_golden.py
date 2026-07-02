@@ -106,6 +106,13 @@ def judge(item: dict, resp: dict) -> tuple[list[str], list[str], list[str]]:
     if locs:
         reviews.append(f"verifica localitzadors de cita: {', '.join(sorted(set(locs))[:6])}")
 
+    # Verificador determinista de cites (app/services/citations.py): cites que NO
+    # corresponen a cap font recuperada. A REVISIÓ, no FAIL dur (l'heurística de
+    # coincidència de títols és fluixa a propòsit per evitar falsos positius).
+    unverified = resp.get("unverified_citations") or []
+    if unverified:
+        reviews.append(f"CITES NO VERIFICADES (possible fabricació): {', '.join(unverified)}")
+
     return fails, warns, reviews
 
 

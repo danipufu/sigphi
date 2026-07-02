@@ -4,16 +4,20 @@ Flux: retrieve (amb filtre d'autor) -> munta context amb CAVEATS -> LLM genera
 resposta fidel a les fonts -> recull la llista de fonts (amb avisos ⚠).
 """
 from __future__ import annotations
+import logging
 import re
 from dataclasses import dataclass, field
 from typing import Iterator
 
 from app.domain.caveats import discriminatory_warning, historical_context_note
 from app.domain.interfaces import LLMInterface
-from app.domain.models import RetrievedChunk
+from app.domain.models import Citation, RetrievedChunk
 from app.services.biographies import background_block
+from app.services.citations import unverified_citations
 from app.services.prompts import NO_CORPUS_MESSAGE, SUGGESTIONS_PROMPT, SYSTEM_PROMPT
 from app.services.retrieval import RetrievalService
+
+_log = logging.getLogger("sigphi")
 
 # Captura [[NO_SOURCES]] (i variants amb un sol claudàtor) en qualsevol posició.
 _NO_SOURCES_RE = re.compile(r"\s*\[+\s*NO_SOURCES\s*\]+\s*")
@@ -84,6 +88,24 @@ class ChatResult:
     sources: list[str]
     retrieved: list[RetrievedChunk]
     suggestions: list[str] = field(default_factory=list)
+    # Cites "(Autor, Obra)" del text que el verificador determinista (pur codi,
+    # sense LLM) NO ha pogut confirmar contra les fonts recuperades. Buida en el
+    # cas normal; NOMÉS informativa (no es reescriu la resposta) — vegeu
+    # app/services/citations.py.
+    unverified_citations: list[Citation] = field(default_factory=list)
+
+
+def _check_citations(text: str, retrieved: list[RetrievedChunk]) -> list[Citation]:
+    """Verifica les cites del text contra les fonts recuperades i registra un
+    avís si en troba de no confirmades (senyal d'observabilitat; mai bloqueja
+    ni edita la resposta)."""
+    bad = unverified_citations(text, retrieved)
+    if bad:
+        _log.warning(
+            "Cites NO verificades contra les fonts recuperades: %s",
+            "; ".join(f"({c.author}, {c.work})" for c in bad),
+        )
+    return bad
 
 
 def format_context(
@@ -228,6 +250,7 @@ class ChatService:
             sources=sources,
             retrieved=retrieved,
             suggestions=suggestions,
+            unverified_citations=_check_citations(text, retrieved),
         )
 
     def answer_stream(
@@ -296,4 +319,5 @@ class ChatService:
             sources=sources,
             retrieved=retrieved,
             suggestions=suggestions,
+            unverified_citations=_check_citations(text, retrieved),
         )
