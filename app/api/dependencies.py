@@ -47,6 +47,10 @@ def get_usage_meter(request: Request):
     return request.app.state.usage_meter
 
 
+def get_telemetry(request: Request):
+    return request.app.state.telemetry
+
+
 def rate_limit() -> str:
     """Valor del rate limit (callable perquè es resol en runtime des de settings)."""
     return get_settings().rate_limit

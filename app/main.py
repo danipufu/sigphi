@@ -31,6 +31,7 @@ from app.infrastructure.vector_db import build_vector_db
 from app.services.biographies import load_biographies
 from app.services.chat import ChatService
 from app.services.retrieval import RetrievalService
+from app.services.telemetry import TelemetryStore
 from app.services.usage import UsageMeter
 
 
@@ -64,16 +65,20 @@ async def lifespan(app: FastAPI):
         top_k=s.top_k, reranker=reranker, rerank_pool=s.rerank_pool,
     )
     bios = load_biographies(s.biographies_path)
+    telemetry = TelemetryStore(s.telemetry_store_path)
 
     app.state.chunk_store = chunk_store
     app.state.vector_db = vector_db
     app.state.usage_meter = meter
+    app.state.telemetry = telemetry
     app.state.chat_service = ChatService(
-        llm, retrieval, biographies=bios, meter=meter, monthly_budget_eur=s.monthly_budget_eur
+        llm, retrieval, biographies=bios, meter=meter,
+        monthly_budget_eur=s.monthly_budget_eur, telemetry=telemetry,
     )
     yield
     chunk_store.close()
     meter.close()
+    telemetry.close()
 
 
 def _history_to_tuples(history) -> list[tuple[str, str]]:
@@ -188,6 +193,14 @@ gradio-app { background: var(--sig-cream); }
 
 /* Botons primaris en to marca */
 button.primary, .primary { background:var(--sig-navy) !important; border-color:var(--sig-navy) !important; }
+
+/* Feedback (👍/👎) sota l'última resposta: discret, no competeix amb els chips */
+#sigphi-feedback { justify-content:center; gap:6px !important; margin-top:6px; }
+#sigphi-feedback button.sigphi-fb {
+  border:1px solid #e3ddcf !important; border-radius:999px !important; background:#fff !important;
+  min-width:auto !important; padding:4px 12px !important; font-size:.9rem !important;
+}
+#sigphi-feedback button.sigphi-fb:hover { border-color:var(--sig-gold) !important; }
 
 /* Exemples propis (botons-chip) */
 #sigphi-examples { gap:8px !important; flex-wrap:wrap; margin-top:10px; }
@@ -463,11 +476,12 @@ _MOUNT_SUPPORTS_HEAD = "head" in _inspect.signature(gr.mount_gradio_app).paramet
 
 
 def _stream_answer(app: FastAPI, message: str, hist: list[tuple[str, str]]):
-    """Generador compartit: yield-a (markdown_parcial, suggeriments) a mesura que
-    arriba la resposta (suggeriments buits fins que s'acaba), i acaba amb el
-    parell final (markdown AMB fonts, suggeriments reals). ChatService.answer_stream
+    """Generador compartit: yield-a (markdown_parcial, suggeriments, pregunta) a
+    mesura que arriba la resposta (suggeriments buits fins que s'acaba), i acaba
+    amb (markdown AMB fonts, suggeriments reals, pregunta). ChatService.answer_stream
     fa la feina real; aquí només l'adaptem al contracte (text, additional_outputs)
-    que espera Gradio a cada yield."""
+    que espera Gradio a cada yield. La pregunta viatja a last_query_state perquè
+    els botons de feedback (👍/👎) sàpiguen a quina consulta es refereixen."""
     gen = app.state.chat_service.answer_stream(message, hist)
     res = None
     while True:
@@ -476,9 +490,20 @@ def _stream_answer(app: FastAPI, message: str, hist: list[tuple[str, str]]):
         except StopIteration as e:
             res = e.value
             break
-        yield partial, []
+        yield partial, [], message
     if res is not None:
-        yield _format_answer_md(res), res.suggestions
+        yield _format_answer_md(res), res.suggestions, message
+
+
+def _send_feedback(app: FastAPI, query: str, vote: int) -> None:
+    """Registra un polze amunt/avall sobre l'última resposta. Mai trenca la UI
+    si el registre falla (avís de log, toast de confirmació igualment)."""
+    if query:
+        try:
+            app.state.telemetry.record_feedback(query, vote)
+        except Exception:
+            logging.getLogger("sigphi").warning("No s'ha pogut registrar el feedback", exc_info=True)
+    gr.Info("🙏")
 
 
 def _build_gradio(app: FastAPI) -> gr.Blocks:
@@ -508,6 +533,9 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
         # additional_outputs del ChatInterface (i del runner de chips). Quan canvia,
         # @gr.render recrea els chips de seguiment.
         suggestions_state = gr.State([])
+        # Última pregunta feta (per als botons de feedback 👍/👎: encara no hi ha
+        # ID de torn, així que el feedback s'associa a la pregunta literal).
+        last_query_state = gr.State("")
         ci = gr.ChatInterface(
             fn=respond_full,
             chatbot=gr.Chatbot(
@@ -523,19 +551,20 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
                 scale=7,
                 autofocus=True,
             ),
-            additional_outputs=[suggestions_state],
+            additional_outputs=[suggestions_state, last_query_state],
         )
 
         # Runner compartit per als chips (exemples i suggeriments): omple el xat amb
         # la pregunta i la respon EN STREAMING (buida els suggeriments mentre
-        # carrega -> reapareixen amb els nous). Surt a (chatbot, suggestions_state).
+        # carrega -> reapareixen amb els nous). Surt a (chatbot, suggestions_state,
+        # last_query_state).
         def _run_question(question, history):
             history = history or []
             base = history + [{"role": "user", "content": question}]
-            yield base + [{"role": "assistant", "content": "…"}], []
+            yield base + [{"role": "assistant", "content": "…"}], [], question
             hist_tuples = _history_to_tuples(history)
-            for md, suggestions in _stream_answer(app, question, hist_tuples):
-                yield base + [{"role": "assistant", "content": md}], suggestions
+            for md, suggestions, q in _stream_answer(app, question, hist_tuples):
+                yield base + [{"role": "assistant", "content": md}], suggestions, q
 
         # Chips sota el xat. UN sol render decideix QUÈ mostrar segons l'estat:
         #   - conversa NO començada -> N_EXAMPLES exemples a l'atzar (varien a cada
@@ -550,14 +579,21 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
             gr.Button(question, size="sm", elem_classes=elem_class).click(
                 _run_question,
                 inputs=[gr.State(question), ci.chatbot],
-                outputs=[ci.chatbot, suggestions_state],
+                outputs=[ci.chatbot, suggestions_state, last_query_state],
             )
 
         @gr.render(
-            inputs=[suggestions_state, ci.chatbot],
+            inputs=[suggestions_state, ci.chatbot, last_query_state],
             triggers=[demo.load, suggestions_state.change, ci.chatbot.change],
         )
-        def _render_chips(suggestions, history):
+        def _render_chips(suggestions, history, last_query):
+            # Feedback sobre l'última resposta: només té sentit si ja n'hi ha una.
+            if history:
+                with gr.Row(elem_id="sigphi-feedback"):
+                    up = gr.Button("👍", size="sm", elem_classes="sigphi-fb")
+                    down = gr.Button("👎", size="sm", elem_classes="sigphi-fb")
+                    up.click(lambda: _send_feedback(app, last_query, 1), outputs=[])
+                    down.click(lambda: _send_feedback(app, last_query, -1), outputs=[])
             if suggestions:
                 with gr.Row(elem_id="sigphi-suggestions"):
                     for q in suggestions:

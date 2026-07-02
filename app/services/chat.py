@@ -6,6 +6,7 @@ resposta fidel a les fonts -> recull la llista de fonts (amb avisos ⚠).
 from __future__ import annotations
 import logging
 import re
+import time
 from dataclasses import dataclass, field
 from typing import Iterator
 
@@ -189,6 +190,7 @@ class ChatService:
         biographies: dict[str, str] | None = None,
         meter=None,
         monthly_budget_eur: float = 0.0,
+        telemetry=None,
     ) -> None:
         self._llm = llm
         self._retrieval = retrieval
@@ -196,8 +198,40 @@ class ChatService:
         self._bios = biographies or {}
         self._meter = meter  # UsageMeter-like (.month_cost_eur()) o None
         self._budget = monthly_budget_eur
+        self._telemetry = telemetry  # TelemetryStore-like (.record_turn(...)) o None
+
+    def _record_telemetry(self, query: str, res: ChatResult, latency_ms: int) -> None:
+        """Registra el torn (autors detectats, score, fonts, NO_SOURCES,
+        llatència...) si hi ha TelemetryStore configurat. Mai trenca el torn de
+        xat si el registre falla."""
+        if self._telemetry is None:
+            return
+        try:
+            self._telemetry.record_turn(
+                query,
+                authors=self._retrieval.detect_authors(query),
+                n_retrieved=len(res.retrieved),
+                top_score=max((r.score for r in res.retrieved), default=None),
+                sources_count=len(res.sources),
+                no_sources=not res.sources,
+                suggestions_count=len(res.suggestions),
+                unverified_count=len(res.unverified_citations),
+                latency_ms=latency_ms,
+            )
+        except Exception:
+            _log.warning("No s'ha pogut registrar la telemetria del torn", exc_info=True)
 
     def answer(
+        self,
+        query: str,
+        history: list[tuple[str, str]] | None = None,
+    ) -> ChatResult:
+        start = time.perf_counter()
+        res = self._answer_impl(query, history)
+        self._record_telemetry(query, res, int((time.perf_counter() - start) * 1000))
+        return res
+
+    def _answer_impl(
         self,
         query: str,
         history: list[tuple[str, str]] | None = None,
@@ -258,12 +292,26 @@ class ChatService:
         query: str,
         history: list[tuple[str, str]] | None = None,
     ) -> Iterator[str]:
-        """Com answer(), però en streaming: yield-a el text ACUMULAT (no deltes -
-        cada valor és la resposta sencera fins ara, tal com espera Gradio) a mesura
-        que arriba, per reduir la latència percebuda. Els casos sense generació real
-        (pressupost/sense corpus) fan un sol yield. Quan el generador s'exhaureix,
-        el seu valor de retorn (StopIteration.value, capturable amb `yield from` o
-        `next()`+except) és el ChatResult complet, EXACTAMENT com el retorn d'answer().
+        """Com answer(), però en streaming (vegeu _answer_stream_impl). Aquest
+        embolcall només afegeix telemetria: `yield from` reenvia tots els yields
+        del generador intern I capta el seu valor de retorn (el ChatResult, via
+        StopIteration.value) per registrar el torn un cop acabat."""
+        start = time.perf_counter()
+        res = yield from self._answer_stream_impl(query, history)
+        self._record_telemetry(query, res, int((time.perf_counter() - start) * 1000))
+        return res
+
+    def _answer_stream_impl(
+        self,
+        query: str,
+        history: list[tuple[str, str]] | None = None,
+    ) -> Iterator[str]:
+        """Yield-a el text ACUMULAT (no deltes - cada valor és la resposta
+        sencera fins ara, tal com espera Gradio) a mesura que arriba, per
+        reduir la latència percebuda. Els casos sense generació real
+        (pressupost/sense corpus) fan un sol yield. Quan el generador
+        s'exhaureix, el seu valor de retorn (StopIteration.value) és el
+        ChatResult complet, EXACTAMENT com el retorn d'answer().
 
         Neteja en viu: cada yield ja passa pels mateixos filtres defensius que
         answer() ([[NO_SOURCES]], bloc [[SUGGESTIONS]] espontani), així que si el

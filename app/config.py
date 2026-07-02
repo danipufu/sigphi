@@ -61,6 +61,9 @@ class Settings(BaseSettings):
     # === Chunk store (SQLite: text complet dels fragments) ===
     chunk_store_path: Path = Path("./data/chunks.sqlite")
 
+    # === Telemetria (SQLite: torns + feedback, anonimitzat -- sense IP/usuari) ===
+    telemetry_store_path: Path = Path("./data/telemetry.sqlite")
+
     # === Aliases multilingües (12 idiomes + original) ===
     aliases_path: Path = Path("./app/data/authors_aliases.json")
 

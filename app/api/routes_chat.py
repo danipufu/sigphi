@@ -7,6 +7,7 @@ from pydantic import BaseModel, Field
 from app.api.dependencies import (
     get_chat_service,
     get_chunk_store,
+    get_telemetry,
     get_usage_meter,
     get_vector_db,
     limiter,
@@ -82,6 +83,45 @@ def usage(
     if not secret or key != secret:
         raise HTTPException(status_code=404, detail="Not Found")
     return meter.snapshot(get_settings().monthly_budget_eur)
+
+
+class FeedbackRequest(BaseModel):
+    query: str = Field(..., min_length=1)
+    vote: int = Field(..., description="1 = polze amunt, -1 (o qualsevol no-positiu) = polze avall")
+
+
+@router.post("/feedback")
+@limiter.limit(rate_limit)
+def feedback(
+    request: Request,  # requerit per slowapi
+    body: FeedbackRequest,
+    telemetry=Depends(get_telemetry),
+) -> dict:
+    """Registra un polze amunt/avall sobre l'última resposta (identificada per
+    la pregunta, no hi ha ID de torn encara). Públic (sense clau): és un senyal
+    de baix risc que interessa recollir del màxim de gent possible; el rate
+    limit normal ja evita l'abús."""
+    if telemetry is None:
+        return {"ok": False, "reason": "telemetry disabled"}
+    telemetry.record_feedback(body.query, body.vote)
+    return {"ok": True}
+
+
+@router.get("/stats")
+def stats(
+    key: str = Query("", description="Clau secreta (ASK_API_KEY)"),
+    days: int = Query(30, ge=1, le=365),
+    telemetry=Depends(get_telemetry),
+) -> dict:
+    """Resum agregat d'ús real (torns, taxa de NO_SOURCES, score mitjà de
+    retrieval, llatència, feedback, preguntes més freqüents). Protegit amb
+    clau, per a monitoratge. Retorna 404 si la clau no és correcta."""
+    secret = get_settings().ask_api_key
+    if not secret or key != secret:
+        raise HTTPException(status_code=404, detail="Not Found")
+    if telemetry is None:
+        raise HTTPException(status_code=404, detail="Not Found")
+    return telemetry.stats(days)
 
 
 @router.get("/catalog")
