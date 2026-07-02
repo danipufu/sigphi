@@ -1,6 +1,6 @@
 """Interfícies del domini. Implementades per adaptadors a infrastructure/."""
 from __future__ import annotations
-from typing import Protocol, Sequence
+from typing import Iterator, Protocol, Sequence
 
 from app.domain.models import Chunk, RetrievedChunk
 
@@ -73,6 +73,18 @@ class LLMInterface(Protocol):
         history: list[tuple[str, str]] | None = None,
     ) -> str:
         """Genera una resposta basada estrictament en el context recuperat."""
+        ...
+
+    def generate_stream(
+        self,
+        system_prompt: str,
+        user_query: str,
+        context: str,
+        history: list[tuple[str, str]] | None = None,
+    ) -> Iterator[str]:
+        """Com generate(), però en streaming: itera fragments de text incrementals
+        a mesura que el model els genera, per reduir la latència PERCEBUDA (el
+        contingut real de la resposta és idèntic, es reben els mateixos tokens)."""
         ...
 
     def generate_suggestions(

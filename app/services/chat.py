@@ -6,6 +6,7 @@ resposta fidel a les fonts -> recull la llista de fonts (amb avisos ⚠).
 from __future__ import annotations
 import re
 from dataclasses import dataclass, field
+from typing import Iterator
 
 from app.domain.caveats import discriminatory_warning, historical_context_note
 from app.domain.interfaces import LLMInterface
@@ -218,6 +219,74 @@ class ChatService:
         # NOMÉS li passem la llista d'AUTOR — OBRA (no el context sencer amb tots els
         # fragments): per triar 3 preguntes de seguiment li basta saber QUÈ s'ha citat,
         # no rellegir els fragments sencers. Estalvia ~5k tokens d'input per torn.
+        sources = get_sources(retrieved)
+        suggestions = self._llm.generate_suggestions(
+            SUGGESTIONS_PROMPT, query, text, "\n".join(sources)
+        )
+        return ChatResult(
+            answer=text,
+            sources=sources,
+            retrieved=retrieved,
+            suggestions=suggestions,
+        )
+
+    def answer_stream(
+        self,
+        query: str,
+        history: list[tuple[str, str]] | None = None,
+    ) -> Iterator[str]:
+        """Com answer(), però en streaming: yield-a el text ACUMULAT (no deltes -
+        cada valor és la resposta sencera fins ara, tal com espera Gradio) a mesura
+        que arriba, per reduir la latència percebuda. Els casos sense generació real
+        (pressupost/sense corpus) fan un sol yield. Quan el generador s'exhaureix,
+        el seu valor de retorn (StopIteration.value, capturable amb `yield from` o
+        `next()`+except) és el ChatResult complet, EXACTAMENT com el retorn d'answer().
+
+        Neteja en viu: cada yield ja passa pels mateixos filtres defensius que
+        answer() ([[NO_SOURCES]], bloc [[SUGGESTIONS]] espontani), així que si el
+        model els arriba a emetre, l'últim yield ja els amaga (com que Gradio
+        REEMPLAÇA el missatge a cada yield, no l'afegeix, la versió neta "cura"
+        qualsevol flaix visible d'una fracció de segon)."""
+        if (
+            self._meter is not None
+            and self._budget > 0
+            and self._meter.month_cost_eur() >= self._budget
+        ):
+            yield _BUDGET_MSG
+            return ChatResult(answer=_BUDGET_MSG, sources=[], retrieved=[])
+
+        retrieval_query = query
+        hist_pairs = history or []
+        if hist_pairs and _is_followup(query):
+            prev_q = hist_pairs[-1][0]
+            if prev_q:
+                retrieval_query = f"{prev_q}\n{query}"
+
+        retrieved = self._retrieval.retrieve(retrieval_query)
+        if not retrieved:
+            yield NO_CORPUS_MESSAGE
+            return ChatResult(answer=NO_CORPUS_MESSAGE, sources=[], retrieved=[])
+        context = format_context(retrieved, self._bios)
+        hist = (history or [])[-self._max_history :]
+
+        acc = ""
+        tag_checked = False
+        for delta in self._llm.generate_stream(SYSTEM_PROMPT, query, context, hist):
+            acc += delta
+            if not tag_checked:
+                # esperem tenir prou prefix per decidir si comença amb [[NO_SOURCES]]
+                # (regla 15: sempre al principi) abans de mostrar cap caràcter
+                if len(acc) < 24 and "NO_SOURCES" not in acc:
+                    continue
+                tag_checked = True
+            shown = _NO_SOURCES_RE.sub(" ", acc).strip() if "NO_SOURCES" in acc else acc
+            shown, _ = split_suggestions(shown)
+            yield shown
+
+        text, _ = split_suggestions(acc)
+        if "NO_SOURCES" in text:
+            text = _NO_SOURCES_RE.sub(" ", text).strip()
+            return ChatResult(answer=text, sources=[], retrieved=retrieved, suggestions=[])
         sources = get_sources(retrieved)
         suggestions = self._llm.generate_suggestions(
             SUGGESTIONS_PROMPT, query, text, "\n".join(sources)

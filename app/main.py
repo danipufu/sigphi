@@ -450,12 +450,31 @@ _MOUNT_SUPPORTS_CSS = "css" in _inspect.signature(gr.mount_gradio_app).parameter
 _MOUNT_SUPPORTS_HEAD = "head" in _inspect.signature(gr.mount_gradio_app).parameters
 
 
+def _stream_answer(app: FastAPI, message: str, hist: list[tuple[str, str]]):
+    """Generador compartit: yield-a (markdown_parcial, suggeriments) a mesura que
+    arriba la resposta (suggeriments buits fins que s'acaba), i acaba amb el
+    parell final (markdown AMB fonts, suggeriments reals). ChatService.answer_stream
+    fa la feina real; aquí només l'adaptem al contracte (text, additional_outputs)
+    que espera Gradio a cada yield."""
+    gen = app.state.chat_service.answer_stream(message, hist)
+    res = None
+    while True:
+        try:
+            partial = next(gen)
+        except StopIteration as e:
+            res = e.value
+            break
+        yield partial, []
+    if res is not None:
+        yield _format_answer_md(res), res.suggestions
+
+
 def _build_gradio(app: FastAPI) -> gr.Blocks:
     def respond_full(message, history):
-        """UI principal: retorna (markdown_amb_fonts, llista_suggeriments). El segon
-        valor va a additional_outputs -> suggestions_state -> chips de seguiment."""
-        res = app.state.chat_service.answer(message, _history_to_tuples(history))
-        return _format_answer_md(res), res.suggestions
+        """UI principal: yield-a (markdown, llista_suggeriments) progressivament
+        (streaming). El segon valor va a additional_outputs -> suggestions_state
+        -> chips de seguiment (només presents a l'últim yield)."""
+        yield from _stream_answer(app, message, _history_to_tuples(history))
 
     # A Gradio <6, theme/css van al Blocks; a >=6 van a mount_gradio_app (a sota).
     blocks_kwargs = {} if _MOUNT_SUPPORTS_CSS else {"theme": SIGPHI_THEME, "css": SIGPHI_CSS}
@@ -496,19 +515,15 @@ def _build_gradio(app: FastAPI) -> gr.Blocks:
         )
 
         # Runner compartit per als chips (exemples i suggeriments): omple el xat amb
-        # la pregunta, la respon, i actualitza els suggeriments (buida'ls mentre
+        # la pregunta i la respon EN STREAMING (buida els suggeriments mentre
         # carrega -> reapareixen amb els nous). Surt a (chatbot, suggestions_state).
         def _run_question(question, history):
             history = history or []
-            yield history + [
-                {"role": "user", "content": question},
-                {"role": "assistant", "content": "…"},
-            ], []
-            md, suggestions = respond_full(question, history)
-            yield history + [
-                {"role": "user", "content": question},
-                {"role": "assistant", "content": md},
-            ], suggestions
+            base = history + [{"role": "user", "content": question}]
+            yield base + [{"role": "assistant", "content": "…"}], []
+            hist_tuples = _history_to_tuples(history)
+            for md, suggestions in _stream_answer(app, question, hist_tuples):
+                yield base + [{"role": "assistant", "content": md}], suggestions
 
         # Chips sota el xat. UN sol render decideix QUÈ mostrar segons l'estat:
         #   - conversa NO començada -> N_EXAMPLES exemples a l'atzar (varien a cada

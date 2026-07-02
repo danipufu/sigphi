@@ -4,6 +4,7 @@ from __future__ import annotations
 import logging
 import re
 import time
+from typing import Iterator
 
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -174,13 +175,17 @@ class GeminiLLM:
         except Exception:
             _log.warning("No s'ha pogut registrar l'ús de l'LLM", exc_info=True)
 
-    def generate(
+    def _build_messages(
         self,
         system_prompt: str,
         user_query: str,
         context: str,
-        history: list[tuple[str, str]] | None = None,
-    ) -> str:
+        history: list[tuple[str, str]] | None,
+    ) -> list:
+        """Munta la llista de missatges (system + context + ack + historial +
+        pregunta amb recordatori d'idioma). Compartit per generate() i
+        generate_stream(): el prompt és idèntic, només canvia com es consumeix
+        la resposta."""
         messages: list = [
             SystemMessage(content=system_prompt),
             HumanMessage(
@@ -214,6 +219,16 @@ class GeminiLLM:
                 "question, regardless of the language of earlier turns or of the sources.]"
             )
         messages.append(HumanMessage(content=user_query + directive))
+        return messages
+
+    def generate(
+        self,
+        system_prompt: str,
+        user_query: str,
+        context: str,
+        history: list[tuple[str, str]] | None = None,
+    ) -> str:
+        messages = self._build_messages(system_prompt, user_query, context, history)
 
         # Reintents amb espera creixent: el pla gratuït de Gemini limita ~req/min i
         # retorna 429 en ràfegues. Sense això, l'excepció arribaria a l'usuari com un 500.
@@ -230,6 +245,45 @@ class GeminiLLM:
                     time.sleep(2)  # una espera curta i tornem a provar
         _log.error("Gemini no respon després de 2 intents: %s", last_err)
         return _BUSY_MSG
+
+    def generate_stream(
+        self,
+        system_prompt: str,
+        user_query: str,
+        context: str,
+        history: list[tuple[str, str]] | None = None,
+    ) -> Iterator[str]:
+        """Com generate(), però yield-ant fragments incrementals a mesura que
+        arriben. Reintent només si la crida falla ABANS d'emetre cap fragment
+        (si ja hem mostrat text real i després falla, reprendre duplicaria
+        contingut a l'usuari; és millor deixar el que ja s'ha mostrat)."""
+        messages = self._build_messages(system_prompt, user_query, context, history)
+
+        last_err: Exception | None = None
+        for attempt in range(2):
+            emitted = False
+            full = None
+            try:
+                for chunk in self._llm.stream(messages):
+                    full = chunk if full is None else full + chunk
+                    if chunk.content:
+                        emitted = True
+                        yield chunk.content
+                if full is not None:
+                    self._record_usage(messages, full)
+                return
+            except Exception as e:  # 429 / timeout / errors transitoris de l'API
+                last_err = e
+                _log.warning(
+                    "Gemini stream ha fallat (intent %d/2, %s fragments emesos): %s",
+                    attempt + 1, "amb" if emitted else "sense", e,
+                )
+                if emitted:
+                    return  # ja hem mostrat text real; reintentar duplicaria contingut
+                if attempt == 0:
+                    time.sleep(2)
+        _log.error("Gemini stream no respon després de 2 intents: %s", last_err)
+        yield _BUSY_MSG
 
     def generate_suggestions(
         self,
