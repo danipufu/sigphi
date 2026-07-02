@@ -14,8 +14,32 @@ import re
 import unicodedata
 from pathlib import Path
 
-from app.domain.interfaces import EmbedderInterface, RerankerInterface, VectorDBInterface
+from app.domain.interfaces import (
+    EmbedderInterface,
+    LexicalSearchInterface,
+    RerankerInterface,
+    VectorDBInterface,
+)
 from app.domain.models import RetrievedChunk
+
+
+def _rrf_merge(
+    lists: list[list[RetrievedChunk]], top_k: int, k: int = 60
+) -> list[RetrievedChunk]:
+    """Reciprocal Rank Fusion: combina diverses llistes ordenades (semàntica +
+    lèxica) fent servir NOMÉS la POSICIÓ de cada resultat, no la puntuació
+    crua -- cosinus d'embedding i bm25() de FTS5 viuen en escales totalment
+    diferents i incomparables, però la posició relativa (1r, 2n, 3r...) sí es
+    pot combinar de manera justa. Estàndard establert per a cerca híbrida."""
+    scores: dict[str, float] = {}
+    chunks: dict[str, RetrievedChunk] = {}
+    for lst in lists:
+        for rank, rc in enumerate(lst):
+            cid = rc.chunk.chunk_id
+            scores[cid] = scores.get(cid, 0.0) + 1.0 / (k + rank + 1)
+            chunks.setdefault(cid, rc)
+    ordered = sorted(scores.items(), key=lambda kv: kv[1], reverse=True)
+    return [chunks[cid] for cid, _ in ordered[:top_k]]
 
 
 def _norm(s: str) -> str:
@@ -97,12 +121,14 @@ class RetrievalService:
         top_k: int = 15,
         reranker: RerankerInterface | None = None,
         rerank_pool: int = 40,
+        lexical: LexicalSearchInterface | None = None,
     ) -> None:
         self._embedder = embedder
         self._vector_db = vector_db
         self._top_k = top_k
         self._reranker = reranker
         self._rerank_pool = rerank_pool  # candidats extra a oferir al reranker
+        self._lexical = lexical  # BM25 (ChunkStore) o None -> cerca purament semàntica
         self._alias2author = self._load_aliases(Path(aliases_path))
 
     @staticmethod
@@ -200,6 +226,25 @@ class RetrievalService:
             return self._reranker.rerank(query, candidates, self._top_k)
         return candidates[: self._top_k]
 
+    def _hybrid_pool(
+        self,
+        query: str,
+        qv: list[float],
+        pool_k: int,
+        author_filter: list[str] | None,
+    ) -> list[RetrievedChunk]:
+        """Cerca semàntica (embedder) + lèxica (BM25, si n'hi ha) fusionades amb
+        RRF (vegeu _rrf_merge). Amplia el recall: troba tant per significat
+        (paràfrasis, conceptes relacionats) com per paraula exacta (noms
+        propis, títols concrets) que l'embedding sol pot perdre."""
+        dense = self._vector_db.query_similarity(qv, pool_k, author_filter=author_filter)
+        if not self._lexical:
+            return dense
+        lexical = self._lexical.search_bm25(query, pool_k, author_filter=author_filter)
+        if not lexical:
+            return dense
+        return _rrf_merge([dense, lexical], pool_k)
+
     def retrieve(self, query: str) -> list[RetrievedChunk]:
         """Vectoritza la consulta i recupera top_k; filtra per autor si n'hi ha.
 
@@ -207,12 +252,14 @@ class RetrievalService:
         escriptures nucli hi siguin representades (top-3 de cadascuna) abans
         d'omplir amb el millor general; així preguntes de resum doctrinal ("els 5
         pilars") tenen a context els passatges de les pràctiques, no només el
-        fragment del Coran millor classificat. Aquest cas NO passa pel reranker:
-        la garantia de representació és més important que l'ordre relatiu.
+        fragment del Coran millor classificat. Aquest cas NO passa per la cerca
+        híbrida ni pel reranker: la garantia de representació és més important
+        que l'ordre relatiu.
 
-        Als altres dos casos (filtrat per autor / general), si hi ha reranker es
-        demana un pool més gran a l'embedder (rerank_pool) i es reordena amb el
-        cross-encoder abans de retallar a top_k.
+        Als altres dos casos (filtrat per autor / general): cerca HÍBRIDA
+        (semàntica + BM25 lèxica, fusionades amb RRF si hi ha `lexical`
+        configurat) sobre un pool ampliat si hi ha reranker (rerank_pool), i
+        es reordena amb el cross-encoder abans de retallar a top_k.
         """
         qv = self._embedder.embed_query(query)
         ql = _norm(query)
@@ -237,7 +284,7 @@ class RetrievalService:
 
         pool_k = self._rerank_pool if self._reranker else self._top_k
         if authors:
-            res = self._vector_db.query_similarity(qv, pool_k, author_filter=authors)
+            res = self._hybrid_pool(query, qv, pool_k, authors)
             if res:
                 return self._rerank(query, res)
-        return self._rerank(query, self._vector_db.query_similarity(qv, pool_k))
+        return self._rerank(query, self._hybrid_pool(query, qv, pool_k, None))

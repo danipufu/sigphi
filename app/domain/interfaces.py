@@ -62,6 +62,23 @@ class EmbedderInterface(Protocol):
         ...
 
 
+class LexicalSearchInterface(Protocol):
+    """Contracte de la cerca lèxica (BM25 local, sense API externa) per a la
+    cerca híbrida: complementa la cerca semàntica trobant coincidències de
+    paraula exactes (noms propis, títols concrets) que l'embedding pot perdre."""
+
+    def search_bm25(
+        self,
+        query: str,
+        top_k: int,
+        author_filter: list[str] | None = None,
+    ) -> list[RetrievedChunk]:
+        """Cerca BM25 top-k, opcionalment filtrada per autor. Ha de degradar
+        amb gràcia (retornar []) si la consulta no dona cap coincidència, mai
+        trencar el retrieval."""
+        ...
+
+
 class RerankerInterface(Protocol):
     """Contracte del reordenador de candidats de retrieval (cross-encoder local,
     sense cap crida a API externa)."""

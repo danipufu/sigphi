@@ -79,6 +79,9 @@ class Settings(BaseSettings):
     rerank_enabled: bool = True
     rerank_model: str = "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
     rerank_pool: int = 40
+    # Cerca híbrida (semàntica + BM25 lèxica via SQLite FTS5 del ChunkStore).
+    # Sense dependències ni re-indexació noves: BM25 natiu de SQLite.
+    hybrid_search_enabled: bool = True
 
     # === Ingest ===
     ingest_batch_size: int = 100

@@ -63,6 +63,7 @@ async def lifespan(app: FastAPI):
     retrieval = RetrievalService(
         embedder, vector_db, s.aliases_path,
         top_k=s.top_k, reranker=reranker, rerank_pool=s.rerank_pool,
+        lexical=chunk_store if s.hybrid_search_enabled else None,
     )
     bios = load_biographies(s.biographies_path)
     telemetry = TelemetryStore(s.telemetry_store_path)
