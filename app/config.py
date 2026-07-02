@@ -69,6 +69,13 @@ class Settings(BaseSettings):
 
     # === Retrieval ===
     top_k: int = 20
+    # Reranker local (cross-encoder multilingüe, sense API externa): reordena
+    # un pool més gran de candidats de l'embedder (bi-encoder, ràpid però menys
+    # precís) abans de retallar a top_k. rerank_pool ha de ser > top_k perquè
+    # tingui candidats extra entre els quals triar.
+    rerank_enabled: bool = True
+    rerank_model: str = "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
+    rerank_pool: int = 40
 
     # === Ingest ===
     ingest_batch_size: int = 100

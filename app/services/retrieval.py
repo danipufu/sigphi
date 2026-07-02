@@ -14,7 +14,7 @@ import re
 import unicodedata
 from pathlib import Path
 
-from app.domain.interfaces import EmbedderInterface, VectorDBInterface
+from app.domain.interfaces import EmbedderInterface, RerankerInterface, VectorDBInterface
 from app.domain.models import RetrievedChunk
 
 
@@ -95,10 +95,14 @@ class RetrievalService:
         vector_db: VectorDBInterface,
         aliases_path: Path,
         top_k: int = 15,
+        reranker: RerankerInterface | None = None,
+        rerank_pool: int = 40,
     ) -> None:
         self._embedder = embedder
         self._vector_db = vector_db
         self._top_k = top_k
+        self._reranker = reranker
+        self._rerank_pool = rerank_pool  # candidats extra a oferir al reranker
         self._alias2author = self._load_aliases(Path(aliases_path))
 
     @staticmethod
@@ -189,6 +193,13 @@ class RetrievalService:
                         core.append(c)
         return core
 
+    def _rerank(self, query: str, candidates: list[RetrievedChunk]) -> list[RetrievedChunk]:
+        """Retalla `candidates` a top_k, reordenant amb el cross-encoder si n'hi
+        ha (més precís que la similitud d'embeddings sola)."""
+        if self._reranker and len(candidates) > self._top_k:
+            return self._reranker.rerank(query, candidates, self._top_k)
+        return candidates[: self._top_k]
+
     def retrieve(self, query: str) -> list[RetrievedChunk]:
         """Vectoritza la consulta i recupera top_k; filtra per autor si n'hi ha.
 
@@ -196,7 +207,12 @@ class RetrievalService:
         escriptures nucli hi siguin representades (top-3 de cadascuna) abans
         d'omplir amb el millor general; així preguntes de resum doctrinal ("els 5
         pilars") tenen a context els passatges de les pràctiques, no només el
-        fragment del Coran millor classificat.
+        fragment del Coran millor classificat. Aquest cas NO passa pel reranker:
+        la garantia de representació és més important que l'ordre relatiu.
+
+        Als altres dos casos (filtrat per autor / general), si hi ha reranker es
+        demana un pool més gran a l'embedder (rerank_pool) i es reordena amb el
+        cross-encoder abans de retallar a top_k.
         """
         qv = self._embedder.embed_query(query)
         ql = _norm(query)
@@ -218,10 +234,10 @@ class RetrievalService:
                     merged.append(rc)
             if merged:
                 return merged[: self._top_k + 6]
+
+        pool_k = self._rerank_pool if self._reranker else self._top_k
         if authors:
-            res = self._vector_db.query_similarity(
-                qv, self._top_k, author_filter=authors
-            )
+            res = self._vector_db.query_similarity(qv, pool_k, author_filter=authors)
             if res:
-                return res
-        return self._vector_db.query_similarity(qv, self._top_k)
+                return self._rerank(query, res)
+        return self._rerank(query, self._vector_db.query_similarity(qv, pool_k))

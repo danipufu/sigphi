@@ -62,6 +62,23 @@ class EmbedderInterface(Protocol):
         ...
 
 
+class RerankerInterface(Protocol):
+    """Contracte del reordenador de candidats de retrieval (cross-encoder local,
+    sense cap crida a API externa)."""
+
+    def rerank(
+        self,
+        query: str,
+        candidates: list[RetrievedChunk],
+        top_k: int,
+    ) -> list[RetrievedChunk]:
+        """Reordena `candidates` per rellevància real query+passatge (més precís
+        que la similitud d'embeddings, que compara els dos per separat) i
+        retorna els `top_k` millors. Si falla, ha de degradar amb gràcia
+        (retornar els primers top_k sense reordenar, mai trencar el retrieval)."""
+        ...
+
+
 class LLMInterface(Protocol):
     """Contracte del LLM que genera respostes amb cites verificables."""
 

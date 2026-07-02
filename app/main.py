@@ -26,6 +26,7 @@ from app.config import get_settings
 from app.infrastructure.chunk_store import ChunkStore
 from app.infrastructure.embedder import SentenceTransformersEmbedder
 from app.infrastructure.llm import GeminiLLM
+from app.infrastructure.reranker import CrossEncoderReranker
 from app.infrastructure.vector_db import build_vector_db
 from app.services.biographies import load_biographies
 from app.services.chat import ChatService
@@ -50,7 +51,18 @@ async def lifespan(app: FastAPI):
         max_output_tokens=s.max_output_tokens,
         meter=meter,
     )
-    retrieval = RetrievalService(embedder, vector_db, s.aliases_path, top_k=s.top_k)
+    reranker = None
+    if s.rerank_enabled:
+        try:
+            reranker = CrossEncoderReranker(s.rerank_model)
+        except Exception:
+            logging.getLogger("sigphi").exception(
+                "No s'ha pogut carregar el reranker; retrieval sense reordenar"
+            )
+    retrieval = RetrievalService(
+        embedder, vector_db, s.aliases_path,
+        top_k=s.top_k, reranker=reranker, rerank_pool=s.rerank_pool,
+    )
     bios = load_biographies(s.biographies_path)
 
     app.state.chunk_store = chunk_store
