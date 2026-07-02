@@ -185,6 +185,12 @@ class GeminiLLM:
             max_output_tokens=256,
             timeout=15,
             max_retries=0,
+            # Alguns models (p.ex. gemini-2.5-flash, a diferència de flash-lite)
+            # reserven per defecte part del tope de tokens per a "pensament" intern
+            # abans de la resposta visible -- vam veure'n l'efecte real: amb el
+            # tope de 256 la resposta sortia tallada a mitja paraula. La tria de 3
+            # preguntes de seguiment no necessita raonament, així que el desactivem.
+            thinking_budget=0,
         )
 
     def _record_usage(self, messages: list, resp) -> None:
