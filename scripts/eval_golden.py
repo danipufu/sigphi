@@ -115,6 +115,12 @@ def main() -> int:
     ap.add_argument("--base-url", default="https://sigphiai.com")
     ap.add_argument("--limit", type=int, default=None, help="màx. preguntes (estalvi de quota)")
     ap.add_argument("--filter", default="", help="només ids que continguin (coma-separat)")
+    ap.add_argument(
+        "--save-fails",
+        default="",
+        help="ruta JSON on desar la resposta COMPLETA (answer/sources/suggestions) "
+        "de cada cas FAIL, per diagnosticar sense gastar quota nova en refer la crida",
+    )
     args = ap.parse_args()
 
     try:  # consoles no-UTF8 (p.ex. Windows cp1252) no han de petar amb ✓/accents
@@ -136,12 +142,15 @@ def main() -> int:
     print(f">>> Golden-set: {len(items)} preguntes contra {args.base_url}\n")
     n_pass = n_fail = 0
     review_all: list[tuple[str, str]] = []
+    saved_fails: list[dict] = []
     for it in items:
         try:
             resp = ask(args.base_url, args.key, it["query"])
         except Exception as e:
             print(f"  ✗ {it['id']}: ERROR de crida -> {e}")
             n_fail += 1
+            if args.save_fails:
+                saved_fails.append({"id": it["id"], "query": it["query"], "error": str(e)})
             continue
         fails, warns, reviews = judge(it, resp)
         for r in reviews:
@@ -151,6 +160,8 @@ def main() -> int:
             print(f"  ✗ FAIL {it['id']}  ({it['expect']})")
             for f in fails:
                 print(f"        - {f}")
+            if args.save_fails:
+                saved_fails.append({"id": it["id"], "query": it["query"], "fails": fails, "response": resp})
         else:
             n_pass += 1
             print(f"  ✓ pass {it['id']}")
@@ -160,6 +171,11 @@ def main() -> int:
         print("\n## REVISIÓ MANUAL (cites amb localitzador a verificar contra la font):")
         for cid, r in review_all:
             print(f"  - {cid}: {r}")
+    if args.save_fails and saved_fails:
+        Path(args.save_fails).write_text(
+            json.dumps(saved_fails, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        print(f"\n>>> Respostes completes dels FAILs desades a {args.save_fails}")
     return 1 if n_fail else 0
 
 
