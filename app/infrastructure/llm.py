@@ -115,6 +115,26 @@ _BUSY_MSG = (
     "⏳ The service is busy right now; please try again in a few seconds."
 )
 
+# Avís quan el STREAM falla A MITGES (ja s'ha mostrat text real; reprendre'l
+# duplicaria contingut, vegeu generate_stream). S'afegeix al final del que ja
+# s'ha emès, en l'idioma detectat de la pregunta (mateixa detecció que la
+# resposta principal) perquè no sembli que la resposta simplement s'ha acabat bé.
+_INTERRUPTED_NOTE: dict[str, str] = {
+    "Catalan": "\n\n⚠️ *La resposta s'ha interromput; torna-ho a provar.*",
+    "Spanish": "\n\n⚠️ *La respuesta se ha interrumpido; inténtalo de nuevo.*",
+    "English": "\n\n⚠️ *The response was interrupted; please try again.*",
+    "French": "\n\n⚠️ *La réponse a été interrompue ; réessayez.*",
+    "German": "\n\n⚠️ *Die Antwort wurde unterbrochen; bitte erneut versuchen.*",
+    "Italian": "\n\n⚠️ *La risposta è stata interrotta; riprova.*",
+    "Russian": "\n\n⚠️ *Ответ был прерван; попробуйте ещё раз.*",
+    "Chinese": "\n\n⚠️ *回答被中断，请重试。*",
+    "Japanese": "\n\n⚠️ *回答が中断されました。もう一度お試しください。*",
+    "Arabic": "\n\n⚠️ *تم قطع الإجابة، يرجى المحاولة مرة أخرى.*",
+    "Hindi": "\n\n⚠️ *उत्तर बीच में रुक गया; कृपया फिर से कोशिश करें।*",
+    "Portuguese": "\n\n⚠️ *A resposta foi interrompida; tente novamente.*",
+}
+_INTERRUPTED_NOTE_DEFAULT = _INTERRUPTED_NOTE["English"]
+
 
 class GeminiLLM:
     """Genera respostes amb cites verificables, basant-se NOMES en el context.
@@ -134,6 +154,7 @@ class GeminiLLM:
         model: str = "gemini-2.5-flash-lite",
         max_output_tokens: int = 800,
         meter=None,
+        suggestions_model: str | None = None,
     ) -> None:
         if not api_key:
             raise ValueError(
@@ -152,9 +173,13 @@ class GeminiLLM:
         )
         # Client SEPARAT per als suggeriments (crida curta i barata, desacoblada de
         # la resposta principal). Tope baix a propòsit: només 3 preguntes curtes,
-        # mai necessita els 8192 tokens de la resposta citada.
+        # mai necessita els 8192 tokens de la resposta citada. Model DIFERENT del
+        # principal a propòsit: la quota gratuïta és PER MODEL, així que compartir-lo
+        # gastava el mateix dipòsit de 20/dia amb 2 crides per resposta citada
+        # (~10 respostes/dia efectives); amb model separat, cada crida té el seu propi
+        # dipòsit -> es recuperen les 20 respostes/dia senceres.
         self._suggest_llm = ChatGoogleGenerativeAI(
-            model=model,
+            model=suggestions_model or model,
             temperature=0.2,
             google_api_key=api_key,
             max_output_tokens=256,
@@ -279,7 +304,11 @@ class GeminiLLM:
                     attempt + 1, "amb" if emitted else "sense", e,
                 )
                 if emitted:
-                    return  # ja hem mostrat text real; reintentar duplicaria contingut
+                    # ja hem mostrat text real; reintentar duplicaria contingut.
+                    # Avisem que s'ha tallat (en lloc de deixar-ho semblar complet).
+                    lang = _detect_language(user_query)
+                    yield _INTERRUPTED_NOTE.get(lang, _INTERRUPTED_NOTE_DEFAULT)
+                    return
                 if attempt == 0:
                     time.sleep(2)
         _log.error("Gemini stream no respon després de 2 intents: %s", last_err)

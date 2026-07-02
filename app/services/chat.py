@@ -82,6 +82,30 @@ def _is_followup(query: str) -> bool:
     return len(q.split()) <= 3 and bool(_META_KW_RE.search(q))  # curt + paraula meta
 
 
+# Llargada màxima d'una resposta DINS l'historial que s'envia al model. Objectiu:
+# mantenir el FIL de la conversa (què es va preguntar, de què tractava la
+# resposta), no repetir cites senceres -- un torn vell de 2000 caràcters infla
+# l'input sense aportar-hi res que el torn ACTUAL necessiti (l'LLM ja no torna a
+# citar la resposta anterior, només hi ha de mantenir la coherència temàtica).
+_MAX_HIST_ANSWER_CHARS = 500
+
+
+def _curate_history(
+    history: list[tuple[str, str]] | None, max_turns: int
+) -> list[tuple[str, str]]:
+    """Retalla l'historial als max_turns MÉS RECENTS i n'escurça les respostes
+    llargues. Pura i determinista (cap heurística de "rellevància"; simplement
+    evita que converses llargues dilueixin el pressupost de tokens amb text
+    vell que el torn actual no necessita paraula per paraula)."""
+    recent = (history or [])[-max_turns:]
+    out: list[tuple[str, str]] = []
+    for q, a in recent:
+        if len(a) > _MAX_HIST_ANSWER_CHARS:
+            a = a[:_MAX_HIST_ANSWER_CHARS].rstrip() + "…"
+        out.append((q, a))
+    return out
+
+
 @dataclass(frozen=True, slots=True)
 class ChatResult:
     """Resultat d'un torn de xat: resposta + fonts citables + chunks crus + suggeriments."""
@@ -259,7 +283,7 @@ class ChatService:
         if not retrieved:
             return ChatResult(answer=NO_CORPUS_MESSAGE, sources=[], retrieved=[])
         context = format_context(retrieved, self._bios)
-        hist = (history or [])[-self._max_history :]
+        hist = _curate_history(history, self._max_history)
         text = self._llm.generate(SYSTEM_PROMPT, query, context, hist)
         # Neteja defensiva d'un bloc [[SUGGESTIONS]] espontani (ja no es demana a la
         # resposta principal; els suggeriments "de veritat" venen d'una crida a part
@@ -338,7 +362,7 @@ class ChatService:
             yield NO_CORPUS_MESSAGE
             return ChatResult(answer=NO_CORPUS_MESSAGE, sources=[], retrieved=[])
         context = format_context(retrieved, self._bios)
-        hist = (history or [])[-self._max_history :]
+        hist = _curate_history(history, self._max_history)
 
         acc = ""
         tag_checked = False

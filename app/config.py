@@ -34,6 +34,12 @@ class Settings(BaseSettings):
     # (gemini-2.0-flash està obsolet des de juny-2026). Per a ús real cal activar
     # FACTURACIÓ (paid tier, baratíssim) -> sense topall diari. Sobreescrivible amb GEMINI_MODEL al .env.
     gemini_model: str = "gemini-2.5-flash-lite"
+    # Model de la crida de SUGGERIMENTS (separada de la resposta principal, vegeu
+    # ChatService.answer/answer_stream). A PROPÒSIT un model DIFERENT del principal:
+    # la quota gratuïta és per model, així que compartir-lo amb gemini_model gasta el
+    # mateix dipòsit de 20/dia amb 2 crides per resposta citada (~10 respostes/dia
+    # efectives). Amb un model separat, cada crida tira del seu propi dipòsit.
+    suggestions_model: str = "gemini-2.5-flash"
     # Clau secreta per a l'endpoint GET /api/ask (verificació externa). Buit = desactivat.
     ask_api_key: str = ""
 

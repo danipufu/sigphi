@@ -14,7 +14,7 @@ from app.domain.caveats import (
     historical_context_note,
 )
 from app.domain.models import Chunk, RetrievedChunk
-from app.services.chat import _is_followup, get_sources, split_suggestions
+from app.services.chat import _curate_history, _is_followup, get_sources, split_suggestions
 
 
 # ───────────────────────── split_suggestions (xarxa de seguretat) ───────────────
@@ -61,6 +61,41 @@ def test_followup_meta_keyword():
 def test_not_followup_for_substantive_question():
     assert not _is_followup("Què deia Plató sobre la justícia a la República?")
     assert not _is_followup("")
+
+
+# ───────────────────────────── _curate_history ───────────────────────────────────
+
+def test_curate_history_keeps_only_recent_turns():
+    hist = [(f"q{i}", f"a{i}") for i in range(10)]
+    curated = _curate_history(hist, max_turns=3)
+    assert curated == [("q7", "a7"), ("q8", "a8"), ("q9", "a9")]
+
+
+def test_curate_history_truncates_long_answers():
+    long_answer = "x" * 1000
+    curated = _curate_history([("q", long_answer)], max_turns=5)
+    assert len(curated) == 1
+    q, a = curated[0]
+    assert q == "q"
+    assert len(a) <= 501  # 500 + "…"
+    assert a.endswith("…")
+
+
+def test_curate_history_keeps_short_answers_intact():
+    curated = _curate_history([("q", "resposta curta")], max_turns=5)
+    assert curated == [("q", "resposta curta")]
+
+
+def test_curate_history_handles_none_and_empty():
+    assert _curate_history(None, max_turns=5) == []
+    assert _curate_history([], max_turns=5) == []
+
+
+def test_curate_history_preserves_chronological_order():
+    hist = [("q1", "a1"), ("q2", "x" * 600), ("q3", "a3")]
+    curated = _curate_history(hist, max_turns=5)
+    assert [q for q, _ in curated] == ["q1", "q2", "q3"]
+    assert curated[1][1].endswith("…")  # q2 truncada, però al seu lloc
 
 
 # ───────────────────────────── caveats / discriminació ──────────────────────────
