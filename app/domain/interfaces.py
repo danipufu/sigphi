@@ -96,6 +96,20 @@ class RerankerInterface(Protocol):
         ...
 
 
+# Missatge que un adaptador LLM retorna quan no respon després dels reintents
+# (saturat / quota exhaurida). Definit al DOMINI (no a infrastructure/llm.py)
+# perquè tant l'adaptador que el produeix com ChatService que l'ha de
+# RECONÈIXER (per no mostrar fonts/suggeriments d'una resposta que en
+# realitat no existeix) hi puguin accedir sense que services depengui
+# d'infrastructure. Trilingüe: encara no sabem l'idioma de la pregunta a
+# aquest nivell (l'LLM ha fallat abans de poder-lo detectar).
+LLM_BUSY_MSG = (
+    "⏳ El servei està rebent moltes peticions ara mateix; torna-ho a provar d'aquí uns segons.\n"
+    "⏳ El servicio está recibiendo muchas peticiones; inténtalo de nuevo en unos segundos.\n"
+    "⏳ The service is busy right now; please try again in a few seconds."
+)
+
+
 class LLMInterface(Protocol):
     """Contracte del LLM que genera respostes amb cites verificables."""
 

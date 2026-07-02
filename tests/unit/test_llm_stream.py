@@ -80,4 +80,4 @@ def test_failure_before_any_content_retries_instead_of_warning():
     full = "".join(chunks)
     assert fake.calls == 2  # ha reintentat (cap contingut emès encara)
     assert _INTERRUPTED_NOTE_DEFAULT not in full  # NO és l'avís de tall
-    assert "busy" in full.lower() or "⏳" in full  # és el _BUSY_MSG final
+    assert "busy" in full.lower() or "⏳" in full  # és LLM_BUSY_MSG final

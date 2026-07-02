@@ -9,6 +9,8 @@ from typing import Iterator
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 from langchain_google_genai import ChatGoogleGenerativeAI
 
+from app.domain.interfaces import LLM_BUSY_MSG
+
 _log = logging.getLogger("sigphi")
 
 
@@ -106,14 +108,6 @@ def _detect_language(text: str) -> str | None:
     if sum(1 for v in scores.values() if v == top) > 1:
         return None
     return best
-
-# Missatge amable quan Gemini està saturat (429) i s'esgoten els reintents. Trilingüe
-# perquè no sabem encara l'idioma de la pregunta a aquest nivell.
-_BUSY_MSG = (
-    "⏳ El servei està rebent moltes peticions ara mateix; torna-ho a provar d'aquí uns segons.\n"
-    "⏳ El servicio está recibiendo muchas peticiones; inténtalo de nuevo en unos segundos.\n"
-    "⏳ The service is busy right now; please try again in a few seconds."
-)
 
 # Avís quan el STREAM falla A MITGES (ja s'ha mostrat text real; reprendre'l
 # duplicaria contingut, vegeu generate_stream). S'afegeix al final del que ja
@@ -275,7 +269,7 @@ class GeminiLLM:
                 if attempt == 0:
                     time.sleep(2)  # una espera curta i tornem a provar
         _log.error("Gemini no respon després de 2 intents: %s", last_err)
-        return _BUSY_MSG
+        return LLM_BUSY_MSG
 
     def generate_stream(
         self,
@@ -318,7 +312,7 @@ class GeminiLLM:
                 if attempt == 0:
                     time.sleep(2)
         _log.error("Gemini stream no respon després de 2 intents: %s", last_err)
-        yield _BUSY_MSG
+        yield LLM_BUSY_MSG
 
     def generate_suggestions(
         self,

@@ -11,7 +11,7 @@ from dataclasses import dataclass, field
 from typing import Iterator
 
 from app.domain.caveats import discriminatory_warning, historical_context_note
-from app.domain.interfaces import LLMInterface
+from app.domain.interfaces import LLM_BUSY_MSG, LLMInterface
 from app.domain.models import Citation, RetrievedChunk
 from app.services.biographies import background_block
 from app.services.citations import unverified_citations
@@ -285,6 +285,11 @@ class ChatService:
         context = format_context(retrieved, self._bios)
         hist = _curate_history(history, self._max_history)
         text = self._llm.generate(SYSTEM_PROMPT, query, context, hist)
+        # L'LLM no ha pogut respondre (saturat/quota exhaurida després dels
+        # reintents): NO és una resposta real, així que no mostrem fonts ni
+        # demanem suggeriments d'un contingut que en realitat no existeix.
+        if text == LLM_BUSY_MSG:
+            return ChatResult(answer=text, sources=[], retrieved=retrieved, suggestions=[])
         # Neteja defensiva d'un bloc [[SUGGESTIONS]] espontani (ja no es demana a la
         # resposta principal; els suggeriments "de veritat" venen d'una crida a part
         # més avall, sempre que la resposta faci servir les fonts).
@@ -378,6 +383,10 @@ class ChatService:
             shown, _ = split_suggestions(shown)
             yield shown
 
+        if acc == LLM_BUSY_MSG:
+            # L'LLM no ha pogut respondre en cap dels 2 intents (no ha arribat a
+            # emetre res, vegeu generate_stream): no és una resposta real.
+            return ChatResult(answer=acc, sources=[], retrieved=retrieved, suggestions=[])
         text, _ = split_suggestions(acc)
         if "NO_SOURCES" in text:
             text = _NO_SOURCES_RE.sub(" ", text).strip()
